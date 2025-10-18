@@ -15,6 +15,7 @@
       "previous": "上一步",
       "confirm": "确认",
       "close": "关闭",
+      "clear": "清除",
       "createRecipe": "创建食谱",
       "manageData": "管理数据",
       "addReferenceData": "添加参考数据",
@@ -119,6 +120,7 @@
     "recipes": {
       "title": "食谱",
       "subtitle": "管理您的食谱收藏",
+      "searchPlaceholder": "按食谱名称搜索...",
       "noRecipes": "暂无食谱",
       "noRecipesDescription": "创建您的第一个食谱以开始建立食谱收藏。",
       "table": {

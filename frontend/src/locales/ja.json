@@ -15,6 +15,7 @@
       "previous": "前へ",
       "confirm": "確認",
       "close": "閉じる",
+      "clear": "クリア",
       "createRecipe": "レシピを作成",
       "manageData": "データを管理",
       "addReferenceData": "参照データを追加",
@@ -119,6 +120,7 @@
     "recipes": {
       "title": "レシピ",
       "subtitle": "レシピコレクションを管理",
+      "searchPlaceholder": "レシピ名で検索...",
       "noRecipes": "まだレシピがありません",
       "noRecipesDescription": "最初のレシピを作成してレシピコレクションを始めましょう。",
       "table": {

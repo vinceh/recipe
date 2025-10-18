@@ -15,6 +15,7 @@
       "previous": "이전",
       "confirm": "확인",
       "close": "닫기",
+      "clear": "지우기",
       "createRecipe": "레시피 만들기",
       "manageData": "데이터 관리",
       "addReferenceData": "참조 데이터 추가",
@@ -119,6 +120,7 @@
     "recipes": {
       "title": "레시피",
       "subtitle": "레시피 컬렉션 관리",
+      "searchPlaceholder": "레시피 이름으로 검색...",
       "noRecipes": "아직 레시피가 없습니다",
       "noRecipesDescription": "첫 번째 레시피를 만들어 레시피 컬렉션을 시작하세요.",
       "table": {

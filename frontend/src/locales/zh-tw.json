@@ -15,6 +15,7 @@
       "previous": "上一步",
       "confirm": "確認",
       "close": "關閉",
+      "clear": "清除",
       "createRecipe": "建立食譜",
       "manageData": "管理資料",
       "addReferenceData": "新增參考資料",
@@ -119,6 +120,7 @@
     "recipes": {
       "title": "食譜",
       "subtitle": "管理您的食譜收藏",
+      "searchPlaceholder": "依食譜名稱搜尋...",
       "noRecipes": "尚無食譜",
       "noRecipesDescription": "建立您的第一個食譜以開始建立食譜收藏。",
       "table": {

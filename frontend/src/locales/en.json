@@ -15,6 +15,7 @@
       "previous": "Previous",
       "confirm": "Confirm",
       "close": "Close",
+      "clear": "Clear",
       "createRecipe": "Create Recipe",
       "manageData": "Manage Data",
       "addReferenceData": "Add Reference Data",
@@ -119,6 +120,7 @@
     "recipes": {
       "title": "Recipes",
       "subtitle": "Manage your recipe collection",
+      "searchPlaceholder": "Search recipes by name...",
       "noRecipes": "No recipes yet",
       "noRecipesDescription": "Start building your recipe collection by creating your first recipe.",
       "table": {

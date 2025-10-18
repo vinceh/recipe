@@ -19,21 +19,8 @@ const perPage = ref(20)
 
 // Filter states
 const searchQuery = ref('')
-const selectedCuisines = ref<string[]>([])
-const selectedDishTypes = ref<string[]>([])
-const maxPrepTime = ref<number | null>(null)
-
-// Available filter options
-const availableCuisines = ref<string[]>([])
-const availableDishTypes = ref<string[]>([])
 
 const hasRecipes = computed(() => recipes.value.length > 0)
-const hasActiveFilters = computed(() =>
-  searchQuery.value !== '' ||
-  selectedCuisines.value.length > 0 ||
-  selectedDishTypes.value.length > 0 ||
-  maxPrepTime.value !== null
-)
 
 async function fetchRecipes() {
   loading.value = true
@@ -45,18 +32,9 @@ async function fetchRecipes() {
       per_page: perPage.value
     }
 
-    // Add filters if they're set
+    // Add search filter if set
     if (searchQuery.value) {
       params.q = searchQuery.value
-    }
-    if (selectedCuisines.value.length > 0) {
-      params.cuisines = selectedCuisines.value
-    }
-    if (selectedDishTypes.value.length > 0) {
-      params.dish_types = selectedDishTypes.value
-    }
-    if (maxPrepTime.value !== null) {
-      params.max_prep_time = maxPrepTime.value
     }
 
     const response = await adminApi.getRecipes(params)
@@ -73,38 +51,18 @@ async function fetchRecipes() {
   }
 }
 
-async function fetchFilterOptions() {
-  try {
-    const response = await adminApi.getDataReferences()
-    if (response.success && response.data) {
-      // Extract unique cuisines and dish types
-      const dataRefs = response.data.data_references
-      availableCuisines.value = dataRefs
-        .filter((ref: any) => ref.reference_type === 'cuisine' && ref.active)
-        .map((ref: any) => ref.key)
-        .sort()
+// Debounce search to avoid too many API calls
+let searchTimeout: ReturnType<typeof setTimeout> | null = null
 
-      availableDishTypes.value = dataRefs
-        .filter((ref: any) => ref.reference_type === 'dish_type' && ref.active)
-        .map((ref: any) => ref.key)
-        .sort()
-    }
-  } catch (e) {
-    console.error('Failed to fetch filter options:', e)
+function onSearchInput() {
+  if (searchTimeout) {
+    clearTimeout(searchTimeout)
   }
-}
 
-function applyFilters() {
-  currentPage.value = 1 // Reset to first page when filters change
-  fetchRecipes()
-}
-
-function clearFilters() {
-  searchQuery.value = ''
-  selectedCuisines.value = []
-  selectedDishTypes.value = []
-  maxPrepTime.value = null
-  applyFilters()
+  searchTimeout = setTimeout(() => {
+    currentPage.value = 1 // Reset to first page on new search
+    fetchRecipes()
+  }, 300)
 }
 
 function viewRecipe(id: string | number) {
@@ -116,7 +74,6 @@ function createRecipe() {
 }
 
 onMounted(() => {
-  fetchFilterOptions()
   fetchRecipes()
 })
 </script>
@@ -135,57 +92,24 @@ onMounted(() => {
       </template>
     </PageHeader>
 
-    <!-- Filter Bar -->
-    <div class="filter-bar">
-      <div class="filter-search">
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <div class="search-container">
         <i class="pi pi-search"></i>
         <input
           v-model="searchQuery"
           type="text"
-          placeholder="Search recipes..."
+          :placeholder="$t('admin.recipes.searchPlaceholder')"
           class="search-input"
-          @keyup.enter="applyFilters"
+          @input="onSearchInput"
         />
-      </div>
-
-      <div class="filter-group">
-        <label>Cuisines:</label>
-        <select v-model="selectedCuisines" multiple class="filter-select">
-          <option v-for="cuisine in availableCuisines" :key="cuisine" :value="cuisine">
-            {{ cuisine }}
-          </option>
-        </select>
-      </div>
-
-      <div class="filter-group">
-        <label>Dish Types:</label>
-        <select v-model="selectedDishTypes" multiple class="filter-select">
-          <option v-for="type in availableDishTypes" :key="type" :value="type">
-            {{ type }}
-          </option>
-        </select>
-      </div>
-
-      <div class="filter-group">
-        <label>Max Prep Time:</label>
-        <select v-model="maxPrepTime" class="filter-select">
-          <option :value="null">Any</option>
-          <option :value="15">15 min</option>
-          <option :value="30">30 min</option>
-          <option :value="45">45 min</option>
-          <option :value="60">1 hour</option>
-          <option :value="120">2 hours</option>
-        </select>
-      </div>
-
-      <div class="filter-actions">
-        <button class="btn btn-primary btn-sm" @click="applyFilters">
-          <i class="pi pi-filter"></i>
-          Apply
-        </button>
-        <button v-if="hasActiveFilters" class="btn btn-outline btn-sm" @click="clearFilters">
+        <button
+          v-if="searchQuery"
+          class="clear-search"
+          @click="searchQuery = ''; fetchRecipes()"
+          :title="$t('common.buttons.clear')"
+        >
           <i class="pi pi-times"></i>
-          Clear
         </button>
       </div>
     </div>
@@ -463,103 +387,75 @@ td {
   font-size: var(--font-size-sm);
 }
 
-.filter-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-md);
-  padding: var(--spacing-lg);
-  background: var(--color-background);
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius-md);
+.search-bar {
   margin-bottom: var(--spacing-lg);
-  align-items: flex-end;
 }
 
-.filter-search {
+.search-container {
   position: relative;
-  flex: 1;
-  min-width: 250px;
+  max-width: 600px;
 }
 
-.filter-search i {
+.search-container i.pi-search {
   position: absolute;
-  left: var(--spacing-sm);
+  left: var(--spacing-md);
   top: 50%;
   transform: translateY(-50%);
   color: var(--color-text-muted);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
+  pointer-events: none;
 }
 
 .search-input {
   width: 100%;
-  padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) var(--spacing-xl);
+  padding: var(--spacing-md) var(--spacing-3xl) var(--spacing-md) var(--spacing-3xl);
   border: 1px solid var(--color-border);
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--border-radius-md);
   background: var(--color-background);
   color: var(--color-text);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
   transition: var(--transition-base);
+}
+
+.search-input:hover {
+  border-color: var(--color-primary-light);
 }
 
 .search-input:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.1);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
 .search-input::placeholder {
   color: var(--color-text-muted);
 }
 
-.filter-group {
+.clear-search {
+  position: absolute;
+  right: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xs);
-  min-width: 150px;
-}
-
-.filter-group label {
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.filter-select {
-  padding: var(--spacing-sm) var(--spacing-md);
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius-sm);
-  background: var(--color-background);
-  color: var(--color-text);
-  font-size: var(--font-size-sm);
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
   cursor: pointer;
+  border-radius: var(--border-radius-sm);
   transition: var(--transition-base);
 }
 
-.filter-select[multiple] {
-  height: 80px;
+.clear-search:hover {
+  background: var(--color-background-secondary);
+  color: var(--color-text);
 }
 
-.filter-select:hover {
-  border-color: var(--color-primary);
-}
-
-.filter-select:focus {
-  outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.1);
-}
-
-.filter-actions {
-  display: flex;
-  gap: var(--spacing-sm);
-  align-items: flex-end;
-}
-
-.filter-actions button {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xs);
+.clear-search i {
+  font-size: var(--font-size-sm);
 }
 </style>
