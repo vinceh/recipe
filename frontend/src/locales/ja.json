@@ -1,0 +1,192 @@
+{
+  "common": {
+    "buttons": {
+      "save": "保存",
+      "cancel": "キャンセル",
+      "delete": "削除",
+      "edit": "編集",
+      "create": "作成",
+      "update": "更新",
+      "search": "検索",
+      "filter": "フィルター",
+      "submit": "送信",
+      "back": "戻る",
+      "next": "次へ",
+      "previous": "前へ",
+      "confirm": "確認",
+      "close": "閉じる",
+      "createRecipe": "レシピを作成",
+      "manageData": "データを管理",
+      "addReferenceData": "参照データを追加",
+      "createPromptTemplate": "プロンプトテンプレートを作成",
+      "getStarted": "始める"
+    },
+    "labels": {
+      "name": "名前",
+      "description": "説明",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "passwordConfirmation": "パスワード確認",
+      "language": "言語",
+      "createdAt": "作成日時",
+      "updatedAt": "更新日時",
+      "actions": "操作",
+      "yes": "はい",
+      "no": "いいえ"
+    },
+    "messages": {
+      "success": "操作が正常に完了しました",
+      "error": "エラーが発生しました",
+      "confirmDelete": "この項目を削除してもよろしいですか？",
+      "loading": "読み込み中...",
+      "noResults": "結果が見つかりません",
+      "welcome": "Emberへようこそ",
+      "subtitle": "あなたのレシピ管理プラットフォーム",
+      "unexpectedError": "予期しないエラーが発生しました",
+      "errorOccurred": "エラーが発生しました"
+    }
+  },
+  "navigation": {
+    "home": "ホーム",
+    "recipes": "レシピ",
+    "favorites": "お気に入り",
+    "about": "概要",
+    "login": "ログイン",
+    "logout": "ログアウト",
+    "signup": "新規登録",
+    "profile": "プロフィール",
+    "settings": "設定",
+    "admin": "管理者",
+    "dashboard": "ダッシュボード",
+    "dataReferences": "データ参照",
+    "aiPrompts": "AIプロンプト",
+    "ingredients": "材料"
+  },
+  "auth": {
+    "signIn": "ログイン",
+    "signInSubtitle": "ログインして続行",
+    "backToHome": "ホームに戻る",
+    "loginError": "ログインに失敗しました。認証情報を確認してください。"
+  },
+  "forms": {
+    "recipe": {
+      "title": "レシピタイトル",
+      "sourceUrl": "ソースURL",
+      "servings": "人数",
+      "prepTime": "準備時間（分）",
+      "cookTime": "調理時間（分）",
+      "totalTime": "合計時間（分）",
+      "difficulty": "難易度",
+      "dietaryTags": "食事タグ",
+      "cuisines": "料理の種類",
+      "dishTypes": "料理タイプ",
+      "recipeTypes": "レシピタイプ",
+      "ingredients": "材料",
+      "steps": "手順",
+      "equipment": "調理器具",
+      "adminNotes": "管理者メモ"
+    },
+    "user": {
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "passwordConfirmation": "パスワード確認",
+      "rememberMe": "ログイン状態を保持",
+      "forgotPassword": "パスワードをお忘れですか？",
+      "emailPlaceholder": "メールアドレスを入力",
+      "passwordPlaceholder": "パスワードを入力"
+    }
+  },
+  "errors": {
+    "validation": {
+      "required": "この項目は必須です",
+      "invalidEmail": "無効なメールアドレスです",
+      "passwordTooShort": "パスワードが短すぎます（最低6文字）",
+      "passwordsDontMatch": "パスワードが一致しません",
+      "invalidFormat": "無効な形式です"
+    }
+  },
+  "admin": {
+    "dashboard": {
+      "title": "ダッシュボード",
+      "subtitle": "Ember管理画面へようこそ",
+      "welcomeTitle": "Ember管理画面へようこそ！",
+      "welcomeDescription": "最初のレシピを作成するか、データ参照を管理して始めましょう。",
+      "totalRecipes": "総レシピ数",
+      "dataReferences": "データ参照",
+      "aiPrompts": "AIプロンプト",
+      "ingredients": "材料"
+    },
+    "recipes": {
+      "title": "レシピ",
+      "subtitle": "レシピコレクションを管理",
+      "noRecipes": "まだレシピがありません",
+      "noRecipesDescription": "最初のレシピを作成してレシピコレクションを始めましょう。",
+      "table": {
+        "name": "名前",
+        "language": "言語",
+        "cuisines": "料理の種類",
+        "dishTypes": "料理タイプ",
+        "servings": "人数",
+        "timing": "時間",
+        "minutes": "分"
+      },
+      "pagination": {
+        "page": "ページ",
+        "of": "/"
+      },
+      "detail": {
+        "title": "レシピ詳細",
+        "subtitle": "レシピ情報の表示と管理",
+        "sections": {
+          "basicInfo": "基本情報",
+          "ingredients": "材料",
+          "steps": "作り方",
+          "equipment": "調理器具",
+          "nutrition": "栄養情報",
+          "actions": "レシピ操作"
+        },
+        "fields": {
+          "name": "名前",
+          "language": "言語",
+          "servings": "人数",
+          "timing": "合計時間",
+          "cuisines": "料理の種類",
+          "dishTypes": "料理タイプ",
+          "dietaryTags": "食事タグ",
+          "aliases": "別名",
+          "sourceUrl": "ソースURL",
+          "requiresPrecision": "精度が必要",
+          "adminNotes": "管理者メモ"
+        },
+        "actions": {
+          "regenerateVariants": "バリエーションを再生成",
+          "regenerateTranslations": "翻訳を再生成"
+        },
+        "nutrition": {
+          "calories": "カロリー",
+          "protein": "タンパク質",
+          "carbs": "炭水化物",
+          "fat": "脂質",
+          "fiber": "食物繊維",
+          "perServing": "1人分あたり"
+        }
+      },
+      "new": {
+        "title": "新しいレシピ",
+        "subtitle": "新しいレシピを作成"
+      }
+    },
+    "dataReferences": {
+      "title": "データ参照",
+      "subtitle": "食事タグ、料理タイプ、料理の種類、レシピタイプを管理",
+      "noDataReferences": "まだデータ参照がありません",
+      "noDataReferencesDescription": "参照データを作成してレシピを分類・整理しましょう。"
+    },
+    "prompts": {
+      "title": "AIプロンプト",
+      "subtitle": "レシピ生成用のAIプロンプトテンプレートを管理",
+      "noPrompts": "まだAIプロンプトがありません",
+      "noPromptsDescription": "プロンプトテンプレートを作成してAIでレシピコンテンツを生成しましょう。"
+    }
+  }
+}

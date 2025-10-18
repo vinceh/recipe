@@ -1,0 +1,192 @@
+{
+  "common": {
+    "buttons": {
+      "save": "Guardar",
+      "cancel": "Cancelar",
+      "delete": "Eliminar",
+      "edit": "Editar",
+      "create": "Crear",
+      "update": "Actualizar",
+      "search": "Buscar",
+      "filter": "Filtrar",
+      "submit": "Enviar",
+      "back": "Atrás",
+      "next": "Siguiente",
+      "previous": "Anterior",
+      "confirm": "Confirmar",
+      "close": "Cerrar",
+      "createRecipe": "Crear receta",
+      "manageData": "Gestionar datos",
+      "addReferenceData": "Añadir datos de referencia",
+      "createPromptTemplate": "Crear plantilla de instrucción",
+      "getStarted": "Comenzar"
+    },
+    "labels": {
+      "name": "Nombre",
+      "description": "Descripción",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "passwordConfirmation": "Confirmar contraseña",
+      "language": "Idioma",
+      "createdAt": "Fecha de creación",
+      "updatedAt": "Fecha de actualización",
+      "actions": "Acciones",
+      "yes": "Sí",
+      "no": "No"
+    },
+    "messages": {
+      "success": "Operación completada exitosamente",
+      "error": "Ocurrió un error",
+      "confirmDelete": "¿Está seguro de que desea eliminar este elemento?",
+      "loading": "Cargando...",
+      "noResults": "No se encontraron resultados",
+      "welcome": "Bienvenido a Ember",
+      "subtitle": "Tu plataforma de gestión de recetas",
+      "unexpectedError": "Ocurrió un error inesperado",
+      "errorOccurred": "Ocurrió un error"
+    }
+  },
+  "navigation": {
+    "home": "Inicio",
+    "recipes": "Recetas",
+    "favorites": "Favoritos",
+    "about": "Acerca de",
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión",
+    "signup": "Registrarse",
+    "profile": "Perfil",
+    "settings": "Configuración",
+    "admin": "Administrador",
+    "dashboard": "Panel de control",
+    "dataReferences": "Referencias de datos",
+    "aiPrompts": "Instrucciones de IA",
+    "ingredients": "Ingredientes"
+  },
+  "auth": {
+    "signIn": "Iniciar sesión",
+    "signInSubtitle": "Inicie sesión para continuar",
+    "backToHome": "Volver al inicio",
+    "loginError": "Error al iniciar sesión. Verifique sus credenciales."
+  },
+  "forms": {
+    "recipe": {
+      "title": "Título de la receta",
+      "sourceUrl": "URL de origen",
+      "servings": "Porciones",
+      "prepTime": "Tiempo de preparación (minutos)",
+      "cookTime": "Tiempo de cocción (minutos)",
+      "totalTime": "Tiempo total (minutos)",
+      "difficulty": "Dificultad",
+      "dietaryTags": "Etiquetas dietéticas",
+      "cuisines": "Cocinas",
+      "dishTypes": "Tipos de plato",
+      "recipeTypes": "Tipos de receta",
+      "ingredients": "Ingredientes",
+      "steps": "Pasos",
+      "equipment": "Equipo",
+      "adminNotes": "Notas del administrador"
+    },
+    "user": {
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "passwordConfirmation": "Confirmar contraseña",
+      "rememberMe": "Recordarme",
+      "forgotPassword": "¿Olvidó su contraseña?",
+      "emailPlaceholder": "Ingrese su correo electrónico",
+      "passwordPlaceholder": "Ingrese su contraseña"
+    }
+  },
+  "errors": {
+    "validation": {
+      "required": "Este campo es obligatorio",
+      "invalidEmail": "Dirección de correo electrónico no válida",
+      "passwordTooShort": "La contraseña es demasiado corta (mínimo 6 caracteres)",
+      "passwordsDontMatch": "Las contraseñas no coinciden",
+      "invalidFormat": "Formato no válido"
+    }
+  },
+  "admin": {
+    "dashboard": {
+      "title": "Panel de control",
+      "subtitle": "Bienvenido de nuevo al Administrador de Ember",
+      "welcomeTitle": "¡Bienvenido al Administrador de Ember!",
+      "welcomeDescription": "Comienza creando tu primera receta o gestionando datos de referencia.",
+      "totalRecipes": "Total de recetas",
+      "dataReferences": "Referencias de datos",
+      "aiPrompts": "Instrucciones de IA",
+      "ingredients": "Ingredientes"
+    },
+    "recipes": {
+      "title": "Recetas",
+      "subtitle": "Gestiona tu colección de recetas",
+      "noRecipes": "Aún no hay recetas",
+      "noRecipesDescription": "Comienza a construir tu colección de recetas creando tu primera receta.",
+      "table": {
+        "name": "Nombre",
+        "language": "Idioma",
+        "cuisines": "Cocinas",
+        "dishTypes": "Tipos de plato",
+        "servings": "Porciones",
+        "timing": "Tiempo",
+        "minutes": "min"
+      },
+      "pagination": {
+        "page": "Página",
+        "of": "de"
+      },
+      "detail": {
+        "title": "Detalles de la receta",
+        "subtitle": "Ver y gestionar información de la receta",
+        "sections": {
+          "basicInfo": "Información básica",
+          "ingredients": "Ingredientes",
+          "steps": "Instrucciones",
+          "equipment": "Equipo",
+          "nutrition": "Información nutricional",
+          "actions": "Acciones de receta"
+        },
+        "fields": {
+          "name": "Nombre",
+          "language": "Idioma",
+          "servings": "Porciones",
+          "timing": "Tiempo total",
+          "cuisines": "Cocinas",
+          "dishTypes": "Tipos de plato",
+          "dietaryTags": "Etiquetas dietéticas",
+          "aliases": "Alias",
+          "sourceUrl": "URL de origen",
+          "requiresPrecision": "Requiere precisión",
+          "adminNotes": "Notas del administrador"
+        },
+        "actions": {
+          "regenerateVariants": "Regenerar variantes",
+          "regenerateTranslations": "Regenerar traducciones"
+        },
+        "nutrition": {
+          "calories": "Calorías",
+          "protein": "Proteína",
+          "carbs": "Carbohidratos",
+          "fat": "Grasa",
+          "fiber": "Fibra",
+          "perServing": "Por porción"
+        }
+      },
+      "new": {
+        "title": "Nueva receta",
+        "subtitle": "Crear una nueva receta"
+      }
+    },
+    "dataReferences": {
+      "title": "Referencias de datos",
+      "subtitle": "Gestiona etiquetas dietéticas, tipos de plato, cocinas y tipos de receta",
+      "noDataReferences": "Aún no hay referencias de datos",
+      "noDataReferencesDescription": "Crea datos de referencia para categorizar y organizar tus recetas."
+    },
+    "prompts": {
+      "title": "Instrucciones de IA",
+      "subtitle": "Gestiona plantillas de instrucciones de IA para la generación de recetas",
+      "noPrompts": "Aún no hay instrucciones de IA",
+      "noPromptsDescription": "Crea plantillas de instrucciones para ayudar a generar contenido de recetas con IA."
+    }
+  }
+}

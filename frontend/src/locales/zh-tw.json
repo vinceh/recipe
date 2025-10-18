@@ -1,0 +1,192 @@
+{
+  "common": {
+    "buttons": {
+      "save": "儲存",
+      "cancel": "取消",
+      "delete": "刪除",
+      "edit": "編輯",
+      "create": "建立",
+      "update": "更新",
+      "search": "搜尋",
+      "filter": "篩選",
+      "submit": "提交",
+      "back": "返回",
+      "next": "下一步",
+      "previous": "上一步",
+      "confirm": "確認",
+      "close": "關閉",
+      "createRecipe": "建立食譜",
+      "manageData": "管理資料",
+      "addReferenceData": "新增參考資料",
+      "createPromptTemplate": "建立提示範本",
+      "getStarted": "開始使用"
+    },
+    "labels": {
+      "name": "名稱",
+      "description": "描述",
+      "email": "電子郵件",
+      "password": "密碼",
+      "passwordConfirmation": "確認密碼",
+      "language": "語言",
+      "createdAt": "建立時間",
+      "updatedAt": "更新時間",
+      "actions": "操作",
+      "yes": "是",
+      "no": "否"
+    },
+    "messages": {
+      "success": "操作成功完成",
+      "error": "發生錯誤",
+      "confirmDelete": "您確定要刪除此項目嗎？",
+      "loading": "載入中...",
+      "noResults": "未找到結果",
+      "welcome": "歡迎使用 Ember",
+      "subtitle": "您的食譜管理平台",
+      "unexpectedError": "發生意外錯誤",
+      "errorOccurred": "發生錯誤"
+    }
+  },
+  "navigation": {
+    "home": "首頁",
+    "recipes": "食譜",
+    "favorites": "我的最愛",
+    "about": "關於",
+    "login": "登入",
+    "logout": "登出",
+    "signup": "註冊",
+    "profile": "個人資料",
+    "settings": "設定",
+    "admin": "管理員",
+    "dashboard": "儀表板",
+    "dataReferences": "資料參考",
+    "aiPrompts": "AI 提示",
+    "ingredients": "食材"
+  },
+  "auth": {
+    "signIn": "登入",
+    "signInSubtitle": "登入以繼續",
+    "backToHome": "返回首頁",
+    "loginError": "登入失敗。請檢查您的憑證。"
+  },
+  "forms": {
+    "recipe": {
+      "title": "食譜標題",
+      "sourceUrl": "來源網址",
+      "servings": "份數",
+      "prepTime": "準備時間（分鐘）",
+      "cookTime": "烹飪時間（分鐘）",
+      "totalTime": "總時間（分鐘）",
+      "difficulty": "難度",
+      "dietaryTags": "飲食標籤",
+      "cuisines": "料理類型",
+      "dishTypes": "菜式類型",
+      "recipeTypes": "食譜類型",
+      "ingredients": "食材",
+      "steps": "步驟",
+      "equipment": "廚具",
+      "adminNotes": "管理員備註"
+    },
+    "user": {
+      "email": "電子郵件地址",
+      "password": "密碼",
+      "passwordConfirmation": "確認密碼",
+      "rememberMe": "記住我",
+      "forgotPassword": "忘記密碼？",
+      "emailPlaceholder": "請輸入電子郵件",
+      "passwordPlaceholder": "請輸入密碼"
+    }
+  },
+  "errors": {
+    "validation": {
+      "required": "此欄位為必填",
+      "invalidEmail": "電子郵件地址無效",
+      "passwordTooShort": "密碼太短（至少6個字元）",
+      "passwordsDontMatch": "密碼不符",
+      "invalidFormat": "格式無效"
+    }
+  },
+  "admin": {
+    "dashboard": {
+      "title": "儀表板",
+      "subtitle": "歡迎回到 Ember 管理員",
+      "welcomeTitle": "歡迎使用 Ember 管理員！",
+      "welcomeDescription": "建立您的第一個食譜或管理資料參考以開始使用。",
+      "totalRecipes": "總食譜數",
+      "dataReferences": "資料參考",
+      "aiPrompts": "AI 提示",
+      "ingredients": "食材"
+    },
+    "recipes": {
+      "title": "食譜",
+      "subtitle": "管理您的食譜收藏",
+      "noRecipes": "尚無食譜",
+      "noRecipesDescription": "建立您的第一個食譜以開始建立食譜收藏。",
+      "table": {
+        "name": "名稱",
+        "language": "語言",
+        "cuisines": "料理類型",
+        "dishTypes": "菜式類型",
+        "servings": "份數",
+        "timing": "時間",
+        "minutes": "分鐘"
+      },
+      "pagination": {
+        "page": "頁面",
+        "of": "/"
+      },
+      "detail": {
+        "title": "食譜詳情",
+        "subtitle": "檢視和管理食譜資訊",
+        "sections": {
+          "basicInfo": "基本資訊",
+          "ingredients": "食材",
+          "steps": "製作步驟",
+          "equipment": "廚具",
+          "nutrition": "營養資訊",
+          "actions": "食譜操作"
+        },
+        "fields": {
+          "name": "名稱",
+          "language": "語言",
+          "servings": "份數",
+          "timing": "總時間",
+          "cuisines": "料理類型",
+          "dishTypes": "菜式類型",
+          "dietaryTags": "飲食標籤",
+          "aliases": "別名",
+          "sourceUrl": "來源網址",
+          "requiresPrecision": "需要精確度",
+          "adminNotes": "管理員備註"
+        },
+        "actions": {
+          "regenerateVariants": "重新生成變化版本",
+          "regenerateTranslations": "重新生成翻譯"
+        },
+        "nutrition": {
+          "calories": "熱量",
+          "protein": "蛋白質",
+          "carbs": "碳水化合物",
+          "fat": "脂肪",
+          "fiber": "膳食纖維",
+          "perServing": "每份"
+        }
+      },
+      "new": {
+        "title": "新增食譜",
+        "subtitle": "建立新的食譜"
+      }
+    },
+    "dataReferences": {
+      "title": "資料參考",
+      "subtitle": "管理飲食標籤、菜式類型、料理類型和食譜類型",
+      "noDataReferences": "尚無資料參考",
+      "noDataReferencesDescription": "建立參考資料以分類和整理您的食譜。"
+    },
+    "prompts": {
+      "title": "AI 提示",
+      "subtitle": "管理用於食譜生成的 AI 提示範本",
+      "noPrompts": "尚無 AI 提示",
+      "noPromptsDescription": "建立提示範本以協助使用 AI 生成食譜內容。"
+    }
+  }
+}

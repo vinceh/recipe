@@ -1,0 +1,122 @@
+/**
+ * Main Stylesheet
+ *
+ * Entry point for all application styles.
+ * Imports design tokens, utilities, and component styles in the correct order.
+ *
+ * IMPORTANT: To customize the UI appearance, edit variables.css
+ */
+
+/* ==================== DESIGN SYSTEM ==================== */
+
+/* 1. Design Tokens - Must be loaded first so all other files can use them */
+@import './variables.css';
+
+/* 2. Typography - Text styles and headings */
+@import './typography.css';
+
+/* 3. Layout - Containers, grid, flex, spacing */
+@import './layout.css';
+
+/* 4. Utilities - Helper classes for common patterns */
+@import './utilities.css';
+
+/* 5. Components - Global component patterns */
+@import './components.css';
+
+/* 6. PrimeVue Overrides - Customize PrimeVue to match our design tokens */
+@import './primevue-overrides.css';
+
+/* ==================== GLOBAL RESETS ==================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px; /* Base font size for rem calculations */
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  text-rendering: optimizeLegibility;
+}
+
+/* ==================== FOCUS VISIBLE POLYFILL ==================== */
+
+/* Only show focus ring for keyboard navigation, not mouse clicks */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+/* ==================== DARK MODE UTILITIES ==================== */
+
+/* Apply dark mode class to <html> element for manual toggle */
+[data-theme="dark"] body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* ==================== SCROLL BEHAVIOR ==================== */
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==================== APP LAYOUT ==================== */
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==================== PRINT STYLES ==================== */
+
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  /* Hide non-essential elements when printing */
+  nav,
+  aside,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+}

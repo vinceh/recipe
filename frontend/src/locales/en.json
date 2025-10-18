@@ -1,0 +1,192 @@
+{
+  "common": {
+    "buttons": {
+      "save": "Save",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "edit": "Edit",
+      "create": "Create",
+      "update": "Update",
+      "search": "Search",
+      "filter": "Filter",
+      "submit": "Submit",
+      "back": "Back",
+      "next": "Next",
+      "previous": "Previous",
+      "confirm": "Confirm",
+      "close": "Close",
+      "createRecipe": "Create Recipe",
+      "manageData": "Manage Data",
+      "addReferenceData": "Add Reference Data",
+      "createPromptTemplate": "Create Prompt Template",
+      "getStarted": "Get Started"
+    },
+    "labels": {
+      "name": "Name",
+      "description": "Description",
+      "email": "Email",
+      "password": "Password",
+      "passwordConfirmation": "Password Confirmation",
+      "language": "Language",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "actions": "Actions",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "messages": {
+      "success": "Operation completed successfully",
+      "error": "An error occurred",
+      "confirmDelete": "Are you sure you want to delete this item?",
+      "loading": "Loading...",
+      "noResults": "No results found",
+      "welcome": "Welcome to Ember",
+      "subtitle": "Your recipe management platform",
+      "unexpectedError": "An unexpected error occurred",
+      "errorOccurred": "An error occurred"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "recipes": "Recipes",
+    "favorites": "Favorites",
+    "about": "About",
+    "login": "Login",
+    "logout": "Logout",
+    "signup": "Sign Up",
+    "profile": "Profile",
+    "settings": "Settings",
+    "admin": "Admin",
+    "dashboard": "Dashboard",
+    "dataReferences": "Data References",
+    "aiPrompts": "AI Prompts",
+    "ingredients": "Ingredients"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signInSubtitle": "Sign in to continue",
+    "backToHome": "Back to Home",
+    "loginError": "Failed to sign in. Please check your credentials."
+  },
+  "forms": {
+    "recipe": {
+      "title": "Recipe Title",
+      "sourceUrl": "Source URL",
+      "servings": "Servings",
+      "prepTime": "Prep Time (minutes)",
+      "cookTime": "Cook Time (minutes)",
+      "totalTime": "Total Time (minutes)",
+      "difficulty": "Difficulty",
+      "dietaryTags": "Dietary Tags",
+      "cuisines": "Cuisines",
+      "dishTypes": "Dish Types",
+      "recipeTypes": "Recipe Types",
+      "ingredients": "Ingredients",
+      "steps": "Steps",
+      "equipment": "Equipment",
+      "adminNotes": "Admin Notes"
+    },
+    "user": {
+      "email": "Email",
+      "password": "Password",
+      "passwordConfirmation": "Confirm Password",
+      "rememberMe": "Remember Me",
+      "forgotPassword": "Forgot Password?",
+      "emailPlaceholder": "Enter your email",
+      "passwordPlaceholder": "Enter your password"
+    }
+  },
+  "errors": {
+    "validation": {
+      "required": "This field is required",
+      "invalidEmail": "Invalid email address",
+      "passwordTooShort": "Password is too short (minimum 6 characters)",
+      "passwordsDontMatch": "Passwords don't match",
+      "invalidFormat": "Invalid format"
+    }
+  },
+  "admin": {
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "Welcome back to Ember Admin",
+      "welcomeTitle": "Welcome to Ember Admin!",
+      "welcomeDescription": "Get started by creating your first recipe or managing data references.",
+      "totalRecipes": "Total Recipes",
+      "dataReferences": "Data References",
+      "aiPrompts": "AI Prompts",
+      "ingredients": "Ingredients"
+    },
+    "recipes": {
+      "title": "Recipes",
+      "subtitle": "Manage your recipe collection",
+      "noRecipes": "No recipes yet",
+      "noRecipesDescription": "Start building your recipe collection by creating your first recipe.",
+      "table": {
+        "name": "Name",
+        "language": "Language",
+        "cuisines": "Cuisines",
+        "dishTypes": "Dish Types",
+        "servings": "Servings",
+        "timing": "Time",
+        "minutes": "min"
+      },
+      "pagination": {
+        "page": "Page",
+        "of": "of"
+      },
+      "detail": {
+        "title": "Recipe Details",
+        "subtitle": "View and manage recipe information",
+        "sections": {
+          "basicInfo": "Basic Information",
+          "ingredients": "Ingredients",
+          "steps": "Instructions",
+          "equipment": "Equipment",
+          "nutrition": "Nutrition Information",
+          "actions": "Recipe Actions"
+        },
+        "fields": {
+          "name": "Name",
+          "language": "Language",
+          "servings": "Servings",
+          "timing": "Total Time",
+          "cuisines": "Cuisines",
+          "dishTypes": "Dish Types",
+          "dietaryTags": "Dietary Tags",
+          "aliases": "Aliases",
+          "sourceUrl": "Source URL",
+          "requiresPrecision": "Requires Precision",
+          "adminNotes": "Admin Notes"
+        },
+        "actions": {
+          "regenerateVariants": "Regenerate Variants",
+          "regenerateTranslations": "Regenerate Translations"
+        },
+        "nutrition": {
+          "calories": "Calories",
+          "protein": "Protein",
+          "carbs": "Carbs",
+          "fat": "Fat",
+          "fiber": "Fiber",
+          "perServing": "Per serving"
+        }
+      },
+      "new": {
+        "title": "New Recipe",
+        "subtitle": "Create a new recipe"
+      }
+    },
+    "dataReferences": {
+      "title": "Data References",
+      "subtitle": "Manage dietary tags, dish types, cuisines, and recipe types",
+      "noDataReferences": "No data references yet",
+      "noDataReferencesDescription": "Create reference data to categorize and organize your recipes."
+    },
+    "prompts": {
+      "title": "AI Prompts",
+      "subtitle": "Manage AI prompt templates for recipe generation",
+      "noPrompts": "No AI prompts yet",
+      "noPromptsDescription": "Create prompt templates to help generate recipe content with AI."
+    }
+  }
+}

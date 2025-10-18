@@ -1,0 +1,762 @@
+/**
+ * Utility Classes
+ *
+ * Common helper classes for borders, backgrounds, shadows, etc.
+ * Uses design tokens from variables.css - never hardcode values.
+ */
+
+/* ==================== BACKGROUNDS ==================== */
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-primary-light {
+  background-color: var(--color-primary-light);
+}
+
+.bg-primary-pale {
+  background-color: var(--color-primary-pale);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-secondary-light {
+  background-color: var(--color-secondary-light);
+}
+
+.bg-secondary-pale {
+  background-color: var(--color-secondary-pale);
+}
+
+.bg-success {
+  background-color: var(--color-success);
+}
+
+.bg-success-light {
+  background-color: var(--color-success-light);
+}
+
+.bg-warning {
+  background-color: var(--color-warning);
+}
+
+.bg-warning-light {
+  background-color: var(--color-warning-light);
+}
+
+.bg-error {
+  background-color: var(--color-error);
+}
+
+.bg-error-light {
+  background-color: var(--color-error-light);
+}
+
+.bg-info {
+  background-color: var(--color-info);
+}
+
+.bg-info-light {
+  background-color: var(--color-info-light);
+}
+
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.bg-black {
+  background-color: var(--color-black);
+}
+
+.bg-gray-50 {
+  background-color: var(--color-gray-50);
+}
+
+.bg-gray-100 {
+  background-color: var(--color-gray-100);
+}
+
+.bg-gray-200 {
+  background-color: var(--color-gray-200);
+}
+
+.bg-gray-300 {
+  background-color: var(--color-gray-300);
+}
+
+.bg-gray-400 {
+  background-color: var(--color-gray-400);
+}
+
+.bg-gray-500 {
+  background-color: var(--color-gray-500);
+}
+
+.bg-gray-600 {
+  background-color: var(--color-gray-600);
+}
+
+.bg-gray-700 {
+  background-color: var(--color-gray-700);
+}
+
+.bg-gray-800 {
+  background-color: var(--color-gray-800);
+}
+
+.bg-gray-900 {
+  background-color: var(--color-gray-900);
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+/* Semantic backgrounds */
+.bg-base {
+  background-color: var(--color-background);
+}
+
+.bg-secondary-bg {
+  background-color: var(--color-background-secondary);
+}
+
+.bg-tertiary {
+  background-color: var(--color-background-tertiary);
+}
+
+.bg-inverse {
+  background-color: var(--color-background-inverse);
+}
+
+/* ==================== BORDERS ==================== */
+
+.border {
+  border: var(--border-width-thin) solid var(--color-border);
+}
+
+.border-0 {
+  border: 0;
+}
+
+.border-t {
+  border-top: var(--border-width-thin) solid var(--color-border);
+}
+
+.border-r {
+  border-right: var(--border-width-thin) solid var(--color-border);
+}
+
+.border-b {
+  border-bottom: var(--border-width-thin) solid var(--color-border);
+}
+
+.border-l {
+  border-left: var(--border-width-thin) solid var(--color-border);
+}
+
+/* Border Colors */
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+.border-secondary {
+  border-color: var(--color-secondary);
+}
+
+.border-success {
+  border-color: var(--color-success);
+}
+
+.border-warning {
+  border-color: var(--color-warning);
+}
+
+.border-error {
+  border-color: var(--color-error);
+}
+
+.border-info {
+  border-color: var(--color-info);
+}
+
+.border-gray {
+  border-color: var(--color-border);
+}
+
+.border-light {
+  border-color: var(--color-border-light);
+}
+
+.border-dark {
+  border-color: var(--color-border-dark);
+}
+
+.border-transparent {
+  border-color: transparent;
+}
+
+/* Border Radius */
+.rounded-none {
+  border-radius: 0;
+}
+
+.rounded-sm {
+  border-radius: var(--border-radius-sm);
+}
+
+.rounded {
+  border-radius: var(--border-radius-md);
+}
+
+.rounded-md {
+  border-radius: var(--border-radius-md);
+}
+
+.rounded-lg {
+  border-radius: var(--border-radius-lg);
+}
+
+.rounded-xl {
+  border-radius: var(--border-radius-xl);
+}
+
+.rounded-2xl {
+  border-radius: var(--border-radius-2xl);
+}
+
+.rounded-full {
+  border-radius: var(--border-radius-full);
+}
+
+/* Rounded corners individually */
+.rounded-t {
+  border-top-left-radius: var(--border-radius-md);
+  border-top-right-radius: var(--border-radius-md);
+}
+
+.rounded-r {
+  border-top-right-radius: var(--border-radius-md);
+  border-bottom-right-radius: var(--border-radius-md);
+}
+
+.rounded-b {
+  border-bottom-left-radius: var(--border-radius-md);
+  border-bottom-right-radius: var(--border-radius-md);
+}
+
+.rounded-l {
+  border-top-left-radius: var(--border-radius-md);
+  border-bottom-left-radius: var(--border-radius-md);
+}
+
+/* ==================== SHADOWS ==================== */
+
+.shadow-none {
+  box-shadow: var(--shadow-none);
+}
+
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.shadow {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-md {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+.shadow-xl {
+  box-shadow: var(--shadow-xl);
+}
+
+.shadow-2xl {
+  box-shadow: var(--shadow-2xl);
+}
+
+.shadow-inner {
+  box-shadow: var(--shadow-inner);
+}
+
+.shadow-focus {
+  box-shadow: var(--shadow-focus);
+}
+
+/* ==================== OPACITY ==================== */
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-25 {
+  opacity: 0.25;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+/* ==================== TRANSITIONS ==================== */
+
+.transition {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-base);
+}
+
+.transition-fast {
+  transition-duration: var(--transition-fast);
+}
+
+.transition-base {
+  transition-duration: var(--transition-base);
+}
+
+.transition-slow {
+  transition-duration: var(--transition-slow);
+}
+
+.transition-none {
+  transition-property: none;
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-base);
+}
+
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-base);
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-base);
+}
+
+/* ==================== CURSOR ==================== */
+
+.cursor-auto {
+  cursor: auto;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-wait {
+  cursor: wait;
+}
+
+.cursor-text {
+  cursor: text;
+}
+
+.cursor-move {
+  cursor: move;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+/* ==================== POINTER EVENTS ==================== */
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
+/* ==================== USER SELECT ==================== */
+
+.select-none {
+  user-select: none;
+}
+
+.select-text {
+  user-select: text;
+}
+
+.select-all {
+  user-select: all;
+}
+
+.select-auto {
+  user-select: auto;
+}
+
+/* ==================== VISIBILITY ==================== */
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+/* ==================== OBJECT FIT ==================== */
+
+.object-contain {
+  object-fit: contain;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.object-fill {
+  object-fit: fill;
+}
+
+.object-none {
+  object-fit: none;
+}
+
+.object-scale-down {
+  object-fit: scale-down;
+}
+
+/* ==================== ASPECT RATIO ==================== */
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+/* ==================== ACCESSIBILITY ==================== */
+
+/* Screen reader only - visually hidden but accessible to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Not screen reader only */
+.not-sr-only {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Focus visible (keyboard navigation) */
+.focus-visible-ring:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+  border-radius: var(--border-radius-sm);
+}
+
+/* ==================== RESPONSIVE UTILITIES ==================== */
+
+/* Show/hide on mobile */
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .show-mobile {
+    display: none !important;
+  }
+}
+
+/* Show/hide on tablet */
+@media (max-width: 1023px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .show-tablet {
+    display: none !important;
+  }
+}
+
+/* Show/hide on desktop */
+@media (max-width: 1279px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .show-desktop {
+    display: none !important;
+  }
+}
+
+/* ==================== PRINT UTILITIES ==================== */
+
+@media print {
+  .print-hide {
+    display: none !important;
+  }
+
+  .print-show {
+    display: block !important;
+  }
+}
+
+/* ==================== ANIMATION UTILITIES ==================== */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25%);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-down {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in var(--transition-base) ease-out;
+}
+
+.animate-fade-out {
+  animation: fade-out var(--transition-base) ease-out;
+}
+
+.animate-slide-in-up {
+  animation: slide-in-up var(--transition-base) ease-out;
+}
+
+.animate-slide-in-down {
+  animation: slide-in-down var(--transition-base) ease-out;
+}
+
+/* ==================== DIVIDER ==================== */
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border);
+  margin: var(--spacing-md) 0;
+}
+
+.divider-vertical {
+  width: 1px;
+  height: 100%;
+  background-color: var(--color-border);
+  margin: 0 var(--spacing-md);
+}
+
+/* ==================== CARD STYLES ==================== */
+
+.card {
+  background-color: var(--color-background);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-hover {
+  transition: all var(--transition-base);
+}
+
+.card-hover:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* ==================== BADGE STYLES ==================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--border-radius-full);
+  line-height: 1;
+}
+
+.badge-primary {
+  background-color: var(--color-primary-pale);
+  color: var(--color-primary-dark);
+}
+
+.badge-secondary {
+  background-color: var(--color-secondary-pale);
+  color: var(--color-secondary-dark);
+}
+
+.badge-success {
+  background-color: var(--color-success-light);
+  color: var(--color-success-dark);
+}
+
+.badge-warning {
+  background-color: var(--color-warning-light);
+  color: var(--color-warning-dark);
+}
+
+.badge-error {
+  background-color: var(--color-error-light);
+  color: var(--color-error-dark);
+}
+
+.badge-info {
+  background-color: var(--color-info-light);
+  color: var(--color-info-dark);
+}
+
+/* ==================== BUTTON RESET ==================== */
+
+.btn-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  outline: inherit;
+}
+
+/* ==================== SCROLLBAR STYLING ==================== */
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background-color: var(--color-background-secondary);
+  border-radius: var(--border-radius-sm);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: var(--color-border-dark);
+  border-radius: var(--border-radius-sm);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-gray-500);
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
