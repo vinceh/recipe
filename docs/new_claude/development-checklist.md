@@ -1164,6 +1164,39 @@ Before launch, verify all criteria are met:
 
 ---
 
+## Git Commit Guidelines
+
+**AFTER completing all checklist items and work is fully complete:**
+
+1. ✅ **Verify all requirements met:**
+   - All checklist items marked complete `[x]`
+   - All tests passing (backend: `bundle exec rspec` 100%)
+   - All i18n coverage complete (frontend: `npm run check:i18n` 100%)
+   - All documentation updated (API reference, component library, etc.)
+
+2. ✅ **Create a git commit:**
+   ```bash
+   git add .
+   git commit -m "Descriptive commit message
+
+   - Detail what was implemented
+   - Note which ACs were satisfied (if applicable)
+   - Include any important technical decisions
+
+   🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+   Co-Authored-By: Claude <noreply@anthropic.com>"
+   ```
+
+3. ✅ **Best practices:**
+   - Commit early and often (after completing phases or features)
+   - Write clear, descriptive commit messages
+   - Reference AC IDs in commit messages when applicable
+   - Include the Claude Code co-authorship footer
+   - Never commit code with failing tests or missing i18n translations
+
+---
+
 **End of Development Checklist**
 
-**Last Updated:** 2025-10-07
+**Last Updated:** 2025-10-19
