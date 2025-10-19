@@ -1,0 +1,121 @@
+ja:
+  common:
+    buttons:
+      save: "保存"
+      cancel: "キャンセル"
+      delete: "削除"
+      edit: "編集"
+      create: "作成"
+      update: "更新"
+      search: "検索"
+      filter: "フィルター"
+      submit: "送信"
+      back: "戻る"
+      next: "次へ"
+      previous: "前へ"
+      confirm: "確認"
+      close: "閉じる"
+    labels:
+      name: "名前"
+      description: "説明"
+      email: "メールアドレス"
+      password: "パスワード"
+      password_confirmation: "パスワード確認"
+      language: "言語"
+      created_at: "作成日時"
+      updated_at: "更新日時"
+      actions: "操作"
+    messages:
+      success: "操作が正常に完了しました"
+      error: "エラーが発生しました"
+      confirm_delete: "このアイテムを削除してもよろしいですか？"
+      loading: "読み込み中..."
+      no_results: "結果が見つかりませんでした"
+
+  errors:
+    validation:
+      required: "この項目は必須です"
+      invalid_email: "無効なメールアドレスです"
+      password_too_short: "パスワードが短すぎます（最小6文字）"
+      passwords_dont_match: "パスワードが一致しません"
+      invalid_format: "無効な形式です"
+    auth:
+      invalid_credentials: "メールアドレスまたはパスワードが無効です"
+      unauthorized: "この操作を実行する権限がありません"
+      not_authenticated: "続行するにはサインインしてください"
+      session_expired: "セッションの有効期限が切れました。再度サインインしてください"
+    api:
+      not_found: "リソースが見つかりませんでした"
+      server_error: "内部サーバーエラー。後でもう一度お試しください"
+      bad_request: "不正なリクエストです"
+
+  navigation:
+    home: "ホーム"
+    recipes: "レシピ"
+    favorites: "お気に入り"
+    about: "について"
+    login: "ログイン"
+    logout: "ログアウト"
+    signup: "サインアップ"
+    profile: "プロフィール"
+    settings: "設定"
+    admin: "管理"
+    dashboard: "ダッシュボード"
+
+  forms:
+    recipe:
+      title: "レシピタイトル"
+      source_url: "ソースURL"
+      servings: "分量"
+      prep_time: "準備時間（分）"
+      cook_time: "調理時間（分）"
+      total_time: "合計時間（分）"
+      difficulty: "難易度"
+      dietary_tags: "食事タグ"
+      cuisines: "料理"
+      dish_types: "料理タイプ"
+      recipe_types: "レシピタイプ"
+      ingredients: "材料"
+      steps: "手順"
+      equipment: "器具"
+      admin_notes: "管理者メモ"
+    user:
+      email: "メールアドレス"
+      password: "パスワード"
+      password_confirmation: "パスワード確認"
+      remember_me: "ログイン状態を保持"
+      forgot_password: "パスワードをお忘れですか？"
+
+  models:
+    recipe:
+      one: "レシピ"
+      other: "レシピ"
+    user:
+      one: "ユーザー"
+      other: "ユーザー"
+    ingredient:
+      one: "材料"
+      other: "材料"
+    favorite:
+      one: "お気に入り"
+      other: "お気に入り"
+
+  api:
+    recipes:
+      created: "レシピが正常に作成されました"
+      updated: "レシピが正常に更新されました"
+      deleted: "レシピが正常に削除されました"
+      not_found: "レシピが見つかりませんでした"
+      scaled: "レシピが正常にスケーリングされました"
+    favorites:
+      added: "レシピをお気に入りに追加しました"
+      removed: "レシピをお気に入りから削除しました"
+      already_favorited: "レシピは既にお気に入りに登録されています"
+    notes:
+      created: "メモが正常に作成されました"
+      updated: "メモが正常に更新されました"
+      deleted: "メモが正常に削除されました"
+    auth:
+      signed_in: "正常にサインインしました"
+      signed_out: "正常にサインアウトしました"
+      signed_up: "アカウントが正常に作成されました"

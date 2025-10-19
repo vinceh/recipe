@@ -1,0 +1,121 @@
+en:
+  common:
+    buttons:
+      save: "Save"
+      cancel: "Cancel"
+      delete: "Delete"
+      edit: "Edit"
+      create: "Create"
+      update: "Update"
+      search: "Search"
+      filter: "Filter"
+      submit: "Submit"
+      back: "Back"
+      next: "Next"
+      previous: "Previous"
+      confirm: "Confirm"
+      close: "Close"
+    labels:
+      name: "Name"
+      description: "Description"
+      email: "Email"
+      password: "Password"
+      password_confirmation: "Password Confirmation"
+      language: "Language"
+      created_at: "Created At"
+      updated_at: "Updated At"
+      actions: "Actions"
+    messages:
+      success: "Operation completed successfully"
+      error: "An error occurred"
+      confirm_delete: "Are you sure you want to delete this item?"
+      loading: "Loading..."
+      no_results: "No results found"
+
+  errors:
+    validation:
+      required: "This field is required"
+      invalid_email: "Invalid email address"
+      password_too_short: "Password is too short (minimum 6 characters)"
+      passwords_dont_match: "Passwords don't match"
+      invalid_format: "Invalid format"
+    auth:
+      invalid_credentials: "Invalid email or password"
+      unauthorized: "You are not authorized to perform this action"
+      not_authenticated: "Please sign in to continue"
+      session_expired: "Your session has expired. Please sign in again"
+    api:
+      not_found: "Resource not found"
+      server_error: "Internal server error. Please try again later"
+      bad_request: "Bad request"
+
+  navigation:
+    home: "Home"
+    recipes: "Recipes"
+    favorites: "Favorites"
+    about: "About"
+    login: "Login"
+    logout: "Logout"
+    signup: "Sign Up"
+    profile: "Profile"
+    settings: "Settings"
+    admin: "Admin"
+    dashboard: "Dashboard"
+
+  forms:
+    recipe:
+      title: "Recipe Title"
+      source_url: "Source URL"
+      servings: "Servings"
+      prep_time: "Prep Time (minutes)"
+      cook_time: "Cook Time (minutes)"
+      total_time: "Total Time (minutes)"
+      difficulty: "Difficulty"
+      dietary_tags: "Dietary Tags"
+      cuisines: "Cuisines"
+      dish_types: "Dish Types"
+      recipe_types: "Recipe Types"
+      ingredients: "Ingredients"
+      steps: "Steps"
+      equipment: "Equipment"
+      admin_notes: "Admin Notes"
+    user:
+      email: "Email Address"
+      password: "Password"
+      password_confirmation: "Confirm Password"
+      remember_me: "Remember Me"
+      forgot_password: "Forgot Password?"
+
+  models:
+    recipe:
+      one: "Recipe"
+      other: "Recipes"
+    user:
+      one: "User"
+      other: "Users"
+    ingredient:
+      one: "Ingredient"
+      other: "Ingredients"
+    favorite:
+      one: "Favorite"
+      other: "Favorites"
+
+  api:
+    recipes:
+      created: "Recipe created successfully"
+      updated: "Recipe updated successfully"
+      deleted: "Recipe deleted successfully"
+      not_found: "Recipe not found"
+      scaled: "Recipe scaled successfully"
+    favorites:
+      added: "Recipe added to favorites"
+      removed: "Recipe removed from favorites"
+      already_favorited: "Recipe is already in your favorites"
+    notes:
+      created: "Note created successfully"
+      updated: "Note updated successfully"
+      deleted: "Note deleted successfully"
+    auth:
+      signed_in: "Signed in successfully"
+      signed_out: "Signed out successfully"
+      signed_up: "Account created successfully"

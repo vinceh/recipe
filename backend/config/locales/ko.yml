@@ -1,0 +1,121 @@
+ko:
+  common:
+    buttons:
+      save: "저장"
+      cancel: "취소"
+      delete: "삭제"
+      edit: "편집"
+      create: "생성"
+      update: "업데이트"
+      search: "검색"
+      filter: "필터"
+      submit: "제출"
+      back: "뒤로"
+      next: "다음"
+      previous: "이전"
+      confirm: "확인"
+      close: "닫기"
+    labels:
+      name: "이름"
+      description: "설명"
+      email: "이메일"
+      password: "비밀번호"
+      password_confirmation: "비밀번호 확인"
+      language: "언어"
+      created_at: "생성일"
+      updated_at: "수정일"
+      actions: "작업"
+    messages:
+      success: "작업이 성공적으로 완료되었습니다"
+      error: "오류가 발생했습니다"
+      confirm_delete: "이 항목을 삭제하시겠습니까?"
+      loading: "로딩 중..."
+      no_results: "결과가 없습니다"
+
+  errors:
+    validation:
+      required: "필수 입력 항목입니다"
+      invalid_email: "잘못된 이메일 주소입니다"
+      password_too_short: "비밀번호가 너무 짧습니다 (최소 6자)"
+      passwords_dont_match: "비밀번호가 일치하지 않습니다"
+      invalid_format: "잘못된 형식입니다"
+    auth:
+      invalid_credentials: "잘못된 이메일 또는 비밀번호입니다"
+      unauthorized: "이 작업을 수행할 권한이 없습니다"
+      not_authenticated: "계속하려면 로그인하세요"
+      session_expired: "세션이 만료되었습니다. 다시 로그인하세요"
+    api:
+      not_found: "리소스를 찾을 수 없습니다"
+      server_error: "내부 서버 오류입니다. 나중에 다시 시도하세요"
+      bad_request: "잘못된 요청입니다"
+
+  navigation:
+    home: "홈"
+    recipes: "레시피"
+    favorites: "즐겨찾기"
+    about: "소개"
+    login: "로그인"
+    logout: "로그아웃"
+    signup: "회원가입"
+    profile: "프로필"
+    settings: "설정"
+    admin: "관리자"
+    dashboard: "대시보드"
+
+  forms:
+    recipe:
+      title: "레시피 제목"
+      source_url: "출처 URL"
+      servings: "인분"
+      prep_time: "준비 시간 (분)"
+      cook_time: "조리 시간 (분)"
+      total_time: "총 시간 (분)"
+      difficulty: "난이도"
+      dietary_tags: "식단 태그"
+      cuisines: "요리 종류"
+      dish_types: "음식 유형"
+      recipe_types: "레시피 유형"
+      ingredients: "재료"
+      steps: "조리 순서"
+      equipment: "조리 도구"
+      admin_notes: "관리자 메모"
+    user:
+      email: "이메일 주소"
+      password: "비밀번호"
+      password_confirmation: "비밀번호 확인"
+      remember_me: "로그인 상태 유지"
+      forgot_password: "비밀번호를 잊으셨나요?"
+
+  models:
+    recipe:
+      one: "레시피"
+      other: "레시피"
+    user:
+      one: "사용자"
+      other: "사용자"
+    ingredient:
+      one: "재료"
+      other: "재료"
+    favorite:
+      one: "즐겨찾기"
+      other: "즐겨찾기"
+
+  api:
+    recipes:
+      created: "레시피가 성공적으로 생성되었습니다"
+      updated: "레시피가 성공적으로 업데이트되었습니다"
+      deleted: "레시피가 성공적으로 삭제되었습니다"
+      not_found: "레시피를 찾을 수 없습니다"
+      scaled: "레시피가 성공적으로 조정되었습니다"
+    favorites:
+      added: "레시피가 즐겨찾기에 추가되었습니다"
+      removed: "레시피가 즐겨찾기에서 제거되었습니다"
+      already_favorited: "이미 즐겨찾기에 있는 레시피입니다"
+    notes:
+      created: "메모가 성공적으로 생성되었습니다"
+      updated: "메모가 성공적으로 업데이트되었습니다"
+      deleted: "메모가 성공적으로 삭제되었습니다"
+    auth:
+      signed_in: "성공적으로 로그인되었습니다"
+      signed_out: "성공적으로 로그아웃되었습니다"
+      signed_up: "계정이 성공적으로 생성되었습니다"

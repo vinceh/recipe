@@ -1,0 +1,121 @@
+fr:
+  common:
+    buttons:
+      save: "Enregistrer"
+      cancel: "Annuler"
+      delete: "Supprimer"
+      edit: "Modifier"
+      create: "Créer"
+      update: "Mettre à jour"
+      search: "Rechercher"
+      filter: "Filtrer"
+      submit: "Soumettre"
+      back: "Retour"
+      next: "Suivant"
+      previous: "Précédent"
+      confirm: "Confirmer"
+      close: "Fermer"
+    labels:
+      name: "Nom"
+      description: "Description"
+      email: "Adresse e-mail"
+      password: "Mot de passe"
+      password_confirmation: "Confirmer le mot de passe"
+      language: "Langue"
+      created_at: "Date de création"
+      updated_at: "Date de mise à jour"
+      actions: "Actions"
+    messages:
+      success: "Opération terminée avec succès"
+      error: "Une erreur s'est produite"
+      confirm_delete: "Êtes-vous sûr de vouloir supprimer cet élément ?"
+      loading: "Chargement..."
+      no_results: "Aucun résultat trouvé"
+
+  errors:
+    validation:
+      required: "Ce champ est obligatoire"
+      invalid_email: "Adresse e-mail non valide"
+      password_too_short: "Le mot de passe est trop court (minimum 6 caractères)"
+      passwords_dont_match: "Les mots de passe ne correspondent pas"
+      invalid_format: "Format non valide"
+    auth:
+      invalid_credentials: "Adresse e-mail ou mot de passe non valide"
+      unauthorized: "Vous n'êtes pas autorisé à effectuer cette action"
+      not_authenticated: "Veuillez vous connecter pour continuer"
+      session_expired: "Votre session a expiré. Veuillez vous reconnecter"
+    api:
+      not_found: "Ressource introuvable"
+      server_error: "Erreur interne du serveur. Veuillez réessayer plus tard"
+      bad_request: "Requête incorrecte"
+
+  navigation:
+    home: "Accueil"
+    recipes: "Recettes"
+    favorites: "Favoris"
+    about: "À propos"
+    login: "Se connecter"
+    logout: "Se déconnecter"
+    signup: "S'inscrire"
+    profile: "Profil"
+    settings: "Paramètres"
+    admin: "Administrateur"
+    dashboard: "Tableau de bord"
+
+  forms:
+    recipe:
+      title: "Titre de la recette"
+      source_url: "URL source"
+      servings: "Portions"
+      prep_time: "Temps de préparation (minutes)"
+      cook_time: "Temps de cuisson (minutes)"
+      total_time: "Temps total (minutes)"
+      difficulty: "Difficulté"
+      dietary_tags: "Étiquettes diététiques"
+      cuisines: "Cuisines"
+      dish_types: "Types de plat"
+      recipe_types: "Types de recette"
+      ingredients: "Ingrédients"
+      steps: "Étapes"
+      equipment: "Équipement"
+      admin_notes: "Notes administrateur"
+    user:
+      email: "Adresse e-mail"
+      password: "Mot de passe"
+      password_confirmation: "Confirmer le mot de passe"
+      remember_me: "Se souvenir de moi"
+      forgot_password: "Mot de passe oublié ?"
+
+  models:
+    recipe:
+      one: "Recette"
+      other: "Recettes"
+    user:
+      one: "Utilisateur"
+      other: "Utilisateurs"
+    ingredient:
+      one: "Ingrédient"
+      other: "Ingrédients"
+    favorite:
+      one: "Favori"
+      other: "Favoris"
+
+  api:
+    recipes:
+      created: "Recette créée avec succès"
+      updated: "Recette mise à jour avec succès"
+      deleted: "Recette supprimée avec succès"
+      not_found: "Recette introuvable"
+      scaled: "Recette mise à l'échelle avec succès"
+    favorites:
+      added: "Recette ajoutée aux favoris"
+      removed: "Recette retirée des favoris"
+      already_favorited: "La recette est déjà dans vos favoris"
+    notes:
+      created: "Note créée avec succès"
+      updated: "Note mise à jour avec succès"
+      deleted: "Note supprimée avec succès"
+    auth:
+      signed_in: "Connexion réussie"
+      signed_out: "Déconnexion réussie"
+      signed_up: "Compte créé avec succès"

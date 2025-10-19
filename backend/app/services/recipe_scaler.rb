@@ -1,0 +1,176 @@
+class RecipeScaler
+  FRIENDLY_FRACTIONS = {
+    0.125 => '1/8',
+    0.25 => '1/4',
+    0.33 => '1/3',
+    0.5 => '1/2',
+    0.66 => '2/3',
+    0.75 => '3/4'
+  }.freeze
+
+  def initialize(recipe)
+    @recipe = recipe
+    @context = detect_cooking_context(recipe)
+  end
+
+  def scale_by_servings(target_servings)
+    scaling_factor = target_servings.to_f / @recipe.servings['original']
+    scale_all_ingredients(scaling_factor)
+  end
+
+  def scale_by_ingredient(ingredient_id, target_amount, target_unit)
+    base_ingredient = find_ingredient_by_id(ingredient_id)
+    return nil unless base_ingredient
+
+    # Convert target to same unit as base
+    converted_amount = UnitConverter.convert(
+      target_amount,
+      target_unit,
+      base_ingredient['unit']
+    )
+
+    scaling_factor = converted_amount / base_ingredient['amount'].to_f
+    scale_all_ingredients(scaling_factor)
+  end
+
+  private
+
+  def scale_all_ingredients(factor)
+    scaled_recipe = @recipe.dup
+    scaled_recipe.ingredient_groups = deep_dup_jsonb(@recipe.ingredient_groups)
+
+    scaled_recipe.ingredient_groups.each do |group|
+      group['items'].each do |ingredient|
+        scale_ingredient!(ingredient, factor)
+      end
+    end
+
+    scaled_recipe.servings['scaled'] = (@recipe.servings['original'] * factor).round(1)
+    scaled_recipe
+  end
+
+  def scale_ingredient!(ingredient, factor)
+    raw_amount = ingredient['amount'].to_f * factor
+
+    if @context == 'baking'
+      result = preserve_precision(raw_amount, ingredient['unit'])
+      if result.is_a?(Hash)
+        ingredient['amount'] = result[:amount]
+        ingredient['unit'] = result[:unit]
+      else
+        ingredient['amount'] = result
+      end
+    else
+      ingredient['amount'] = round_to_friendly_fraction(raw_amount)
+      check_unit_step_down!(ingredient)
+    end
+
+    ingredient
+  end
+
+  def round_to_friendly_fraction(amount)
+    # Try whole number first
+    return amount.round if (amount - amount.round).abs < 0.1
+
+    # Try simple fraction
+    FRIENDLY_FRACTIONS.each do |decimal, fraction|
+      return fraction if (amount - decimal).abs < 0.05
+    end
+
+    # Try mixed number (e.g., 1 1/2)
+    if amount > 1
+      whole_part = amount.floor
+      fractional_part = amount - whole_part
+
+      FRIENDLY_FRACTIONS.each do |decimal, fraction|
+        if (fractional_part - decimal).abs < 0.05
+          return "#{whole_part} #{fraction}"
+        end
+      end
+    end
+
+    # Fallback to 1 decimal place
+    amount.round(1)
+  end
+
+  def preserve_precision(amount, unit)
+    # For baking, convert small amounts to grams for precision
+    if unit.in?(['cup', 'tbsp', 'tsp']) && amount < 0.25
+      # Try to convert to grams
+      # First convert to ml, then assume 1ml ≈ 1g for dry ingredients
+      ml = UnitConverter.convert(amount, unit, 'ml')
+      if ml > 0
+        return { amount: ml.round(1), unit: 'g' }
+      end
+    end
+
+    amount.round(2) # Keep 2 decimal places for baking
+  end
+
+  def check_unit_step_down!(ingredient)
+    amount = ingredient['amount']
+    unit = ingredient['unit']
+
+    # Convert amount to float for comparison (handles friendly fractions)
+    numeric_amount = amount.is_a?(String) ? parse_friendly_fraction(amount) : amount.to_f
+
+    # Step down tbsp to tsp if amount is small
+    if unit == 'tbsp' && numeric_amount < 1
+      ingredient['amount'] = (numeric_amount * 3).round(1)
+      ingredient['unit'] = 'tsp'
+    end
+
+    # Step down cups to tbsp if amount is small
+    if unit == 'cup' && numeric_amount < 0.25
+      ingredient['amount'] = (numeric_amount * 16).round(1)
+      ingredient['unit'] = 'tbsp'
+    end
+  end
+
+  def parse_friendly_fraction(fraction_str)
+    # Parse strings like "1 1/2", "1/2", "3/4" back to decimals
+    return fraction_str.to_f if fraction_str.is_a?(Numeric)
+
+    parts = fraction_str.to_s.strip.split(' ')
+    if parts.length == 2
+      # Mixed number like "1 1/2"
+      whole = parts[0].to_f
+      frac_parts = parts[1].split('/')
+      whole + (frac_parts[0].to_f / frac_parts[1].to_f)
+    elsif fraction_str.include?('/')
+      # Simple fraction like "1/2"
+      frac_parts = fraction_str.split('/')
+      frac_parts[0].to_f / frac_parts[1].to_f
+    else
+      fraction_str.to_f
+    end
+  end
+
+  def detect_cooking_context(recipe)
+    # Check if recipe requires precision (baking, confectionery, etc.)
+    return 'baking' if recipe.requires_precision
+
+    precision_types = ['baking', 'confectionery', 'fermentation', 'molecular']
+    recipe.recipe_types.any? { |type| precision_types.include?(type) } ? 'baking' : 'cooking'
+  end
+
+  def find_ingredient_by_id(ingredient_id)
+    @recipe.ingredient_groups.each do |group|
+      ingredient = group['items'].find { |i| i['id'] == ingredient_id }
+      return ingredient if ingredient
+    end
+    nil
+  end
+
+  # Deep dup for JSONB fields
+  def deep_dup_jsonb(obj)
+    case obj
+    when Hash
+      obj.transform_values { |v| deep_dup_jsonb(v) }
+    when Array
+      obj.map { |v| deep_dup_jsonb(v) }
+    else
+      obj.dup rescue obj
+    end
+  end
+end

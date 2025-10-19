@@ -1,0 +1,121 @@
+zh-cn:
+  common:
+    buttons:
+      save: "保存"
+      cancel: "取消"
+      delete: "删除"
+      edit: "编辑"
+      create: "创建"
+      update: "更新"
+      search: "搜索"
+      filter: "筛选"
+      submit: "提交"
+      back: "返回"
+      next: "下一步"
+      previous: "上一步"
+      confirm: "确认"
+      close: "关闭"
+    labels:
+      name: "名称"
+      description: "描述"
+      email: "电子邮件"
+      password: "密码"
+      password_confirmation: "确认密码"
+      language: "语言"
+      created_at: "创建时间"
+      updated_at: "更新时间"
+      actions: "操作"
+    messages:
+      success: "操作成功完成"
+      error: "发生错误"
+      confirm_delete: "您确定要删除此项目吗？"
+      loading: "加载中..."
+      no_results: "未找到结果"
+
+  errors:
+    validation:
+      required: "此字段为必填项"
+      invalid_email: "电子邮件地址无效"
+      password_too_short: "密码太短（至少6个字符）"
+      passwords_dont_match: "密码不匹配"
+      invalid_format: "格式无效"
+    auth:
+      invalid_credentials: "电子邮件或密码无效"
+      unauthorized: "您无权执行此操作"
+      not_authenticated: "请登录以继续"
+      session_expired: "您的会话已过期，请重新登录"
+    api:
+      not_found: "找不到资源"
+      server_error: "内部服务器错误，请稍后再试"
+      bad_request: "错误的请求"
+
+  navigation:
+    home: "首页"
+    recipes: "食谱"
+    favorites: "我的收藏"
+    about: "关于"
+    login: "登录"
+    logout: "登出"
+    signup: "注册"
+    profile: "个人资料"
+    settings: "设置"
+    admin: "管理员"
+    dashboard: "仪表板"
+
+  forms:
+    recipe:
+      title: "食谱标题"
+      source_url: "来源网址"
+      servings: "份数"
+      prep_time: "准备时间（分钟）"
+      cook_time: "烹饪时间（分钟）"
+      total_time: "总时间（分钟）"
+      difficulty: "难度"
+      dietary_tags: "饮食标签"
+      cuisines: "料理类型"
+      dish_types: "菜式类型"
+      recipe_types: "食谱类型"
+      ingredients: "食材"
+      steps: "步骤"
+      equipment: "厨具"
+      admin_notes: "管理员备注"
+    user:
+      email: "电子邮件地址"
+      password: "密码"
+      password_confirmation: "确认密码"
+      remember_me: "记住我"
+      forgot_password: "忘记密码？"
+
+  models:
+    recipe:
+      one: "食谱"
+      other: "食谱"
+    user:
+      one: "用户"
+      other: "用户"
+    ingredient:
+      one: "食材"
+      other: "食材"
+    favorite:
+      one: "收藏"
+      other: "收藏"
+
+  api:
+    recipes:
+      created: "食谱创建成功"
+      updated: "食谱更新成功"
+      deleted: "食谱删除成功"
+      not_found: "找不到食谱"
+      scaled: "食谱份量调整成功"
+    favorites:
+      added: "食谱已加入我的收藏"
+      removed: "食谱已从我的收藏移除"
+      already_favorited: "食谱已在您的收藏中"
+    notes:
+      created: "备注创建成功"
+      updated: "备注更新成功"
+      deleted: "备注删除成功"
+    auth:
+      signed_in: "登录成功"
+      signed_out: "登出成功"
+      signed_up: "账户创建成功"
