@@ -720,29 +720,22 @@ See `DOCUMENTATION-WORKFLOW.md` for the complete process.
 **⚠️ DOCUMENTATION REQUIREMENT:**
 **Every component MUST be documented in `component-library.md` with full examples.**
 
-- [ ] Create RecipeForm.vue (manual recipe creation/editing)
+- [x] Create RecipeForm.vue (manual recipe creation/editing)
   - Form fields: title, source_url, servings, timing, difficulty
   - Ingredient groups builder (add/remove groups and ingredients)
   - Steps builder (add/remove/reorder steps)
   - Tags/cuisine/dish type multi-select (uses dataReferenceStore)
   - Equipment multi-select
   - Validation for required fields
-  - [ ] Document in component-library.md
+  - [x] Document in component-library.md
 - [ ] Create RecipeImportModal.vue (4 import methods)
   - [ ] Document in component-library.md
-  - Tab 1: Manual form (use RecipeForm.vue)
-  - Tab 2: Text block import (textarea + parse button)
-  - Tab 3: URL import (URL input + parse button)
-  - Tab 4: Image import (file upload + parse button)
+  - Tab 1: Text block import (textarea + parse button)
+  - Tab 2: URL import (URL input + parse button)
+  - Tab 3: Image import (file upload + parse button)
   - All tabs show parsed result in RecipeForm for review/edit
   - Loading states during AI parsing
   - Error handling for failed imports
-- [ ] Create RecipeListAdmin.vue (admin recipe list page)
-  - DataTable with columns: title, cuisine, created_at, active status
-  - Search/filter by name, cuisine, tags
-  - Bulk actions: delete, activate/deactivate
-  - Edit button → RecipeForm
-  - Delete button with confirmation
 - [ ] Create DataReferenceManager.vue
   - CRUD for dietary tags, cuisines, dish types, recipe types
   - Activate/deactivate toggle
@@ -1161,41 +1154,6 @@ Before launch, verify all criteria are met:
 
 **Key Learnings:**
 - (Add learnings as you build)
-
----
-
-## Git Commit Guidelines
-
-**AFTER completing all checklist items and work is fully complete:**
-
-1. ✅ **Verify all requirements met:**
-   - All checklist items marked complete `[x]`
-   - All tests passing (backend: `bundle exec rspec` 100%)
-   - All i18n coverage complete (frontend: `npm run check:i18n` 100%)
-   - All documentation updated (API reference, component library, etc.)
-
-2. ✅ **Create a git commit:**
-   ```bash
-   git add .
-   git commit -m "Descriptive commit message
-
-   - Detail what was implemented
-   - Note which ACs were satisfied (if applicable)
-   - Include any important technical decisions
-
-   🤖 Generated with [Claude Code](https://claude.com/claude-code)
-
-   Co-Authored-By: Claude <noreply@anthropic.com>"
-   ```
-
-3. ✅ **Best practices:**
-   - Commit early and often (after completing phases or features)
-   - Write clear, descriptive commit messages
-   - Reference AC IDs in commit messages when applicable
-   - Include the Claude Code co-authorship footer
-   - Never commit code with failing tests or missing i18n translations
-
----
 
 **End of Development Checklist**
 

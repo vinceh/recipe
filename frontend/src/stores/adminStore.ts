@@ -175,7 +175,7 @@ export const useAdminStore = defineStore('admin', () => {
       const response = await adminApi.bulkDeleteRecipes(ids)
 
       if (response.success) {
-        recipes.value = recipes.value.filter(r => !ids.includes(r.id))
+        recipes.value = recipes.value.filter(r => !ids.includes(Number(r.id)))
         return response.data.deleted_count
       } else {
         throw new Error(response.message || 'Failed to delete recipes')

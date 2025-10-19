@@ -37,8 +37,8 @@ export const useRecipeStore = defineStore('recipe', () => {
   const hasNextPage = computed(() => pagination.value.current_page < pagination.value.total_pages)
   const hasPreviousPage = computed(() => pagination.value.current_page > 1)
 
-  const filteredByDifficulty = computed(() => (difficulty: string) => {
-    return recipes.value.filter(recipe => recipe.difficulty_level === difficulty)
+  const filteredByPrecision = computed(() => (requiresPrecision: boolean) => {
+    return recipes.value.filter(recipe => recipe.requires_precision === requiresPrecision)
   })
 
   const filteredByTag = computed(() => (tag: string) => {
@@ -63,7 +63,11 @@ export const useRecipeStore = defineStore('recipe', () => {
 
       if (response.success && response.data) {
         recipes.value = response.data.recipes
-        pagination.value = response.data.pagination
+        if (response.data.pagination) {
+          pagination.value = response.data.pagination
+        } else if (response.data.meta) {
+          pagination.value = response.data.meta
+        }
       } else {
         throw new Error(response.message || 'Failed to fetch recipes')
       }
@@ -103,7 +107,9 @@ export const useRecipeStore = defineStore('recipe', () => {
       const response = await recipeApi.scaleRecipe(id, payload)
 
       if (response.success && response.data) {
-        currentRecipe.value = response.data.recipe
+        if (response.data.recipe) {
+          currentRecipe.value = response.data.recipe
+        }
         return response.data
       } else {
         throw new Error(response.message || 'Failed to scale recipe')
@@ -282,7 +288,7 @@ export const useRecipeStore = defineStore('recipe', () => {
     totalRecipes,
     hasNextPage,
     hasPreviousPage,
-    filteredByDifficulty,
+    filteredByPrecision,
     filteredByTag,
     currentRecipeNotes,
     currentRecipeVariants,

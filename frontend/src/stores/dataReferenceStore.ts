@@ -53,15 +53,16 @@ export const useDataReferenceStore = defineStore('dataReference', () => {
     try {
       const response = await dataReferenceApi.getDietaryTags()
 
-      if (response.success && response.data) {
+      if (response.success && response.data && response.data.data_references) {
         dietaryTags.value = response.data.data_references.sort(
           (a, b) => (a.sort_order || 0) - (b.sort_order || 0)
         )
       } else {
-        throw new Error(response.message || 'Failed to fetch dietary tags')
+        dietaryTags.value = []
       }
     } catch (err: any) {
       error.value = err.response?.data?.message || err.message || 'Failed to fetch dietary tags'
+      dietaryTags.value = []
       console.error('Error fetching dietary tags:', err)
     } finally {
       loading.value = false
@@ -75,15 +76,16 @@ export const useDataReferenceStore = defineStore('dataReference', () => {
     try {
       const response = await dataReferenceApi.getDishTypes()
 
-      if (response.success && response.data) {
+      if (response.success && response.data && response.data.data_references) {
         dishTypes.value = response.data.data_references.sort(
           (a, b) => (a.sort_order || 0) - (b.sort_order || 0)
         )
       } else {
-        throw new Error(response.message || 'Failed to fetch dish types')
+        dishTypes.value = []
       }
     } catch (err: any) {
       error.value = err.response?.data?.message || err.message || 'Failed to fetch dish types'
+      dishTypes.value = []
       console.error('Error fetching dish types:', err)
     } finally {
       loading.value = false
@@ -97,15 +99,16 @@ export const useDataReferenceStore = defineStore('dataReference', () => {
     try {
       const response = await dataReferenceApi.getCuisines()
 
-      if (response.success && response.data) {
+      if (response.success && response.data && response.data.data_references) {
         cuisines.value = response.data.data_references.sort(
           (a, b) => (a.sort_order || 0) - (b.sort_order || 0)
         )
       } else {
-        throw new Error(response.message || 'Failed to fetch cuisines')
+        cuisines.value = []
       }
     } catch (err: any) {
       error.value = err.response?.data?.message || err.message || 'Failed to fetch cuisines'
+      cuisines.value = []
       console.error('Error fetching cuisines:', err)
     } finally {
       loading.value = false
@@ -119,15 +122,16 @@ export const useDataReferenceStore = defineStore('dataReference', () => {
     try {
       const response = await dataReferenceApi.getRecipeTypes()
 
-      if (response.success && response.data) {
+      if (response.success && response.data && response.data.data_references) {
         recipeTypes.value = response.data.data_references.sort(
           (a, b) => (a.sort_order || 0) - (b.sort_order || 0)
         )
       } else {
-        throw new Error(response.message || 'Failed to fetch recipe types')
+        recipeTypes.value = []
       }
     } catch (err: any) {
       error.value = err.response?.data?.message || err.message || 'Failed to fetch recipe types'
+      recipeTypes.value = []
       console.error('Error fetching recipe types:', err)
     } finally {
       loading.value = false

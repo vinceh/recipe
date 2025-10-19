@@ -159,9 +159,9 @@ onMounted(() => {
               @click="viewRecipe(recipe.id)"
               class="recipe-row"
             >
-              <td class="recipe-name">{{ (recipe as any).name || recipe.title }}</td>
+              <td class="recipe-name">{{ recipe.name }}</td>
               <td>
-                <span class="badge badge-secondary">{{ ((recipe as any).language || recipe.base_language)?.toUpperCase() }}</span>
+                <span class="badge badge-secondary">{{ recipe.language?.toUpperCase() }}</span>
               </td>
               <td>
                 <div class="tags">
@@ -193,8 +193,8 @@ onMounted(() => {
               </td>
               <td>{{ (recipe as any).servings?.original || recipe.servings || '-' }}</td>
               <td>
-                <span v-if="(recipe as any).timing?.total_minutes || recipe.total_time_minutes">
-                  {{ (recipe as any).timing?.total_minutes || recipe.total_time_minutes }} {{ $t('admin.recipes.table.minutes') }}
+                <span v-if="recipe.timing?.total_minutes">
+                  {{ recipe.timing.total_minutes }} {{ $t('admin.recipes.table.minutes') }}
                 </span>
                 <span v-else>-</span>
               </td>

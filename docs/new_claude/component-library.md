@@ -731,34 +731,101 @@ const breadcrumbs = computed(() => [
 
 **Location:** `components/admin/recipes/RecipeForm.vue`
 
-**Purpose:** Form for creating and editing recipes
+**Purpose:** Comprehensive form for creating and editing recipes with all required fields including ingredients, steps, timing, tags, and equipment
 
 **Props:**
 ```typescript
 interface Props {
-  // TODO: Add props when component is created
+  modelValue?: Partial<Recipe> | null  // Recipe data for editing (default: null)
+  loading?: boolean                     // Show loading state on save (default: false)
 }
 ```
 
 **Emits:**
 ```typescript
 {
-  // TODO: Add emits when component is created
+  'update:modelValue': [value: Partial<Recipe>]  // v-model support
+  save: []                                         // User clicked Save
+  cancel: []                                       // User clicked Cancel
 }
 ```
 
 **Slots:**
-- TODO: Document slots when component is created
+None
 
 **Usage:**
 ```vue
-<!-- TODO: Add usage examples when component is created -->
+<!-- Create new recipe -->
+<RecipeForm
+  v-model="recipeData"
+  :loading="saving"
+  @save="handleSave"
+  @cancel="handleCancel"
+/>
+
+<!-- Edit existing recipe -->
+<RecipeForm
+  v-model="existingRecipe"
+  :loading="updating"
+  @save="handleUpdate"
+  @cancel="router.back()"
+/>
 ```
 
-**Related Components:** RecipeImportModal, RecipeListAdmin
+**Form Sections:**
+1. **Basic Information**
+   - Title (required)
+   - Source URL
+   - Servings (required)
+   - Difficulty (easy/medium/hard)
+   - Language (en, ja, ko, zh-tw, zh-cn, es, fr)
+
+2. **Timing**
+   - Prep time (minutes)
+   - Cook time (minutes)
+   - Total time (minutes)
+
+3. **Tags & Classification**
+   - Dietary tags (multi-select from dataReferenceStore)
+   - Cuisines (multi-select)
+   - Dish types (multi-select)
+   - Recipe types (multi-select)
+
+4. **Ingredient Groups**
+   - Dynamic ingredient groups with add/remove
+   - Each ingredient has: name, amount, unit, notes, optional flag
+   - Add/remove individual ingredients
+   - Delete entire groups (minimum 1 group required)
+
+5. **Steps**
+   - Dynamic step list with add/remove/reorder
+   - Each step has: instruction (required), timing (optional)
+   - Move up/down buttons for reordering
+   - Auto-renumbering on changes
+
+6. **Equipment**
+   - Comma-separated equipment list
+   - Hint text to guide user
+
+**Features:**
+- **Validation:** Form validates required fields (title, servings > 0, at least 1 ingredient, at least 1 step)
+- **Auto-fetch Data References:** Automatically loads dietary tags, cuisines, dish types, recipe types on mount
+- **Responsive:** Mobile-friendly layout with grid-to-column transformation
+- **i18n:** 100% translated in all 7 languages
+- **Design Tokens:** Uses CSS custom properties for all styling
+
+**Related Components:**
+- RecipeImportModal (will use this form for preview/edit)
+- RecipeListAdmin (navigation to this form)
+- DataReferenceStore (provides tag/cuisine/dish type/recipe type options)
 
 **Notes:**
-- TODO: Add notes when component is created
+- Form initializes with 1 empty ingredient and 1 empty step on mount
+- Ingredient groups require at least 1 group (cannot delete last group)
+- Steps auto-renumber when moved or deleted
+- Equipment is stored as comma-separated string, converted to array on save
+- Uses PrimeVue components (InputText, InputNumber, Textarea, Dropdown, MultiSelect, Button, Checkbox)
+- Satisfies AC-ADMIN-001: Manual Recipe Creation - Full Form
 
 ---
 

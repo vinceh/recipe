@@ -42,7 +42,7 @@ const router = createRouter({
         {
           path: 'recipes/new',
           name: 'admin-recipe-new',
-          component: () => import('@/views/admin/AdminRecipeDetail.vue'),
+          component: () => import('@/views/admin/AdminRecipeNew.vue'),
         },
         {
           path: 'recipes/:id',

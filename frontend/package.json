@@ -13,7 +13,11 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "check:i18n": "node scripts/check-i18n-coverage.js",
-    "precommit": "npm run check:i18n && npm run type-check"
+    "precommit": "npm run check:i18n && npm run type-check",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "playwright test --debug",
+    "test:recipe": "playwright test recipe-creation-simple.spec.ts"
   },
   "dependencies": {
     "@primevue/themes": "^4.4.0",
@@ -26,6 +30,7 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.56.1",
     "@tsconfig/node22": "^22.0.2",
     "@types/node": "^22.18.6",
     "@vitejs/plugin-vue": "^6.0.1",

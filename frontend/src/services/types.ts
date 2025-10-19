@@ -1,38 +1,88 @@
 // TypeScript interfaces for API responses
+// These match the backend Recipe model structure exactly
+
+export interface RecipeServings {
+  original: number
+  min: number
+  max: number
+}
+
+export interface RecipeTiming {
+  prep_minutes: number
+  cook_minutes: number
+  total_minutes: number
+}
+
+export interface RecipeNutritionPerServing {
+  calories: number
+  protein_g: number
+  carbs_g: number
+  fat_g: number
+  fiber_g: number
+}
+
+export interface RecipeNutrition {
+  per_serving: RecipeNutritionPerServing
+}
+
+export interface RecipeIngredientItem {
+  name: string
+  amount?: string
+  unit?: string
+  notes?: string
+  optional?: boolean
+}
+
+export interface RecipeIngredientGroup {
+  name: string
+  items: RecipeIngredientItem[]
+}
+
+export interface RecipeStepInstructions {
+  [language: string]: string  // e.g., { "en": "Mix the flour...", "ja": "小麦粉を混ぜ..." }
+}
+
+export interface RecipeStep {
+  id: number
+  instructions: RecipeStepInstructions
+}
 
 export interface Recipe {
   id: string | number
-  title: string
+  name: string  // Backend uses 'name', not 'title'
+  language: string  // Backend uses 'language', not 'base_language'
   source_url?: string
-  servings: number
-  prep_time_minutes?: number
-  cook_time_minutes?: number
-  total_time_minutes?: number
-  difficulty_level?: string
+  requires_precision: boolean
+  precision_reason?: 'baking' | 'confectionery' | 'fermentation' | 'molecular'
+  servings: RecipeServings
+  timing?: RecipeTiming
+  nutrition?: RecipeNutrition
+  aliases?: string[]
   dietary_tags?: string[]
   dish_types?: string[]
   cuisines?: string[]
   recipe_types?: string[]
-  base_language: string
-  active: boolean
+  ingredient_groups: RecipeIngredientGroup[]
+  steps: RecipeStep[]
+  equipment?: string[]
+  translations?: { [language: string]: any }
+  variants_generated?: boolean
+  variants_generated_at?: string
+  translations_completed?: boolean
+  admin_notes?: string
   favorite?: boolean
-  calories?: string
-  protein_g?: string
-  carbs_g?: string
-  fat_g?: string
-  fiber_g?: string
+  notes?: Note[]
+  variants?: any[]
   created_at: string
   updated_at: string
 }
 
 export interface RecipeDetail extends Recipe {
-  ingredients: RecipeIngredient[]
-  steps: Step[]
-  notes?: Note[]
-  translations?: Translation[]
-  variants?: Variant[]
+  // Additional fields that might come from API joins
+  user_notes?: RecipeUserNote[]
 }
 
+// Legacy interfaces - keeping for backward compatibility during transition
 export interface RecipeIngredient {
   id: number
   name: string
@@ -47,10 +97,9 @@ export interface Step {
   id: number
   step_number: number
   instruction: string
-  time_minutes?: number
 }
 
-export interface Note {
+export interface RecipeUserNote {
   id: number
   content: string
   created_at: string
@@ -78,58 +127,25 @@ export interface ScaleRecipePayload {
 }
 
 export interface ScaleRecipeResponse {
-  recipe: RecipeDetail
-  original_servings: number
-  new_servings: number
+  scaled_ingredients: RecipeIngredient[]
+  scale_factor: number
+  recipe?: Recipe
 }
 
+// Data reference types
 export interface DataReference {
-  id: number
-  reference_type: string
+  id?: number
+  category?: string
+  name?: string
   key: string
   display_name: string
-  active: boolean
+  reference_type?: string
   sort_order?: number
-  metadata?: Record<string, any>
+  active?: boolean
+  translations?: { [key: string]: string }
 }
 
-export interface User {
-  id: number
-  email: string
-  name?: string
-  role: string
-  created_at: string
-}
-
-export interface AuthResponse {
-  user: User
-  token: string
-}
-
-export interface LoginCredentials {
-  email: string
-  password: string
-}
-
-export interface SignupCredentials {
-  email: string
-  password: string
-  password_confirmation: string
-  name?: string
-}
-
-export interface PaginationMeta {
-  current_page: number
-  per_page: number
-  total_count: number
-  total_pages: number
-}
-
-export interface RecipeListResponse {
-  recipes: Recipe[]
-  pagination: PaginationMeta
-}
-
+// API response wrapper
 export interface ApiResponse<T> {
   success: boolean
   data: T
@@ -137,76 +153,113 @@ export interface ApiResponse<T> {
   errors?: string[]
 }
 
-export interface RecipeFilters {
+// Search/filter types
+export interface RecipeSearchParams {
+  q?: string
   dietary_tags?: string[]
   dish_types?: string[]
   cuisines?: string[]
   recipe_types?: string[]
-  difficulty_level?: string
   max_prep_time?: number
   max_cook_time?: number
   max_total_time?: number
-  min_servings?: number
-  max_servings?: number
-  q?: string
   page?: number
   per_page?: number
 }
 
-export interface Ingredient {
+// Auth types
+export interface LoginCredentials {
+  email: string
+  password: string
+}
+
+export interface SignupData extends LoginCredentials {
+  name: string
+}
+
+export interface User {
+  id: string | number
+  email: string
+  name?: string
+  role: 'user' | 'admin'
+  created_at: string
+}
+
+export interface AuthResponse {
+  token: string
+  user: User
+}
+
+// Legacy auth type alias
+export type SignupCredentials = SignupData
+
+// Admin-specific types
+export interface PaginationMeta {
+  current_page: number
+  total_pages: number
+  total_count: number
+  per_page: number
+}
+
+export interface RecipeListResponse {
+  recipes: Recipe[]
+  meta?: PaginationMeta
+  pagination?: PaginationMeta
+}
+
+export interface RecipeFilters {
+  q?: string
+  dietary_tags?: string[]
+  dish_types?: string[]
+  cuisines?: string[]
+  recipe_types?: string[]
+  max_prep_time?: number
+  max_cook_time?: number
+  max_total_time?: number
+  page?: number
+  per_page?: number
+}
+
+export interface Note {
   id: number
-  canonical_name: string
-  category?: string
-  has_nutrition?: boolean
-  aliases_count?: number
-  nutrition?: IngredientNutrition
-  aliases?: IngredientAlias[]
-  created_at?: string
-  updated_at?: string
+  content: string
+  user_id: number
+  recipe_id: number
+  created_at: string
+  updated_at: string
 }
 
-export interface IngredientNutrition {
-  calories: number
-  protein_g: number
-  carbs_g: number
-  fat_g: number
-  fiber_g: number
-  data_source: string
-  confidence_score: number
-}
-
-export interface IngredientAlias {
-  alias: string
-  language: string
+export interface Ingredient {
+  id?: number
+  name: string
+  quantity?: string
+  unit?: string
+  preparation?: string
+  optional?: boolean
 }
 
 export interface AiPrompt {
   id: number
-  prompt_key: string
-  prompt_type: string
-  feature_area: string
+  name: string
   prompt_text: string
-  description?: string
+  prompt_type?: string
+  category: string
   active: boolean
-  version: number
-  variables: string[]
   created_at: string
   updated_at: string
 }
 
 export interface ParseTextPayload {
   text: string
-  source_url?: string
+  prompt_id?: number
 }
 
 export interface ParseUrlPayload {
   url: string
-}
-
-export interface ParseImagePayload {
-  image: File
+  prompt_id?: number
 }
 
 export interface CheckDuplicatesPayload {
   title: string
+  ingredients?: string[]
 }

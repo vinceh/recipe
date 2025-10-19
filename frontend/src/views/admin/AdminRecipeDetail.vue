@@ -15,7 +15,6 @@ const loading = ref(true)
 const error = ref<Error | null>(null)
 const selectedLanguage = ref<string>('')
 
-const isNewRecipe = computed(() => route.params.id === 'new')
 const recipeId = computed(() => route.params.id as string)
 
 // Available languages for translation
@@ -55,11 +54,6 @@ const displayedRecipe = computed(() => {
 })
 
 async function fetchRecipe() {
-  if (isNewRecipe.value) {
-    loading.value = false
-    return
-  }
-
   loading.value = true
   error.value = null
 
@@ -136,19 +130,19 @@ onMounted(() => {
 <template>
   <div class="admin-recipe-detail">
     <PageHeader
-      :title="isNewRecipe ? $t('admin.recipes.new.title') : (recipe as any)?.name || $t('admin.recipes.detail.title')"
-      :subtitle="isNewRecipe ? $t('admin.recipes.new.subtitle') : $t('admin.recipes.detail.subtitle')"
+      :title="(recipe as any)?.name || $t('admin.recipes.detail.title')"
+      :subtitle="$t('admin.recipes.detail.subtitle')"
     >
       <template #actions>
         <button class="btn btn-outline btn-sm" @click="goBack">
           <i class="pi pi-arrow-left"></i>
           {{ $t('common.buttons.back') }}
         </button>
-        <button v-if="!isNewRecipe" class="btn btn-primary btn-sm" @click="editRecipe">
+        <button class="btn btn-primary btn-sm" @click="editRecipe">
           <i class="pi pi-pencil"></i>
           {{ $t('common.buttons.edit') }}
         </button>
-        <button v-if="!isNewRecipe" class="btn btn-error btn-sm" @click="deleteRecipe">
+        <button class="btn btn-error btn-sm" @click="deleteRecipe">
           <i class="pi pi-trash"></i>
           {{ $t('common.buttons.delete') }}
         </button>
@@ -232,7 +226,7 @@ onMounted(() => {
             </div>
             <div class="info-item">
               <label>{{ $t('admin.recipes.detail.fields.language') }}</label>
-              <p>{{ ((recipe as any).language || recipe.base_language)?.toUpperCase() }}</p>
+              <p>{{ recipe.language?.toUpperCase() }}</p>
             </div>
             <div class="info-item">
               <label>{{ $t('admin.recipes.detail.fields.servings') }}</label>
@@ -240,8 +234,8 @@ onMounted(() => {
             </div>
             <div class="info-item">
               <label>{{ $t('admin.recipes.detail.fields.timing') }}</label>
-              <p v-if="(recipe as any).timing?.total_minutes || recipe.total_time_minutes">
-                {{ (recipe as any).timing?.total_minutes || recipe.total_time_minutes }} {{ $t('admin.recipes.table.minutes') }}
+              <p v-if="recipe.timing?.total_minutes">
+                {{ recipe.timing.total_minutes }} {{ $t('admin.recipes.table.minutes') }}
               </p>
               <p v-else>-</p>
             </div>
@@ -356,13 +350,9 @@ onMounted(() => {
           <ol class="steps-list">
             <li v-for="(step, index) in (displayedRecipe as any).steps" :key="index">
               <div class="step-content">
-                <p class="step-instruction">{{ step.instructions?.original || step }}</p>
-                <div v-if="step.timing || (step.equipment && step.equipment.length > 0)" class="step-meta">
-                  <span v-if="step.timing?.minutes" class="step-timing">
-                    <i class="pi pi-clock"></i>
-                    {{ step.timing.minutes }} {{ $t('admin.recipes.table.minutes') }}
-                  </span>
-                  <span v-if="step.equipment && step.equipment.length > 0" class="step-equipment">
+                <p class="step-instruction">{{ step.instructions?.[recipe?.language || 'en'] || step.instructions?.en || step }}</p>
+                <div v-if="step.equipment && step.equipment.length > 0" class="step-meta">
+                  <span class="step-equipment">
                     <i class="pi pi-wrench"></i>
                     {{ step.equipment.join(', ') }}
                   </span>
