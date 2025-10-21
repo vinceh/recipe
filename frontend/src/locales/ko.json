@@ -16,6 +16,7 @@
       "confirm": "확인",
       "close": "닫기",
       "clear": "지우기",
+      "add": "추가",
       "createRecipe": "레시피 만들기",
       "manageData": "데이터 관리",
       "addReferenceData": "참조 데이터 추가",
@@ -137,6 +138,7 @@
       "adminNotesPlaceholder": "내부 메모 (사용자에게 표시되지 않음)",
       "adminNotesHint": "이 레시피에 대한 내부 메모 추가",
       "sections": {
+        "import": "가져오기",
         "basicInfo": "기본 정보",
         "servings": "인분",
         "timing": "시간",
@@ -166,6 +168,19 @@
       "passwordTooShort": "비밀번호가 너무 짧습니다 (최소 6자)",
       "passwordsDontMatch": "비밀번호가 일치하지 않습니다",
       "invalidFormat": "잘못된 형식입니다"
+    }
+  },
+  "recipe": {
+    "view": {
+      "defaultTitle": "나의 레시피",
+      "servings": "인분",
+      "prep": "준비",
+      "cook": "조리",
+      "total": "총",
+      "ingredients": "재료",
+      "equipment": "조리 기구",
+      "instructions": "만드는 방법",
+      "nutrition": "영양 정보"
     }
   },
   "admin": {
@@ -238,6 +253,22 @@
       "new": {
         "title": "새 레시피",
         "subtitle": "새 레시피 만들기"
+      },
+      "importDialog": {
+        "button": "텍스트에서 가져오기",
+        "title": "텍스트에서 레시피 가져오기",
+        "placeholder": "레시피 텍스트를 여기에 붙여넣으세요...\n\n예:\n\n대만식 쇠고기 국수\n\n재료:\n- 쇠고기 뼈 2파운드\n- 쇠고기 사태 1파운드\n- 물 4컵\n\n만드는 법:\n1. 끓는 물에 뼈를 데친다\n2. 향신료와 함께 3시간 동안 끓인다",
+        "import": "가져오기",
+        "cancel": "취소",
+        "parsing": "레시피 분석 중...",
+        "success": "레시피를 성공적으로 가져왔습니다. 내용을 검토하고 저장하세요.",
+        "errors": {
+          "empty": "가져오기 전에 레시피 텍스트를 붙여넣으세요",
+          "parseFailed": "레시피를 분석할 수 없습니다. 텍스트에 재료와 조리 단계가 포함되어 있는지 확인하세요.",
+          "serviceUnavailable": "분석 서비스를 사용할 수 없습니다. 나중에 다시 시도하세요.",
+          "tooShort": "텍스트가 너무 짧습니다. 완전한 레시피 텍스트를 제공하세요.",
+          "generic": "레시피 가져오기에 실패했습니다. 다시 시도하세요."
+        }
       }
     },
     "dataReferences": {

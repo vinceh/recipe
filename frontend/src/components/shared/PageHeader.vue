@@ -65,8 +65,9 @@ const handleBack = () => {
 <style scoped>
 .page-header {
   background-color: var(--color-background);
-  border-bottom: var(--border-width-thin) solid var(--color-border);
   margin-bottom: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--color-border);
 }
 
 .page-header__content {

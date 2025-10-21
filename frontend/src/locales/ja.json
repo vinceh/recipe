@@ -16,6 +16,7 @@
       "confirm": "確認",
       "close": "閉じる",
       "clear": "クリア",
+      "add": "追加",
       "createRecipe": "レシピを作成",
       "manageData": "データを管理",
       "addReferenceData": "参照データを追加",
@@ -137,6 +138,7 @@
       "adminNotesPlaceholder": "内部メモ（ユーザーには表示されません）",
       "adminNotesHint": "このレシピに関する内部メモを追加",
       "sections": {
+        "import": "インポート",
         "basicInfo": "基本情報",
         "servings": "人数",
         "timing": "時間",
@@ -166,6 +168,19 @@
       "passwordTooShort": "パスワードが短すぎます（最低6文字）",
       "passwordsDontMatch": "パスワードが一致しません",
       "invalidFormat": "無効な形式です"
+    }
+  },
+  "recipe": {
+    "view": {
+      "defaultTitle": "あなたのレシピ",
+      "servings": "人分",
+      "prep": "準備",
+      "cook": "調理",
+      "total": "合計",
+      "ingredients": "材料",
+      "equipment": "調理器具",
+      "instructions": "手順",
+      "nutrition": "栄養情報"
     }
   },
   "admin": {
@@ -238,6 +253,22 @@
       "new": {
         "title": "新しいレシピ",
         "subtitle": "新しいレシピを作成"
+      },
+      "importDialog": {
+        "button": "テキストからインポート",
+        "title": "テキストからレシピをインポート",
+        "placeholder": "レシピテキストをここに貼り付けてください...\n\n例:\n\n台湾牛肉麺\n\n材料:\n- 牛骨 2ポンド\n- 牛すね肉 1ポンド\n- 水 4カップ\n\n作り方:\n1. 骨を沸騰したお湯で湯通しする\n2. スパイスと一緒に3時間煮込む",
+        "import": "インポート",
+        "cancel": "キャンセル",
+        "parsing": "レシピを解析中...",
+        "success": "レシピのインポートに成功しました。内容を確認して保存してください。",
+        "errors": {
+          "empty": "インポートする前にレシピテキストを貼り付けてください",
+          "parseFailed": "レシピを解析できませんでした。テキストに材料と手順が含まれていることを確認してください。",
+          "serviceUnavailable": "解析サービスが利用できません。後でもう一度お試しください。",
+          "tooShort": "テキストが短すぎます。完全なレシピテキストを提供してください。",
+          "generic": "レシピのインポートに失敗しました。もう一度お試しください。"
+        }
       }
     },
     "dataReferences": {

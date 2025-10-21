@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch, onMounted } from 'vue'
+import { ref, computed, watch, onMounted, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useDataReferenceStore } from '@/stores/dataReferenceStore'
 import type { Recipe, RecipeIngredientGroup, RecipeIngredientItem, RecipeStep } from '@/services/types'
@@ -26,6 +26,7 @@ const emit = defineEmits<{
   'update:modelValue': [value: Partial<Recipe>]
   save: []
   cancel: []
+  'import-text': []
 }>()
 
 // Composables
@@ -40,14 +41,14 @@ const formData = ref<Partial<Recipe>>({
   requires_precision: false,
   precision_reason: undefined,
   servings: {
-    original: 4,
-    min: 1,
-    max: 12
+    original: undefined,
+    min: undefined,
+    max: undefined
   },
   timing: {
-    prep_minutes: 0,
-    cook_minutes: 0,
-    total_minutes: 0
+    prep_minutes: undefined,
+    cook_minutes: undefined,
+    total_minutes: undefined
   },
   nutrition: undefined,
   aliases: [],
@@ -57,7 +58,7 @@ const formData = ref<Partial<Recipe>>({
   recipe_types: [],
   ingredient_groups: [
     {
-      name: '', // Start with empty name to force user to fill it
+      name: '',
       items: []
     }
   ],
@@ -70,13 +71,24 @@ const formData = ref<Partial<Recipe>>({
 function addIngredientGroup() {
   formData.value.ingredient_groups?.push({
     name: '',
-    items: []
+    items: [
+      {
+        name: '',
+        amount: '',
+        unit: '',
+        notes: '',
+        optional: false
+      }
+    ]
   })
 }
 
 function removeIngredientGroup(index: number) {
   if (formData.value.ingredient_groups && formData.value.ingredient_groups.length > 1) {
-    formData.value.ingredient_groups.splice(index, 1)
+    const groupName = formData.value.ingredient_groups[index].name || t('forms.recipe.sections.ingredients')
+    if (confirm(`Are you sure you want to remove the ingredient group "${groupName}"? This cannot be undone.`)) {
+      formData.value.ingredient_groups.splice(index, 1)
+    }
   }
 }
 
@@ -177,6 +189,9 @@ const precisionReasonOptions = [
   { label: t('forms.recipe.precisionReasons.fermentation'), value: 'fermentation' },
   { label: t('forms.recipe.precisionReasons.molecular'), value: 'molecular' }
 ]
+
+// Flag to prevent recursive updates
+const isUpdatingFromProp = ref(false)
 
 // Validation
 const validationErrors = ref<string[]>([])
@@ -280,26 +295,27 @@ const isValid = computed(() => {
 // Watch for prop changes (only update if prop has actual data)
 watch(() => props.modelValue, (newValue) => {
   if (newValue && Object.keys(newValue).length > 0) {
+    isUpdatingFromProp.value = true
     formData.value = { ...newValue }
-    // Initialize nested objects if undefined
+    // Initialize nested objects if undefined (but keep empty, no defaults)
     if (!formData.value.servings) {
       formData.value.servings = {
-        original: 4,
-        min: 1,
-        max: 12
+        original: undefined,
+        min: undefined,
+        max: undefined
       }
     }
     if (!formData.value.timing) {
       formData.value.timing = {
-        prep_minutes: 0,
-        cook_minutes: 0,
-        total_minutes: 0
+        prep_minutes: undefined,
+        cook_minutes: undefined,
+        total_minutes: undefined
       }
     }
     // Initialize arrays if undefined
     if (!formData.value.ingredient_groups || formData.value.ingredient_groups.length === 0) {
       formData.value.ingredient_groups = [{
-        name: t('forms.recipe.ingredientGroups.main'),
+        name: '',
         items: []
       }]
     }
@@ -310,8 +326,21 @@ watch(() => props.modelValue, (newValue) => {
     if (!formData.value.dish_types) formData.value.dish_types = []
     if (!formData.value.cuisines) formData.value.cuisines = []
     if (!formData.value.recipe_types) formData.value.recipe_types = []
+
+    // Reset flag on next tick to allow subsequent user changes to emit
+    nextTick(() => {
+      isUpdatingFromProp.value = false
+    })
   }
 }, { immediate: true })
+
+// Watch for form data changes and emit to parent for live preview
+watch(formData, (newValue) => {
+  // Don't emit if we're updating from prop to prevent infinite loop
+  if (!isUpdatingFromProp.value) {
+    emit('update:modelValue', newValue)
+  }
+}, { deep: true, flush: 'post' })
 
 // Methods
 function handleSave() {
@@ -353,9 +382,33 @@ onMounted(async () => {
 <template>
   <div class="recipe-form">
     <form @submit.prevent="handleSave">
+      <!-- Import Buttons -->
+      <div class="recipe-form__import-buttons">
+        <Button
+          type="button"
+          :label="$t('admin.recipes.importDialog.button')"
+          icon="pi pi-file-import"
+          @click="emit('import-text')"
+        />
+        <Button
+          type="button"
+          label="Import from URL"
+          icon="pi pi-link"
+          disabled
+        />
+        <Button
+          type="button"
+          label="Import from Image"
+          icon="pi pi-image"
+          disabled
+        />
+      </div>
+
+      <hr />
+
       <!-- Basic Information -->
       <section class="recipe-form__section">
-        <h3 class="recipe-form__section-title">{{ $t('forms.recipe.sections.basicInfo') }}</h3>
+        <h2 class="recipe-form__section-title">{{ $t('forms.recipe.sections.basicInfo') }}</h2>
 
         <div class="recipe-form__field recipe-form__field--wide">
           <label for="name" class="recipe-form__label required">
@@ -368,6 +421,38 @@ onMounted(async () => {
             class="recipe-form__input"
             required
           />
+        </div>
+
+        <div class="recipe-form__field recipe-form__field--alias">
+          <label for="aliases" class="recipe-form__label">
+            {{ $t('forms.recipe.aliases') }}
+          </label>
+          <div class="recipe-form__input-with-button">
+            <InputText
+              id="aliases"
+              v-model="aliasInput"
+              :placeholder="$t('forms.recipe.aliasesPlaceholder')"
+              class="recipe-form__input"
+              @keydown.enter.prevent="addAlias"
+            />
+            <Button
+              type="button"
+              :label="$t('common.buttons.add')"
+              @click="addAlias"
+            />
+          </div>
+          <small class="recipe-form__help-text">{{ $t('forms.recipe.aliasesHint') }}</small>
+        </div>
+
+        <div v-if="formData.aliases && formData.aliases.length > 0" class="recipe-form__tags">
+          <span
+            v-for="(alias, index) in formData.aliases"
+            :key="index"
+            class="recipe-form__tag"
+          >
+            {{ alias }}
+            <button type="button" @click="removeAlias(index)">×</button>
+          </span>
         </div>
 
         <div class="recipe-form__field">
@@ -396,11 +481,42 @@ onMounted(async () => {
             class="recipe-form__input"
           />
         </div>
+
+        <div class="recipe-form__field">
+          <div class="recipe-form__checkbox-field">
+            <Checkbox
+              id="requires_precision"
+              v-model="formData.requires_precision"
+              :binary="true"
+            />
+            <label for="requires_precision" class="recipe-form__label-inline">
+              {{ $t('forms.recipe.requiresPrecision') }}
+            </label>
+          </div>
+          <small class="recipe-form__help-text">{{ $t('forms.recipe.requiresPrecisionHint') }}</small>
+        </div>
+
+        <div v-if="formData.requires_precision" class="recipe-form__field recipe-form__field--medium">
+          <label for="precision_reason" class="recipe-form__label required">
+            {{ $t('forms.recipe.precisionReason') }}
+          </label>
+          <Select
+            id="precision_reason"
+            v-model="formData.precision_reason"
+            :options="precisionReasonOptions"
+            optionLabel="label"
+            optionValue="value"
+            :placeholder="$t('forms.recipe.precisionReasonPlaceholder')"
+            class="recipe-form__input"
+          />
+        </div>
       </section>
+
+      <hr/>
 
       <!-- Tags & Classification -->
       <section class="recipe-form__section">
-        <h3 class="recipe-form__section-title">{{ $t('forms.recipe.sections.classification') }}</h3>
+        <h2 class="recipe-form__section-title">{{ $t('forms.recipe.sections.classification') }}</h2>
 
         <div class="recipe-form__field">
           <label for="dietary_tags" class="recipe-form__label">
@@ -471,9 +587,11 @@ onMounted(async () => {
         </div>
       </section>
 
+      <hr/>
+
       <!-- Servings & Timing -->
       <section class="recipe-form__section">
-        <h3 class="recipe-form__section-title">{{ $t('forms.recipe.sections.servings') }} & {{ $t('forms.recipe.sections.timing') }}</h3>
+        <h2 class="recipe-form__section-title">{{ $t('forms.recipe.sections.servings') }} & {{ $t('forms.recipe.sections.timing') }}</h2>
 
         <div class="recipe-form__row">
           <div class="recipe-form__field recipe-form__field--narrow">
@@ -488,6 +606,7 @@ onMounted(async () => {
               class="recipe-form__input"
               required
             />
+            <small class="recipe-form__help-text">{{ $t('forms.recipe.servings.hint') }}</small>
           </div>
 
           <div class="recipe-form__field recipe-form__field--narrow">
@@ -516,8 +635,6 @@ onMounted(async () => {
             />
           </div>
         </div>
-
-        <small class="recipe-form__help-text">{{ $t('forms.recipe.servings.hint') }}</small>
 
         <div class="recipe-form__row">
           <div class="recipe-form__field recipe-form__field--narrow">
@@ -570,50 +687,59 @@ onMounted(async () => {
         </div>
       </section>
 
-      <!-- Precision -->
+      <hr/>
+
+      <!-- Equipment -->
       <section class="recipe-form__section">
-        <h3 class="recipe-form__section-title">{{ $t('forms.recipe.sections.precision') }}</h3>
+        <h2 class="recipe-form__section-title">{{ $t('forms.recipe.sections.equipment') }}</h2>
 
         <div class="recipe-form__field">
-          <div class="recipe-form__checkbox-field">
-            <Checkbox
-              id="requires_precision"
-              v-model="formData.requires_precision"
-              :binary="true"
+          <div class="recipe-form__input-with-button">
+            <InputText
+              id="equipment"
+              v-model="equipmentInput"
+              :placeholder="$t('forms.recipe.equipmentPlaceholder')"
+              class="recipe-form__input"
+              @keydown.enter.prevent="addEquipment"
             />
-            <label for="requires_precision" class="recipe-form__label-inline">
-              {{ $t('forms.recipe.requiresPrecision') }}
-            </label>
+            <Button
+              type="button"
+              :label="$t('common.buttons.add')"
+              @click="addEquipment"
+            />
           </div>
-          <small class="recipe-form__help-text">{{ $t('forms.recipe.requiresPrecisionHint') }}</small>
+          <small class="recipe-form__help-text">
+            {{ $t('forms.recipe.equipmentHint') }}
+          </small>
         </div>
 
-        <div v-if="formData.requires_precision" class="recipe-form__field recipe-form__field--medium">
-          <label for="precision_reason" class="recipe-form__label required">
-            {{ $t('forms.recipe.precisionReason') }}
-          </label>
-          <Select
-            id="precision_reason"
-            v-model="formData.precision_reason"
-            :options="precisionReasonOptions"
-            optionLabel="label"
-            optionValue="value"
-            :placeholder="$t('forms.recipe.precisionReasonPlaceholder')"
-            class="recipe-form__input"
-          />
+        <div v-if="formData.equipment && formData.equipment.length > 0" class="recipe-form__tags">
+          <span
+            v-for="(item, index) in formData.equipment"
+            :key="index"
+            class="recipe-form__tag"
+          >
+            {{ item }}
+            <button type="button" @click="removeEquipment(index)">×</button>
+          </span>
         </div>
       </section>
+
+      <hr/>
+
+      <!-- Ingredients -->
+      <h2 class="recipe-form__major-section-title">{{ $t('forms.recipe.sections.ingredients') }}</h2>
 
       <!-- Ingredient Groups -->
       <section
         v-for="(group, groupIndex) in formData.ingredient_groups"
         :key="groupIndex"
-        class="recipe-form__section"
+        class="recipe-form__section recipe-form__ingredient-group"
       >
         <div class="recipe-form__section-header">
-          <h3 class="recipe-form__section-title">
-            {{ $t('forms.recipe.sections.ingredients') }} {{ groupIndex + 1 }}
-          </h3>
+          <h2 class="recipe-form__section-title">
+            {{ group.name || $t('forms.recipe.sections.ingredients') }}
+          </h2>
           <Button
             v-if="formData.ingredient_groups!.length > 1"
             type="button"
@@ -627,7 +753,7 @@ onMounted(async () => {
         </div>
 
         <div class="recipe-form__field">
-          <label :for="'group-name-' + groupIndex" class="recipe-form__label">
+          <label :for="'group-name-' + groupIndex" class="recipe-form__label required">
             {{ $t('forms.recipe.groupName') }}
           </label>
           <InputText
@@ -638,81 +764,89 @@ onMounted(async () => {
           />
         </div>
 
-        <div
-          v-for="(item, itemIndex) in group.items"
-          :key="itemIndex"
-          class="recipe-form__ingredient"
-        >
-          <div class="recipe-form__ingredient-row recipe-form__ingredient-row--main">
-            <div class="recipe-form__field">
-              <label :for="'ingredient-name-' + groupIndex + '-' + itemIndex" class="recipe-form__label">
-                {{ $t('forms.recipe.ingredientName') }}
-              </label>
-              <InputText
-                :id="'ingredient-name-' + groupIndex + '-' + itemIndex"
-                v-model="item.name"
-                :placeholder="$t('forms.recipe.ingredientNamePlaceholder')"
-                class="recipe-form__input"
-                required
-              />
+        <div class="recipe-form__ingredients-grid">
+          <div
+            v-for="(item, itemIndex) in group.items"
+            :key="itemIndex"
+            class="recipe-form__ingredient"
+          >
+            <div class="recipe-form__ingredient-row recipe-form__ingredient-row--main">
+              <div class="recipe-form__field">
+                <label :for="'ingredient-name-' + groupIndex + '-' + itemIndex" class="recipe-form__label required">
+                  {{ $t('forms.recipe.ingredientName') }}
+                </label>
+                <InputText
+                  :id="'ingredient-name-' + groupIndex + '-' + itemIndex"
+                  v-model="item.name"
+                  :placeholder="$t('forms.recipe.ingredientNamePlaceholder')"
+                  class="recipe-form__input"
+                  required
+                />
+              </div>
+
+              <div class="recipe-form__field">
+                <label :for="'ingredient-amount-' + groupIndex + '-' + itemIndex" class="recipe-form__label">
+                  {{ $t('forms.recipe.ingredientAmount') }}
+                </label>
+                <InputText
+                  :id="'ingredient-amount-' + groupIndex + '-' + itemIndex"
+                  v-model="item.amount"
+                  :placeholder="$t('forms.recipe.ingredientAmountPlaceholder')"
+                  class="recipe-form__input"
+                />
+              </div>
+
+              <div class="recipe-form__field">
+                <label :for="'ingredient-unit-' + groupIndex + '-' + itemIndex" class="recipe-form__label">
+                  {{ $t('forms.recipe.ingredientUnit') }}
+                </label>
+                <InputText
+                  :id="'ingredient-unit-' + groupIndex + '-' + itemIndex"
+                  v-model="item.unit"
+                  :placeholder="$t('forms.recipe.ingredientUnitPlaceholder')"
+                  class="recipe-form__input"
+                />
+              </div>
             </div>
 
-            <div class="recipe-form__field">
-              <label :for="'ingredient-amount-' + groupIndex + '-' + itemIndex" class="recipe-form__label">
-                {{ $t('forms.recipe.ingredientAmount') }}
-              </label>
-              <InputText
-                :id="'ingredient-amount-' + groupIndex + '-' + itemIndex"
-                v-model="item.amount"
-                :placeholder="$t('forms.recipe.ingredientAmountPlaceholder')"
-                class="recipe-form__input"
-              />
+            <div class="recipe-form__ingredient-row recipe-form__ingredient-row--notes">
+              <div class="recipe-form__field">
+                <label :for="'ingredient-notes-' + groupIndex + '-' + itemIndex" class="recipe-form__label">
+                  {{ $t('forms.recipe.ingredientNotes') }}
+                </label>
+                <InputText
+                  :id="'ingredient-notes-' + groupIndex + '-' + itemIndex"
+                  v-model="item.notes"
+                  :placeholder="$t('forms.recipe.ingredientNotesPlaceholder')"
+                  class="recipe-form__input"
+                />
+              </div>
             </div>
 
-            <div class="recipe-form__field">
-              <label :for="'ingredient-unit-' + groupIndex + '-' + itemIndex" class="recipe-form__label">
-                {{ $t('forms.recipe.ingredientUnit') }}
+            <div class="recipe-form__ingredient-row recipe-form__ingredient-row--footer">
+              <label
+                :for="'ingredient-optional-' + groupIndex + '-' + itemIndex"
+                class="recipe-form__optional-box"
+                @click="item.optional = !item.optional"
+              >
+                <Checkbox
+                  :id="'ingredient-optional-' + groupIndex + '-' + itemIndex"
+                  v-model="item.optional"
+                  :binary="true"
+                />
+                <span class="recipe-form__optional-label">
+                  {{ $t('forms.recipe.ingredientOptional') }}
+                </span>
               </label>
-              <InputText
-                :id="'ingredient-unit-' + groupIndex + '-' + itemIndex"
-                v-model="item.unit"
-                :placeholder="$t('forms.recipe.ingredientUnitPlaceholder')"
-                class="recipe-form__input"
-              />
-            </div>
 
-            <Button
-              type="button"
-              icon="pi pi-trash"
-              severity="danger"
-              size="small"
-              text
-              @click="removeIngredient(groupIndex, itemIndex)"
-            />
-          </div>
-
-          <div class="recipe-form__ingredient-row recipe-form__ingredient-row--secondary">
-            <div class="recipe-form__field">
-              <label :for="'ingredient-notes-' + groupIndex + '-' + itemIndex" class="recipe-form__label">
-                {{ $t('forms.recipe.ingredientNotes') }}
-              </label>
-              <InputText
-                :id="'ingredient-notes-' + groupIndex + '-' + itemIndex"
-                v-model="item.notes"
-                :placeholder="$t('forms.recipe.ingredientNotesPlaceholder')"
-                class="recipe-form__input"
+              <Button
+                type="button"
+                icon="pi pi-trash"
+                severity="danger"
+                size="small"
+                text
+                @click="removeIngredient(groupIndex, itemIndex)"
               />
-            </div>
-
-            <div class="recipe-form__checkbox-field">
-              <Checkbox
-                :id="'ingredient-optional-' + groupIndex + '-' + itemIndex"
-                v-model="item.optional"
-                :binary="true"
-              />
-              <label :for="'ingredient-optional-' + groupIndex + '-' + itemIndex" class="recipe-form__label-inline">
-                {{ $t('forms.recipe.ingredientOptional') }}
-              </label>
             </div>
           </div>
         </div>
@@ -721,8 +855,6 @@ onMounted(async () => {
           type="button"
           :label="$t('forms.recipe.addIngredient')"
           icon="pi pi-plus"
-          severity="secondary"
-          outlined
           @click="addIngredient(groupIndex)"
         />
       </section>
@@ -732,24 +864,15 @@ onMounted(async () => {
           type="button"
           :label="$t('forms.recipe.addGroup')"
           icon="pi pi-plus"
-          severity="secondary"
           @click="addIngredientGroup"
         />
       </div>
 
+          <hr/>
+
       <!-- Steps -->
       <section class="recipe-form__section">
-        <div class="recipe-form__section-header">
-          <h3 class="recipe-form__section-title">{{ $t('forms.recipe.sections.steps') }}</h3>
-          <Button
-            type="button"
-            :label="$t('forms.recipe.addStep')"
-            icon="pi pi-plus"
-            severity="secondary"
-            size="small"
-            @click="addStep"
-          />
-        </div>
+        <h2 class="recipe-form__section-title">{{ $t('forms.recipe.sections.steps') }}</h2>
 
         <div
           v-for="(step, index) in formData.steps"
@@ -795,87 +918,21 @@ onMounted(async () => {
             required
           />
         </div>
+
+        <Button
+          type="button"
+          :label="$t('forms.recipe.addStep')"
+          icon="pi pi-plus"
+          class="recipe-form__add-step-button"
+          @click="addStep"
+        />
       </section>
 
-      <!-- Equipment -->
-      <section class="recipe-form__section">
-        <h3 class="recipe-form__section-title">{{ $t('forms.recipe.sections.equipment') }}</h3>
-
-        <div class="recipe-form__field">
-          <label for="equipment" class="recipe-form__label">
-            {{ $t('forms.recipe.equipment') }}
-          </label>
-          <div class="recipe-form__input-with-button">
-            <InputText
-              id="equipment"
-              v-model="equipmentInput"
-              :placeholder="$t('forms.recipe.equipmentPlaceholder')"
-              class="recipe-form__input"
-              @keydown.enter.prevent="addEquipment"
-            />
-            <Button
-              type="button"
-              :label="$t('common.buttons.add')"
-              @click="addEquipment"
-            />
-          </div>
-          <small class="recipe-form__help-text">
-            {{ $t('forms.recipe.equipmentHint') }}
-          </small>
-        </div>
-
-        <div v-if="formData.equipment && formData.equipment.length > 0" class="recipe-form__tags">
-          <span
-            v-for="(item, index) in formData.equipment"
-            :key="index"
-            class="recipe-form__tag"
-          >
-            {{ item }}
-            <button type="button" @click="removeEquipment(index)">×</button>
-          </span>
-        </div>
-      </section>
-
-      <!-- Aliases -->
-      <section class="recipe-form__section">
-        <h3 class="recipe-form__section-title">{{ $t('forms.recipe.sections.aliases') }}</h3>
-
-        <div class="recipe-form__field">
-          <label for="aliases" class="recipe-form__label">
-            {{ $t('forms.recipe.aliases') }}
-          </label>
-          <div class="recipe-form__input-with-button">
-            <InputText
-              id="aliases"
-              v-model="aliasInput"
-              :placeholder="$t('forms.recipe.aliasesPlaceholder')"
-              class="recipe-form__input"
-              @keydown.enter.prevent="addAlias"
-            />
-            <Button
-              type="button"
-              :label="$t('common.buttons.add')"
-              @click="addAlias"
-            />
-          </div>
-          <small class="recipe-form__help-text">{{ $t('forms.recipe.aliasesHint') }}</small>
-        </div>
-
-        <div v-if="formData.aliases && formData.aliases.length > 0" class="recipe-form__tags">
-          <span
-            v-for="(alias, index) in formData.aliases"
-            :key="index"
-            class="recipe-form__tag"
-          >
-            {{ alias }}
-            <button type="button" @click="removeAlias(index)">×</button>
-          </span>
-        </div>
-      </section>
+      <hr/>
 
       <!-- Admin Notes -->
       <section class="recipe-form__section">
-        <h3 class="recipe-form__section-title">{{ $t('forms.recipe.sections.adminNotes') }}</h3>
+        <h2 class="recipe-form__section-title">{{ $t('forms.recipe.sections.adminNotes') }}</h2>
 
         <div class="recipe-form__field">
           <label for="admin_notes" class="recipe-form__label">
@@ -913,21 +970,59 @@ onMounted(async () => {
   </div>
 </template>
 
+<style>
+  .split-panel-container {
+    padding: 0 !important;
+  }
+</style>
+
 <style scoped>
+
+.recipe-form__field--alias {
+  margin-bottom: 5px !important;
+}
+
 .recipe-form {
   background: var(--color-surface);
   border-radius: var(--border-radius-lg);
-  padding: var(--spacing-xl);
 }
 
-.recipe-form__section {
-  margin-bottom: var(--spacing-2xl);
-  padding-bottom: var(--spacing-xl);
-  border-bottom: var(--border-width) solid var(--color-border);
+hr {
+  margin: 40px 0;
+}
+
+.recipe-form__major-section-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-lg);
+  margin-top: 0;
 }
 
 .recipe-form__section:last-of-type {
   border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Normalize input heights - make selects and text inputs the same height */
+.recipe-form__input :deep(.p-inputtext),
+.recipe-form__input :deep(.p-dropdown),
+.recipe-form__input :deep(.p-multiselect) {
+  min-height: 42px;
+  height: 42px;
+}
+
+.recipe-form__input :deep(.p-inputnumber-input) {
+  min-height: 42px;
+  height: 42px;
+}
+
+.recipe-form__ingredient-group {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
 }
 
 .recipe-form__section-title {
@@ -937,27 +1032,31 @@ onMounted(async () => {
   margin-bottom: var(--spacing-lg);
 }
 
+.recipe-form__import-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.recipe-form__add-step-button {
+  width: 100%;
+  margin-top: var(--spacing-sm);
+}
+
 .recipe-form__section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
 }
 
 .recipe-form__field {
   margin-bottom: var(--spacing-lg);
 }
 
-.recipe-form__field--narrow {
-  max-width: 150px;
-}
-
 .recipe-form__field--medium {
   max-width: 350px;
-}
-
-.recipe-form__field--wide {
-  max-width: 600px;
 }
 
 .recipe-form__label {
@@ -988,7 +1087,6 @@ onMounted(async () => {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--spacing-md);
-  margin-bottom: var(--spacing-lg);
 }
 
 .recipe-form__help-text {
@@ -1009,11 +1107,16 @@ onMounted(async () => {
   gap: var(--spacing-sm);
 }
 
+.recipe-form__input-with-button :deep(.p-button) {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 .recipe-form__tags {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-sm);
-  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
 }
 
 .recipe-form__tag {
@@ -1021,8 +1124,8 @@ onMounted(async () => {
   align-items: center;
   gap: var(--spacing-xs);
   padding: var(--spacing-xs) var(--spacing-sm);
-  background: var(--color-primary-light);
-  color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-white);
   border-radius: var(--border-radius-sm);
   font-size: var(--font-size-sm);
 }
@@ -1030,18 +1133,31 @@ onMounted(async () => {
 .recipe-form__tag button {
   background: none;
   border: none;
-  color: var(--color-primary);
+  color: var(--color-white);
   font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
   cursor: pointer;
   padding: 0;
   line-height: 1;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.recipe-form__tag button:hover {
+  opacity: 1;
+}
+
+.recipe-form__ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
 }
 
 .recipe-form__ingredient {
-  padding: 0;
-  background: var(--color-background);
+  background-color: var(--color-gray-100);
+  padding: var(--spacing-lg);
   border-radius: var(--border-radius-md);
-  margin-bottom: var(--spacing-md);
 }
 
 .recipe-form__add-group-wrapper {
@@ -1055,14 +1171,44 @@ onMounted(async () => {
 }
 
 .recipe-form__ingredient-row--main {
-  grid-template-columns: 2fr 1fr 1fr auto;
+  grid-template-columns: 2fr 1fr 1fr;
   align-items: flex-end;
 }
 
-.recipe-form__ingredient-row--secondary {
-  grid-template-columns: 1fr auto;
+.recipe-form__ingredient-row--notes {
+  grid-template-columns: 1fr;
+  margin-bottom: 0;
+}
+
+.recipe-form__ingredient-row--footer {
+  margin-top: var(--spacing-md);
+  grid-template-columns: 1fr 2fr;
   margin-bottom: 0;
   align-items: center;
+}
+
+.recipe-form__optional-box {
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.recipe-form__optional-box:hover {
+  border-color: var(--color-border-dark);
+  background-color: var(--color-gray-50);
+}
+
+.recipe-form__optional-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  white-space: nowrap;
 }
 
 .recipe-form__ingredient-row .recipe-form__field {
@@ -1113,6 +1259,10 @@ onMounted(async () => {
 /* Mobile responsive */
 @media (max-width: 768px) {
   .recipe-form__row {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-form__ingredients-grid {
     grid-template-columns: 1fr;
   }
 

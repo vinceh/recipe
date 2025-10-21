@@ -16,6 +16,7 @@
       "confirm": "Confirmer",
       "close": "Fermer",
       "clear": "Effacer",
+      "add": "Ajouter",
       "createRecipe": "Créer une recette",
       "manageData": "Gérer les données",
       "addReferenceData": "Ajouter des données de référence",
@@ -137,6 +138,7 @@
       "adminNotesPlaceholder": "Notes internes (non visibles pour les utilisateurs)",
       "adminNotesHint": "Ajoutez des notes internes sur cette recette",
       "sections": {
+        "import": "Importer",
         "basicInfo": "Informations de base",
         "servings": "Portions",
         "timing": "Temps",
@@ -166,6 +168,19 @@
       "passwordTooShort": "Le mot de passe est trop court (minimum 6 caractères)",
       "passwordsDontMatch": "Les mots de passe ne correspondent pas",
       "invalidFormat": "Format non valide"
+    }
+  },
+  "recipe": {
+    "view": {
+      "defaultTitle": "Votre recette",
+      "servings": "portions",
+      "prep": "Préparation",
+      "cook": "Cuisson",
+      "total": "Total",
+      "ingredients": "Ingrédients",
+      "equipment": "Équipement",
+      "instructions": "Instructions",
+      "nutrition": "Informations nutritionnelles"
     }
   },
   "admin": {
@@ -238,6 +253,22 @@
       "new": {
         "title": "Nouvelle recette",
         "subtitle": "Créer une nouvelle recette"
+      },
+      "importDialog": {
+        "button": "Importer depuis le texte",
+        "title": "Importer une recette depuis le texte",
+        "placeholder": "Collez le texte de la recette ici...\n\nExemple:\n\nSoupe de nouilles au bœuf taïwanaise\n\nIngrédients:\n- 2 livres d'os de bœuf\n- 1 livre de jarret de bœuf\n- 4 tasses d'eau\n\nInstructions:\n1. Blanchir les os dans l'eau bouillante\n2. Mijoter avec des épices pendant 3 heures",
+        "import": "Importer",
+        "cancel": "Annuler",
+        "parsing": "Analyse de la recette...",
+        "success": "Recette importée avec succès. Veuillez vérifier et enregistrer.",
+        "errors": {
+          "empty": "Veuillez coller le texte de la recette avant d'importer",
+          "parseFailed": "Impossible d'analyser la recette. Assurez-vous que le texte inclut les ingrédients et les étapes.",
+          "serviceUnavailable": "Service d'analyse indisponible. Veuillez réessayer plus tard.",
+          "tooShort": "Texte trop court. Veuillez fournir le texte complet de la recette.",
+          "generic": "Échec de l'importation de la recette. Veuillez réessayer."
+        }
       }
     },
     "dataReferences": {

@@ -583,6 +583,60 @@ This document defines atomic, testable acceptance criteria for all Recipe App MV
 **AND** extracted data should pre-fill edit form
 **AND** admin can review/edit before saving
 
+### AC-ADMIN-UI-TEXT-001: Import Button Visibility
+**GIVEN** admin is on the "Create New Recipe" page
+**WHEN** page loads
+**THEN** an "Import from Text" button should be visible in the page header
+**AND** button should display correct text in all 7 languages
+**AND** button should have an icon indicating text/paste action
+
+### AC-ADMIN-UI-TEXT-002: Import Dialog Opening
+**GIVEN** admin is on the "Create New Recipe" page
+**WHEN** admin clicks "Import from Text" button
+**THEN** a dialog/modal should open with title "Import Recipe from Text"
+**AND** dialog should contain a large textarea for pasting recipe text
+**AND** dialog should have "Import" and "Cancel" buttons
+**AND** textarea should have placeholder text instructing user to paste recipe
+**AND** all text should be properly translated in current language
+
+### AC-ADMIN-UI-TEXT-003: Text Import and Form Population
+**GIVEN** admin has opened the import dialog
+**WHEN** admin pastes recipe text into textarea
+**AND** clicks "Import" button
+**THEN** loading indicator should appear with message "Parsing recipe..."
+**AND** API call should be made to POST /admin/recipes/parse_text
+**AND** upon successful parse, dialog should close
+**AND** RecipeForm should be populated with all parsed data:
+  - Recipe name
+  - Language
+  - Servings (original, min, max)
+  - Timing (prep, cook, total minutes)
+  - Ingredient groups with items (name, amount, unit, notes)
+  - Steps with instructions
+  - Equipment (if parsed)
+  - Cuisines, dietary tags, dish types (if parsed)
+**AND** success message should display: "Recipe imported successfully. Please review and save."
+**AND** admin can review and edit all fields before saving
+
+### AC-ADMIN-UI-TEXT-004: Import Error Handling
+**GIVEN** admin has pasted text and clicked "Import"
+**WHEN** API returns an error (parsing failed, invalid text, API error)
+**THEN** error message should display in the dialog
+**AND** error message should be user-friendly and translated
+**AND** dialog should remain open so user can retry
+**AND** textarea content should be preserved
+**AND** specific error messages for common issues:
+  - "Could not parse recipe. Please ensure text includes ingredients and steps."
+  - "Parsing service unavailable. Please try again later."
+  - "Text too short. Please provide complete recipe text."
+
+### AC-ADMIN-UI-TEXT-005: Empty Text Validation
+**GIVEN** admin has opened the import dialog
+**WHEN** admin clicks "Import" with empty or whitespace-only textarea
+**THEN** validation message should display: "Please paste recipe text before importing"
+**AND** no API call should be made
+**AND** textarea should receive focus
+
 ### AC-ADMIN-003: URL Import - Scrape Recipe
 **GIVEN** an admin provides a recipe URL
 **WHEN** admin clicks "Import from URL"

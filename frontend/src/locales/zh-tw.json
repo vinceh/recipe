@@ -16,6 +16,7 @@
       "confirm": "確認",
       "close": "關閉",
       "clear": "清除",
+      "add": "新增",
       "createRecipe": "建立食譜",
       "manageData": "管理資料",
       "addReferenceData": "新增參考資料",
@@ -137,6 +138,7 @@
       "adminNotesPlaceholder": "內部備註（使用者不可見）",
       "adminNotesHint": "新增關於此食譜的內部備註",
       "sections": {
+        "import": "匯入",
         "basicInfo": "基本資訊",
         "servings": "份數",
         "timing": "時間",
@@ -166,6 +168,19 @@
       "passwordTooShort": "密碼太短（至少6個字元）",
       "passwordsDontMatch": "密碼不符",
       "invalidFormat": "格式無效"
+    }
+  },
+  "recipe": {
+    "view": {
+      "defaultTitle": "您的食譜",
+      "servings": "份",
+      "prep": "準備",
+      "cook": "烹調",
+      "total": "總計",
+      "ingredients": "食材",
+      "equipment": "廚具",
+      "instructions": "製作步驟",
+      "nutrition": "營養資訊"
     }
   },
   "admin": {
@@ -238,6 +253,22 @@
       "new": {
         "title": "新增食譜",
         "subtitle": "建立新的食譜"
+      },
+      "importDialog": {
+        "button": "從文字匯入",
+        "title": "從文字匯入食譜",
+        "placeholder": "將食譜文字貼在這裡...\n\n範例:\n\n台灣牛肉麵\n\n食材:\n- 牛骨 2磅\n- 牛腱 1磅\n- 水 4杯\n\n作法:\n1. 將骨頭在沸水中汆燙\n2. 加入香料燉煮3小時",
+        "import": "匯入",
+        "cancel": "取消",
+        "parsing": "正在解析食譜...",
+        "success": "食譜匯入成功。請檢查並儲存。",
+        "errors": {
+          "empty": "匯入前請貼上食譜文字",
+          "parseFailed": "無法解析食譜。請確保文字包含食材和步驟。",
+          "serviceUnavailable": "解析服務無法使用。請稍後再試。",
+          "tooShort": "文字太短。請提供完整的食譜文字。",
+          "generic": "匯入食譜失敗。請再試一次。"
+        }
       }
     },
     "dataReferences": {

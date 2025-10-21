@@ -16,6 +16,7 @@
       "confirm": "Confirmar",
       "close": "Cerrar",
       "clear": "Limpiar",
+      "add": "Añadir",
       "createRecipe": "Crear receta",
       "manageData": "Gestionar datos",
       "addReferenceData": "Añadir datos de referencia",
@@ -137,6 +138,7 @@
       "adminNotesPlaceholder": "Notas internas (no visibles para usuarios)",
       "adminNotesHint": "Agregue notas internas sobre esta receta",
       "sections": {
+        "import": "Importar",
         "basicInfo": "Información básica",
         "servings": "Porciones",
         "timing": "Tiempo",
@@ -166,6 +168,19 @@
       "passwordTooShort": "La contraseña es demasiado corta (mínimo 6 caracteres)",
       "passwordsDontMatch": "Las contraseñas no coinciden",
       "invalidFormat": "Formato no válido"
+    }
+  },
+  "recipe": {
+    "view": {
+      "defaultTitle": "Tu receta",
+      "servings": "porciones",
+      "prep": "Preparación",
+      "cook": "Cocción",
+      "total": "Total",
+      "ingredients": "Ingredientes",
+      "equipment": "Equipo",
+      "instructions": "Instrucciones",
+      "nutrition": "Información nutricional"
     }
   },
   "admin": {
@@ -238,6 +253,22 @@
       "new": {
         "title": "Nueva receta",
         "subtitle": "Crear una nueva receta"
+      },
+      "importDialog": {
+        "button": "Importar desde texto",
+        "title": "Importar receta desde texto",
+        "placeholder": "Pegue el texto de la receta aquí...\n\nEjemplo:\n\nSopa de fideos con carne taiwanesa\n\nIngredientes:\n- 2 libras de huesos de res\n- 1 libra de jarrete de res\n- 4 tazas de agua\n\nInstrucciones:\n1. Blanquear los huesos en agua hirviendo\n2. Cocinar a fuego lento con especias durante 3 horas",
+        "import": "Importar",
+        "cancel": "Cancelar",
+        "parsing": "Analizando receta...",
+        "success": "Receta importada correctamente. Por favor revise y guarde.",
+        "errors": {
+          "empty": "Por favor pegue el texto de la receta antes de importar",
+          "parseFailed": "No se pudo analizar la receta. Asegúrese de que el texto incluya ingredientes y pasos.",
+          "serviceUnavailable": "Servicio de análisis no disponible. Inténtelo de nuevo más tarde.",
+          "tooShort": "Texto demasiado corto. Proporcione el texto completo de la receta.",
+          "generic": "Error al importar la receta. Por favor, inténtelo de nuevo."
+        }
       }
     },
     "dataReferences": {

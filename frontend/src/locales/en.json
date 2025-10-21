@@ -138,6 +138,7 @@
       "adminNotesPlaceholder": "Internal notes (not visible to users)",
       "adminNotesHint": "Add any internal notes about this recipe",
       "sections": {
+        "import": "Import",
         "basicInfo": "Basic Information",
         "servings": "Servings",
         "timing": "Timing",
@@ -167,6 +168,19 @@
       "passwordTooShort": "Password is too short (minimum 6 characters)",
       "passwordsDontMatch": "Passwords don't match",
       "invalidFormat": "Invalid format"
+    }
+  },
+  "recipe": {
+    "view": {
+      "defaultTitle": "Your recipe",
+      "servings": "servings",
+      "prep": "Prep",
+      "cook": "Cook",
+      "total": "Total",
+      "ingredients": "Ingredients",
+      "equipment": "Equipment",
+      "instructions": "Instructions",
+      "nutrition": "Nutrition"
     }
   },
   "admin": {
@@ -239,6 +253,22 @@
       "new": {
         "title": "New Recipe",
         "subtitle": "Create a new recipe"
+      },
+      "importDialog": {
+        "button": "Import from Text",
+        "title": "Import Recipe from Text",
+        "placeholder": "Paste your recipe text here...\n\nExample:\n\nTaiwanese Beef Noodle Soup\n\nIngredients:\n- 2 lbs beef bones\n- 1 lb beef shank\n- 4 cups water\n\nInstructions:\n1. Blanch bones in boiling water\n2. Simmer with spices for 3 hours",
+        "import": "Import",
+        "cancel": "Cancel",
+        "parsing": "Parsing recipe...",
+        "success": "Recipe imported successfully. Please review and save.",
+        "errors": {
+          "empty": "Please paste recipe text before importing",
+          "parseFailed": "Could not parse recipe. Please ensure text includes ingredients and steps.",
+          "serviceUnavailable": "Parsing service unavailable. Please try again later.",
+          "tooShort": "Text too short. Please provide complete recipe text.",
+          "generic": "Failed to import recipe. Please try again."
+        }
       }
     },
     "dataReferences": {

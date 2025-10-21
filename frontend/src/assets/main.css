@@ -1,5 +1,14 @@
 @import './base.css';
 
+/* Global PrimeVue button styles - prevent text wrapping */
+.p-button {
+  white-space: nowrap;
+}
+
+.p-button-label {
+  white-space: nowrap;
+}
+
 #app {
   max-width: 1280px;
   margin: 0 auto;

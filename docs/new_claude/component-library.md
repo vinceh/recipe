@@ -829,6 +829,94 @@ None
 
 ---
 
+#### TextImportDialog
+
+**Location:** `components/admin/recipes/TextImportDialog.vue`
+
+**Purpose:** Modal dialog for importing recipes by pasting recipe text. Uses AI (Claude) to parse unstructured recipe text and extract structured data
+
+**Props:**
+```typescript
+interface Props {
+  visible: boolean  // Controls dialog visibility (v-model:visible)
+}
+```
+
+**Emits:**
+```typescript
+{
+  'update:visible': [value: boolean]  // v-model:visible support
+  'import': [text: string]             // User clicked Import with text
+}
+```
+
+**Exposed Methods:**
+```typescript
+{
+  setLoading(value: boolean): void   // Set loading state from parent
+  setError(message: string): void    // Display error message from parent
+  resetDialog(): void                // Clear form and reset state
+}
+```
+
+**Slots:** None
+
+**Usage:**
+```vue
+<script setup>
+const dialogVisible = ref(false)
+const dialogRef = ref(null)
+
+async function handleImport(text) {
+  dialogRef.value.setLoading(true)
+  try {
+    const response = await adminApi.parseText({ text_content: text })
+    formData.value = response.data.recipe_data
+    dialogVisible.value = false
+    dialogRef.value.resetDialog()
+  } catch (error) {
+    dialogRef.value.setError('Failed to parse recipe')
+  }
+}
+</script>
+
+<template>
+  <Button label="Import from Text" @click="dialogVisible = true" />
+  <TextImportDialog
+    ref="dialogRef"
+    v-model:visible="dialogVisible"
+    @import="handleImport"
+  />
+</template>
+```
+
+**Features:**
+- Large monospace textarea (400px min-height)
+- Validation: Requires min 50 characters
+- Loading state with spinner
+- Error handling (keeps dialog open for retry)
+- 100% i18n coverage (7 languages)
+- Keyboard accessible (Tab, Enter, Escape)
+
+**States:**
+1. Empty: Import button disabled
+2. Text entered (>= 50 chars): Import enabled
+3. Loading: Spinner shown, controls disabled
+4. Error: Message displayed inline, text preserved
+5. Success: Dialog closes, parent shows feedback
+
+**Related Components:** RecipeForm, AdminRecipeNew
+
+**API:** `POST /admin/recipes/parse_text` with `{ text_content: string }`
+
+**Notes:**
+- Dialog not closable during loading
+- Uses PrimeVue Dialog, Textarea, Button
+- Typical parse time: 5-15 seconds
+- Satisfies AC-ADMIN-UI-TEXT-001 through AC-ADMIN-UI-TEXT-005
+
+---
+
 ## User Components
 
 ### User Layout
