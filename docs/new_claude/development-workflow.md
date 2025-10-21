@@ -1,6 +1,6 @@
 # Development Workflow
 
-**Last Updated:** 2025-10-19
+**Last Updated:** 2025-10-21
 **Purpose:** Define MANDATORY step-by-step workflows for backend and frontend development
 
 ---
@@ -172,6 +172,43 @@ XXX examples, 0 failures, 0 pending
 
 ### BEFORE Development
 
+#### Step 0: Check for Existing Acceptance Criteria (MANDATORY)
+
+```bash
+# Search acceptance-criteria.md for relevant ACs
+grep -i "keyword" docs/new_claude/acceptance-criteria.md
+```
+
+**If ACs exist:**
+- ✅ Read ALL relevant ACs thoroughly
+- ✅ Understand exact requirements including user flows, accessibility states, error handling, and visual requirements
+- ✅ Note AC IDs for reference in Playwright tests and commits (e.g., AC-FEAT-001)
+
+**If NO ACs exist:**
+- 🛑 **STOP coding immediately**
+- ✅ Write comprehensive ACs in [acceptance-criteria.md](acceptance-criteria.md)
+- ✅ Use GIVEN-WHEN-THEN format (see existing examples)
+- ✅ Cover ALL aspects of the UI feature (user flows, states, interactions, responsive behavior)
+- ✅ Number ACs sequentially (e.g., AC-FEAT-001, AC-FEAT-002)
+- ✅ Get AC review/approval before proceeding with code
+
+**Example AC Format:**
+```markdown
+### AC-RECIPE-UI-001: Display Recipe Card with Image
+
+**GIVEN** user views recipe list page
+**WHEN** recipes are loaded
+**THEN** each recipe displays as a card
+**AND** card shows recipe image, title, cooking time, and difficulty
+**AND** card is clickable to view recipe details
+
+**Acceptance:**
+- Card uses RecipeCard component from component library
+- Image aspect ratio is 16:9
+- Missing images show placeholder
+- Card has hover state for better UX
+```
+
 #### Step 1: Check for Existing Components
 
 - ✅ **Check [component-library.md](component-library.md)** for existing components
@@ -309,7 +346,89 @@ npm run check:i18n
    - [ ] Task marked as complete
    - [ ] Documentation subtasks checked off
 
-#### Step 6: Run Quality Checks
+#### Step 6: Write and Run Playwright Tests (MANDATORY - 100% Pass Required)
+
+**Just like backend requires RSpec tests for every AC, frontend requires Playwright tests for every AC.**
+
+1. **Write Playwright tests for EVERY AC from Step 0**
+   - [ ] Each AC must have at least one Playwright test
+   - [ ] Test names clearly reference AC IDs (e.g., `test('AC-RECIPE-UI-001: displays recipe card with image', async ({ page }) => { ... })`)
+   - [ ] Tests validate exact AC requirements
+   - [ ] Include edge cases, error states, and accessibility checks as specified in ACs
+
+**Example Test:**
+```typescript
+// tests/e2e/recipes/recipe-card.spec.ts
+import { test, expect } from '@playwright/test'
+
+test.describe('Recipe Card Display', () => {
+  // AC-RECIPE-UI-001
+  test('AC-RECIPE-UI-001: displays recipe card with image', async ({ page }) => {
+    await page.goto('/recipes')
+
+    const recipeCard = page.locator('.recipe-card').first()
+    await expect(recipeCard).toBeVisible()
+
+    await expect(recipeCard.locator('.recipe-image')).toBeVisible()
+    await expect(recipeCard.locator('.recipe-title')).toBeVisible()
+    await expect(recipeCard.locator('.cooking-time')).toBeVisible()
+
+    await recipeCard.hover()
+    await expect(recipeCard).toHaveClass(/hover/)
+  })
+})
+```
+
+2. **Capture UI screenshots during test runs**
+   - [ ] Use `await page.screenshot({ path: 'screenshots/feature-name.png' })` to capture the implemented UI
+   - [ ] Take screenshots of key states: default, hover, error, loading, etc.
+   - [ ] Screenshot filenames should be descriptive (e.g., `recipe-card-default.png`, `recipe-form-error-state.png`)
+
+3. **Evaluate UI against industry standards**
+   - [ ] Review ALL captured screenshots immediately
+   - [ ] Evaluate against industry-standard UI/UX practices:
+     - Visual hierarchy clear and logical
+     - Proper spacing and alignment
+     - Consistent with design system
+     - Accessible contrast ratios
+     - Appropriate interactive states (hover, focus, active)
+     - Responsive to different viewport sizes
+     - Error states are clear and actionable
+   - [ ] Document any required refinements
+   - [ ] Make necessary UI improvements BEFORE completing the task
+   - [ ] Re-run tests and capture new screenshots after improvements
+
+4. **Delete screenshot files after review**
+   - [ ] Screenshots are temporary artifacts for UI evaluation only
+   - [ ] Delete ALL screenshot files from filesystem after completing UI evaluation
+   - [ ] DO NOT commit screenshot files to the repository
+   - [ ] Verify no screenshot files remain: `find . -name "*.png" -path "*/screenshots/*"`
+
+5. **Run the complete Playwright test suite**
+
+```bash
+cd frontend
+npm run test:e2e
+```
+
+**Required Output:**
+```
+✅ XX passed (Xm)
+0 failures
+```
+
+**Verification Checklist:**
+- [ ] ✅ 100% of Playwright tests passing (ZERO failures)
+- [ ] ✅ New tests included and passing
+- [ ] ✅ Existing tests still pass
+- [ ] ✅ UI screenshots captured and evaluated
+- [ ] ✅ UI refinements completed based on evaluation
+- [ ] ✅ All screenshot files deleted
+- [ ] ✅ New test specs committed alongside the feature
+
+**🔴 STOP: If ANY test fails or UI doesn't meet standards, fix before proceeding**
+
+#### Step 7: Run Quality Checks
 
 ```bash
 cd frontend
@@ -324,7 +443,7 @@ npm run check:i18n
 npm run build
 ```
 
-#### Step 7: Mark Task Complete
+#### Step 8: Mark Task Complete
 
 - [ ] Find relevant task in [development-checklist.md](development-checklist.md)
 - [ ] Mark as complete with `[x]`
@@ -347,12 +466,17 @@ npm run build
 
 ### Frontend
 
-1. **🔴 Reuse Components** - Check component-library.md BEFORE creating new ones
-2. **🔴 100% i18n** - All 7 languages required (no exceptions)
-3. **🔴 Design Tokens** - Never hardcode colors/spacing (use CSS variables)
-4. **🔴 Document While Building** - Update component-library.md as you code
-5. **🔴 Test All Languages** - Switch through all 7 in browser before commit
-6. **🔴 NO hardcoded text** - Use $t() or t() for ALL user-facing strings
+1. **🔴 ACs FIRST** - Write acceptance criteria BEFORE coding
+2. **🔴 NO ACs = NO CODE** - If ACs don't exist, write them first
+3. **🔴 Playwright Tests ALWAYS** - Test for EVERY AC (just like backend RSpec)
+4. **🔴 100% Pass** - All Playwright tests must pass before commit (zero failures)
+5. **🔴 Evaluate UI** - Capture screenshots, review against industry standards, delete after review
+6. **🔴 Reuse Components** - Check component-library.md BEFORE creating new ones
+7. **🔴 100% i18n** - All 7 languages required (no exceptions)
+8. **🔴 Design Tokens** - Never hardcode colors/spacing (use CSS variables)
+9. **🔴 Document While Building** - Update component-library.md as you code
+10. **🔴 Test All Languages** - Switch through all 7 in browser before commit
+11. **🔴 NO hardcoded text** - Use $t() or t() for ALL user-facing strings
 
 ---
 
@@ -376,6 +500,24 @@ npm run build
 - Future developers waste time reading code to understand endpoints
 
 ### Frontend
+
+❌ **Coding before writing ACs**
+- Leads to incomplete UI requirements, missed user flows, untestable interfaces
+
+❌ **Skipping Playwright tests**
+- "I'll write them later" = they never get written
+- Creates untested UI with hidden bugs
+
+❌ **Not running full Playwright test suite**
+- New UI changes might break existing user flows
+
+❌ **Skipping UI screenshot evaluation**
+- Ships UI that doesn't meet industry standards
+- Misses obvious UX issues that screenshots would reveal
+
+❌ **Committing screenshot files**
+- Screenshots are temporary evaluation artifacts only
+- Bloats repository with binary files
 
 ❌ **Creating new components without checking existing ones**
 - Leads to duplicate components with similar functionality
@@ -412,16 +554,22 @@ npm run build
 
 ### Frontend
 ```
-1. Check component-library.md for existing components
-2. Implement component + i18n (all 7 languages)
-3. Run npm run check:i18n → 100% pass
-4. Test in browser (switch through all 7 languages)
-5. Document in component-library.md
-6. Update architecture.md (if needed)
-7. Mark task complete
-8. Commit
+1. Check ACs → Write ACs if missing (GIVEN-WHEN-THEN format)
+2. Check component-library.md for existing components
+3. Implement component + i18n (all 7 languages)
+4. Run npm run check:i18n → 100% pass
+5. Test in browser (switch through all 7 languages)
+6. Write Playwright tests for all ACs
+7. Run npm run test:e2e → 100% pass (0 failures)
+8. Capture UI screenshots → evaluate against industry standards
+9. Refine UI based on evaluation → re-test
+10. Delete all screenshot files
+11. Document in component-library.md
+12. Update architecture.md (if needed)
+13. Mark task complete
+14. Commit
 ```
 
 ---
 
-**Last Updated:** 2025-10-19
+**Last Updated:** 2025-10-21
