@@ -45,6 +45,11 @@
       "subtitle": "您的食譜管理平台",
       "unexpectedError": "發生意外錯誤",
       "errorOccurred": "發生錯誤"
+    },
+    "actions": {
+      "close": "關閉",
+      "remove": "移除",
+      "retry": "重試"
     }
   },
   "navigation": {
@@ -238,6 +243,48 @@
       "new": {
         "title": "新增食譜",
         "subtitle": "建立新的食譜"
+      },
+      "import": {
+        "title": "匯入食譜",
+        "importButton": "匯入食譜",
+        "parseButton": "解析食譜",
+        "tabs": {
+          "text": "文字",
+          "url": "URL",
+          "image": "圖片"
+        },
+        "textLabel": "食譜文字",
+        "textPlaceholder": "在此貼上食譜文字（食材、步驟、時間等）...",
+        "urlLabel": "食譜 URL",
+        "urlPlaceholder": "https://example.com/recipe",
+        "urlHint": "輸入任何網站的食譜 URL",
+        "imageLabel": "食譜圖片",
+        "imageDragText": "拖曳圖片到此處或點擊瀏覽",
+        "imageHint": "JPG、PNG、WEBP、GIF（最大 10MB）",
+        "charCount": "{count} 個字元（最少 {min} 個）",
+        "loading": {
+          "analyzingText": "AI 正在解析食譜...",
+          "fetchingUrl": "正在獲取並解析食譜...",
+          "analyzingImage": "AI 正在分析圖片..."
+        },
+        "success": {
+          "text": "食譜匯入成功！",
+          "url": "從 URL 匯入食譜成功！",
+          "image": "從圖片匯入食譜成功！"
+        },
+        "errors": {
+          "textTooShort": "請至少輸入 {min} 個字元",
+          "invalidUrl": "請輸入有效的 URL",
+          "urlNotFound": "在此 URL 找不到食譜 (404)",
+          "urlTimeout": "請求逾時，請重試。",
+          "urlFetchFailed": "無法獲取 URL。請檢查 URL 並重試。",
+          "imageTooLarge": "圖片太大。最大大小為 {max}",
+          "invalidImageType": "無效的圖片類型。請使用 JPG、PNG、WEBP 或 GIF",
+          "noImage": "請選擇圖片",
+          "imageNoRecipe": "無法在圖片中檢測到食譜。請使用更清晰的照片。",
+          "parseFailed": "食譜解析失敗。請檢查輸入並重試。",
+          "incompleteData": "食譜數據不完整。請重試或手動編輯。"
+        }
       }
     },
     "dataReferences": {

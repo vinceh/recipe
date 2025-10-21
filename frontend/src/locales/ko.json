@@ -45,6 +45,11 @@
       "subtitle": "당신의 레시피 관리 플랫폼",
       "unexpectedError": "예기치 않은 오류가 발생했습니다",
       "errorOccurred": "오류가 발생했습니다"
+    },
+    "actions": {
+      "close": "닫기",
+      "remove": "제거",
+      "retry": "다시 시도"
     }
   },
   "navigation": {
@@ -238,6 +243,48 @@
       "new": {
         "title": "새 레시피",
         "subtitle": "새 레시피 만들기"
+      },
+      "import": {
+        "title": "레시피 가져오기",
+        "importButton": "레시피 가져오기",
+        "parseButton": "레시피 분석",
+        "tabs": {
+          "text": "텍스트",
+          "url": "URL",
+          "image": "이미지"
+        },
+        "textLabel": "레시피 텍스트",
+        "textPlaceholder": "레시피 텍스트를 여기에 붙여넣으세요 (재료, 단계, 시간 등)...",
+        "urlLabel": "레시피 URL",
+        "urlPlaceholder": "https://example.com/recipe",
+        "urlHint": "모든 웹사이트의 레시피 URL을 입력하세요",
+        "imageLabel": "레시피 이미지",
+        "imageDragText": "이미지를 드래그하거나 클릭하여 선택",
+        "imageHint": "JPG, PNG, WEBP, GIF (최대 10MB)",
+        "charCount": "{count}자 (최소 {min}자)",
+        "loading": {
+          "analyzingText": "AI로 레시피 분석 중...",
+          "fetchingUrl": "레시피를 가져와서 분석 중...",
+          "analyzingImage": "AI로 이미지 분석 중..."
+        },
+        "success": {
+          "text": "레시피를 성공적으로 가져왔습니다!",
+          "url": "URL에서 레시피를 성공적으로 가져왔습니다!",
+          "image": "이미지에서 레시피를 성공적으로 가져왔습니다!"
+        },
+        "errors": {
+          "textTooShort": "최소 {min}자 이상 입력하세요",
+          "invalidUrl": "유효한 URL을 입력하세요",
+          "urlNotFound": "이 URL에서 레시피를 찾을 수 없습니다 (404)",
+          "urlTimeout": "요청 시간이 초과되었습니다. 다시 시도하세요.",
+          "urlFetchFailed": "URL을 가져올 수 없습니다. URL을 확인하고 다시 시도하세요.",
+          "imageTooLarge": "이미지가 너무 큽니다. 최대 크기는 {max}입니다",
+          "invalidImageType": "잘못된 이미지 형식입니다. JPG, PNG, WEBP 또는 GIF를 사용하세요",
+          "noImage": "이미지를 선택하세요",
+          "imageNoRecipe": "이미지에서 레시피를 감지할 수 없습니다. 더 선명한 사진을 사용하세요.",
+          "parseFailed": "레시피 분석에 실패했습니다. 입력을 확인하고 다시 시도하세요.",
+          "incompleteData": "레시피 데이터가 불완전합니다. 다시 시도하거나 수동으로 편집하세요."
+        }
       }
     },
     "dataReferences": {

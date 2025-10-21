@@ -660,6 +660,152 @@ This document defines atomic, testable acceptance criteria for all Recipe App MV
 **THEN** system should show rendered prompt with variables substituted
 **AND** display character count and estimated token count
 
+### AC-ADMIN-016: Import Modal - Open and Display
+**GIVEN** admin is on the "Create Recipe" page
+**WHEN** admin clicks "Import Recipe" button
+**THEN** import modal should open with 3 tabs: Text, URL, Image
+**AND** modal should have title "Import Recipe"
+**AND** Text tab should be active by default
+
+### AC-ADMIN-017: Import Modal - Text Tab UI
+**GIVEN** admin has opened import modal
+**WHEN** admin views Text tab
+**THEN** should display large textarea (minimum 10 rows)
+**AND** placeholder text "Paste recipe text here..."
+**AND** character counter below textarea
+**AND** "Parse Recipe" button disabled when textarea is empty
+
+### AC-ADMIN-018: Import Modal - Text Validation
+**GIVEN** admin is on Text tab
+**WHEN** admin enters less than 50 characters
+**THEN** "Parse Recipe" button should remain disabled
+**AND** show validation message "Please enter at least 50 characters"
+
+### AC-ADMIN-019: Import Modal - Text Parsing Success
+**GIVEN** admin has pasted recipe text (50+ characters)
+**WHEN** admin clicks "Parse Recipe"
+**THEN** loading spinner should appear with text "Analyzing recipe with AI..."
+**AND** Parse button should be disabled during parsing
+**AND** after 2-10 seconds, modal should close
+**AND** RecipeForm should populate with parsed data
+**AND** success toast should show "Recipe imported successfully!"
+
+### AC-ADMIN-020: Import Modal - Text Parsing Error
+**GIVEN** admin has pasted invalid text
+**WHEN** parsing fails (API error or network timeout)
+**THEN** error message should display below textarea
+**AND** error text should say "Failed to parse recipe. Please check your text and try again."
+**AND** "Retry" button should appear
+**AND** modal should remain open
+
+### AC-ADMIN-021: Import Modal - URL Tab UI
+**GIVEN** admin has opened import modal
+**WHEN** admin clicks URL tab
+**THEN** should display URL input field
+**AND** placeholder text "https://example.com/recipe"
+**AND** "Parse Recipe" button disabled when input is empty
+
+### AC-ADMIN-022: Import Modal - URL Validation
+**GIVEN** admin is on URL tab
+**WHEN** admin enters invalid URL (not starting with http:// or https://)
+**THEN** show validation error "Please enter a valid URL"
+**AND** "Parse Recipe" button should be disabled
+
+### AC-ADMIN-023: Import Modal - URL Parsing Success
+**GIVEN** admin has entered valid recipe URL
+**WHEN** admin clicks "Parse Recipe"
+**THEN** loading spinner should appear with text "Fetching and analyzing recipe..."
+**AND** after successful parse, modal should close
+**AND** RecipeForm should populate with parsed data including source_url
+**AND** success toast should show "Recipe imported from URL successfully!"
+
+### AC-ADMIN-024: Import Modal - URL Parsing Error
+**GIVEN** admin has entered URL that fails to load
+**WHEN** parsing fails (404, timeout, or scraping error)
+**THEN** error message should display specific issue
+**AND** error examples: "Unable to fetch URL", "No recipe found at this URL"
+**AND** "Retry" button should appear
+
+### AC-ADMIN-025: Import Modal - Image Tab UI
+**GIVEN** admin has opened import modal
+**WHEN** admin clicks Image tab
+**THEN** should display file upload area with drag-and-drop zone
+**AND** text "Drag image here or click to browse"
+**AND** supported formats hint "JPG, PNG, WEBP, GIF (max 10MB)"
+**AND** "Parse Recipe" button disabled until image selected
+
+### AC-ADMIN-026: Import Modal - Image File Validation
+**GIVEN** admin is on Image tab
+**WHEN** admin selects file larger than 10MB
+**THEN** show validation error "Image too large. Maximum 10MB allowed."
+**AND** file should not be uploaded
+
+### AC-ADMIN-027: Import Modal - Image Preview
+**GIVEN** admin has selected valid image file
+**WHEN** file loads
+**THEN** image preview should display (max 300px height)
+**AND** filename should display below preview
+**AND** "Remove" button should appear to clear selection
+**AND** "Parse Recipe" button should become enabled
+
+### AC-ADMIN-028: Import Modal - Image Parsing Success
+**GIVEN** admin has selected recipe image
+**WHEN** admin clicks "Parse Recipe"
+**THEN** loading spinner should appear with text "Analyzing image with AI..."
+**AND** after successful parse, modal should close
+**AND** RecipeForm should populate with parsed data
+**AND** success toast should show "Recipe imported from image successfully!"
+
+### AC-ADMIN-029: Import Modal - Image Parsing Error
+**GIVEN** admin has uploaded image with no recognizable recipe
+**WHEN** Claude Vision cannot extract recipe data
+**THEN** error message should say "Could not detect recipe in image. Please try a clearer photo."
+**AND** image preview should remain visible
+**AND** "Retry" button should appear
+
+### AC-ADMIN-030: Import Modal - Loading State Behavior
+**GIVEN** admin has triggered parsing on any tab
+**WHEN** parsing is in progress (loading = true)
+**THEN** user should not be able to switch tabs
+**AND** close button (X) should be disabled
+**AND** clicking outside modal should not close it
+**AND** loading spinner should be visible
+
+### AC-ADMIN-031: Import Modal - Close and Reset
+**GIVEN** admin has import modal open with data entered
+**WHEN** admin clicks close button (X) or clicks outside modal
+**THEN** modal should close
+**AND** all input fields should reset to empty
+**AND** all error messages should clear
+**AND** selected files should be removed
+
+### AC-ADMIN-032: Import Modal - Keyboard Navigation
+**GIVEN** import modal is open
+**WHEN** admin presses ESC key
+**THEN** modal should close (unless parsing in progress)
+**AND** when admin presses Ctrl+Enter on Text tab with valid input
+**THEN** should trigger "Parse Recipe" action
+
+### AC-ADMIN-033: Import Modal - i18n Support
+**GIVEN** user has selected language (en, ja, ko, zh-tw, zh-cn, es, fr)
+**WHEN** import modal opens
+**THEN** all UI text should display in selected language
+**AND** tab labels, placeholders, buttons, errors should be translated
+**AND** 100% coverage for all 7 languages required
+
+### AC-ADMIN-034: Import Modal - Error Recovery
+**GIVEN** parsing failed with error displayed
+**WHEN** admin edits the input (text, URL, or selects new image)
+**THEN** error message should clear automatically
+**AND** "Parse Recipe" button should re-enable when input is valid
+
+### AC-ADMIN-035: Import Modal - Parsed Data Validation
+**GIVEN** Claude AI has returned parsed recipe data
+**WHEN** data is received by frontend
+**THEN** validate required fields exist: name, ingredient_groups, steps
+**AND** if validation fails, show error "Incomplete recipe data. Please try again."
+**AND** do not populate RecipeForm with incomplete data
+
 ---
 
 ## Recipe Viewing

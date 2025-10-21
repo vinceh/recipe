@@ -36,6 +36,11 @@
       "yes": "Yes",
       "no": "No"
     },
+    "actions": {
+      "close": "Close",
+      "remove": "Remove",
+      "retry": "Retry"
+    },
     "messages": {
       "success": "Operation completed successfully",
       "error": "An error occurred",
@@ -239,6 +244,48 @@
       "new": {
         "title": "New Recipe",
         "subtitle": "Create a new recipe"
+      },
+      "import": {
+        "title": "Import Recipe",
+        "importButton": "Import Recipe",
+        "parseButton": "Parse Recipe",
+        "tabs": {
+          "text": "Text",
+          "url": "URL",
+          "image": "Image"
+        },
+        "textLabel": "Recipe Text",
+        "textPlaceholder": "Paste recipe text here (ingredients, steps, timing, etc.)...",
+        "urlLabel": "Recipe URL",
+        "urlPlaceholder": "https://example.com/recipe",
+        "urlHint": "Enter the URL of a recipe from any website",
+        "imageLabel": "Recipe Image",
+        "imageDragText": "Drag image here or click to browse",
+        "imageHint": "JPG, PNG, WEBP, GIF (max 10MB)",
+        "charCount": "{count} characters (minimum {min})",
+        "loading": {
+          "analyzingText": "Analyzing recipe with AI...",
+          "fetchingUrl": "Fetching and analyzing recipe...",
+          "analyzingImage": "Analyzing image with AI..."
+        },
+        "success": {
+          "text": "Recipe imported successfully!",
+          "url": "Recipe imported from URL successfully!",
+          "image": "Recipe imported from image successfully!"
+        },
+        "errors": {
+          "textTooShort": "Please enter at least {min} characters",
+          "invalidUrl": "Please enter a valid URL",
+          "urlNotFound": "Recipe not found at this URL (404)",
+          "urlTimeout": "Request timed out. Please try again.",
+          "urlFetchFailed": "Unable to fetch URL. Please check the URL and try again.",
+          "imageTooLarge": "Image too large. Maximum size is {max}",
+          "invalidImageType": "Invalid image type. Please use JPG, PNG, WEBP, or GIF",
+          "noImage": "Please select an image",
+          "imageNoRecipe": "Could not detect recipe in image. Please try a clearer photo.",
+          "parseFailed": "Failed to parse recipe. Please check your input and try again.",
+          "incompleteData": "Incomplete recipe data. Please try again or edit manually."
+        }
       }
     },
     "dataReferences": {

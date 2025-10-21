@@ -238,6 +238,48 @@
       "new": {
         "title": "新しいレシピ",
         "subtitle": "新しいレシピを作成"
+      },
+      "import": {
+        "title": "レシピをインポート",
+        "importButton": "レシピをインポート",
+        "parseButton": "レシピを解析",
+        "tabs": {
+          "text": "テキスト",
+          "url": "URL",
+          "image": "画像"
+        },
+        "textLabel": "レシピのテキスト",
+        "textPlaceholder": "レシピのテキストをここに貼り付けてください（材料、手順、時間など）...",
+        "urlLabel": "レシピのURL",
+        "urlPlaceholder": "https://example.com/recipe",
+        "urlHint": "任意のウェブサイトのレシピURLを入力してください",
+        "imageLabel": "レシピの画像",
+        "imageDragText": "画像をドラッグするか、クリックして選択",
+        "imageHint": "JPG、PNG、WEBP、GIF（最大10MB）",
+        "charCount": "{count}文字（最小{min}文字）",
+        "loading": {
+          "analyzingText": "AIでレシピを解析中...",
+          "fetchingUrl": "レシピを取得して解析中...",
+          "analyzingImage": "AIで画像を解析中..."
+        },
+        "success": {
+          "text": "レシピのインポートに成功しました！",
+          "url": "URLからのレシピインポートに成功しました！",
+          "image": "画像からのレシピインポートに成功しました！"
+        },
+        "errors": {
+          "textTooShort": "最低{min}文字入力してください",
+          "invalidUrl": "有効なURLを入力してください",
+          "urlNotFound": "このURLでレシピが見つかりませんでした（404）",
+          "urlTimeout": "リクエストがタイムアウトしました。もう一度お試しください。",
+          "urlFetchFailed": "URLを取得できませんでした。URLを確認してもう一度お試しください。",
+          "imageTooLarge": "画像が大きすぎます。最大サイズは{max}です",
+          "invalidImageType": "無効な画像タイプです。JPG、PNG、WEBP、またはGIFを使用してください",
+          "noImage": "画像を選択してください",
+          "imageNoRecipe": "画像からレシピを検出できませんでした。よりはっきりとした写真をお試しください。",
+          "parseFailed": "レシピの解析に失敗しました。入力内容を確認してもう一度お試しください。",
+          "incompleteData": "レシピデータが不完全です。もう一度お試しいただくか、手動で編集してください。"
+        }
       }
     },
     "dataReferences": {

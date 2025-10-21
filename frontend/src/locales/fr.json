@@ -45,6 +45,11 @@
       "subtitle": "Votre plateforme de gestion de recettes",
       "unexpectedError": "Une erreur inattendue s'est produite",
       "errorOccurred": "Une erreur s'est produite"
+    },
+    "actions": {
+      "close": "Fermer",
+      "remove": "Supprimer",
+      "retry": "Réessayer"
     }
   },
   "navigation": {
@@ -238,6 +243,48 @@
       "new": {
         "title": "Nouvelle recette",
         "subtitle": "Créer une nouvelle recette"
+      },
+      "import": {
+        "title": "Importer une Recette",
+        "importButton": "Importer une Recette",
+        "parseButton": "Analyser la Recette",
+        "tabs": {
+          "text": "Texte",
+          "url": "URL",
+          "image": "Image"
+        },
+        "textLabel": "Texte de la Recette",
+        "textPlaceholder": "Collez le texte de la recette ici (ingrédients, étapes, temps, etc.)...",
+        "urlLabel": "URL de la Recette",
+        "urlPlaceholder": "https://example.com/recipe",
+        "urlHint": "Entrez l'URL d'une recette depuis n'importe quel site web",
+        "imageLabel": "Image de la Recette",
+        "imageDragText": "Glissez l'image ici ou cliquez pour parcourir",
+        "imageHint": "JPG, PNG, WEBP, GIF (max 10Mo)",
+        "charCount": "{count} caractères (minimum {min})",
+        "loading": {
+          "analyzingText": "Analyse de la recette avec l'IA...",
+          "fetchingUrl": "Récupération et analyse de la recette...",
+          "analyzingImage": "Analyse de l'image avec l'IA..."
+        },
+        "success": {
+          "text": "Recette importée avec succès !",
+          "url": "Recette importée depuis l'URL avec succès !",
+          "image": "Recette importée depuis l'image avec succès !"
+        },
+        "errors": {
+          "textTooShort": "Veuillez entrer au moins {min} caractères",
+          "invalidUrl": "Veuillez entrer une URL valide",
+          "urlNotFound": "Recette introuvable à cette URL (404)",
+          "urlTimeout": "Délai d'attente dépassé. Veuillez réessayer.",
+          "urlFetchFailed": "Impossible de récupérer l'URL. Vérifiez l'URL et réessayez.",
+          "imageTooLarge": "Image trop volumineuse. Taille maximale : {max}",
+          "invalidImageType": "Type d'image non valide. Utilisez JPG, PNG, WEBP ou GIF",
+          "noImage": "Veuillez sélectionner une image",
+          "imageNoRecipe": "Impossible de détecter une recette dans l'image. Essayez avec une photo plus claire.",
+          "parseFailed": "Échec de l'analyse de la recette. Vérifiez votre saisie et réessayez.",
+          "incompleteData": "Données de recette incomplètes. Réessayez ou modifiez manuellement."
+        }
       }
     },
     "dataReferences": {

@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router'
 import PageHeader from '@/components/shared/PageHeader.vue'
 import ErrorMessage from '@/components/shared/ErrorMessage.vue'
 import RecipeForm from '@/components/admin/recipes/RecipeForm.vue'
+import RecipeImportModal from '@/components/admin/recipes/RecipeImportModal.vue'
 import { adminApi } from '@/services/adminApi'
 import type { RecipeDetail } from '@/services/types'
 
@@ -12,6 +13,7 @@ const router = useRouter()
 const formData = ref<Partial<RecipeDetail>>({})
 const saving = ref(false)
 const error = ref<Error | null>(null)
+const showImportModal = ref(false)
 
 async function handleSaveRecipe() {
   saving.value = true
@@ -38,6 +40,19 @@ async function handleSaveRecipe() {
 function handleCancelRecipe() {
   router.push('/admin/recipes')
 }
+
+function handleImportRecipe(recipeData: Partial<RecipeDetail>) {
+  formData.value = recipeData
+  console.log('Recipe imported:', recipeData)
+}
+
+function openImportModal() {
+  showImportModal.value = true
+}
+
+function closeImportModal() {
+  showImportModal.value = false
+}
 </script>
 
 <template>
@@ -47,6 +62,10 @@ function handleCancelRecipe() {
       :subtitle="$t('admin.recipes.new.subtitle')"
     >
       <template #actions>
+        <button class="btn btn-primary btn-sm" @click="openImportModal">
+          <i class="pi pi-sparkles"></i>
+          {{ $t('admin.recipes.import.importButton') }}
+        </button>
         <button class="btn btn-outline btn-sm" @click="handleCancelRecipe">
           <i class="pi pi-arrow-left"></i>
           {{ $t('common.buttons.back') }}
@@ -66,6 +85,13 @@ function handleCancelRecipe() {
         @cancel="handleCancelRecipe"
       />
     </div>
+
+    <!-- Import Modal -->
+    <RecipeImportModal
+      :is-open="showImportModal"
+      @close="closeImportModal"
+      @import="handleImportRecipe"
+    />
   </div>
 </template>
 
