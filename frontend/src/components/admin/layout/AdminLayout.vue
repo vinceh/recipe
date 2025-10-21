@@ -52,7 +52,6 @@ const closeSidebar = () => {
 
 .admin-layout__content {
   padding: var(--spacing-xl);
-  max-width: var(--max-width-7xl);
   margin: 0 auto;
 }
 

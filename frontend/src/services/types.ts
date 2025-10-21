@@ -250,7 +250,7 @@ export interface AiPrompt {
 }
 
 export interface ParseTextPayload {
-  text: string
+  text_content: string
   prompt_id?: number
 }
 

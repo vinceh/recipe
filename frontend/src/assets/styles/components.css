@@ -7,6 +7,10 @@
 
 /* ==================== BUTTON BASE STYLES ==================== */
 
+.p-select, .p-multiSelect {
+  line-height: 1em;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
