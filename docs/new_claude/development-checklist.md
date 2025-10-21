@@ -728,8 +728,7 @@ See `DOCUMENTATION-WORKFLOW.md` for the complete process.
   - Equipment multi-select
   - Validation for required fields
   - [x] Document in component-library.md
-- [ ] Create RecipeImportModal.vue (4 import methods)
-  - [ ] Document in component-library.md
+- [ ] Create RecipeImportModal.vue (3 import methods)
   - Tab 1: Text block import (textarea + parse button)
   - Tab 2: URL import (URL input + parse button)
   - Tab 3: Image import (file upload + parse button)

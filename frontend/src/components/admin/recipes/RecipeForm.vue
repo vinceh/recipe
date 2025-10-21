@@ -357,7 +357,7 @@ onMounted(async () => {
       <section class="recipe-form__section">
         <h3 class="recipe-form__section-title">{{ $t('forms.recipe.sections.basicInfo') }}</h3>
 
-        <div class="recipe-form__field">
+        <div class="recipe-form__field recipe-form__field--wide">
           <label for="name" class="recipe-form__label required">
             {{ $t('forms.recipe.name') }}
           </label>
@@ -382,157 +382,17 @@ onMounted(async () => {
           />
         </div>
 
-        <div class="recipe-form__row">
-          <div class="recipe-form__field">
-            <label for="language" class="recipe-form__label">
-              {{ $t('forms.recipe.language') }}
-            </label>
-            <Select
-              id="language"
-              v-model="formData.language"
-              :options="languageOptions"
-              optionLabel="label"
-              optionValue="value"
-              :placeholder="$t('forms.recipe.languagePlaceholder')"
-              class="recipe-form__input"
-            />
-          </div>
-        </div>
-      </section>
-
-      <!-- Servings -->
-      <section class="recipe-form__section">
-        <h3 class="recipe-form__section-title">{{ $t('forms.recipe.sections.servings') }}</h3>
-
-        <div class="recipe-form__row">
-          <div class="recipe-form__field">
-            <label for="servings_original" class="recipe-form__label required">
-              {{ $t('forms.recipe.servings.original') }}
-            </label>
-            <InputNumber
-              id="servings_original"
-              v-model="formData.servings!.original"
-              :min="1"
-              :max="100"
-              class="recipe-form__input"
-              required
-            />
-          </div>
-
-          <div class="recipe-form__field">
-            <label for="servings_min" class="recipe-form__label">
-              {{ $t('forms.recipe.servings.min') }}
-            </label>
-            <InputNumber
-              id="servings_min"
-              v-model="formData.servings!.min"
-              :min="1"
-              :max="100"
-              class="recipe-form__input"
-            />
-          </div>
-
-          <div class="recipe-form__field">
-            <label for="servings_max" class="recipe-form__label">
-              {{ $t('forms.recipe.servings.max') }}
-            </label>
-            <InputNumber
-              id="servings_max"
-              v-model="formData.servings!.max"
-              :min="1"
-              :max="100"
-              class="recipe-form__input"
-            />
-          </div>
-        </div>
-
-        <small class="recipe-form__help-text">{{ $t('forms.recipe.servings.hint') }}</small>
-      </section>
-
-      <!-- Timing -->
-      <section class="recipe-form__section">
-        <h3 class="recipe-form__section-title">{{ $t('forms.recipe.sections.timing') }}</h3>
-
-        <div class="recipe-form__row">
-          <div class="recipe-form__field">
-            <label for="prep_time" class="recipe-form__label">
-              {{ $t('forms.recipe.prepTime') }}
-            </label>
-            <InputNumber
-              id="prep_time"
-              v-model="formData.timing!.prep_minutes"
-              :min="0"
-              :max="1440"
-              suffix=" min"
-              :placeholder="'e.g. 15'"
-              class="recipe-form__input"
-            />
-            <small class="recipe-form__help-text">{{ $t('forms.recipe.prepTimeHint') }}</small>
-          </div>
-
-          <div class="recipe-form__field">
-            <label for="cook_time" class="recipe-form__label">
-              {{ $t('forms.recipe.cookTime') }}
-            </label>
-            <InputNumber
-              id="cook_time"
-              v-model="formData.timing!.cook_minutes"
-              :min="0"
-              :max="1440"
-              suffix=" min"
-              :placeholder="'e.g. 30'"
-              class="recipe-form__input"
-            />
-            <small class="recipe-form__help-text">{{ $t('forms.recipe.cookTimeHint') }}</small>
-          </div>
-
-          <div class="recipe-form__field">
-            <label for="total_time" class="recipe-form__label">
-              {{ $t('forms.recipe.totalTime') }}
-            </label>
-            <InputNumber
-              id="total_time"
-              v-model="formData.timing!.total_minutes"
-              :min="0"
-              :max="1440"
-              suffix=" min"
-              :placeholder="'e.g. 45'"
-              class="recipe-form__input"
-            />
-            <small class="recipe-form__help-text">{{ $t('forms.recipe.totalTimeHint') }}</small>
-          </div>
-        </div>
-      </section>
-
-      <!-- Precision -->
-      <section class="recipe-form__section">
-        <h3 class="recipe-form__section-title">{{ $t('forms.recipe.sections.precision') }}</h3>
-
-        <div class="recipe-form__field">
-          <div class="recipe-form__checkbox-field">
-            <Checkbox
-              id="requires_precision"
-              v-model="formData.requires_precision"
-              :binary="true"
-            />
-            <label for="requires_precision" class="recipe-form__label-inline">
-              {{ $t('forms.recipe.requiresPrecision') }}
-            </label>
-          </div>
-          <small class="recipe-form__help-text">{{ $t('forms.recipe.requiresPrecisionHint') }}</small>
-        </div>
-
-        <div v-if="formData.requires_precision" class="recipe-form__field">
-          <label for="precision_reason" class="recipe-form__label">
-            {{ $t('forms.recipe.precisionReason') }}
+        <div class="recipe-form__field recipe-form__field--medium">
+          <label for="language" class="recipe-form__label required">
+            {{ $t('forms.recipe.language') }}
           </label>
           <Select
-            id="precision_reason"
-            v-model="formData.precision_reason"
-            :options="precisionReasonOptions"
+            id="language"
+            v-model="formData.language"
+            :options="languageOptions"
             optionLabel="label"
             optionValue="value"
-            :placeholder="$t('forms.recipe.precisionReasonPlaceholder')"
+            :placeholder="$t('forms.recipe.languagePlaceholder')"
             class="recipe-form__input"
           />
         </div>
@@ -611,40 +471,136 @@ onMounted(async () => {
         </div>
       </section>
 
-      <!-- Aliases -->
+      <!-- Servings & Timing -->
       <section class="recipe-form__section">
-        <h3 class="recipe-form__section-title">{{ $t('forms.recipe.sections.aliases') }}</h3>
+        <h3 class="recipe-form__section-title">{{ $t('forms.recipe.sections.servings') }} & {{ $t('forms.recipe.sections.timing') }}</h3>
 
-        <div class="recipe-form__field">
-          <label for="aliases" class="recipe-form__label">
-            {{ $t('forms.recipe.aliases') }}
-          </label>
-          <div class="recipe-form__input-with-button">
-            <InputText
-              id="aliases"
-              v-model="aliasInput"
-              :placeholder="$t('forms.recipe.aliasesPlaceholder')"
+        <div class="recipe-form__row">
+          <div class="recipe-form__field recipe-form__field--narrow">
+            <label for="servings_original" class="recipe-form__label required">
+              {{ $t('forms.recipe.servings.original') }}
+            </label>
+            <InputNumber
+              id="servings_original"
+              v-model="formData.servings!.original"
+              :min="1"
+              :max="100"
               class="recipe-form__input"
-              @keydown.enter.prevent="addAlias"
-            />
-            <Button
-              type="button"
-              :label="$t('common.buttons.add')"
-              @click="addAlias"
+              required
             />
           </div>
-          <small class="recipe-form__help-text">{{ $t('forms.recipe.aliasesHint') }}</small>
+
+          <div class="recipe-form__field recipe-form__field--narrow">
+            <label for="servings_min" class="recipe-form__label">
+              {{ $t('forms.recipe.servings.min') }}
+            </label>
+            <InputNumber
+              id="servings_min"
+              v-model="formData.servings!.min"
+              :min="1"
+              :max="100"
+              class="recipe-form__input"
+            />
+          </div>
+
+          <div class="recipe-form__field recipe-form__field--narrow">
+            <label for="servings_max" class="recipe-form__label">
+              {{ $t('forms.recipe.servings.max') }}
+            </label>
+            <InputNumber
+              id="servings_max"
+              v-model="formData.servings!.max"
+              :min="1"
+              :max="100"
+              class="recipe-form__input"
+            />
+          </div>
         </div>
 
-        <div v-if="formData.aliases && formData.aliases.length > 0" class="recipe-form__tags">
-          <span
-            v-for="(alias, index) in formData.aliases"
-            :key="index"
-            class="recipe-form__tag"
-          >
-            {{ alias }}
-            <button type="button" @click="removeAlias(index)">×</button>
-          </span>
+        <small class="recipe-form__help-text">{{ $t('forms.recipe.servings.hint') }}</small>
+
+        <div class="recipe-form__row">
+          <div class="recipe-form__field recipe-form__field--narrow">
+            <label for="prep_time" class="recipe-form__label">
+              {{ $t('forms.recipe.prepTime') }}
+            </label>
+            <InputNumber
+              id="prep_time"
+              v-model="formData.timing!.prep_minutes"
+              :min="0"
+              :max="1440"
+              suffix=" min"
+              :placeholder="'e.g. 15'"
+              class="recipe-form__input"
+            />
+            <small class="recipe-form__help-text">{{ $t('forms.recipe.prepTimeHint') }}</small>
+          </div>
+
+          <div class="recipe-form__field recipe-form__field--narrow">
+            <label for="cook_time" class="recipe-form__label">
+              {{ $t('forms.recipe.cookTime') }}
+            </label>
+            <InputNumber
+              id="cook_time"
+              v-model="formData.timing!.cook_minutes"
+              :min="0"
+              :max="1440"
+              suffix=" min"
+              :placeholder="'e.g. 30'"
+              class="recipe-form__input"
+            />
+            <small class="recipe-form__help-text">{{ $t('forms.recipe.cookTimeHint') }}</small>
+          </div>
+
+          <div class="recipe-form__field recipe-form__field--narrow">
+            <label for="total_time" class="recipe-form__label">
+              {{ $t('forms.recipe.totalTime') }}
+            </label>
+            <InputNumber
+              id="total_time"
+              v-model="formData.timing!.total_minutes"
+              :min="0"
+              :max="1440"
+              suffix=" min"
+              :placeholder="'e.g. 45'"
+              class="recipe-form__input"
+            />
+            <small class="recipe-form__help-text">{{ $t('forms.recipe.totalTimeHint') }}</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- Precision -->
+      <section class="recipe-form__section">
+        <h3 class="recipe-form__section-title">{{ $t('forms.recipe.sections.precision') }}</h3>
+
+        <div class="recipe-form__field">
+          <div class="recipe-form__checkbox-field">
+            <Checkbox
+              id="requires_precision"
+              v-model="formData.requires_precision"
+              :binary="true"
+            />
+            <label for="requires_precision" class="recipe-form__label-inline">
+              {{ $t('forms.recipe.requiresPrecision') }}
+            </label>
+          </div>
+          <small class="recipe-form__help-text">{{ $t('forms.recipe.requiresPrecisionHint') }}</small>
+        </div>
+
+        <div v-if="formData.requires_precision" class="recipe-form__field recipe-form__field--medium">
+          <label for="precision_reason" class="recipe-form__label required">
+            {{ $t('forms.recipe.precisionReason') }}
+          </label>
+          <Select
+            id="precision_reason"
+            v-model="formData.precision_reason"
+            :options="precisionReasonOptions"
+            optionLabel="label"
+            optionValue="value"
+            :placeholder="$t('forms.recipe.precisionReasonPlaceholder')"
+            class="recipe-form__input"
+          />
         </div>
       </section>
 
@@ -880,6 +836,43 @@ onMounted(async () => {
         </div>
       </section>
 
+      <!-- Aliases -->
+      <section class="recipe-form__section">
+        <h3 class="recipe-form__section-title">{{ $t('forms.recipe.sections.aliases') }}</h3>
+
+        <div class="recipe-form__field">
+          <label for="aliases" class="recipe-form__label">
+            {{ $t('forms.recipe.aliases') }}
+          </label>
+          <div class="recipe-form__input-with-button">
+            <InputText
+              id="aliases"
+              v-model="aliasInput"
+              :placeholder="$t('forms.recipe.aliasesPlaceholder')"
+              class="recipe-form__input"
+              @keydown.enter.prevent="addAlias"
+            />
+            <Button
+              type="button"
+              :label="$t('common.buttons.add')"
+              @click="addAlias"
+            />
+          </div>
+          <small class="recipe-form__help-text">{{ $t('forms.recipe.aliasesHint') }}</small>
+        </div>
+
+        <div v-if="formData.aliases && formData.aliases.length > 0" class="recipe-form__tags">
+          <span
+            v-for="(alias, index) in formData.aliases"
+            :key="index"
+            class="recipe-form__tag"
+          >
+            {{ alias }}
+            <button type="button" @click="removeAlias(index)">×</button>
+          </span>
+        </div>
+      </section>
+
       <!-- Admin Notes -->
       <section class="recipe-form__section">
         <h3 class="recipe-form__section-title">{{ $t('forms.recipe.sections.adminNotes') }}</h3>
@@ -898,19 +891,6 @@ onMounted(async () => {
           <small class="recipe-form__help-text">{{ $t('forms.recipe.adminNotesHint') }}</small>
         </div>
       </section>
-
-      <!-- Validation Errors -->
-      <div v-if="!isValid && validationErrors.length > 0" class="recipe-form__validation-errors">
-        <div class="recipe-form__validation-header">
-          <i class="pi pi-exclamation-triangle"></i>
-          <span>Please fix the following errors before saving:</span>
-        </div>
-        <ul class="recipe-form__validation-list">
-          <li v-for="(error, index) in validationErrors" :key="index">
-            {{ error }}
-          </li>
-        </ul>
-      </div>
 
       <!-- Form Actions -->
       <div class="recipe-form__actions">
@@ -966,6 +946,18 @@ onMounted(async () => {
 
 .recipe-form__field {
   margin-bottom: var(--spacing-lg);
+}
+
+.recipe-form__field--narrow {
+  max-width: 150px;
+}
+
+.recipe-form__field--medium {
+  max-width: 350px;
+}
+
+.recipe-form__field--wide {
+  max-width: 600px;
 }
 
 .recipe-form__label {
@@ -1108,38 +1100,6 @@ onMounted(async () => {
 
 .recipe-form__step-instruction {
   width: 100%;
-}
-
-/* Validation Errors */
-.recipe-form__validation-errors {
-  margin-top: var(--spacing-lg);
-  padding: var(--spacing-lg);
-  background: var(--color-error-light, #fee);
-  border: 1px solid var(--color-error, #dc3545);
-  border-radius: var(--border-radius-md);
-}
-
-.recipe-form__validation-header {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-error, #dc3545);
-  margin-bottom: var(--spacing-md);
-}
-
-.recipe-form__validation-header i {
-  font-size: var(--font-size-lg);
-}
-
-.recipe-form__validation-list {
-  margin: 0;
-  padding-left: var(--spacing-xl);
-  color: var(--color-text);
-}
-
-.recipe-form__validation-list li {
-  margin-bottom: var(--spacing-xs);
 }
 
 /* Actions */

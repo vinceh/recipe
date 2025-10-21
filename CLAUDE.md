@@ -1,4 +1,4 @@
-when dev is starting, always look at new_claude/entry.md first.  that file will guide you to all the docs relevant to this project and provide good context to your development process
+when dev is starting, always look at docs/new_claude/entry.md first.  that file will guide you to all the docs relevant to this project and provide good context to your development process
 
 coding practices
 - do not add any comments in the code that isn't actual documentation
