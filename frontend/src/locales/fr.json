@@ -269,6 +269,40 @@
           "tooShort": "Texte trop court. Veuillez fournir le texte complet de la recette.",
           "generic": "Échec de l'importation de la recette. Veuillez réessayer."
         }
+      },
+      "urlImportDialog": {
+        "button": "Importer depuis l'URL",
+        "title": "Importer une recette depuis l'URL",
+        "description": "Entrez l'URL d'une page web de recette et nous extrairons les informations de la recette pour vous.",
+        "urlLabel": "URL de la recette",
+        "placeholder": "https://example.com/recipe/beef-noodle-soup",
+        "import": "Importer",
+        "cancel": "Annuler",
+        "importing": "Importation de la recette depuis l'URL...",
+        "success": "Recette importée avec succès ! Veuillez vérifier et enregistrer.",
+        "switchToText": "Passer à l'importation de texte",
+        "loadingSubtitle": "(cela peut prendre un moment)",
+        "loadingPuns": {
+          "preppingIngredients": "Préparation des ingrédients...",
+          "simmeringRecipe": "Mijotage de votre recette...",
+          "seasoningPerfection": "Assaisonnement à la perfection...",
+          "reducingSauce": "Réduction de la sauce...",
+          "lettingMarinate": "Laisser mariner...",
+          "whiskingAway": "Fouettage...",
+          "bringingToBoil": "Porter à ébullition...",
+          "addingMagic": "Ajout d'une pincée de magie..."
+        },
+        "errors": {
+          "required": "L'URL est requise",
+          "invalidUrl": "Veuillez entrer une URL valide",
+          "cannotAccess": "Impossible d'accéder à cette URL",
+          "noRecipe": "Impossible de trouver une recette sur cette page",
+          "parseFailed": "Échec de l'extraction des données de la recette",
+          "timeout": "Délai d'attente expiré",
+          "aiUnavailable": "Service IA temporairement indisponible. Veuillez réessayer dans un moment.",
+          "networkError": "Échec de la connexion. Vérifiez votre connexion internet.",
+          "generic": "Quelque chose s'est mal passé. Veuillez réessayer."
+        }
       }
     },
     "dataReferences": {

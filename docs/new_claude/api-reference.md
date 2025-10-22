@@ -2253,10 +2253,13 @@ curl -X POST http://localhost:3000/admin/recipes/parse_url \
 
 ##### Notes
 
-- Acceptance Criteria: AC-ADMIN-003
-- Uses RecipeParserService to fetch and parse
+- Acceptance Criteria: AC-ADMIN-003, AC-ADMIN-003-A, AC-ADMIN-003-B
+- Uses RecipeParserService with two-tier approach:
+  1. **Primary**: AI direct access (Claude fetches URL directly)
+  2. **Fallback**: Web scraping with Nokogiri if AI cannot access
 - Automatically includes source_url in parsed data
 - Review parsed data before saving as accuracy varies by source
+- Typical processing time: 10-30 seconds depending on method used
 
 ##### Related Endpoints
 

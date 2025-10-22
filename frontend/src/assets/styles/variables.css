@@ -11,68 +11,68 @@
   /* ==================== COLOR PALETTE ==================== */
 
   /* Primary Brand Colors */
-  --color-primary: #4F46E5;           /* Indigo - main brand color */
-  --color-primary-dark: #4338CA;      /* Darker shade for hover states */
-  --color-primary-light: #6366F1;     /* Lighter shade for backgrounds */
-  --color-primary-pale: #EEF2FF;      /* Very light for subtle backgrounds */
+  --color-primary: #C87A5A;           /* Warm Terracotta - main brand color */
+  --color-primary-dark: #A85E42;      /* Darker shade for hover states */
+  --color-primary-light: #E09977;     /* Lighter shade for backgrounds */
+  --color-primary-pale: #F4E0D8;      /* Very light for subtle backgrounds */
 
   /* Secondary Brand Colors */
-  --color-secondary: #10B981;         /* Emerald - success, positive actions */
-  --color-secondary-dark: #059669;    /* Darker emerald */
-  --color-secondary-light: #34D399;   /* Lighter emerald */
-  --color-secondary-pale: #D1FAE5;    /* Very light emerald */
+  --color-secondary: #7A9B6C;         /* Warm Sage - success, positive actions */
+  --color-secondary-dark: #5F7A54;    /* Darker sage */
+  --color-secondary-light: #9FB593;   /* Lighter sage */
+  --color-secondary-pale: #E5EDE1;    /* Very light sage */
 
   /* Semantic Colors */
-  --color-success: #10B981;           /* Green - success states */
-  --color-success-dark: #059669;
-  --color-success-light: #D1FAE5;
+  --color-success: #7A9B6C;           /* Warm Sage - success states */
+  --color-success-dark: #5F7A54;
+  --color-success-light: #E5EDE1;
 
-  --color-warning: #F59E0B;           /* Amber - warnings */
-  --color-warning-dark: #D97706;
-  --color-warning-light: #FEF3C7;
+  --color-warning: #D4995A;           /* Golden Amber - warnings */
+  --color-warning-dark: #B27D3F;
+  --color-warning-light: #F4EBDD;
 
-  --color-error: #EF4444;             /* Red - errors, destructive actions */
-  --color-error-dark: #DC2626;
-  --color-error-light: #FEE2E2;
+  --color-error: #C9675D;             /* Warm Terracotta Red - errors, destructive actions */
+  --color-error-dark: #A64D44;
+  --color-error-light: #F4DDD9;
 
-  --color-info: #3B82F6;              /* Blue - informational messages */
-  --color-info-dark: #2563EB;
-  --color-info-light: #DBEAFE;
+  --color-info: #6B8CAE;              /* Warm Slate Blue - informational messages */
+  --color-info-dark: #536B89;
+  --color-info-light: #E1E9F0;
 
-  /* Neutral Colors */
+  /* Neutral Colors - Soft Sand Palette */
   --color-white: #FFFFFF;
-  --color-black: #000000;
+  --color-black: #3E2D28;
 
-  --color-gray-50: #F9FAFB;
-  --color-gray-100: #F3F4F6;
-  --color-gray-200: #E5E7EB;
-  --color-gray-300: #D1D5DB;
-  --color-gray-400: #9CA3AF;
-  --color-gray-500: #6B7280;
-  --color-gray-600: #4B5563;
-  --color-gray-700: #374151;
-  --color-gray-800: #1F2937;
-  --color-gray-900: #111827;
+  --color-gray-50: #EDEDE9;
+  --color-gray-100: #F5EBE0;
+  --color-gray-200: #E3D5CA;
+  --color-gray-300: #D6CCC2;
+  --color-gray-400: #D5BDAF;
+  --color-gray-500: #968C87;
+  --color-gray-600: #6B5B54;
+  --color-gray-700: #4E3F39;
+  --color-gray-800: #3E2D28;
+  --color-gray-900: #2A1F1C;
 
   /* Backgrounds */
   --color-background: #FFFFFF;
-  --color-background-secondary: #F9FAFB;
-  --color-background-tertiary: #F3F4F6;
-  --color-background-inverse: #111827;
+  --color-background-secondary: #EDEDE9;
+  --color-background-tertiary: #F5EBE0;
+  --color-background-inverse: #3E2D28;
 
   /* Text Colors */
-  --color-text: #111827;              /* Primary text */
-  --color-text-secondary: #6B7280;    /* Secondary/muted text */
-  --color-text-tertiary: #9CA3AF;     /* Disabled/placeholder text */
+  --color-text: #3E2D28;              /* Primary text */
+  --color-text-secondary: #6B5B54;    /* Secondary/muted text */
+  --color-text-tertiary: #968C87;     /* Disabled/placeholder text */
   --color-text-inverse: #FFFFFF;      /* Text on dark backgrounds */
-  --color-text-link: #4F46E5;         /* Links */
-  --color-text-link-hover: #4338CA;   /* Link hover state */
+  --color-text-link: #C87A5A;         /* Links */
+  --color-text-link-hover: #A85E42;   /* Link hover state */
 
   /* Borders */
-  --color-border: #E5E7EB;            /* Default borders */
-  --color-border-light: #F3F4F6;      /* Subtle borders */
-  --color-border-dark: #D1D5DB;       /* Emphasized borders */
-  --color-border-focus: #4F46E5;      /* Focus rings */
+  --color-border: #E3D5CA;            /* Default borders */
+  --color-border-light: #F5EBE0;      /* Subtle borders */
+  --color-border-dark: #D6CCC2;       /* Emphasized borders */
+  --color-border-focus: #C87A5A;      /* Focus rings */
 
   /* ==================== SPACING SCALE ==================== */
 
@@ -165,7 +165,7 @@
   --shadow-none: none;
 
   /* Focus Ring */
-  --shadow-focus: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  --shadow-focus: 0 0 0 3px rgba(200, 122, 90, 0.15);
 
   /* ==================== TRANSITIONS ==================== */
 
@@ -198,22 +198,22 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Backgrounds */
-    --color-background: #111827;
-    --color-background-secondary: #1F2937;
-    --color-background-tertiary: #374151;
+    /* Backgrounds - Warm Dark Tones */
+    --color-background: #2A1F1C;
+    --color-background-secondary: #3E2D28;
+    --color-background-tertiary: #4E3F39;
     --color-background-inverse: #FFFFFF;
 
     /* Text Colors */
-    --color-text: #F9FAFB;
-    --color-text-secondary: #9CA3AF;
-    --color-text-tertiary: #6B7280;
-    --color-text-inverse: #111827;
+    --color-text: #F5EBE0;
+    --color-text-secondary: #D6CCC2;
+    --color-text-tertiary: #968C87;
+    --color-text-inverse: #2A1F1C;
 
     /* Borders */
-    --color-border: #374151;
-    --color-border-light: #1F2937;
-    --color-border-dark: #4B5563;
+    --color-border: #4E3F39;
+    --color-border-light: #3E2D28;
+    --color-border-dark: #6B5B54;
 
     /* Shadows (darker in dark mode) */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
@@ -227,19 +227,19 @@
 /* Manual dark mode toggle (when user explicitly chooses dark mode) */
 [data-theme="dark"] {
   /* Same overrides as prefers-color-scheme: dark */
-  --color-background: #111827;
-  --color-background-secondary: #1F2937;
-  --color-background-tertiary: #374151;
+  --color-background: #2A1F1C;
+  --color-background-secondary: #3E2D28;
+  --color-background-tertiary: #4E3F39;
   --color-background-inverse: #FFFFFF;
 
-  --color-text: #F9FAFB;
-  --color-text-secondary: #9CA3AF;
-  --color-text-tertiary: #6B7280;
-  --color-text-inverse: #111827;
+  --color-text: #F5EBE0;
+  --color-text-secondary: #D6CCC2;
+  --color-text-tertiary: #968C87;
+  --color-text-inverse: #2A1F1C;
 
-  --color-border: #374151;
-  --color-border-light: #1F2937;
-  --color-border-dark: #4B5563;
+  --color-border: #4E3F39;
+  --color-border-light: #3E2D28;
+  --color-border-dark: #6B5B54;
 
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
@@ -251,18 +251,18 @@
 /* Light mode override (when user explicitly chooses light mode) */
 [data-theme="light"] {
   --color-background: #FFFFFF;
-  --color-background-secondary: #F9FAFB;
-  --color-background-tertiary: #F3F4F6;
-  --color-background-inverse: #111827;
+  --color-background-secondary: #EDEDE9;
+  --color-background-tertiary: #F5EBE0;
+  --color-background-inverse: #3E2D28;
 
-  --color-text: #111827;
-  --color-text-secondary: #6B7280;
-  --color-text-tertiary: #9CA3AF;
+  --color-text: #3E2D28;
+  --color-text-secondary: #6B5B54;
+  --color-text-tertiary: #968C87;
   --color-text-inverse: #FFFFFF;
 
-  --color-border: #E5E7EB;
-  --color-border-light: #F3F4F6;
-  --color-border-dark: #D1D5DB;
+  --color-border: #E3D5CA;
+  --color-border-light: #F5EBE0;
+  --color-border-dark: #D6CCC2;
 
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);

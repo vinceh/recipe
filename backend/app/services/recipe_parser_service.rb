@@ -17,29 +17,37 @@ class RecipeParserService < AiService
     parse_response(response)
   end
 
-  # Parse a recipe from a URL (scrape and extract)
+  # Parse a recipe from a URL
+  # First attempts AI direct access, falls back to web scraping if needed
   # Returns structured recipe JSON with source_url
   def parse_url(url)
-    system_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_url_system')
-    user_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_url_user')
+    # Validate URL format
+    validate_url(url)
 
-    # Scrape the URL content
-    scraped_content = scrape_url(url)
+    Rails.logger.info("Attempting to parse recipe from URL: #{url}")
 
-    rendered_user_prompt = user_prompt.render(
-      url: url,
-      content: scraped_content
-    )
+    # STEP 1: Try AI direct access
+    begin
+      result = parse_url_direct(url)
+      if result
+        Rails.logger.info("Successfully parsed URL using AI direct access")
+        result['source_url'] = url
+        return result
+      end
+    rescue StandardError => e
+      Rails.logger.warn("AI direct access failed for #{url}: #{e.message}. Falling back to web scraping.")
+    end
 
-    response = call_claude(
-      system_prompt: system_prompt.prompt_text,
-      user_prompt: rendered_user_prompt,
-      max_tokens: 4096
-    )
+    # STEP 2: Fallback to web scraping
+    Rails.logger.info("Attempting web scraping fallback for #{url}")
+    result = parse_url_with_scraping(url)
+    if result
+      Rails.logger.info("Successfully parsed URL using web scraping fallback")
+      result['source_url'] = url
+      return result
+    end
 
-    result = parse_response(response)
-    result['source_url'] = url if result
-    result
+    raise "Failed to parse recipe from URL"
   end
 
   # Parse a recipe from an image using Claude Vision API
@@ -62,6 +70,59 @@ class RecipeParserService < AiService
   end
 
   private
+
+  # Validate URL format
+  def validate_url(url)
+    raise "URL is required" if url.blank?
+
+    begin
+      uri = URI.parse(url)
+      raise "Invalid URL format" unless uri.is_a?(URI::HTTP) || uri.is_a?(URI::HTTPS)
+    rescue URI::InvalidURIError
+      raise "Invalid URL format"
+    end
+  end
+
+  # Try to parse URL with AI direct access (AI fetches the URL itself)
+  def parse_url_direct(url)
+    system_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_url_direct_system')
+    user_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_url_direct_user')
+
+    rendered_user_prompt = user_prompt.render(url: url)
+
+    response = call_claude(
+      system_prompt: system_prompt.prompt_text,
+      user_prompt: rendered_user_prompt,
+      max_tokens: 4096
+    )
+
+    # Check if AI couldn't access the URL
+    return nil if response.include?('ERROR: Cannot access URL')
+
+    parse_response(response)
+  end
+
+  # Parse URL with web scraping fallback
+  def parse_url_with_scraping(url)
+    system_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_url_system')
+    user_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_url_user')
+
+    # Scrape the URL content
+    scraped_content = scrape_url(url)
+
+    rendered_user_prompt = user_prompt.render(
+      url: url,
+      content: scraped_content
+    )
+
+    response = call_claude(
+      system_prompt: system_prompt.prompt_text,
+      user_prompt: rendered_user_prompt,
+      max_tokens: 4096
+    )
+
+    parse_response(response)
+  end
 
   # Parse Claude's response and extract JSON
   def parse_response(response)

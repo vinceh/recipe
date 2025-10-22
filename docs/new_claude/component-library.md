@@ -93,12 +93,71 @@ interface Props {
 <LoadingSpinner :fullscreen="true" text="Processing..." />
 ```
 
-**Related Components:** ErrorMessage, EmptyState
+**Related Components:** ErrorMessage, EmptyState, PlayfulLoadingSpinner
 
 **Notes:**
 - Uses design tokens from variables.css
 - Accessible with proper ARIA labels
 - Fullscreen mode includes semi-transparent backdrop
+
+---
+
+### PlayfulLoadingSpinner
+
+**Location:** `components/shared/PlayfulLoadingSpinner.vue`
+
+**Purpose:** Display loading state with rotating playful text messages (cooking puns). Used for longer-running operations to keep users engaged.
+
+**Props:**
+```typescript
+interface Props {
+  size?: 'sm' | 'md' | 'lg' | 'xl'  // default: 'lg'
+  fullscreen?: boolean               // Fullscreen overlay (default: false)
+  label?: string                     // Accessibility label (default: 'Loading...')
+}
+```
+
+**Emits:** None
+
+**Slots:** None
+
+**Usage:**
+```vue
+<!-- Basic usage with cooking puns -->
+<PlayfulLoadingSpinner />
+
+<!-- Fullscreen overlay -->
+<PlayfulLoadingSpinner :fullscreen="true" />
+
+<!-- Smaller size -->
+<PlayfulLoadingSpinner size="md" />
+```
+
+**Features:**
+- Rotating cooking pun messages that change every 2 seconds
+- "(this may take a while)" subtitle
+- 100% i18n coverage with culturally appropriate puns in all 7 languages
+- Smooth fade transitions between messages
+- Auto-cycles through 8 different cooking-related messages
+
+**Cooking Puns (English):**
+1. "Prepping ingredients..."
+2. "Simmering your recipe..."
+3. "Seasoning to perfection..."
+4. "Reducing the sauce..."
+5. "Letting it marinate..."
+6. "Whisking away..."
+7. "Bringing to a boil..."
+8. "Adding a pinch of magic..."
+
+**Related Components:** LoadingSpinner, UrlImportDialog
+
+**Notes:**
+- Uses design tokens from variables.css
+- Accessible with proper ARIA labels
+- Automatically manages rotation interval (2 seconds)
+- Cleans up interval on component unmount
+- i18n keys: `admin.recipes.urlImportDialog.loadingPuns.*` and `admin.recipes.urlImportDialog.loadingSubtitle`
 
 ---
 
@@ -914,6 +973,108 @@ async function handleImport(text) {
 - Uses PrimeVue Dialog, Textarea, Button
 - Typical parse time: 5-15 seconds
 - Satisfies AC-ADMIN-UI-TEXT-001 through AC-ADMIN-UI-TEXT-005
+
+---
+
+#### UrlImportDialog
+
+**Location:** `components/admin/recipes/UrlImportDialog.vue`
+
+**Purpose:** Modal dialog for importing recipes from URL. Uses AI (Claude) to fetch and parse recipe from webpage, with web scraping fallback. Features playful loading state with cooking puns.
+
+**Props:**
+```typescript
+interface Props {
+  visible: boolean  // Controls dialog visibility (v-model:visible)
+}
+```
+
+**Emits:**
+```typescript
+{
+  'update:visible': [value: boolean]    // v-model:visible support
+  'import': [url: string]                // User clicked Import with URL
+  'switch-to-text': [url: string]        // User clicked Switch to Text Import
+}
+```
+
+**Exposed Methods:**
+```typescript
+{
+  setLoading(value: boolean): void   // Set loading state from parent
+  setError(message: string): void    // Display error message from parent
+  resetDialog(): void                // Clear form and reset state
+}
+```
+
+**Slots:** None
+
+**Usage:**
+```vue
+<script setup>
+const dialogVisible = ref(false)
+const dialogRef = ref(null)
+
+async function handleImportUrl(url) {
+  dialogRef.value.setLoading(true)
+  try {
+    const response = await adminApi.parseUrl({ url })
+    formData.value = response.data.recipe_data
+    dialogVisible.value = false
+    dialogRef.value.resetDialog()
+  } catch (error) {
+    if (error.message.includes('not find')) {
+      dialogRef.value.setError('Could not find a recipe on this page')
+    } else {
+      dialogRef.value.setError('Failed to parse recipe from URL')
+    }
+  }
+}
+
+function handleSwitchToText(url) {
+  // Close URL dialog, open text dialog
+  dialogVisible.value = false
+  textDialogVisible.value = true
+}
+</script>
+
+<template>
+  <Button label="Import from URL" @click="dialogVisible = true" />
+  <UrlImportDialog
+    ref="dialogRef"
+    v-model:visible="dialogVisible"
+    @import="handleImportUrl"
+    @switch-to-text="handleSwitchToText"
+  />
+</template>
+```
+
+**Features:**
+- URL format validation (HTTP/HTTPS only)
+- PlayfulLoadingSpinner with rotating cooking puns every 2 seconds
+- Error recovery with "Switch to Text Import" option
+- Error handling for all scenarios (timeout, 403, 404, no recipe, etc.)
+- 100% i18n coverage (7 languages with culturally appropriate cooking puns)
+- Keyboard accessible (Tab, Enter, Escape)
+
+**States:**
+1. Empty: Import button disabled
+2. Invalid URL: Validation error shown, Import disabled
+3. Valid URL: Import enabled
+4. Loading: PlayfulLoadingSpinner shown, dialog not dismissible
+5. Error: Message displayed, URL preserved, "Try Again" and "Switch to Text Import" buttons shown
+6. Success: Dialog closes, parent shows feedback
+
+**Related Components:** RecipeForm, AdminRecipeNew, PlayfulLoadingSpinner
+
+**API:** `POST /admin/recipes/parse_url` with `{ url: string }`
+
+**Notes:**
+- Dialog not closable during loading
+- Uses PrimeVue Dialog, InputText, Button
+- Typical parse time: 10-30 seconds (AI direct access) or 15-45 seconds (with scraping fallback)
+- Satisfies AC-ADMIN-UI-URL-001 through AC-ADMIN-UI-URL-012
+- Backend uses two-tier approach: AI direct access first, web scraping fallback if needed
 
 ---
 

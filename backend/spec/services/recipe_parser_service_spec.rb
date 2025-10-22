@@ -34,6 +34,20 @@ RSpec.describe RecipeParserService, type: :service do
       active: true
     )
     create(:ai_prompt,
+      prompt_key: 'recipe_parse_url_direct_system',
+      prompt_type: 'system',
+      feature_area: 'recipe_parsing',
+      prompt_text: 'You are a recipe parser with direct URL access.',
+      active: true
+    )
+    create(:ai_prompt,
+      prompt_key: 'recipe_parse_url_direct_user',
+      prompt_type: 'user',
+      feature_area: 'recipe_parsing',
+      prompt_text: 'Fetch and parse {{url}}',
+      active: true
+    )
+    create(:ai_prompt,
       prompt_key: 'recipe_parse_image_system',
       prompt_type: 'system',
       feature_area: 'recipe_parsing',
@@ -119,34 +133,32 @@ RSpec.describe RecipeParserService, type: :service do
   end
 
   describe '#parse_url' do
-    context 'AC-ADMIN-003: URL import - scrape recipe' do
-      it 'scrapes URL and extracts recipe data' do
-        url = 'https://example.com/recipe/carbonara'
+    let(:url) { 'https://example.com/recipe/carbonara' }
+    let(:ai_recipe_response) do
+      {
+        'name' => 'Pasta Carbonara',
+        'language' => 'en',
+        'servings' => { 'original' => 4 },
+        'ingredient_groups' => [
+          {
+            'name' => 'Ingredients',
+            'items' => [{ 'name' => 'spaghetti', 'amount' => '400', 'unit' => 'g' }]
+          }
+        ],
+        'steps' => [
+          {
+            'id' => 'step-001',
+            'order' => 1,
+            'instructions' => { 'original' => 'Boil pasta' }
+          }
+        ]
+      }.to_json
+    end
 
-        # Mock URL scraping
-        scraped_content = "Pasta Carbonara Recipe 400g spaghetti 4 eggs..."
-        allow(service).to receive(:scrape_url).with(url).and_return(scraped_content)
-
-        ai_response = {
-          'name' => 'Pasta Carbonara',
-          'language' => 'en',
-          'servings' => { 'original' => 4 },
-          'ingredient_groups' => [
-            {
-              'name' => 'Ingredients',
-              'items' => [{ 'name' => 'spaghetti', 'amount' => '400', 'unit' => 'g' }]
-            }
-          ],
-          'steps' => [
-            {
-              'id' => 'step-001',
-              'order' => 1,
-              'instructions' => { 'original' => 'Boil pasta' }
-            }
-          ]
-        }.to_json
-
-        allow(service).to receive(:call_claude).and_return("```json\n#{ai_response}\n```")
+    context 'AC-ADMIN-003: URL import - AI direct access (primary)' do
+      it 'successfully parses recipe using AI direct access' do
+        # Mock AI direct access success
+        allow(service).to receive(:parse_url_direct).and_return(JSON.parse(ai_recipe_response))
 
         result = service.parse_url(url)
 
@@ -155,35 +167,153 @@ RSpec.describe RecipeParserService, type: :service do
         expect(result['source_url']).to eq(url)
       end
 
-      it 'stores source_url in result' do
-        url = 'https://example.com/recipe/test'
-
-        allow(service).to receive(:scrape_url).and_return("Recipe content")
-
-        ai_response = {
-          'name' => 'Test Recipe',
-          'language' => 'en',
-          'servings' => { 'original' => 2 },
-          'ingredient_groups' => [{ 'name' => 'Ingredients', 'items' => [] }],
-          'steps' => [{ 'id' => 'step-001', 'order' => 1, 'instructions' => { 'original' => 'Cook' } }]
-        }.to_json
-
-        allow(service).to receive(:call_claude).and_return("```json\n#{ai_response}\n```")
+      it 'includes source_url in result' do
+        allow(service).to receive(:parse_url_direct).and_return(JSON.parse(ai_recipe_response))
 
         result = service.parse_url(url)
 
         expect(result['source_url']).to eq(url)
       end
 
-      it 'raises error if URL cannot be scraped' do
-        url = 'https://invalid-url-that-doesnt-exist.com/recipe'
+      it 'logs successful AI direct access' do
+        allow(service).to receive(:parse_url_direct).and_return(JSON.parse(ai_recipe_response))
+        allow(Rails.logger).to receive(:info)
 
-        # Mock scraping failure
-        allow(service).to receive(:scrape_url).and_raise("Unable to fetch recipe from URL: Connection failed")
+        service.parse_url(url)
+
+        expect(Rails.logger).to have_received(:info).with(/Successfully parsed URL using AI direct access/)
+      end
+    end
+
+    context 'AC-ADMIN-003-A: URL import - web scraping fallback' do
+      it 'falls back to web scraping when AI cannot access URL' do
+        # Mock AI direct access failure
+        allow(service).to receive(:parse_url_direct).and_raise(StandardError.new("Cannot access URL"))
+
+        # Mock web scraping success
+        allow(service).to receive(:parse_url_with_scraping).and_return(JSON.parse(ai_recipe_response))
+
+        result = service.parse_url(url)
+
+        expect(result).to be_present
+        expect(result['name']).to eq('Pasta Carbonara')
+        expect(result['source_url']).to eq(url)
+      end
+
+      it 'logs fallback attempt' do
+        allow(service).to receive(:parse_url_direct).and_raise(StandardError.new("403 Forbidden"))
+        allow(service).to receive(:parse_url_with_scraping).and_return(JSON.parse(ai_recipe_response))
+        allow(Rails.logger).to receive(:warn)
+        allow(Rails.logger).to receive(:info)
+
+        service.parse_url(url)
+
+        expect(Rails.logger).to have_received(:warn).with(/AI direct access failed/)
+        expect(Rails.logger).to have_received(:info).with(/Attempting web scraping fallback/)
+      end
+
+      it 'successfully parses with scraped content' do
+        allow(service).to receive(:parse_url_direct).and_return(nil)
+        allow(service).to receive(:parse_url_with_scraping).and_return(JSON.parse(ai_recipe_response))
+
+        result = service.parse_url(url)
+
+        expect(result).to be_present
+        expect(result['source_url']).to eq(url)
+      end
+    end
+
+    context 'AC-ADMIN-003-B: URL import - complete failure' do
+      it 'raises error when both methods fail' do
+        allow(service).to receive(:parse_url_direct).and_raise(StandardError.new("Cannot access"))
+        allow(service).to receive(:parse_url_with_scraping).and_return(nil)
 
         expect {
           service.parse_url(url)
-        }.to raise_error(/Unable to fetch recipe from URL/)
+        }.to raise_error(/Failed to parse recipe from URL/)
+      end
+
+      it 'raises error when AI direct returns nil and scraping fails' do
+        allow(service).to receive(:parse_url_direct).and_return(nil)
+        allow(service).to receive(:parse_url_with_scraping).and_raise(StandardError.new("Scraping failed"))
+
+        expect {
+          service.parse_url(url)
+        }.to raise_error(/Scraping failed/)
+      end
+    end
+
+    context 'URL validation' do
+      it 'raises error for empty URL' do
+        expect {
+          service.parse_url('')
+        }.to raise_error(/URL is required/)
+      end
+
+      it 'raises error for nil URL' do
+        expect {
+          service.parse_url(nil)
+        }.to raise_error(/URL is required/)
+      end
+
+      it 'raises error for invalid URL format' do
+        expect {
+          service.parse_url('not-a-valid-url')
+        }.to raise_error(/Invalid URL format/)
+      end
+
+      it 'accepts valid HTTP URL' do
+        allow(service).to receive(:parse_url_direct).and_return(JSON.parse(ai_recipe_response))
+
+        result = service.parse_url('http://example.com/recipe')
+
+        expect(result).to be_present
+      end
+
+      it 'accepts valid HTTPS URL' do
+        allow(service).to receive(:parse_url_direct).and_return(JSON.parse(ai_recipe_response))
+
+        result = service.parse_url('https://example.com/recipe')
+
+        expect(result).to be_present
+      end
+    end
+
+    context 'error scenarios' do
+      it 'handles 403 Forbidden from target site' do
+        allow(service).to receive(:parse_url_direct).and_raise(StandardError.new("403 Forbidden"))
+        allow(service).to receive(:parse_url_with_scraping).and_return(JSON.parse(ai_recipe_response))
+
+        result = service.parse_url(url)
+
+        expect(result).to be_present
+      end
+
+      it 'handles 404 Not Found from target site' do
+        allow(service).to receive(:parse_url_direct).and_raise(StandardError.new("404 Not Found"))
+        allow(service).to receive(:parse_url_with_scraping).and_return(JSON.parse(ai_recipe_response))
+
+        result = service.parse_url(url)
+
+        expect(result).to be_present
+      end
+
+      it 'handles SSL certificate errors' do
+        allow(service).to receive(:parse_url_direct).and_raise(StandardError.new("SSL verification failed"))
+        allow(service).to receive(:parse_url_with_scraping).and_return(JSON.parse(ai_recipe_response))
+
+        result = service.parse_url(url)
+
+        expect(result).to be_present
+      end
+
+      it 'handles timeout errors' do
+        allow(service).to receive(:parse_url_direct).and_raise(StandardError.new("Connection timeout"))
+        allow(service).to receive(:parse_url_with_scraping).and_raise(StandardError.new("Connection timeout"))
+
+        expect {
+          service.parse_url(url)
+        }.to raise_error(/Connection timeout/)
       end
     end
   end

@@ -637,12 +637,123 @@ This document defines atomic, testable acceptance criteria for all Recipe App MV
 **AND** no API call should be made
 **AND** textarea should receive focus
 
-### AC-ADMIN-003: URL Import - Scrape Recipe
+### AC-ADMIN-UI-URL-001: Import from URL Button Visibility
+**GIVEN** admin is on the "Create New Recipe" page
+**WHEN** page loads
+**THEN** an "Import from URL" button should be visible alongside "Import from Text" button
+**AND** button should display correct text in all 7 languages
+**AND** button should have a link/chain icon
+
+### AC-ADMIN-UI-URL-002: URL Import Dialog Opening
+**GIVEN** admin is on the "Create New Recipe" page
+**WHEN** admin clicks "Import from URL" button
+**THEN** a modal dialog should open with title "Import Recipe from URL"
+**AND** dialog should contain a URL input field with placeholder text
+**AND** dialog should have "Import" and "Cancel" buttons
+**AND** dialog should be dismissible by clicking outside or pressing ESC
+
+### AC-ADMIN-UI-URL-003: URL Format Validation
+**GIVEN** admin has opened the URL import dialog
+**WHEN** admin enters an invalid URL (no http/https, malformed)
+**THEN** inline validation error should display: "Please enter a valid URL"
+**AND** "Import" button should be disabled
+**AND** no API call should be made
+
+### AC-ADMIN-UI-URL-004: Empty URL Validation
+**GIVEN** admin has opened the URL import dialog
+**WHEN** admin clicks "Import" with empty URL field
+**THEN** validation message should display: "URL is required"
+**AND** no API call should be made
+**AND** URL field should receive focus
+
+### AC-ADMIN-UI-URL-005: Playful Loading State - Cooking Puns
+**GIVEN** admin has entered a valid URL and clicked "Import"
+**WHEN** API request is in progress
+**THEN** playful loading spinner should display with cooking-related puns rotating every 2 seconds
+**AND** puns should include: "Prepping ingredients...", "Simmering your recipe...", "Seasoning to perfection...", "Reducing the sauce...", "Letting it marinate...", "Whisking away...", "Bringing to a boil...", "Adding a pinch of magic..."
+**AND** subtitle text should display: "(this may take a while)"
+**AND** dialog should not be dismissible during loading
+
+### AC-ADMIN-UI-URL-006: URL Import Success - Form Population
+**GIVEN** admin has submitted a valid recipe URL
+**WHEN** API successfully parses the recipe
+**THEN** dialog should close
+**AND** recipe form should populate with all extracted fields:
+  - name, source_url, servings, difficulty, language
+  - timing (prep_minutes, cook_minutes, total_minutes)
+  - tags (dietary_tags, cuisines, dish_types, recipe_types)
+  - aliases array
+  - ingredient_groups with all items (name, amount, unit, notes, optional flag)
+  - steps with instructions and timing
+  - equipment array
+  - admin_notes (if present)
+  - nutrition data (if present)
+**AND** success message should display: "Recipe imported successfully! Please review and save."
+**AND** form preview should update with imported data
+
+### AC-ADMIN-UI-URL-007: URL Import Error - Cannot Access URL
+**GIVEN** admin has submitted a URL
+**WHEN** API returns 500 error with "Could not access this URL"
+**THEN** error message should display in dialog: "Could not access this URL"
+**AND** dialog should remain open
+**AND** URL should remain in input field
+**AND** "Try Again" button should be visible
+**AND** "Switch to Text Import" button should be visible
+
+### AC-ADMIN-UI-URL-008: URL Import Error - No Recipe Found
+**GIVEN** admin has submitted a URL
+**WHEN** API returns 422 error with "Could not find a recipe on this page"
+**THEN** error message should display: "Could not find a recipe on this page"
+**AND** dialog should remain open
+**AND** "Try Again" button should be visible
+**AND** "Switch to Text Import" button should be visible
+
+### AC-ADMIN-UI-URL-009: URL Import Error - Timeout
+**GIVEN** admin has submitted a URL
+**WHEN** request takes longer than 90 seconds
+**THEN** timeout error should display: "Request timed out"
+**AND** dialog should remain open with retry option
+
+### AC-ADMIN-UI-URL-010: URL Import Error - AI Service Unavailable
+**GIVEN** admin has submitted a URL
+**WHEN** API returns 503 error "AI service temporarily unavailable"
+**THEN** error message should display: "AI service temporarily unavailable. Please try again in a moment."
+**AND** dialog should remain open
+**AND** "Try Again" button should be visible
+
+### AC-ADMIN-UI-URL-011: Switch to Text Import from URL Error
+**GIVEN** admin received "no recipe found" error on URL import
+**WHEN** admin clicks "Switch to Text Import" button
+**THEN** URL import dialog should close
+**AND** text import dialog should open
+**AND** URL should be displayed in a helper message: "Having trouble? Try copying the recipe text manually from: [URL]"
+
+### AC-ADMIN-UI-URL-012: URL Import - All Languages Supported
+**GIVEN** admin has language set to any of the 7 supported languages (en, ja, ko, zh-tw, zh-cn, es, fr)
+**WHEN** admin uses URL import feature
+**THEN** all UI text (button, dialog title, placeholders, errors, loading puns) should display in selected language
+**AND** loading puns should be culturally appropriate and cooking-related
+
+### AC-ADMIN-003: URL Import - AI Direct Access (Primary)
 **GIVEN** an admin provides a recipe URL
-**WHEN** admin clicks "Import from URL"
-**THEN** Claude AI should scrape URL and extract recipe data
-**AND** extracted data should pre-fill edit form
-**AND** source_url should be recorded
+**WHEN** POST /admin/recipes/parse_url is called
+**THEN** system should first attempt AI direct access (Claude fetches URL directly)
+**AND** if successful, return structured recipe data
+**AND** source_url should be included in response
+
+### AC-ADMIN-003-A: URL Import - Web Scraping Fallback
+**GIVEN** AI direct access fails (cannot access URL, 403/404, SSL error)
+**WHEN** primary method fails
+**THEN** system should automatically fall back to web scraping with Nokogiri
+**AND** scraped HTML content should be cleaned (remove scripts, styles, navigation)
+**AND** cleaned content should be passed to AI for parsing
+**AND** if successful, return structured recipe data with source_url
+
+### AC-ADMIN-003-B: URL Import - Complete Failure
+**GIVEN** both AI direct access and web scraping fail
+**WHEN** neither method can extract recipe data
+**THEN** API should return 422 error with message "Could not extract recipe from this page"
+**AND** error should include details about which methods were attempted
 
 ### AC-ADMIN-004: Image Import - Vision Extraction
 **GIVEN** an admin uploads a recipe image (cookbook photo, screenshot, handwritten)

@@ -269,6 +269,40 @@
           "tooShort": "텍스트가 너무 짧습니다. 완전한 레시피 텍스트를 제공하세요.",
           "generic": "레시피 가져오기에 실패했습니다. 다시 시도하세요."
         }
+      },
+      "urlImportDialog": {
+        "button": "URL에서 가져오기",
+        "title": "URL에서 레시피 가져오기",
+        "description": "레시피 웹페이지의 URL을 입력하면 레시피 정보를 추출합니다.",
+        "urlLabel": "레시피 URL",
+        "placeholder": "https://example.com/recipe/beef-noodle-soup",
+        "import": "가져오기",
+        "cancel": "취소",
+        "importing": "URL에서 레시피 가져오는 중...",
+        "success": "레시피를 성공적으로 가져왔습니다! 내용을 검토하고 저장하세요.",
+        "switchToText": "텍스트 가져오기로 전환",
+        "loadingSubtitle": "(시간이 걸릴 수 있습니다)",
+        "loadingPuns": {
+          "preppingIngredients": "재료 손질 중...",
+          "simmeringRecipe": "레시피를 은근히 끓이는 중...",
+          "seasoningPerfection": "완벽하게 간 맞추는 중...",
+          "reducingSauce": "소스를 졸이는 중...",
+          "lettingMarinate": "재워두는 중...",
+          "whiskingAway": "거품 내는 중...",
+          "bringingToBoil": "끓이는 중...",
+          "addingMagic": "마법의 비법을 더하는 중..."
+        },
+        "errors": {
+          "required": "URL이 필요합니다",
+          "invalidUrl": "유효한 URL을 입력하세요",
+          "cannotAccess": "이 URL에 접근할 수 없습니다",
+          "noRecipe": "이 페이지에서 레시피를 찾을 수 없습니다",
+          "parseFailed": "레시피 데이터 추출에 실패했습니다",
+          "timeout": "요청 시간이 초과되었습니다",
+          "aiUnavailable": "AI 서비스를 일시적으로 사용할 수 없습니다. 잠시 후 다시 시도하세요.",
+          "networkError": "연결에 실패했습니다. 인터넷 연결을 확인하세요.",
+          "generic": "문제가 발생했습니다. 다시 시도하세요."
+        }
       }
     },
     "dataReferences": {

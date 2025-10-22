@@ -138,7 +138,7 @@ en:
 
 **⚠️ MANDATORY:** You must translate the keys into ALL languages before committing.
 
-Use the same structure and hierarchy in all locale files.
+Use the same structure and hierarchy in all locale files.  Use Haiku Sub-Agents for this task.
 
 #### Example for Japanese:
 ```json

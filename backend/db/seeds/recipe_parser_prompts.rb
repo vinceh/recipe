@@ -86,7 +86,93 @@ AiPrompt.find_or_create_by!(prompt_key: 'recipe_parse_text_user') do |prompt|
   prompt.active = true
 end
 
-# URL Parsing Prompts
+# URL Parsing Prompts - Direct AI Access (Primary Method)
+AiPrompt.find_or_create_by!(prompt_key: 'recipe_parse_url_direct_system') do |prompt|
+  prompt.prompt_type = 'system'
+  prompt.feature_area = 'recipe_parsing'
+  prompt.description = 'System prompt for parsing recipe directly from URL (AI fetches)'
+  prompt.prompt_text = <<~PROMPT
+    You are a recipe data extraction expert. Your task is to fetch a recipe from a URL and parse it into structured JSON format.
+
+    You will fetch the URL yourself and extract the recipe information from the page content.
+
+    **Output Format:**
+    Return ONLY valid JSON in the following structure (no additional text or explanation):
+
+    ```json
+    {
+      "name": "Recipe Name",
+      "language": "en",
+      "servings": {
+        "original": 4,
+        "min": 2,
+        "max": 8
+      },
+      "timing": {
+        "prep_minutes": 15,
+        "cook_minutes": 30,
+        "total_minutes": 45
+      },
+      "dietary_tags": ["vegetarian"],
+      "dish_types": ["main-course"],
+      "recipe_types": ["quick-weeknight"],
+      "cuisines": ["italian"],
+      "ingredient_groups": [
+        {
+          "name": "Main Ingredients",
+          "items": [
+            {
+              "name": "pasta",
+              "amount": "400",
+              "unit": "g",
+              "preparation": ""
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "id": "step-001",
+          "order": 1,
+          "instructions": {
+            "original": "Boil water in a large pot."
+          },
+          "timing_minutes": 5
+        }
+      ],
+      "equipment": ["large pot", "colander"]
+    }
+    ```
+
+    **Guidelines:**
+    - Fetch the URL and extract the recipe
+    - Ignore ads, navigation, comments, and non-recipe content
+    - Use lowercase, kebab-case for tags
+    - Ingredient amounts should be numeric strings
+    - Step IDs should be "step-001", "step-002", etc.
+    - Only include "original" instruction variant
+    - If you cannot access the URL, respond with: "ERROR: Cannot access URL"
+  PROMPT
+  prompt.variables = []
+  prompt.active = true
+end
+
+AiPrompt.find_or_create_by!(prompt_key: 'recipe_parse_url_direct_user') do |prompt|
+  prompt.prompt_type = 'user'
+  prompt.feature_area = 'recipe_parsing'
+  prompt.description = 'User prompt for direct URL parsing (AI fetches)'
+  prompt.prompt_text = <<~PROMPT
+    Please fetch and extract the recipe from the following URL and return it as structured JSON:
+
+    **URL:** {{url}}
+
+    Return ONLY the JSON object with no additional text. If you cannot access the URL, respond with "ERROR: Cannot access URL".
+  PROMPT
+  prompt.variables = ['url']
+  prompt.active = true
+end
+
+# URL Parsing Prompts - Scraped Content (Fallback Method)
 AiPrompt.find_or_create_by!(prompt_key: 'recipe_parse_url_system') do |prompt|
   prompt.prompt_type = 'system'
   prompt.feature_area = 'recipe_parsing'
@@ -264,4 +350,4 @@ AiPrompt.find_or_create_by!(prompt_key: 'recipe_parse_image_user') do |prompt|
   prompt.active = true
 end
 
-puts "✅ Recipe parser prompts seeded (6 prompts)"
+puts "✅ Recipe parser prompts seeded (8 prompts)"

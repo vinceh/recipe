@@ -269,6 +269,40 @@
           "tooShort": "Text too short. Please provide complete recipe text.",
           "generic": "Failed to import recipe. Please try again."
         }
+      },
+      "urlImportDialog": {
+        "button": "Import from URL",
+        "title": "Import Recipe from URL",
+        "description": "Enter a URL to a recipe webpage and we'll extract the recipe information for you.",
+        "urlLabel": "Recipe URL",
+        "placeholder": "https://example.com/recipe/beef-noodle-soup",
+        "import": "Import",
+        "cancel": "Cancel",
+        "importing": "Importing recipe from URL...",
+        "success": "Recipe imported successfully! Please review and save.",
+        "switchToText": "Switch to Text Import",
+        "loadingSubtitle": "(this may take a while)",
+        "loadingPuns": {
+          "preppingIngredients": "Prepping ingredients...",
+          "simmeringRecipe": "Simmering your recipe...",
+          "seasoningPerfection": "Seasoning to perfection...",
+          "reducingSauce": "Reducing the sauce...",
+          "lettingMarinate": "Letting it marinate...",
+          "whiskingAway": "Whisking away...",
+          "bringingToBoil": "Bringing to a boil...",
+          "addingMagic": "Adding a pinch of magic..."
+        },
+        "errors": {
+          "required": "URL is required",
+          "invalidUrl": "Please enter a valid URL",
+          "cannotAccess": "Could not access this URL",
+          "noRecipe": "Could not find a recipe on this page",
+          "parseFailed": "Failed to extract recipe data",
+          "timeout": "Request timed out",
+          "aiUnavailable": "AI service temporarily unavailable. Please try again in a moment.",
+          "networkError": "Connection failed. Check your internet connection.",
+          "generic": "Something went wrong. Please try again."
+        }
       }
     },
     "dataReferences": {

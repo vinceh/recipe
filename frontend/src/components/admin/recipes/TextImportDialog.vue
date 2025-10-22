@@ -198,7 +198,7 @@ defineExpose({
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  color: #ffffff;
+  color: var(--color-text-inverse);
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-medium);
   padding: var(--spacing-md);

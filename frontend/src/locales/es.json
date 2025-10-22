@@ -269,6 +269,40 @@
           "tooShort": "Texto demasiado corto. Proporcione el texto completo de la receta.",
           "generic": "Error al importar la receta. Por favor, inténtelo de nuevo."
         }
+      },
+      "urlImportDialog": {
+        "button": "Importar desde URL",
+        "title": "Importar receta desde URL",
+        "description": "Ingrese la URL de una página web de recetas y extraeremos la información de la receta para usted.",
+        "urlLabel": "URL de la receta",
+        "placeholder": "https://example.com/recipe/beef-noodle-soup",
+        "import": "Importar",
+        "cancel": "Cancelar",
+        "importing": "Importando receta desde URL...",
+        "success": "¡Receta importada con éxito! Por favor revise y guarde.",
+        "switchToText": "Cambiar a importación de texto",
+        "loadingSubtitle": "(esto puede tomar un tiempo)",
+        "loadingPuns": {
+          "preppingIngredients": "Preparando ingredientes...",
+          "simmeringRecipe": "Cocinando a fuego lento tu receta...",
+          "seasoningPerfection": "Sazonando a la perfección...",
+          "reducingSauce": "Reduciendo la salsa...",
+          "lettingMarinate": "Dejando marinar...",
+          "whiskingAway": "Batiendo...",
+          "bringingToBoil": "Llevando a ebullición...",
+          "addingMagic": "Añadiendo una pizca de magia..."
+        },
+        "errors": {
+          "required": "Se requiere URL",
+          "invalidUrl": "Por favor ingrese una URL válida",
+          "cannotAccess": "No se pudo acceder a esta URL",
+          "noRecipe": "No se pudo encontrar una receta en esta página",
+          "parseFailed": "Error al extraer datos de la receta",
+          "timeout": "Tiempo de espera agotado",
+          "aiUnavailable": "Servicio de IA temporalmente no disponible. Por favor intente nuevamente en un momento.",
+          "networkError": "Fallo de conexión. Verifique su conexión a internet.",
+          "generic": "Algo salió mal. Por favor intente nuevamente."
+        }
       }
     },
     "dataReferences": {

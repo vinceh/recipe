@@ -269,6 +269,40 @@
           "tooShort": "文本太短。请提供完整的食谱文本。",
           "generic": "导入食谱失败。请重试。"
         }
+      },
+      "urlImportDialog": {
+        "button": "从URL导入",
+        "title": "从URL导入食谱",
+        "description": "输入食谱网页的URL，我们将为您提取食谱信息。",
+        "urlLabel": "食谱URL",
+        "placeholder": "https://example.com/recipe/beef-noodle-soup",
+        "import": "导入",
+        "cancel": "取消",
+        "importing": "正在从URL导入食谱...",
+        "success": "食谱导入成功！请查看并保存。",
+        "switchToText": "切换到文本导入",
+        "loadingSubtitle": "(可能需要一些时间)",
+        "loadingPuns": {
+          "preppingIngredients": "正在备料...",
+          "simmeringRecipe": "正在慢炖食谱...",
+          "seasoningPerfection": "正在完美调味...",
+          "reducingSauce": "正在收汁...",
+          "lettingMarinate": "正在腌制...",
+          "whiskingAway": "正在搅拌...",
+          "bringingToBoil": "正在煮沸...",
+          "addingMagic": "正在加入神奇调味料..."
+        },
+        "errors": {
+          "required": "需要URL",
+          "invalidUrl": "请输入有效的URL",
+          "cannotAccess": "无法访问此URL",
+          "noRecipe": "在此页面找不到食谱",
+          "parseFailed": "提取食谱数据失败",
+          "timeout": "请求超时",
+          "aiUnavailable": "AI服务暂时无法使用。请稍后再试。",
+          "networkError": "连接失败。请检查您的网络连接。",
+          "generic": "发生错误。请重试。"
+        }
       }
     },
     "dataReferences": {

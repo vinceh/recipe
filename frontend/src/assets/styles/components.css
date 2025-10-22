@@ -199,7 +199,7 @@
 
 .form-control-error:focus {
   border-color: var(--color-error);
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+  box-shadow: 0 0 0 3px rgba(201, 103, 93, 0.15);
 }
 
 .form-control-success {
@@ -208,7 +208,7 @@
 
 .form-control-success:focus {
   border-color: var(--color-success);
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+  box-shadow: 0 0 0 3px rgba(122, 155, 108, 0.15);
 }
 
 /* Form Control Sizes */

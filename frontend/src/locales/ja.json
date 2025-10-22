@@ -269,6 +269,40 @@
           "tooShort": "テキストが短すぎます。完全なレシピテキストを提供してください。",
           "generic": "レシピのインポートに失敗しました。もう一度お試しください。"
         }
+      },
+      "urlImportDialog": {
+        "button": "URLからインポート",
+        "title": "URLからレシピをインポート",
+        "description": "レシピページのURLを入力すると、レシピ情報を抽出します。",
+        "urlLabel": "レシピURL",
+        "placeholder": "https://example.com/recipe/beef-noodle-soup",
+        "import": "インポート",
+        "cancel": "キャンセル",
+        "importing": "URLからレシピをインポート中...",
+        "success": "レシピのインポートに成功しました！内容を確認して保存してください。",
+        "switchToText": "テキストインポートに切り替え",
+        "loadingSubtitle": "(少し時間がかかる場合があります)",
+        "loadingPuns": {
+          "preppingIngredients": "材料を下ごしらえ中...",
+          "simmeringRecipe": "レシピをじっくり煮込み中...",
+          "seasoningPerfection": "完璧に味付け中...",
+          "reducingSauce": "ソースを煮詰め中...",
+          "lettingMarinate": "漬け込み中...",
+          "whiskingAway": "泡立て中...",
+          "bringingToBoil": "沸騰させています...",
+          "addingMagic": "魔法の隠し味を加えています..."
+        },
+        "errors": {
+          "required": "URLが必要です",
+          "invalidUrl": "有効なURLを入力してください",
+          "cannotAccess": "このURLにアクセスできませんでした",
+          "noRecipe": "このページでレシピが見つかりませんでした",
+          "parseFailed": "レシピデータの抽出に失敗しました",
+          "timeout": "リクエストがタイムアウトしました",
+          "aiUnavailable": "AIサービスが一時的に利用できません。しばらくしてからもう一度お試しください。",
+          "networkError": "接続に失敗しました。インターネット接続を確認してください。",
+          "generic": "問題が発生しました。もう一度お試しください。"
+        }
       }
     },
     "dataReferences": {

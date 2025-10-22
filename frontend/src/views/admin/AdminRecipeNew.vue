@@ -6,6 +6,7 @@ import PageHeader from '@/components/shared/PageHeader.vue'
 import ErrorMessage from '@/components/shared/ErrorMessage.vue'
 import RecipeForm from '@/components/admin/recipes/RecipeForm.vue'
 import TextImportDialog from '@/components/admin/recipes/TextImportDialog.vue'
+import UrlImportDialog from '@/components/admin/recipes/UrlImportDialog.vue'
 import ViewRecipe from '@/components/shared/ViewRecipe.vue'
 import Button from 'primevue/button'
 import { adminApi } from '@/services/adminApi'
@@ -18,8 +19,10 @@ const formData = ref<Partial<RecipeDetail>>({})
 const saving = ref(false)
 const error = ref<Error | null>(null)
 const importDialogVisible = ref(false)
+const urlImportDialogVisible = ref(false)
 const successMessage = ref('')
 const textImportDialogRef = ref<InstanceType<typeof TextImportDialog> | null>(null)
+const urlImportDialogRef = ref<InstanceType<typeof UrlImportDialog> | null>(null)
 
 async function handleSaveRecipe() {
   saving.value = true
@@ -48,6 +51,12 @@ function handleCancelRecipe() {
 
 function openImportDialog() {
   importDialogVisible.value = true
+  successMessage.value = ''
+  error.value = null
+}
+
+function openUrlImportDialog() {
+  urlImportDialogVisible.value = true
   successMessage.value = ''
   error.value = null
 }
@@ -92,6 +101,66 @@ async function handleImportText(text: string) {
     }
   }
 }
+
+async function handleImportUrl(url: string) {
+  if (!urlImportDialogRef.value) return
+
+  urlImportDialogRef.value.setLoading(true)
+  error.value = null
+
+  try {
+    const response = await adminApi.parseUrl({ url })
+
+    if (response.success && response.data) {
+      urlImportDialogVisible.value = false
+      urlImportDialogRef.value.resetDialog()
+
+      await nextTick()
+
+      formData.value = (response.data as any).recipe_data as Partial<RecipeDetail>
+
+      successMessage.value = t('admin.recipes.urlImportDialog.success')
+      setTimeout(() => {
+        successMessage.value = ''
+      }, 5000)
+    } else {
+      throw new Error(response.message || 'Parse failed')
+    }
+  } catch (e) {
+    console.error('URL import error:', e)
+
+    let errorMessage = 'Failed to parse recipe from URL'
+
+    // Extract error message from axios error response
+    if (e && typeof e === 'object' && 'response' in e) {
+      const axiosError = e as any
+      if (axiosError.response?.data?.message) {
+        errorMessage = axiosError.response.data.message
+      }
+    } else if (e instanceof Error) {
+      errorMessage = e.message
+    }
+
+    if (errorMessage.includes('Could not access') || errorMessage.includes('Cannot access') || errorMessage.includes('403') || errorMessage.includes('404')) {
+      urlImportDialogRef.value.setError(t('admin.recipes.urlImportDialog.errors.cannotAccess'))
+    } else if (errorMessage.includes('Could not find') || errorMessage.includes('No recipe') || errorMessage.includes('not find')) {
+      urlImportDialogRef.value.setError(t('admin.recipes.urlImportDialog.errors.noRecipe'))
+    } else if (errorMessage.includes('timeout') || errorMessage.includes('Timeout')) {
+      urlImportDialogRef.value.setError(t('admin.recipes.urlImportDialog.errors.timeout'))
+    } else if (errorMessage.includes('service') || errorMessage.includes('unavailable') || errorMessage.includes('503')) {
+      urlImportDialogRef.value.setError(t('admin.recipes.urlImportDialog.errors.aiUnavailable'))
+    } else if (errorMessage.includes('network') || errorMessage.includes('connection')) {
+      urlImportDialogRef.value.setError(t('admin.recipes.urlImportDialog.errors.networkError'))
+    } else {
+      urlImportDialogRef.value.setError(t('admin.recipes.urlImportDialog.errors.generic'))
+    }
+  }
+}
+
+function handleSwitchToText(url: string) {
+  urlImportDialogVisible.value = false
+  importDialogVisible.value = true
+}
 </script>
 
 <template>
@@ -126,6 +195,7 @@ async function handleImportText(text: string) {
           @save="handleSaveRecipe"
           @cancel="handleCancelRecipe"
           @import-text="openImportDialog"
+          @import-url="openUrlImportDialog"
         />
       </div>
 
@@ -140,11 +210,18 @@ async function handleImportText(text: string) {
       </div>
     </div>
 
-    <!-- Import Dialog -->
+    <!-- Import Dialogs -->
     <TextImportDialog
       ref="textImportDialogRef"
       v-model:visible="importDialogVisible"
       @import="handleImportText"
+    />
+
+    <UrlImportDialog
+      ref="urlImportDialogRef"
+      v-model:visible="urlImportDialogVisible"
+      @import="handleImportUrl"
+      @switch-to-text="handleSwitchToText"
     />
   </div>
 </template>
@@ -169,9 +246,9 @@ async function handleImportText(text: string) {
   gap: var(--spacing-sm);
   padding: var(--spacing-md);
   margin: 0 var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
-  background-color: #d1f4e0;
-  color: #0d894f;
-  border: 1px solid #a3e4c1;
+  background-color: var(--color-success-light);
+  color: var(--color-success-dark);
+  border: 1px solid var(--color-success);
   border-radius: var(--border-radius-md);
   font-size: var(--font-size-md);
 }

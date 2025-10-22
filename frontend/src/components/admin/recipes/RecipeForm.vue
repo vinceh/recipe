@@ -27,6 +27,7 @@ const emit = defineEmits<{
   save: []
   cancel: []
   'import-text': []
+  'import-url': []
 }>()
 
 // Composables
@@ -392,9 +393,9 @@ onMounted(async () => {
         />
         <Button
           type="button"
-          label="Import from URL"
+          :label="$t('admin.recipes.urlImportDialog.button')"
           icon="pi pi-link"
-          disabled
+          @click="emit('import-url')"
         />
         <Button
           type="button"
@@ -438,6 +439,7 @@ onMounted(async () => {
             <Button
               type="button"
               :label="$t('common.buttons.add')"
+              severity="success"
               @click="addAlias"
             />
           </div>
@@ -705,6 +707,7 @@ onMounted(async () => {
             <Button
               type="button"
               :label="$t('common.buttons.add')"
+              severity="success"
               @click="addEquipment"
             />
           </div>
@@ -855,6 +858,7 @@ onMounted(async () => {
           type="button"
           :label="$t('forms.recipe.addIngredient')"
           icon="pi pi-plus"
+          severity="success"
           @click="addIngredient(groupIndex)"
         />
       </section>
@@ -864,6 +868,7 @@ onMounted(async () => {
           type="button"
           :label="$t('forms.recipe.addGroup')"
           icon="pi pi-plus"
+          severity="success"
           @click="addIngredientGroup"
         />
       </div>
@@ -923,6 +928,7 @@ onMounted(async () => {
           type="button"
           :label="$t('forms.recipe.addStep')"
           icon="pi pi-plus"
+          severity="success"
           class="recipe-form__add-step-button"
           @click="addStep"
         />
@@ -961,6 +967,7 @@ onMounted(async () => {
         <Button
           type="submit"
           :label="$t('common.buttons.save')"
+          severity="success"
           :loading="loading"
           :disabled="!isValid"
           :title="!isValid ? validationErrors[0] : ''"

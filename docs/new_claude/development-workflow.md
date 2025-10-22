@@ -7,10 +7,68 @@
 
 ## Table of Contents
 
-1. [Backend Development Workflow](#backend-development-workflow)
-2. [Frontend Development Workflow](#frontend-development-workflow)
-3. [Critical Rules](#critical-rules)
-4. [Common Pitfalls](#common-pitfalls)
+1. [Subagent & Model Optimization Strategy](#subagent--model-optimization-strategy)
+2. [Backend Development Workflow](#backend-development-workflow)
+3. [Frontend Development Workflow](#frontend-development-workflow)
+4. [Critical Rules](#critical-rules)
+5. [Common Pitfalls](#common-pitfalls)
+6. [Subagent Model Selection Matrix](#subagent-model-selection-matrix)
+
+---
+
+## Subagent & Model Optimization Strategy
+
+### Core Principle: Delegate Discovery, Keep Context Clean
+
+**Main Agent (Sonnet):**
+- Receives user requirements
+- Makes architectural decisions
+- Writes code and tests
+- Performs complex refactoring
+- Stays in conversation with user
+
+**Subagents (Haiku or Sonnet):**
+- Handle discovery and exploration
+- Run verification sweeps
+- Search for patterns
+- Return concise summaries to main agent
+
+### When to Use Haiku Subagents
+
+**✅ Use Haiku subagents for:**
+- Simple searches: "Find all ACs related to recipe scaling"
+- File location: "Find where text import is implemented"
+- Pattern discovery: "Find similar form components in admin/"
+- Verification: "Check for hardcoded strings in RecipeForm.vue"
+- Counting: "How many Playwright tests exist for recipe features?"
+- Simple documentation reads: "Summarize the API pattern for POST endpoints"
+
+
+### When to Use Sonnet Subagents
+
+**✅ Use Sonnet subagents for:**
+- Complex architectural analysis: "Analyze recipe data flow from API to UI and identify bottlenecks"
+- Deep pattern detection: "Identify all design patterns used in the codebase"
+- Multi-step reasoning: "Find best place to add caching and why"
+- Technical evaluation: "Assess whether to use composable vs store for this feature"
+- Comprehensive documentation: "Document all recipe-related API endpoints"
+
+### Subagent Invocation Examples
+
+```typescript
+// Haiku subagent for simple search
+Task(Explore, model=haiku, thoroughness=quick):
+  "Find existing components for recipe import"
+
+// Sonnet subagent for complex analysis
+Task(bmm-codebase-analyzer, model=sonnet):
+  "Analyze recipe feature architecture and identify areas for refactoring"
+
+// Haiku for verification
+Task(Explore, model=haiku):
+  "Find any hardcoded user-facing strings in components/admin/recipes/"
+```
+
 
 ---
 
@@ -20,9 +78,15 @@
 
 #### Step 1: Check for Existing Acceptance Criteria
 
-```bash
-# Search acceptance-criteria.md for relevant ACs
-grep -i "keyword" docs/new_claude/acceptance-criteria.md
+**🤖 Subagent Strategy: Haiku Explore agent**
+
+```typescript
+// Instead of manual grep, delegate to Haiku subagent:
+Task(Explore, model=haiku, thoroughness=quick):
+  "Find all acceptance criteria related to [feature] in acceptance-criteria.md"
+
+// Subagent returns concise summary
+// Main agent reads only relevant AC sections
 ```
 
 **If ACs exist:**
@@ -55,6 +119,18 @@ grep -i "keyword" docs/new_claude/acceptance-criteria.md
 ```
 
 #### Step 2: Review Existing APIs
+
+**🤖 Subagent Strategy: Haiku Explore agent for discovery, Sonnet for evaluation**
+
+```typescript
+// Delegate API discovery to Haiku
+Task(Explore, model=haiku, thoroughness=medium):
+  "Find API endpoints related to [feature] and summarize their patterns"
+
+// For complex architectural decisions, use Sonnet subagent
+Task(bmm-technical-evaluator, model=sonnet):
+  "Evaluate whether to extend existing endpoint or create new one for [feature]"
+```
 
 - ✅ Check [api-reference.md](api-reference.md) to understand existing endpoints
 - ✅ Avoid duplicating functionality
@@ -142,6 +218,27 @@ XXX examples, 0 failures, 0 pending
 
 **🔴 STOP: If ANY test fails, fix before proceeding**
 
+#### Step 4.5: Verification Sweep (Agent-Assisted)
+
+**🤖 Subagent Strategy: Haiku Explore agents (parallel)**
+
+```typescript
+// Launch multiple Haiku agents in parallel for fast verification
+Task(Explore, model=haiku):
+  "Find hardcoded user-facing strings (not using I18n.t) in [changed files]"
+
+Task(Explore, model=haiku):
+  "Find any public methods without RSpec test coverage in [service files]"
+
+Task(Explore, model=haiku):
+  "Verify all I18n keys exist in all 7 locale files"
+```
+
+**Verification Checklist:**
+- [ ] No hardcoded user-facing text found
+- [ ] All new methods have test coverage
+- [ ] All I18n keys exist in all 7 locale files
+
 #### Step 5: Update Documentation
 
 1. **If API endpoints were added/modified:**
@@ -174,9 +271,14 @@ XXX examples, 0 failures, 0 pending
 
 #### Step 0: Check for Existing Acceptance Criteria (MANDATORY)
 
-```bash
-# Search acceptance-criteria.md for relevant ACs
-grep -i "keyword" docs/new_claude/acceptance-criteria.md
+**🤖 Subagent Strategy: Haiku Explore agent**
+
+```typescript
+// Delegate AC discovery to Haiku subagent
+Task(Explore, model=haiku):
+  "Find acceptance criteria for [UI feature] covering user flows, accessibility, error handling"
+
+// Main agent reviews summary, reads only relevant ACs
 ```
 
 **If ACs exist:**
@@ -210,6 +312,24 @@ grep -i "keyword" docs/new_claude/acceptance-criteria.md
 ```
 
 #### Step 1: Check for Existing Components
+
+**🤖 Subagent Strategy: Haiku Explore agent**
+
+```typescript
+// Don't read entire component-library.md (500+ lines)
+Task(Explore, model=haiku, thoroughness=quick):
+  "Find reusable components for [feature type] - dialogs, forms, cards, etc."
+
+// Subagent returns: "TextImportDialog (props: ...), RecipeForm (emits: ...)"
+// Main agent reads ONLY those specific components
+```
+
+**Examples of searches:**
+```typescript
+Task(Explore, model=haiku): "Find form validation components"
+Task(Explore, model=haiku): "Find modal/dialog patterns in admin UI"
+Task(Explore, model=haiku): "Find components that use PrimeVue buttons with severity"
+```
 
 - ✅ **Check [component-library.md](component-library.md)** for existing components
 - ✅ **Reuse existing components** whenever possible
@@ -321,6 +441,28 @@ npm run check:i18n
 - [ ] No English text visible when viewing non-English languages
 
 **🔴 STOP: If ANY issue found, fix translations before proceeding**
+
+#### Step 4.5: Verification Sweep (Agent-Assisted)
+
+**🤖 Subagent Strategy: Haiku Explore agents (parallel)**
+
+```typescript
+// Run multiple cheap, fast checks in parallel
+Task(Explore, model=haiku):
+  "Find hardcoded text not using $t() or t() in [component files]"
+
+Task(Explore, model=haiku):
+  "Find hardcoded colors, spacing, font-sizes in [component styles]"
+
+Task(Explore, model=haiku):
+  "Check if all new components are documented in component-library.md"
+```
+
+**Verification Checklist:**
+- [ ] No hardcoded text found
+- [ ] No hardcoded CSS values (colors, spacing, fonts)
+- [ ] All design tokens properly used
+- [ ] All new components documented
 
 #### Step 5: Update Documentation
 
@@ -543,33 +685,81 @@ npm run build
 
 ### Backend
 ```
-1. Check ACs → Write ACs if missing
-2. Write RSpec tests (TDD)
-3. Implement code + i18n
-4. Run bundle exec rspec → 100% pass
-5. Update api-reference.md (if applicable)
-6. Mark task complete
-7. Commit
+1. [Haiku Agent] Check ACs → [Main Agent] Write ACs if missing
+2. [Haiku Agent] Find similar patterns → [Main Agent] Write RSpec tests
+3. [Main Agent] Implement code + i18n
+4. [Main Agent] Run bundle exec rspec → 100% pass
+5. [Haiku Agents - parallel] Verification sweep (hardcoded strings, missing tests, i18n)
+6. [Main Agent] Update api-reference.md (if applicable)
+7. [Main Agent] Mark task complete & commit
 ```
 
 ### Frontend
 ```
-1. Check ACs → Write ACs if missing (GIVEN-WHEN-THEN format)
-2. Check component-library.md for existing components
-3. Implement component + i18n (all 7 languages)
-4. Run npm run check:i18n → 100% pass
-5. Test in browser (switch through all 7 languages)
-6. Write Playwright tests for all ACs
-7. Run npm run test:e2e → 100% pass (0 failures)
-8. Capture UI screenshots → evaluate against industry standards
-9. Refine UI based on evaluation → re-test
-10. Delete all screenshot files
-11. Document in component-library.md
-12. Update architecture.md (if needed)
-13. Mark task complete
-14. Commit
+1. [Haiku Agent] Check ACs → [Main Agent] Write ACs if missing
+2. [Haiku Agent] Find reusable components
+3. [Main Agent] Implement component + i18n (all 7 languages)
+4. [Main Agent] Run npm run check:i18n → 100% pass
+5. [Haiku Agents - parallel] Verification sweep (hardcoded text, CSS values, docs)
+6. [Main Agent] Test in browser (all 7 languages)
+7. [Main Agent] Write Playwright tests for all ACs
+8. [Main Agent] Run npm run test:e2e → 100% pass (0 failures)
+9. [Main Agent] Capture UI screenshots → evaluate against industry standards
+10. [Main Agent] Refine UI based on evaluation → re-test
+11. [Main Agent] Delete all screenshot files
+12. [Main Agent] Document in component-library.md
+13. [Main Agent] Update architecture.md (if needed)
+14. [Main Agent] Mark task complete & commit
 ```
 
 ---
 
-**Last Updated:** 2025-10-21
+## Subagent Model Selection Matrix
+
+Use this table to decide whether to use Haiku or Sonnet subagents:
+
+| Task Type | Model | Reasoning |
+|-----------|-------|-----------|
+| Find files by pattern | Haiku | Simple glob/grep |
+| Search for keywords | Haiku | No reasoning needed |
+| Count occurrences | Haiku | Basic arithmetic |
+| Check file existence | Haiku | Boolean check |
+| Simple pattern matching | Haiku | Regex-level complexity |
+| Find similar code | Haiku | Pattern recognition |
+| Verify checklist items | Haiku | True/false checks |
+| Read structured docs | Haiku | Extract specific info |
+| Simple verification sweeps | Haiku | Pattern matching only |
+| Component discovery | Haiku | Find + summarize |
+| **Architectural analysis** | **Sonnet** | **Needs reasoning** |
+| **Design decisions** | **Sonnet** | **Evaluates tradeoffs** |
+| **Complex refactoring plans** | **Sonnet** | **Multi-step logic** |
+| **Technical evaluation** | **Sonnet** | **Deep understanding** |
+| **Pattern explanation** | **Sonnet** | **Conceptual** |
+| **Codebase-wide analysis** | **Sonnet** | **Holistic view needed** |
+
+**Rule of Thumb:** If the subagent just needs to find/count/verify → Haiku. If it needs to think/evaluate/decide → Sonnet.
+
+**Examples:**
+
+✅ **Haiku Subagent:**
+```typescript
+Task(Explore, model=haiku): "Find all components using PrimeVue Button"
+Task(Explore, model=haiku): "Check for hardcoded colors in RecipeForm.vue"
+Task(Explore, model=haiku): "List all API endpoints related to recipes"
+```
+
+✅ **Sonnet Subagent:**
+```typescript
+Task(bmm-codebase-analyzer, model=sonnet):
+  "Analyze the recipe data flow and identify performance bottlenecks"
+
+Task(bmm-technical-evaluator, model=sonnet):
+  "Evaluate whether to use Pinia store or composable for recipe state management"
+
+Task(bmm-pattern-detector, model=sonnet):
+  "Identify architectural patterns and suggest improvements for scalability"
+```
+
+---
+
+**Last Updated:** 2025-10-22

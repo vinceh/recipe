@@ -269,6 +269,40 @@
           "tooShort": "文字太短。請提供完整的食譜文字。",
           "generic": "匯入食譜失敗。請再試一次。"
         }
+      },
+      "urlImportDialog": {
+        "button": "從URL匯入",
+        "title": "從URL匯入食譜",
+        "description": "輸入食譜網頁的URL，我們將為您提取食譜資訊。",
+        "urlLabel": "食譜URL",
+        "placeholder": "https://example.com/recipe/beef-noodle-soup",
+        "import": "匯入",
+        "cancel": "取消",
+        "importing": "正在從URL匯入食譜...",
+        "success": "食譜匯入成功！請檢視並儲存。",
+        "switchToText": "切換至文字匯入",
+        "loadingSubtitle": "(可能需要一些時間)",
+        "loadingPuns": {
+          "preppingIngredients": "正在備料...",
+          "simmeringRecipe": "正在慢燉食譜...",
+          "seasoningPerfection": "正在完美調味...",
+          "reducingSauce": "正在收汁...",
+          "lettingMarinate": "正在醃製...",
+          "whiskingAway": "正在攪拌...",
+          "bringingToBoil": "正在煮沸...",
+          "addingMagic": "正在加入神奇調味料..."
+        },
+        "errors": {
+          "required": "需要URL",
+          "invalidUrl": "請輸入有效的URL",
+          "cannotAccess": "無法存取此URL",
+          "noRecipe": "在此頁面找不到食譜",
+          "parseFailed": "提取食譜資料失敗",
+          "timeout": "請求逾時",
+          "aiUnavailable": "AI服務暫時無法使用。請稍後再試。",
+          "networkError": "連線失敗。請檢查您的網路連線。",
+          "generic": "發生錯誤。請重試。"
+        }
       }
     },
     "dataReferences": {

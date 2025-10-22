@@ -10,41 +10,113 @@
 
 /* ==================== GLOBAL PRIMEVUE OVERRIDES ==================== */
 
-/* Override PrimeVue CSS variables to use our design tokens */
+/* Override PrimeVue Aura theme CSS variables to use our design tokens */
 :root {
   /* Primary color */
-  --p-primary-color: var(--color-primary);
-  --p-primary-contrast-color: var(--color-white);
-  --p-primary-hover-color: var(--color-primary-dark);
-  --p-primary-active-color: var(--color-primary-dark);
+  --p-primary-50: var(--color-primary-pale) !important;
+  --p-primary-100: var(--color-primary-pale) !important;
+  --p-primary-200: var(--color-primary-light) !important;
+  --p-primary-300: var(--color-primary-light) !important;
+  --p-primary-400: var(--color-primary) !important;
+  --p-primary-500: var(--color-primary) !important;
+  --p-primary-600: var(--color-primary-dark) !important;
+  --p-primary-700: var(--color-primary-dark) !important;
+  --p-primary-800: var(--color-primary-dark) !important;
+  --p-primary-900: var(--color-primary-dark) !important;
+  --p-primary-950: var(--color-primary-dark) !important;
 
   /* Surface colors */
-  --p-surface-0: var(--color-background);
-  --p-surface-50: var(--color-gray-50);
-  --p-surface-100: var(--color-gray-100);
-  --p-surface-200: var(--color-gray-200);
-  --p-surface-300: var(--color-gray-300);
-  --p-surface-400: var(--color-gray-400);
-  --p-surface-500: var(--color-gray-500);
-  --p-surface-600: var(--color-gray-600);
-  --p-surface-700: var(--color-gray-700);
-  --p-surface-800: var(--color-gray-800);
-  --p-surface-900: var(--color-gray-900);
+  --p-surface-0: var(--color-background) !important;
+  --p-surface-50: var(--color-gray-50) !important;
+  --p-surface-100: var(--color-gray-100) !important;
+  --p-surface-200: var(--color-gray-200) !important;
+  --p-surface-300: var(--color-gray-300) !important;
+  --p-surface-400: var(--color-gray-400) !important;
+  --p-surface-500: var(--color-gray-500) !important;
+  --p-surface-600: var(--color-gray-600) !important;
+  --p-surface-700: var(--color-gray-700) !important;
+  --p-surface-800: var(--color-gray-800) !important;
+  --p-surface-900: var(--color-gray-900) !important;
+  --p-surface-950: var(--color-gray-900) !important;
+
+  /* Semantic colors for buttons */
+  --p-green-50: var(--color-success-light) !important;
+  --p-green-100: var(--color-success-light) !important;
+  --p-green-200: var(--color-success-light) !important;
+  --p-green-300: var(--color-success) !important;
+  --p-green-400: var(--color-success) !important;
+  --p-green-500: var(--color-success) !important;
+  --p-green-600: var(--color-success-dark) !important;
+  --p-green-700: var(--color-success-dark) !important;
+  --p-green-800: var(--color-success-dark) !important;
+  --p-green-900: var(--color-success-dark) !important;
+  --p-green-950: var(--color-success-dark) !important;
+
+  --p-red-50: var(--color-error-light) !important;
+  --p-red-100: var(--color-error-light) !important;
+  --p-red-200: var(--color-error-light) !important;
+  --p-red-300: var(--color-error) !important;
+  --p-red-400: var(--color-error) !important;
+  --p-red-500: var(--color-error) !important;
+  --p-red-600: var(--color-error-dark) !important;
+  --p-red-700: var(--color-error-dark) !important;
+  --p-red-800: var(--color-error-dark) !important;
+  --p-red-900: var(--color-error-dark) !important;
+  --p-red-950: var(--color-error-dark) !important;
+
+  --p-blue-50: var(--color-info-light) !important;
+  --p-blue-100: var(--color-info-light) !important;
+  --p-blue-200: var(--color-info-light) !important;
+  --p-blue-300: var(--color-info) !important;
+  --p-blue-400: var(--color-info) !important;
+  --p-blue-500: var(--color-info) !important;
+  --p-blue-600: var(--color-info-dark) !important;
+  --p-blue-700: var(--color-info-dark) !important;
+  --p-blue-800: var(--color-info-dark) !important;
+  --p-blue-900: var(--color-info-dark) !important;
+  --p-blue-950: var(--color-info-dark) !important;
+
+  --p-yellow-50: var(--color-warning-light) !important;
+  --p-yellow-100: var(--color-warning-light) !important;
+  --p-yellow-200: var(--color-warning-light) !important;
+  --p-yellow-300: var(--color-warning) !important;
+  --p-yellow-400: var(--color-warning) !important;
+  --p-yellow-500: var(--color-warning) !important;
+  --p-yellow-600: var(--color-warning-dark) !important;
+  --p-yellow-700: var(--color-warning-dark) !important;
+  --p-yellow-800: var(--color-warning-dark) !important;
+  --p-yellow-900: var(--color-warning-dark) !important;
+  --p-yellow-950: var(--color-warning-dark) !important;
+
+  /* Gray scale for secondary buttons */
+  --p-gray-50: var(--color-gray-50) !important;
+  --p-gray-100: var(--color-gray-100) !important;
+  --p-gray-200: var(--color-gray-200) !important;
+  --p-gray-300: var(--color-gray-300) !important;
+  --p-gray-400: var(--color-gray-400) !important;
+  --p-gray-500: var(--color-gray-500) !important;
+  --p-gray-600: var(--color-gray-600) !important;
+  --p-gray-700: var(--color-gray-700) !important;
+  --p-gray-800: var(--color-gray-800) !important;
+  --p-gray-900: var(--color-gray-900) !important;
+  --p-gray-950: var(--color-gray-900) !important;
 
   /* Text colors */
-  --p-text-color: var(--color-text);
-  --p-text-muted-color: var(--color-text-secondary);
-  --p-text-hover-color: var(--color-text);
+  --p-text-color: var(--color-text) !important;
+  --p-text-muted-color: var(--color-text-secondary) !important;
+  --p-text-hover-color: var(--color-text) !important;
 
   /* Border colors */
-  --p-border-color: var(--color-border);
+  --p-border-color: var(--color-border) !important;
+  --p-content-border-color: var(--color-border) !important;
 
   /* Focus */
-  --p-focus-ring-color: var(--color-primary);
+  --p-focus-ring-color: var(--color-primary) !important;
   --p-focus-ring-shadow: var(--shadow-focus);
 
   /* Border radius */
   --p-border-radius: var(--border-radius-md);
+  --p-content-border-radius: var(--border-radius-md);
 
   /* Transitions */
   --p-transition-duration: var(--transition-base);
@@ -63,6 +135,12 @@
   box-shadow: var(--shadow-focus);
 }
 
+/* Ensure icons are white on colored buttons */
+.p-button:not(.p-button-outlined):not(.p-button-text) .p-button-icon,
+.p-button:not(.p-button-outlined):not(.p-button-text) .pi {
+  color: var(--color-white) !important;
+}
+
 .p-button-sm {
   padding: var(--spacing-xs) var(--spacing-md);
   font-size: var(--font-size-sm);
@@ -75,33 +153,48 @@
 
 /* Button variants to match our design system */
 .p-button-success {
-  background-color: var(--color-success);
-  border-color: var(--color-success);
+  background-color: var(--color-success) !important;
+  border-color: var(--color-success) !important;
 }
 
 .p-button-success:hover {
-  background-color: var(--color-success-dark);
-  border-color: var(--color-success-dark);
+  background-color: var(--color-success-dark) !important;
+  border-color: var(--color-success-dark) !important;
+}
+
+.p-button-success .p-button-icon,
+.p-button-success .pi {
+  color: var(--color-white) !important;
 }
 
 .p-button-warning {
-  background-color: var(--color-warning);
-  border-color: var(--color-warning);
+  background-color: var(--color-warning) !important;
+  border-color: var(--color-warning) !important;
 }
 
 .p-button-warning:hover {
-  background-color: var(--color-warning-dark);
-  border-color: var(--color-warning-dark);
+  background-color: var(--color-warning-dark) !important;
+  border-color: var(--color-warning-dark) !important;
+}
+
+.p-button-warning .p-button-icon,
+.p-button-warning .pi {
+  color: var(--color-white) !important;
 }
 
 .p-button-danger {
-  background-color: var(--color-error);
-  border-color: var(--color-error);
+  background-color: var(--color-error) !important;
+  border-color: var(--color-error) !important;
 }
 
 .p-button-danger:hover {
-  background-color: var(--color-error-dark);
-  border-color: var(--color-error-dark);
+  background-color: var(--color-error-dark) !important;
+  border-color: var(--color-error-dark) !important;
+}
+
+.p-button-danger .p-button-icon,
+.p-button-danger .pi {
+  color: var(--color-white) !important;
 }
 
 /* ==================== INPUT OVERRIDES ==================== */
@@ -110,26 +203,26 @@
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   padding: var(--spacing-sm) var(--spacing-md);
-  border: var(--border-width-thin) solid var(--color-border);
+  border: var(--border-width-thin) solid var(--color-border) !important;
   border-radius: var(--border-radius-md);
   transition: all var(--transition-fast);
 }
 
 .p-inputtext:hover {
-  border-color: var(--color-border-dark);
+  border-color: var(--color-border-dark) !important;
 }
 
 .p-inputtext:focus {
-  border-color: var(--color-primary);
+  border-color: var(--color-primary) !important;
   box-shadow: var(--shadow-focus);
 }
 
 .p-inputtext::placeholder {
-  color: var(--color-text-tertiary);
+  color: var(--color-text-tertiary) !important;
 }
 
 .p-inputtext:disabled {
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-background-secondary) !important;
   opacity: 0.5;
 }
 
@@ -155,23 +248,23 @@
 /* ==================== DROPDOWN OVERRIDES ==================== */
 
 .p-dropdown {
-  border: var(--border-width-thin) solid var(--color-border);
+  border: var(--border-width-thin) solid var(--color-border) !important;
   border-radius: var(--border-radius-md);
   transition: all var(--transition-fast);
 }
 
 .p-dropdown:hover {
-  border-color: var(--color-border-dark);
+  border-color: var(--color-border-dark) !important;
 }
 
 .p-dropdown:focus {
-  border-color: var(--color-primary);
+  border-color: var(--color-primary) !important;
   box-shadow: var(--shadow-focus);
 }
 
 .p-dropdown-panel {
-  background-color: var(--color-background);
-  border: var(--border-width-thin) solid var(--color-border);
+  background-color: var(--color-background) !important;
+  border: var(--border-width-thin) solid var(--color-border) !important;
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-lg);
 }
@@ -182,31 +275,31 @@
 }
 
 .p-dropdown-item:hover {
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-background-secondary) !important;
 }
 
 .p-dropdown-item-selected {
-  background-color: var(--color-primary-pale);
-  color: var(--color-primary-dark);
+  background-color: var(--color-primary-pale) !important;
+  color: var(--color-primary-dark) !important;
 }
 
 /* ==================== DIALOG OVERRIDES ==================== */
 
 .p-dialog {
-  background-color: var(--color-background);
+  background-color: var(--color-background) !important;
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-2xl);
 }
 
 .p-dialog-header {
   padding: var(--spacing-lg);
-  border-bottom: var(--border-width-thin) solid var(--color-border);
+  border-bottom: var(--border-width-thin) solid var(--color-border) !important;
 }
 
 .p-dialog-title {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-semibold);
-  color: var(--color-text);
+  color: var(--color-text) !important;
 }
 
 .p-dialog-content {
@@ -215,7 +308,7 @@
 
 .p-dialog-footer {
   padding: var(--spacing-lg);
-  border-top: var(--border-width-thin) solid var(--color-border);
+  border-top: var(--border-width-thin) solid var(--color-border) !important;
 }
 
 .p-dialog-mask {
@@ -225,15 +318,15 @@
 /* ==================== CARD OVERRIDES ==================== */
 
 .p-card {
-  background-color: var(--color-background);
-  border: var(--border-width-thin) solid var(--color-border);
+  background-color: var(--color-background) !important;
+  border: var(--border-width-thin) solid var(--color-border) !important;
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-sm);
 }
 
 .p-card-header {
   padding: var(--spacing-lg);
-  border-bottom: var(--border-width-thin) solid var(--color-border);
+  border-bottom: var(--border-width-thin) solid var(--color-border) !important;
 }
 
 .p-card-body {
@@ -242,43 +335,43 @@
 
 .p-card-footer {
   padding: var(--spacing-lg);
-  border-top: var(--border-width-thin) solid var(--color-border);
+  border-top: var(--border-width-thin) solid var(--color-border) !important;
 }
 
 /* ==================== DATATABLE OVERRIDES ==================== */
 
 .p-datatable {
-  border: var(--border-width-thin) solid var(--color-border);
+  border: var(--border-width-thin) solid var(--color-border) !important;
   border-radius: var(--border-radius-md);
 }
 
 .p-datatable-header {
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-background-secondary) !important;
   padding: var(--spacing-md);
-  border-bottom: var(--border-width-thin) solid var(--color-border);
+  border-bottom: var(--border-width-thin) solid var(--color-border) !important;
 }
 
 .p-datatable-thead > tr > th {
-  background-color: var(--color-background-secondary);
-  color: var(--color-text);
+  background-color: var(--color-background-secondary) !important;
+  color: var(--color-text) !important;
   font-weight: var(--font-weight-semibold);
   padding: var(--spacing-md);
-  border-bottom: var(--border-width-thin) solid var(--color-border);
+  border-bottom: var(--border-width-thin) solid var(--color-border) !important;
 }
 
 .p-datatable-tbody > tr > td {
   padding: var(--spacing-md);
-  border-bottom: var(--border-width-thin) solid var(--color-border-light);
+  border-bottom: var(--border-width-thin) solid var(--color-border-light) !important;
 }
 
 .p-datatable-tbody > tr:hover {
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-background-secondary) !important;
 }
 
 .p-datatable-footer {
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-background-secondary) !important;
   padding: var(--spacing-md);
-  border-top: var(--border-width-thin) solid var(--color-border);
+  border-top: var(--border-width-thin) solid var(--color-border) !important;
 }
 
 /* ==================== TOAST OVERRIDES ==================== */
@@ -294,34 +387,34 @@
 }
 
 .p-toast-message-success {
-  background-color: var(--color-success-light);
-  border: var(--border-width-thin) solid var(--color-success);
-  color: var(--color-success-dark);
+  background-color: var(--color-success-light) !important;
+  border: var(--border-width-thin) solid var(--color-success) !important;
+  color: var(--color-success-dark) !important;
 }
 
 .p-toast-message-info {
-  background-color: var(--color-info-light);
-  border: var(--border-width-thin) solid var(--color-info);
-  color: var(--color-info-dark);
+  background-color: var(--color-info-light) !important;
+  border: var(--border-width-thin) solid var(--color-info) !important;
+  color: var(--color-info-dark) !important;
 }
 
 .p-toast-message-warn {
-  background-color: var(--color-warning-light);
-  border: var(--border-width-thin) solid var(--color-warning);
-  color: var(--color-warning-dark);
+  background-color: var(--color-warning-light) !important;
+  border: var(--border-width-thin) solid var(--color-warning) !important;
+  color: var(--color-warning-dark) !important;
 }
 
 .p-toast-message-error {
-  background-color: var(--color-error-light);
-  border: var(--border-width-thin) solid var(--color-error);
-  color: var(--color-error-dark);
+  background-color: var(--color-error-light) !important;
+  border: var(--border-width-thin) solid var(--color-error) !important;
+  color: var(--color-error-dark) !important;
 }
 
 /* ==================== MENU OVERRIDES ==================== */
 
 .p-menu {
-  background-color: var(--color-background);
-  border: var(--border-width-thin) solid var(--color-border);
+  background-color: var(--color-background) !important;
+  border: var(--border-width-thin) solid var(--color-border) !important;
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-lg);
   padding: var(--spacing-sm) 0;
@@ -329,12 +422,12 @@
 
 .p-menuitem-link {
   padding: var(--spacing-sm) var(--spacing-md);
-  color: var(--color-text);
+  color: var(--color-text) !important;
   transition: background-color var(--transition-fast);
 }
 
 .p-menuitem-link:hover {
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-background-secondary) !important;
 }
 
 .p-menuitem-link:focus {
@@ -344,20 +437,20 @@
 /* ==================== TABVIEW OVERRIDES ==================== */
 
 .p-tabview-nav {
-  border-bottom: var(--border-width-thin) solid var(--color-border);
+  border-bottom: var(--border-width-thin) solid var(--color-border) !important;
 }
 
 .p-tabview-nav-link {
   padding: var(--spacing-sm) var(--spacing-lg);
   font-weight: var(--font-weight-medium);
-  color: var(--color-text-secondary);
+  color: var(--color-text-secondary) !important;
   border-bottom: 2px solid transparent;
   transition: all var(--transition-fast);
 }
 
 .p-tabview-nav-link:hover {
-  color: var(--color-text);
-  border-bottom-color: var(--color-border-dark);
+  color: var(--color-text) !important;
+  border-bottom-color: var(--color-border-dark) !important;
 }
 
 .p-tabview-nav-link:focus {
@@ -365,8 +458,8 @@
 }
 
 .p-tabview-selected .p-tabview-nav-link {
-  color: var(--color-primary);
-  border-bottom-color: var(--color-primary);
+  color: var(--color-primary) !important;
+  border-bottom-color: var(--color-primary) !important;
 }
 
 .p-tabview-panels {
@@ -376,9 +469,9 @@
 /* ==================== PAGINATOR OVERRIDES ==================== */
 
 .p-paginator {
-  background-color: var(--color-background);
+  background-color: var(--color-background) !important;
   padding: var(--spacing-md);
-  border-top: var(--border-width-thin) solid var(--color-border);
+  border-top: var(--border-width-thin) solid var(--color-border) !important;
 }
 
 .p-paginator-page,
@@ -386,23 +479,23 @@
 .p-paginator-next {
   min-width: 2.5rem;
   height: 2.5rem;
-  border: var(--border-width-thin) solid var(--color-border);
+  border: var(--border-width-thin) solid var(--color-border) !important;
   border-radius: var(--border-radius-md);
-  color: var(--color-text);
+  color: var(--color-text) !important;
   transition: all var(--transition-fast);
 }
 
 .p-paginator-page:hover,
 .p-paginator-prev:hover,
 .p-paginator-next:hover {
-  background-color: var(--color-background-secondary);
-  border-color: var(--color-primary);
+  background-color: var(--color-background-secondary) !important;
+  border-color: var(--color-primary) !important;
 }
 
 .p-paginator-page-selected {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  border-color: var(--color-primary);
+  background-color: var(--color-primary) !important;
+  color: var(--color-white) !important;
+  border-color: var(--color-primary) !important;
 }
 
 /* ==================== CHECKBOX OVERRIDES ==================== */
@@ -413,18 +506,18 @@
 }
 
 .p-checkbox-box {
-  border: var(--border-width-thin) solid var(--color-border);
+  border: var(--border-width-thin) solid var(--color-border) !important;
   border-radius: var(--border-radius-sm);
   transition: all var(--transition-fast);
 }
 
 .p-checkbox-box:hover {
-  border-color: var(--color-primary);
+  border-color: var(--color-primary) !important;
 }
 
 .p-checkbox-box.p-highlight {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
 }
 
 /* ==================== RADIO BUTTON OVERRIDES ==================== */
@@ -435,29 +528,29 @@
 }
 
 .p-radiobutton-box {
-  border: var(--border-width-thin) solid var(--color-border);
+  border: var(--border-width-thin) solid var(--color-border) !important;
   transition: all var(--transition-fast);
 }
 
 .p-radiobutton-box:hover {
-  border-color: var(--color-primary);
+  border-color: var(--color-primary) !important;
 }
 
 .p-radiobutton-box.p-highlight {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
 }
 
 /* ==================== PROGRESS BAR OVERRIDES ==================== */
 
 .p-progressbar {
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-background-secondary) !important;
   border-radius: var(--border-radius-full);
   height: 1rem;
 }
 
 .p-progressbar-value {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary) !important;
   border-radius: var(--border-radius-full);
 }
 
@@ -471,19 +564,19 @@
 }
 
 .p-badge-success {
-  background-color: var(--color-success);
+  background-color: var(--color-success) !important;
 }
 
 .p-badge-warning {
-  background-color: var(--color-warning);
+  background-color: var(--color-warning) !important;
 }
 
 .p-badge-danger {
-  background-color: var(--color-error);
+  background-color: var(--color-error) !important;
 }
 
 .p-badge-info {
-  background-color: var(--color-info);
+  background-color: var(--color-info) !important;
 }
 
 /* ==================== TAG OVERRIDES ==================== */
@@ -496,42 +589,42 @@
 }
 
 .p-tag-success {
-  background-color: var(--color-success-light);
-  color: var(--color-success-dark);
+  background-color: var(--color-success-light) !important;
+  color: var(--color-success-dark) !important;
 }
 
 .p-tag-warning {
-  background-color: var(--color-warning-light);
-  color: var(--color-warning-dark);
+  background-color: var(--color-warning-light) !important;
+  color: var(--color-warning-dark) !important;
 }
 
 .p-tag-danger {
-  background-color: var(--color-error-light);
-  color: var(--color-error-dark);
+  background-color: var(--color-error-light) !important;
+  color: var(--color-error-dark) !important;
 }
 
 .p-tag-info {
-  background-color: var(--color-info-light);
-  color: var(--color-info-dark);
+  background-color: var(--color-info-light) !important;
+  color: var(--color-info-dark) !important;
 }
 
 /* ==================== CALENDAR OVERRIDES ==================== */
 
 .p-calendar {
-  border: var(--border-width-thin) solid var(--color-border);
+  border: var(--border-width-thin) solid var(--color-border) !important;
   border-radius: var(--border-radius-md);
 }
 
 .p-datepicker {
-  background-color: var(--color-background);
-  border: var(--border-width-thin) solid var(--color-border);
+  background-color: var(--color-background) !important;
+  border: var(--border-width-thin) solid var(--color-border) !important;
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-lg);
 }
 
 .p-datepicker-header {
   padding: var(--spacing-md);
-  border-bottom: var(--border-width-thin) solid var(--color-border);
+  border-bottom: var(--border-width-thin) solid var(--color-border) !important;
 }
 
 .p-datepicker-calendar td {
@@ -546,34 +639,34 @@
 }
 
 .p-datepicker-calendar td > span:hover {
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-background-secondary) !important;
 }
 
 .p-datepicker-calendar td > span.p-highlight {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: var(--color-primary) !important;
+  color: var(--color-white) !important;
 }
 
 /* ==================== MULTISELECT OVERRIDES ==================== */
 
 .p-multiselect {
-  border: var(--border-width-thin) solid var(--color-border);
+  border: var(--border-width-thin) solid var(--color-border) !important;
   border-radius: var(--border-radius-md);
   transition: all var(--transition-fast);
 }
 
 .p-multiselect:hover {
-  border-color: var(--color-border-dark);
+  border-color: var(--color-border-dark) !important;
 }
 
 .p-multiselect:focus {
-  border-color: var(--color-primary);
+  border-color: var(--color-primary) !important;
   box-shadow: var(--shadow-focus);
 }
 
 .p-multiselect-panel {
-  background-color: var(--color-background);
-  border: var(--border-width-thin) solid var(--color-border);
+  background-color: var(--color-background) !important;
+  border: var(--border-width-thin) solid var(--color-border) !important;
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-lg);
 }
@@ -584,10 +677,10 @@
 }
 
 .p-multiselect-item:hover {
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-background-secondary) !important;
 }
 
 .p-multiselect-item-selected {
-  background-color: var(--color-primary-pale);
-  color: var(--color-primary-dark);
+  background-color: var(--color-primary-pale) !important;
+  color: var(--color-primary-dark) !important;
 }
