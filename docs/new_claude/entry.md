@@ -72,6 +72,7 @@ This folder contains the essential documentation for AI-assisted development of 
 | **[api-reference.md](api-reference.md)** | Complete API documentation (50+ endpoints) | Reference when calling APIs; UPDATE when modifying endpoints |
 | **[api-documentation-guide.md](api-documentation-guide.md)** | How to document APIs | When adding/modifying API endpoints |
 | **[architecture.md](architecture.md)** (Backend section) | Database schema, models, API structure | Understand backend architecture |
+| **[../database-architecture.md](../database-architecture.md)** | Complete field-by-field database documentation | Understanding JSONB structures, units, relationships, i18n |
 
 ### Frontend Docs
 
@@ -99,6 +100,7 @@ This folder contains the essential documentation for AI-assisted development of 
 | Document a new API endpoint | [api-documentation-guide.md](api-documentation-guide.md) |
 | Find existing components | [component-library.md](component-library.md) |
 | Add translations | [i18n-workflow.md](i18n-workflow.md) |
+| Understand database schema & fields | [../database-architecture.md](../database-architecture.md) |
 | Understand design system (colors, spacing, fonts) | [architecture.md](architecture.md#frontend-architecture) → Design System |
 | Check pre-commit requirements | [pre-commit-checklist.md](pre-commit-checklist.md) |
 
@@ -107,17 +109,19 @@ This folder contains the essential documentation for AI-assisted development of 
 ## Document Organization
 
 ```
-docs/new_claude/
-├── 00-START-HERE.md              ← You are here
-├── development-workflow.md       ← Detailed workflows (MANDATORY processes)
-├── development-checklist.md      ← Master task list
-├── pre-commit-checklist.md       ← Checklist before EVERY commit
-├── acceptance-criteria.md        ← All ACs (GIVEN-WHEN-THEN)
-├── architecture.md               ← Backend + Frontend architecture
-├── api-reference.md              ← Complete API docs
-├── api-documentation-guide.md    ← How to document APIs
-├── component-library.md          ← Component catalog
-└── i18n-workflow.md              ← Translation workflow
+docs/
+├── database-architecture.md      ← Database schema, fields, units, i18n
+└── new_claude/
+    ├── 00-START-HERE.md              ← You are here
+    ├── development-workflow.md       ← Detailed workflows (MANDATORY processes)
+    ├── development-checklist.md      ← Master task list
+    ├── pre-commit-checklist.md       ← Checklist before EVERY commit
+    ├── acceptance-criteria.md        ← All ACs (GIVEN-WHEN-THEN)
+    ├── architecture.md               ← Backend + Frontend architecture
+    ├── api-reference.md              ← Complete API docs
+    ├── api-documentation-guide.md    ← How to document APIs
+    ├── component-library.md          ← Component catalog
+    └── i18n-workflow.md              ← Translation workflow
 ```
 
 ---
