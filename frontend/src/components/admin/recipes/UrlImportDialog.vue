@@ -102,49 +102,47 @@ defineExpose({
     @update:visible="emit('update:visible', $event)"
   >
     <div class="url-import-dialog__content">
+      <p class="url-import-dialog__description">
+        {{ $t('admin.recipes.urlImportDialog.description') }}
+      </p>
+
+      <div class="url-import-dialog__form">
+        <InputText
+          id="url-input"
+          v-model="url"
+          type="url"
+          :placeholder="$t('admin.recipes.urlImportDialog.placeholder')"
+          class="url-import-dialog__input"
+          :disabled="loading"
+          :class="{ 'p-invalid': error && url.trim().length > 0 }"
+          @keyup.enter="handleImport"
+        />
+
+        <small v-if="url.trim().length > 0 && !isValidUrl" class="p-error">
+          {{ $t('admin.recipes.urlImportDialog.errors.invalidUrl') }}
+        </small>
+      </div>
+
+      <!-- Error Message -->
+      <div v-if="error" class="url-import-dialog__error">
+        <i class="pi pi-exclamation-triangle"></i>
+        <span>{{ error }}</span>
+      </div>
+
       <!-- Loading State -->
       <div v-if="loading" class="url-import-dialog__loading">
         <PlayfulLoadingSpinner
-          size="lg"
+          size="md"
           :label="$t('admin.recipes.urlImportDialog.importing')"
         />
-      </div>
-
-      <!-- Form State -->
-      <div v-else>
-        <p class="url-import-dialog__description">
-          {{ $t('admin.recipes.urlImportDialog.description') }}
-        </p>
-
-        <div class="url-import-dialog__form">
-          <InputText
-            id="url-input"
-            v-model="url"
-            type="url"
-            :placeholder="$t('admin.recipes.urlImportDialog.placeholder')"
-            class="url-import-dialog__input"
-            :class="{ 'p-invalid': error && url.trim().length > 0 }"
-            @keyup.enter="handleImport"
-          />
-
-          <small v-if="url.trim().length > 0 && !isValidUrl" class="p-error">
-            {{ $t('admin.recipes.urlImportDialog.errors.invalidUrl') }}
-          </small>
-        </div>
-
-        <!-- Error Message -->
-        <div v-if="error" class="url-import-dialog__error">
-          <i class="pi pi-exclamation-triangle"></i>
-          <span>{{ error }}</span>
-        </div>
       </div>
     </div>
 
     <template #footer>
-      <div v-if="!loading" class="url-import-dialog__footer">
+      <div class="url-import-dialog__footer">
         <div class="url-import-dialog__footer-left">
           <Button
-            v-if="error && url.trim().length > 0"
+            v-if="error && url.trim().length > 0 && !loading"
             :label="$t('admin.recipes.urlImportDialog.switchToText')"
             icon="pi pi-file-import"
             severity="secondary"
@@ -157,12 +155,13 @@ defineExpose({
             :label="$t('admin.recipes.urlImportDialog.cancel')"
             severity="secondary"
             outlined
+            :disabled="loading"
             @click="handleCancel"
           />
           <Button
             :label="$t('admin.recipes.urlImportDialog.import')"
             icon="pi pi-download"
-            :disabled="!canImport"
+            :disabled="!canImport || loading"
             @click="handleImport"
           />
         </div>
@@ -180,9 +179,16 @@ defineExpose({
 
 .url-import-dialog__loading {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 250px;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  background-color: var(--color-primary-light, #f0f7ff);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius-md);
+  min-height: auto;
 }
 
 .url-import-dialog__description {

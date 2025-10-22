@@ -161,6 +161,11 @@ test.describe('Admin Recipe URL Import - AC-ADMIN-UI-URL-001 to AC-ADMIN-UI-URL-
     await page.locator('.url-import-dialog input[type="url"]').fill('https://example.com/recipe/test')
     await page.locator('.url-import-dialog button:has-text("Import")').click()
 
+    // Input field should remain visible but disabled during loading
+    const urlInput = page.locator('.url-import-dialog input[type="url"]')
+    await expect(urlInput).toBeVisible()
+    await expect(urlInput).toBeDisabled()
+
     // Check for loading spinner
     const spinner = page.locator('.playful-loading-spinner')
     await expect(spinner).toBeVisible()
