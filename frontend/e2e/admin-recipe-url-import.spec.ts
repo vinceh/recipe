@@ -113,8 +113,8 @@ test.describe('Admin Recipe URL Import - AC-ADMIN-UI-URL-001 to AC-ADMIN-UI-URL-
     await expect(urlImportButton).toBeVisible()
     await expect(urlImportButton).toBeEnabled()
 
-    // Button should have download icon
-    const icon = urlImportButton.locator('i')
+    // Button should have link icon (pi-link class)
+    const icon = urlImportButton.locator('[class*="pi-link"]')
     await expect(icon).toBeVisible()
   })
 
