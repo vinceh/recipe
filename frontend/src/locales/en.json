@@ -301,6 +301,9 @@
           "timeout": "Request timed out",
           "aiUnavailable": "AI service temporarily unavailable. Please try again in a moment.",
           "networkError": "Connection failed. Check your internet connection.",
+          "blockedScraping": "This website blocks automated access.",
+          "possibleBlocking": "This website may block automated scraping. Try using the text import feature instead.",
+          "useTextImport": "Try using the text import feature instead - copy and paste the recipe text directly.",
           "generic": "Something went wrong. Please try again."
         }
       }

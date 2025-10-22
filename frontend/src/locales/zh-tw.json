@@ -301,6 +301,9 @@
           "timeout": "請求逾時",
           "aiUnavailable": "AI服務暫時無法使用。請稍後再試。",
           "networkError": "連線失敗。請檢查您的網路連線。",
+          "blockedScraping": "該網站阻止自動存取。",
+          "possibleBlocking": "該網站可能阻止自動擷取。請嘗試使用文字匯入功能。",
+          "useTextImport": "請嘗試使用文字匯入功能 - 直接複製並貼上食譜文字。",
           "generic": "發生錯誤。請重試。"
         }
       }

@@ -301,6 +301,9 @@
           "timeout": "Tiempo de espera agotado",
           "aiUnavailable": "Servicio de IA temporalmente no disponible. Por favor intente nuevamente en un momento.",
           "networkError": "Fallo de conexión. Verifique su conexión a internet.",
+          "blockedScraping": "Este sitio web bloquea el acceso automatizado.",
+          "possibleBlocking": "Este sitio web podría bloquear la extracción automatizada. Intente usar la función de importación de texto.",
+          "useTextImport": "Intente usar la función de importación de texto - copie y pegue el texto de la receta directamente.",
           "generic": "Algo salió mal. Por favor intente nuevamente."
         }
       }

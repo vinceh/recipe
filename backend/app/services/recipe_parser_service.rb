@@ -165,6 +165,12 @@ class RecipeParserService < AiService
     if response.is_a?(Net::HTTPSuccess)
       # Strip HTML tags for simpler parsing
       strip_html(response.body)
+    elsif response.code == '403'
+      raise "This website blocks automated access. Please use the text import feature instead - copy and paste the recipe text directly."
+    elsif response.code == '401'
+      raise "Authentication required. Please use the text import feature instead."
+    elsif response.code.start_with?('4')
+      raise "Website returned error #{response.code}. This website may block scraping. Try using the text import feature instead."
     else
       raise "Failed to fetch URL: #{response.code} #{response.message}"
     end

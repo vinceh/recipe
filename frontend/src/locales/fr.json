@@ -301,6 +301,9 @@
           "timeout": "Délai d'attente expiré",
           "aiUnavailable": "Service IA temporairement indisponible. Veuillez réessayer dans un moment.",
           "networkError": "Échec de la connexion. Vérifiez votre connexion internet.",
+          "blockedScraping": "Ce site web bloque l'accès automatisé.",
+          "possibleBlocking": "Ce site web pourrait bloquer l'extraction automatisée. Essayez d'utiliser la fonction d'importation de texte.",
+          "useTextImport": "Essayez d'utiliser la fonction d'importation de texte - copiez et collez le texte de la recette directement.",
           "generic": "Quelque chose s'est mal passé. Veuillez réessayer."
         }
       }
