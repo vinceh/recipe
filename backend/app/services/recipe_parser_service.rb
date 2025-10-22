@@ -18,7 +18,7 @@ class RecipeParserService < AiService
   end
 
   # Parse a recipe from a URL
-  # First attempts AI direct access, falls back to web scraping if needed
+  # Uses web scraping (server-side fetch) since Claude cannot fetch URLs itself
   # Returns structured recipe JSON with source_url
   def parse_url(url)
     # Validate URL format
@@ -26,23 +26,12 @@ class RecipeParserService < AiService
 
     Rails.logger.info("Attempting to parse recipe from URL: #{url}")
 
-    # STEP 1: Try AI direct access
-    begin
-      result = parse_url_direct(url)
-      if result
-        Rails.logger.info("Successfully parsed URL using AI direct access")
-        result['source_url'] = url
-        return result
-      end
-    rescue StandardError => e
-      Rails.logger.warn("AI direct access failed for #{url}: #{e.message}. Falling back to web scraping.")
-    end
-
-    # STEP 2: Fallback to web scraping
-    Rails.logger.info("Attempting web scraping fallback for #{url}")
+    # Scrape the URL content server-side and send to Claude for parsing
+    Rails.logger.info("Fetching and parsing URL content for #{url}")
     result = parse_url_with_scraping(url)
+
     if result
-      Rails.logger.info("Successfully parsed URL using web scraping fallback")
+      Rails.logger.info("Successfully parsed URL using web scraping")
       result['source_url'] = url
       return result
     end
