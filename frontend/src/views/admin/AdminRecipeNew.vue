@@ -13,9 +13,39 @@ import { adminApi } from '@/services/adminApi'
 import type { RecipeDetail } from '@/services/types'
 
 const router = useRouter()
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 const formData = ref<Partial<RecipeDetail>>({})
+
+function transformParsedRecipe(recipe: any): Partial<RecipeDetail> {
+  const language = recipe.language || locale.value || 'en'
+
+  // Transform ingredient items: move 'preparation' to 'notes'
+  const transformedIngredientGroups = recipe.ingredient_groups?.map((group: any) => ({
+    ...group,
+    items: group.items?.map((item: any) => ({
+      name: item.name,
+      amount: item.amount,
+      unit: item.unit,
+      notes: item.preparation || item.notes || '',
+      optional: item.optional || false
+    }))
+  }))
+
+  // Transform steps: map 'original' to language-based key
+  const transformedSteps = recipe.steps?.map((step: any) => ({
+    id: step.id,
+    instructions: {
+      [language]: step.instructions?.original || step.instructions?.[language] || ''
+    }
+  }))
+
+  return {
+    ...recipe,
+    ingredient_groups: transformedIngredientGroups,
+    steps: transformedSteps
+  }
+}
 const saving = ref(false)
 const error = ref<Error | null>(null)
 const importDialogVisible = ref(false)
@@ -78,8 +108,9 @@ async function handleImportText(text: string) {
       // Wait for dialog to close before updating form data
       await nextTick()
 
-      // Set the form data
-      formData.value = (response.data as any).recipe_data as Partial<RecipeDetail>
+      // Set the form data with transformation
+      const parsedRecipe = (response.data as any).recipe_data
+      formData.value = transformParsedRecipe(parsedRecipe)
 
       successMessage.value = t('admin.recipes.importDialog.success')
       setTimeout(() => {
@@ -117,7 +148,8 @@ async function handleImportUrl(url: string) {
 
       await nextTick()
 
-      formData.value = (response.data as any).recipe_data as Partial<RecipeDetail>
+      const parsedRecipe = (response.data as any).recipe_data
+      formData.value = transformParsedRecipe(parsedRecipe)
 
       successMessage.value = t('admin.recipes.urlImportDialog.success')
       setTimeout(() => {
