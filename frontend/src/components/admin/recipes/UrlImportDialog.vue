@@ -4,7 +4,6 @@ import { useI18n } from 'vue-i18n'
 import Dialog from 'primevue/dialog'
 import InputText from 'primevue/inputtext'
 import Button from 'primevue/button'
-import PlayfulLoadingSpinner from '@/components/shared/PlayfulLoadingSpinner.vue'
 
 interface Props {
   visible: boolean
@@ -130,11 +129,9 @@ defineExpose({
       </div>
 
       <!-- Loading State -->
-      <div v-if="loading" class="url-import-dialog__loading">
-        <PlayfulLoadingSpinner
-          size="md"
-          :label="$t('admin.recipes.urlImportDialog.importing')"
-        />
+      <div v-if="loading" class="loading-message">
+        <i class="pi pi-spin pi-spinner"></i>
+        {{ $t('admin.recipes.urlImportDialog.importing') }}
       </div>
     </div>
 
@@ -177,18 +174,22 @@ defineExpose({
   padding-bottom: var(--spacing-lg);
 }
 
-.url-import-dialog__loading {
+.loading-message {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: var(--spacing-sm);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
   padding: var(--spacing-md);
   margin-top: var(--spacing-md);
-  background-color: var(--color-primary-light, #f0f7ff);
-  border: 1px solid var(--color-primary);
+  background: var(--color-primary);
   border-radius: var(--border-radius-md);
-  min-height: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loading-message i {
+  font-size: var(--font-size-lg);
 }
 
 .url-import-dialog__description {

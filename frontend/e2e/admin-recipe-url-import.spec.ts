@@ -166,34 +166,13 @@ test.describe('Admin Recipe URL Import - AC-ADMIN-UI-URL-001 to AC-ADMIN-UI-URL-
     await expect(urlInput).toBeVisible()
     await expect(urlInput).toBeDisabled()
 
-    // Check for loading spinner
-    const spinner = page.locator('.playful-loading-spinner')
+    // Check for loading message
+    const loadingMessage = page.locator('.url-import-dialog .loading-message')
+    await expect(loadingMessage).toBeVisible()
+
+    // Check for spinner icon
+    const spinner = loadingMessage.locator('.pi-spinner')
     await expect(spinner).toBeVisible()
-
-    // Check for subtitle
-    await expect(page.locator('text=(this may take a while)')).toBeVisible()
-
-    // Check that at least one cooking pun appears
-    const cookingPuns = [
-      'Prepping ingredients...',
-      'Simmering your recipe...',
-      'Seasoning to perfection...',
-      'Reducing the sauce...',
-      'Letting it marinate...',
-      'Whisking away...',
-      'Bringing to a boil...',
-      'Adding a pinch of magic...'
-    ]
-
-    let foundPun = false
-    for (const pun of cookingPuns) {
-      const punLocator = page.locator(`text=${pun}`)
-      if (await punLocator.isVisible().catch(() => false)) {
-        foundPun = true
-        break
-      }
-    }
-    expect(foundPun).toBe(true)
   })
 
   test('AC-ADMIN-UI-URL-006: Successful import populates all fields', async ({ page }) => {
