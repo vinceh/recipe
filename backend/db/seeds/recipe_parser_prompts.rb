@@ -172,15 +172,15 @@ AiPrompt.find_or_create_by!(prompt_key: 'recipe_parse_url_direct_user') do |prom
   prompt.active = true
 end
 
-# URL Parsing Prompts - Scraped Content (Fallback Method)
+# URL Parsing Prompts - Using Claude's Native Web Search
 AiPrompt.find_or_create_by!(prompt_key: 'recipe_parse_url_system') do |prompt|
   prompt.prompt_type = 'system'
   prompt.feature_area = 'recipe_parsing'
-  prompt.description = 'System prompt for parsing recipe from URL content'
+  prompt.description = 'System prompt for parsing recipe from URL using Claude web search'
   prompt.prompt_text = <<~PROMPT
-    You are a recipe data extraction expert. Your task is to parse recipe content scraped from a website into structured JSON format.
+    You are a recipe data extraction expert. Your task is to fetch a recipe from a URL using web search and parse it into structured JSON format.
 
-    The content may include website navigation, ads, and other non-recipe text. Focus on extracting only the recipe information.
+    Use your web search capability to access the URL and extract the recipe information from the page content. The page may include website navigation, ads, and other non-recipe text. Focus on extracting only the recipe information.
 
     **Output Format:**
     Return ONLY valid JSON in the following structure (no additional text or explanation):
@@ -231,6 +231,7 @@ AiPrompt.find_or_create_by!(prompt_key: 'recipe_parse_url_system') do |prompt|
     ```
 
     **Guidelines:**
+    - Use web search to fetch and read the page content
     - Ignore ads, navigation, comments, and non-recipe content
     - Use lowercase, kebab-case for tags
     - Ingredient amounts should be numeric strings
@@ -244,20 +245,15 @@ end
 AiPrompt.find_or_create_by!(prompt_key: 'recipe_parse_url_user') do |prompt|
   prompt.prompt_type = 'user'
   prompt.feature_area = 'recipe_parsing'
-  prompt.description = 'User prompt for parsing recipe from URL'
+  prompt.description = 'User prompt for parsing recipe from URL using web search'
   prompt.prompt_text = <<~PROMPT
-    Extract the recipe from the following website content and return it as structured JSON.
+    Please use web search to fetch and extract the recipe from the following URL, then return it as structured JSON:
 
-    **Source URL:** {{url}}
-
-    **Content:**
-    ---
-    {{content}}
-    ---
+    **URL:** {{url}}
 
     Return ONLY the JSON object with no additional text.
   PROMPT
-  prompt.variables = ['url', 'content']
+  prompt.variables = ['url']
   prompt.active = true
 end
 

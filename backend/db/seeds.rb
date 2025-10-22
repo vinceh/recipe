@@ -513,6 +513,12 @@ puts "   ✅ Created #{AiPrompt.where(feature_area: 'translation').count} transl
 # =============================================================================
 # SUMMARY
 # =============================================================================
+# =============================================================================
+# RECIPES
+# =============================================================================
+puts "\n🍽️  Seeding recipes..."
+load Rails.root.join('db/seeds/recipes.rb')
+
 puts "\n" + "="*60
 puts "✨ Database seeding complete!"
 puts "="*60
@@ -521,6 +527,7 @@ puts "   • Dietary Tags: #{DataReference.dietary_tags.count}"
 puts "   • Dish Types: #{DataReference.dish_types.count}"
 puts "   • Cuisines: #{DataReference.cuisines.count}"
 puts "   • Recipe Types: #{DataReference.recipe_types.count}"
+puts "   • Recipes: #{Recipe.count}"
 puts "   • AI Prompts: #{AiPrompt.count}"
 puts "   • Admin Users: #{User.admin.count}"
 puts "="*60

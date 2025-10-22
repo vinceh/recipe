@@ -35,69 +35,13 @@ recipes_data = [
       }
     ],
     steps: [
-      {
-        id: 1,
-        instructions: {
-          original: "In a small bowl, mix dashi, soy sauce, mirin, and sugar to make the sauce.",
-          easier: nil,
-          no_equipment: nil
-        },
-        equipment: ["small bowl"]
-      },
-      {
-        id: 2,
-        instructions: {
-          original: "Heat a pan over medium heat and add the sauce mixture. Bring to a simmer.",
-          easier: nil,
-          no_equipment: nil
-        },
-        equipment: ["frying pan"]
-      },
-      {
-        id: 3,
-        instructions: {
-          original: "Add sliced onion and cook until softened, about 3 minutes.",
-          easier: nil,
-          no_equipment: nil
-        },
-        equipment: ["frying pan"]
-      },
-      {
-        id: 4,
-        instructions: {
-          original: "Add chicken pieces and cook until no longer pink, about 5 minutes.",
-          easier: nil,
-          no_equipment: nil
-        },
-        equipment: ["frying pan"]
-      },
-      {
-        id: 5,
-        instructions: {
-          original: "Pour beaten eggs over the chicken in a circular motion. Do not stir.",
-          easier: nil,
-          no_equipment: nil
-        },
-        equipment: ["frying pan"]
-      },
-      {
-        id: 6,
-        instructions: {
-          original: "Cover and cook until eggs are just set but still slightly runny, about 2 minutes.",
-          easier: nil,
-          no_equipment: nil
-        },
-        equipment: ["frying pan", "lid"]
-      },
-      {
-        id: 7,
-        instructions: {
-          original: "Serve over steamed rice and garnish with chopped green onions.",
-          easier: nil,
-          no_equipment: nil
-        },
-        equipment: []
-      }
+      { id: "step-001", order: 1, instructions: { en: "In a small bowl, mix dashi, soy sauce, mirin, and sugar to make the sauce." } },
+      { id: "step-002", order: 2, instructions: { en: "Heat a pan over medium heat and add the sauce mixture. Bring to a simmer." } },
+      { id: "step-003", order: 3, instructions: { en: "Add sliced onion and cook until softened, about 3 minutes." } },
+      { id: "step-004", order: 4, instructions: { en: "Add chicken pieces and cook until no longer pink, about 5 minutes." } },
+      { id: "step-005", order: 5, instructions: { en: "Pour beaten eggs over the chicken in a circular motion. Do not stir." } },
+      { id: "step-006", order: 6, instructions: { en: "Cover and cook until eggs are just set but still slightly runny, about 2 minutes." } },
+      { id: "step-007", order: 7, instructions: { en: "Serve over steamed rice and garnish with chopped green onions." } }
     ],
     equipment: ["frying pan", "small bowl", "spatula", "lid"],
     admin_notes: "Classic Japanese comfort food. Eggs should be slightly runny for authentic texture."
@@ -142,6 +86,28 @@ recipes_data = [
       }
     ],
     steps: [
+      { id: "step-001", order: 1, instructions: { en: "Place 1 large egg in a saucepan and cover with water by one inch. Bring to a boil on medium heat for 12 minutes." } },
+      { id: "step-002", order: 2, instructions: { en: "Cool the boiled egg in ice water, then peel." } },
+      { id: "step-003", order: 3, instructions: { en: "Finely mince ¼ onion and soak in cold water for 5-10 minutes to reduce sharpness. Drain well." } },
+      { id: "step-004", order: 4, instructions: { en: "Cut ½ cucumber lengthwise, remove seeds, slice into thin strips, then finely dice into ⅛-inch pieces." } },
+      { id: "step-005", order: 5, instructions: { en: "Mince the boiled egg finely." } },
+      { id: "step-006", order: 6, instructions: { en: "Mix drained onion, cucumber, minced boiled egg, 3 tablespoons Japanese mayonnaise, 1 teaspoon rice vinegar, ⅛ teaspoon salt, and ⅛ teaspoon pepper. Refrigerate until serving." } },
+      { id: "step-007", order: 7, instructions: { en: "Combine 2 tablespoons soy sauce, 2 tablespoons rice vinegar, 1 tablespoon mirin, and 2 tablespoons sugar in a saucepan. Heat gently until sugar dissolves, then set aside." } },
+      { id: "step-008", order: 8, instructions: { en: "Split one boneless, skinless chicken breast horizontally, opening like a book. Cut in half down the middle." } },
+      { id: "step-009", order: 9, instructions: { en: "Pound both sides of each cutlet with a meat tenderizer to even thickness." } },
+      { id: "step-010", order: 10, instructions: { en: "Apply ⅛ teaspoon salt and ⅛ teaspoon pepper to each cutlet." } },
+      { id: "step-011", order: 11, instructions: { en: "Dust each cutlet with 1 tablespoon flour, shaking off excess. Let rest 10 minutes." } },
+      { id: "step-012", order: 12, instructions: { en: "Beat 1 large egg in a shallow bowl or plate." } },
+      { id: "step-013", order: 13, instructions: { en: "Heat 2 cups neutral oil to 340°F in a medium pot." } },
+      { id: "step-014", order: 14, instructions: { en: "Dip floured cutlet in beaten egg, then carefully place in oil. Cook for 4 minutes, flipping once at halfway mark." } },
+      { id: "step-015", order: 15, instructions: { en: "Transfer fried cutlet to wire rack to drain." } },
+      { id: "step-016", order: 16, instructions: { en: "Repeat the dipping and first fry process with remaining cutlets." } },
+      { id: "step-017", order: 17, instructions: { en: "Raise oil temperature to 350°F." } },
+      { id: "step-018", order: 18, instructions: { en: "Return first cutlet to oil and fry for 30 seconds on each side. Repeat with remaining cutlets." } },
+      { id: "step-019", order: 19, instructions: { en: "Verify internal temperature of chicken reaches 165°F." } },
+      { id: "step-020", order: 20, instructions: { en: "Immediately dip hot fried cutlets in the nanban sauce, coating both sides." } },
+      { id: "step-021", order: 21, instructions: { en: "Slice each fried cutlet into ¾ inch pieces and transfer to plates." } },
+      { id: "step-022", order: 22, instructions: { en: "Top generously with tartar sauce and drizzle additional nanban sauce over chicken." } }
     ],
     equipment: ["frying pan", "bowls", "tongs"],
     admin_notes: "Soaking the hot chicken in nanban sauce is key for authentic flavor."
@@ -181,6 +147,28 @@ recipes_data = [
       }
     ],
     steps: [
+      { id: "step-001", order: 1, instructions: { en: "Put 2 cups water and 1 piece kombu (dried kelp) in a measuring cup or pitcher. Set it aside to steep for a minimum of 30 minutes." } },
+      { id: "step-002", order: 2, instructions: { en: "Combine ½ cup sake and ½ cup mirin in a small saucepan. Bring it to a boil and let the alcohol evaporate, about 1 minute." } },
+      { id: "step-003", order: 3, instructions: { en: "Add 2 Tbsp sugar and ⅓ cup soy sauce to the saucepan. Bring to a boil and turn off the heat once the sugar is dissolved." } },
+      { id: "step-004", order: 4, instructions: { en: "Transfer the sukiyaki sauce to a pitcher for easy pouring at the table." } },
+      { id: "step-005", order: 5, instructions: { en: "Cut 4 leaves napa cabbage into pieces 2 inches (5 cm) wide, then cut each piece in half or thirds along the white center." } },
+      { id: "step-006", order: 6, instructions: { en: "Cut ¼ bunch shungiku (chrysanthemum greens) into 2-inch (5 cm) sections." } },
+      { id: "step-007", order: 7, instructions: { en: "Slice the white part of 1 Tokyo negi (naga negi; long green onion) diagonally into ½-inch (1.3 cm) pieces." } },
+      { id: "step-008", order: 8, instructions: { en: "Scrape off the outer skin of 6 inches gobo (burdock root) with the back of a knife, then use a vegetable peeler to shave it into thin strips." } },
+      { id: "step-009", order: 9, instructions: { en: "Soak the gobo strips in water for 5 minutes, changing the water once. Drain well." } },
+      { id: "step-010", order: 10, instructions: { en: "Cut 1 onion into ½-inch (1.3 cm) slices widthwise. Tear 1 package enoki mushrooms into small clusters. Separate ½ package maitake mushrooms into small clusters." } },
+      { id: "step-011", order: 11, instructions: { en: "Cut off and discard the stems of 2 shiitake mushrooms. Optionally, create a decorative flower pattern by cutting V-shaped incisions on the surface." } },
+      { id: "step-012", order: 12, instructions: { en: "Cut ½ package broiled tofu (yaki dofu) into smaller pieces." } },
+      { id: "step-013", order: 13, instructions: { en: "Optional: Slice carrot into ¼-inch (6 mm) rounds and stamp with a vegetable cutter to create flower shapes." } },
+      { id: "step-014", order: 14, instructions: { en: "Rinse and drain shirataki noodles, cut them in half, then cook in boiling water for 2 minutes. Drain well." } },
+      { id: "step-015", order: 15, instructions: { en: "Arrange the beef slices, beef suet, and all prepared vegetables, mushrooms, tofu, and shirataki noodles on a large platter. Set aside the eggs and cooked udon noodles for later use." } },
+      { id: "step-016", order: 16, instructions: { en: "Set up a portable gas cooktop with a cast-iron sukiyaki pot at the dining table." } },
+      { id: "step-017", order: 17, instructions: { en: "Heat the sukiyaki pot on medium heat. Add 1 Tbsp neutral oil (or beef suet). Pour in barely enough sukiyaki sauce to cover the bottom of the pot, about ⅛–¼ inch (3–6 mm) deep." } },
+      { id: "step-018", order: 18, instructions: { en: "Place the marbled beef slices in the pot. When the bottom side of the meat is cooked, flip and cook the other side. You can enjoy the beef immediately or proceed to the next step." } },
+      { id: "step-019", order: 19, instructions: { en: "Add a selection of vegetables, tofu, and mushrooms to the pot. Pour in enough sukiyaki sauce to partially submerge the ingredients (about ⅓ way up). Let everything simmer until cooked to your liking." } },
+      { id: "step-020", order: 20, instructions: { en: "Transfer the cooked ingredients to individual bowls. Taste the sauce and drizzle in a tiny bit of dashi or water if it's getting too salty." } },
+      { id: "step-021", order: 21, instructions: { en: "Continue cooking the remaining ingredients in batches (second and third rounds), adjusting the seasoning with dashi or water as needed throughout the meal." } },
+      { id: "step-022", order: 22, instructions: { en: "For the finishing course (shime), add the cooked udon noodles to the remaining broth in the sukiyaki pot. Heat through and enjoy." } }
     ],
     equipment: ["sukiyaki pot or large pan", "bowls", "chopsticks"],
     admin_notes: "Traditional sukiyaki is cooked at the table. Raw egg dipping is optional but traditional."
@@ -218,6 +206,16 @@ recipes_data = [
       }
     ],
     steps: [
+      { id: "step-001", order: 1, instructions: { en: "Place the tofu block on a tray or plate. Wrap the tofu in 2-3 layers of paper towels and place another tray on top. Set a heavy object on top to press the tofu. Drain the water out of the tofu for 15 minutes." } },
+      { id: "step-002", order: 2, instructions: { en: "Combine dashi stock, soy sauce, and mirin in a small saucepan. Bring to a simmer, then turn off heat, cover, and set aside." } },
+      { id: "step-003", order: 3, instructions: { en: "Cut green onions into thin slices." } },
+      { id: "step-004", order: 4, instructions: { en: "Peel and grate daikon radish (approximately 2 inches). Gently squeeze out excess water." } },
+      { id: "step-005", order: 5, instructions: { en: "Peel and grate fresh ginger (yields about 1 teaspoon with juice)." } },
+      { id: "step-006", order: 6, instructions: { en: "Cut the pressed tofu block into 6 equal pieces." } },
+      { id: "step-007", order: 7, instructions: { en: "Coat tofu pieces with potato starch or cornstarch, dusting off any excess." } },
+      { id: "step-008", order: 8, instructions: { en: "Heat neutral oil (2 cups) to 320-340°F in a deep pot or fryer." } },
+      { id: "step-009", order: 9, instructions: { en: "Working in batches of 3 pieces, fry tofu until light brown and crispy, turning once. Place finished pieces on a wire rack or paper towel-lined plate to drain." } },
+      { id: "step-010", order: 10, instructions: { en: "Place fried tofu in serving bowls. Pour sauce along the bowl edges without wetting the tofu's crispy top. Top with grated daikon, ginger, green onions, and optional bonito flakes or seven spice powder." } }
     ],
     equipment: ["deep pot", "knife", "small pot", "paper towels"],
     admin_notes: "Tofu should be crispy outside and silky inside. Serve immediately for best texture."
@@ -256,6 +254,16 @@ recipes_data = [
       }
     ],
     steps: [
+      { id: "step-001", order: 1, instructions: { en: "Bring a medium pot of water to a boil (just enough so that the pork will be fully submerged), and blanch the chopped pork belly for 1 minute. Drain, rinse clean of any scum, and set aside." } },
+      { id: "step-002", order: 2, instructions: { en: "Dice the onions or shallots into small pieces." } },
+      { id: "step-003", order: 3, instructions: { en: "Chop the shiitake mushrooms into half-inch pieces." } },
+      { id: "step-004", order: 4, instructions: { en: "Bundle the star anise, cinnamon stick, cloves, bay leaves, Sichuan peppercorns, dried tangerine peel, and ginger slices in cheesecloth and tie with kitchen string." } },
+      { id: "step-005", order: 5, instructions: { en: "Heat the oil in a wok over low heat, and add the sugar. Cook the sugar until it starts to melt and then add the onions." } },
+      { id: "step-006", order: 6, instructions: { en: "Turn up the heat to medium high and stir-fry the onions for a minute. Add the mushrooms and stir-fry for another couple minutes." } },
+      { id: "step-007", order: 7, instructions: { en: "Add the blanched pork, shaoxing wine, light soy sauce, dark soy sauce and water. Stir and bring the mixture to a boil." } },
+      { id: "step-008", order: 8, instructions: { en: "Once boiling, add the spice packet and peeled hardboiled eggs and turn the heat to the lowest setting. Simmer for 1 1/2 hours, stirring occasionally to prevent sticking." } },
+      { id: "step-009", order: 9, instructions: { en: "Remove the spice packet and turn up the heat to medium high to thicken the sauce, stirring occasionally. This process should take about 5 minutes." } },
+      { id: "step-010", order: 10, instructions: { en: "Serve the braised pork over steamed white rice." } }
     ],
     equipment: ["wok or pot", "lid", "knife"],
     admin_notes: "Taiwanese comfort food classic. Pork should be melt-in-your-mouth tender."
@@ -286,6 +294,17 @@ recipes_data = [
       }
     ],
     steps: [
+      { id: "step-001", order: 1, instructions: { en: "Soak dried shiitake mushrooms in warm water for 30 minutes until fully rehydrated and softened. Reserve the soaking liquid." } },
+      { id: "step-002", order: 2, instructions: { en: "Cut chicken thighs into 3-4 bite-sized pieces each, keeping the bone in for flavor." } },
+      { id: "step-003", order: 3, instructions: { en: "Slice ginger into 5-6 thick pieces, about 5mm thick." } },
+      { id: "step-004", order: 4, instructions: { en: "Bring a pot of water to boil and blanch the chicken pieces for 2-3 minutes to remove impurities. Drain and rinse under cold water." } },
+      { id: "step-005", order: 5, instructions: { en: "Rinse goji berries and jujube dates under cold water to remove any dust." } },
+      { id: "step-006", order: 6, instructions: { en: "In a large pot, add blanched chicken pieces, rehydrated shiitake mushrooms, ginger slices, jujube dates, and 1500ml of water. Add the reserved mushroom soaking liquid for extra flavor." } },
+      { id: "step-007", order: 7, instructions: { en: "Add rice wine to the pot and bring everything to a boil over high heat." } },
+      { id: "step-008", order: 8, instructions: { en: "Once boiling, reduce heat to low, cover with lid, and simmer for 45-60 minutes until chicken is tender and flavors are well developed." } },
+      { id: "step-009", order: 9, instructions: { en: "Add goji berries during the last 10 minutes of simmering to preserve their color and nutrients." } },
+      { id: "step-010", order: 10, instructions: { en: "Season with salt to taste. Start with 1 teaspoon and adjust as needed." } },
+      { id: "step-011", order: 11, instructions: { en: "Ladle soup into bowls, ensuring each serving has chicken, mushrooms, and herbs. Serve hot." } }
     ],
     equipment: ["large pot", "bowl"],
     admin_notes: "Nourishing Taiwanese soup perfect for cold days or when feeling under the weather."
@@ -331,6 +350,30 @@ recipes_data = [
       }
     ],
     steps: [
+      { id: "step-001", order: 1, instructions: { en: "Cut 3 pounds of beef shank into 2-inch chunks." } },
+      { id: "step-002", order: 2, instructions: { en: "Prepare the spice packet by combining 4 star anise, 1 Chinese cinnamon stick, 3 bay leaves, 1 tablespoon fennel seeds, 1 tablespoon cumin seeds, 1 teaspoon coriander seeds, 2 tablespoons Sichuan peppercorns, 1/4 teaspoon five spice powder, and 1/4 teaspoon black pepper." } },
+      { id: "step-003", order: 3, instructions: { en: "Smash a 2-inch piece of ginger and 6 cloves of garlic." } },
+      { id: "step-004", order: 4, instructions: { en: "Cut 3 scallions into 2-inch segments." } },
+      { id: "step-005", order: 5, instructions: { en: "Cut 1 onion into wedges and 1 tomato into wedges." } },
+      { id: "step-006", order: 6, instructions: { en: "Rip 4 dried chilies in half." } },
+      { id: "step-007", order: 7, instructions: { en: "Boil enough water in a pot to cover all of the beef chunks. Once the water is boiling, add the beef and let it come back up to a boil. Boil for 1 minute." } },
+      { id: "step-008", order: 8, instructions: { en: "Strain the beef in a colander and rinse thoroughly with fresh water to remove any impurities." } },
+      { id: "step-009", order: 9, instructions: { en: "Set the Instant Pot to sauté mode and add 2 tablespoons of oil." } },
+      { id: "step-010", order: 10, instructions: { en: "Add the crushed ginger, garlic, scallions, and onion wedges to the Instant Pot in that order. Stir to lightly caramelize and cook until the onion turns translucent." } },
+      { id: "step-011", order: 11, instructions: { en: "Add the tomato wedges and dried chilies to the pot and stir." } },
+      { id: "step-012", order: 12, instructions: { en: "Add the blanched beef to the Instant Pot." } },
+      { id: "step-013", order: 13, instructions: { en: "Add 1 tablespoon tomato paste, 2 tablespoons spicy bean paste (douban jiang), 2 teaspoons sugar, 1/2 cup soy sauce, and 1/2 cup Shaoxing wine to the pot. Mix thoroughly." } },
+      { id: "step-014", order: 14, instructions: { en: "Pour 8 cups of water into the Instant Pot." } },
+      { id: "step-015", order: 15, instructions: { en: "Add the spice packet to the Instant Pot." } },
+      { id: "step-016", order: 16, instructions: { en: "Close the Instant Pot lid with the vent sealed. Set to Meat/Stew setting and cook for 100 minutes." } },
+      { id: "step-017", order: 17, instructions: { en: "When the timer finishes, carefully release the pressure." } },
+      { id: "step-018", order: 18, instructions: { en: "Boil 32 ounces of fresh wheat noodles per package instructions." } },
+      { id: "step-019", order: 19, instructions: { en: "In the last 1-2 minutes of the noodles cooking, add a small handful of bok choy per serving to the boiling water and blanch until just tender." } },
+      { id: "step-020", order: 20, instructions: { en: "Drain the noodles and bok choy." } },
+      { id: "step-021", order: 21, instructions: { en: "Place a serving of noodles in each bowl." } },
+      { id: "step-022", order: 22, instructions: { en: "Add a few stalks of bok choy to each bowl." } },
+      { id: "step-023", order: 23, instructions: { en: "Ladle the beef and broth over the noodles and bok choy." } },
+      { id: "step-024", order: 24, instructions: { en: "Top each bowl with generous sprinklings of finely minced cilantro, finely chopped scallions, and Chinese pickled mustard greens." } }
     ],
     equipment: ["large pot", "pot", "ladle"],
     admin_notes: "Iconic Taiwanese dish. Tomatoes add unique sweetness to the rich beef broth."
@@ -368,6 +411,26 @@ recipes_data = [
       }
     ],
     steps: [
+      { id: "step-001", order: 1, instructions: { en: "Prepare anchovy stock by boiling dried anchovies and dried kelp in water, then strain and set aside" } },
+      { id: "step-002", order: 2, instructions: { en: "Cut pork belly into bite-sized pieces" } },
+      { id: "step-003", order: 3, instructions: { en: "Cut kimchi into bite-sized pieces" } },
+      { id: "step-004", order: 4, instructions: { en: "Chop green onion and mince garlic" } },
+      { id: "step-005", order: 5, instructions: { en: "Mix gochugaru (Korean red pepper flakes) with sesame oil to make hot pepper mixture" } },
+      { id: "step-006", order: 6, instructions: { en: "Heat vegetable oil in a pot or Korean earthenware pot (ttukbaegi) over medium-high heat" } },
+      { id: "step-007", order: 7, instructions: { en: "Add pork belly to the pot and stir-fry until the meat is browned and the fat is rendered, about 3-4 minutes" } },
+      { id: "step-008", order: 8, instructions: { en: "Add minced garlic and stir for about 30 seconds until fragrant" } },
+      { id: "step-009", order: 9, instructions: { en: "Add kimchi to the pot and stir constantly for 1-2 minutes" } },
+      { id: "step-010", order: 10, instructions: { en: "Pour in anchovy stock (about 1/2 to 1 cup) and bring to a boil" } },
+      { id: "step-011", order: 11, instructions: { en: "Cover the pot and cook over medium heat for 7 minutes to develop flavors" } },
+      { id: "step-012", order: 12, instructions: { en: "Add salt (about 1/4 to 1/2 teaspoon) and sugar (about 1/2 teaspoon) and mix well to season" } },
+      { id: "step-013", order: 13, instructions: { en: "Cut the tube of soft tofu (sundubu) in half and gently squeeze it out into the pot" } },
+      { id: "step-014", order: 14, instructions: { en: "Gently break up the tofu into large chunks with a wooden spoon, being careful not to break it into small pieces" } },
+      { id: "step-015", order: 15, instructions: { en: "Add the hot pepper mixture (gochugaru with sesame oil) on top and spread it with a spoon" } },
+      { id: "step-016", order: 16, instructions: { en: "Let the stew boil for 3-4 minutes to heat the tofu through" } },
+      { id: "step-017", order: 17, instructions: { en: "Crack an egg and place it on top in the center of the bubbling stew" } },
+      { id: "step-018", order: 18, instructions: { en: "Let the stew bubble and sizzle for 1 minute to partially cook the egg" } },
+      { id: "step-019", order: 19, instructions: { en: "Sprinkle chopped green onion on top as garnish" } },
+      { id: "step-020", order: 20, instructions: { en: "Serve immediately while hot with steamed rice and side dishes" } }
     ],
     equipment: ["earthenware pot or small pot", "spoon"],
     admin_notes: "Bubbling hot Korean comfort food. Serve with rice and banchan."
@@ -413,6 +476,20 @@ recipes_data = [
       }
     ],
     steps: [
+      { id: "step-001", order: 1, instructions: { en: "Wash and thoroughly dry the green onions with paper towels. Trim the roots and split the thick white portions lengthwise. Cut crosswise into 2-inch pieces." } },
+      { id: "step-002", order: 2, instructions: { en: "Pat the seafood (shrimp, squid, and any other seafood) completely dry with paper towels to remove excess moisture." } },
+      { id: "step-003", order: 3, instructions: { en: "In a large mixing bowl, whisk together the all-purpose flour, potato starch (or cornstarch), baking powder, garlic powder, onion powder, chicken bouillon powder, and salt until well combined." } },
+      { id: "step-004", order: 4, instructions: { en: "Add the icy cold water to the dry ingredients and mix until just combined to create a thin batter. The consistency should be thinner than regular pancake batter but thicker than crepe batter." } },
+      { id: "step-005", order: 5, instructions: { en: "Add the chopped green onions and seafood to the batter. Gently mix until everything is just combined. Do not overmix." } },
+      { id: "step-006", order: 6, instructions: { en: "Heat a large 12-inch non-stick pan over medium-high heat. Add 2-3 tablespoons of vegetable oil and swirl to coat the entire bottom of the pan." } },
+      { id: "step-007", order: 7, instructions: { en: "Pour half of the batter mixture into the hot pan and quickly spread it into an even, thin round pancake using a spatula or ladle. Fill any gaps and level the surface." } },
+      { id: "step-008", order: 8, instructions: { en: "Reduce heat to medium. Cook for 5-7 minutes until the bottom becomes crispy and golden brown with charred edges. Swirl the pan occasionally for even browning. You should see small holes forming and steam rising." } },
+      { id: "step-009", order: 9, instructions: { en: "Carefully flip the pancake using a large spatula. Add 2-3 tablespoons of oil around the edges of the pan and swirl to coat." } },
+      { id: "step-010", order: 10, instructions: { en: "Cook the second side for 4-5 minutes until golden brown and crispy. Press down on the pancake several times with the spatula to ensure crispiness." } },
+      { id: "step-011", order: 11, instructions: { en: "Transfer the cooked pancake to a cutting board. Repeat the cooking process with the remaining batter and oil to make a second pancake." } },
+      { id: "step-012", order: 12, instructions: { en: "While the pancakes are cooking or after completion, make the dipping sauce by whisking together soy sauce, rice vinegar, sesame oil, and finely chopped green onion in a small bowl." } },
+      { id: "step-013", order: 13, instructions: { en: "Cut the pancakes into small squares or wedges using a sharp knife. Arrange on a serving plate." } },
+      { id: "step-014", order: 14, instructions: { en: "Serve the pancake hot with the dipping sauce on the side." } }
     ],
     equipment: ["large non-stick pan", "bowls", "spatula"],
     admin_notes: "Crispy on outside, chewy inside. Perfect with Korean rice wine (makgeolli)."
@@ -443,6 +520,14 @@ recipes_data = [
       }
     ],
     steps: [
+      { id: "step-001", order: 1, instructions: { en: "Combine chicken, soy sauce, and garlic in a large bowl. Mix well. Marinate the chicken for at least 1 hour." } },
+      { id: "step-002", order: 2, instructions: { en: "Heat a cooking pot and add cooking oil." } },
+      { id: "step-003", order: 3, instructions: { en: "Once the oil is hot enough, pan-fry the marinated chicken for 2 minutes per side." } },
+      { id: "step-004", order: 4, instructions: { en: "Pour in the remaining marinade, including garlic, and add water. Bring to a boil." } },
+      { id: "step-005", order: 5, instructions: { en: "Add dried bay leaves and whole peppercorn. Simmer for 30 minutes or until the chicken gets tender." } },
+      { id: "step-006", order: 6, instructions: { en: "Add the vinegar and let it cook for 10 minutes." } },
+      { id: "step-007", order: 7, instructions: { en: "Add sugar and salt to taste. Stir thoroughly." } },
+      { id: "step-008", order: 8, instructions: { en: "Remove from heat. Serve hot with rice." } }
     ],
     equipment: ["pot with lid", "tongs"],
     admin_notes: "National dish of Philippines. Tangy, savory, and incredibly flavorful."
@@ -485,6 +570,14 @@ recipes_data = [
       }
     ],
     steps: [
+      { id: "step-001", order: 1, instructions: { en: "In a bowl, combine chicken with all of the ingredients for the chicken marinade; let marinate for 30 minutes to an hour (or overnight if time allows)." } },
+      { id: "step-002", order: 2, instructions: { en: "Heat oil in a large skillet or pot over medium-high heat. When sizzling, add chicken pieces in batches of two or three, making sure not to crowd the pan. Fry until browned for only 3 minutes on each side." } },
+      { id: "step-003", order: 3, instructions: { en: "Set chicken aside and keep warm. Heat butter or ghee in the same pan. Fry the onions until they start to sweat (about 6 minutes) while scraping up any browned bits stuck on the bottom of the pan." } },
+      { id: "step-004", order: 4, instructions: { en: "Add garlic, ginger, and ground spices. Cook for about 20 seconds until aromatic, stirring occasionally." } },
+      { id: "step-005", order: 5, instructions: { en: "Add crushed tomatoes, chili powder, and salt. Let simmer for about 10-15 minutes, stirring occasionally until sauce thickens and becomes a deep brown red color." } },
+      { id: "step-006", order: 6, instructions: { en: "Remove from heat, scoop mixture into a blender and blend until smooth. You may need to add a couple tablespoons of water to help it blend (up to 1/4 cup). Work in batches depending on the size of your blender." } },
+      { id: "step-007", order: 7, instructions: { en: "Pour the puréed sauce back into the pan. Stir the cream, sugar, and crushed kasoori methi (or fenugreek leaves) through the sauce. Add the chicken with juices back into the pan and cook for an additional 8-10 minutes until chicken is cooked through and the sauce is thick and bubbling." } },
+      { id: "step-008", order: 8, instructions: { en: "Garnish with chopped cilantro and serve with fresh, hot garlic butter rice and fresh homemade Naan bread!" } }
     ],
     equipment: ["large pan", "bowl"],
     admin_notes: "Rich, creamy Indian classic. Best served with naan bread."
@@ -522,6 +615,18 @@ recipes_data = [
       }
     ],
     steps: [
+      { id: "step-001", order: 1, instructions: { en: "Combine together the water, sugar and yeast in a mixing bowl. Let sit for 5-10 minutes or until the mixture begins to bubble on top." } },
+      { id: "step-002", order: 2, instructions: { en: "Add in the milk, yogurt, oil, minced garlic, flour, baking powder and salt to the yeast mixture. Mix until the dough comes together using your hands." } },
+      { id: "step-003", order: 3, instructions: { en: "Turn dough out onto lightly floured surface. Use floured hands to knead the dough until smooth, about 3 to 5 minutes." } },
+      { id: "step-004", order: 4, instructions: { en: "Lightly grease the same mixing bowl with a small spray of cooking oil. Transfer dough to the bowl and cover with plastic wrap. Let rest at room temperature for about an hour until doubled in size." } },
+      { id: "step-005", order: 5, instructions: { en: "Divide the dough into 10 equal portions and roll into balls." } },
+      { id: "step-006", order: 6, instructions: { en: "Use a rolling pin to roll each ball into a large oval, approximately 6 inches long and 1/8-inch thick." } },
+      { id: "step-007", order: 7, instructions: { en: "Heat a large cast iron skillet over medium-high heat. Grease skillet all over with 1/2 teaspoon of the extra oil." } },
+      { id: "step-008", order: 8, instructions: { en: "Place one piece of the naan on the oiled hot skillet and cook until bubbles form on top, about 1-2 minutes. While cooking, brush the top with a little oil." } },
+      { id: "step-009", order: 9, instructions: { en: "Flip the naan and cook for another 1-2 minutes, until large golden spots appear on the bottom." } },
+      { id: "step-010", order: 10, instructions: { en: "Remove from the skillet and wrap in a clean kitchen towel to keep warm. Repeat with the remaining naan pieces." } },
+      { id: "step-011", order: 11, instructions: { en: "Combine melted butter and minced garlic together in a bowl." } },
+      { id: "step-012", order: 12, instructions: { en: "Brush each cooked naan with the garlic butter and top with the fresh herb of your choosing." } }
     ],
     equipment: ["bowls", "rolling pin", "cast iron pan", "brush", "clean towel"],
     admin_notes: "Fresh naan is incomparably better than store-bought. Perfect with curry."
@@ -568,6 +673,16 @@ recipes_data = [
       }
     ],
     steps: [
+      { id: "step-001", order: 1, instructions: { en: "Gather all your ingredients." } },
+      { id: "step-002", order: 2, instructions: { en: "Cook sausage, ground beef, onion, and garlic in a Dutch oven over medium heat until well browned." } },
+      { id: "step-003", order: 3, instructions: { en: "Stir in crushed tomatoes, tomato sauce, tomato paste, and water. Season with sugar, 2 tablespoons parsley, basil, 1 teaspoon salt, Italian seasoning, fennel seeds, and pepper. Simmer, covered, for about 1½ hours, stirring occasionally." } },
+      { id: "step-004", order: 4, instructions: { en: "Bring a large pot of lightly salted water to a boil. Cook lasagna noodles in boiling water for 8 to 10 minutes. Drain noodles, and rinse with cold water." } },
+      { id: "step-005", order: 5, instructions: { en: "In a mixing bowl, combine ricotta cheese with egg, remaining 2 tablespoons parsley, and ½ teaspoon salt." } },
+      { id: "step-006", order: 6, instructions: { en: "Preheat the oven to 375 degrees F (190 degrees C)." } },
+      { id: "step-007", order: 7, instructions: { en: "Spread 1½ cups of meat sauce in the bottom of a 9x13 inch baking dish. Arrange 6 noodles lengthwise over meat sauce. Spread with half of the ricotta cheese mixture. Top with a third of mozzarella cheese slices. Spoon 1½ cups meat sauce over mozzarella, and sprinkle with ¼ cup Parmesan cheese." } },
+      { id: "step-008", order: 8, instructions: { en: "Repeat layers, and top with remaining mozzarella and Parmesan cheese. Cover with aluminum foil, making sure the foil does not touch the cheese." } },
+      { id: "step-009", order: 9, instructions: { en: "Bake in the preheated oven for 25 minutes. Remove the foil and bake for an additional 25 minutes." } },
+      { id: "step-010", order: 10, instructions: { en: "Rest lasagna for 15 minutes before serving." } }
     ],
     equipment: ["large pot", "pot", "9x13 inch baking dish", "aluminum foil", "oven"],
     admin_notes: "Classic comfort food. Can be assembled ahead and refrigerated before baking."
@@ -608,6 +723,33 @@ recipes_data = [
       }
     ],
     steps: [
+      { id: "step-001", order: 1, instructions: { en: "Finely mince ½ onion using the mijingiri technique: make vertical slices, then horizontal slices while keeping the root intact, then perpendicular cuts." } },
+      { id: "step-002", order: 2, instructions: { en: "Heat a large pan over medium heat with 1 Tbsp oil." } },
+      { id: "step-003", order: 3, instructions: { en: "Add minced onions and sauté until tender and almost translucent." } },
+      { id: "step-004", order: 4, instructions: { en: "Transfer sautéed onions to a bowl to cool." } },
+      { id: "step-005", order: 5, instructions: { en: "Once cooled, combine onions with ¾ lb ground beef and pork blend (3:1 ratio recommended) in a large bowl." } },
+      { id: "step-006", order: 6, instructions: { en: "Add ½ tsp kosher salt, black pepper, and ½ tsp nutmeg to the meat mixture." } },
+      { id: "step-007", order: 7, instructions: { en: "Mix in ⅓ cup panko breadcrumbs, 2 Tbsp milk, and 1 large egg using a spatula." } },
+      { id: "step-008", order: 8, instructions: { en: "Switch to hand-mixing and knead the mixture until it becomes sticky and pale in color." } },
+      { id: "step-009", order: 9, instructions: { en: "Divide mixture into 4 portions (4 oz each) or 6 smaller portions." } },
+      { id: "step-010", order: 10, instructions: { en: "Toss each portion between your hands about five times to release any air inside." } },
+      { id: "step-011", order: 11, instructions: { en: "Shape each portion into an oval patty and place on a tray." } },
+      { id: "step-012", order: 12, instructions: { en: "Cover patties with plastic wrap and refrigerate for at least 30 minutes." } },
+      { id: "step-013", order: 13, instructions: { en: "Heat a large pan over medium heat with 1 Tbsp oil." } },
+      { id: "step-014", order: 14, instructions: { en: "Place the patties gently into the pan." } },
+      { id: "step-015", order: 15, instructions: { en: "Indent the center of each patty with two fingers." } },
+      { id: "step-016", order: 16, instructions: { en: "Cook for approximately 3 minutes until the bottom browns." } },
+      { id: "step-017", order: 17, instructions: { en: "Flip the patties and cook for another 3 minutes." } },
+      { id: "step-018", order: 18, instructions: { en: "Add 3 Tbsp red wine to the pan and reduce heat to low." } },
+      { id: "step-019", order: 19, instructions: { en: "Cover the pan with a lid and cook for 5-7 minutes until fully cooked." } },
+      { id: "step-020", order: 20, instructions: { en: "Check doneness by inserting a skewer into the center of a patty. If clear juice comes out, the patties are fully cooked." } },
+      { id: "step-021", order: 21, instructions: { en: "Increase heat to medium to evaporate any remaining alcohol from the wine." } },
+      { id: "step-022", order: 22, instructions: { en: "Transfer the cooked patties to serving plates." } },
+      { id: "step-023", order: 23, instructions: { en: "In the same pan, add 1 Tbsp butter, 3 Tbsp ketchup, and 3 Tbsp tonkatsu sauce." } },
+      { id: "step-024", order: 24, instructions: { en: "Add 3 Tbsp red wine and 3 Tbsp water to the sauce mixture." } },
+      { id: "step-025", order: 25, instructions: { en: "Mix the sauce ingredients well and bring to a simmer over medium heat until the alcohol evaporates." } },
+      { id: "step-026", order: 26, instructions: { en: "Cook the sauce until thickened. The sauce is ready when the spatula leaves a line on the bottom of the pan." } },
+      { id: "step-027", order: 27, instructions: { en: "Drizzle the sauce over the patties and serve remaining sauce on the side." } }
     ],
     equipment: ["pan with lid", "bowls"],
     admin_notes: "Japanese-style hamburger steak. Juicy and flavorful with sweet-savory sauce."

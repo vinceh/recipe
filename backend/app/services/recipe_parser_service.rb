@@ -18,7 +18,7 @@ class RecipeParserService < AiService
   end
 
   # Parse a recipe from a URL
-  # Uses web scraping (server-side fetch) since Claude cannot fetch URLs itself
+  # Uses Claude's native web search capability to access and parse URLs
   # Returns structured recipe JSON with source_url
   def parse_url(url)
     # Validate URL format
@@ -26,12 +26,22 @@ class RecipeParserService < AiService
 
     Rails.logger.info("Attempting to parse recipe from URL: #{url}")
 
-    # Scrape the URL content server-side and send to Claude for parsing
-    Rails.logger.info("Fetching and parsing URL content for #{url}")
-    result = parse_url_with_scraping(url)
+    system_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_url_system')
+    user_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_url_user')
 
+    rendered_user_prompt = user_prompt.render(url: url)
+
+    Rails.logger.info("Using Claude web search to access URL: #{url}")
+    response = call_claude(
+      system_prompt: system_prompt.prompt_text,
+      user_prompt: rendered_user_prompt,
+      max_tokens: 4096,
+      enable_websearch: true
+    )
+
+    result = parse_response(response)
     if result
-      Rails.logger.info("Successfully parsed URL using web scraping")
+      Rails.logger.info("Successfully parsed URL using Claude web search")
       result['source_url'] = url
       return result
     end
@@ -72,46 +82,6 @@ class RecipeParserService < AiService
     end
   end
 
-  # Try to parse URL with AI direct access (AI fetches the URL itself)
-  def parse_url_direct(url)
-    system_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_url_direct_system')
-    user_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_url_direct_user')
-
-    rendered_user_prompt = user_prompt.render(url: url)
-
-    response = call_claude(
-      system_prompt: system_prompt.prompt_text,
-      user_prompt: rendered_user_prompt,
-      max_tokens: 4096
-    )
-
-    # Check if AI couldn't access the URL
-    return nil if response.include?('ERROR: Cannot access URL')
-
-    parse_response(response)
-  end
-
-  # Parse URL with web scraping fallback
-  def parse_url_with_scraping(url)
-    system_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_url_system')
-    user_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_url_user')
-
-    # Scrape the URL content
-    scraped_content = scrape_url(url)
-
-    rendered_user_prompt = user_prompt.render(
-      url: url,
-      content: scraped_content
-    )
-
-    response = call_claude(
-      system_prompt: system_prompt.prompt_text,
-      user_prompt: rendered_user_prompt,
-      max_tokens: 4096
-    )
-
-    parse_response(response)
-  end
 
   # Parse Claude's response and extract JSON
   def parse_response(response)
@@ -129,63 +99,6 @@ class RecipeParserService < AiService
   rescue JSON::ParserError => e
     Rails.logger.error("Recipe parsing failed: #{e.message}")
     nil
-  end
-
-  # Scrape content from URL
-  def scrape_url(url)
-    require 'net/http'
-    require 'uri'
-
-    uri = URI.parse(url)
-
-    # Create HTTP client with SSL configuration
-    http = Net::HTTP.new(uri.host, uri.port)
-    http.use_ssl = (uri.scheme == 'https')
-
-    # In development, skip SSL verification (not recommended for production)
-    if Rails.env.development?
-      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-    end
-
-    http.read_timeout = 30
-    http.open_timeout = 30
-
-    request = Net::HTTP::Get.new(uri.request_uri)
-    request['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-    request['Accept'] = 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
-    request['Accept-Language'] = 'en-US,en;q=0.5'
-    request['Accept-Encoding'] = 'identity'
-    request['Referer'] = 'https://www.allrecipes.com/'
-    request['Cache-Control'] = 'no-cache'
-    request['Connection'] = 'keep-alive'
-    request['Upgrade-Insecure-Requests'] = '1'
-
-    response = http.request(request)
-
-    if response.is_a?(Net::HTTPSuccess)
-      # Strip HTML tags for simpler parsing
-      strip_html(response.body)
-    elsif response.code == '403'
-      raise "This website blocks automated access. Please use the text import feature instead - copy and paste the recipe text directly."
-    elsif response.code == '401'
-      raise "Authentication required. Please use the text import feature instead."
-    elsif response.code.start_with?('4')
-      raise "Website returned error #{response.code}. This website may block scraping. Try using the text import feature instead."
-    else
-      raise "Failed to fetch URL: #{response.code} #{response.message}"
-    end
-  rescue StandardError => e
-    Rails.logger.error("URL scraping failed for #{url}: #{e.message}")
-    raise "Unable to fetch recipe from URL: #{e.message}"
-  end
-
-  # Strip HTML tags from content
-  def strip_html(html)
-    html.gsub(/<script.*?<\/script>/m, '')
-        .gsub(/<style.*?<\/style>/m, '')
-        .gsub(/<.*?>/m, ' ')
-        .gsub(/\s+/, ' ')
-        .strip
   end
 
   # Prepare image for Claude Vision API

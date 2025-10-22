@@ -301,9 +301,9 @@
           "timeout": "请求超时",
           "aiUnavailable": "AI服务暂时无法使用。请稍后再试。",
           "networkError": "连接失败。请检查您的网络连接。",
-          "blockedScraping": "该网站阻止自动访问。",
-          "possibleBlocking": "该网站可能阻止自动抓取。请尝试使用文本导入功能。",
-          "useTextImport": "请尝试使用文本导入功能 - 直接复制并粘贴食谱文本。",
+          "blockedScraping": "无法访问此网站。",
+          "possibleBlocking": "无法访问该网站或提取食谱数据。",
+          "useTextImport": "您可以使用文本导入功能 - 直接复制并粘贴食谱文本。",
           "generic": "发生错误。请重试。"
         }
       }

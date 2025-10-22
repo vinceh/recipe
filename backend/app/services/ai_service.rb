@@ -4,7 +4,7 @@ class AiService
     @last_call_time = nil
   end
 
-  def call_claude(system_prompt:, user_prompt:, max_tokens: 2048)
+  def call_claude(system_prompt:, user_prompt:, max_tokens: 2048, enable_websearch: false)
     # Rate limiting: ensure 1 second between calls
     enforce_rate_limit!
 
@@ -13,19 +13,22 @@ class AiService
     max_retries = 3
 
     begin
-      response = @client.messages(
-        parameters: {
-          model: ENV.fetch('ANTHROPIC_MODEL', 'claude-3-5-sonnet-20241022'),
-          max_tokens: max_tokens,
-          system: system_prompt,
-          messages: [
-            {
-              role: 'user',
-              content: user_prompt
-            }
-          ]
-        }
-      )
+      params = {
+        model: ENV.fetch('ANTHROPIC_MODEL', 'claude-3-5-sonnet-20241022'),
+        max_tokens: max_tokens,
+        system: system_prompt,
+        messages: [
+          {
+            role: 'user',
+            content: user_prompt
+          }
+        ]
+      }
+
+      # Enable web search if requested
+      params[:betas] = ['interop-2024-12-19'] if enable_websearch
+
+      response = @client.messages(parameters: params)
 
       # Log API usage for cost tracking
       log_api_usage(

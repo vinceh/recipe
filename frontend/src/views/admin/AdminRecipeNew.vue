@@ -173,12 +173,8 @@ async function handleImportUrl(url: string) {
       errorMessage = e.message
     }
 
-    // Check if this is an anti-scraping error - show the helpful message directly
-    if (errorMessage.includes('blocks automated access') || errorMessage.includes('blocks scraping')) {
-      urlImportDialogRef.value.setError(t('admin.recipes.urlImportDialog.errors.blockedScraping') + ' ' + t('admin.recipes.urlImportDialog.errors.useTextImport'))
-    } else if (errorMessage.includes('website may block scraping')) {
-      urlImportDialogRef.value.setError(t('admin.recipes.urlImportDialog.errors.possibleBlocking'))
-    } else if (errorMessage.includes('Could not access') || errorMessage.includes('Cannot access') || errorMessage.includes('403') || errorMessage.includes('404')) {
+    // Handle web search errors
+    if (errorMessage.includes('Could not access') || errorMessage.includes('Cannot access') || errorMessage.includes('403') || errorMessage.includes('404')) {
       urlImportDialogRef.value.setError(t('admin.recipes.urlImportDialog.errors.cannotAccess'))
     } else if (errorMessage.includes('Could not find') || errorMessage.includes('No recipe') || errorMessage.includes('not find')) {
       urlImportDialogRef.value.setError(t('admin.recipes.urlImportDialog.errors.noRecipe'))

@@ -13,3 +13,7 @@ don't say affirming things like "you're absolutely right!".  be positive, but ke
 when doing any work, always break-down the work into atomic, smallest-unit tasks and make a list and show the user and get confirmation before starting
 
 when updating documentation, especially .md files, do not add any fluff into the documentation.  don't add justifications for adding the documentation, or why the document was updated, or what updating the document did.  just update the document with the information that's required and that's it
+
+Context-pollution delegation: When about to execute terminal commands that typically generate large output volumes and pollute context—including unfiltered grep searches, find commands with broad scope, git log/diff without limits, npm/yarn list, full test/build output, tree without depth limits, or similar—delegate to a haiku sub-agent task instead. This keeps context usage low by letting the agent return only the essential findings, not raw command output.
+
+when planning, don't need to ever think about how long something will take, just skip those considerations
