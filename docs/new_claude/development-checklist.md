@@ -729,9 +729,9 @@ See `DOCUMENTATION-WORKFLOW.md` for the complete process.
   - Validation for required fields
   - [x] Document in component-library.md
 - [ ] Create RecipeImportModal.vue (3 import methods)
-  - Tab 1: Text block import (textarea + parse button)
-  - Tab 2: URL import (URL input + parse button)
-  - Tab 3: Image import (file upload + parse button)
+  - [x] Tab 1: Text block import (textarea + parse button)
+  - [ ] Tab 2: URL import (URL input + parse button)
+  - [ ] Tab 3: Image import (file upload + parse button)
   - All tabs show parsed result in RecipeForm for review/edit
   - Loading states during AI parsing
   - Error handling for failed imports

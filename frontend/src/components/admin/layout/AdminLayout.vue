@@ -32,7 +32,7 @@ const closeSidebar = () => {
 
 <style scoped>
 .admin-layout {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: var(--color-background-secondary);
