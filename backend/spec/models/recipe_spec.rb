@@ -1,6 +1,39 @@
 require 'rails_helper'
 
 RSpec.describe Recipe, type: :model do
+  def create_dietary_tag(key, display_name = nil)
+    DataReference.find_or_create_by(reference_type: 'dietary_tag', key: key) do |r|
+      r.display_name = display_name || key.titleize
+    end
+  end
+
+  def create_dish_type(key, display_name = nil)
+    DataReference.find_or_create_by(reference_type: 'dish_type', key: key) do |r|
+      r.display_name = display_name || key.titleize
+    end
+  end
+
+  def create_cuisine(key, display_name = nil)
+    DataReference.find_or_create_by(reference_type: 'cuisine', key: key) do |r|
+      r.display_name = display_name || key.titleize
+    end
+  end
+
+  def create_recipe_type(key, display_name = nil)
+    DataReference.find_or_create_by(reference_type: 'recipe_type', key: key) do |r|
+      r.display_name = display_name || key.titleize
+    end
+  end
+
+  def create_equipment(name)
+    Equipment.find_or_create_by!(canonical_name: name)
+  end
+
+  def create_ingredient(name, category = nil)
+    Ingredient.find_or_create_by!(canonical_name: name) do |i|
+      i.category = category || 'other'
+    end
+  end
   describe 'validations' do
     it 'requires name to be present' do
       recipe = build(:recipe, name: nil)
@@ -87,7 +120,7 @@ RSpec.describe Recipe, type: :model do
 
     it 'has many dietary tags through recipe dietary tags' do
       recipe = create(:recipe)
-      veg = DataReference.find_or_create_by(reference_type: 'dietary_tag', key: 'veg') { |r| r.display_name = 'Veg' }
+      veg = create_dietary_tag('veg', 'Veg')
       recipe.recipe_dietary_tags.create!(data_reference_id: veg.id)
 
       expect(recipe.dietary_tags).to be_a(ActiveRecord::Associations::CollectionProxy)
@@ -96,7 +129,7 @@ RSpec.describe Recipe, type: :model do
 
     it 'has many dish types through recipe dish types' do
       recipe = create(:recipe)
-      main = DataReference.find_or_create_by(reference_type: 'dish_type', key: 'main') { |r| r.display_name = 'Main' }
+      main = create_dish_type('main', 'Main')
       recipe.recipe_dish_types.create!(data_reference_id: main.id)
 
       expect(recipe.dish_types).to be_a(ActiveRecord::Associations::CollectionProxy)
@@ -105,7 +138,7 @@ RSpec.describe Recipe, type: :model do
 
     it 'has many cuisines through recipe cuisines' do
       recipe = create(:recipe)
-      jp = DataReference.find_or_create_by(reference_type: 'cuisine', key: 'jp') { |r| r.display_name = 'JP' }
+      jp = create_cuisine('jp', 'JP')
       recipe.recipe_cuisines.create!(data_reference_id: jp.id)
 
       expect(recipe.cuisines).to be_a(ActiveRecord::Associations::CollectionProxy)
@@ -114,7 +147,7 @@ RSpec.describe Recipe, type: :model do
 
     it 'has many recipe types through recipe recipe types' do
       recipe = create(:recipe)
-      quick = DataReference.find_or_create_by(reference_type: 'recipe_type', key: 'quick') { |r| r.display_name = 'Quick' }
+      quick = create_recipe_type('quick', 'Quick')
       recipe.recipe_recipe_types.create!(data_reference_id: quick.id)
 
       expect(recipe.recipe_types).to be_a(ActiveRecord::Associations::CollectionProxy)
@@ -598,7 +631,7 @@ RSpec.describe Recipe, type: :model do
       recipe.recipe_dietary_tags.create!(data_reference_id: vegetarian.id)
 
       expect(recipe.dietary_tags).to include(vegetarian)
-      expect(vegetarian.recipes).to include(recipe)
+      expect(vegetarian.recipes_as_dietary_tag).to include(recipe)
     end
   end
 end

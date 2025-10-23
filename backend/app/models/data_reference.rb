@@ -5,7 +5,7 @@ class DataReference < ApplicationRecord
   has_many :recipe_cuisines, dependent: :destroy
   has_many :recipe_recipe_types, dependent: :destroy
 
-  has_many :recipes, -> { distinct }, through: :recipe_dietary_tags, source: :recipe
+  has_many :recipes_as_dietary_tag, class_name: 'Recipe', through: :recipe_dietary_tags, source: :recipe
   has_many :recipes_as_dish_type, class_name: 'Recipe', through: :recipe_dish_types, source: :recipe
   has_many :recipes_as_cuisine, class_name: 'Recipe', through: :recipe_cuisines, source: :recipe
   has_many :recipes_as_recipe_type, class_name: 'Recipe', through: :recipe_recipe_types, source: :recipe

@@ -4,7 +4,7 @@ class Recipe < ApplicationRecord
   has_many :user_favorites, dependent: :destroy
 
   # Normalized schema associations
-  has_many :ingredient_groups, dependent: :destroy
+  has_many :ingredient_groups, -> { order(:position) }, dependent: :destroy
   has_many :recipe_ingredients, through: :ingredient_groups
   has_many :recipe_steps, dependent: :destroy
   has_one :recipe_nutrition, dependent: :destroy
