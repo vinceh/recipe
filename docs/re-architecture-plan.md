@@ -715,7 +715,55 @@ end
 - [x] Write test suite covering Phase 1 ACs (50 tests covering validations, associations, normalized schema)
 - [x] All tests passing (50/50 pass, 0 failures)
 - [x] Add inverse associations to Ingredient and DataReference models
+- [x] Run code quality audit: **38 total issues identified**
+  - [x] Address all HIGH severity issues (8 issues: H-1 through H-8)
+    - H-1: Fixed ambiguous `recipes` association → `recipes_as_dietary_tag`
+    - H-2 through H-4: Added validations to IngredientGroup, RecipeIngredient, Equipment
+    - H-5: Fixed cascade deletion test
+    - H-6, H-7: Removed dangerous default_scope usage
+    - H-8: Fixed hardcoded count assertions
+  - [x] Address key MEDIUM severity issues (3 of 15 addressed: M-1, M-2, M-15)
+    - M-1, M-2: Extracted duplicated test code patterns with helper methods
+    - M-15: Added presence validations to all join table models
+  - [ ] Deferred 12 MEDIUM + 15 LOW severity issues (documented below)
 - [x] Commit: `[Phase 1] Step 6: Add RSpec tests for schema normalization`
+- [x] Commit: `[Phase 1] Step 6: Address code quality audit findings`
+
+### Code Quality Audit Summary - Phase 1 Step 6
+
+**Audit Results:** 38 total issues found across 4 files
+
+**Issues Fixed (11 total):**
+- 8 HIGH severity issues (100% addressed)
+- 3 MEDIUM severity issues (20% of MEDIUM issues)
+- 0 LOW severity issues (deferred)
+
+**Deferred Issues (27 total) - Action Items for Future Phases:**
+
+**MEDIUM Severity (12 deferred - Phase 2-3 priorities):**
+- M-3: Add position uniqueness constraint tests → Phase 2 (model specs)
+- M-4: Add step_number uniqueness constraint tests → Phase 2 (model specs)
+- M-5: Standardize test description phrasing → Phase 3 (documentation pass)
+- M-6: Add edge case tests for precision_reason → Phase 2 (model specs)
+- M-7: Add equipment filtering tests → Phase 2 (API endpoints)
+- M-8: Add BigDecimal precision verification → Phase 3 (validation tests)
+- M-9: Add null constraint tests for RecipeNutrition → Phase 2 (model specs)
+- M-10: Improve generic test descriptions → Phase 3 (documentation pass)
+- M-11: Standardize let vs inline variable usage → Phase 3 (test refactoring)
+- M-12: Add N+1 query performance tests → Phase 6 (performance testing)
+- M-13: Add factory traits for recipe variations → Phase 2 (test improvements)
+- M-14: Add referential integrity tests for all DataReferences → Phase 2 (model specs)
+
+**LOW Severity (15 deferred - Phase 3+ polish):**
+- L-1 through L-7: Style and formatting consistency → Phase 3 (test cleanup)
+- L-8: Inconsistent quoting style → Phase 3 (style pass)
+- L-9: Factory block usage optimization → Phase 3 (minor refactor)
+- L-10: Expand cascade deletion test coverage → Phase 2 (test enhancement)
+- L-11: Create custom RSpec matchers → Phase 3 (refactoring)
+- L-12: Add transient attributes to factory → Phase 2 (test improvement)
+- L-13: Split long test file into modules → Phase 3 (organization)
+- L-14: Consider migrating category to DataReference → Phase 4+ (i18n consideration)
+- L-15: Prefer create! over create in tests → Phase 3 (test consistency)
 
 **Step 7: Final Review**
 - [ ] Review plan against actual discoveries
