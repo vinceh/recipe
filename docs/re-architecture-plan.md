@@ -480,23 +480,27 @@ end
 
 ### Phase 4: Mobility Integration
 
-**Step 1: Write Acceptance Criteria for Mobility Translation System**
-- [ ] Define ACs for Mobility installation and configuration (UUID foreign keys, Table backend)
-- [ ] Define ACs for translated field behavior per model:
+**Step 1: Write Acceptance Criteria for Mobility Translation System** ✅ COMPLETE
+- [x] Define ACs for Mobility installation and configuration (UUID foreign keys, Table backend)
+- [x] Define ACs for translated field behavior per model:
   - Recipe: translates :name
   - IngredientGroup: translates :name
   - RecipeIngredient: translates :ingredient_name, :preparation_notes
   - Equipment: translates :canonical_name
   - RecipeStep: translates :instruction_original, :instruction_easier, :instruction_no_equipment
   - DataReference: translates :display_name
-- [ ] Define ACs for locale switching (I18n.locale behavior)
-- [ ] Define ACs for fallback behavior (when translation missing, fallback to source_language)
-- [ ] Define ACs for reading/writing translations via Mobility API
-- [ ] Define ACs for querying translated fields (Model.i18n.where)
-- [ ] Run acceptance-test-writing skill to review, identify gaps, and refine
-- [ ] Update ACs based on skill recommendations
-- [ ] Commit ACs document
-- [ ] Request approval before Step 2
+- [x] Define ACs for locale switching (I18n.locale behavior)
+- [x] Define ACs for fallback behavior (when translation missing, fallback to source_language)
+- [x] Define ACs for reading/writing translations via Mobility API
+- [x] Define ACs for querying translated fields (Model.i18n.where)
+- [x] Run acceptance-test-writing skill to review, identify gaps, and refine
+  - ✅ Identified 7 critical issues (implementation-focused configs, multi-behavior ACs, ambiguous specs)
+  - ✅ Identified 5 minor issues (unnecessary details, incomplete scenarios)
+  - ✅ Identified 8 coverage gaps (translation deletion, concurrent updates, invalid locale, migration rollback, etc.)
+  - ✅ Generated 9 new ACs to address gaps
+- [x] Update ACs based on skill recommendations
+- [x] Commit ACs document: `Phase 4: Write and revise Mobility Translation System acceptance criteria`
+- ⏳ **READY FOR APPROVAL** before proceeding to Step 2
 
 **Step 2: Fix Field Name Mismatch with Migration**
 - [ ] Create migration to rename `recipe_ingredient_translations.name` to `ingredient_name`
