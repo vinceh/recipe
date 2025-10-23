@@ -22,16 +22,13 @@ module RecipeSerializer
 
   def serialize_recipe_steps(recipe)
     recipe.recipe_steps.order(:step_number).map do |step|
-      translation = step.recipe_step_translations.find_by(locale: recipe.source_language) ||
-                    step.recipe_step_translations.first
-
       {
         id: "step-#{step.step_number.to_s.rjust(3, '0')}",
         order: step.step_number,
         instructions: {
-          original: translation&.instruction_original,
-          easier: translation&.instruction_easier,
-          no_equipment: translation&.instruction_no_equipment
+          original: step.instruction_original,
+          easier: step.instruction_easier,
+          no_equipment: step.instruction_no_equipment
         }.compact
       }
     end

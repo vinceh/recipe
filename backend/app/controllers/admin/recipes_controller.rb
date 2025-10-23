@@ -344,6 +344,9 @@ module Admin
         recipe_steps_attributes: [
           :id, :step_number, :instruction_original, :instruction_easier, :instruction_no_equipment, :_destroy
         ],
+        recipe_nutrition_attributes: [
+          :id, :calories, :protein_g, :carbs_g, :fat_g, :fiber_g, :sodium_mg, :sugar_g, :_destroy
+        ],
         recipe_equipment_attributes: [
           :id, :equipment_id, :optional, :_destroy
         ],

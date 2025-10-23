@@ -65,7 +65,7 @@ All ACs go into `docs/new_claude/acceptance-criteria.md` in GIVEN/WHEN/THEN form
      - Update ACs based on sub-agent recommendations
      - Commit the ACs
      - Then request approval before proceeding to Step 2
-   - **For other steps:**
+   - **For All Steps Besides Step 1**
      - Work through all subtasks to completion
      - Mark each completed subtask: `- [x] Task name`
      - Commit the step implementation with message: `[Phase X] Step N: <description>`

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_10_24_000001) do
+ActiveRecord::Schema[8.0].define(version: 2025_10_24_000002) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pg_trgm"
@@ -260,6 +260,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_24_000001) do
     t.integer "timing_minutes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "instruction_original"
+    t.text "instruction_easier"
+    t.text "instruction_no_equipment"
     t.index ["recipe_id", "step_number"], name: "index_recipe_steps_on_recipe_id_and_step_number", unique: true
     t.index ["recipe_id"], name: "index_recipe_steps_on_recipe_id"
   end
