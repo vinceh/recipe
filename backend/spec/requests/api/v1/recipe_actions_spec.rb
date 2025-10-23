@@ -4,22 +4,22 @@ RSpec.describe 'Api::V1::RecipeActions', type: :request do
   let(:headers) { { 'ACCEPT' => 'application/json', 'CONTENT_TYPE' => 'application/json' } }
 
   let(:recipe) do
-    Recipe.create!(
+    recipe = Recipe.create!(
       name: 'Test Recipe',
-      language: 'en',
-      servings: { 'original' => 4, 'min' => 2, 'max' => 8 },
-      timing: { 'prep_minutes' => 10, 'cook_minutes' => 20, 'total_minutes' => 30 },
-      ingredient_groups: [
-        {
-          'name' => 'Main Ingredients',
-          'items' => [
-            { 'name' => 'flour', 'amount' => '2', 'unit' => 'cup' },
-            { 'name' => 'sugar', 'amount' => '100', 'unit' => 'g' }
-          ]
-        }
-      ],
-      steps: []
+      source_language: 'en',
+      servings_original: 4,
+      servings_min: 2,
+      servings_max: 8,
+      prep_minutes: 10,
+      cook_minutes: 20,
+      total_minutes: 30
     )
+
+    group = recipe.ingredient_groups.create!(name: 'Main Ingredients', position: 1)
+    group.recipe_ingredients.create!(ingredient_name: 'flour', amount: 2, unit: 'cup', position: 1)
+    group.recipe_ingredients.create!(ingredient_name: 'sugar', amount: 100, unit: 'g', position: 2)
+
+    recipe
   end
 
   describe 'POST /api/v1/recipes/:id/scale' do
