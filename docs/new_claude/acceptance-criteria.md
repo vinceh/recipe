@@ -25,6 +25,7 @@ This document defines atomic, testable acceptance criteria for all Recipe App MV
 8. [Admin Recipe Management](#admin-recipe-management)
 9. [Recipe Viewing](#recipe-viewing)
 10. [Performance & Reliability](#performance--reliability)
+11. [Phase 3: Model Validations](#phase-3-model-validations)
 
 ---
 
@@ -940,9 +941,245 @@ This document defines atomic, testable acceptance criteria for all Recipe App MV
 
 ---
 
+## Phase 3: Model Validations
+
+### Recipe Model
+
+#### AC-MODEL-RECIPE-001: Name Presence
+**GIVEN** a Recipe model instance
+**WHEN** attempting to save without a name
+**THEN** validation should fail with error "name can't be blank"
+**AND** the record should not be persisted
+
+#### AC-MODEL-RECIPE-002: Source Language Default
+**GIVEN** a Recipe model instance created without source_language
+**WHEN** the record is saved
+**THEN** source_language should default to "en"
+**AND** the record should be persisted successfully
+
+#### AC-MODEL-RECIPE-003: Name Uniqueness
+**GIVEN** a Recipe with name "Chocolate Chip Cookies"
+**WHEN** attempting to create another Recipe with the same name
+**THEN** validation should fail with error "name has already been taken"
+**AND** the second record should not be persisted
+
+#### AC-MODEL-RECIPE-004: Source URL Optional
+**GIVEN** a Recipe model instance
+**WHEN** source_url is not provided
+**THEN** validation should pass
+**AND** the record should be persisted with source_url as nil
+
+#### AC-MODEL-RECIPE-005: Requires Precision Boolean
+**GIVEN** a Recipe model instance
+**WHEN** requires_precision is not explicitly set
+**THEN** it should default to false
+**AND** the record should be persisted successfully
+
+### User Model
+
+#### AC-MODEL-USER-001: Email Presence
+**GIVEN** a User model instance
+**WHEN** attempting to save without an email
+**THEN** validation should fail with error "email can't be blank"
+**AND** the record should not be persisted
+
+#### AC-MODEL-USER-002: Email Format Validation
+**GIVEN** a User model instance
+**WHEN** attempting to save with invalid email format (e.g., "not-an-email")
+**THEN** validation should fail with error "email is invalid"
+**AND** the record should not be persisted
+
+#### AC-MODEL-USER-003: Email Uniqueness
+**GIVEN** a User with email "john@example.com"
+**WHEN** attempting to create another User with the same email
+**THEN** validation should fail with error "email has already been taken"
+**AND** the second record should not be persisted
+
+#### AC-MODEL-USER-004: Password Presence
+**GIVEN** a User model instance
+**WHEN** attempting to save without a password
+**THEN** validation should fail with error "password can't be blank"
+**AND** the record should not be persisted
+
+#### AC-MODEL-USER-005: Password Minimum Length
+**GIVEN** a User model instance
+**WHEN** attempting to save with password less than 8 characters
+**THEN** validation should fail with error "password is too short (minimum is 8 characters)"
+**AND** the record should not be persisted
+
+#### AC-MODEL-USER-006: Role Assignment
+**GIVEN** a User model instance
+**WHEN** role is not explicitly set
+**THEN** role should default to "user"
+**AND** the record should be persisted successfully
+
+#### AC-MODEL-USER-007: Role Enum Constraint
+**GIVEN** a User model instance
+**WHEN** attempting to set role to an invalid value (e.g., "superuser")
+**THEN** an error should be raised
+**AND** the record should not be persisted
+
+### Ingredient Model
+
+#### AC-MODEL-INGREDIENT-001: Canonical Name Presence
+**GIVEN** an Ingredient model instance
+**WHEN** attempting to save without a canonical_name
+**THEN** validation should fail with error "canonical_name can't be blank"
+**AND** the record should not be persisted
+
+#### AC-MODEL-INGREDIENT-002: Canonical Name Uniqueness
+**GIVEN** an Ingredient with canonical_name "Salt"
+**WHEN** attempting to create another Ingredient with canonical_name "Salt"
+**THEN** validation should fail with error "canonical_name has already been taken"
+**AND** the second record should not be persisted
+
+#### AC-MODEL-INGREDIENT-003: Ingredient Aliases Association
+**GIVEN** an Ingredient with multiple IngredientAlias records
+**WHEN** the Ingredient is deleted
+**THEN** all associated IngredientAlias records should also be deleted (cascade)
+**AND** zero IngredientAlias records should remain
+
+### IngredientAlias Model
+
+#### AC-MODEL-ALIAS-001: Alias Name Presence
+**GIVEN** an IngredientAlias model instance
+**WHEN** attempting to save without an alias_name
+**THEN** validation should fail with error "alias_name can't be blank"
+**AND** the record should not be persisted
+
+#### AC-MODEL-ALIAS-002: Ingredient Association Required
+**GIVEN** an IngredientAlias model instance
+**WHEN** attempting to save without an ingredient association
+**THEN** validation should fail with error "ingredient can't be blank"
+**AND** the record should not be persisted
+
+#### AC-MODEL-ALIAS-003: Alias Uniqueness Scoped to Ingredient and Language
+**GIVEN** an IngredientAlias with ingredient_id=1, alias_name="Kosher Salt", language="en"
+**WHEN** attempting to create another with same ingredient_id, alias_name, but different language (e.g., "ja")
+**THEN** the new record should be persisted successfully (different language allows duplicate name)
+
+#### AC-MODEL-ALIAS-004: Alias Uniqueness Scoped to Ingredient and Language (Same Language Failure)
+**GIVEN** an IngredientAlias with ingredient_id=1, alias_name="Kosher Salt", language="en"
+**WHEN** attempting to create another with same ingredient_id, alias_name, and same language
+**THEN** validation should fail with error "alias already exists"
+**AND** the second record should not be persisted
+
+### DataReference Model
+
+#### AC-MODEL-DATAREF-001: Key Presence
+**GIVEN** a DataReference model instance
+**WHEN** attempting to save without a key
+**THEN** validation should fail with error "key can't be blank"
+**AND** the record should not be persisted
+
+#### AC-MODEL-DATAREF-002: Reference Type Presence
+**GIVEN** a DataReference model instance
+**WHEN** attempting to save without a reference_type
+**THEN** validation should fail with error "reference_type can't be blank"
+**AND** the record should not be persisted
+
+#### AC-MODEL-DATAREF-003: Display Name Presence
+**GIVEN** a DataReference model instance
+**WHEN** attempting to save without a display_name
+**THEN** validation should fail with error "display_name can't be blank"
+**AND** the record should not be persisted
+
+#### AC-MODEL-DATAREF-004: Key Uniqueness
+**GIVEN** a DataReference with key="vegetarian" and reference_type="dietary_tag"
+**WHEN** attempting to create another with same key and reference_type
+**THEN** validation should fail with error "key has already been taken"
+**AND** the second record should not be persisted
+
+#### AC-MODEL-DATAREF-005: Key Uniqueness Scoped to Reference Type
+**GIVEN** a DataReference with key="vegetarian" and reference_type="dietary_tag"
+**WHEN** attempting to create another with key="vegetarian" but reference_type="recipe_type"
+**THEN** the new record should be persisted successfully (different reference_type allows duplicate key)
+
+#### AC-MODEL-DATAREF-006: Reference Type Enum Constraint
+**GIVEN** a DataReference model instance
+**WHEN** attempting to set reference_type to an invalid value (e.g., "invalid_type")
+**THEN** an error should be raised
+**AND** the record should not be persisted
+
+### UserRecipeNote Model
+
+#### AC-MODEL-NOTE-001: User Association Required
+**GIVEN** a UserRecipeNote model instance
+**WHEN** attempting to save without a user association
+**THEN** validation should fail with error "user can't be blank"
+**AND** the record should not be persisted
+
+#### AC-MODEL-NOTE-002: Recipe Association Required
+**GIVEN** a UserRecipeNote model instance
+**WHEN** attempting to save without a recipe association
+**THEN** validation should fail with error "recipe can't be blank"
+**AND** the record should not be persisted
+
+#### AC-MODEL-NOTE-003: User-Recipe Uniqueness
+**GIVEN** a UserRecipeNote with user_id=1 and recipe_id=5
+**WHEN** attempting to create another with same user_id and recipe_id
+**THEN** validation should fail with error "user has already taken this recipe"
+**AND** the second record should not be persisted
+
+### UserFavorite Model
+
+#### AC-MODEL-FAVORITE-001: User Association Required
+**GIVEN** a UserFavorite model instance
+**WHEN** attempting to save without a user association
+**THEN** validation should fail with error "user can't be blank"
+**AND** the record should not be persisted
+
+#### AC-MODEL-FAVORITE-002: Recipe Association Required
+**GIVEN** a UserFavorite model instance
+**WHEN** attempting to save without a recipe association
+**THEN** validation should fail with error "recipe can't be blank"
+**AND** the record should not be persisted
+
+#### AC-MODEL-FAVORITE-003: User-Recipe Uniqueness
+**GIVEN** a UserFavorite with user_id=1 and recipe_id=5
+**WHEN** attempting to create another with same user_id and recipe_id
+**THEN** validation should fail with error "user has already favorited this recipe"
+**AND** the second record should not be persisted
+
+### AiPrompt Model
+
+#### AC-MODEL-PROMPT-001: Prompt Key Presence
+**GIVEN** an AiPrompt model instance
+**WHEN** attempting to save without a prompt_key
+**THEN** validation should fail with error "prompt_key can't be blank"
+**AND** the record should not be persisted
+
+#### AC-MODEL-PROMPT-002: Prompt Text Presence
+**GIVEN** an AiPrompt model instance
+**WHEN** attempting to save without prompt_text
+**THEN** validation should fail with error "prompt_text can't be blank"
+**AND** the record should not be persisted
+
+#### AC-MODEL-PROMPT-003: Prompt Key Uniqueness
+**GIVEN** an AiPrompt with prompt_key="recipe_parse_text_system"
+**WHEN** attempting to create another with the same prompt_key
+**THEN** validation should fail with error "prompt_key has already been taken"
+**AND** the second record should not be persisted
+
+### JwtDenylist Model
+
+#### AC-MODEL-JWT-001: JTI Presence
+**GIVEN** a JwtDenylist model instance
+**WHEN** attempting to save without a jti
+**THEN** validation should fail with error "jti can't be blank"
+**AND** the record should not be persisted
+
+#### AC-MODEL-JWT-002: JTI Uniqueness
+**GIVEN** a JwtDenylist with jti="abc123def456"
+**WHEN** attempting to create another with the same jti
+**THEN** validation should fail with error "jti has already been taken"
+**AND** the second record should not be persisted
+
+---
+
 ## Summary Statistics
 
-- **Total Acceptance Criteria:** 145
+- **Total Acceptance Criteria:** 179
 - **Smart Scaling:** 12 criteria
 - **Step Variants:** 9 criteria
 - **Multi-lingual:** 9 criteria
