@@ -671,28 +671,39 @@ end
 - [x] Commit fixes: `[Phase 1] Step 4: Fix code audit issues in Recipe and DataReference models`
 - [x] Mark Step 4 complete
 
-**Step 5: Update Seeds**
-- [ ] Update db/seeds.rb for new schema
-- [ ] Ensure 10+ test recipes created with new associations
-- [ ] Cover edge cases per AC-PHASE1-014c
-- [ ] Commit seeds
-
-**Step 6: Run Migration and Seeds**
+**Step 5: Run Migration and Seeds**
 - [ ] Run `rails db:migrate`
 - [ ] Run `rails db:seed`
 - [ ] Verify no errors
 - [ ] Check data integrity
 
+**Step 6: Write Comprehensive Seeds**
+- [ ] Update db/seeds.rb with test recipes for new schema
+- [ ] **CRITICAL: ALL fields must be covered to test every field works**
+  - [ ] All servings variations (servings_original, servings_min, servings_max)
+  - [ ] All timing fields (prep_minutes, cook_minutes, total_minutes)
+  - [ ] All ingredient group variations (single group, multiple groups)
+  - [ ] All recipe ingredient fields (amount, unit, preparation_notes, optional flag)
+  - [ ] All recipe step fields (step_number, timing_minutes, instruction_original, instruction_easier, instruction_no_equipment)
+  - [ ] All equipment variations (required and optional)
+  - [ ] All reference data associations (dietary_tags, dish_types, cuisines, recipe_types)
+  - [ ] All recipe aliases with multiple languages
+  - [ ] All nutrition fields
+  - [ ] Null/missing values to test optional fields
+- [ ] Ensure 10+ test recipes with comprehensive coverage
+- [ ] Cover edge cases per AC-PHASE1-014c
+- [ ] Commit seeds: `[Phase 1] Step 6: Write comprehensive seeds with all field coverage`
+
 **Step 7: Write RSpec Tests**
 - [ ] Write test suite covering Phase 1 ACs
 - [ ] All tests passing
-- [ ] Commit: `[Phase 1] Add RSpec tests for schema normalization`
+- [ ] Commit: `[Phase 1] Step 7: Add RSpec tests for schema normalization`
 
 **Step 8: Final Review**
 - [ ] Review plan against actual discoveries
 - [ ] Evaluate direction and assumptions
 - [ ] Update documentation if needed
-- [ ] Final commit: `[Phase 1] Complete: Database schema normalization`
+- [ ] Final commit: `[Phase 1] Step 8: Complete - Database schema normalization`
 
 ---
 
