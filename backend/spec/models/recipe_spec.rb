@@ -79,6 +79,66 @@ RSpec.describe Recipe, type: :model do
     end
   end
 
+  describe 'Phase 3: Model Validations' do
+    describe 'name validations (AC-MODEL-RECIPE-001 through 003)' do
+      it 'requires name to be present (AC-MODEL-RECIPE-001)' do
+        recipe = build(:recipe, name: nil)
+        expect(recipe).not_to be_valid
+        expect(recipe.errors[:name]).to include("can't be blank")
+      end
+
+      it 'rejects whitespace-only name (AC-MODEL-RECIPE-002)' do
+        recipe = build(:recipe, name: '   ')
+        expect(recipe).not_to be_valid
+        expect(recipe.errors[:name]).to include("can't be blank")
+      end
+
+      it 'enforces name uniqueness (AC-MODEL-RECIPE-003)' do
+        create(:recipe, name: 'Chocolate Chip Cookies')
+        duplicate = build(:recipe, name: 'Chocolate Chip Cookies')
+        expect(duplicate).not_to be_valid
+        expect(duplicate.errors[:name]).to include('has already been taken')
+      end
+    end
+
+    describe 'defaults (AC-MODEL-RECIPE-004 through 006)' do
+      it 'defaults source_language to "en" (AC-MODEL-RECIPE-004)' do
+        recipe = Recipe.new(name: 'Test Recipe')
+        expect(recipe.source_language).to eq('en')
+      end
+
+      it 'allows source_url to be nil (AC-MODEL-RECIPE-005)' do
+        recipe = build(:recipe, source_url: nil)
+        expect(recipe).to be_valid
+        expect(recipe.source_url).to be_nil
+      end
+
+      it 'defaults requires_precision to false (AC-MODEL-RECIPE-006)' do
+        recipe = create(:recipe)
+        expect(recipe.requires_precision).to eq(false)
+      end
+    end
+
+    describe 'cascade deletion (AC-MODEL-RECIPE-007)' do
+      it 'cascades delete associations when recipe is deleted (AC-MODEL-RECIPE-007)' do
+        recipe = create(:recipe)
+        ig = recipe.ingredient_groups.create!(name: 'Test', position: 1)
+        rs = recipe.recipe_steps.create!(step_number: 1)
+        rn = recipe.create_recipe_nutrition!(calories: 100)
+
+        ig_id = ig.id
+        rs_id = rs.id
+        rn_id = rn.id
+
+        recipe.destroy
+
+        expect(IngredientGroup.find_by(id: ig_id)).to be_nil
+        expect(RecipeStep.find_by(id: rs_id)).to be_nil
+        expect(RecipeNutrition.find_by(id: rn_id)).to be_nil
+      end
+    end
+  end
+
   describe 'associations' do
     it 'has many ingredient groups' do
       recipe = create(:recipe)

@@ -4,5 +4,5 @@ class UserFavorite < ApplicationRecord
 
   validates :user, presence: true
   validates :recipe, presence: true
-  validates :user_id, uniqueness: { scope: :recipe_id }
+  validates :user_id, uniqueness: { scope: :recipe_id, message: 'has already favorited this recipe' }
 end

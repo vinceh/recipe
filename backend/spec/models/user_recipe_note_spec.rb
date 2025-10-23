@@ -26,6 +26,7 @@ RSpec.describe UserRecipeNote, type: :model do
 
         duplicate = build(:user_recipe_note, user_id: user.id, recipe_id: recipe.id)
         expect(duplicate).not_to be_valid
+        expect(duplicate.errors[:user_id]).to include('has already taken this recipe')
       end
     end
   end

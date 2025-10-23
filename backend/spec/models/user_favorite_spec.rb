@@ -26,6 +26,7 @@ RSpec.describe UserFavorite, type: :model do
 
         duplicate = build(:user_favorite, user_id: user.id, recipe_id: recipe.id)
         expect(duplicate).not_to be_valid
+        expect(duplicate.errors[:user_id]).to include('has already favorited this recipe')
       end
     end
   end

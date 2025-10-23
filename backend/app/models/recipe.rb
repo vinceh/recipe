@@ -50,7 +50,7 @@ class Recipe < ApplicationRecord
     reject_if: proc { |attrs| attrs['alias_name'].blank? }
 
   # Validations
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
   validates :source_language, presence: true, inclusion: { in: %w[en ja ko zh-tw zh-cn es fr] }
   validates :precision_reason, inclusion: { in: %w[baking confectionery fermentation molecular], allow_nil: true }
 

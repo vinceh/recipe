@@ -1089,10 +1089,10 @@ This document defines atomic, testable acceptance criteria for all Recipe App MV
 
 ### IngredientAlias Model
 
-#### AC-MODEL-ALIAS-001: Alias Name Presence
+#### AC-MODEL-ALIAS-001: Alias Presence
 **GIVEN** an IngredientAlias model instance
-**WHEN** attempting to save without an alias_name
-**THEN** validation should fail with error "alias_name can't be blank"
+**WHEN** attempting to save without an alias
+**THEN** validation should fail with error "alias can't be blank"
 **AND** the record should not be persisted
 
 #### AC-MODEL-ALIAS-002: Ingredient Association Required
@@ -1102,13 +1102,13 @@ This document defines atomic, testable acceptance criteria for all Recipe App MV
 **AND** the record should not be persisted
 
 #### AC-MODEL-ALIAS-003: Alias Uniqueness Scoped to Ingredient and Language
-**GIVEN** an IngredientAlias with ingredient_id=1, alias_name="Kosher Salt", language="en"
-**WHEN** attempting to create another with same ingredient_id, alias_name, but different language (e.g., "ja")
+**GIVEN** an IngredientAlias with ingredient_id=1, alias="Kosher Salt", language="en"
+**WHEN** attempting to create another with same ingredient_id, alias, but different language (e.g., "ja")
 **THEN** the new record should be persisted successfully (different language allows duplicate name)
 
 #### AC-MODEL-ALIAS-004: Alias Uniqueness Scoped to Ingredient and Language (Same Language Failure)
-**GIVEN** an IngredientAlias with ingredient_id=1, alias_name="Kosher Salt", language="en"
-**WHEN** attempting to create another with same ingredient_id, alias_name, and same language
+**GIVEN** an IngredientAlias with ingredient_id=1, alias="Kosher Salt", language="en"
+**WHEN** attempting to create another with same ingredient_id, alias, and same language
 **THEN** validation should fail with error "alias already exists"
 **AND** the second record should not be persisted
 
