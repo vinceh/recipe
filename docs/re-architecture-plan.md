@@ -75,8 +75,7 @@ All ACs go into `docs/new_claude/acceptance-criteria.md` in GIVEN/WHEN/THEN form
      - Mark subtask progress in plan document
      - Commit plan update: `[Phase X] Step N: Mark complete`
      - **PAUSE AND REQUEST APPROVAL**
-     - In approval request, disclose any code audit suggestions that were NOT addressed, with reasons why
-     - If there are deferrals, make a list of action-items to take (ie. add to phase X) and ask user if they want it executed
+     - In approval request, disclose any code audit suggestions that were NOT addressed, with reasons why, and ask if those deferred items should be added to later phase documentation
    - Only after user approval, move to next step
    - This gating mechanism with quality checks ensures high-quality work and allows for informed course corrections at each step
 
@@ -729,42 +728,6 @@ end
 - [x] Commit: `[Phase 1] Step 6: Add RSpec tests for schema normalization`
 - [x] Commit: `[Phase 1] Step 6: Address code quality audit findings`
 
-### Code Quality Audit Summary - Phase 1 Step 6
-
-**Audit Results:** 38 total issues found across 4 files
-
-**Issues Fixed (11 total):**
-- 8 HIGH severity issues (100% addressed)
-- 3 MEDIUM severity issues (20% of MEDIUM issues)
-- 0 LOW severity issues (deferred)
-
-**Deferred Issues (27 total) - Action Items for Future Phases:**
-
-**MEDIUM Severity (12 deferred - Phase 2-3 priorities):**
-- M-3: Add position uniqueness constraint tests → Phase 2 (model specs)
-- M-4: Add step_number uniqueness constraint tests → Phase 2 (model specs)
-- M-5: Standardize test description phrasing → Phase 3 (documentation pass)
-- M-6: Add edge case tests for precision_reason → Phase 2 (model specs)
-- M-7: Add equipment filtering tests → Phase 2 (API endpoints)
-- M-8: Add BigDecimal precision verification → Phase 3 (validation tests)
-- M-9: Add null constraint tests for RecipeNutrition → Phase 2 (model specs)
-- M-10: Improve generic test descriptions → Phase 3 (documentation pass)
-- M-11: Standardize let vs inline variable usage → Phase 3 (test refactoring)
-- M-12: Add N+1 query performance tests → Phase 6 (performance testing)
-- M-13: Add factory traits for recipe variations → Phase 2 (test improvements)
-- M-14: Add referential integrity tests for all DataReferences → Phase 2 (model specs)
-
-**LOW Severity (15 deferred - Phase 3+ polish):**
-- L-1 through L-7: Style and formatting consistency → Phase 3 (test cleanup)
-- L-8: Inconsistent quoting style → Phase 3 (style pass)
-- L-9: Factory block usage optimization → Phase 3 (minor refactor)
-- L-10: Expand cascade deletion test coverage → Phase 2 (test enhancement)
-- L-11: Create custom RSpec matchers → Phase 3 (refactoring)
-- L-12: Add transient attributes to factory → Phase 2 (test improvement)
-- L-13: Split long test file into modules → Phase 3 (organization)
-- L-14: Consider migrating category to DataReference → Phase 4+ (i18n consideration)
-- L-15: Prefer create! over create in tests → Phase 3 (test consistency)
-
 **Step 7: Final Review**
 - [ ] Review plan against actual discoveries
 - [ ] Evaluate direction and assumptions
@@ -779,6 +742,10 @@ end
 Write comprehensive GIVEN/WHEN/THEN acceptance criteria for API endpoints with normalized schema in `docs/new_claude/acceptance-criteria.md`.
 
 Run `bundle exec rspec` and fix failures iteratively.
+
+**Deferred Items to Address in This Phase (from Phase 1 Code Audit):**
+- M-3: Add position uniqueness constraint tests for ingredient_groups
+- M-4: Add step_number uniqueness constraint tests for recipe_steps
 
 Update as needed:
 - Services (RecipeScaler, RecipeTranslator, RecipeParserService, StepVariantGenerator, RecipeSearchService, etc.)
