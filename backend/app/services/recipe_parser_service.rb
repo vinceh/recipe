@@ -168,7 +168,7 @@ class RecipeParserService < AiService
 
     response = client.messages(
       parameters: {
-        model: ENV['ANTHROPIC_MODEL'] || 'claude-3-5-haiku-20241022',
+        model: ENV['ANTHROPIC_MODEL'] || 'claude-haiku-4-5-20251001',
         system: system_prompt,
         messages: messages,
         max_tokens: max_tokens
