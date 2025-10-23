@@ -4,8 +4,9 @@ Mobility.configure do
     # Backend
     #
     # Use Table backend for translations stored in dedicated translation tables
+    # Configured for UUID foreign keys (matching project schema standards)
     #
-    backend :table
+    backend :table, type: :uuid, association_name: :translations
 
     # ActiveRecord
     #
