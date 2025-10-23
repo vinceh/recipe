@@ -626,14 +626,15 @@ end
 **Step 3: Create Model Files**
 - [x] Create 4 initial models (IngredientGroup, RecipeIngredient, RecipeStep, Equipment)
 - [x] Commit: `[Phase 1] Create initial model files with associations`
-- [ ] Create 7 remaining models:
-  - [ ] RecipeNutrition
-  - [ ] RecipeDietaryTag
-  - [ ] RecipeDishType
-  - [ ] RecipeRecipeType
-  - [ ] RecipeCuisine
-  - [ ] RecipeAlias
-  - [ ] RecipeEquipment
+- [x] Create 7 remaining models:
+  - [x] RecipeNutrition
+  - [x] RecipeDietaryTag
+  - [x] RecipeDishType
+  - [x] RecipeRecipeType
+  - [x] RecipeCuisine
+  - [x] RecipeAlias
+  - [x] RecipeEquipment
+- [x] Commit: `[Phase 1] Create remaining 7 model files with associations`
 
 **Step 4: Update Recipe Model**
 - [ ] Remove JSONB field validations
