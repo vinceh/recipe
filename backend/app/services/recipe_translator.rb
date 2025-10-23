@@ -15,9 +15,11 @@ class RecipeTranslator < AiService
     lang_name = LANGUAGES[target_language]
     raise ArgumentError, "Unsupported language: #{target_language}" unless lang_name
 
+    recipe_json = build_recipe_json_for_translation(recipe)
+
     rendered_user_prompt = user_prompt.render(
       target_language: lang_name,
-      recipe_json: recipe.to_json
+      recipe_json: recipe_json
     )
 
     response = call_claude(
@@ -30,6 +32,36 @@ class RecipeTranslator < AiService
   end
 
   private
+
+  def build_recipe_json_for_translation(recipe)
+    {
+      name: recipe.name,
+      ingredient_groups: recipe.ingredient_groups.includes(:recipe_ingredients).map do |group|
+        {
+          name: group.name,
+          items: group.recipe_ingredients.map do |ingredient|
+            {
+              name: ingredient.ingredient_name,
+              amount: ingredient.amount,
+              unit: ingredient.unit,
+              preparation: ingredient.preparation_notes
+            }
+          end
+        }
+      end,
+      steps: recipe.recipe_steps.order(:step_number).map do |step|
+        {
+          order: step.step_number,
+          instructions: {
+            original: step.instruction_original,
+            easier: step.instruction_easier,
+            no_equipment: step.instruction_no_equipment
+          }
+        }
+      end,
+      equipment: recipe.equipment.map(&:canonical_name)
+    }.to_json
+  end
 
   def parse_translation_response(response, language)
     # Extract JSON from response (may be wrapped in markdown code blocks)
