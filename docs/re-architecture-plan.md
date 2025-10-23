@@ -69,7 +69,7 @@ All ACs go into `docs/new_claude/acceptance-criteria.md` in GIVEN/WHEN/THEN form
      - Work through all subtasks to completion
      - Mark each completed subtask: `- [x] Task name`
      - Commit the step implementation with message: `[Phase X] Step N: <description>`
-     - **QUALITY CHECK**: Run sub-agent with code-quality-auditor skill to review code
+     - **QUALITY CHECK**: Run Skill tool with `command: "code-quality-auditor"` to review code
      - Address all issues identified by code audit
      - Commit fixes if any issues were addressed: `[Phase X] Step N: Address code quality issues`
      - Mark subtask progress in plan document
