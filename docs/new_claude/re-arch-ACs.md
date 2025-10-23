@@ -175,7 +175,7 @@
 ##### AC-PHASE2-STEP6-001: IngredientGroup Position Uniqueness Validation
 **GIVEN** a recipe with an ingredient_group at position 1
 **WHEN** attempting to create another ingredient_group for the same recipe at position 1
-**THEN** the create should fail with validation error "Position has already been taken"
+**THEN** the create should fail with a position uniqueness validation error
 **AND** the database should not insert the duplicate record
 
 ##### AC-PHASE2-STEP6-002: IngredientGroup Position Uniqueness Scope
@@ -187,7 +187,7 @@
 ##### AC-PHASE2-STEP6-003: RecipeStep StepNumber Uniqueness Validation
 **GIVEN** a recipe with a recipe_step at step_number 1
 **WHEN** attempting to create another recipe_step for the same recipe at step_number 1
-**THEN** the create should fail with validation error "Step number has already been taken"
+**THEN** the create should fail with a step_number uniqueness validation error
 **AND** the database should not insert the duplicate record
 
 ##### AC-PHASE2-STEP6-004: RecipeStep StepNumber Uniqueness Scope
@@ -199,73 +199,170 @@
 #### Nested Attributes Integration Tests
 
 ##### AC-PHASE2-STEP6-005: Create Recipe with Nested IngredientGroups
-**GIVEN** a POST request to /admin/recipes with nested ingredient_groups_attributes
-**WHEN** the request includes:
-  - ingredient_groups_attributes with name, position, and recipe_ingredients_attributes
-  - recipe_ingredients_attributes with ingredient_name, amount, unit, position
-**THEN** the recipe should be created successfully
-**AND** all ingredient_groups should be created with correct associations
-**AND** all recipe_ingredients should be created with correct parent relationships
+**GIVEN** a recipe is being created with nested ingredient_groups_attributes
+**WHEN** the recipe attributes include:
+  - ingredient_groups with name, position, and recipe_ingredients_attributes
+  - recipe_ingredients with ingredient_name, amount, unit, position
+**THEN** the recipe should be persisted successfully
+**AND** all ingredient_groups should be created and belong to the recipe
+**AND** all recipe_ingredients should be created and belong to their respective ingredient_groups
 
 ##### AC-PHASE2-STEP6-006: Create Recipe with Nested RecipeSteps
-**GIVEN** a POST request to /admin/recipes with nested recipe_steps_attributes
-**WHEN** the request includes recipe_steps_attributes with step_number, instruction_original, instruction_easier, instruction_no_equipment
-**THEN** the recipe should be created successfully
-**AND** all recipe_steps should be created with correct step_number and instructions
+**GIVEN** a recipe is being created with nested recipe_steps_attributes
+**WHEN** the recipe attributes include recipe_steps with step_number, instruction_original, instruction_easier, instruction_no_equipment
+**THEN** the recipe should be persisted successfully
+**AND** all recipe_steps should be created and belong to the recipe
+**AND** each step's instructions should be persisted as provided
 
 ##### AC-PHASE2-STEP6-007: Reject Empty Nested Attributes
-**GIVEN** a POST request to /admin/recipes with empty nested attribute hashes {}
-**WHEN** the request includes ingredient_groups_attributes: [{}]
-**THEN** the empty record should NOT be created (reject_if clause prevents it)
-**AND** the recipe should be created with no ingredient_groups
+**GIVEN** a recipe is being created with empty nested attribute hashes
+**WHEN** ingredient_groups_attributes contains an empty hash {}
+**THEN** the empty ingredient_group should NOT be created
+**AND** the recipe should still be created successfully (if other attributes are valid)
+**AND** no record with nil name/position should exist in the database
 
-##### AC-PHASE2-STEP6-008: Update Recipe with Nested Attributes
-**GIVEN** a PUT request to /admin/recipes/:id with nested ingredient_groups_attributes
-**WHEN** the request includes:
-  - existing ingredient_group with updated name
-  - new ingredient_group_attributes to add
-  - ingredient_group with _destroy: true to delete
-**THEN** existing records should be updated
-**AND** new records should be created
-**AND** destroyed records should be deleted from database
+##### AC-PHASE2-STEP6-008a: Update Existing Nested IngredientGroup
+**GIVEN** a recipe exists with an ingredient_group named "Group A" at position 1
+**WHEN** the recipe is updated with ingredient_groups_attributes containing the group's id and updated name "Group B"
+**THEN** the ingredient_group name should be updated to "Group B"
+**AND** all associations should remain intact
 
-##### AC-PHASE2-STEP6-009: Nested Attribute Validation Error Propagation
-**GIVEN** a POST request to /admin/recipes with nested ingredient_groups_attributes
-**WHEN** recipe_ingredients_attributes has missing ingredient_name
-**THEN** the create should fail
-**AND** error response should include nested error message indicating which ingredient failed
+##### AC-PHASE2-STEP6-008b: Add New Nested IngredientGroup During Update
+**GIVEN** a recipe exists with one ingredient_group at position 1
+**WHEN** the recipe is updated with ingredient_groups_attributes containing a new group without id and position 2
+**THEN** the new ingredient_group should be created and added to the recipe
+**AND** the recipe should have 2 ingredient_groups after update
+
+##### AC-PHASE2-STEP6-008c: Delete Nested IngredientGroup Using _destroy Flag
+**GIVEN** a recipe exists with two ingredient_groups
+**WHEN** the recipe is updated with ingredient_groups_attributes containing one group's id and _destroy: true
+**THEN** the ingredient_group should be deleted from the database
+**AND** the recipe should have one ingredient_group remaining
+**AND** the deleted group's recipe_ingredients should also be deleted (cascade)
+
+##### AC-PHASE2-STEP6-009: Nested Attribute Validation Error Propagation on Create
+**GIVEN** a recipe is being created with nested ingredient_groups and recipe_ingredients
+**WHEN** a recipe_ingredient in the 2nd ingredient_group has no ingredient_name
+**THEN** the entire recipe creation should fail (transaction rollback)
+**AND** no recipe, ingredient_groups, or recipe_ingredients should be persisted
+**AND** the error response should indicate which nested record failed validation
 
 #### Phase 2 Acceptance Criteria Test Coverage
 
-##### AC-PHASE2-STEP6-010: All Phase 2 API Endpoint Tests Passing
-**GIVEN** RSpec tests are written for Phase 2 acceptance criteria
-**WHEN** tests cover:
-  - API endpoint responses (GET /recipes, GET /recipes/:id, POST /recipes/:id/scale, etc.)
-  - Serializer response format (servings hash, timing hash, ingredient_groups array, steps array)
-  - Backward compatibility of API responses
-  - Filter and search functionality
-**THEN** all tests should pass
-**AND** code coverage report should show >95% coverage for modified files
+##### AC-PHASE2-STEP6-010: RSpec Model Tests for Constraint Validations
+**GIVEN** RSpec model tests exist for IngredientGroup and RecipeStep constraints
+**WHEN** running the model test suite
+**THEN** tests verify position uniqueness within recipe_id scope
+**AND** tests verify step_number uniqueness within recipe_id scope
+**AND** tests verify position and step_number numericality validations
+**AND** all tests pass with 100% line coverage for constraint validation logic
 
-##### AC-PHASE2-STEP6-011: Service Layer Tests for Normalized Schema
-**GIVEN** RSpec tests are written for services using normalized schema
-**WHEN** tests cover:
-  - RecipeScaler scaling with normalized servings and ingredient_groups
-  - RecipeSearchService filtering by normalized associations
-  - RecipeParserService returning normalized structure
-  - RecipeTranslator working with associations
-  - StepVariantGenerator using recipe_steps association
-**THEN** all tests should pass
+##### AC-PHASE2-STEP6-011: RSpec Integration Tests for Nested Attributes
+**GIVEN** RSpec integration tests exist for Recipe nested attribute operations
+**WHEN** running the integration test suite for nested attributes
+**THEN** tests verify successful creation of recipe with nested ingredient_groups and recipe_steps
+**AND** tests verify successful update of existing nested records
+**AND** tests verify successful deletion of nested records with _destroy flag
+**AND** tests verify reject_if clauses prevent empty record creation
+**AND** tests verify validation error propagation from nested records
+**AND** all tests pass with 100% coverage for nested attribute operations
 
-##### AC-PHASE2-STEP6-012: Error Handling Tests
-**GIVEN** tests for error scenarios
-**WHEN** tests cover:
-  - Invalid servings (below min, above max)
-  - Missing required fields in nested attributes
-  - Validation failures in nested records
-  - Database constraint violations
-**THEN** all error handling tests should pass
-**AND** error messages should be clear and actionable
+##### AC-PHASE2-STEP6-012: Step 6 Edge Case and Boundary Tests
+**GIVEN** RSpec tests exist for edge cases in constraint and nested attribute handling
+**WHEN** running edge case test suite
+**THEN** tests verify rejection of nil/blank position and step_number values
+**AND** tests verify rejection of zero and negative position/step_number values
+**AND** tests verify cascade deletion of nested records when parent is deleted
+**AND** tests verify transaction rollback when nested validation fails
+**AND** tests verify ordering of ingredient_groups by position
+**AND** tests verify ordering of recipe_steps by step_number
+**AND** all tests pass
+
+#### Additional Edge Case and Boundary Tests
+
+##### AC-PHASE2-STEP6-013: Reject IngredientGroup with Nil Position
+**GIVEN** a recipe exists
+**WHEN** attempting to create an ingredient_group without a position value
+**THEN** the create should fail with a presence validation error
+**AND** the database should not insert the record
+
+##### AC-PHASE2-STEP6-014: Reject IngredientGroup with Invalid Position Values
+**GIVEN** a recipe exists
+**WHEN** attempting to create an ingredient_group with position 0 or negative
+**THEN** the create should fail with a numericality validation error
+**AND** the database should not insert the record
+
+##### AC-PHASE2-STEP6-015: Reject RecipeStep with Invalid Step Number Values
+**GIVEN** a recipe exists
+**WHEN** attempting to create a recipe_step with step_number 0 or negative
+**THEN** the create should fail with a numericality validation error
+**AND** the database should not insert the record
+
+##### AC-PHASE2-STEP6-016: Database Constraint Prevents Duplicate Positions
+**GIVEN** a recipe with an ingredient_group at position 1
+**WHEN** attempting to insert a duplicate position at the database level (bypassing Rails)
+**THEN** the database should reject the insert with a unique constraint violation
+**AND** no duplicate record exists in the database
+
+##### AC-PHASE2-STEP6-017: Cascade Delete IngredientGroups When Recipe Deleted
+**GIVEN** a recipe exists with 2 ingredient_groups, each with 3 recipe_ingredients
+**WHEN** the recipe is deleted
+**THEN** all 2 ingredient_groups should also be deleted
+**AND** all 6 recipe_ingredients should also be deleted
+**AND** no orphaned records remain in the database
+
+##### AC-PHASE2-STEP6-018: Cascade Delete RecipeSteps When Recipe Deleted
+**GIVEN** a recipe exists with 5 recipe_steps
+**WHEN** the recipe is deleted
+**THEN** all 5 recipe_steps should also be deleted
+**AND** no orphaned recipe_steps remain
+
+##### AC-PHASE2-STEP6-019: Position Gaps are Allowed After Deletion
+**GIVEN** a recipe has ingredient_groups at positions 1, 2, 3
+**WHEN** the ingredient_group at position 2 is deleted
+**THEN** ingredient_groups at positions 1 and 3 should remain unchanged
+**AND** no automatic re-numbering occurs
+**AND** gaps in position sequence are allowed
+
+##### AC-PHASE2-STEP6-020: IngredientGroups Returned in Position Order
+**GIVEN** a recipe has ingredient_groups created at positions 3, 1, 2 (in that creation order)
+**WHEN** retrieving the recipe's ingredient_groups
+**THEN** they are returned in position order: 1, 2, 3
+**AND** the order matches the model's order scope definition
+
+##### AC-PHASE2-STEP6-021: RecipeSteps Returned in Step Number Order
+**GIVEN** a recipe has recipe_steps created with step_numbers 3, 1, 2 (in that creation order)
+**WHEN** retrieving the recipe's recipe_steps
+**THEN** they are returned in step_number order: 1, 2, 3
+**AND** the order is consistent across multiple queries
+
+##### AC-PHASE2-STEP6-022: Update IngredientGroup Position to Duplicate Value Fails
+**GIVEN** a recipe has ingredient_groups at positions 1 and 2
+**WHEN** attempting to update the group at position 2 to position 1
+**THEN** the update should fail with a position uniqueness validation error
+**AND** the position remains 2 (no change persisted)
+
+##### AC-PHASE2-STEP6-023: Update RecipeStep Number to Duplicate Value Fails
+**GIVEN** a recipe has recipe_steps with step_numbers 1 and 2
+**WHEN** attempting to update the step with step_number 2 to step_number 1
+**THEN** the update should fail with a step_number uniqueness validation error
+**AND** the step_number remains 2 (no change persisted)
+
+##### AC-PHASE2-STEP6-024: Whitespace-Only Ingredient Names are Rejected
+**GIVEN** a recipe is being created with nested ingredient_groups
+**WHEN** a recipe_ingredient has ingredient_name with only whitespace
+**THEN** the ingredient should be rejected during validation
+**AND** the ingredient_group should still be created (if other attributes valid)
+**AND** no whitespace-only ingredient records exist in database
+
+##### AC-PHASE2-STEP6-025: Nested Transaction Rollback on Validation Failure
+**GIVEN** a recipe is being created with 3 ingredient_groups with 2 ingredients each
+**WHEN** the 2nd ingredient_group's 1st ingredient has invalid data (missing ingredient_name)
+**THEN** the entire recipe creation should fail (transaction rollback)
+**AND** no recipe should be persisted
+**AND** no ingredient_groups should be persisted
+**AND** no recipe_ingredients should be persisted
+**AND** the database state is unchanged from before the operation
 
 ---
 
