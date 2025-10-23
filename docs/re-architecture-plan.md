@@ -659,10 +659,17 @@ end
 - [x] Mark Step 3 complete
 
 **Step 4: Update Recipe Model**
-- [ ] Remove JSONB field validations
-- [ ] Add all associations (ingredient_groups, recipe_steps, equipment, dietary_tags, etc.)
-- [ ] Verify all associations match Phase 1 ACs
-- [ ] Commit Recipe model updates
+- [x] Remove JSONB field validations
+- [x] Add all 17 associations (ingredient_groups, recipe_steps, equipment, dietary_tags, dish_types, cuisines, recipe_types, etc.)
+- [x] Verify all associations match Phase 1 ACs (AC-PHASE1-015)
+- [x] Commit Recipe model updates: `[Phase 1] Step 4: Update Recipe model with normalized associations`
+- [x] Run code-quality-auditor sub-agent review
+- [x] Address code audit issues:
+  - [x] Added missing through: associations (dish_types, cuisines, recipe_types)
+  - [x] Removed redundant ordering from recipe_steps
+  - [x] Added inverse associations to DataReference model
+- [x] Commit fixes: `[Phase 1] Step 4: Fix code audit issues in Recipe and DataReference models`
+- [x] Mark Step 4 complete
 
 **Step 5: Update Seeds**
 - [ ] Update db/seeds.rb for new schema
