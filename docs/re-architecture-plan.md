@@ -69,13 +69,14 @@ All ACs go into `docs/new_claude/acceptance-criteria.md` in GIVEN/WHEN/THEN form
      - Work through all subtasks to completion
      - Mark each completed subtask: `- [x] Task name`
      - Commit the step implementation with message: `[Phase X] Step N: <description>`
-     - **QUALITY CHECK**: Run Task tool with `subagent_type: "bmm-tech-debt-auditor"` to review code for quality issues, code smells, and technical debt
+     - Run a sub-agent with the code-quality-auditor skill
      - Address all issues identified by code audit
      - Commit fixes if any issues were addressed: `[Phase X] Step N: Address code quality issues`
      - Mark subtask progress in plan document
      - Commit plan update: `[Phase X] Step N: Mark complete`
      - **PAUSE AND REQUEST APPROVAL**
      - In approval request, disclose any code audit suggestions that were NOT addressed, with reasons why
+     - If there are deferrals, make a list of action-items to take (ie. add to phase X) and ask user if they want it executed
    - Only after user approval, move to next step
    - This gating mechanism with quality checks ensures high-quality work and allows for informed course corrections at each step
 
