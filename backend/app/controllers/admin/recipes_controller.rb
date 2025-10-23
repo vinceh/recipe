@@ -323,29 +323,45 @@ module Admin
     def recipe_params
       params.require(:recipe).permit(
         :name,
-        :language,
+        :source_language,
         :requires_precision,
         :precision_reason,
         :source_url,
         :admin_notes,
-        servings: [:original, :min, :max],
-        timing: [:prep_minutes, :cook_minutes, :total_minutes],
-        nutrition: {},
-        aliases: [],
-        dietary_tags: [],
-        dish_types: [],
-        recipe_types: [],
-        cuisines: [],
-        ingredient_groups: [
-          :name,
-          items: [:name, :amount, :unit, :notes, :optional]
+        :translations_completed,
+        :servings_original,
+        :servings_min,
+        :servings_max,
+        :prep_minutes,
+        :cook_minutes,
+        :total_minutes,
+        ingredient_groups_attributes: [
+          :id, :name, :position, :_destroy,
+          recipe_ingredients_attributes: [
+            :id, :ingredient_id, :ingredient_name, :amount, :unit, :preparation_notes, :optional, :position, :_destroy
+          ]
         ],
-        steps: [
-          :id,
-          instructions: {}
+        recipe_steps_attributes: [
+          :id, :step_number, :instruction_original, :instruction_easier, :instruction_no_equipment, :_destroy
         ],
-        equipment: [],
-        translations: {}
+        recipe_equipment_attributes: [
+          :id, :equipment_id, :optional, :_destroy
+        ],
+        recipe_dietary_tags_attributes: [
+          :id, :data_reference_id, :_destroy
+        ],
+        recipe_dish_types_attributes: [
+          :id, :data_reference_id, :_destroy
+        ],
+        recipe_cuisines_attributes: [
+          :id, :data_reference_id, :_destroy
+        ],
+        recipe_recipe_types_attributes: [
+          :id, :data_reference_id, :_destroy
+        ],
+        recipe_aliases_attributes: [
+          :id, :alias_name, :language, :_destroy
+        ]
       )
     end
 

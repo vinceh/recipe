@@ -8,14 +8,13 @@ RSpec.describe 'Admin::Recipes', type: :request do
   let(:recipe_attributes) do
     {
       name: 'Test Recipe',
-      language: 'en',
-      servings: { 'original' => 4, 'min' => 2, 'max' => 8 },
-      timing: { 'prep_minutes' => 10, 'cook_minutes' => 20, 'total_minutes' => 30 },
-      dietary_tags: ['vegetarian'],
-      cuisines: ['italian'],
-      dish_types: ['main-course'],
-      ingredient_groups: [{ 'name' => 'Main', 'items' => [] }],
-      steps: [{ 'id' => 'step-001', 'order' => 1, 'instructions' => { 'original' => 'Cook' } }]
+      source_language: 'en',
+      servings_original: 4,
+      servings_min: 2,
+      servings_max: 8,
+      prep_minutes: 10,
+      cook_minutes: 20,
+      total_minutes: 30
     }
   end
 
@@ -330,10 +329,10 @@ RSpec.describe 'Admin::Recipes', type: :request do
       before { sign_in admin_user }
 
       let!(:existing_recipe) do
-        Recipe.create!(recipe_attributes.merge(
-          name: 'Pad Thai',
-          aliases: ['Thai noodles', 'Phad Thai']
-        ))
+        recipe = Recipe.create!(recipe_attributes.merge(name: 'Pad Thai'))
+        recipe.recipe_aliases.create!(alias_name: 'Thai noodles')
+        recipe.recipe_aliases.create!(alias_name: 'Phad Thai')
+        recipe
       end
 
       it 'finds similar recipes by name' do

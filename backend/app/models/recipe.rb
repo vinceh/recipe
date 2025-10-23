@@ -20,6 +20,16 @@ class Recipe < ApplicationRecord
   has_many :recipe_types, through: :recipe_recipe_types, source: :data_reference
   has_many :recipe_aliases, dependent: :destroy
 
+  # Nested attributes for normalized schema
+  accepts_nested_attributes_for :ingredient_groups, allow_destroy: true
+  accepts_nested_attributes_for :recipe_steps, allow_destroy: true
+  accepts_nested_attributes_for :recipe_equipment, allow_destroy: true
+  accepts_nested_attributes_for :recipe_dietary_tags, allow_destroy: true
+  accepts_nested_attributes_for :recipe_dish_types, allow_destroy: true
+  accepts_nested_attributes_for :recipe_cuisines, allow_destroy: true
+  accepts_nested_attributes_for :recipe_recipe_types, allow_destroy: true
+  accepts_nested_attributes_for :recipe_aliases, allow_destroy: true
+
   # Validations
   validates :name, presence: true
   validates :source_language, presence: true, inclusion: { in: %w[en ja ko zh-tw zh-cn es fr] }
