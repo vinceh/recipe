@@ -520,19 +520,20 @@ end
 - [x] Address any issues (none identified)
 - ⏳ **READY FOR APPROVAL** before proceeding to Step 3
 
-**Step 3: Install and Configure Mobility Gem**
-- [ ] Add `gem 'mobility', '~> 1.3.2'` to Gemfile
-- [ ] Run `bundle install`
-- [ ] Generate Mobility initializer: `rails generate mobility:install --without-tables`
-- [ ] Configure `config/initializers/mobility.rb`:
-  - Set Table backend as default
-  - Configure UUID foreign key support
-  - Enable plugins: active_record, reader, writer, query, fallbacks, locale_accessors, presence, dirty, cache
-  - Configure fallback chain: ja→en, ko→en, zh-tw→zh-cn→en, zh-cn→zh-tw→en, es→en, fr→en
-- [ ] Commit implementation
-- [ ] Run code-quality-auditor sub-agent review
-- [ ] Address any issues
-- [ ] Request approval before Step 4
+**Step 3: Install and Configure Mobility Gem** ✅ COMPLETE
+- [x] Add `gem 'mobility', '~> 1.3.2'` to Gemfile
+- [x] Run `bundle install`
+- [x] Generate Mobility initializer: `rails generate mobility:install --without-tables`
+- [x] Configure `config/initializers/mobility.rb`:
+  - [x] Set Table backend as default with UUID foreign key support
+  - [x] Enable plugins: active_record, reader, writer, query, fallbacks, locale_accessors, presence, dirty, cache, backend_reader
+  - [x] Configure fallback chain: ja→en, ko→en, zh-tw→zh-cn→en, zh-cn→zh-tw→en, es→en, fr→en
+- [x] Commit implementation: `[Phase 4] Step 3: Install and configure Mobility gem`
+- [x] Run code-quality-auditor sub-agent review
+  - ✅ CRITICAL issue identified: UUID foreign key configuration missing
+  - ✅ Fixed and committed: `[Phase 4] Step 3: Add UUID foreign key configuration`
+- [x] Address all audit issues
+- ⏳ **READY FOR APPROVAL** before Step 4
 
 **Step 4: Add Translation Declarations to Models**
 - [ ] Recipe: Add `extend Mobility` and `translates :name, backend: :table`
