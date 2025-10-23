@@ -413,20 +413,23 @@ end
 
 ### Phase 3: Model Specs
 
-**Step 1: Write Acceptance Criteria for Model Validations**
-- [ ] Define ACs for Recipe model validations (presence, uniqueness, numericality constraints)
-- [ ] Define ACs for User model validations (email, password, role)
-- [ ] Define ACs for Ingredient model validations (canonical_name uniqueness)
-- [ ] Define ACs for IngredientAlias model validations (alias uniqueness scoped to language)
-- [ ] Define ACs for DataReference model validations (key uniqueness, reference_type constraints)
-- [ ] Define ACs for UserRecipeNote model (association constraints)
-- [ ] Define ACs for UserFavorite model (association constraints)
-- [ ] Define ACs for AiPrompt model (prompt_key uniqueness)
-- [ ] Define ACs for JwtDenylist model (jti uniqueness)
-- [ ] Run sub-agent with acceptance-test-writing skill to review, identify gaps, and refine
-- [ ] Update ACs based on sub-agent recommendations
-- [ ] Commit ACs document: `[Phase 3] Step 1: Write acceptance criteria for model validations`
-- [ ] Request approval before proceeding to Step 2
+**Step 1: Write Acceptance Criteria for Model Validations** ✅ COMPLETE
+- [x] Define ACs for Recipe model validations (presence, uniqueness, numericality constraints)
+- [x] Define ACs for User model validations (email, password, role)
+- [x] Define ACs for Ingredient model validations (canonical_name uniqueness)
+- [x] Define ACs for IngredientAlias model validations (alias uniqueness scoped to language)
+- [x] Define ACs for DataReference model validations (key uniqueness, reference_type constraints)
+- [x] Define ACs for UserRecipeNote model (association constraints)
+- [x] Define ACs for UserFavorite model (association constraints)
+- [x] Define ACs for AiPrompt model (prompt_key uniqueness)
+- [x] Define ACs for JwtDenylist model (jti uniqueness)
+- [x] Run sub-agent with acceptance-test-writing skill to review, identify gaps, and refine
+  - ✅ Identified gaps: edge cases for strings, cascade deletion, enum value coverage, case-insensitive uniqueness
+  - ✅ Enhanced Recipe (5→7 ACs), User (7→11 ACs), Ingredient (3→5 ACs), DataReference (6→7 ACs)
+- [x] Update ACs based on sub-agent recommendations
+- [x] Commit ACs document: `[Phase 3] Step 1: Write acceptance criteria for model validations`
+- [x] Commit refinements: `[Phase 3] Step 1: Refine acceptance criteria based on skill review`
+- ⏳ **AWAITING APPROVAL** before proceeding to Step 2
 
 **Step 2: Implement Model Validation Specs**
 - [ ] Create/update Recipe model validation specs
