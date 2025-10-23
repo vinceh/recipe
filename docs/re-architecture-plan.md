@@ -743,15 +743,15 @@ Write comprehensive GIVEN/WHEN/THEN acceptance criteria for API endpoints with n
 
 Run `bundle exec rspec` and fix failures iteratively.
 
-**Deferred Items to Address in This Phase (from Phase 1 Code Audit):**
-- M-3: Add position uniqueness constraint tests for ingredient_groups
-- M-4: Add step_number uniqueness constraint tests for recipe_steps
-
 Update as needed:
 - Services (RecipeScaler, RecipeTranslator, RecipeParserService, StepVariantGenerator, RecipeSearchService, etc.)
 - Serializers
 - Controllers
 - Models
+
+Add validation tests:
+- Position uniqueness constraint for ingredient_groups
+- Step number uniqueness constraint for recipe_steps
 
 Update `docs/api-reference.md` to reflect API changes.
 
