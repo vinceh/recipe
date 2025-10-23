@@ -32,6 +32,14 @@ RSpec.describe IngredientAlias, type: :model do
         duplicate = build(:ingredient_alias, ingredient: ingredient, alias: 'Kosher Salt', language: 'en')
         expect(duplicate).not_to be_valid
       end
+
+      it 'allows same alias for different ingredients in same language' do
+        ingredient1 = create(:ingredient, canonical_name: 'Salt')
+        ingredient2 = create(:ingredient, canonical_name: 'Pepper')
+        ingredient1.aliases.create!(alias: 'Seasoning', language: 'en')
+        alias2 = build(:ingredient_alias, ingredient: ingredient2, alias: 'Seasoning', language: 'en')
+        expect(alias2).to be_valid
+      end
     end
   end
 

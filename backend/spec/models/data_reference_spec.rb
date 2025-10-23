@@ -43,7 +43,7 @@ RSpec.describe DataReference, type: :model do
 
     describe 'reference_type enum' do
       it 'accepts valid reference_type values (AC-MODEL-DATAREF-006)' do
-        %w[dietary_tag dish_type cuisine recipe_type].each do |type|
+        %w[dietary_tag dish_type cuisine recipe_type unit].each do |type|
           ref = build(:data_reference, reference_type: type)
           expect(ref).to be_valid, "Expected reference_type '#{type}' to be valid"
         end
