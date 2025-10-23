@@ -450,4 +450,346 @@ RSpec.describe 'Admin::Recipes', type: :request do
       end
     end
   end
+
+  describe 'POST /admin/recipes with nested attributes' do
+    context 'AC-PHASE2-STEP6-005: Create recipe with nested ingredient_groups and recipe_ingredients' do
+      let(:admin_auth_token) do
+        post '/api/v1/auth/sign_in',
+             params: { user: { email: admin_user.email, password: 'password123' } }.to_json,
+             headers: headers
+        response.headers['Authorization']
+      end
+
+      it 'creates recipe with nested ingredient_groups and recipe_ingredients' do
+        params = recipe_attributes.merge({
+          ingredient_groups_attributes: [
+            {
+              name: 'Dry Ingredients',
+              position: 1,
+              recipe_ingredients_attributes: [
+                { ingredient_name: 'flour', amount: 2, unit: 'cup', position: 1 },
+                { ingredient_name: 'sugar', amount: 0.5, unit: 'cup', position: 2 }
+              ]
+            },
+            {
+              name: 'Wet Ingredients',
+              position: 2,
+              recipe_ingredients_attributes: [
+                { ingredient_name: 'milk', amount: 1, unit: 'cup', position: 1 }
+              ]
+            }
+          ]
+        })
+
+        post '/admin/recipes',
+             params: { recipe: params }.to_json,
+             headers: headers.merge('Authorization' => admin_auth_token)
+
+        expect(response).to have_http_status(:created)
+        json = JSON.parse(response.body)
+
+        expect(json['success']).to be true
+        recipe = Recipe.last
+        expect(recipe.ingredient_groups.count).to eq(2)
+        expect(recipe.ingredient_groups.first.name).to eq('Dry Ingredients')
+        expect(recipe.ingredient_groups.first.recipe_ingredients.count).to eq(2)
+        expect(recipe.ingredient_groups.last.recipe_ingredients.count).to eq(1)
+      end
+
+      it 'creates recipe with nested recipe_steps' do
+        params = recipe_attributes.merge({
+          recipe_steps_attributes: [
+            { step_number: 1, instruction_original: 'Mix dry ingredients', instruction_easier: 'Combine flour and sugar' },
+            { step_number: 2, instruction_original: 'Add wet ingredients', instruction_easier: 'Pour in milk' },
+            { step_number: 3, instruction_original: 'Bake at 350F' }
+          ]
+        })
+
+        post '/admin/recipes',
+             params: { recipe: params }.to_json,
+             headers: headers.merge('Authorization' => admin_auth_token)
+
+        expect(response).to have_http_status(:created)
+        json = JSON.parse(response.body)
+
+        expect(json['success']).to be true
+        recipe = Recipe.last
+        expect(recipe.recipe_steps.count).to eq(3)
+        expect(recipe.recipe_steps.map(&:step_number)).to eq([1, 2, 3])
+        expect(recipe.recipe_steps.first.instruction_easier).to eq('Combine flour and sugar')
+        expect(recipe.recipe_steps.last.instruction_no_equipment).to be_nil
+      end
+
+      it 'creates recipe with both nested ingredient_groups and recipe_steps' do
+        params = recipe_attributes.merge({
+          ingredient_groups_attributes: [
+            {
+              name: 'Main Ingredients',
+              position: 1,
+              recipe_ingredients_attributes: [
+                { ingredient_name: 'chicken', amount: 2, unit: 'lb', position: 1 }
+              ]
+            }
+          ],
+          recipe_steps_attributes: [
+            { step_number: 1, instruction_original: 'Prepare chicken' },
+            { step_number: 2, instruction_original: 'Cook chicken' }
+          ]
+        })
+
+        post '/admin/recipes',
+             params: { recipe: params }.to_json,
+             headers: headers.merge('Authorization' => admin_auth_token)
+
+        expect(response).to have_http_status(:created)
+        recipe = Recipe.last
+        expect(recipe.ingredient_groups.count).to eq(1)
+        expect(recipe.recipe_steps.count).to eq(2)
+      end
+
+      it 'rejects empty nested attributes' do
+        params = recipe_attributes.merge({
+          ingredient_groups_attributes: [
+            {
+              name: 'Dry Ingredients',
+              position: 1,
+              recipe_ingredients_attributes: [
+                {} # Empty - should be rejected by reject_if
+              ]
+            }
+          ]
+        })
+
+        post '/admin/recipes',
+             params: { recipe: params }.to_json,
+             headers: headers.merge('Authorization' => admin_auth_token)
+
+        expect(response).to have_http_status(:created)
+        recipe = Recipe.last
+        expect(recipe.ingredient_groups.first.recipe_ingredients.count).to eq(0)
+      end
+
+      it 'validates nested ingredient_groups required fields' do
+        params = recipe_attributes.merge({
+          ingredient_groups_attributes: [
+            {
+              position: 1,
+              recipe_ingredients_attributes: []
+              # Missing name - should fail validation
+            }
+          ]
+        })
+
+        post '/admin/recipes',
+             params: { recipe: params }.to_json,
+             headers: headers.merge('Authorization' => admin_auth_token)
+
+        expect(response).to have_http_status(:unprocessable_entity)
+        json = JSON.parse(response.body)
+        expect(json['success']).to be false
+      end
+
+      it 'validates nested recipe_ingredients required fields' do
+        params = recipe_attributes.merge({
+          ingredient_groups_attributes: [
+            {
+              name: 'Ingredients',
+              position: 1,
+              recipe_ingredients_attributes: [
+                { amount: 1, unit: 'cup', position: 1 }
+                # Missing ingredient_name - should fail validation
+              ]
+            }
+          ]
+        })
+
+        post '/admin/recipes',
+             params: { recipe: params }.to_json,
+             headers: headers.merge('Authorization' => admin_auth_token)
+
+        expect(response).to have_http_status(:unprocessable_entity)
+      end
+    end
+  end
+
+  describe 'PUT /admin/recipes/:id with nested attributes' do
+    context 'AC-PHASE2-STEP6-016: Update recipe with nested attributes' do
+      let(:admin_auth_token) do
+        post '/api/v1/auth/sign_in',
+             params: { user: { email: admin_user.email, password: 'password123' } }.to_json,
+             headers: headers
+        response.headers['Authorization']
+      end
+
+      let!(:recipe) { Recipe.create!(recipe_attributes) }
+
+      it 'updates recipe and adds nested ingredient_groups' do
+        params = {
+          ingredient_groups_attributes: [
+            {
+              name: 'New Group',
+              position: 1,
+              recipe_ingredients_attributes: [
+                { ingredient_name: 'salt', amount: 1, unit: 'tsp', position: 1 }
+              ]
+            }
+          ]
+        }
+
+        put "/admin/recipes/#{recipe.id}",
+            params: { recipe: params }.to_json,
+            headers: headers.merge('Authorization' => admin_auth_token)
+
+        expect(response).to have_http_status(:ok)
+        json = JSON.parse(response.body)
+        expect(json['success']).to be true
+
+        recipe.reload
+        expect(recipe.ingredient_groups.count).to eq(1)
+        expect(recipe.ingredient_groups.first.name).to eq('New Group')
+      end
+
+      it 'updates nested ingredient_groups' do
+        group = recipe.ingredient_groups.create!(name: 'Original Group', position: 1)
+        ingredient = group.recipe_ingredients.create!(
+          ingredient_name: 'flour',
+          amount: 2,
+          unit: 'cup',
+          position: 1
+        )
+
+        params = {
+          ingredient_groups_attributes: [
+            {
+              id: group.id,
+              name: 'Updated Group',
+              position: 1,
+              recipe_ingredients_attributes: [
+                {
+                  id: ingredient.id,
+                  ingredient_name: 'sugar',
+                  amount: 1,
+                  unit: 'cup',
+                  position: 1
+                }
+              ]
+            }
+          ]
+        }
+
+        put "/admin/recipes/#{recipe.id}",
+            params: { recipe: params }.to_json,
+            headers: headers.merge('Authorization' => admin_auth_token)
+
+        expect(response).to have_http_status(:ok)
+        group.reload
+        expect(group.name).to eq('Updated Group')
+        expect(group.recipe_ingredients.first.ingredient_name).to eq('sugar')
+      end
+
+      it 'deletes nested ingredient_groups via _destroy flag' do
+        group = recipe.ingredient_groups.create!(name: 'To Delete', position: 1)
+
+        params = {
+          ingredient_groups_attributes: [
+            {
+              id: group.id,
+              _destroy: true
+            }
+          ]
+        }
+
+        put "/admin/recipes/#{recipe.id}",
+            params: { recipe: params }.to_json,
+            headers: headers.merge('Authorization' => admin_auth_token)
+
+        expect(response).to have_http_status(:ok)
+        expect(recipe.ingredient_groups.count).to eq(0)
+        expect(IngredientGroup.find_by(id: group.id)).to be_nil
+      end
+
+      it 'deletes nested recipe_ingredients via _destroy flag' do
+        group = recipe.ingredient_groups.create!(name: 'Group', position: 1)
+        ingredient = group.recipe_ingredients.create!(
+          ingredient_name: 'flour',
+          amount: 2,
+          unit: 'cup',
+          position: 1
+        )
+
+        params = {
+          ingredient_groups_attributes: [
+            {
+              id: group.id,
+              name: 'Group',
+              position: 1,
+              recipe_ingredients_attributes: [
+                {
+                  id: ingredient.id,
+                  _destroy: true
+                }
+              ]
+            }
+          ]
+        }
+
+        put "/admin/recipes/#{recipe.id}",
+            params: { recipe: params }.to_json,
+            headers: headers.merge('Authorization' => admin_auth_token)
+
+        expect(response).to have_http_status(:ok)
+        group.reload
+        expect(group.recipe_ingredients.count).to eq(0)
+      end
+
+      it 'adds and deletes recipe_steps in same update' do
+        step = recipe.recipe_steps.create!(step_number: 1, instruction_original: 'Original step')
+
+        params = {
+          recipe_steps_attributes: [
+            {
+              id: step.id,
+              _destroy: true
+            },
+            {
+              step_number: 2,
+              instruction_original: 'New step'
+            }
+          ]
+        }
+
+        put "/admin/recipes/#{recipe.id}",
+            params: { recipe: params }.to_json,
+            headers: headers.merge('Authorization' => admin_auth_token)
+
+        expect(response).to have_http_status(:ok)
+        recipe.reload
+        expect(recipe.recipe_steps.count).to eq(1)
+        expect(recipe.recipe_steps.first.step_number).to eq(2)
+      end
+
+      it 'propagates validation errors from nested attributes' do
+        group = recipe.ingredient_groups.create!(name: 'Group', position: 1)
+
+        params = {
+          ingredient_groups_attributes: [
+            {
+              id: group.id,
+              name: '',
+              position: 1
+              # Empty name - should fail validation
+            }
+          ]
+        }
+
+        put "/admin/recipes/#{recipe.id}",
+            params: { recipe: params }.to_json,
+            headers: headers.merge('Authorization' => admin_auth_token)
+
+        expect(response).to have_http_status(:unprocessable_entity)
+        json = JSON.parse(response.body)
+        expect(json['success']).to be false
+      end
+    end
+  end
 end
