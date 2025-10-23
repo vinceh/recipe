@@ -1051,28 +1051,28 @@ end
 
 ---
 
-**Step 3: Fix Serializers & Core API Response Transformation**
+**Step 3: Fix Serializers & Core API Response Transformation** ✅ COMPLETE
 
 Goal: Make all API endpoints return correct JSONB-compatible responses despite using normalized schema
 
 Subtasks:
-- [ ] Update RecipeSerializer:
-  - [ ] Build `servings` hash from 3 columns (servings_original, servings_min, servings_max)
-  - [ ] Build `timing` hash from 3 columns (prep_minutes, cook_minutes, total_minutes)
-  - [ ] Serialize `ingredient_groups` association with nested `recipe_ingredients`
-  - [ ] Serialize `recipe_steps` association with instruction variants
-  - [ ] Serialize `equipment` through join table
-  - [ ] Serialize tag associations as arrays (dietary_tags, dish_types, cuisines, recipe_types)
-  - [ ] Handle null/empty collections consistently
-- [ ] Create IngredientGroupSerializer for nested serialization
-- [ ] Update Api::V1::RecipesController to eager-load all associations
-- [ ] Verify GET /api/v1/recipes returns correct format
-- [ ] Verify GET /api/v1/recipes/:id returns correct format
-- [ ] Update admin response serializer similarly
-- [ ] All serializer tests passing
-- [ ] Commit: `[Phase 2] Step 3: Fix serializers to rebuild JSONB-compatible responses`
-- [ ] Run code audit and address issues
-- [ ] Request approval
+- [x] Update RecipeSerializer:
+  - [x] Build `servings` hash from 3 columns (servings_original, servings_min, servings_max)
+  - [x] Build `timing` hash from 3 columns (prep_minutes, cook_minutes, total_minutes)
+  - [x] Serialize `ingredient_groups` association with nested `recipe_ingredients`
+  - [x] Serialize `recipe_steps` association with instruction variants
+  - [x] Serialize `equipment` through join table
+  - [x] Serialize tag associations as arrays (dietary_tags, dish_types, cuisines, recipe_types)
+  - [x] Handle null/empty collections consistently
+- [x] Create RecipeStepTranslation model for nested instruction serialization
+- [x] Update Api::V1::RecipesController to eager-load all associations
+- [x] Verify GET /api/v1/recipes returns correct format
+- [x] Verify GET /api/v1/recipes/:id returns correct format
+- [x] Update admin response serializer similarly
+- [x] All serializer tests passing (23/23 tests)
+- [x] Commit: `[Phase 2] Step 3: Fix serializers to rebuild JSONB-compatible responses`
+- [x] Run code audit and address issues
+- [x] Request approval ⏳ APPROVAL REQUESTED
 
 **Step 4: Fix Services (RecipeScaler, RecipeParser, RecipeSearchService)**
 
