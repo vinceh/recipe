@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_10_07_154505) do
+ActiveRecord::Schema[8.0].define(version: 2025_10_24_000001) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pg_trgm"
@@ -31,10 +31,21 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_07_154505) do
     t.index ["prompt_key"], name: "index_ai_prompts_on_prompt_key", unique: true
   end
 
+  create_table "data_reference_translations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "data_reference_id", null: false
+    t.string "locale", null: false
+    t.string "display_name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["data_reference_id", "locale"], name: "idx_on_data_reference_id_locale_0fc7470964", unique: true
+    t.index ["data_reference_id"], name: "index_data_reference_translations_on_data_reference_id"
+    t.index ["locale"], name: "index_data_reference_translations_on_locale"
+  end
+
   create_table "data_references", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "reference_type", null: false
     t.string "key", null: false
-    t.string "display_name", null: false
+    t.string "display_name"
     t.jsonb "metadata", default: {}
     t.integer "sort_order", default: 0
     t.boolean "active", default: true
@@ -42,6 +53,26 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_07_154505) do
     t.datetime "updated_at", null: false
     t.index ["reference_type", "key"], name: "index_data_references_on_reference_type_and_key", unique: true
     t.index ["reference_type"], name: "index_data_references_on_reference_type"
+  end
+
+  create_table "equipment", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "canonical_name", null: false
+    t.string "category"
+    t.jsonb "metadata", default: {}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["canonical_name"], name: "index_equipment_on_canonical_name", unique: true
+  end
+
+  create_table "equipment_translations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "equipment_id", null: false
+    t.string "locale", null: false
+    t.string "canonical_name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["equipment_id", "locale"], name: "index_equipment_translations_on_equipment_id_and_locale", unique: true
+    t.index ["equipment_id"], name: "index_equipment_translations_on_equipment_id"
+    t.index ["locale"], name: "index_equipment_translations_on_locale"
   end
 
   create_table "ingredient_aliases", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -53,6 +84,27 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_07_154505) do
     t.datetime "updated_at", null: false
     t.index ["alias", "language"], name: "index_ingredient_aliases_on_alias_and_language", unique: true
     t.index ["ingredient_id"], name: "index_ingredient_aliases_on_ingredient_id"
+  end
+
+  create_table "ingredient_group_translations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "ingredient_group_id", null: false
+    t.string "locale", null: false
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ingredient_group_id", "locale"], name: "idx_on_ingredient_group_id_locale_d7ab14909d", unique: true
+    t.index ["ingredient_group_id"], name: "index_ingredient_group_translations_on_ingredient_group_id"
+    t.index ["locale"], name: "index_ingredient_group_translations_on_locale"
+  end
+
+  create_table "ingredient_groups", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "recipe_id", null: false
+    t.string "name", null: false
+    t.integer "position", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id", "position"], name: "index_ingredient_groups_on_recipe_id_and_position", unique: true
+    t.index ["recipe_id"], name: "index_ingredient_groups_on_recipe_id"
   end
 
   create_table "ingredient_nutrition", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -85,37 +137,162 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_07_154505) do
     t.index ["jti"], name: "index_jwt_denylists_on_jti"
   end
 
+  create_table "recipe_aliases", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "recipe_id", null: false
+    t.string "alias_name", null: false
+    t.string "language", default: "en", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id", "alias_name", "language"], name: "index_recipe_aliases_on_recipe_id_and_alias_name_and_language", unique: true
+    t.index ["recipe_id"], name: "index_recipe_aliases_on_recipe_id"
+  end
+
+  create_table "recipe_cuisines", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "recipe_id", null: false
+    t.uuid "data_reference_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["data_reference_id"], name: "index_recipe_cuisines_on_data_reference_id"
+    t.index ["recipe_id", "data_reference_id"], name: "index_recipe_cuisines_on_recipe_id_and_data_reference_id", unique: true
+    t.index ["recipe_id"], name: "index_recipe_cuisines_on_recipe_id"
+  end
+
+  create_table "recipe_dietary_tags", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "recipe_id", null: false
+    t.uuid "data_reference_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["data_reference_id"], name: "index_recipe_dietary_tags_on_data_reference_id"
+    t.index ["recipe_id", "data_reference_id"], name: "index_recipe_dietary_tags_on_recipe_id_and_data_reference_id", unique: true
+    t.index ["recipe_id"], name: "index_recipe_dietary_tags_on_recipe_id"
+  end
+
+  create_table "recipe_dish_types", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "recipe_id", null: false
+    t.uuid "data_reference_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["data_reference_id"], name: "index_recipe_dish_types_on_data_reference_id"
+    t.index ["recipe_id", "data_reference_id"], name: "index_recipe_dish_types_on_recipe_id_and_data_reference_id", unique: true
+    t.index ["recipe_id"], name: "index_recipe_dish_types_on_recipe_id"
+  end
+
+  create_table "recipe_equipments", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "recipe_id", null: false
+    t.uuid "equipment_id", null: false
+    t.boolean "optional", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id", "equipment_id"], name: "index_recipe_equipments_on_recipe_id_and_equipment_id", unique: true
+    t.index ["recipe_id"], name: "index_recipe_equipments_on_recipe_id"
+  end
+
+  create_table "recipe_ingredient_translations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "recipe_ingredient_id", null: false
+    t.string "locale", null: false
+    t.string "name", null: false
+    t.text "preparation_notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["locale"], name: "index_recipe_ingredient_translations_on_locale"
+    t.index ["recipe_ingredient_id", "locale"], name: "idx_on_recipe_ingredient_id_locale_9c5100c08b", unique: true
+    t.index ["recipe_ingredient_id"], name: "index_recipe_ingredient_translations_on_recipe_ingredient_id"
+  end
+
+  create_table "recipe_ingredients", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "ingredient_group_id", null: false
+    t.uuid "ingredient_id"
+    t.string "name", null: false
+    t.decimal "amount", precision: 8, scale: 2
+    t.string "unit"
+    t.text "preparation_notes"
+    t.boolean "optional", default: false
+    t.integer "position", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ingredient_group_id", "position"], name: "index_recipe_ingredients_on_ingredient_group_id_and_position"
+    t.index ["ingredient_group_id"], name: "index_recipe_ingredients_on_ingredient_group_id"
+    t.index ["ingredient_id"], name: "index_recipe_ingredients_on_ingredient_id"
+  end
+
+  create_table "recipe_nutritions", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "recipe_id", null: false
+    t.decimal "calories", precision: 8, scale: 2
+    t.decimal "protein_g", precision: 8, scale: 2
+    t.decimal "carbs_g", precision: 8, scale: 2
+    t.decimal "fat_g", precision: 8, scale: 2
+    t.decimal "fiber_g", precision: 8, scale: 2
+    t.decimal "sodium_mg", precision: 8, scale: 2
+    t.decimal "sugar_g", precision: 8, scale: 2
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_recipe_nutritions_on_recipe_id", unique: true
+  end
+
+  create_table "recipe_recipe_types", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "recipe_id", null: false
+    t.uuid "data_reference_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["data_reference_id"], name: "index_recipe_recipe_types_on_data_reference_id"
+    t.index ["recipe_id", "data_reference_id"], name: "index_recipe_recipe_types_on_recipe_id_and_data_reference_id", unique: true
+    t.index ["recipe_id"], name: "index_recipe_recipe_types_on_recipe_id"
+  end
+
+  create_table "recipe_step_translations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "recipe_step_id", null: false
+    t.string "locale", null: false
+    t.text "instruction_original"
+    t.text "instruction_easier"
+    t.text "instruction_no_equipment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["locale"], name: "index_recipe_step_translations_on_locale"
+    t.index ["recipe_step_id", "locale"], name: "index_recipe_step_translations_on_recipe_step_id_and_locale", unique: true
+    t.index ["recipe_step_id"], name: "index_recipe_step_translations_on_recipe_step_id"
+  end
+
+  create_table "recipe_steps", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "recipe_id", null: false
+    t.integer "step_number", null: false
+    t.integer "timing_minutes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id", "step_number"], name: "index_recipe_steps_on_recipe_id_and_step_number", unique: true
+    t.index ["recipe_id"], name: "index_recipe_steps_on_recipe_id"
+  end
+
+  create_table "recipe_translations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "recipe_id", null: false
+    t.string "locale", null: false
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["locale"], name: "index_recipe_translations_on_locale"
+    t.index ["recipe_id", "locale"], name: "index_recipe_translations_on_recipe_id_and_locale", unique: true
+    t.index ["recipe_id"], name: "index_recipe_translations_on_recipe_id"
+  end
+
   create_table "recipes", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "name", null: false
-    t.string "language", default: "en"
+    t.string "source_language", default: "en", null: false
+    t.integer "servings_original"
+    t.integer "servings_min"
+    t.integer "servings_max"
+    t.integer "prep_minutes"
+    t.integer "cook_minutes"
+    t.integer "total_minutes"
     t.boolean "requires_precision", default: false
     t.string "precision_reason"
-    t.jsonb "servings", default: {}
-    t.jsonb "timing", default: {}
-    t.jsonb "nutrition", default: {}
-    t.jsonb "aliases", default: []
-    t.jsonb "dietary_tags", default: []
-    t.jsonb "dish_types", default: []
-    t.jsonb "recipe_types", default: []
-    t.jsonb "cuisines", default: []
-    t.jsonb "ingredient_groups", default: []
-    t.jsonb "steps", default: []
-    t.jsonb "equipment", default: []
-    t.jsonb "translations", default: {}
+    t.string "source_url"
+    t.text "admin_notes"
     t.boolean "variants_generated", default: false
     t.datetime "variants_generated_at"
     t.boolean "translations_completed", default: false
-    t.string "source_url"
-    t.text "admin_notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["aliases"], name: "index_recipes_on_aliases", using: :gin
-    t.index ["cuisines"], name: "index_recipes_on_cuisines", using: :gin
-    t.index ["dietary_tags"], name: "index_recipes_on_dietary_tags", using: :gin
-    t.index ["dish_types"], name: "index_recipes_on_dish_types", using: :gin
-    t.index ["language"], name: "index_recipes_on_language"
     t.index ["name"], name: "index_recipes_on_name"
-    t.index ["recipe_types"], name: "index_recipes_on_recipe_types", using: :gin
+    t.index ["source_language"], name: "index_recipes_on_source_language"
   end
 
   create_table "user_favorites", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -123,38 +300,58 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_07_154505) do
     t.uuid "recipe_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_user_favorites_on_recipe_id"
     t.index ["user_id", "recipe_id"], name: "index_user_favorites_on_user_id_and_recipe_id", unique: true
+    t.index ["user_id"], name: "index_user_favorites_on_user_id"
   end
 
   create_table "user_recipe_notes", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "user_id", null: false
     t.uuid "recipe_id", null: false
-    t.string "note_type", null: false
-    t.string "note_target_id"
-    t.text "note_text"
+    t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id", "recipe_id"], name: "index_user_recipe_notes_on_user_id_and_recipe_id"
+    t.index ["recipe_id"], name: "index_user_recipe_notes_on_recipe_id"
+    t.index ["user_id", "recipe_id"], name: "index_user_recipe_notes_on_user_id_and_recipe_id", unique: true
+    t.index ["user_id"], name: "index_user_recipe_notes_on_user_id"
   end
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer "role", default: 0
+    t.string "email", null: false
+    t.string "encrypted_password", null: false
+    t.string "role", default: "user"
     t.string "preferred_language", default: "en"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "ingredient_aliases", "ingredients"
-  add_foreign_key "ingredient_nutrition", "ingredients"
-  add_foreign_key "user_favorites", "recipes"
-  add_foreign_key "user_favorites", "users"
-  add_foreign_key "user_recipe_notes", "recipes"
-  add_foreign_key "user_recipe_notes", "users"
+  add_foreign_key "data_reference_translations", "data_references", on_delete: :cascade
+  add_foreign_key "equipment_translations", "equipment", on_delete: :cascade
+  add_foreign_key "ingredient_aliases", "ingredients", on_delete: :cascade
+  add_foreign_key "ingredient_group_translations", "ingredient_groups", on_delete: :cascade
+  add_foreign_key "ingredient_groups", "recipes", on_delete: :cascade
+  add_foreign_key "ingredient_nutrition", "ingredients", on_delete: :cascade
+  add_foreign_key "recipe_aliases", "recipes", on_delete: :cascade
+  add_foreign_key "recipe_cuisines", "data_references", on_delete: :cascade
+  add_foreign_key "recipe_cuisines", "recipes", on_delete: :cascade
+  add_foreign_key "recipe_dietary_tags", "data_references", on_delete: :cascade
+  add_foreign_key "recipe_dietary_tags", "recipes", on_delete: :cascade
+  add_foreign_key "recipe_dish_types", "data_references", on_delete: :cascade
+  add_foreign_key "recipe_dish_types", "recipes", on_delete: :cascade
+  add_foreign_key "recipe_equipments", "equipment", on_delete: :cascade
+  add_foreign_key "recipe_equipments", "recipes", on_delete: :cascade
+  add_foreign_key "recipe_ingredient_translations", "recipe_ingredients", on_delete: :cascade
+  add_foreign_key "recipe_ingredients", "ingredient_groups", on_delete: :cascade
+  add_foreign_key "recipe_ingredients", "ingredients", on_delete: :nullify
+  add_foreign_key "recipe_nutritions", "recipes", on_delete: :cascade
+  add_foreign_key "recipe_recipe_types", "data_references", on_delete: :cascade
+  add_foreign_key "recipe_recipe_types", "recipes", on_delete: :cascade
+  add_foreign_key "recipe_step_translations", "recipe_steps", on_delete: :cascade
+  add_foreign_key "recipe_steps", "recipes", on_delete: :cascade
+  add_foreign_key "recipe_translations", "recipes", on_delete: :cascade
+  add_foreign_key "user_favorites", "recipes", on_delete: :cascade
+  add_foreign_key "user_favorites", "users", on_delete: :cascade
+  add_foreign_key "user_recipe_notes", "recipes", on_delete: :cascade
+  add_foreign_key "user_recipe_notes", "users", on_delete: :cascade
 end
