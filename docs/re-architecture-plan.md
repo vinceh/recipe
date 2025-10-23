@@ -792,13 +792,336 @@ end
 - [ ] Commit assessment document + updated plan with reference section
 - [ ] Request approval
 
-**Steps 3-5: Component Fixes**
-*(To be determined based on Step 2 discoveries)*
+---
 
-Will be specific, focused steps like:
-- "Step 3: Fix RecipeSerializer to transform normalized data to JSONB format"
-- "Step 4: Update RecipeScaler to work with ingredient_groups associations"
-- "Step 5: Fix RecipeParserService to create normalized records"
+## Phase 2 Reference: Transformation Requirements
+
+### Critical Discovery: Schema Migration Complete, Code Not Updated
+
+Phase 1 successfully migrated the database schema to normalized structure:
+- ✅ `servings_original`, `servings_min`, `servings_max` (integer columns, not JSONB)
+- ✅ `prep_minutes`, `cook_minutes`, `total_minutes` (integer columns, not JSONB)
+- ✅ `ingredient_groups`, `recipe_ingredients`, `recipe_steps` (relational tables)
+- ✅ `equipment`, `recipe_equipment` (join tables)
+- ✅ `recipe_dietary_tags`, `recipe_dish_types`, `recipe_cuisines`, `recipe_recipe_types` (join tables)
+
+**BUT: All code still accesses JSONB fields that no longer exist.**
+
+### Test Failure Summary
+
+**Total Failures: 44+ (includes 25+ request/API endpoint failures)**
+
+**Failure Categories:**
+
+1. **API Endpoint Failures (19 critical)**
+   - GET /api/v1/recipes (list) - FAILED (returns JSONB field access errors)
+   - GET /api/v1/recipes/:id (show) - FAILED
+   - POST /api/v1/recipes/:id/scale - FAILED (RecipeScaler tries to access recipe.servings['original'])
+   - POST /api/v1/recipes/:id/translate - FAILED
+   - POST /api/v1/recipes/:id/generate_step_variants - FAILED
+   - All admin endpoints for create/update/delete - FAILED
+   - All parse endpoints (text/url/image) - FAILED
+
+2. **Service Failures (12 critical)**
+   - RecipeScaler: Line 17 `@recipe.servings['original']` (field doesn't exist)
+   - RecipeSearchService: Lines 162, 170, 178 use SQL JSONB operators on removed fields
+   - RecipeTranslator: Expects JSONB ingredient_groups, steps, equipment
+   - StepVariantGenerator: Expects JSONB steps
+   - RecipeParser: Creates data structure for non-existent JSONB fields
+   - RecipeNutritionCalculator: Accesses ingredient_groups JSONB array
+
+3. **Job Failures (13)**
+   - GenerateStepVariantsJob: 9 failures (variants_generated, step iteration, multiple steps)
+   - NutritionLookupJob: 2 failures
+   - TranslateRecipeJob: 2 failures
+
+4. **Controller Failures (10)**
+   - Api::V1::RecipesController: Multiple endpoints try to access non-existent JSONB fields
+   - Admin::RecipesController: Create/update with strong params for non-existent fields
+   - Admin::AiPrompts, Admin::DataReferences: 8 failures
+
+### Component-to-AC Mapping & Required Changes
+
+#### RecipeSerializer (backend/app/serializers/recipe_serializer.rb)
+
+**Current Code**:
+```ruby
+attributes :id, :title, :description, :servings, :prep_time, :cook_time,
+           :total_time, :difficulty, :cuisine, :dietary_tags,
+           :ingredient_groups, :steps, :notes, :source_url
+```
+
+**Issue**: Tries to access `servings` as JSONB, but now it's split across 3 columns
+
+**Required Changes**:
+- `servings` → build hash from `servings_original`, `servings_min`, `servings_max` columns
+- `ingredient_groups` → serialize `recipe.ingredient_groups` association (eager loaded)
+- `steps` → serialize `recipe.recipe_steps` association
+- `dietary_tags`, etc. → serialize join table associations
+
+**Related ACs**: AC-PHASE2-SERIALIZER-001 through -011, AC-PHASE2-BACKWARD-COMPAT-001 through -003
+
+#### RecipeScaler (backend/app/services/recipe_scaler.rb)
+
+**Current JSONB Access** (Lines 17, 40, 42, 48, 154, 158):
+```ruby
+line 17: scaling_factor = target_servings.to_f / @recipe.servings['original']
+line 40: scaled_recipe.ingredient_groups = deep_dup_jsonb(@recipe.ingredient_groups)
+line 158: @recipe.ingredient_groups.each do |group|
+line 154: recipe.recipe_types.any? { |type| precision_types.include?(type) }
+```
+
+**Required Changes**:
+- Replace `@recipe.servings['original']` with `@recipe.servings_original` (integer column)
+- Replace `@recipe.ingredient_groups` with `@recipe.ingredient_groups.includes(:recipe_ingredients)` (association)
+- Iterate `ingredient_groups` association and scale nested `recipe_ingredients` amounts
+- Replace `recipe.recipe_types` JSONB access with `recipe.recipe_types.pluck(:key)` (join table)
+
+**Related ACs**: AC-PHASE2-SERVICE-001, AC-PHASE2-SERVICE-002, AC-PHASE2-PERF-001
+
+#### RecipeSearchService (backend/app/services/recipe_search_service.rb)
+
+**Current JSONB Queries** (Lines 32-35, 44-49, 73-105, 108-115, 122-130, 134-142, 146-154):
+```ruby
+line 32-35: SELECT 1 FROM jsonb_array_elements_text(aliases)  # aliases no longer JSONB
+line 44-49: SELECT FROM jsonb_array_elements(ingredient_groups) # now relational
+line 73-105: nutrition->'per_serving'->>'calories' # JSONB operators
+line 108-115: dietary_tags @> ? # JSONB containment
+line 122-130: cuisines @> ? # JSONB containment
+```
+
+**Required Changes**:
+- Replace JSONB array filtering with association joins
+- `dietary_tags @> ?` → `joins(:dietary_tags).where(recipe_dietary_tags: { data_reference_id: tag_ids })`
+- `cuisines @> ?` → `joins(:cuisines).where(recipe_cuisines: { data_reference_id: cuisine_ids })`
+- Ingredient name search → `joins(ingredient_groups: :recipe_ingredients).where(recipe_ingredients: { ingredient_name: ... })`
+- Nutrition filtering → `joins(:recipe_nutrition).where(recipe_nutrition: { calories: ... })`
+
+**Related ACs**: AC-PHASE2-SEARCH-001 through -004, AC-PHASE2-PERF-001
+
+#### RecipeParserService (backend/app/services/recipe_parser_service.rb)
+
+**Current Behavior** (Lines 181, 189-193):
+```ruby
+Returns: {
+  title: ...,
+  servings: { original: 4, min: 2, max: 8 },
+  ingredient_groups: [...],
+  steps: [...],
+  equipment: [...]
+}
+```
+
+**Issue**: Returns JSONB-formatted hash for non-existent JSONB columns
+
+**Required Changes**:
+- Change return to create normalized record structure:
+  ```ruby
+  {
+    title: ...,
+    servings_original: 4,
+    servings_min: 2,
+    servings_max: 8,
+    prep_minutes: 15,
+    cook_minutes: 30,
+    total_minutes: 45,
+    ingredient_groups_attributes: [...],
+    recipe_steps_attributes: [...],
+    equipment_attributes: [...]
+  }
+  ```
+- Use nested_attributes to create associated records in single transaction
+
+**Related ACs**: AC-PHASE2-SERVICE-003
+
+#### RecipeTranslator (backend/app/services/recipe_translator.rb)
+
+**Current JSONB Access** (Lines 6-8, 20-30):
+```ruby
+ingredient_groups: translate_ingredient_groups(recipe.ingredient_groups, target_language),
+steps: translate_steps(recipe.steps, target_language),
+equipment: translate_equipment(recipe.equipment, target_language)
+```
+
+**Required Changes**:
+- Query associations: `recipe.ingredient_groups.includes(:recipe_ingredients)`
+- Translate ingredient names via `recipe.recipe_ingredients`
+- Translate step instructions via `recipe.recipe_steps`
+- Use Mobility gem or translation table for multi-language support (Phase 4)
+- For Phase 2: Store translated data in `recipe_step_translations` table
+
+**Related ACs**: AC-PHASE2-SERVICE-006
+
+#### StepVariantGenerator (backend/app/services/step_variant_generator.rb)
+
+**Current JSONB Access** (Line 54):
+```ruby
+recipe.ingredient_groups.flat_map do |group|
+```
+
+**Required Changes**:
+- Replace with: `recipe.ingredient_groups.includes(:recipe_ingredients).flat_map`
+- Iterate `recipe_ingredients` within each group
+- Generate variants via Anthropic API (unchanged logic)
+- Store variants in `recipe_steps.instruction_easier` and `instruction_no_equipment` columns
+
+**Related ACs**: AC-PHASE2-SERVICE-004
+
+#### Controllers (Api::V1::RecipesController, Admin::RecipesController)
+
+**Current Issues**:
+
+**Api::V1::RecipesController** (Lines 69, 160-190):
+```ruby
+def scale
+  scaled_ingredient_groups = recipe.ingredient_groups.map do |group|
+    # Accesses JSONB array directly
+  end
+end
+
+def index
+  render json: RecipeListSerializer.new(@recipes).serializable_hash
+  # Serializer tries to return JSONB fields
+end
+```
+
+**Admin::RecipesController** (Lines 325-378):
+```ruby
+def recipe_params
+  params.require(:recipe).permit(
+    :servings,      # Should be :servings_original, :servings_min, :servings_max
+    :timing,        # Should be :prep_minutes, :cook_minutes, :total_minutes
+    :ingredient_groups,
+    :steps
+  )
+end
+
+def create
+  @recipe = Recipe.new(recipe_params)
+  # Tries to assign JSONB hashes to non-existent JSONB columns
+end
+```
+
+**Required Changes**:
+- Update strong params to use normalized column names
+- Use nested_attributes for associated records
+- Ensure eager loading of associations in queries
+- Update serializers to rebuild JSONB-compatible response format
+
+**Related ACs**: AC-PHASE2-CONTROLLER-001 through -003, AC-PHASE2-BACKWARD-COMPAT-001 through -003
+
+### JSONB-to-Relational Transformation Matrix
+
+| JSONB Field | Current Code Access | Old Structure | New Column(s) | New Association | Transformation Logic |
+|-------------|-------------------|---------------|----------------|-----------------|----------------------|
+| servings | `recipe.servings['original']` | `{original: 4, min: 2, max: 8}` | `servings_original`, `servings_min`, `servings_max` (int) | None | Build hash in serializer from 3 columns |
+| timing | `timing->>'prep_minutes'` | `{prep_minutes: 15, cook_minutes: 30, total_minutes: 45}` | `prep_minutes`, `cook_minutes`, `total_minutes` (int) | None | Build hash in serializer from 3 columns |
+| ingredient_groups | `recipe.ingredient_groups` | Array of hashes | `ingredient_groups` table | `has_many :ingredient_groups` | Serialize association + nested items |
+| recipe_ingredients | Nested in ingredient_groups | `{quantity, unit, item, notes}` | `recipe_ingredients` table | `has_many :recipe_ingredients through: :ingredient_groups` | Serialize through parent |
+| steps | `recipe.steps` | Array of hashes | `recipe_steps` table | `has_many :recipe_steps` | Serialize with instruction variants |
+| equipment | `recipe.equipment` | Array of strings | `equipment` + `recipe_equipment` tables | `has_many :equipment through: :recipe_equipment` | Serialize through join table |
+| dietary_tags | `dietary_tags @> ?` | `["vegetarian"]` | `recipe_dietary_tags` join table | `has_many :dietary_tags through: :recipe_dietary_tags` | Join query, serialize display_name array |
+| dish_types | `dish_types @> ?` | `["main-course"]` | `recipe_dish_types` join table | `has_many :dish_types through: :recipe_dish_types` | Join query, serialize display_name array |
+| cuisines | `cuisines @> ?` | `["italian"]` | `recipe_cuisines` join table | `has_many :cuisines through: :recipe_cuisines` | Join query, serialize display_name array |
+| recipe_types | `recipe.recipe_types` | `["quick-weeknight"]` | `recipe_recipe_types` join table | `has_many :recipe_types through: :recipe_recipe_types` | Join query, serialize display_name array |
+
+### Critical Files Requiring Changes
+
+**Tier 1: Immediate/Blocking** (must fix to pass tests)
+1. `backend/app/serializers/recipe_serializer.rb` - Rebuild JSONB-compatible response
+2. `backend/app/services/recipe_scaler.rb` - Query associations instead of JSONB
+3. `backend/app/services/recipe_search_service.rb` - Join-based queries instead of JSONB operators
+4. `backend/app/controllers/api/v1/recipes_controller.rb` - Ensure eager loading, scale endpoint
+5. `backend/app/controllers/admin/recipes_controller.rb` - Update strong params, create with associations
+
+**Tier 2: Secondary** (used by Tier 1)
+6. `backend/app/services/recipe_parser_service.rb` - Return normalized structure
+7. `backend/app/services/recipe_translator.rb` - Work with associations
+8. `backend/app/services/step_variant_generator.rb` - Work with recipe_steps association
+9. `backend/app/jobs/generate_step_variants_job.rb` - Depends on step_variant_generator
+
+**Tier 3: Tertiary** (dependent on Tier 1-2)
+10. `backend/spec/**/*` - Update factories, specs for normalized structure
+11. `backend/app/models/recipe.rb` - Verify associations
+
+---
+
+**Step 3: Fix Serializers & Core API Response Transformation**
+
+Goal: Make all API endpoints return correct JSONB-compatible responses despite using normalized schema
+
+Subtasks:
+- [ ] Update RecipeSerializer:
+  - [ ] Build `servings` hash from 3 columns (servings_original, servings_min, servings_max)
+  - [ ] Build `timing` hash from 3 columns (prep_minutes, cook_minutes, total_minutes)
+  - [ ] Serialize `ingredient_groups` association with nested `recipe_ingredients`
+  - [ ] Serialize `recipe_steps` association with instruction variants
+  - [ ] Serialize `equipment` through join table
+  - [ ] Serialize tag associations as arrays (dietary_tags, dish_types, cuisines, recipe_types)
+  - [ ] Handle null/empty collections consistently
+- [ ] Create IngredientGroupSerializer for nested serialization
+- [ ] Update Api::V1::RecipesController to eager-load all associations
+- [ ] Verify GET /api/v1/recipes returns correct format
+- [ ] Verify GET /api/v1/recipes/:id returns correct format
+- [ ] Update admin response serializer similarly
+- [ ] All serializer tests passing
+- [ ] Commit: `[Phase 2] Step 3: Fix serializers to rebuild JSONB-compatible responses`
+- [ ] Run code audit and address issues
+- [ ] Request approval
+
+**Step 4: Fix Services (RecipeScaler, RecipeParser, RecipeSearchService)**
+
+Goal: Update all services to query normalized schema instead of JSONB
+
+Subtasks:
+- [ ] Update RecipeScaler:
+  - [ ] Replace `@recipe.servings['original']` with `@recipe.servings_original`
+  - [ ] Query `recipe.ingredient_groups.includes(:recipe_ingredients)`
+  - [ ] Scale `recipe_ingredient.amount` values
+  - [ ] Replace recipe_types JSONB access with association query
+  - [ ] Test AC-PHASE2-SERVICE-001, AC-PHASE2-SERVICE-002
+- [ ] Update RecipeSearchService:
+  - [ ] Replace JSONB operators with association joins for tag filtering
+  - [ ] Replace ingredient_groups JSONB query with ingredient table joins
+  - [ ] Replace nutrition JSONB query with recipe_nutrition table joins
+  - [ ] Test AC-PHASE2-SEARCH-001 through -004
+- [ ] Update RecipeParserService:
+  - [ ] Change return structure to use normalized field names
+  - [ ] Use `ingredient_groups_attributes` for nested record creation
+  - [ ] Use `recipe_steps_attributes` for step creation
+  - [ ] Test AC-PHASE2-SERVICE-003
+- [ ] Update RecipeTranslator to work with associations (not full rewrite, prepare for Phase 4)
+- [ ] Update StepVariantGenerator to work with recipe_steps association
+- [ ] All service tests passing
+- [ ] Commit: `[Phase 2] Step 4: Update services to work with normalized schema`
+- [ ] Run code audit and address issues
+- [ ] Request approval
+
+**Step 5: Fix Controllers & Strong Parameters**
+
+Goal: Update controllers to handle normalized field names and nested attributes
+
+Subtasks:
+- [ ] Update Admin::RecipesController#recipe_params:
+  - [ ] Change `:servings` → `:servings_original`, `:servings_min`, `:servings_max`
+  - [ ] Change `:timing` → `:prep_minutes`, `:cook_minutes`, `:total_minutes`
+  - [ ] Add `ingredient_groups_attributes: [...]` for nested record creation
+  - [ ] Add `recipe_steps_attributes: [...]` for step creation
+  - [ ] Add `equipment_attributes: [...]` for equipment
+  - [ ] Add `recipe_dietary_tags_attributes: [...]` for tags
+- [ ] Update Api::V1::RecipesController#scale:
+  - [ ] Ensure eager loading of ingredient_groups and recipe_ingredients
+  - [ ] Pass correct parameters to RecipeScaler
+  - [ ] Test AC-PHASE2-BACKWARD-COMPAT-003
+- [ ] Update admin create/update/delete endpoints to use RecipeParserService correctly
+- [ ] Verify POST /admin/recipes works with normalized structure
+- [ ] Verify PUT /admin/recipes/:id works with normalized structure
+- [ ] Verify POST /admin/recipes/parse_text creates normalized records
+- [ ] Verify POST /admin/recipes/parse_url creates normalized records
+- [ ] All controller tests passing
+- [ ] Commit: `[Phase 2] Step 5: Update controllers for normalized schema`
+- [ ] Run code audit and address issues
+- [ ] Request approval
 
 **Step 6: Add Constraint Tests + Write RSpec Tests Against Phase 2 ACs**
 - [ ] Add position uniqueness constraint tests for ingredient_groups (M-3)
