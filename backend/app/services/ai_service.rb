@@ -14,7 +14,7 @@ class AiService
 
     begin
       params = {
-        model: ENV.fetch('ANTHROPIC_MODEL', 'claude-3-5-sonnet-20241022'),
+        model: ENV.fetch('ANTHROPIC_MODEL', 'claude-3-5-haiku-20241022'),
         max_tokens: max_tokens,
         system: system_prompt,
         messages: [
@@ -32,7 +32,7 @@ class AiService
 
       # Log API usage for cost tracking
       log_api_usage(
-        model: ENV.fetch('ANTHROPIC_MODEL', 'claude-3-5-sonnet-20241022'),
+        model: ENV.fetch('ANTHROPIC_MODEL', 'claude-3-5-haiku-20241022'),
         input_tokens: response.dig('usage', 'input_tokens'),
         output_tokens: response.dig('usage', 'output_tokens'),
         success: true
@@ -45,7 +45,7 @@ class AiService
 
       # Log failed API call
       log_api_usage(
-        model: ENV.fetch('ANTHROPIC_MODEL', 'claude-3-5-sonnet-20241022'),
+        model: ENV.fetch('ANTHROPIC_MODEL', 'claude-3-5-haiku-20241022'),
         input_tokens: 0,
         output_tokens: 0,
         success: false,
