@@ -46,23 +46,28 @@ All ACs go into `docs/new_claude/acceptance-criteria.md` in GIVEN/WHEN/THEN form
 - Example: `[Phase 1] Database schema normalization and migration`
 
 **Task Tracking Within Phases:**
-1. **When starting a new phase:**
-   - Break the phase down into subtasks
-   - Group related subtasks if needed
-   - Add subtasks to this document in the phase section with checkboxes
-   - Each subtask should be atomic and achievable in a short time block
 
-2. **As you work through a phase:**
-   - Check off subtasks as they're completed: `- [x] Task name`
-   - This provides visibility into progress
-   - Updated checkboxes should be committed separately from the phase commit
+1. **When starting a new phase (BEFORE development):**
+   - Break the phase down into atomic subtasks
+   - Group related subtasks with nested bullets if helpful
+   - Add subtasks to the phase section with unchecked checkboxes: `- [ ] Task name`
+   - Each subtask should be completable in a focused work session
+   - Commit this documentation update with message: `[Phase X] Plan subtasks`
 
-3. **At the end of each phase (BEFORE committing):**
+2. **During development (AFTER each completed subtask):**
+   - Complete one subtask
+   - Mark it as complete: `- [x] Task name`
+   - Commit this progress update with message: `[Phase X] Complete subtask: <description>`
+   - Get approval before moving to next subtask
+   - This provides visibility into progress and allows for course corrections
+
+3. **At the end of each phase (BEFORE final phase commit):**
+   - Verify all subtasks are marked complete: `- [x] Task name`
    - Review the phase plan and assumptions against what you actually learned
    - Evaluate whether current direction still makes sense
    - Check if any discoveries require documentation updates
    - Update this re-architecture-plan.md if needed
-   - Only then commit the phase
+   - Then create final commit with message: `[Phase X] Complete: <description>`
 
 4. **Example Phase with Subtasks:**
    ```
