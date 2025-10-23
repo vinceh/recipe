@@ -672,12 +672,8 @@ end
 - [x] Mark Step 4 complete
 
 **Step 5: Run Migration and Seeds**
-- [ ] Run `rails db:migrate`
-- [ ] Run `rails db:seed`
-- [ ] Verify no errors
-- [ ] Check data integrity
-
-**Step 6: Write Comprehensive Seeds**
+- [ ] Run `rails db:migrate` to apply all Phase 1 schema changes
+- [ ] Verify migration completes without errors
 - [ ] Update db/seeds.rb with test recipes for new schema
 - [ ] **CRITICAL: ALL fields must be covered to test every field works**
   - [ ] All servings variations (servings_original, servings_min, servings_max)
@@ -692,18 +688,20 @@ end
   - [ ] Null/missing values to test optional fields
 - [ ] Ensure 10+ test recipes with comprehensive coverage
 - [ ] Cover edge cases per AC-PHASE1-014c
-- [ ] Commit seeds: `[Phase 1] Step 6: Write comprehensive seeds with all field coverage`
+- [ ] Run `rails db:seed` to populate test data
+- [ ] Verify no errors and check data integrity
+- [ ] Commit: `[Phase 1] Step 5: Run migration and comprehensive seeds`
 
-**Step 7: Write RSpec Tests**
+**Step 6: Write RSpec Tests**
 - [ ] Write test suite covering Phase 1 ACs
 - [ ] All tests passing
-- [ ] Commit: `[Phase 1] Step 7: Add RSpec tests for schema normalization`
+- [ ] Commit: `[Phase 1] Step 6: Add RSpec tests for schema normalization`
 
-**Step 8: Final Review**
+**Step 7: Final Review**
 - [ ] Review plan against actual discoveries
 - [ ] Evaluate direction and assumptions
 - [ ] Update documentation if needed
-- [ ] Final commit: `[Phase 1] Step 8: Complete - Database schema normalization`
+- [ ] Final commit: `[Phase 1] Step 7: Complete - Database schema normalization`
 
 ---
 
