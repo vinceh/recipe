@@ -624,40 +624,42 @@ Returns complete recipe details including ingredients, steps, equipment, nutriti
     "recipe": {
       "id": 1,
       "name": "Taiwanese Beef Noodle Soup",
-      "language": "en",
-      "servings": {
-        "original": 4,
-        "min": 2,
-        "max": 8
-      },
-      "timing": {
-        "prep_minutes": 30,
-        "cook_minutes": 150,
-        "total_minutes": 180
-      },
+      "source_language": "en",
+      "servings_original": 4,
+      "servings_min": 2,
+      "servings_max": 8,
+      "prep_minutes": 30,
+      "cook_minutes": 150,
+      "total_minutes": 180,
       "dietary_tags": ["gluten-free-adaptable"],
       "dish_types": ["main-course", "soup"],
       "recipe_types": ["comfort-food"],
       "cuisines": ["taiwanese", "chinese"],
       "ingredient_groups": [
         {
+          "id": 1,
           "name": "Broth",
-          "items": [
+          "position": 1,
+          "recipe_ingredients": [
             {
-              "ingredient": "beef bones",
-              "amount": "2",
+              "id": 1,
+              "ingredient_name": "beef bones",
+              "amount": 2.0,
               "unit": "lbs",
-              "notes": "preferably with marrow"
+              "position": 1,
+              "preparation_notes": "preferably with marrow",
+              "optional": false
             }
           ]
         }
       ],
-      "steps": [
+      "recipe_steps": [
         {
+          "id": 1,
           "step_number": 1,
-          "instruction": "Blanch beef bones in boiling water for 5 minutes",
-          "timing_minutes": 5,
-          "equipment": ["large pot"]
+          "instruction_original": "Blanch beef bones in boiling water for 5 minutes",
+          "instruction_easier": "Boil beef bones",
+          "instruction_no_equipment": null
         }
       ],
       "equipment": ["large pot", "knife", "cutting board"],
@@ -666,18 +668,17 @@ Returns complete recipe details including ingredients, steps, equipment, nutriti
         "protein_g": 35,
         "carbs_g": 45,
         "fat_g": 15,
-        "fiber_g": 3
+        "fiber_g": 3,
+        "sodium_mg": 800,
+        "sugar_g": 2
       },
       "requires_precision": false,
       "precision_reason": null,
       "source_url": "https://example.com/recipe",
-      "translations": {
-        "ja": {
-          "name": "台湾牛肉麺",
-          "ingredient_groups": [],
-          "steps": []
-        }
-      },
+      "admin_notes": "Popular traditional recipe",
+      "variants_generated": true,
+      "variants_generated_at": "2025-10-09T12:00:00Z",
+      "translations_completed": false,
       "created_at": "2025-10-09T12:00:00Z",
       "updated_at": "2025-10-09T12:00:00Z"
     }
@@ -1821,36 +1822,69 @@ Creates a new recipe manually. This is used for recipes that are created from sc
 {
   "recipe": {
     "name": "Taiwanese Beef Noodle Soup",
-    "language": "en",
+    "source_language": "en",
     "requires_precision": false,
     "precision_reason": null,
     "source_url": "https://example.com/recipe",
     "admin_notes": "Popular traditional recipe",
-    "servings": {
-      "original": 4,
-      "min": 2,
-      "max": 8
-    },
-    "timing": {
-      "prep_minutes": 30,
-      "cook_minutes": 150,
-      "total_minutes": 180
-    },
-    "nutrition": {
+    "servings_original": 4,
+    "servings_min": 2,
+    "servings_max": 8,
+    "prep_minutes": 30,
+    "cook_minutes": 150,
+    "total_minutes": 180,
+    "ingredient_groups_attributes": [
+      {
+        "name": "Broth",
+        "position": 1,
+        "recipe_ingredients_attributes": [
+          {
+            "ingredient_name": "beef bones",
+            "amount": 2.0,
+            "unit": "lbs",
+            "position": 1,
+            "preparation_notes": "preferably with marrow",
+            "optional": false
+          }
+        ]
+      }
+    ],
+    "recipe_steps_attributes": [
+      {
+        "step_number": 1,
+        "instruction_original": "Blanch beef bones in boiling water for 5 minutes",
+        "instruction_easier": "Boil beef bones",
+        "instruction_no_equipment": null
+      }
+    ],
+    "recipe_nutrition_attributes": {
       "calories": 450,
       "protein_g": 35,
       "carbs_g": 45,
-      "fat_g": 15
+      "fat_g": 15,
+      "fiber_g": 3,
+      "sodium_mg": 800,
+      "sugar_g": 2
     },
-    "aliases": ["牛肉麺", "Niu Rou Mian"],
-    "dietary_tags": ["gluten-free-adaptable"],
-    "dish_types": ["main-course", "soup"],
-    "recipe_types": ["comfort-food"],
-    "cuisines": ["taiwanese", "chinese"],
-    "ingredient_groups": [],
-    "steps": [],
-    "equipment": [],
-    "translations": {}
+    "recipe_aliases_attributes": [
+      {"alias_name": "牛肉麺", "language": "zh-tw"},
+      {"alias_name": "Niu Rou Mian", "language": "en"}
+    ],
+    "recipe_dietary_tags_attributes": [
+      {"data_reference_id": 1}
+    ],
+    "recipe_dish_types_attributes": [
+      {"data_reference_id": 2}
+    ],
+    "recipe_cuisines_attributes": [
+      {"data_reference_id": 3}
+    ],
+    "recipe_recipe_types_attributes": [
+      {"data_reference_id": 4}
+    ],
+    "recipe_equipment_attributes": [
+      {"equipment_id": 1, "optional": false}
+    ]
   }
 }
 ```
@@ -1903,9 +1937,11 @@ curl -X POST http://localhost:3000/admin/recipes \
 ##### Notes
 
 - Acceptance Criteria: AC-ADMIN-001
-- Minimum required fields: name, language
-- JSONB fields (servings, timing, etc.) can be passed as nested objects
-- Arrays (aliases, dietary_tags, etc.) are validated against DataReference table
+- Minimum required fields: name, source_language
+- Servings and timing are now normalized columns (servings_original, servings_min, servings_max, prep_minutes, cook_minutes, total_minutes)
+- Nested attributes use Rails accepts_nested_attributes_for: ingredient_groups_attributes, recipe_steps_attributes, recipe_nutrition_attributes, etc.
+- Use _destroy: true flag to delete nested records during updates
+- DataReference arrays (dietary_tags, dish_types, cuisines, recipe_types) reference data_reference_id
 
 ##### Related Endpoints
 

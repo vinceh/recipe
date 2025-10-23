@@ -73,24 +73,66 @@ See **[../database-architecture.md](../database-architecture.md)** for complete 
 
 ## Models & Associations
 
-### Recipe Model
+### Recipe Model (Normalized Schema)
+
+The Recipe model uses a fully relational schema with normalized columns and associations instead of JSONB storage.
+
 ```ruby
 class Recipe < ApplicationRecord
-  # Associations
+  # User associations
   has_many :user_favorites, dependent: :destroy
   has_many :user_recipe_notes, dependent: :destroy
 
+  # Normalized schema associations
+  has_many :ingredient_groups, -> { order(:position) }, dependent: :destroy
+  has_many :recipe_ingredients, through: :ingredient_groups
+  has_many :recipe_steps, -> { order(:step_number) }, dependent: :destroy
+  has_one :recipe_nutrition, dependent: :destroy
+  has_many :recipe_equipment, dependent: :destroy
+  has_many :equipment, through: :recipe_equipment
+
+  # Reference data associations
+  has_many :recipe_dietary_tags, dependent: :destroy
+  has_many :dietary_tags, through: :recipe_dietary_tags, source: :data_reference
+  has_many :recipe_dish_types, dependent: :destroy
+  has_many :dish_types, through: :recipe_dish_types, source: :data_reference
+  has_many :recipe_cuisines, dependent: :destroy
+  has_many :cuisines, through: :recipe_cuisines, source: :data_reference
+  has_many :recipe_recipe_types, dependent: :destroy
+  has_many :recipe_types, through: :recipe_recipe_types, source: :data_reference
+
+  # Other associations
+  has_many :recipe_aliases, dependent: :destroy
+  has_many :recipe_step_translations, through: :recipe_steps, dependent: :destroy
+
+  # Nested attributes support
+  accepts_nested_attributes_for :ingredient_groups, allow_destroy: true, reject_if: :all_blank
+  accepts_nested_attributes_for :recipe_steps, allow_destroy: true, reject_if: proc { |attrs| attrs['instruction_original'].blank? }
+  accepts_nested_attributes_for :recipe_nutrition, allow_destroy: true, reject_if: :all_blank
+  accepts_nested_attributes_for :recipe_equipment, allow_destroy: true, reject_if: proc { |attrs| attrs['equipment_id'].blank? }
+  accepts_nested_attributes_for :recipe_dietary_tags, allow_destroy: true, reject_if: proc { |attrs| attrs['data_reference_id'].blank? }
+  accepts_nested_attributes_for :recipe_dish_types, allow_destroy: true, reject_if: proc { |attrs| attrs['data_reference_id'].blank? }
+  accepts_nested_attributes_for :recipe_cuisines, allow_destroy: true, reject_if: proc { |attrs| attrs['data_reference_id'].blank? }
+  accepts_nested_attributes_for :recipe_recipe_types, allow_destroy: true, reject_if: proc { |attrs| attrs['data_reference_id'].blank? }
+  accepts_nested_attributes_for :recipe_aliases, allow_destroy: true, reject_if: proc { |attrs| attrs['alias_name'].blank? }
+
   # Validations
   validates :name, presence: true
-  validates :language, presence: true, inclusion: { in: %w[en ja ko zh-tw zh-cn es fr] }
-
-  # JSONB validations
-  validate :servings_structure
-  validate :timing_structure
-  validate :ingredient_groups_structure
-  validate :steps_structure
+  validates :source_language, presence: true, inclusion: { in: %w[en ja ko zh-tw zh-cn es fr] }
+  validates :servings_original, numericality: { greater_than: 0, allow_nil: true }
+  validates :servings_min, numericality: { greater_than_or_equal_to: 1, allow_nil: true }
+  validates :servings_max, numericality: { greater_than_or_equal_to: 1, allow_nil: true }
+  validates :prep_minutes, :cook_minutes, :total_minutes, numericality: { greater_than_or_equal_to: 0, allow_nil: true }
 end
 ```
+
+**Key Changes from Previous Schema:**
+- Servings now stored as individual columns: `servings_original`, `servings_min`, `servings_max` (instead of JSONB `servings: { original, min, max }`)
+- Timing now stored as individual columns: `prep_minutes`, `cook_minutes`, `total_minutes` (instead of JSONB `timing: { ... }`)
+- Ingredients stored in `IngredientGroup` and `RecipeIngredient` tables with positions for ordering
+- Steps stored in `RecipeStep` table with step numbers and instruction variants (original, easier, no_equipment)
+- References (cuisines, dietary_tags, etc.) now use many-to-many join tables instead of arrays
+- All nested associations support Rails nested attributes for atomic creation/update/deletion
 
 ### User Model
 ```ruby
@@ -140,6 +182,61 @@ end
 class IngredientAlias < ApplicationRecord
   belongs_to :ingredient
   validates :alias, presence: true, uniqueness: { scope: :language }
+end
+```
+
+### Normalized Recipe Schema Models
+
+#### IngredientGroup Model
+```ruby
+class IngredientGroup < ApplicationRecord
+  belongs_to :recipe
+  has_many :recipe_ingredients, -> { order(:position) }, dependent: :destroy, inverse_of: :ingredient_group
+
+  validates :name, presence: true
+  validates :position, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
+  validates :recipe_id, presence: true
+  validates :position, uniqueness: { scope: :recipe_id }
+
+  accepts_nested_attributes_for :recipe_ingredients, allow_destroy: true
+end
+```
+
+#### RecipeIngredient Model
+```ruby
+class RecipeIngredient < ApplicationRecord
+  belongs_to :ingredient_group, inverse_of: :recipe_ingredients
+  belongs_to :ingredient, optional: true
+
+  validates :ingredient_name, presence: true
+  validates :position, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
+  validates :ingredient_group, presence: true
+  validates :amount, numericality: { greater_than: 0, allow_nil: true }
+end
+```
+
+#### RecipeStep Model
+```ruby
+class RecipeStep < ApplicationRecord
+  belongs_to :recipe
+  has_many :recipe_step_translations, dependent: :destroy
+
+  validates :recipe_id, presence: true
+  validates :step_number, presence: true, numericality: { only_integer: true, greater_than: 0 }
+  validates :step_number, uniqueness: { scope: :recipe_id }
+
+  default_scope { order(:step_number) }
+end
+```
+
+#### RecipeNutrition Model
+```ruby
+class RecipeNutrition < ApplicationRecord
+  belongs_to :recipe
+
+  validates :recipe_id, presence: true, uniqueness: true
+  validates :calories, :protein_g, :carbs_g, :fat_g, :fiber_g, :sodium_mg, :sugar_g,
+            numericality: { greater_than_or_equal_to: 0, allow_nil: true }
 end
 ```
 
