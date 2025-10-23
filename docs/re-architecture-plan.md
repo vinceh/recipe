@@ -712,9 +712,10 @@ end
   - [x] L-9: Admin notes on all recipes (was only on Recipe 1)
 
 **Step 6: Write RSpec Tests**
-- [ ] Write test suite covering Phase 1 ACs
-- [ ] All tests passing
-- [ ] Commit: `[Phase 1] Step 6: Add RSpec tests for schema normalization`
+- [x] Write test suite covering Phase 1 ACs (50 tests covering validations, associations, normalized schema)
+- [x] All tests passing (50/50 pass, 0 failures)
+- [x] Add inverse associations to Ingredient and DataReference models
+- [x] Commit: `[Phase 1] Step 6: Add RSpec tests for schema normalization`
 
 **Step 7: Final Review**
 - [ ] Review plan against actual discoveries
