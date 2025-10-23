@@ -951,11 +951,11 @@ This document defines atomic, testable acceptance criteria for all Recipe App MV
 **THEN** validation should fail with error "name can't be blank"
 **AND** the record should not be persisted
 
-#### AC-MODEL-RECIPE-002: Source Language Default
-**GIVEN** a Recipe model instance created without source_language
-**WHEN** the record is saved
-**THEN** source_language should default to "en"
-**AND** the record should be persisted successfully
+#### AC-MODEL-RECIPE-002: Name Whitespace-Only Rejection
+**GIVEN** a Recipe model instance
+**WHEN** attempting to save with name containing only whitespace ("   ")
+**THEN** validation should fail with error "name can't be blank"
+**AND** the record should not be persisted
 
 #### AC-MODEL-RECIPE-003: Name Uniqueness
 **GIVEN** a Recipe with name "Chocolate Chip Cookies"
@@ -963,17 +963,29 @@ This document defines atomic, testable acceptance criteria for all Recipe App MV
 **THEN** validation should fail with error "name has already been taken"
 **AND** the second record should not be persisted
 
-#### AC-MODEL-RECIPE-004: Source URL Optional
+#### AC-MODEL-RECIPE-004: Source Language Default
+**GIVEN** a Recipe model instance created without source_language
+**WHEN** the record is saved
+**THEN** source_language should default to "en"
+**AND** the record should be persisted successfully
+
+#### AC-MODEL-RECIPE-005: Source URL Optional
 **GIVEN** a Recipe model instance
 **WHEN** source_url is not provided
 **THEN** validation should pass
 **AND** the record should be persisted with source_url as nil
 
-#### AC-MODEL-RECIPE-005: Requires Precision Boolean
+#### AC-MODEL-RECIPE-006: Requires Precision Boolean Default
 **GIVEN** a Recipe model instance
 **WHEN** requires_precision is not explicitly set
 **THEN** it should default to false
 **AND** the record should be persisted successfully
+
+#### AC-MODEL-RECIPE-007: Cascade Deletion with Associations
+**GIVEN** a Recipe with multiple associated IngredientGroup, RecipeStep, and RecipeNutrition records
+**WHEN** the Recipe is deleted
+**THEN** all associated IngredientGroup, RecipeStep, and RecipeNutrition records should also be deleted
+**AND** zero orphaned records should remain
 
 ### User Model
 
@@ -983,41 +995,65 @@ This document defines atomic, testable acceptance criteria for all Recipe App MV
 **THEN** validation should fail with error "email can't be blank"
 **AND** the record should not be persisted
 
-#### AC-MODEL-USER-002: Email Format Validation
+#### AC-MODEL-USER-002: Email Whitespace-Only Rejection
+**GIVEN** a User model instance
+**WHEN** attempting to save with email containing only whitespace ("   ")
+**THEN** validation should fail with error "email can't be blank"
+**AND** the record should not be persisted
+
+#### AC-MODEL-USER-003: Email Format Validation
 **GIVEN** a User model instance
 **WHEN** attempting to save with invalid email format (e.g., "not-an-email")
 **THEN** validation should fail with error "email is invalid"
 **AND** the record should not be persisted
 
-#### AC-MODEL-USER-003: Email Uniqueness
+#### AC-MODEL-USER-004: Email Uniqueness
 **GIVEN** a User with email "john@example.com"
 **WHEN** attempting to create another User with the same email
 **THEN** validation should fail with error "email has already been taken"
 **AND** the second record should not be persisted
 
-#### AC-MODEL-USER-004: Password Presence
+#### AC-MODEL-USER-005: Email Case-Insensitive Uniqueness
+**GIVEN** a User with email "John@Example.com"
+**WHEN** attempting to create another User with email "john@example.com" (different case)
+**THEN** validation should fail with error "email has already been taken"
+**AND** the second record should not be persisted
+
+#### AC-MODEL-USER-006: Password Presence
 **GIVEN** a User model instance
 **WHEN** attempting to save without a password
 **THEN** validation should fail with error "password can't be blank"
 **AND** the record should not be persisted
 
-#### AC-MODEL-USER-005: Password Minimum Length
+#### AC-MODEL-USER-007: Password Minimum Length
 **GIVEN** a User model instance
 **WHEN** attempting to save with password less than 8 characters
 **THEN** validation should fail with error "password is too short (minimum is 8 characters)"
 **AND** the record should not be persisted
 
-#### AC-MODEL-USER-006: Role Assignment
+#### AC-MODEL-USER-008: Role Default Assignment
 **GIVEN** a User model instance
 **WHEN** role is not explicitly set
 **THEN** role should default to "user"
 **AND** the record should be persisted successfully
 
-#### AC-MODEL-USER-007: Role Enum Constraint
+#### AC-MODEL-USER-009: Role Enum Constraint - Valid Values
+**GIVEN** a User model instance
+**WHEN** attempting to set role to valid value ("user" or "admin")
+**THEN** the record should be persisted successfully
+**AND** the role should be stored correctly
+
+#### AC-MODEL-USER-010: Role Enum Constraint - Invalid Values
 **GIVEN** a User model instance
 **WHEN** attempting to set role to an invalid value (e.g., "superuser")
 **THEN** an error should be raised
 **AND** the record should not be persisted
+
+#### AC-MODEL-USER-011: Cascade Deletion with User Dependencies
+**GIVEN** a User with associated UserRecipeNote and UserFavorite records
+**WHEN** the User is deleted
+**THEN** all associated UserRecipeNote and UserFavorite records should also be deleted
+**AND** zero orphaned records should remain
 
 ### Ingredient Model
 
@@ -1027,13 +1063,25 @@ This document defines atomic, testable acceptance criteria for all Recipe App MV
 **THEN** validation should fail with error "canonical_name can't be blank"
 **AND** the record should not be persisted
 
-#### AC-MODEL-INGREDIENT-002: Canonical Name Uniqueness
+#### AC-MODEL-INGREDIENT-002: Canonical Name Whitespace-Only Rejection
+**GIVEN** an Ingredient model instance
+**WHEN** attempting to save with canonical_name containing only whitespace ("   ")
+**THEN** validation should fail with error "canonical_name can't be blank"
+**AND** the record should not be persisted
+
+#### AC-MODEL-INGREDIENT-003: Canonical Name Uniqueness
 **GIVEN** an Ingredient with canonical_name "Salt"
 **WHEN** attempting to create another Ingredient with canonical_name "Salt"
 **THEN** validation should fail with error "canonical_name has already been taken"
 **AND** the second record should not be persisted
 
-#### AC-MODEL-INGREDIENT-003: Ingredient Aliases Association
+#### AC-MODEL-INGREDIENT-004: Canonical Name Case-Insensitive Uniqueness
+**GIVEN** an Ingredient with canonical_name "Salt"
+**WHEN** attempting to create another Ingredient with canonical_name "SALT" (different case)
+**THEN** validation should fail with error "canonical_name has already been taken"
+**AND** the second record should not be persisted
+
+#### AC-MODEL-INGREDIENT-005: Cascade Deletion with IngredientAlias
 **GIVEN** an Ingredient with multiple IngredientAlias records
 **WHEN** the Ingredient is deleted
 **THEN** all associated IngredientAlias records should also be deleted (cascade)
@@ -1095,7 +1143,13 @@ This document defines atomic, testable acceptance criteria for all Recipe App MV
 **WHEN** attempting to create another with key="vegetarian" but reference_type="recipe_type"
 **THEN** the new record should be persisted successfully (different reference_type allows duplicate key)
 
-#### AC-MODEL-DATAREF-006: Reference Type Enum Constraint
+#### AC-MODEL-DATAREF-006: Reference Type Enum Constraint - Valid Values
+**GIVEN** a DataReference model instance
+**WHEN** attempting to set reference_type to valid values ("dietary_tag", "dish_type", "cuisine", "recipe_type")
+**THEN** the record should be persisted successfully
+**AND** the reference_type should be stored correctly
+
+#### AC-MODEL-DATAREF-007: Reference Type Enum Constraint - Invalid Values
 **GIVEN** a DataReference model instance
 **WHEN** attempting to set reference_type to an invalid value (e.g., "invalid_type")
 **THEN** an error should be raised
@@ -1179,7 +1233,7 @@ This document defines atomic, testable acceptance criteria for all Recipe App MV
 
 ## Summary Statistics
 
-- **Total Acceptance Criteria:** 179
+- **Total Acceptance Criteria:** 190
 - **Smart Scaling:** 12 criteria
 - **Step Variants:** 9 criteria
 - **Multi-lingual:** 9 criteria
@@ -1191,6 +1245,16 @@ This document defines atomic, testable acceptance criteria for all Recipe App MV
 - **Recipe Viewing:** 7 criteria
 - **Performance & Reliability:** 12 criteria
 - **Additional Requirements:** 21 criteria (from ongoing analysis)
+- **Phase 3: Model Validations:** 45 criteria
+  - Recipe: 7 criteria
+  - User: 11 criteria
+  - Ingredient: 5 criteria
+  - IngredientAlias: 4 criteria
+  - DataReference: 7 criteria
+  - UserRecipeNote: 3 criteria
+  - UserFavorite: 3 criteria
+  - AiPrompt: 3 criteria
+  - JwtDenylist: 2 criteria
 
 ---
 
