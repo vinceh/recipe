@@ -480,33 +480,116 @@ end
 
 ### Phase 4: Mobility Integration
 
-**BEFORE starting development:**
-Write comprehensive GIVEN/WHEN/THEN acceptance criteria for Mobility translation system in `docs/new_claude/acceptance-criteria.md`.
+**Step 1: Write Acceptance Criteria for Mobility Translation System**
+- [ ] Define ACs for Mobility installation and configuration (UUID foreign keys, Table backend)
+- [ ] Define ACs for translated field behavior per model:
+  - Recipe: translates :name
+  - IngredientGroup: translates :name
+  - RecipeIngredient: translates :ingredient_name, :preparation_notes
+  - Equipment: translates :canonical_name
+  - RecipeStep: translates :instruction_original, :instruction_easier, :instruction_no_equipment
+  - DataReference: translates :display_name
+- [ ] Define ACs for locale switching (I18n.locale behavior)
+- [ ] Define ACs for fallback behavior (when translation missing, fallback to source_language)
+- [ ] Define ACs for reading/writing translations via Mobility API
+- [ ] Define ACs for querying translated fields (Model.i18n.where)
+- [ ] Run acceptance-test-writing skill to review, identify gaps, and refine
+- [ ] Update ACs based on skill recommendations
+- [ ] Commit ACs document
+- [ ] Request approval before Step 2
 
-1. Add `gem 'mobility'` to Gemfile, run `bundle install`
-2. Create `config/initializers/mobility.rb` with Table Backend configuration
-3. Create migration for 6 translation tables:
-   - recipe_translations
-   - ingredient_group_translations
-   - recipe_ingredient_translations
-   - equipment_translations
-   - recipe_step_translations
-   - data_reference_translations
-4. Add `translates :field_name` declarations to models:
-   - Recipe: translates :name
-   - IngredientGroup: translates :name
-   - RecipeIngredient: translates :ingredient_name, :preparation_notes
-   - Equipment: translates :canonical_name
-   - RecipeStep: translates :instruction_original, :instruction_easier, :instruction_no_equipment
-   - DataReference: translates :display_name
+**Step 2: Fix Field Name Mismatch with Migration**
+- [ ] Create migration to rename `recipe_ingredient_translations.name` to `ingredient_name`
+- [ ] Update any existing code/tests that reference the old column name
+- [ ] Run migration
+- [ ] Verify data integrity after migration
+- [ ] Commit migration
+- [ ] Run code-quality-auditor sub-agent review
+- [ ] Address any issues
+- [ ] Request approval before Step 3
 
-Update `docs/api-reference.md` to show Mobility behavior.
+**Step 3: Install and Configure Mobility Gem**
+- [ ] Add `gem 'mobility', '~> 1.3.2'` to Gemfile
+- [ ] Run `bundle install`
+- [ ] Generate Mobility initializer: `rails generate mobility:install --without-tables`
+- [ ] Configure `config/initializers/mobility.rb`:
+  - Set Table backend as default
+  - Configure UUID foreign key support
+  - Enable plugins: active_record, reader, writer, query, fallbacks, locale_accessors, presence, dirty, cache
+  - Configure fallback chain: ja→en, ko→en, zh-tw→zh-cn→en, zh-cn→zh-tw→en, es→en, fr→en
+- [ ] Commit implementation
+- [ ] Run code-quality-auditor sub-agent review
+- [ ] Address any issues
+- [ ] Request approval before Step 4
 
-Update `docs/new_claude/architecture.md` to explain Mobility integration.
+**Step 4: Add Translation Declarations to Models**
+- [ ] Recipe: Add `extend Mobility` and `translates :name, backend: :table`
+- [ ] IngredientGroup: Add `extend Mobility` and `translates :name, backend: :table`
+- [ ] RecipeIngredient: Add `extend Mobility` and `translates :ingredient_name, :preparation_notes, backend: :table`
+- [ ] Equipment: Add `extend Mobility` and `translates :canonical_name, backend: :table`
+- [ ] RecipeStep: Add `extend Mobility` and `translates :instruction_original, :instruction_easier, :instruction_no_equipment, backend: :table`
+  - Remove conflicting `has_many :recipe_step_translations` (Mobility manages this)
+- [ ] DataReference: Add `extend Mobility` and `translates :display_name, backend: :table`
+- [ ] Test in Rails console that translations can be read via Mobility (using existing data)
+- [ ] Commit implementation
+- [ ] Run code-quality-auditor sub-agent review
+- [ ] Address any issues
+- [ ] Request approval before Step 5
 
-**Deliverable**: Mobility gem installed, translation tables created, models configured
+**Step 5: Write RSpec Tests for Mobility Functionality**
+- [ ] Create spec/models/translations/ directory for translation-specific tests
+- [ ] Recipe translation spec: test reading, writing, fallback, querying
+- [ ] IngredientGroup translation spec
+- [ ] RecipeIngredient translation spec (test both ingredient_name and preparation_notes)
+- [ ] Equipment translation spec
+- [ ] RecipeStep translation spec (test all 3 instruction variants)
+- [ ] DataReference translation spec
+- [ ] Verify all Phase 4 AC tests passing
+- [ ] Commit test implementation
+- [ ] Run code-quality-auditor sub-agent review
+- [ ] Address any issues
+- [ ] Request approval before Step 6
 
-**End of Phase**: Write RSpec tests against Phase 4 ACs for Mobility translations (verify translated fields work)
+**Step 6: Fix TranslateRecipeJob (Critical Bug)**
+- [ ] Update TranslateRecipeJob to write translations via Mobility instead of non-existent JSONB column
+- [ ] For each language, use Mobility.with_locale to set translations for all nested models
+- [ ] Update RecipeTranslator service to return structured data Mobility can use
+- [ ] Handle nested translations properly (ingredient groups → ingredients, steps)
+- [ ] Test translation job end-to-end
+- [ ] Commit fixes
+- [ ] Run code-quality-auditor sub-agent review
+- [ ] Address any issues
+- [ ] Request approval before Step 7
+
+**Step 7: Update Documentation**
+- [ ] Update `docs/api-reference.md`:
+  - Document locale parameter handling in API requests
+  - Document Accept-Language header support
+  - Show examples of translated responses
+  - Explain fallback behavior
+- [ ] Update `docs/new_claude/architecture.md`:
+  - Explain Mobility integration architecture
+  - Document Table backend usage with existing translation tables
+  - Explain locale switching patterns
+  - Document fallback chain configuration
+  - Show code examples for reading/writing translations
+- [ ] Add section on translation workflow
+- [ ] Commit documentation updates
+- [ ] Run code-quality-auditor sub-agent review
+- [ ] Address any issues
+- [ ] Request approval before Step 8
+
+**Step 8: Final Review & Phase 4 Completion**
+- [ ] Review plan vs actual discoveries
+- [ ] Evaluate direction and assumptions
+- [ ] Run full test suite - verify all Mobility translation tests passing
+- [ ] Run code-quality-auditor on all Phase 4 work
+- [ ] Address any final audit issues
+- [ ] Verify TranslateRecipeJob works end-to-end
+- [ ] Test reading translations via Mobility in Rails console
+- [ ] Test locale switching behavior
+- [ ] Final commit
+- [ ] Request approval to proceed to Phase 5
 
 ---
 
