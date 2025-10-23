@@ -68,10 +68,16 @@ All ACs go into `docs/new_claude/acceptance-criteria.md` in GIVEN/WHEN/THEN form
    - **For other steps:**
      - Work through all subtasks to completion
      - Mark each completed subtask: `- [x] Task name`
-     - Commit the step update with message: `[Phase X] Step N: <description>`
-     - **PAUSE AND REQUEST APPROVAL** - wait for user approval before proceeding
-   - Only after approval, move to next step
-   - This gating mechanism with sub-agent quality checks ensures high-quality ACs and allows for course corrections at each step
+     - Commit the step implementation with message: `[Phase X] Step N: <description>`
+     - **QUALITY CHECK**: Run sub-agent with code-quality-auditor skill to review code
+     - Address all issues identified by code audit
+     - Commit fixes if any issues were addressed: `[Phase X] Step N: Address code quality issues`
+     - Mark subtask progress in plan document
+     - Commit plan update: `[Phase X] Step N: Mark complete`
+     - **PAUSE AND REQUEST APPROVAL**
+     - In approval request, disclose any code audit suggestions that were NOT addressed, with reasons why
+   - Only after user approval, move to next step
+   - This gating mechanism with quality checks ensures high-quality work and allows for informed course corrections at each step
 
 3. **At the end of each phase (BEFORE final phase commit):**
    - Verify all steps and subtasks are marked complete: `- [x] Task name`
@@ -98,6 +104,9 @@ All ACs go into `docs/new_claude/acceptance-criteria.md` in GIVEN/WHEN/THEN form
    - [ ] Write tests
    - [ ] All tests passing
    - [ ] Commit implementation
+   - [ ] Run code-quality-auditor sub-agent review
+   - [ ] Address code quality issues
+   - [ ] Request approval (disclose any skipped suggestions with reasons)
 
    Step 3: Implement feature B
    - [ ] Create controller
@@ -105,12 +114,18 @@ All ACs go into `docs/new_claude/acceptance-criteria.md` in GIVEN/WHEN/THEN form
    - [ ] Write integration tests
    - [ ] All tests passing
    - [ ] Commit implementation
+   - [ ] Run code-quality-auditor sub-agent review
+   - [ ] Address code quality issues
+   - [ ] Request approval (disclose any skipped suggestions with reasons)
 
    Step 4: Final review
    - [ ] Review plan and assumptions
    - [ ] Evaluate direction
    - [ ] Update documentation
    - [ ] All tests passing
+   - [ ] Run code-quality-auditor sub-agent review
+   - [ ] Address code quality issues
+   - [ ] Request approval (disclose any skipped suggestions with reasons)
    ```
 
 ---
