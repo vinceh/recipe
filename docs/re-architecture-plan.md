@@ -704,6 +704,12 @@ end
   - [x] M-1: Correct decimal precision (8 → 10)
   - [x] M-2, M-3: Add category indexes
   - [x] M-4: Fix position column (remove default, add NOT NULL)
+- [x] Address selected LOW severity issues for improved quality:
+  - [x] L-1: Confirmed locale indexes already present in migration
+  - [x] L-5: Explicit step creation (replaced hardcoded timing arrays)
+  - [x] L-6: Realistic ingredient names (replaced "ingredient 1" placeholders)
+  - [x] L-7: Nutrition data for all 14 recipes (was missing for 9)
+  - [x] L-9: Admin notes on all recipes (was only on Recipe 1)
 
 **Step 6: Write RSpec Tests**
 - [ ] Write test suite covering Phase 1 ACs
