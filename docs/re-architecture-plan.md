@@ -61,7 +61,7 @@ All ACs go into `docs/new_claude/acceptance-criteria.md` in GIVEN/WHEN/THEN form
 2. **During development (STEP BY STEP):**
    - **For Step 1 (Acceptance Criteria) in every phase:**
      - Write ACs in GIVEN/WHEN/THEN format in the re-arch-ACs.md file
-     - Run sub-agent with acceptance-test-writing skill to review, identify gaps, and refine
+     - Run sub-agent with @acceptance-test-writing skill to review, identify gaps, and refine
      - Update ACs based on sub-agent recommendations
      - Commit the ACs
      - Then request approval before proceeding to Step 2

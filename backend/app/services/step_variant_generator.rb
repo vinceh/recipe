@@ -1,5 +1,7 @@
 class StepVariantGenerator < AiService
   def generate_easier_variant(recipe, step)
+    recipe = ensure_associations_loaded(recipe)
+
     system_prompt = AiPrompt.active.find_by!(prompt_key: 'step_variant_easier_system')
     user_prompt = AiPrompt.active.find_by!(prompt_key: 'step_variant_easier_user')
 
@@ -45,6 +47,15 @@ class StepVariantGenerator < AiService
   end
 
   private
+
+  def ensure_associations_loaded(recipe)
+    unless recipe.association(:ingredient_groups).loaded?
+      recipe = recipe.includes(:cuisines, :recipe_types, :equipment)
+                     .includes(:ingredient_groups)
+                     .includes(ingredient_groups: :recipe_ingredients)
+    end
+    recipe
+  end
 
   def extract_step_ingredients(recipe, step)
     # Extract ingredient names mentioned in this step

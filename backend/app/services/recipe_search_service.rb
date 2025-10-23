@@ -63,17 +63,11 @@ class RecipeSearchService
   # AC-SEARCH-004: Filter by calorie range
   def self.filter_by_calorie_range(recipes, min_calories: nil, max_calories: nil)
     recipes = recipes.all if recipes.is_a?(Class)
+    return recipes unless min_calories.present? || max_calories.present?
 
-    if min_calories.present?
-      recipes = recipes.joins(:recipe_nutrition)
-                       .where("recipe_nutrition.calories >= ?", min_calories.to_f)
-    end
-
-    if max_calories.present?
-      recipes = recipes.joins(:recipe_nutrition)
-                       .where("recipe_nutrition.calories <= ?", max_calories.to_f)
-    end
-
+    recipes = recipes.joins(:recipe_nutrition)
+    recipes = recipes.where("recipe_nutrition.calories >= ?", min_calories.to_f) if min_calories.present?
+    recipes = recipes.where("recipe_nutrition.calories <= ?", max_calories.to_f) if max_calories.present?
     recipes
   end
 
@@ -199,15 +193,16 @@ class RecipeSearchService
     recipes = recipes.all if recipes.is_a?(Class)
     excluded_ingredients = excluded_ingredients.split(',').map(&:strip) if excluded_ingredients.is_a?(String)
 
-    excluded_ingredients.each do |ingredient|
-      ingredient_normalized = ingredient.downcase
-      excluded_recipe_ids = Recipe.joins(ingredient_groups: :recipe_ingredients)
-                                   .where("LOWER(recipe_ingredients.ingredient_name) LIKE ?", "%#{ingredient_normalized}%")
-                                   .select(:id)
-      recipes = recipes.where.not(id: excluded_recipe_ids)
-    end
+    # Build OR conditions for all excluded ingredients in single query
+    condition = excluded_ingredients.map { "LOWER(recipe_ingredients.ingredient_name) LIKE ?" }.join(" OR ")
+    params = excluded_ingredients.map { |i| "%#{i.downcase}%" }
 
-    recipes
+    excluded_recipe_ids = Recipe.joins(ingredient_groups: :recipe_ingredients)
+                                 .where(condition, *params)
+                                 .select(:id)
+                                 .distinct
+
+    recipes.where.not(id: excluded_recipe_ids)
   end
 
   # Combined advanced search with all filters

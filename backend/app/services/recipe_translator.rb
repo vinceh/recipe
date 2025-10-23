@@ -34,6 +34,9 @@ class RecipeTranslator < AiService
   private
 
   def build_recipe_json_for_translation(recipe)
+    recipe = recipe.includes(:ingredient_groups, :recipe_steps, :equipment)
+                   .includes(ingredient_groups: :recipe_ingredients) unless recipe.association(:ingredient_groups).loaded?
+
     {
       name: recipe.name,
       ingredient_groups: recipe.ingredient_groups.includes(:recipe_ingredients).map do |group|

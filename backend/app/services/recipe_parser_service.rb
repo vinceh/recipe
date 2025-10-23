@@ -1,4 +1,6 @@
 # Recipe Parser Service - AI-based recipe extraction from text, URL, and images
+require 'base64'
+
 class RecipeParserService < AiService
   # Parse a large text block containing a recipe
   # Returns structured recipe JSON
@@ -40,7 +42,7 @@ class RecipeParserService < AiService
     )
 
     result = parse_response(response)
-    if result
+    if result.is_a?(Hash)
       Rails.logger.info("Successfully parsed URL using Claude web search")
       result['source_url'] = url
       return result
@@ -112,7 +114,6 @@ class RecipeParserService < AiService
       }
     else
       # Local file path - need to base64 encode
-      require 'base64'
       image_data = File.read(image_path_or_url)
       encoded_image = Base64.strict_encode64(image_data)
 
@@ -167,7 +168,7 @@ class RecipeParserService < AiService
 
     response = client.messages(
       parameters: {
-        model: 'claude-3-5-sonnet-20241022',
+        model: ENV['ANTHROPIC_MODEL'] || 'claude-3-5-sonnet-20241022',
         system: system_prompt,
         messages: messages,
         max_tokens: max_tokens

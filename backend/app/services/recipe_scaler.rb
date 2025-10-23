@@ -89,25 +89,6 @@ class RecipeScaler
     end
   end
 
-  def scale_ingredient!(ingredient, factor)
-    raw_amount = ingredient['amount'].to_f * factor
-
-    if @context == 'baking'
-      result = preserve_precision(raw_amount, ingredient['unit'])
-      if result.is_a?(Hash)
-        ingredient['amount'] = result[:amount]
-        ingredient['unit'] = result[:unit]
-      else
-        ingredient['amount'] = result
-      end
-    else
-      ingredient['amount'] = round_to_friendly_fraction(raw_amount)
-      check_unit_step_down!(ingredient)
-    end
-
-    ingredient
-  end
-
   def round_to_friendly_fraction(amount)
     # Try whole number first
     return amount.round if (amount - amount.round).abs < 0.1
@@ -145,26 +126,6 @@ class RecipeScaler
     end
 
     amount.round(2) # Keep 2 decimal places for baking
-  end
-
-  def check_unit_step_down!(ingredient)
-    amount = ingredient['amount']
-    unit = ingredient['unit']
-
-    # Convert amount to float for comparison (handles friendly fractions)
-    numeric_amount = amount.is_a?(String) ? parse_friendly_fraction(amount) : amount.to_f
-
-    # Step down tbsp to tsp if amount is small
-    if unit == 'tbsp' && numeric_amount < 1
-      ingredient['amount'] = (numeric_amount * 3).round(1)
-      ingredient['unit'] = 'tsp'
-    end
-
-    # Step down cups to tbsp if amount is small
-    if unit == 'cup' && numeric_amount < 0.25
-      ingredient['amount'] = (numeric_amount * 16).round(1)
-      ingredient['unit'] = 'tbsp'
-    end
   end
 
   def parse_friendly_fraction(fraction_str)
