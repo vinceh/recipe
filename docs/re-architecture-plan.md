@@ -1249,14 +1249,50 @@ Subtasks:
 - Integration tests for create/update with nested attributes (will be added in Step 6)
 
 **Step 6: Add Constraint Tests + Write RSpec Tests Against Phase 2 ACs**
-- [ ] Add position uniqueness constraint tests for ingredient_groups (M-3)
-- [ ] Add step_number uniqueness constraint tests for recipe_steps (M-4)
-- [ ] Write RSpec tests against Phase 2 acceptance criteria
-- [ ] All tests passing
-- [ ] Commit implementation
-- [ ] Run code audit
-- [ ] Address issues
-- [ ] Request approval
+
+Goal: Add comprehensive test coverage for model constraints and Phase 2 acceptance criteria
+
+Subtask A: Model Constraint Tests
+- [ ] Write RSpec tests for IngredientGroup position uniqueness
+  - [ ] Test that duplicate positions for same recipe raise validation error
+  - [ ] Test that different positions for same recipe are allowed
+  - [ ] Test that different recipes can have same position
+- [ ] Write RSpec tests for RecipeStep step_number uniqueness
+  - [ ] Test that duplicate step numbers for same recipe raise validation error
+  - [ ] Test that different step numbers for same recipe are allowed
+  - [ ] Test that different recipes can have same step number
+
+Subtask B: API/Controller Integration Tests
+- [ ] Test creating recipe with nested ingredient_groups
+  - [ ] Successful create with groups and ingredients
+  - [ ] Validation failures propagate correctly
+  - [ ] Reject_if clauses prevent empty records
+- [ ] Test creating recipe with nested recipe_steps
+  - [ ] Successful create with instructions
+  - [ ] Validation failures propagate correctly
+- [ ] Test updating recipe with nested attributes
+  - [ ] Update existing nested records
+  - [ ] Add new nested records
+  - [ ] Delete nested records via _destroy flag
+- [ ] Test validation error messages for nested attributes
+
+Subtask C: Phase 2 Acceptance Criteria Test Coverage
+- [ ] Identify which Phase 2 ACs lack test coverage
+- [ ] Write tests for API endpoint ACs (AC-PHASE2-API-*)
+- [ ] Write tests for serializer ACs (AC-PHASE2-SERIALIZER-*)
+- [ ] Write tests for service ACs (AC-PHASE2-SERVICE-*)
+- [ ] Write tests for search/filter ACs (AC-PHASE2-SEARCH-*)
+- [ ] Write tests for backward compatibility ACs (AC-PHASE2-BACKWARD-COMPAT-*)
+
+Subtask D: Quality Assurance & Completion
+- [ ] Run full test suite - verify all tests passing
+- [ ] Run code-quality-auditor sub-agent on test code
+- [ ] Address code audit findings
+- [ ] Commit implementation: `[Phase 2] Step 6: Add constraint and acceptance criteria tests`
+- [ ] Commit audit fixes if needed: `[Phase 2] Step 6: Address code quality findings`
+- [ ] Update plan document with checkmarks
+- [ ] Commit plan update: `[Phase 2] Step 6: Mark complete`
+- [ ] Request approval to proceed to Step 7
 
 **Step 7: Update Documentation**
 - [ ] Update docs/api-reference.md with normalized schema examples
