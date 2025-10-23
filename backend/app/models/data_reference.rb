@@ -1,8 +1,16 @@
 class DataReference < ApplicationRecord
+  # Associations
+  has_many :recipe_dietary_tags, dependent: :destroy
+  has_many :recipe_dish_types, dependent: :destroy
+  has_many :recipe_cuisines, dependent: :destroy
+  has_many :recipe_recipe_types, dependent: :destroy
+
+  # Validations
   validates :reference_type, presence: true, inclusion: { in: %w[dietary_tag recipe_type cuisine unit dish_type] }
   validates :key, presence: true, uniqueness: { scope: :reference_type }
   validates :display_name, presence: true
 
+  # Scopes
   scope :dietary_tags, -> { where(reference_type: 'dietary_tag') }
   scope :recipe_types, -> { where(reference_type: 'recipe_type') }
   scope :cuisines, -> { where(reference_type: 'cuisine') }
