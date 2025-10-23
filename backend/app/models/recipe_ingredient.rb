@@ -1,0 +1,4 @@
+class RecipeIngredient < ApplicationRecord
+  belongs_to :ingredient_group
+  belongs_to :ingredient, optional: true
+end
