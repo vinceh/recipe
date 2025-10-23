@@ -413,25 +413,47 @@ end
 
 ### Phase 3: Model Specs
 
-**BEFORE starting development:**
-Write comprehensive GIVEN/WHEN/THEN acceptance criteria for model validations and constraints in `docs/new_claude/acceptance-criteria.md`.
+**Step 1: Write Acceptance Criteria for Model Validations**
+- [ ] Define ACs for Recipe model validations (presence, uniqueness, numericality constraints)
+- [ ] Define ACs for User model validations (email, password, role)
+- [ ] Define ACs for Ingredient model validations (canonical_name uniqueness)
+- [ ] Define ACs for IngredientAlias model validations (alias uniqueness scoped to language)
+- [ ] Define ACs for DataReference model validations (key uniqueness, reference_type constraints)
+- [ ] Define ACs for UserRecipeNote model (association constraints)
+- [ ] Define ACs for UserFavorite model (association constraints)
+- [ ] Define ACs for AiPrompt model (prompt_key uniqueness)
+- [ ] Define ACs for JwtDenylist model (jti uniqueness)
+- [ ] Run sub-agent with acceptance-test-writing skill to review, identify gaps, and refine
+- [ ] Update ACs based on sub-agent recommendations
+- [ ] Commit ACs document: `[Phase 3] Step 1: Write acceptance criteria for model validations`
+- [ ] Request approval before proceeding to Step 2
 
-Fill in all empty pending specs in `spec/models/`:
-- Recipe validations
-- User model
-- Ingredient model
-- IngredientAlias model
-- DataReference model
-- UserRecipeNote model
-- UserFavorite model
-- AiPrompt model
-- JwtDenylist model
+**Step 2: Implement Model Validation Specs**
+- [ ] Create/update Recipe model validation specs
+- [ ] Create/update User model validation specs
+- [ ] Create/update Ingredient model validation specs
+- [ ] Create/update IngredientAlias model validation specs
+- [ ] Create/update DataReference model validation specs
+- [ ] Create/update UserRecipeNote model validation specs
+- [ ] Create/update UserFavorite model validation specs
+- [ ] Create/update AiPrompt model validation specs
+- [ ] Create/update JwtDenylist model validation specs
+- [ ] Verify all model specs passing (100/100)
+- [ ] Commit implementation: `[Phase 3] Step 2: Implement model validation specs`
+- [ ] Run code-quality-auditor sub-agent review
+- [ ] Address all code quality issues
+- [ ] Commit fixes if needed: `[Phase 3] Step 2: Address code quality audit findings`
+- [ ] Update plan document with checkmarks
+- [ ] Request approval before proceeding to Step 3
 
-Ensure 100% pass.
-
-**Deliverable**: All model specs fully implemented
-
-**End of Phase**: Write RSpec tests against Phase 3 ACs for model validations
+**Step 3: Final Review & Phase 3 Completion**
+- [ ] Review plan vs actual discoveries
+- [ ] Evaluate direction and assumptions
+- [ ] Run full test suite - verify all model specs passing
+- [ ] Run code-quality-auditor on all Phase 3 work
+- [ ] Address any audit issues
+- [ ] Final commit: `[Phase 3] Complete: Model validation specs comprehensive`
+- [ ] Request approval to proceed to Phase 4
 
 ---
 
