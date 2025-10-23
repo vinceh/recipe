@@ -114,7 +114,6 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     create_table :recipe_steps, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
       t.uuid :recipe_id, null: false
       t.integer :step_number, null: false
-      t.integer :timing_minutes
       t.timestamps
     end
     add_index :recipe_steps, :recipe_id

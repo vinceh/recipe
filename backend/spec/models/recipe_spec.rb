@@ -261,28 +261,28 @@ RSpec.describe Recipe, type: :model do
   describe 'normalized schema - recipe steps' do
     let(:recipe) { create(:recipe) }
 
-    it 'can have multiple recipe steps with timing' do
-      step1 = recipe.recipe_steps.create!(step_number: 1, timing_minutes: 5)
-      step2 = recipe.recipe_steps.create!(step_number: 2, timing_minutes: 10)
-      step3 = recipe.recipe_steps.create!(step_number: 3, timing_minutes: nil)
+    it 'can have multiple recipe steps' do
+      step1 = recipe.recipe_steps.create!(step_number: 1)
+      step2 = recipe.recipe_steps.create!(step_number: 2)
+      step3 = recipe.recipe_steps.create!(step_number: 3)
 
       expect(recipe.recipe_steps.count).to eq(3)
-      expect(step1.timing_minutes).to eq(5)
-      expect(step2.timing_minutes).to eq(10)
-      expect(step3.timing_minutes).to be_nil
+      expect(step1.step_number).to eq(1)
+      expect(step2.step_number).to eq(2)
+      expect(step3.step_number).to eq(3)
     end
 
     it 'maintains step number order' do
-      recipe.recipe_steps.create!(step_number: 1, timing_minutes: 5)
-      recipe.recipe_steps.create!(step_number: 3, timing_minutes: 10)
-      recipe.recipe_steps.create!(step_number: 2, timing_minutes: 7)
+      recipe.recipe_steps.create!(step_number: 1)
+      recipe.recipe_steps.create!(step_number: 3)
+      recipe.recipe_steps.create!(step_number: 2)
 
       step_numbers = recipe.recipe_steps.pluck(:step_number)
       expect(step_numbers).to match_array([1, 2, 3])
     end
 
     it 'cascades delete when recipe is deleted' do
-      step = recipe.recipe_steps.create!(step_number: 1, timing_minutes: 5)
+      step = recipe.recipe_steps.create!(step_number: 1)
       step_id = step.id
 
       recipe.destroy
@@ -526,8 +526,8 @@ RSpec.describe Recipe, type: :model do
       )
 
       # Add recipe steps
-      recipe.recipe_steps.create!(step_number: 1, timing_minutes: 5)
-      recipe.recipe_steps.create!(step_number: 2, timing_minutes: 10)
+      recipe.recipe_steps.create!(step_number: 1)
+      recipe.recipe_steps.create!(step_number: 2)
 
       # Add equipment
       pan = Equipment.find_or_create_by!(canonical_name: 'pan')
@@ -570,7 +570,6 @@ RSpec.describe Recipe, type: :model do
 
       first_step = recipe.recipe_steps.first
       expect(first_step.step_number).to eq(1)
-      expect(first_step.timing_minutes).to eq(5)
 
       expect(recipe.equipment.first.canonical_name).to eq('pan')
       expect(recipe.dietary_tags.first.key).to eq('vegetarian')

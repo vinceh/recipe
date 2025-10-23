@@ -374,7 +374,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_23_000000) do
   create_table "recipe_steps", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid     "recipe_id", null: false
     t.integer  "step_number", null: false
-    t.integer  "timing_minutes"
     t.text     "instruction_original"
     t.text     "instruction_easier"
     t.text     "instruction_no_equipment"
@@ -680,7 +679,7 @@ end
   - [x] All timing fields (prep_minutes, cook_minutes, total_minutes)
   - [x] All ingredient group variations (single group, multiple groups)
   - [x] All recipe ingredient fields (amount, unit, preparation_notes, optional flag)
-  - [x] All recipe step fields (step_number, timing_minutes)
+  - [x] All recipe step fields (step_number)
   - [x] All equipment variations (required and optional)
   - [x] All reference data associations (dietary_tags, dish_types, cuisines, recipe_types)
   - [x] All recipe aliases with multiple languages

@@ -96,13 +96,13 @@ ig2.recipe_ingredients.create!(
 )
 
 # L-5: Explicit step creation (not hardcoded arrays)
-oyakodon.recipe_steps.create!(step_number: 1, timing_minutes: 5)
-oyakodon.recipe_steps.create!(step_number: 2, timing_minutes: 2)
-oyakodon.recipe_steps.create!(step_number: 3, timing_minutes: 3)
-oyakodon.recipe_steps.create!(step_number: 4, timing_minutes: 5)
-oyakodon.recipe_steps.create!(step_number: 5, timing_minutes: 2)
-oyakodon.recipe_steps.create!(step_number: 6, timing_minutes: 2)
-oyakodon.recipe_steps.create!(step_number: 7, timing_minutes: 1)
+oyakodon.recipe_steps.create!(step_number: 1)
+oyakodon.recipe_steps.create!(step_number: 2)
+oyakodon.recipe_steps.create!(step_number: 3)
+oyakodon.recipe_steps.create!(step_number: 4)
+oyakodon.recipe_steps.create!(step_number: 5)
+oyakodon.recipe_steps.create!(step_number: 6)
+oyakodon.recipe_steps.create!(step_number: 7)
 
 # Equipment
 frying_pan = find_or_create_equipment("Frying Pan", { material: "stainless steel", size: "10 inch" })
@@ -170,12 +170,12 @@ ig.recipe_ingredients.create!(
 )
 
 # L-5: Explicit steps
-bread.recipe_steps.create!(step_number: 1, timing_minutes: 5)
-bread.recipe_steps.create!(step_number: 2, timing_minutes: 10)
-bread.recipe_steps.create!(step_number: 3, timing_minutes: 480)
-bread.recipe_steps.create!(step_number: 4, timing_minutes: 15)
-bread.recipe_steps.create!(step_number: 5, timing_minutes: 120)
-bread.recipe_steps.create!(step_number: 6, timing_minutes: 45)
+bread.recipe_steps.create!(step_number: 1)
+bread.recipe_steps.create!(step_number: 2)
+bread.recipe_steps.create!(step_number: 3)
+bread.recipe_steps.create!(step_number: 4)
+bread.recipe_steps.create!(step_number: 5)
+bread.recipe_steps.create!(step_number: 6)
 
 bread.recipe_equipment.create!(equipment: find_or_create_equipment("Dutch Oven"), optional: false)
 
@@ -249,11 +249,11 @@ ig2.recipe_ingredients.create!(
 )
 
 # L-5: Explicit steps
-stir_fry.recipe_steps.create!(step_number: 1, timing_minutes: 2)
-stir_fry.recipe_steps.create!(step_number: 2, timing_minutes: 4)
-stir_fry.recipe_steps.create!(step_number: 3, timing_minutes: 6)
-stir_fry.recipe_steps.create!(step_number: 4, timing_minutes: 8)
-stir_fry.recipe_steps.create!(step_number: 5, timing_minutes: 10)
+stir_fry.recipe_steps.create!(step_number: 1)
+stir_fry.recipe_steps.create!(step_number: 2)
+stir_fry.recipe_steps.create!(step_number: 3)
+stir_fry.recipe_steps.create!(step_number: 4)
+stir_fry.recipe_steps.create!(step_number: 5)
 
 wok = find_or_create_equipment("Wok")
 stir_fry.recipe_equipment.create!(equipment: wok, optional: false)
@@ -316,11 +316,11 @@ ig.recipe_ingredients.create!(
 )
 
 # L-5: Explicit steps
-pasta.recipe_steps.create!(step_number: 1, timing_minutes: 5)
-pasta.recipe_steps.create!(step_number: 2, timing_minutes: 5)
-pasta.recipe_steps.create!(step_number: 3, timing_minutes: 5)
-pasta.recipe_steps.create!(step_number: 4, timing_minutes: 5)
-pasta.recipe_steps.create!(step_number: 5, timing_minutes: 5)
+pasta.recipe_steps.create!(step_number: 1)
+pasta.recipe_steps.create!(step_number: 2)
+pasta.recipe_steps.create!(step_number: 3)
+pasta.recipe_steps.create!(step_number: 4)
+pasta.recipe_steps.create!(step_number: 5)
 
 pasta.recipe_equipment.create!(equipment: find_or_create_equipment("Large Pot"), optional: false)
 
@@ -376,11 +376,11 @@ ig.recipe_ingredients.create!(
 )
 
 # L-5: Explicit steps
-tom_yum.recipe_steps.create!(step_number: 1, timing_minutes: 5)
-tom_yum.recipe_steps.create!(step_number: 2, timing_minutes: 5)
-tom_yum.recipe_steps.create!(step_number: 3, timing_minutes: 5)
-tom_yum.recipe_steps.create!(step_number: 4, timing_minutes: 5)
-tom_yum.recipe_steps.create!(step_number: 5, timing_minutes: 5)
+tom_yum.recipe_steps.create!(step_number: 1)
+tom_yum.recipe_steps.create!(step_number: 2)
+tom_yum.recipe_steps.create!(step_number: 3)
+tom_yum.recipe_steps.create!(step_number: 4)
+tom_yum.recipe_steps.create!(step_number: 5)
 
 # L-7: Full nutrition data
 tom_yum.create_recipe_nutrition!(calories: 220, protein_g: 28, carbs_g: 12, fat_g: 6, fiber_g: 1, sodium_mg: 850, sugar_g: 3)
@@ -453,10 +453,10 @@ ig_eggs.recipe_ingredients.create!(
 )
 
 # L-5: Explicit steps
-shakshuka.recipe_steps.create!(step_number: 1, timing_minutes: 5)
-shakshuka.recipe_steps.create!(step_number: 2, timing_minutes: 5)
-shakshuka.recipe_steps.create!(step_number: 3, timing_minutes: 10)
-shakshuka.recipe_steps.create!(step_number: 4, timing_minutes: 5)
+shakshuka.recipe_steps.create!(step_number: 1)
+shakshuka.recipe_steps.create!(step_number: 2)
+shakshuka.recipe_steps.create!(step_number: 3)
+shakshuka.recipe_steps.create!(step_number: 4)
 
 shakshuka.recipe_equipment.create!(equipment: find_or_create_equipment("Large Skillet"), optional: false)
 shakshuka.recipe_equipment.create!(equipment: find_or_create_equipment("Lid"), optional: true)
@@ -602,7 +602,7 @@ additional_recipes.each_with_index do |data, idx|
   end
 
   # L-5: Explicit steps
-  (1..4).each { |i| recipe.recipe_steps.create!(step_number: i, timing_minutes: 5) }
+  (1..4).each { |i| recipe.recipe_steps.create!(step_number: i) }
 
   recipe.recipe_equipment.create!(equipment: find_or_create_equipment("Pan"), optional: false)
 
