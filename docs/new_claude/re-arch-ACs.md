@@ -168,7 +168,104 @@
 
 ## Phase 2: API Endpoints with Normalized Schema
 
-*ACs to be written in Phase 2*
+### Step 6 ACs: Model Constraints and Test Coverage
+
+#### Model Constraint Tests
+
+##### AC-PHASE2-STEP6-001: IngredientGroup Position Uniqueness Validation
+**GIVEN** a recipe with an ingredient_group at position 1
+**WHEN** attempting to create another ingredient_group for the same recipe at position 1
+**THEN** the create should fail with validation error "Position has already been taken"
+**AND** the database should not insert the duplicate record
+
+##### AC-PHASE2-STEP6-002: IngredientGroup Position Uniqueness Scope
+**GIVEN** a recipe with an ingredient_group at position 1
+**AND** another recipe with an ingredient_group at position 1
+**WHEN** querying ingredient_groups
+**THEN** both records should exist (position uniqueness is scoped to recipe_id)
+
+##### AC-PHASE2-STEP6-003: RecipeStep StepNumber Uniqueness Validation
+**GIVEN** a recipe with a recipe_step at step_number 1
+**WHEN** attempting to create another recipe_step for the same recipe at step_number 1
+**THEN** the create should fail with validation error "Step number has already been taken"
+**AND** the database should not insert the duplicate record
+
+##### AC-PHASE2-STEP6-004: RecipeStep StepNumber Uniqueness Scope
+**GIVEN** a recipe with a recipe_step at step_number 1
+**AND** another recipe with a recipe_step at step_number 1
+**WHEN** querying recipe_steps
+**THEN** both records should exist (step_number uniqueness is scoped to recipe_id)
+
+#### Nested Attributes Integration Tests
+
+##### AC-PHASE2-STEP6-005: Create Recipe with Nested IngredientGroups
+**GIVEN** a POST request to /admin/recipes with nested ingredient_groups_attributes
+**WHEN** the request includes:
+  - ingredient_groups_attributes with name, position, and recipe_ingredients_attributes
+  - recipe_ingredients_attributes with ingredient_name, amount, unit, position
+**THEN** the recipe should be created successfully
+**AND** all ingredient_groups should be created with correct associations
+**AND** all recipe_ingredients should be created with correct parent relationships
+
+##### AC-PHASE2-STEP6-006: Create Recipe with Nested RecipeSteps
+**GIVEN** a POST request to /admin/recipes with nested recipe_steps_attributes
+**WHEN** the request includes recipe_steps_attributes with step_number, instruction_original, instruction_easier, instruction_no_equipment
+**THEN** the recipe should be created successfully
+**AND** all recipe_steps should be created with correct step_number and instructions
+
+##### AC-PHASE2-STEP6-007: Reject Empty Nested Attributes
+**GIVEN** a POST request to /admin/recipes with empty nested attribute hashes {}
+**WHEN** the request includes ingredient_groups_attributes: [{}]
+**THEN** the empty record should NOT be created (reject_if clause prevents it)
+**AND** the recipe should be created with no ingredient_groups
+
+##### AC-PHASE2-STEP6-008: Update Recipe with Nested Attributes
+**GIVEN** a PUT request to /admin/recipes/:id with nested ingredient_groups_attributes
+**WHEN** the request includes:
+  - existing ingredient_group with updated name
+  - new ingredient_group_attributes to add
+  - ingredient_group with _destroy: true to delete
+**THEN** existing records should be updated
+**AND** new records should be created
+**AND** destroyed records should be deleted from database
+
+##### AC-PHASE2-STEP6-009: Nested Attribute Validation Error Propagation
+**GIVEN** a POST request to /admin/recipes with nested ingredient_groups_attributes
+**WHEN** recipe_ingredients_attributes has missing ingredient_name
+**THEN** the create should fail
+**AND** error response should include nested error message indicating which ingredient failed
+
+#### Phase 2 Acceptance Criteria Test Coverage
+
+##### AC-PHASE2-STEP6-010: All Phase 2 API Endpoint Tests Passing
+**GIVEN** RSpec tests are written for Phase 2 acceptance criteria
+**WHEN** tests cover:
+  - API endpoint responses (GET /recipes, GET /recipes/:id, POST /recipes/:id/scale, etc.)
+  - Serializer response format (servings hash, timing hash, ingredient_groups array, steps array)
+  - Backward compatibility of API responses
+  - Filter and search functionality
+**THEN** all tests should pass
+**AND** code coverage report should show >95% coverage for modified files
+
+##### AC-PHASE2-STEP6-011: Service Layer Tests for Normalized Schema
+**GIVEN** RSpec tests are written for services using normalized schema
+**WHEN** tests cover:
+  - RecipeScaler scaling with normalized servings and ingredient_groups
+  - RecipeSearchService filtering by normalized associations
+  - RecipeParserService returning normalized structure
+  - RecipeTranslator working with associations
+  - StepVariantGenerator using recipe_steps association
+**THEN** all tests should pass
+
+##### AC-PHASE2-STEP6-012: Error Handling Tests
+**GIVEN** tests for error scenarios
+**WHEN** tests cover:
+  - Invalid servings (below min, above max)
+  - Missing required fields in nested attributes
+  - Validation failures in nested records
+  - Database constraint violations
+**THEN** all error handling tests should pass
+**AND** error messages should be clear and actionable
 
 ---
 
