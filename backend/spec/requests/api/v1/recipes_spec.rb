@@ -242,8 +242,7 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
               'original' => 'Mix ingredients',
               'easier' => 'Combine flour and water',
               'no_equipment' => 'Mix by hand'
-            },
-            'timing_minutes' => 5
+            }
           }
         ]
       )
@@ -328,7 +327,6 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
       expect(step['instructions']['original']).to eq('Mix ingredients')
       expect(step['instructions']['easier']).to eq('Combine flour and water')
       expect(step['instructions']['no_equipment']).to eq('Mix by hand')
-      expect(step['timing_minutes']).to eq(5)
     end
 
     it 'includes equipment list' do

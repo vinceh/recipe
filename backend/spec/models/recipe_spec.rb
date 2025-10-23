@@ -587,7 +587,7 @@ RSpec.describe Recipe, type: :model do
         ingredient_name: 'test',
         position: 1
       )
-      recipe.recipe_steps.create!(step_number: 1, timing_minutes: 5)
+      recipe.recipe_steps.create!(step_number: 1)
 
       recipe_id = recipe.id
       recipe.destroy

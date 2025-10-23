@@ -51,7 +51,6 @@ AiPrompt.find_or_create_by!(prompt_key: 'recipe_parse_text_system') do |prompt|
           "instructions": {
             "original": "Heat oil in a large pan over medium heat."
           },
-          "timing_minutes": 2
         }
       ],
       "equipment": ["large pan", "knife", "cutting board"]
@@ -137,7 +136,6 @@ AiPrompt.find_or_create_by!(prompt_key: 'recipe_parse_url_direct_system') do |pr
           "instructions": {
             "original": "Boil water in a large pot."
           },
-          "timing_minutes": 5
         }
       ],
       "equipment": ["large pot", "colander"]
@@ -223,7 +221,6 @@ AiPrompt.find_or_create_by!(prompt_key: 'recipe_parse_url_system') do |prompt|
           "instructions": {
             "original": "Boil water in a large pot."
           },
-          "timing_minutes": 5
         }
       ],
       "equipment": ["large pot", "colander"]
@@ -313,7 +310,6 @@ AiPrompt.find_or_create_by!(prompt_key: 'recipe_parse_image_system') do |prompt|
           "instructions": {
             "original": "Mix flour and water."
           },
-          "timing_minutes": 5
         }
       ],
       "equipment": []
