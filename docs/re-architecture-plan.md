@@ -47,40 +47,62 @@ All ACs go into `docs/new_claude/acceptance-criteria.md` in GIVEN/WHEN/THEN form
 
 **Task Tracking Within Phases:**
 
-1. **When starting a new phase (BEFORE development):**
-   - Break the phase down into atomic subtasks
-   - Group related subtasks with nested bullets if helpful
-   - Add subtasks to the phase section with unchecked checkboxes: `- [ ] Task name`
-   - Each subtask should be completable in a focused work session
-   - Commit this documentation update with message: `[Phase X] Plan subtasks`
+**CRITICAL: Each step must be committed and approved before moving to the next step.**
 
-2. **During development (AFTER each completed subtask):**
-   - Complete one subtask
-   - Mark it as complete: `- [x] Task name`
-   - Commit this progress update with message: `[Phase X] Complete subtask: <description>`
-   - Get approval before moving to next subtask
-   - This provides visibility into progress and allows for course corrections
+1. **When starting a new phase (BEFORE development):**
+   - Break the phase down into logical steps (Step 1, Step 2, Step 3, etc.)
+   - Each step should be completable in one focused work session
+   - Within each step, break down into atomic subtasks
+   - Group related subtasks with nested bullets
+   - Add steps and subtasks to the phase section with unchecked checkboxes: `- [ ] Task name`
+   - Commit this documentation update with message: `[Phase X] Plan steps and subtasks`
+
+2. **During development (STEP BY STEP):**
+   - Work through all subtasks in Step 1 to completion
+   - Mark each completed subtask: `- [x] Task name`
+   - Commit the step update with message: `[Phase X] Step 1: <description>`
+   - **PAUSE AND REQUEST APPROVAL** - wait for user approval before proceeding
+   - Only after approval, move to Step 2
+   - Repeat: Complete subtasks → Mark complete → Commit → Request approval → Move next
+   - This gating mechanism allows for course corrections and feedback at each step
 
 3. **At the end of each phase (BEFORE final phase commit):**
-   - Verify all subtasks are marked complete: `- [x] Task name`
+   - Verify all steps and subtasks are marked complete: `- [x] Task name`
    - Review the phase plan and assumptions against what you actually learned
    - Evaluate whether current direction still makes sense
    - Check if any discoveries require documentation updates
    - Update this re-architecture-plan.md if needed
    - Then create final commit with message: `[Phase X] Complete: <description>`
 
-4. **Example Phase with Subtasks:**
+4. **Example Phase with Steps and Subtasks:**
    ```
    ### Phase X: Example Phase
 
-   Subtasks:
-   - [ ] Write ACs for phase
-   - [ ] Implement feature A
-   - [ ] Implement feature B
-   - [ ] Update API docs
-   - [ ] Write RSpec tests
+   Step 1: Write acceptance criteria
+   - [ ] Define schema-related ACs
+   - [ ] Define behavior-related ACs
+   - [ ] Get sub-agent review and refine
+   - [ ] Commit ACs document
+
+   Step 2: Implement feature A
+   - [ ] Create model file
+   - [ ] Add associations
+   - [ ] Write tests
    - [ ] All tests passing
-   - [ ] Review plan and evaluate direction
+   - [ ] Commit implementation
+
+   Step 3: Implement feature B
+   - [ ] Create controller
+   - [ ] Add routes
+   - [ ] Write integration tests
+   - [ ] All tests passing
+   - [ ] Commit implementation
+
+   Step 4: Final review
+   - [ ] Review plan and assumptions
+   - [ ] Evaluate direction
+   - [ ] Update documentation
+   - [ ] All tests passing
    ```
 
 ---
@@ -582,14 +604,20 @@ end
 
 ### Phase 1: Giant Database Migration
 
-**Subtasks:**
-- [x] Write Phase 1 ACs (GIVEN/WHEN/THEN format) - 28 ACs in re-arch-ACs.md
-- [x] Create migration file - 20251023000001_normalize_recipes_schema.rb
-- [ ] Create 11 new model files:
-  - [x] IngredientGroup
-  - [x] RecipeIngredient
-  - [x] RecipeStep
-  - [x] Equipment
+**Step 1: Acceptance Criteria**
+- [x] Write Phase 1 ACs in GIVEN/WHEN/THEN format
+- [x] Run sub-agent review and refinement
+- [x] Commit: `[Phase 1 ACs] Add schema normalization acceptance criteria`
+
+**Step 2: Schema Migration**
+- [x] Create migration file: 20251023000001_normalize_recipes_schema.rb
+- [x] Review migration against Phase 1 ACs
+- [x] Commit: `[Phase 1] Add database schema normalization migration`
+
+**Step 3: Create Model Files**
+- [x] Create 4 initial models (IngredientGroup, RecipeIngredient, RecipeStep, Equipment)
+- [x] Commit: `[Phase 1] Create initial model files with associations`
+- [ ] Create 7 remaining models:
   - [ ] RecipeNutrition
   - [ ] RecipeDietaryTag
   - [ ] RecipeDishType
@@ -597,48 +625,35 @@ end
   - [ ] RecipeCuisine
   - [ ] RecipeAlias
   - [ ] RecipeEquipment
-- [ ] Update Recipe model (remove JSONB validations, add associations)
-- [ ] Update seeds for new schema
-- [ ] Run migration + seeds successfully
-- [ ] Write RSpec tests for Phase 1 ACs
+
+**Step 4: Update Recipe Model**
+- [ ] Remove JSONB field validations
+- [ ] Add all associations (ingredient_groups, recipe_steps, equipment, dietary_tags, etc.)
+- [ ] Verify all associations match Phase 1 ACs
+- [ ] Commit Recipe model updates
+
+**Step 5: Update Seeds**
+- [ ] Update db/seeds.rb for new schema
+- [ ] Ensure 10+ test recipes created with new associations
+- [ ] Cover edge cases per AC-PHASE1-014c
+- [ ] Commit seeds
+
+**Step 6: Run Migration and Seeds**
+- [ ] Run `rails db:migrate`
+- [ ] Run `rails db:seed`
+- [ ] Verify no errors
+- [ ] Check data integrity
+
+**Step 7: Write RSpec Tests**
+- [ ] Write test suite covering Phase 1 ACs
 - [ ] All tests passing
-- [ ] Review plan and evaluate direction
+- [ ] Commit: `[Phase 1] Add RSpec tests for schema normalization`
 
-**BEFORE starting development:**
-Write comprehensive GIVEN/WHEN/THEN acceptance criteria for all schema changes in `docs/new_claude/acceptance-criteria.md`.
-
-**Migration:**
-Create one migration file that:
-1. Adds new columns to recipes table (servings_*, timing_*, source_language, translation_status)
-2. Drops old columns from recipes table (language, servings, timing, aliases, dietary_tags, dish_types, recipe_types, cuisines, ingredient_groups, steps, equipment, translations, translations_completed)
-3. Creates all 12 new tables (ingredient_groups, recipe_ingredients, recipe_steps, recipe_dietary_tags, recipe_dish_types, recipe_recipe_types, recipe_cuisines, recipe_aliases, equipment, recipe_equipment, recipe_steps, recipe_nutrition)
-
-**Models:**
-Create model files:
-- IngredientGroup
-- RecipeIngredient
-- RecipeStep
-- Equipment
-- RecipeNutrition
-- RecipeDietaryTag
-- RecipeDishType
-- RecipeRecipeType
-- RecipeCuisine
-- RecipeAlias
-- RecipeEquipment
-
-Update Recipe model:
-- Remove JSONB field validations (servings, timing, aliases, dietary_tags, dish_types, recipe_types, cuisines, ingredient_groups, steps, equipment)
-- Add associations: has_many :ingredient_groups, :recipe_steps, :recipe_equipment, :recipe_dietary_tags, :recipe_dish_types, :recipe_recipe_types, :recipe_cuisines, :recipe_aliases
-- Add: has_one :recipe_nutrition
-- Add: has_many :equipment through :recipe_equipment
-
-**Seeds:**
-Update `db/seeds.rb` to populate with new schema structure (14 test recipes using new associations).
-
-**Deliverable**: Migration file + model files + updated seeds
-
-**End of Phase**: Write RSpec tests against Phase 1 ACs for schema structure
+**Step 8: Final Review**
+- [ ] Review plan against actual discoveries
+- [ ] Evaluate direction and assumptions
+- [ ] Update documentation if needed
+- [ ] Final commit: `[Phase 1] Complete: Database schema normalization`
 
 ---
 
