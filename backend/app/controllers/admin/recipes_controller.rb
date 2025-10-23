@@ -14,21 +14,18 @@ module Admin
       # Filter by cuisines (multiple)
       if params[:cuisines].present?
         cuisine_names = params[:cuisines].is_a?(Array) ? params[:cuisines] : [params[:cuisines]]
-        recipes = recipes.joins(:cuisines)
-          .where(recipe_cuisines: { cuisines: { display_name: cuisine_names } })
-          .distinct
+        cuisine_ids = DataReference.where(reference_type: 'cuisine', display_name: cuisine_names).pluck(:id)
+        recipes = recipes.joins(:recipe_cuisines).where(recipe_cuisines: { data_reference_id: cuisine_ids }).distinct
       elsif params[:cuisine].present?
-        recipes = recipes.joins(:cuisines)
-          .where(recipe_cuisines: { cuisines: { display_name: params[:cuisine] } })
-          .distinct
+        cuisine_id = DataReference.where(reference_type: 'cuisine', display_name: params[:cuisine]).pluck(:id).first
+        recipes = recipes.joins(:recipe_cuisines).where(recipe_cuisines: { data_reference_id: cuisine_id }).distinct if cuisine_id
       end
 
       # Filter by dish types (multiple)
       if params[:dish_types].present?
         type_names = params[:dish_types].is_a?(Array) ? params[:dish_types] : [params[:dish_types]]
-        recipes = recipes.joins(:dish_types)
-          .where(recipe_dish_types: { dish_types: { display_name: type_names } })
-          .distinct
+        type_ids = DataReference.where(reference_type: 'dish_type', display_name: type_names).pluck(:id)
+        recipes = recipes.joins(:recipe_dish_types).where(recipe_dish_types: { data_reference_id: type_ids }).distinct
       end
 
       # Filter by max prep time
@@ -39,9 +36,8 @@ module Admin
 
       # Filter by dietary tag
       if params[:dietary_tag].present?
-        recipes = recipes.joins(:dietary_tags)
-          .where(recipe_dietary_tags: { dietary_tags: { display_name: params[:dietary_tag] } })
-          .distinct
+        tag_id = DataReference.where(reference_type: 'dietary_tag', display_name: params[:dietary_tag]).pluck(:id).first
+        recipes = recipes.joins(:recipe_dietary_tags).where(recipe_dietary_tags: { data_reference_id: tag_id }).distinct if tag_id
       end
 
       # Get count before eager loading for efficiency
@@ -311,7 +307,8 @@ module Admin
         )
       end
 
-      deleted_count = Recipe.where(id: recipe_ids).destroy_all.count
+      deleted_count = Recipe.where(id: recipe_ids).count
+      Recipe.where(id: recipe_ids).destroy_all
 
       render_success(
         data: {
