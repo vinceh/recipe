@@ -1300,11 +1300,25 @@ Subtask D: Quality Assurance & Completion ✅ COMPLETE
 - [x] Update plan document with checkmarks
 - [x] Request approval to proceed to Step 7
 
-**Step 7: Update Documentation**
-- [ ] Update docs/api-reference.md with normalized schema examples
-- [ ] Update docs/new_claude/architecture.md backend section
-- [ ] Commit documentation updates
-- [ ] Request approval
+**Step 7: Update Documentation** ✅ COMPLETE
+
+- [x] Update docs/api-reference.md with normalized schema examples
+  - [x] Get Recipe endpoint: Updated response to show normalized columns (servings_original, servings_min, servings_max, prep_minutes, cook_minutes, total_minutes)
+  - [x] Create Recipe endpoint: Updated request body with flat normalized fields and nested attributes (_attributes)
+  - [x] Updated notes: Clarified normalized schema approach and nested attributes usage
+  - [x] Added _destroy flag documentation
+- [x] Update docs/new_claude/architecture.md backend section
+  - [x] Recipe model: Complete rewrite with normalized schema associations and nested attributes
+  - [x] Added "Key Changes from Previous Schema" section
+  - [x] Added new models: IngredientGroup, RecipeIngredient, RecipeStep, RecipeNutrition
+  - [x] All examples match current codebase
+- [x] Commit documentation updates: `8682672` - `[Phase 2] Step 7: Update documentation with normalized schema examples`
+- [x] Run code-quality-auditor
+  - [x] No TODOs/FIXMEs found
+  - [x] No hardcoded credentials
+  - [x] All examples accurate
+  - [x] Production-ready ✅
+- [x] Request approval to proceed to Step 8
 
 **Step 8: Final Review & Phase 2 Completion**
 - [ ] Review plan vs actual discoveries
