@@ -5,12 +5,12 @@ class StepVariantGenerator < AiService
 
     rendered_user_prompt = user_prompt.render(
       recipe_name: recipe.name,
-      cuisines: recipe.cuisines.join(', '),
-      recipe_types: recipe.recipe_types.join(', '),
-      step_order: step['order'],
-      step_title: step['title'] || "Step #{step['order']}",
-      original_instruction: step.dig('instructions', 'original'),
-      equipment: step['equipment']&.join(', ') || 'None specified',
+      cuisines: recipe.cuisines.map(&:display_name).join(', '),
+      recipe_types: recipe.recipe_types.map(&:display_name).join(', '),
+      step_order: step.step_number,
+      step_title: "Step #{step.step_number}",
+      original_instruction: step.instruction_original,
+      equipment: recipe.equipment.map(&:canonical_name).join(', ').presence || 'None specified',
       ingredients: extract_step_ingredients(recipe, step).join(', ')
     )
 
@@ -29,10 +29,10 @@ class StepVariantGenerator < AiService
 
     rendered_user_prompt = user_prompt.render(
       recipe_name: recipe.name,
-      step_order: step['order'],
-      step_title: step['title'] || "Step #{step['order']}",
-      original_instruction: step.dig('instructions', 'original'),
-      equipment: step['equipment']&.join(', ') || 'None'
+      step_order: step.step_number,
+      step_title: "Step #{step.step_number}",
+      original_instruction: step.instruction_original,
+      equipment: recipe.equipment.map(&:canonical_name).join(', ').presence || 'None'
     )
 
     response = call_claude(
@@ -48,13 +48,13 @@ class StepVariantGenerator < AiService
 
   def extract_step_ingredients(recipe, step)
     # Extract ingredient names mentioned in this step
-    step_text = step.dig('instructions', 'original')
+    step_text = step.instruction_original
     return [] unless step_text
 
-    recipe.ingredient_groups.flat_map do |group|
-      group['items'].select do |ing|
-        step_text.downcase.include?(ing['name'].downcase)
-      end.map { |ing| "#{ing['amount']} #{ing['unit']} #{ing['name']}" }
+    recipe.ingredient_groups.includes(:recipe_ingredients).flat_map do |group|
+      group.recipe_ingredients.select do |ing|
+        step_text.downcase.include?(ing.ingredient_name.downcase)
+      end.map { |ing| "#{ing.amount} #{ing.unit} #{ing.ingredient_name}" }
     end
   end
 
