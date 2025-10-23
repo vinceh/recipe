@@ -723,7 +723,6 @@ end
   - [x] Address key MEDIUM severity issues (3 of 15 addressed: M-1, M-2, M-15)
     - M-1, M-2: Extracted duplicated test code patterns with helper methods
     - M-15: Added presence validations to all join table models
-  - [ ] Deferred 12 MEDIUM + 15 LOW severity issues (documented below)
 - [x] Commit: `[Phase 1] Step 6: Add RSpec tests for schema normalization`
 - [x] Commit: `[Phase 1] Step 6: Address code quality audit findings`
 
@@ -749,28 +748,74 @@ end
 
 ### Phase 2: Fix Existing Backend Specs
 
-**BEFORE starting development:**
-Write comprehensive GIVEN/WHEN/THEN acceptance criteria for API endpoints with normalized schema in `docs/new_claude/acceptance-criteria.md`.
+**Step 1: Write Acceptance Criteria**
+- [ ] Define ACs for API endpoints with normalized schema (GIVEN/WHEN/THEN format)
+- [ ] Define ACs for serializers handling relational data
+- [ ] Define ACs for services using associations instead of JSONB
+- [ ] Run sub-agent with acceptance-test-writing skill to review, identify gaps, and refine
+- [ ] Update ACs based on sub-agent recommendations
+- [ ] Commit ACs document
+- [ ] Request approval
 
-Run `bundle exec rspec` and fix failures iteratively.
+**Step 2: Deep Discovery & Analysis**
+- [ ] Run full bundle exec rspec suite and document all failures by category
+- [ ] Cross-reference with acceptance-criteria.md:
+  - [ ] Identify which ACs depend on JSONB structure
+  - [ ] Map ACs to affected components (serializers, services, controllers)
+  - [ ] Document functional requirements that must be preserved
+- [ ] Cross-reference with api-reference.md:
+  - [ ] Document current API response formats (JSONB structure)
+  - [ ] Identify all endpoints returning recipe data
+  - [ ] Map JSONB fields to new normalized schema
+  - [ ] Document transformation logic needed for each endpoint
+- [ ] Analyze transformation requirements:
+  - [ ] How serializers must rebuild JSONB-like responses from normalized data
+  - [ ] Which services need to query associations instead of JSONB
+  - [ ] What controller logic changes are needed
+  - [ ] Identify shared transformation patterns
+- [ ] Create "Phase 2 Reference: Transformation Requirements" section in re-architecture-plan.md documenting:
+  - [ ] Failure categories and affected endpoints
+  - [ ] AC-to-component mapping
+  - [ ] JSONB-to-relational schema transformations
+  - [ ] Serializer rebuild logic needed
+  - [ ] Service updates required
+  - [ ] Shared transformation patterns
+- [ ] Define specific Steps 3-5 based on findings (reference section will guide these steps)
+- [ ] Commit assessment document + updated plan with reference section
+- [ ] Request approval
 
-Update as needed:
-- Services (RecipeScaler, RecipeTranslator, RecipeParserService, StepVariantGenerator, RecipeSearchService, etc.)
-- Serializers
-- Controllers
-- Models
+**Steps 3-5: Component Fixes**
+*(To be determined based on Step 2 discoveries)*
 
-Add validation tests:
-- Position uniqueness constraint for ingredient_groups
-- Step number uniqueness constraint for recipe_steps
+Will be specific, focused steps like:
+- "Step 3: Fix RecipeSerializer to transform normalized data to JSONB format"
+- "Step 4: Update RecipeScaler to work with ingredient_groups associations"
+- "Step 5: Fix RecipeParserService to create normalized records"
 
-Update `docs/api-reference.md` to reflect API changes.
+**Step 6: Add Constraint Tests + Write RSpec Tests Against Phase 2 ACs**
+- [ ] Add position uniqueness constraint tests for ingredient_groups (M-3)
+- [ ] Add step_number uniqueness constraint tests for recipe_steps (M-4)
+- [ ] Write RSpec tests against Phase 2 acceptance criteria
+- [ ] All tests passing
+- [ ] Commit implementation
+- [ ] Run code audit
+- [ ] Address issues
+- [ ] Request approval
 
-Update `docs/new_claude/architecture.md` backend section.
+**Step 7: Update Documentation**
+- [ ] Update docs/api-reference.md with normalized schema examples
+- [ ] Update docs/new_claude/architecture.md backend section
+- [ ] Commit documentation updates
+- [ ] Request approval
 
-**Deliverable**: All existing tests pass, API docs updated
-
-**End of Phase**: Write RSpec tests against Phase 2 ACs for normalized structure (ingredient_groups, recipe_ingredients, join tables)
+**Step 8: Final Review & Phase 2 Completion**
+- [ ] Review plan vs actual discoveries
+- [ ] Evaluate direction and assumptions
+- [ ] Run full test suite - verify 100% passing
+- [ ] Run code audit
+- [ ] Address issues
+- [ ] Final commit: [Phase 2] Complete: Backend specs fixed for normalized schema
+- [ ] Request approval to proceed to Phase 3
 
 ---
 
