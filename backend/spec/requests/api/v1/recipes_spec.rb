@@ -18,51 +18,61 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
 
     context 'with multiple recipes' do
       let!(:recipe1) do
-        Recipe.create!(
+        recipe = Recipe.create!(
           name: 'Spaghetti Carbonara',
-          language: 'en',
-          servings: { 'original' => 4, 'min' => 2, 'max' => 8 },
-          timing: { 'prep_minutes' => 10, 'cook_minutes' => 20, 'total_minutes' => 30 },
-          dietary_tags: ['vegetarian'],
-          cuisines: ['italian'],
-          dish_types: ['main-course'],
-          ingredient_groups: [
-            {
-              'name' => 'Main',
-              'items' => [
-                { 'name' => 'spaghetti', 'amount' => '400', 'unit' => 'g' }
-              ]
-            }
-          ],
-          steps: [
-            { 'id' => 'step-001', 'order' => 1, 'instructions' => { 'original' => 'Boil pasta' } }
-          ]
+          source_language: 'en',
+          servings_original: 4,
+          servings_min: 2,
+          servings_max: 8,
+          prep_minutes: 10,
+          cook_minutes: 20,
+          total_minutes: 30
         )
+
+        create_ingredient_group(recipe, 'Main', [
+          { name: 'spaghetti', amount: '400', unit: 'g' }
+        ])
+        create_recipe_step(recipe, 1, 'Boil pasta')
+        create_dietary_tag(recipe, 'vegetarian')
+        create_cuisine(recipe, 'italian')
+        create_dish_type(recipe, 'main-course')
+
+        recipe.reload
       end
 
       let!(:recipe2) do
-        Recipe.create!(
+        recipe = Recipe.create!(
           name: 'Chicken Curry',
-          language: 'en',
-          servings: { 'original' => 6, 'min' => 4, 'max' => 8 },
-          timing: { 'prep_minutes' => 15, 'cook_minutes' => 30, 'total_minutes' => 45 },
-          cuisines: ['indian'],
-          dish_types: ['main-course'],
-          ingredient_groups: [],
-          steps: []
+          source_language: 'en',
+          servings_original: 6,
+          servings_min: 4,
+          servings_max: 8,
+          prep_minutes: 15,
+          cook_minutes: 30,
+          total_minutes: 45
         )
+
+        create_cuisine(recipe, 'indian')
+        create_dish_type(recipe, 'main-course')
+
+        recipe.reload
       end
 
       let!(:recipe3) do
-        Recipe.create!(
+        recipe = Recipe.create!(
           name: 'Caesar Salad',
-          language: 'en',
-          servings: { 'original' => 2, 'min' => 1, 'max' => 4 },
-          timing: { 'prep_minutes' => 10, 'cook_minutes' => 0, 'total_minutes' => 10 },
-          dietary_tags: ['vegetarian'],
-          ingredient_groups: [],
-          steps: []
+          source_language: 'en',
+          servings_original: 2,
+          servings_min: 1,
+          servings_max: 4,
+          prep_minutes: 10,
+          cook_minutes: 0,
+          total_minutes: 10
         )
+
+        create_dietary_tag(recipe, 'vegetarian')
+
+        recipe.reload
       end
 
       it 'returns all recipes with pagination' do
@@ -211,41 +221,29 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
 
   describe 'GET /api/v1/recipes/:id' do
     let(:recipe) do
-      Recipe.create!(
+      recipe = Recipe.create!(
         name: 'Test Recipe',
-        language: 'en',
-        servings: { 'original' => 4, 'min' => 2, 'max' => 8 },
-        timing: { 'prep_minutes' => 10, 'cook_minutes' => 20, 'total_minutes' => 30 },
-        equipment: ['oven', 'mixing bowl'],
-        dietary_tags: ['vegetarian'],
-        cuisines: ['italian'],
-        dish_types: ['main-course'],
-        recipe_types: ['quick-weeknight'],
-        ingredient_groups: [
-          {
-            'name' => 'Main Ingredients',
-            'items' => [
-              {
-                'name' => 'flour',
-                'amount' => '2',
-                'unit' => 'cup',
-                'preparation' => 'sifted'
-              }
-            ]
-          }
-        ],
-        steps: [
-          {
-            'id' => 'step-001',
-            'order' => 1,
-            'instructions' => {
-              'original' => 'Mix ingredients',
-              'easier' => 'Combine flour and water',
-              'no_equipment' => 'Mix by hand'
-            }
-          }
-        ]
+        source_language: 'en',
+        servings_original: 4,
+        servings_min: 2,
+        servings_max: 8,
+        prep_minutes: 10,
+        cook_minutes: 20,
+        total_minutes: 30
       )
+
+      create_ingredient_group(recipe, 'Main Ingredients', [
+        { name: 'flour', amount: '2', unit: 'cup', preparation: 'sifted' }
+      ])
+      create_recipe_step(recipe, 1, 'Mix ingredients', easier: 'Combine flour and water', no_equipment: 'Mix by hand')
+      create_equipment(recipe, 'oven')
+      create_equipment(recipe, 'mixing bowl')
+      create_dietary_tag(recipe, 'vegetarian')
+      create_cuisine(recipe, 'italian')
+      create_dish_type(recipe, 'main-course')
+      create_recipe_type(recipe, 'quick-weeknight')
+
+      recipe.reload
     end
 
     it 'returns full recipe details' do
@@ -347,5 +345,55 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
       expect(json['success']).to be false
       expect(json['message']).to eq('Record not found')
     end
+  end
+
+  private
+
+  def create_ingredient_group(recipe, group_name, items)
+    group = recipe.ingredient_groups.create!(name: group_name, position: 1)
+    items.each_with_index do |item, index|
+      group.recipe_ingredients.create!(
+        ingredient_name: item[:name],
+        amount: item[:amount],
+        unit: item[:unit],
+        preparation_notes: item[:preparation],
+        position: index + 1
+      )
+    end
+  end
+
+  def create_recipe_step(recipe, step_number, original, easier: nil, no_equipment: nil)
+    step = recipe.recipe_steps.create!(step_number: step_number)
+    step.recipe_step_translations.create!(
+      locale: recipe.source_language,
+      instruction_original: original,
+      instruction_easier: easier,
+      instruction_no_equipment: no_equipment
+    )
+  end
+
+  def create_equipment(recipe, name)
+    equipment = Equipment.find_or_create_by!(canonical_name: name)
+    recipe.recipe_equipment.create!(equipment: equipment)
+  end
+
+  def create_dietary_tag(recipe, name)
+    tag = DataReference.find_or_create_by!(reference_type: 'dietary_tag', key: name.downcase.gsub(/\s/, '_'), display_name: name)
+    recipe.recipe_dietary_tags.create!(data_reference: tag)
+  end
+
+  def create_cuisine(recipe, name)
+    cuisine = DataReference.find_or_create_by!(reference_type: 'cuisine', key: name.downcase.gsub(/\s/, '_'), display_name: name)
+    recipe.recipe_cuisines.create!(data_reference: cuisine)
+  end
+
+  def create_dish_type(recipe, name)
+    dish_type = DataReference.find_or_create_by!(reference_type: 'dish_type', key: name.downcase.gsub(/\s/, '_'), display_name: name)
+    recipe.recipe_dish_types.create!(data_reference: dish_type)
+  end
+
+  def create_recipe_type(recipe, name)
+    recipe_type = DataReference.find_or_create_by!(reference_type: 'recipe_type', key: name.downcase.gsub(/\s/, '_'), display_name: name)
+    recipe.recipe_recipe_types.create!(data_reference: recipe_type)
   end
 end

@@ -12,32 +12,39 @@ module Admin
 
       # Filter by cuisines (multiple)
       if params[:cuisines].present?
-        cuisines = params[:cuisines].is_a?(Array) ? params[:cuisines] : [params[:cuisines]]
-        cuisines.each do |cuisine|
-          recipes = recipes.where("cuisines @> ?", [cuisine].to_json)
-        end
+        cuisine_names = params[:cuisines].is_a?(Array) ? params[:cuisines] : [params[:cuisines]]
+        recipes = recipes.joins(:cuisines)
+          .where(recipe_cuisines: { cuisines: { display_name: cuisine_names } })
+          .distinct
       elsif params[:cuisine].present?
-        # Legacy single cuisine filter
-        recipes = recipes.where("cuisines @> ?", [params[:cuisine]].to_json)
+        recipes = recipes.joins(:cuisines)
+          .where(recipe_cuisines: { cuisines: { display_name: params[:cuisine] } })
+          .distinct
       end
 
       # Filter by dish types (multiple)
       if params[:dish_types].present?
-        dish_types = params[:dish_types].is_a?(Array) ? params[:dish_types] : [params[:dish_types]]
-        dish_types.each do |dish_type|
-          recipes = recipes.where("dish_types @> ?", [dish_type].to_json)
-        end
+        type_names = params[:dish_types].is_a?(Array) ? params[:dish_types] : [params[:dish_types]]
+        recipes = recipes.joins(:dish_types)
+          .where(recipe_dish_types: { dish_types: { display_name: type_names } })
+          .distinct
       end
 
       # Filter by max prep time
       if params[:max_prep_time].present?
         max_time = params[:max_prep_time].to_i
-        recipes = recipes.where("(timing->>'prep_minutes')::int <= ?", max_time)
+        recipes = recipes.where('prep_minutes <= ?', max_time)
       end
 
+      # Filter by dietary tag
       if params[:dietary_tag].present?
-        recipes = recipes.where("dietary_tags @> ?", [params[:dietary_tag]].to_json)
+        recipes = recipes.joins(:dietary_tags)
+          .where(recipe_dietary_tags: { dietary_tags: { display_name: params[:dietary_tag] } })
+          .distinct
       end
+
+      # Eager load associations for serialization
+      recipes = recipes.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :dish_types, :cuisines, :recipe_types, recipe_steps: :recipe_step_translations)
 
       # Pagination
       page = params[:page]&.to_i || 1
@@ -67,7 +74,7 @@ module Admin
     # GET /admin/recipes/:id
     # Show a single recipe with full details
     def show
-      recipe = Recipe.find(params[:id])
+      recipe = Recipe.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :dish_types, :cuisines, :recipe_types, :recipe_aliases, recipe_steps: :recipe_step_translations).find(params[:id])
 
       render_success(
         data: { recipe: admin_recipe_json_full(recipe) }
@@ -349,14 +356,21 @@ module Admin
       {
         id: recipe.id,
         name: recipe.name,
-        language: recipe.language,
-        servings: recipe.servings,
-        timing: recipe.timing,
-        dietary_tags: recipe.dietary_tags,
-        dish_types: recipe.dish_types,
-        recipe_types: recipe.recipe_types,
-        cuisines: recipe.cuisines,
-        aliases: recipe.aliases,
+        language: recipe.source_language,
+        servings: {
+          original: recipe.servings_original,
+          min: recipe.servings_min,
+          max: recipe.servings_max
+        },
+        timing: {
+          prep_minutes: recipe.prep_minutes,
+          cook_minutes: recipe.cook_minutes,
+          total_minutes: recipe.total_minutes
+        },
+        dietary_tags: recipe.dietary_tags.pluck(:display_name),
+        dish_types: recipe.dish_types.pluck(:display_name),
+        recipe_types: recipe.recipe_types.pluck(:display_name),
+        cuisines: recipe.cuisines.pluck(:display_name),
         source_url: recipe.source_url,
         admin_notes: recipe.admin_notes,
         requires_precision: recipe.requires_precision,
@@ -371,12 +385,69 @@ module Admin
 
     def admin_recipe_json_full(recipe)
       admin_recipe_json(recipe).merge(
-        ingredient_groups: recipe.ingredient_groups,
-        steps: recipe.steps,
-        equipment: recipe.equipment,
-        nutrition: recipe.nutrition,
-        translations: recipe.translations
+        ingredient_groups: serialize_ingredient_groups(recipe),
+        steps: serialize_recipe_steps(recipe),
+        equipment: recipe.equipment.pluck(:canonical_name),
+        nutrition: recipe.recipe_nutrition ? serialize_nutrition(recipe.recipe_nutrition) : nil
       )
+    end
+
+    def serialize_ingredient_groups(recipe)
+      recipe.ingredient_groups.map do |group|
+        {
+          name: group.name,
+          items: group.recipe_ingredients.map do |item|
+            {
+              name: item.ingredient_name,
+              amount: format_amount(item.amount),
+              unit: item.unit,
+              preparation: item.preparation_notes,
+              optional: item.optional
+            }
+          end
+        }
+      end
+    end
+
+    def format_amount(amount)
+      return amount.to_s if amount.nil?
+
+      if amount == amount.to_i
+        amount.to_i.to_s
+      else
+        amount.to_s
+      end
+    end
+
+    def serialize_recipe_steps(recipe)
+      recipe.recipe_steps.order(:step_number).map do |step|
+        translation = step.recipe_step_translations.find_by(locale: recipe.source_language) ||
+                      step.recipe_step_translations.first
+
+        {
+          id: "step-#{step.step_number.to_s.rjust(3, '0')}",
+          order: step.step_number,
+          instructions: {
+            original: translation&.instruction_original,
+            easier: translation&.instruction_easier,
+            no_equipment: translation&.instruction_no_equipment
+          }.compact
+        }
+      end
+    end
+
+    def serialize_nutrition(nutrition)
+      {
+        per_serving: {
+          calories: nutrition.calories,
+          protein_g: nutrition.protein_g,
+          carbs_g: nutrition.carbs_g,
+          fat_g: nutrition.fat_g,
+          fiber_g: nutrition.fiber_g,
+          sodium_mg: nutrition.sodium_mg,
+          sugar_g: nutrition.sugar_g
+        }.compact
+      }
     end
   end
 end

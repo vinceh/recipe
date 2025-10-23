@@ -12,6 +12,9 @@ module Api
           recipes = apply_basic_search_filters(recipes)
         end
 
+        # Eager load associations for list view
+        recipes = recipes.includes(:ingredient_groups, :recipe_ingredients, :equipment, :dietary_tags, :dish_types, :cuisines, :recipe_types, recipe_steps: :recipe_step_translations)
+
         # Pagination
         page = params[:page]&.to_i || 1
         per_page = params[:per_page]&.to_i || 20
@@ -41,19 +44,19 @@ module Api
       # GET /api/v1/recipes/:id
       # Show single recipe with full details
       def show
-        recipe = Recipe.find(params[:id])
+        recipe = Recipe.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :dish_types, :cuisines, :recipe_types, :recipe_aliases, recipe_steps: :recipe_step_translations).find(params[:id])
         render_success(data: { recipe: recipe_detail_json(recipe) })
       end
 
       # POST /api/v1/recipes/:id/scale
       # Scale recipe ingredients to new serving size
       def scale
-        recipe = Recipe.find(params[:id])
+        recipe = Recipe.includes(:ingredient_groups, :recipe_ingredients).find(params[:id])
         new_servings = params.require(:servings).to_f
 
         # Validate servings within min/max range
-        min = recipe.servings['min'] || 1
-        max = recipe.servings['max'] || 999
+        min = recipe.servings_min || 1
+        max = recipe.servings_max || 999
 
         if new_servings < min || new_servings > max
           return render_error(
@@ -62,18 +65,24 @@ module Api
           )
         end
 
-        original_servings = recipe.servings['original'].to_f
+        original_servings = recipe.servings_original.to_f
         scale_factor = new_servings / original_servings
 
-        # Scale ingredient amounts
+        # Scale ingredient amounts using normalized structure
         scaled_ingredient_groups = recipe.ingredient_groups.map do |group|
           {
-            'name' => group['name'],
-            'items' => group['items'].map do |item|
-              original_amount = item['amount'].to_f
+            'name' => group.name,
+            'items' => group.recipe_ingredients.map do |item|
+              original_amount = item.amount.to_f
               scaled_amount = (original_amount * scale_factor).round(2)
 
-              item.merge('amount' => scaled_amount.to_s)
+              {
+                'name' => item.ingredient_name,
+                'amount' => scaled_amount.to_s,
+                'unit' => item.unit,
+                'preparation' => item.preparation_notes,
+                'optional' => item.optional
+              }
             end
           }
         end
@@ -103,49 +112,46 @@ module Api
 
       # Apply basic search and filter parameters (backwards compatible)
       def apply_basic_search_filters(recipes)
-        # Search query (name only for JSONB schema)
+        # Search query (name only)
         if params[:q].present?
           query = "%#{params[:q]}%"
           recipes = recipes.where('recipes.name ILIKE ?', query)
         end
 
-        # Filter by dietary tags (JSONB array contains - OR logic for multiple tags)
+        # Filter by dietary tags
         if params[:dietary_tags].present?
           tag_names = params[:dietary_tags].split(',').map(&:strip)
-          conditions = tag_names.map { "dietary_tags @> ?" }.join(' OR ')
-          values = tag_names.map { |tag| [tag].to_json }
-          recipes = recipes.where(conditions, *values)
+          tag_ids = DataReference.where(reference_type: 'dietary_tag', display_name: tag_names).pluck(:id)
+          recipes = recipes.joins(:recipe_dietary_tags).where(recipe_dietary_tags: { data_reference_id: tag_ids }).distinct
         end
 
-        # Filter by dish types (OR logic for multiple types)
+        # Filter by dish types
         if params[:dish_types].present?
           type_names = params[:dish_types].split(',').map(&:strip)
-          conditions = type_names.map { "dish_types @> ?" }.join(' OR ')
-          values = type_names.map { |type| [type].to_json }
-          recipes = recipes.where(conditions, *values)
+          type_ids = DataReference.where(reference_type: 'dish_type', display_name: type_names).pluck(:id)
+          recipes = recipes.joins(:recipe_dish_types).where(recipe_dish_types: { data_reference_id: type_ids }).distinct
         end
 
-        # Filter by cuisines (OR logic for multiple cuisines)
+        # Filter by cuisines
         if params[:cuisines].present?
           cuisine_names = params[:cuisines].split(',').map(&:strip)
-          conditions = cuisine_names.map { "cuisines @> ?" }.join(' OR ')
-          values = cuisine_names.map { |cuisine| [cuisine].to_json }
-          recipes = recipes.where(conditions, *values)
+          cuisine_ids = DataReference.where(reference_type: 'cuisine', display_name: cuisine_names).pluck(:id)
+          recipes = recipes.joins(:recipe_cuisines).where(recipe_cuisines: { data_reference_id: cuisine_ids }).distinct
         end
 
         # Filter by cook time
         if params[:max_cook_time].present?
-          recipes = recipes.where("(timing->>'cook_minutes')::int <= ?", params[:max_cook_time].to_i)
+          recipes = recipes.where('cook_minutes <= ?', params[:max_cook_time].to_i)
         end
 
         # Filter by prep time
         if params[:max_prep_time].present?
-          recipes = recipes.where("(timing->>'prep_minutes')::int <= ?", params[:max_prep_time].to_i)
+          recipes = recipes.where('prep_minutes <= ?', params[:max_prep_time].to_i)
         end
 
         # Filter by total time
         if params[:max_total_time].present?
-          recipes = recipes.where("(timing->>'total_minutes')::int <= ?", params[:max_total_time].to_i)
+          recipes = recipes.where('total_minutes <= ?', params[:max_total_time].to_i)
         end
 
         recipes
@@ -156,12 +162,20 @@ module Api
         {
           id: recipe.id,
           name: recipe.name,
-          language: recipe.language,
-          servings: recipe.servings['original'],
-          timing: recipe.timing,
-          dietary_tags: recipe.dietary_tags,
-          dish_types: recipe.dish_types,
-          cuisines: recipe.cuisines,
+          language: recipe.source_language,
+          servings: {
+            original: recipe.servings_original,
+            min: recipe.servings_min,
+            max: recipe.servings_max
+          },
+          timing: {
+            prep_minutes: recipe.prep_minutes,
+            cook_minutes: recipe.cook_minutes,
+            total_minutes: recipe.total_minutes
+          },
+          dietary_tags: recipe.dietary_tags.pluck(:display_name),
+          dish_types: recipe.dish_types.pluck(:display_name),
+          cuisines: recipe.cuisines.pluck(:display_name),
           source_url: recipe.source_url,
           created_at: recipe.created_at,
           updated_at: recipe.updated_at
@@ -173,23 +187,92 @@ module Api
         {
           id: recipe.id,
           name: recipe.name,
-          language: recipe.language,
-          servings: recipe.servings,
-          timing: recipe.timing,
-          dietary_tags: recipe.dietary_tags,
-          dish_types: recipe.dish_types,
-          recipe_types: recipe.recipe_types,
-          cuisines: recipe.cuisines,
-          ingredient_groups: recipe.ingredient_groups,
-          steps: recipe.steps,
-          equipment: recipe.equipment,
-          nutrition: recipe.nutrition,
+          language: recipe.source_language,
+          servings: {
+            original: recipe.servings_original,
+            min: recipe.servings_min,
+            max: recipe.servings_max
+          },
+          timing: {
+            prep_minutes: recipe.prep_minutes,
+            cook_minutes: recipe.cook_minutes,
+            total_minutes: recipe.total_minutes
+          },
+          dietary_tags: recipe.dietary_tags.pluck(:display_name),
+          dish_types: recipe.dish_types.pluck(:display_name),
+          recipe_types: recipe.recipe_types.pluck(:display_name),
+          cuisines: recipe.cuisines.pluck(:display_name),
+          ingredient_groups: serialize_ingredient_groups(recipe),
+          steps: serialize_recipe_steps(recipe),
+          equipment: recipe.equipment.pluck(:canonical_name),
+          nutrition: recipe.recipe_nutrition ? serialize_nutrition(recipe.recipe_nutrition) : nil,
           requires_precision: recipe.requires_precision,
           precision_reason: recipe.precision_reason,
           source_url: recipe.source_url,
-          translations: recipe.translations,
           created_at: recipe.created_at,
           updated_at: recipe.updated_at
+        }
+      end
+
+      # Serialize ingredient groups with items
+      def serialize_ingredient_groups(recipe)
+        recipe.ingredient_groups.map do |group|
+          {
+            name: group.name,
+            items: group.recipe_ingredients.map do |item|
+              {
+                name: item.ingredient_name,
+                amount: format_amount(item.amount),
+                unit: item.unit,
+                preparation: item.preparation_notes,
+                optional: item.optional
+              }
+            end
+          }
+        end
+      end
+
+      def format_amount(amount)
+        return amount.to_s if amount.nil?
+
+        # Convert to integer if it's a whole number, otherwise return decimal
+        if amount == amount.to_i
+          amount.to_i.to_s
+        else
+          amount.to_s
+        end
+      end
+
+      # Serialize recipe steps with variants
+      def serialize_recipe_steps(recipe)
+        recipe.recipe_steps.order(:step_number).map do |step|
+          translation = step.recipe_step_translations.find_by(locale: recipe.source_language) ||
+                        step.recipe_step_translations.first
+
+          {
+            id: "step-#{step.step_number.to_s.rjust(3, '0')}",
+            order: step.step_number,
+            instructions: {
+              original: translation&.instruction_original,
+              easier: translation&.instruction_easier,
+              no_equipment: translation&.instruction_no_equipment
+            }.compact
+          }
+        end
+      end
+
+      # Serialize nutrition info
+      def serialize_nutrition(nutrition)
+        {
+          per_serving: {
+            calories: nutrition.calories,
+            protein_g: nutrition.protein_g,
+            carbs_g: nutrition.carbs_g,
+            fat_g: nutrition.fat_g,
+            fiber_g: nutrition.fiber_g,
+            sodium_mg: nutrition.sodium_mg,
+            sugar_g: nutrition.sugar_g
+          }.compact
         }
       end
     end
