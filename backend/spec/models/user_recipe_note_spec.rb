@@ -22,7 +22,7 @@ RSpec.describe UserRecipeNote, type: :model do
       it 'enforces uniqueness of user-recipe combination (AC-MODEL-NOTE-003)' do
         user = create(:user)
         recipe = create(:recipe)
-        user.user_recipe_notes.create!(recipe_id: recipe.id, note_text: 'Test note')
+        user.user_recipe_notes.create!(recipe_id: recipe.id, notes: 'Test note')
 
         duplicate = build(:user_recipe_note, user_id: user.id, recipe_id: recipe.id)
         expect(duplicate).not_to be_valid

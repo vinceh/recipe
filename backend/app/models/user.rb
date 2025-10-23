@@ -13,6 +13,10 @@ class User < ApplicationRecord
   # Role enum (Rails 8 syntax)
   enum :role, { user: 0, admin: 1 }
 
+  # Validations
+  validates :password, length: { minimum: 8 }, if: -> { password.present? }
+  validates :role, presence: true
+
   # Default role to user
   after_initialize :set_default_role, if: :new_record?
 

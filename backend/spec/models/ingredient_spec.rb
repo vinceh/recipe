@@ -34,9 +34,9 @@ RSpec.describe Ingredient, type: :model do
   end
 
   describe 'associations' do
-    it 'has many ingredient aliases' do
+    it 'has many aliases' do
       ingredient = create(:ingredient)
-      expect(ingredient).to respond_to(:ingredient_aliases)
+      expect(ingredient).to respond_to(:aliases)
     end
 
     it 'has many recipe ingredients' do
@@ -46,10 +46,10 @@ RSpec.describe Ingredient, type: :model do
   end
 
   describe 'cascade deletion' do
-    it 'cascades delete ingredient aliases when ingredient is deleted (AC-MODEL-INGREDIENT-005)' do
+    it 'cascades delete aliases when ingredient is deleted (AC-MODEL-INGREDIENT-005)' do
       ingredient = create(:ingredient)
-      alias1 = ingredient.ingredient_aliases.create!(alias_name: 'Rock Salt', language: 'en')
-      alias2 = ingredient.ingredient_aliases.create!(alias_name: 'Sea Salt', language: 'en')
+      alias1 = ingredient.aliases.create!(alias: 'Rock Salt', language: 'en')
+      alias2 = ingredient.aliases.create!(alias: 'Sea Salt', language: 'en')
       alias1_id = alias1.id
       alias2_id = alias2.id
 
