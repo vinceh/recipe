@@ -1,5 +1,6 @@
 module Admin
   class RecipesController < BaseController
+    include RecipeSerializer
     # GET /admin/recipes
     # List all recipes with admin filters
     def index
@@ -43,20 +44,19 @@ module Admin
           .distinct
       end
 
-      # Eager load associations for serialization
-      recipes = recipes.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :dish_types, :cuisines, :recipe_types, recipe_steps: :recipe_step_translations)
-
-      # Pagination
+      # Get count before eager loading for efficiency
+      total_count = recipes.count
       page = params[:page]&.to_i || 1
       per_page = params[:per_page]&.to_i || 20
       per_page = [per_page, 100].min
+      total_pages = (total_count.to_f / per_page).ceil
+
+      # Eager load associations for serialization
+      recipes = recipes.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :dish_types, :cuisines, :recipe_types, recipe_steps: :recipe_step_translations)
 
       paginated_recipes = recipes
         .offset((page - 1) * per_page)
         .limit(per_page)
-
-      total_count = recipes.count
-      total_pages = (total_count.to_f / per_page).ceil
 
       render_success(
         data: {
@@ -392,62 +392,5 @@ module Admin
       )
     end
 
-    def serialize_ingredient_groups(recipe)
-      recipe.ingredient_groups.map do |group|
-        {
-          name: group.name,
-          items: group.recipe_ingredients.map do |item|
-            {
-              name: item.ingredient_name,
-              amount: format_amount(item.amount),
-              unit: item.unit,
-              preparation: item.preparation_notes,
-              optional: item.optional
-            }
-          end
-        }
-      end
-    end
-
-    def format_amount(amount)
-      return amount.to_s if amount.nil?
-
-      if amount == amount.to_i
-        amount.to_i.to_s
-      else
-        amount.to_s
-      end
-    end
-
-    def serialize_recipe_steps(recipe)
-      recipe.recipe_steps.order(:step_number).map do |step|
-        translation = step.recipe_step_translations.find_by(locale: recipe.source_language) ||
-                      step.recipe_step_translations.first
-
-        {
-          id: "step-#{step.step_number.to_s.rjust(3, '0')}",
-          order: step.step_number,
-          instructions: {
-            original: translation&.instruction_original,
-            easier: translation&.instruction_easier,
-            no_equipment: translation&.instruction_no_equipment
-          }.compact
-        }
-      end
-    end
-
-    def serialize_nutrition(nutrition)
-      {
-        per_serving: {
-          calories: nutrition.calories,
-          protein_g: nutrition.protein_g,
-          carbs_g: nutrition.carbs_g,
-          fat_g: nutrition.fat_g,
-          fiber_g: nutrition.fiber_g,
-          sodium_mg: nutrition.sodium_mg,
-          sugar_g: nutrition.sugar_g
-        }.compact
-      }
-    end
   end
 end

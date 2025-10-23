@@ -1,6 +1,7 @@
 module Api
   module V1
     class RecipesController < BaseController
+      include RecipeSerializer
       # GET /api/v1/recipes
       # List/search recipes with pagination and filtering
       def index
@@ -12,21 +13,20 @@ module Api
           recipes = apply_basic_search_filters(recipes)
         end
 
-        # Eager load associations for list view
-        recipes = recipes.includes(:ingredient_groups, :recipe_ingredients, :equipment, :dietary_tags, :dish_types, :cuisines, :recipe_types, recipe_steps: :recipe_step_translations)
-
-        # Pagination
+        # Get count before eager loading for efficiency
+        total_count = recipes.count
         page = params[:page]&.to_i || 1
         per_page = params[:per_page]&.to_i || 20
         per_page = [per_page, 100].min # Max 100 per page
+        total_pages = (total_count.to_f / per_page).ceil
+
+        # Eager load associations for list view
+        recipes = recipes.includes(:ingredient_groups, :recipe_ingredients, :equipment, :dietary_tags, :dish_types, :cuisines, :recipe_types, recipe_steps: :recipe_step_translations)
 
         paginated_recipes = recipes
           .order(created_at: :desc)
           .offset((page - 1) * per_page)
           .limit(per_page)
-
-        total_count = recipes.count
-        total_pages = (total_count.to_f / per_page).ceil
 
         render_success(
           data: {
@@ -214,67 +214,6 @@ module Api
         }
       end
 
-      # Serialize ingredient groups with items
-      def serialize_ingredient_groups(recipe)
-        recipe.ingredient_groups.map do |group|
-          {
-            name: group.name,
-            items: group.recipe_ingredients.map do |item|
-              {
-                name: item.ingredient_name,
-                amount: format_amount(item.amount),
-                unit: item.unit,
-                preparation: item.preparation_notes,
-                optional: item.optional
-              }
-            end
-          }
-        end
-      end
-
-      def format_amount(amount)
-        return amount.to_s if amount.nil?
-
-        # Convert to integer if it's a whole number, otherwise return decimal
-        if amount == amount.to_i
-          amount.to_i.to_s
-        else
-          amount.to_s
-        end
-      end
-
-      # Serialize recipe steps with variants
-      def serialize_recipe_steps(recipe)
-        recipe.recipe_steps.order(:step_number).map do |step|
-          translation = step.recipe_step_translations.find_by(locale: recipe.source_language) ||
-                        step.recipe_step_translations.first
-
-          {
-            id: "step-#{step.step_number.to_s.rjust(3, '0')}",
-            order: step.step_number,
-            instructions: {
-              original: translation&.instruction_original,
-              easier: translation&.instruction_easier,
-              no_equipment: translation&.instruction_no_equipment
-            }.compact
-          }
-        end
-      end
-
-      # Serialize nutrition info
-      def serialize_nutrition(nutrition)
-        {
-          per_serving: {
-            calories: nutrition.calories,
-            protein_g: nutrition.protein_g,
-            carbs_g: nutrition.carbs_g,
-            fat_g: nutrition.fat_g,
-            fiber_g: nutrition.fiber_g,
-            sodium_mg: nutrition.sodium_mg,
-            sugar_g: nutrition.sugar_g
-          }.compact
-        }
-      end
     end
   end
 end
