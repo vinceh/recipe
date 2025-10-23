@@ -62,6 +62,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_24_000001) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["canonical_name"], name: "index_equipment_on_canonical_name", unique: true
+    t.index ["category"], name: "index_equipment_on_category"
   end
 
   create_table "equipment_translations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -127,6 +128,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_24_000001) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["canonical_name"], name: "index_ingredients_on_canonical_name", unique: true
+    t.index ["category"], name: "index_ingredients_on_category"
   end
 
   create_table "jwt_denylists", force: :cascade do |t|
@@ -202,12 +204,12 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_24_000001) do
   create_table "recipe_ingredients", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "ingredient_group_id", null: false
     t.uuid "ingredient_id"
-    t.string "name", null: false
-    t.decimal "amount", precision: 8, scale: 2
+    t.string "ingredient_name", null: false
+    t.decimal "amount", precision: 10, scale: 2
     t.string "unit"
     t.text "preparation_notes"
     t.boolean "optional", default: false
-    t.integer "position", default: 0
+    t.integer "position", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["ingredient_group_id", "position"], name: "index_recipe_ingredients_on_ingredient_group_id_and_position"

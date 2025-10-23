@@ -73,12 +73,12 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     create_table :recipe_ingredients, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
       t.uuid :ingredient_group_id, null: false
       t.uuid :ingredient_id
-      t.string :name, null: false
-      t.decimal :amount, precision: 8, scale: 2
+      t.string :ingredient_name, null: false
+      t.decimal :amount, precision: 10, scale: 2
       t.string :unit
       t.text :preparation_notes
       t.boolean :optional, default: false
-      t.integer :position, default: 0
+      t.integer :position, null: false
       t.timestamps
     end
     add_index :recipe_ingredients, :ingredient_group_id
@@ -347,6 +347,8 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     add_foreign_key :ingredient_nutrition, :ingredients, on_delete: :cascade
     add_foreign_key :ingredient_aliases, :ingredients, on_delete: :cascade
     add_foreign_key :recipe_translations, :recipes, on_delete: :cascade
+    add_index :ingredients, :category
+    add_index :equipment, :category
     add_foreign_key :ingredient_group_translations, :ingredient_groups, on_delete: :cascade
     add_foreign_key :recipe_ingredient_translations, :recipe_ingredients, on_delete: :cascade
     add_foreign_key :equipment_translations, :equipment, on_delete: :cascade
