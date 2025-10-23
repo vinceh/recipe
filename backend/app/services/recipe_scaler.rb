@@ -14,7 +14,7 @@ class RecipeScaler
   end
 
   def scale_by_servings(target_servings)
-    scaling_factor = target_servings.to_f / @recipe.servings['original']
+    scaling_factor = target_servings.to_f / @recipe.servings_original
     scale_all_ingredients(scaling_factor)
   end
 
@@ -26,27 +26,67 @@ class RecipeScaler
     converted_amount = UnitConverter.convert(
       target_amount,
       target_unit,
-      base_ingredient['unit']
+      base_ingredient.unit
     )
 
-    scaling_factor = converted_amount / base_ingredient['amount'].to_f
+    scaling_factor = converted_amount / (base_ingredient.amount || 1).to_f
     scale_all_ingredients(scaling_factor)
   end
 
   private
 
   def scale_all_ingredients(factor)
-    scaled_recipe = @recipe.dup
-    scaled_recipe.ingredient_groups = deep_dup_jsonb(@recipe.ingredient_groups)
-
-    scaled_recipe.ingredient_groups.each do |group|
-      group['items'].each do |ingredient|
-        scale_ingredient!(ingredient, factor)
+    scaled_groups = @recipe.ingredient_groups.map do |group|
+      scaled_items = group.recipe_ingredients.map do |ingredient|
+        scale_ingredient_copy(ingredient, factor)
       end
+      {
+        name: group.name,
+        items: scaled_items
+      }
     end
 
-    scaled_recipe.servings['scaled'] = (@recipe.servings['original'] * factor).round(1)
-    scaled_recipe
+    {
+      ingredient_groups: scaled_groups,
+      scaled_servings: (@recipe.servings_original * factor).round(1)
+    }
+  end
+
+  def scale_ingredient_copy(ingredient, factor)
+    raw_amount = (ingredient.amount || 0).to_f * factor
+    unit = ingredient.unit
+
+    if @context == 'baking'
+      result = preserve_precision(raw_amount, unit)
+      if result.is_a?(Hash)
+        scaled_amount = result[:amount]
+        unit = result[:unit]
+      else
+        scaled_amount = result
+      end
+    else
+      scaled_amount = round_to_friendly_fraction(raw_amount)
+      unit = step_down_unit(scaled_amount, unit)
+    end
+
+    {
+      name: ingredient.ingredient_name,
+      amount: scaled_amount.to_s,
+      unit: unit,
+      preparation: ingredient.preparation_notes.presence
+    }.compact
+  end
+
+  def step_down_unit(amount, unit)
+    numeric_amount = amount.is_a?(String) ? parse_friendly_fraction(amount) : amount.to_f
+
+    if unit == 'tbsp' && numeric_amount < 1
+      'tsp'
+    elsif unit == 'cup' && numeric_amount < 0.25
+      'tbsp'
+    else
+      unit
+    end
   end
 
   def scale_ingredient!(ingredient, factor)
@@ -151,26 +191,10 @@ class RecipeScaler
     return 'baking' if recipe.requires_precision
 
     precision_types = ['baking', 'confectionery', 'fermentation', 'molecular']
-    recipe.recipe_types.any? { |type| precision_types.include?(type) } ? 'baking' : 'cooking'
+    recipe.recipe_types.joins(:data_reference).where(data_references: { key: precision_types }).exists? ? 'baking' : 'cooking'
   end
 
   def find_ingredient_by_id(ingredient_id)
-    @recipe.ingredient_groups.each do |group|
-      ingredient = group['items'].find { |i| i['id'] == ingredient_id }
-      return ingredient if ingredient
-    end
-    nil
-  end
-
-  # Deep dup for JSONB fields
-  def deep_dup_jsonb(obj)
-    case obj
-    when Hash
-      obj.transform_values { |v| deep_dup_jsonb(v) }
-    when Array
-      obj.map { |v| deep_dup_jsonb(v) }
-    else
-      obj.dup rescue obj
-    end
+    @recipe.recipe_ingredients.find_by(id: ingredient_id)
   end
 end
