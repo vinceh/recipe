@@ -766,30 +766,35 @@ end
 - [ ] Request approval
 
 **Step 2: Deep Discovery & Analysis**
-- [ ] Run full bundle exec rspec suite and document all failures by category
-- [ ] Cross-reference with acceptance-criteria.md:
-  - [ ] Identify which ACs depend on JSONB structure
-  - [ ] Map ACs to affected components (serializers, services, controllers)
-  - [ ] Document functional requirements that must be preserved
-- [ ] Cross-reference with api-reference.md:
-  - [ ] Document current API response formats (JSONB structure)
-  - [ ] Identify all endpoints returning recipe data
-  - [ ] Map JSONB fields to new normalized schema
-  - [ ] Document transformation logic needed for each endpoint
-- [ ] Analyze transformation requirements:
-  - [ ] How serializers must rebuild JSONB-like responses from normalized data
-  - [ ] Which services need to query associations instead of JSONB
-  - [ ] What controller logic changes are needed
-  - [ ] Identify shared transformation patterns
-- [ ] Create "Phase 2 Reference: Transformation Requirements" section in re-architecture-plan.md documenting:
-  - [ ] Failure categories and affected endpoints
-  - [ ] AC-to-component mapping
-  - [ ] JSONB-to-relational schema transformations
-  - [ ] Serializer rebuild logic needed
-  - [ ] Service updates required
-  - [ ] Shared transformation patterns
-- [ ] Define specific Steps 3-5 based on findings (reference section will guide these steps)
-- [ ] Commit assessment document + updated plan with reference section
+- [x] Run full bundle exec rspec suite and document all failures by category
+  - Found 44+ total failures
+  - Categorized: 19 API endpoint failures, 12 service failures, 13 job failures, 10 controller failures
+- [x] Cross-reference with acceptance-criteria.md:
+  - [x] Identified which ACs depend on JSONB structure (AC-SCALE, AC-ADMIN, AC-VIEW, AC-SEARCH families)
+  - [x] Mapped ACs to affected components (RecipeSerializer, RecipeScaler, RecipeSearchService, etc.)
+  - [x] Documented functional requirements that must be preserved (backward-compatible API responses)
+- [x] Cross-reference with api-reference.md:
+  - [x] Documented current API response formats (all 9 endpoints return JSONB structure)
+  - [x] Identified all endpoints returning recipe data (GET/POST/PUT/DELETE + parse endpoints)
+  - [x] Mapped JSONB fields to new normalized schema (5 Tier 1-3 files require updates)
+  - [x] Documented transformation logic needed for each endpoint (serializers must rebuild JSONB hashes)
+- [x] Analyze transformation requirements:
+  - [x] RecipeSerializer must rebuild JSONB-like responses from normalized data (11 serializer ACs)
+  - [x] Services need to query associations instead of JSONB (6 service ACs, specific line numbers documented)
+  - [x] Controller logic changes needed (strong params, eager loading, nested attributes)
+  - [x] Identified shared transformation patterns (hash building, association joins)
+- [x] Create "Phase 2 Reference: Transformation Requirements" section in re-architecture-plan.md documenting:
+  - [x] Failure categories and affected endpoints (19 API failures analyzed with line numbers)
+  - [x] AC-to-component mapping (40 Phase 2 ACs mapped to 11 files requiring changes)
+  - [x] JSONB-to-relational schema transformations (detailed matrix with 10 field transformations)
+  - [x] Serializer rebuild logic needed (hash construction from 3 columns, association serialization)
+  - [x] Service updates required (association queries instead of JSONB operators, nested_attributes)
+  - [x] Tier 1-2-3 file dependencies (11 files with change priorities)
+- [x] Define specific Steps 3-5 based on findings:
+  - [x] Step 3: Fix Serializers (RecipeSerializer, eager loading, backward-compatible response format)
+  - [x] Step 4: Fix Services (RecipeScaler, RecipeSearchService, RecipeParser, Translator, StepVariantGenerator)
+  - [x] Step 5: Fix Controllers (strong params, nested attributes, eager loading)
+- [x] Commit assessment document + updated plan with reference section: `[Phase 2] Step 2: Deep discovery complete...`
 - [ ] Request approval
 
 ---
