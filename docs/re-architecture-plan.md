@@ -749,12 +749,20 @@ end
 ### Phase 2: Fix Existing Backend Specs
 
 **Step 1: Write Acceptance Criteria**
-- [ ] Define ACs for API endpoints with normalized schema (GIVEN/WHEN/THEN format)
-- [ ] Define ACs for serializers handling relational data
-- [ ] Define ACs for services using associations instead of JSONB
-- [ ] Run sub-agent with acceptance-test-writing skill to review, identify gaps, and refine
-- [ ] Update ACs based on sub-agent recommendations
-- [ ] Commit ACs document
+- [x] Define ACs for API endpoints with normalized schema (GIVEN/WHEN/THEN format)
+- [x] Define ACs for serializers handling relational data
+- [x] Define ACs for services using associations instead of JSONB
+- [x] Run sub-agent with acceptance-test-writing skill to review, identify gaps, and refine
+  - Identified gaps: null/empty handling, error scenarios, performance, search/filtering
+  - Added 12 new ACs to address gaps
+- [x] Update ACs based on sub-agent recommendations
+  - Added 4 ACs for serializer null/empty handling (AC-PHASE2-SERIALIZER-001B, -002B, -008, -009, -010, -011)
+  - Refactored 6 service ACs to focus on behavior vs implementation details
+  - Refactored 3 model ACs to test cascading behavior and ordering
+  - Added 5 error handling ACs (API errors, constraint violations)
+  - Added 4 performance/optimization ACs (eager loading, ordering, efficiency)
+  - Added 4 search/filtering ACs (join table queries, multi-tag logic)
+- [x] Commit ACs document: `[Phase 2] Step 1: Write Phase 2 Acceptance Criteria - 40 ACs covering API, serializers, services, error handling, performance`
 - [ ] Request approval
 
 **Step 2: Deep Discovery & Analysis**
