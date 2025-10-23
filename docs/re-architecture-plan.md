@@ -578,9 +578,20 @@ end
 ### Phase 1: Giant Database Migration
 
 **Subtasks:**
-- [ ] Write Phase 1 ACs (GIVEN/WHEN/THEN format)
-- [ ] Create migration file
-- [ ] Create 11 new model files
+- [x] Write Phase 1 ACs (GIVEN/WHEN/THEN format) - 28 ACs in re-arch-ACs.md
+- [x] Create migration file - 20251023000001_normalize_recipes_schema.rb
+- [ ] Create 11 new model files:
+  - [x] IngredientGroup
+  - [x] RecipeIngredient
+  - [x] RecipeStep
+  - [x] Equipment
+  - [ ] RecipeNutrition
+  - [ ] RecipeDietaryTag
+  - [ ] RecipeDishType
+  - [ ] RecipeRecipeType
+  - [ ] RecipeCuisine
+  - [ ] RecipeAlias
+  - [ ] RecipeEquipment
 - [ ] Update Recipe model (remove JSONB validations, add associations)
 - [ ] Update seeds for new schema
 - [ ] Run migration + seeds successfully
