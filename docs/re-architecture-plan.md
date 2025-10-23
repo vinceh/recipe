@@ -55,16 +55,23 @@ All ACs go into `docs/new_claude/acceptance-criteria.md` in GIVEN/WHEN/THEN form
    - Within each step, break down into atomic subtasks
    - Group related subtasks with nested bullets
    - Add steps and subtasks to the phase section with unchecked checkboxes: `- [ ] Task name`
+   - **Important: Step 1 of every phase should be "Write Acceptance Criteria"**
    - Commit this documentation update with message: `[Phase X] Plan steps and subtasks`
 
 2. **During development (STEP BY STEP):**
-   - Work through all subtasks in Step 1 to completion
-   - Mark each completed subtask: `- [x] Task name`
-   - Commit the step update with message: `[Phase X] Step 1: <description>`
-   - **PAUSE AND REQUEST APPROVAL** - wait for user approval before proceeding
-   - Only after approval, move to Step 2
-   - Repeat: Complete subtasks → Mark complete → Commit → Request approval → Move next
-   - This gating mechanism allows for course corrections and feedback at each step
+   - **For Step 1 (Acceptance Criteria) in every phase:**
+     - Write ACs in GIVEN/WHEN/THEN format
+     - Run sub-agent with acceptance-test-writing skill to review, identify gaps, and refine
+     - Update ACs based on sub-agent recommendations
+     - Commit the ACs
+     - Then request approval before proceeding to Step 2
+   - **For other steps:**
+     - Work through all subtasks to completion
+     - Mark each completed subtask: `- [x] Task name`
+     - Commit the step update with message: `[Phase X] Step N: <description>`
+     - **PAUSE AND REQUEST APPROVAL** - wait for user approval before proceeding
+   - Only after approval, move to next step
+   - This gating mechanism with sub-agent quality checks ensures high-quality ACs and allows for course corrections at each step
 
 3. **At the end of each phase (BEFORE final phase commit):**
    - Verify all steps and subtasks are marked complete: `- [x] Task name`
@@ -81,7 +88,8 @@ All ACs go into `docs/new_claude/acceptance-criteria.md` in GIVEN/WHEN/THEN form
    Step 1: Write acceptance criteria
    - [ ] Define schema-related ACs
    - [ ] Define behavior-related ACs
-   - [ ] Get sub-agent review and refine
+   - [ ] Run sub-agent with acceptance-test-writing skill to review, identify gaps, and refine
+   - [ ] Update ACs based on sub-agent recommendations
    - [ ] Commit ACs document
 
    Step 2: Implement feature A
@@ -606,7 +614,8 @@ end
 
 **Step 1: Acceptance Criteria**
 - [x] Write Phase 1 ACs in GIVEN/WHEN/THEN format
-- [x] Run sub-agent review and refinement
+- [x] Run sub-agent with acceptance-test-writing skill to review, identify gaps, and refine
+- [x] Update ACs based on sub-agent recommendations
 - [x] Commit: `[Phase 1 ACs] Add schema normalization acceptance criteria`
 
 **Step 2: Schema Migration**
