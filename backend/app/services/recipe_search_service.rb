@@ -28,11 +28,9 @@ class RecipeSearchService
 
     query_normalized = query.downcase.strip
 
-    # Search in aliases JSONB array
-    Recipe.where("EXISTS (
-      SELECT 1 FROM jsonb_array_elements_text(aliases) AS alias
-      WHERE LOWER(alias) LIKE ?
-    )", "%#{query_normalized}%")
+    Recipe.joins(:recipe_aliases)
+          .where("LOWER(recipe_aliases.alias_name) LIKE ?", "%#{query_normalized}%")
+          .distinct
   end
 
   # AC-SEARCH-003: Ingredient-based search
@@ -41,12 +39,9 @@ class RecipeSearchService
 
     ingredient_normalized = ingredient_name.downcase.strip
 
-    # Search in ingredient_groups JSONB structure
-    Recipe.where("EXISTS (
-      SELECT 1 FROM jsonb_array_elements(ingredient_groups) AS ig,
-                   jsonb_array_elements(ig->'items') AS item
-      WHERE LOWER(item->>'name') LIKE ?
-    )", "%#{ingredient_normalized}%")
+    Recipe.joins(ingredient_groups: :recipe_ingredients)
+          .where("LOWER(recipe_ingredients.ingredient_name) LIKE ?", "%#{ingredient_normalized}%")
+          .distinct
   end
 
   # Combined search across name, aliases, and ingredients
@@ -70,11 +65,13 @@ class RecipeSearchService
     recipes = recipes.all if recipes.is_a?(Class)
 
     if min_calories.present?
-      recipes = recipes.where("(nutrition->'per_serving'->>'calories')::float >= ?", min_calories.to_f)
+      recipes = recipes.joins(:recipe_nutrition)
+                       .where("recipe_nutrition.calories >= ?", min_calories.to_f)
     end
 
     if max_calories.present?
-      recipes = recipes.where("(nutrition->'per_serving'->>'calories')::float <= ?", max_calories.to_f)
+      recipes = recipes.joins(:recipe_nutrition)
+                       .where("recipe_nutrition.calories <= ?", max_calories.to_f)
     end
 
     recipes
@@ -85,7 +82,8 @@ class RecipeSearchService
     return recipes if min_protein.blank?
 
     recipes = recipes.all if recipes.is_a?(Class)
-    recipes.where("(nutrition->'per_serving'->>'protein_g')::float >= ?", min_protein.to_f)
+    recipes.joins(:recipe_nutrition)
+           .where("recipe_nutrition.protein_g >= ?", min_protein.to_f)
   end
 
   # AC-SEARCH-006: Filter by maximum carbs
@@ -93,7 +91,8 @@ class RecipeSearchService
     return recipes if max_carbs.blank?
 
     recipes = recipes.all if recipes.is_a?(Class)
-    recipes.where("(nutrition->'per_serving'->>'carbs_g')::float <= ?", max_carbs.to_f)
+    recipes.joins(:recipe_nutrition)
+           .where("recipe_nutrition.carbs_g <= ?", max_carbs.to_f)
   end
 
   # AC-SEARCH-007: Filter by maximum fat
@@ -101,7 +100,8 @@ class RecipeSearchService
     return recipes if max_fat.blank?
 
     recipes = recipes.all if recipes.is_a?(Class)
-    recipes.where("(nutrition->'per_serving'->>'fat_g')::float <= ?", max_fat.to_f)
+    recipes.joins(:recipe_nutrition)
+           .where("recipe_nutrition.fat_g <= ?", max_fat.to_f)
   end
 
   # AC-SEARCH-008: Filter by multiple dietary tags (AND logic)
@@ -111,11 +111,10 @@ class RecipeSearchService
     recipes = recipes.all if recipes.is_a?(Class)
     tags = tags.split(',').map(&:strip) if tags.is_a?(String)
 
-    tags.each do |tag|
-      recipes = recipes.where("dietary_tags @> ?", [tag].to_json)
-    end
-
-    recipes
+    recipes.joins(:dietary_tags)
+           .where(data_references: { key: tags })
+           .group('recipes.id')
+           .having("COUNT(*) = ?", tags.size)
   end
 
   # AC-SEARCH-009: Filter by cuisine (supports multiple with OR logic)
@@ -125,9 +124,9 @@ class RecipeSearchService
     recipes = recipes.all if recipes.is_a?(Class)
     cuisines = cuisines.split(',').map(&:strip) if cuisines.is_a?(String)
 
-    conditions = cuisines.map { "cuisines @> ?" }.join(' OR ')
-    values = cuisines.map { |c| [c].to_json }
-    recipes.where(conditions, *values)
+    recipes.joins(:cuisines)
+           .where(data_references: { key: cuisines })
+           .distinct
   end
 
   # AC-SEARCH-010: Filter by dish type
@@ -137,9 +136,9 @@ class RecipeSearchService
     recipes = recipes.all if recipes.is_a?(Class)
     dish_types = dish_types.split(',').map(&:strip) if dish_types.is_a?(String)
 
-    conditions = dish_types.map { "dish_types @> ?" }.join(' OR ')
-    values = dish_types.map { |dt| [dt].to_json }
-    recipes.where(conditions, *values)
+    recipes.joins(:dish_types)
+           .where(data_references: { key: dish_types })
+           .distinct
   end
 
   # AC-SEARCH-011: Filter by recipe type
@@ -149,9 +148,9 @@ class RecipeSearchService
     recipes = recipes.all if recipes.is_a?(Class)
     recipe_types = recipe_types.split(',').map(&:strip) if recipe_types.is_a?(String)
 
-    conditions = recipe_types.map { "recipe_types @> ?" }.join(' OR ')
-    values = recipe_types.map { |rt| [rt].to_json }
-    recipes.where(conditions, *values)
+    recipes.joins(:recipe_types)
+           .where(data_references: { key: recipe_types })
+           .distinct
   end
 
   # AC-SEARCH-012: Filter by prep time
@@ -159,7 +158,7 @@ class RecipeSearchService
     return recipes if max_prep.blank?
 
     recipes = recipes.all if recipes.is_a?(Class)
-    recipes.where("(timing->>'prep_minutes')::int <= ?", max_prep.to_i)
+    recipes.where("prep_minutes <= ?", max_prep.to_i)
   end
 
   # AC-SEARCH-013: Filter by cook time
@@ -167,7 +166,7 @@ class RecipeSearchService
     return recipes if max_cook.blank?
 
     recipes = recipes.all if recipes.is_a?(Class)
-    recipes.where("(timing->>'cook_minutes')::int <= ?", max_cook.to_i)
+    recipes.where("cook_minutes <= ?", max_cook.to_i)
   end
 
   # AC-SEARCH-014: Filter by total time
@@ -175,7 +174,7 @@ class RecipeSearchService
     return recipes if max_total.blank?
 
     recipes = recipes.all if recipes.is_a?(Class)
-    recipes.where("(timing->>'total_minutes')::int <= ?", max_total.to_i)
+    recipes.where("total_minutes <= ?", max_total.to_i)
   end
 
   # AC-SEARCH-015: Filter by serving size range
@@ -183,11 +182,11 @@ class RecipeSearchService
     recipes = recipes.all if recipes.is_a?(Class)
 
     if min_servings.present?
-      recipes = recipes.where("(servings->>'original')::int >= ?", min_servings.to_i)
+      recipes = recipes.where("servings_original >= ?", min_servings.to_i)
     end
 
     if max_servings.present?
-      recipes = recipes.where("(servings->>'original')::int <= ?", max_servings.to_i)
+      recipes = recipes.where("servings_original <= ?", max_servings.to_i)
     end
 
     recipes
@@ -202,11 +201,10 @@ class RecipeSearchService
 
     excluded_ingredients.each do |ingredient|
       ingredient_normalized = ingredient.downcase
-      recipes = recipes.where("NOT EXISTS (
-        SELECT 1 FROM jsonb_array_elements(ingredient_groups) AS ig,
-                     jsonb_array_elements(ig->'items') AS item
-        WHERE LOWER(item->>'name') LIKE ?
-      )", "%#{ingredient_normalized}%")
+      excluded_recipe_ids = Recipe.joins(ingredient_groups: :recipe_ingredients)
+                                   .where("LOWER(recipe_ingredients.ingredient_name) LIKE ?", "%#{ingredient_normalized}%")
+                                   .select(:id)
+      recipes = recipes.where.not(id: excluded_recipe_ids)
     end
 
     recipes
