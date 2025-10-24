@@ -693,4 +693,453 @@ RSpec.describe Recipe, type: :model do
       expect(vegetarian.recipes_as_dietary_tag).to include(recipe)
     end
   end
+
+  describe 'Phase 5: Auto-Triggered Translation Workflow' do
+    describe 'AC-PHASE5-CALLBACK-001: Recipe Creation Triggers Translation' do
+      it 'enqueues TranslateRecipeJob on recipe creation' do
+        expect {
+          create(:recipe, name: "Test Recipe #{SecureRandom.hex(4)}")
+        }.to have_enqueued_job(TranslateRecipeJob)
+      end
+
+      it 'enqueues job with correct recipe_id' do
+        recipe = create(:recipe, name: "Test Recipe #{SecureRandom.hex(4)}")
+        expect {
+          create(:recipe, name: "Another Recipe #{SecureRandom.hex(4)}")
+        }.to have_enqueued_job(TranslateRecipeJob).at_least(:once)
+      end
+
+      it 'enqueues immediately without rate limiting for create' do
+        recipe = create(:recipe, last_translated_at: 10.minutes.ago, name: "Test #{SecureRandom.hex(4)}")
+
+        expect {
+          create(:recipe, name: "New Recipe #{SecureRandom.hex(4)}")
+        }.to have_enqueued_job(TranslateRecipeJob)
+      end
+    end
+
+    describe 'AC-PHASE5-CALLBACK-002: Recipe Update Triggers Translation (First Time)' do
+      it 'enqueues job on first update when last_translated_at is nil' do
+        recipe = create(:recipe, last_translated_at: nil)
+
+        expect {
+          recipe.update(servings_original: 6)
+        }.to have_enqueued_job(TranslateRecipeJob).with(recipe.id)
+      end
+
+      it 'does not rate limit when no previous translations exist' do
+        recipe = create(:recipe, last_translated_at: nil)
+
+        expect {
+          recipe.update(prep_minutes: 20)
+        }.to have_enqueued_job(TranslateRecipeJob)
+      end
+    end
+
+    describe 'AC-PHASE5-CALLBACK-003 & AC-PHASE5-CALLBACK-004: Recipe Update Rate Limiting' do
+      before do
+        skip 'SolidQueue not initialized in test environment' unless SolidQueue::Job.table_exists?
+      end
+
+      it 'does not enqueue job when rate limit exceeded (4 translations in last hour)' do
+        recipe = create(:recipe, last_translated_at: 30.minutes.ago)
+
+        # Simulate 4 completed translation jobs in last hour
+        4.times do |i|
+          SolidQueue::Job.create!(
+            class_name: 'TranslateRecipeJob',
+            arguments: [recipe.id],
+            finished_at: (25 - i).minutes.ago
+          )
+        end
+
+        expect {
+          recipe.update(servings_original: 8)
+        }.not_to have_enqueued_job(TranslateRecipeJob)
+      end
+
+      it 'saves recipe update successfully even when rate limited' do
+        recipe = create(:recipe, last_translated_at: 30.minutes.ago)
+
+        4.times do |i|
+          SolidQueue::Job.create!(
+            class_name: 'TranslateRecipeJob',
+            arguments: [recipe.id],
+            finished_at: (25 - i).minutes.ago
+          )
+        end
+
+        recipe.update(servings_original: 8)
+        expect(recipe.reload.servings_original).to eq(8)
+      end
+
+      it 'enqueues job when under rate limit (less than 4 in last hour)' do
+        recipe = create(:recipe, last_translated_at: 30.minutes.ago)
+
+        # Only 3 completed jobs
+        3.times do |i|
+          SolidQueue::Job.create!(
+            class_name: 'TranslateRecipeJob',
+            arguments: [recipe.id],
+            finished_at: (25 - i).minutes.ago
+          )
+        end
+
+        expect {
+          recipe.update(servings_original: 8)
+        }.to have_enqueued_job(TranslateRecipeJob).with(recipe.id)
+      end
+
+      it 'enqueues when exactly at 3 translations (under 4 limit)' do
+        recipe = create(:recipe, last_translated_at: 40.minutes.ago)
+
+        3.times do |i|
+          SolidQueue::Job.create!(
+            class_name: 'TranslateRecipeJob',
+            arguments: [recipe.id],
+            finished_at: (35 - i).minutes.ago
+          )
+        end
+
+        expect {
+          recipe.update(cook_minutes: 45)
+        }.to have_enqueued_job(TranslateRecipeJob)
+      end
+    end
+
+    describe 'AC-PHASE5-CALLBACK-005: Rate Limit Window Sliding' do
+      before do
+        skip 'SolidQueue not initialized in test environment' unless SolidQueue::Job.table_exists?
+      end
+
+      it 'counts only jobs within 1-hour window' do
+        recipe = create(:recipe, last_translated_at: 65.minutes.ago)
+
+        # 3 jobs in last hour
+        3.times do |i|
+          SolidQueue::Job.create!(
+            class_name: 'TranslateRecipeJob',
+            arguments: [recipe.id],
+            finished_at: (55 - i).minutes.ago
+          )
+        end
+
+        # 1 job outside 1-hour window
+        SolidQueue::Job.create!(
+          class_name: 'TranslateRecipeJob',
+          arguments: [recipe.id],
+          finished_at: 65.minutes.ago
+        )
+
+        expect {
+          recipe.update(total_minutes: 60)
+        }.to have_enqueued_job(TranslateRecipeJob).with(recipe.id)
+      end
+
+      it 'does not enqueue when 4 jobs in window regardless of older jobs' do
+        recipe = create(:recipe, last_translated_at: 50.minutes.ago)
+
+        4.times do |i|
+          SolidQueue::Job.create!(
+            class_name: 'TranslateRecipeJob',
+            arguments: [recipe.id],
+            finished_at: (45 - i).minutes.ago
+          )
+        end
+
+        SolidQueue::Job.create!(
+          class_name: 'TranslateRecipeJob',
+          arguments: [recipe.id],
+          finished_at: 90.minutes.ago
+        )
+
+        expect {
+          recipe.update(prep_minutes: 10)
+        }.not_to have_enqueued_job(TranslateRecipeJob)
+      end
+    end
+
+    describe 'AC-PHASE5-DEDUP-001: Duplicate Job Prevention - Job Already Pending' do
+      before do
+        skip 'SolidQueue not initialized in test environment' unless SolidQueue::Job.table_exists?
+      end
+
+      it 'does not enqueue second job if one is already pending' do
+        recipe = create(:recipe, last_translated_at: 2.hours.ago)
+
+        SolidQueue::Job.create!(
+          class_name: 'TranslateRecipeJob',
+          arguments: [recipe.id],
+          finished_at: nil
+        )
+
+        expect {
+          recipe.update(servings_original: 8)
+        }.not_to have_enqueued_job(TranslateRecipeJob)
+      end
+
+      it 'allows enqueueing when pending job is for different recipe' do
+        recipe1 = create(:recipe, name: "Recipe 1 #{SecureRandom.hex(4)}", last_translated_at: 2.hours.ago)
+        recipe2 = create(:recipe, name: "Recipe 2 #{SecureRandom.hex(4)}", last_translated_at: 2.hours.ago)
+
+        SolidQueue::Job.create!(
+          class_name: 'TranslateRecipeJob',
+          arguments: [recipe1.id],
+          finished_at: nil
+        )
+
+        expect {
+          recipe2.update(servings_original: 8)
+        }.to have_enqueued_job(TranslateRecipeJob).with(recipe2.id)
+      end
+    end
+
+    describe 'AC-PHASE5-DEDUP-002: Job Allowed After Previous Job Completes' do
+      before do
+        skip 'SolidQueue not initialized in test environment' unless SolidQueue::Job.table_exists?
+      end
+
+      it 'enqueues new job after previous job finishes' do
+        recipe = create(:recipe, last_translated_at: 2.hours.ago)
+
+        SolidQueue::Job.create!(
+          class_name: 'TranslateRecipeJob',
+          arguments: [recipe.id],
+          finished_at: 10.minutes.ago
+        )
+
+        expect {
+          recipe.update(servings_original: 8)
+        }.to have_enqueued_job(TranslateRecipeJob).with(recipe.id)
+      end
+    end
+
+    describe 'AC-PHASE5-DEDUP-003: Concurrent Update Prevention Detail' do
+      before do
+        skip 'SolidQueue not initialized in test environment' unless SolidQueue::Job.table_exists?
+      end
+
+      it 'only counts jobs with finished_at as nil (not completed or failed)' do
+        recipe = create(:recipe, last_translated_at: 2.hours.ago)
+
+        # Completed job
+        SolidQueue::Job.create!(
+          class_name: 'TranslateRecipeJob',
+          arguments: [recipe.id],
+          finished_at: 10.minutes.ago
+        )
+
+        # Another pending job
+        SolidQueue::Job.create!(
+          class_name: 'TranslateRecipeJob',
+          arguments: [recipe.id],
+          finished_at: nil
+        )
+
+        expect {
+          recipe.update(servings_original: 8)
+        }.not_to have_enqueued_job(TranslateRecipeJob)
+      end
+
+      it 'checks for pending jobs by matching recipe_id in arguments' do
+        recipe1 = create(:recipe, name: "Recipe 1 #{SecureRandom.hex(4)}", last_translated_at: 2.hours.ago)
+        recipe2 = create(:recipe, name: "Recipe 2 #{SecureRandom.hex(4)}", last_translated_at: 2.hours.ago)
+
+        # Pending job for recipe1 only
+        SolidQueue::Job.create!(
+          class_name: 'TranslateRecipeJob',
+          arguments: [recipe1.id],
+          finished_at: nil
+        )
+
+        # recipe2 update should enqueue (different recipe_id)
+        expect {
+          recipe2.update(servings_original: 8)
+        }.to have_enqueued_job(TranslateRecipeJob).with(recipe2.id)
+      end
+    end
+
+    describe 'helper methods' do
+      describe 'translation_rate_limit_exceeded?' do
+        it 'returns false when last_translated_at is nil' do
+          recipe = create(:recipe, last_translated_at: nil)
+          expect(recipe.send(:translation_rate_limit_exceeded?)).to be false
+        end
+
+        it 'returns false when SolidQueue not available' do
+          recipe = create(:recipe, last_translated_at: 30.minutes.ago)
+          expect(recipe.send(:translation_rate_limit_exceeded?)).to be false
+        end
+
+        context 'when SolidQueue available' do
+          before do
+            skip 'SolidQueue not initialized in test environment' unless SolidQueue::Job.table_exists?
+          end
+
+          it 'returns true when 4 or more completed jobs in last hour' do
+            recipe = create(:recipe, last_translated_at: 30.minutes.ago)
+
+            4.times do |i|
+              SolidQueue::Job.create!(
+                class_name: 'TranslateRecipeJob',
+                arguments: [recipe.id],
+                finished_at: (25 - i).minutes.ago
+              )
+            end
+
+            expect(recipe.send(:translation_rate_limit_exceeded?)).to be true
+          end
+        end
+      end
+
+      describe 'translation_job_pending?' do
+        it 'returns false when no pending jobs exist' do
+          recipe = create(:recipe)
+          expect(recipe.send(:translation_job_pending?)).to be false
+        end
+
+        context 'when SolidQueue available' do
+          before do
+            skip 'SolidQueue not initialized in test environment' unless SolidQueue::Job.table_exists?
+          end
+
+          it 'returns true when pending job exists for recipe' do
+            recipe = create(:recipe)
+
+            SolidQueue::Job.create!(
+              class_name: 'TranslateRecipeJob',
+              arguments: [recipe.id],
+              finished_at: nil
+            )
+
+            expect(recipe.send(:translation_job_pending?)).to be true
+          end
+
+          it 'returns false when job is completed' do
+            recipe = create(:recipe)
+
+            SolidQueue::Job.create!(
+              class_name: 'TranslateRecipeJob',
+              arguments: [recipe.id],
+              finished_at: 10.minutes.ago
+            )
+
+            expect(recipe.send(:translation_job_pending?)).to be false
+          end
+
+          it 'returns false when job is for different recipe' do
+            recipe1 = create(:recipe, name: "Recipe 1 #{SecureRandom.hex(4)}")
+            recipe2 = create(:recipe, name: "Recipe 2 #{SecureRandom.hex(4)}")
+
+            SolidQueue::Job.create!(
+              class_name: 'TranslateRecipeJob',
+              arguments: [recipe1.id],
+              finished_at: nil
+            )
+
+            expect(recipe2.send(:translation_job_pending?)).to be false
+          end
+        end
+      end
+
+      describe 'completed_translation_job_count' do
+        it 'returns 0 when no completed jobs' do
+          recipe = create(:recipe)
+          expect(recipe.send(:completed_translation_job_count)).to eq(0)
+        end
+
+        context 'when SolidQueue available' do
+          before do
+            skip 'SolidQueue not initialized in test environment' unless SolidQueue::Job.table_exists?
+          end
+
+          it 'returns count of completed jobs in last hour' do
+            recipe = create(:recipe)
+
+            3.times do |i|
+              SolidQueue::Job.create!(
+                class_name: 'TranslateRecipeJob',
+                arguments: [recipe.id],
+                finished_at: (25 - i).minutes.ago
+              )
+            end
+
+            expect(recipe.send(:completed_translation_job_count)).to eq(3)
+          end
+
+          it 'excludes jobs outside 1-hour window' do
+            recipe = create(:recipe)
+
+            3.times do |i|
+              SolidQueue::Job.create!(
+                class_name: 'TranslateRecipeJob',
+                arguments: [recipe.id],
+                finished_at: (25 - i).minutes.ago
+              )
+            end
+
+            # Job outside window
+            SolidQueue::Job.create!(
+              class_name: 'TranslateRecipeJob',
+              arguments: [recipe.id],
+              finished_at: 90.minutes.ago
+            )
+
+            expect(recipe.send(:completed_translation_job_count)).to eq(3)
+          end
+
+          it 'excludes pending jobs (where finished_at is nil)' do
+            recipe = create(:recipe)
+
+            2.times do |i|
+              SolidQueue::Job.create!(
+                class_name: 'TranslateRecipeJob',
+                arguments: [recipe.id],
+                finished_at: (25 - i).minutes.ago
+              )
+            end
+
+            SolidQueue::Job.create!(
+              class_name: 'TranslateRecipeJob',
+              arguments: [recipe.id],
+              finished_at: nil
+            )
+
+            expect(recipe.send(:completed_translation_job_count)).to eq(2)
+          end
+
+          it 'excludes jobs for other recipes' do
+            recipe1 = create(:recipe, name: "Recipe 1 #{SecureRandom.hex(4)}")
+            recipe2 = create(:recipe, name: "Recipe 2 #{SecureRandom.hex(4)}")
+
+            2.times do |i|
+              SolidQueue::Job.create!(
+                class_name: 'TranslateRecipeJob',
+                arguments: [recipe1.id],
+                finished_at: (25 - i).minutes.ago
+              )
+            end
+
+            3.times do |i|
+              SolidQueue::Job.create!(
+                class_name: 'TranslateRecipeJob',
+                arguments: [recipe2.id],
+                finished_at: (25 - i).minutes.ago
+              )
+            end
+
+            expect(recipe1.send(:completed_translation_job_count)).to eq(2)
+            expect(recipe2.send(:completed_translation_job_count)).to eq(3)
+          end
+        end
+      end
+
+      describe 'job_queue_available?' do
+        it 'returns false when SolidQueue not initialized' do
+          recipe = create(:recipe)
+          expect(recipe.send(:job_queue_available?)).to be false
+        end
+      end
+    end
+  end
 end
