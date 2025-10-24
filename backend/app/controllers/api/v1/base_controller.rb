@@ -4,6 +4,7 @@ module Api
       include Devise::Controllers::Helpers
 
       before_action :configure_permitted_parameters, if: :devise_controller?
+      before_action :set_locale_from_request
 
       # Standard JSON response format
       def render_success(data:, message: nil, status: :ok)
@@ -47,6 +48,32 @@ module Api
           errors: { detail: exception.message },
           status: :bad_request
         )
+      end
+
+      def set_locale_from_request
+        requested_locale = params[:lang] || extract_locale_from_header
+        I18n.locale = valid_locale?(requested_locale) ? requested_locale : I18n.default_locale
+      end
+
+      def extract_locale_from_header
+        accept_language = request.headers['Accept-Language']
+        return nil unless accept_language
+
+        # Extract first language tag, then remove quality factor (;q=...)
+        # Keep hyphens for locales like zh-tw, zh-cn
+        first_tag = accept_language.split(',').first&.split(';')&.first&.downcase
+
+        # Check if full tag (with hyphen) is valid first (e.g., zh-tw)
+        return first_tag if first_tag && valid_locale?(first_tag)
+
+        # Otherwise try just the language code (e.g., ja-JP -> ja)
+        first_tag&.split('-')&.first
+      end
+
+      def valid_locale?(locale)
+        return false if locale.nil?
+
+        I18n.available_locales.map(&:to_s).include?(locale.to_s)
       end
     end
   end
