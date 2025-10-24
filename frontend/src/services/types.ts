@@ -2,9 +2,9 @@
 // These match the backend Recipe model structure exactly
 
 export interface RecipeServings {
-  original: number
-  min: number
-  max: number
+  original?: number
+  min?: number
+  max?: number
 }
 
 export interface RecipeTiming {
@@ -29,7 +29,7 @@ export interface RecipeIngredientItem {
   name: string
   amount?: string
   unit?: string
-  notes?: string
+  preparation?: string
   optional?: boolean
 }
 
@@ -38,13 +38,10 @@ export interface RecipeIngredientGroup {
   items: RecipeIngredientItem[]
 }
 
-export interface RecipeStepInstructions {
-  [language: string]: string  // e.g., { "en": "Mix the flour...", "ja": "小麦粉を混ぜ..." }
-}
-
 export interface RecipeStep {
-  id: number
-  instructions: RecipeStepInstructions
+  id: string
+  order: number
+  instruction: string
 }
 
 export interface Recipe {
@@ -52,7 +49,7 @@ export interface Recipe {
   name: string  // Backend uses 'name', not 'title'
   language: string  // Backend uses 'language', not 'base_language'
   source_url?: string
-  requires_precision: boolean
+  requires_precision?: boolean
   precision_reason?: 'baking' | 'confectionery' | 'fermentation' | 'molecular'
   servings: RecipeServings
   timing?: RecipeTiming
@@ -66,13 +63,11 @@ export interface Recipe {
   steps: RecipeStep[]
   equipment?: string[]
   translations?: { [language: string]: any }
-  variants_generated?: boolean
-  variants_generated_at?: string
   translations_completed?: boolean
+  last_translated_at?: string
   admin_notes?: string
   favorite?: boolean
   notes?: Note[]
-  variants?: any[]
   created_at: string
   updated_at: string
 }
@@ -127,9 +122,10 @@ export interface ScaleRecipePayload {
 }
 
 export interface ScaleRecipeResponse {
-  scaled_ingredients: RecipeIngredient[]
+  original_servings: number
+  new_servings: number
   scale_factor: number
-  recipe?: Recipe
+  scaled_ingredient_groups: RecipeIngredientGroup[]
 }
 
 // Data reference types
@@ -209,15 +205,16 @@ export interface RecipeListResponse {
 
 export interface RecipeFilters {
   q?: string
-  dietary_tags?: string[]
-  dish_types?: string[]
-  cuisines?: string[]
-  recipe_types?: string[]
+  dietary_tags?: string | string[]
+  dish_types?: string | string[]
+  cuisines?: string | string[]
+  recipe_types?: string | string[]
   max_prep_time?: number
   max_cook_time?: number
   max_total_time?: number
   page?: number
   per_page?: number
+  lang?: string
 }
 
 export interface Note {
