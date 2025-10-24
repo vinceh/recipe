@@ -56,18 +56,20 @@ module Api
       end
 
       def extract_locale_from_header
-        accept_language = request.headers['Accept-Language']
+        accept_language = request.headers["Accept-Language"]
         return nil unless accept_language
 
         # Extract first language tag, then remove quality factor (;q=...)
-        # Keep hyphens for locales like zh-tw, zh-cn
-        first_tag = accept_language.split(',').first&.split(';')&.first&.downcase
+        # Strip whitespace and keep hyphens for locales like zh-tw, zh-cn
+        first_tag = accept_language.split(",").first&.split(";")&.first&.strip&.downcase
 
-        # Check if full tag (with hyphen) is valid first (e.g., zh-tw)
+        # Special handling for Chinese variants (zh-tw, zh-cn):
+        # Try full tag first (e.g., "zh-tw") before falling back to base language ("zh")
+        # This ensures Traditional/Simplified Chinese are distinguished correctly
         return first_tag if first_tag && valid_locale?(first_tag)
 
-        # Otherwise try just the language code (e.g., ja-JP -> ja)
-        first_tag&.split('-')&.first
+        # For other languages, extract base language code (e.g., ja-JP -> ja)
+        first_tag&.split("-")&.first
       end
 
       def valid_locale?(locale)
