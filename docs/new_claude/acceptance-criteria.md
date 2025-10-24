@@ -17,6 +17,7 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 9. [Recipe Viewing](#recipe-viewing)
 10. [Performance & Reliability](#performance--reliability)
 11. [Phase 3: Model Validations](#phase-3-model-validations)
+12. [Phase 5: Auto-Triggered Translation Workflow](#phase-5-auto-triggered-translation-workflow)
 
 ---
 
@@ -89,59 +90,6 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 **WHEN** user adjusts serving slider
 **THEN** ingredient amounts should update within 100ms
 **AND** no API call should be made (client-side calculation)
-
----
-
-## Step Instruction Variants
-
-### AC-VARIANT-001: Easier Variant - Simplify Jargon
-**GIVEN** an original instruction "Sauté the aromatics until translucent"
-**WHEN** easier variant is generated
-**THEN** it should replace jargon with everyday language (e.g., "Cook the onions and garlic in oil until they become see-through")
-
-### AC-VARIANT-002: Easier Variant - Add Time Estimates
-**GIVEN** an original instruction "Cook until done"
-**WHEN** easier variant is generated
-**THEN** it should include time estimate (e.g., "Cook for about 3-5 minutes")
-
-### AC-VARIANT-003: Easier Variant - Add Sensory Cues
-**GIVEN** an original instruction "Whisk until stiff peaks form"
-**WHEN** easier variant is generated
-**THEN** it should include visual cue (e.g., "Whisk until the mixture stands up straight when you lift the whisk, like soft ice cream peaks")
-
-### AC-VARIANT-004: No Equipment Variant - Whisk Substitution
-**GIVEN** an original instruction requires a whisk
-**WHEN** no-equipment variant is generated
-**THEN** it should suggest fork alternative (e.g., "Use a fork and whisk vigorously in circular motions")
-
-### AC-VARIANT-005: No Equipment Variant - Food Processor Substitution
-**GIVEN** an original instruction requires a food processor
-**WHEN** no-equipment variant is generated
-**THEN** it should suggest knife and cutting board (e.g., "Finely chop by hand with a sharp knife—takes longer but works just as well")
-
-### AC-VARIANT-006: No Equipment Variant - Honest Tradeoffs
-**GIVEN** a no-equipment variant suggests an alternative
-**WHEN** the alternative is inferior
-**THEN** variant should acknowledge tradeoff (e.g., "This will take 10 minutes longer" or "Requires more arm strength")
-
-### AC-VARIANT-007: Variants Pre-Generated on Save
-**GIVEN** admin creates a new recipe with original instructions
-**WHEN** recipe is saved
-**THEN** background job should generate easier and no-equipment variants for all steps
-**AND** variants_generated flag should be set to true
-**AND** variants_generated_at timestamp should be recorded
-
-### AC-VARIANT-008: User Toggles Variant Per Step
-**GIVEN** a recipe with all three variants available
-**WHEN** user selects "Easier" for step 1 and "No Equipment" for step 2
-**THEN** step 1 should display easier variant
-**AND** step 2 should display no-equipment variant
-**AND** remaining steps should display original variant (default)
-
-### AC-VARIANT-009: Variant Selection Persists During Session
-**GIVEN** user has selected "Easier" variant for a step
-**WHEN** user scales the recipe
-**THEN** step should continue displaying easier variant (selection persists)
 
 ---
 
@@ -765,12 +713,6 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 **WHEN** admin creates new recipe "chicken egg bowl"
 **THEN** duplicate warning should trigger (alias match)
 
-### AC-ADMIN-007: Manual Variant Regeneration
-**GIVEN** an existing recipe with generated variants
-**WHEN** admin clicks "Regenerate Variants"
-**THEN** GenerateStepVariantsJob should trigger
-**AND** existing variants should be overwritten with new AI-generated versions
-
 ### AC-ADMIN-008: Manual Translation Regeneration
 **GIVEN** an existing recipe with completed translations
 **WHEN** admin clicks "Regenerate Translations"
@@ -883,11 +825,6 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 **GIVEN** an ingredient nutrition is cached in Redis
 **WHEN** lookup service checks cache
 **THEN** retrieval should complete within 1ms
-
-### AC-PERF-005: Background Job - Variant Generation Completion
-**GIVEN** a recipe with 10 steps is created
-**WHEN** GenerateStepVariantsJob executes
-**THEN** job should complete within 2 minutes (20 steps × 2 variants × ~3 seconds per AI call)
 
 ### AC-PERF-006: Background Job - Translation Completion
 **GIVEN** a recipe is created
@@ -1222,11 +1159,138 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 
 ---
 
+## Phase 5: Auto-Triggered Translation Workflow
+
+### AC-PHASE5-CALLBACK-001: Recipe Creation Triggers Translation
+**GIVEN** a new recipe is created with source_language="ja"
+**WHEN** the recipe is saved to the database
+**THEN** TranslateRecipeJob should be enqueued with the recipe_id
+**AND** the job should be enqueued immediately (no rate limiting on create)
+**AND** translations_completed should be false
+
+### AC-PHASE5-CALLBACK-002: Recipe Update Triggers Translation (First Time)
+**GIVEN** an existing recipe with last_translated_at=nil
+**WHEN** the recipe is updated
+**THEN** TranslateRecipeJob should be enqueued with the recipe_id
+**AND** the job should be enqueued (first update, under rate limit)
+
+### AC-PHASE5-CALLBACK-003: Recipe Update Respects Rate Limit
+**GIVEN** an existing recipe with 4 completed translations in the last hour
+**WHEN** the recipe is updated again
+**THEN** the recipe update should save successfully
+**AND** TranslateRecipeJob should NOT be enqueued
+**AND** no new job should appear in the queue
+
+### AC-PHASE5-CALLBACK-004: Recipe Update Under Rate Limit
+**GIVEN** an existing recipe with 3 completed translations in the last hour
+**WHEN** the recipe is updated
+**THEN** TranslateRecipeJob should be enqueued with the recipe_id
+**AND** the job should be enqueued (under 4-per-hour limit)
+
+### AC-PHASE5-CALLBACK-005: Rate Limit Window Sliding
+**GIVEN** a recipe with 4 translations completed: 3 in last hour, 1 at 65 minutes ago
+**WHEN** current time is 61 minutes after oldest translation
+**THEN** the oldest translation should be outside the 1-hour window
+**AND** only 3 translations count toward rate limit
+**AND** a new update should trigger translation job
+
+### AC-PHASE5-DEDUP-001: Duplicate Job Prevention - Job Already Pending
+**GIVEN** a recipe update that enqueued TranslateRecipeJob
+**WHEN** the recipe is updated again before the first job completes
+**THEN** a second TranslateRecipeJob should NOT be enqueued
+**AND** only 1 pending job should exist for this recipe_id
+
+### AC-PHASE5-DEDUP-002: Job Allowed After Previous Job Completes
+**GIVEN** a recipe with a TranslateRecipeJob that just finished
+**WHEN** the recipe is updated (and under rate limit)
+**THEN** a new TranslateRecipeJob should be enqueued
+**AND** the new job should be queued successfully
+
+### AC-PHASE5-MANUAL-001: Manual Regenerate Bypasses Rate Limit
+**GIVEN** a recipe with 4 completed translations in the last hour
+**WHEN** admin clicks "Regenerate Translations" button
+**THEN** TranslateRecipeJob should be enqueued
+**AND** rate limiting should be bypassed
+
+### AC-PHASE5-MANUAL-002: Manual Regenerate Bypasses Deduplication
+**GIVEN** a recipe with a pending TranslateRecipeJob
+**WHEN** admin clicks "Regenerate Translations" button
+**THEN** a second TranslateRecipeJob should be enqueued
+**AND** deduplication check should be bypassed
+
+### AC-PHASE5-JOB-001: Job Completes and Sets Timestamp
+**GIVEN** a TranslateRecipeJob is processing recipe_id=123
+**WHEN** the job completes successfully
+**THEN** recipe.last_translated_at should be set to current timestamp
+**AND** recipe.translations_completed should be true
+
+### AC-PHASE5-JOB-002: Job Translates to 6 Target Languages (Excluding Source)
+**GIVEN** a TranslateRecipeJob is processing a recipe with source_language="ja"
+**WHEN** the job executes
+**THEN** recipe should be translated to ko, zh-tw, zh-cn, es, fr (5 target languages, excluding ja)
+**AND** all translation tables should have entries for these 5 languages
+**AND** recipe name, ingredients, steps, equipment should all be translated for each target language
+
+### AC-PHASE5-JOB-003: Job Handles Missing Recipe Gracefully
+**GIVEN** a TranslateRecipeJob is enqueued with recipe_id=999
+**WHEN** the job executes and recipe_id=999 does not exist
+**THEN** the job should raise ActiveRecord::RecordNotFound
+**AND** the error should be logged
+**AND** the job should not retry indefinitely
+
+### AC-PHASE5-JOB-004: Job Handles API Failure Gracefully
+**GIVEN** a TranslateRecipeJob is processing a recipe
+**WHEN** the Anthropic API call fails for one language
+**THEN** the error should be logged
+**AND** the job should continue to other languages (no retry)
+**AND** translations_completed should remain false
+**AND** last_translated_at should NOT be updated
+
+### AC-PHASE5-TIMESTAMP-001: last_translated_at Tracks Last Completion
+**GIVEN** a recipe with last_translated_at=2 hours ago
+**WHEN** a new TranslateRecipeJob completes successfully
+**THEN** last_translated_at should be updated to current time
+**AND** the timestamp should reflect the most recent translation
+
+### AC-PHASE5-TIMESTAMP-002: solid_queue is Source of Truth for Rate Limiting
+**GIVEN** a recipe with last_translated_at=30 minutes ago
+**WHEN** checking if recipe can be translated again
+**THEN** the rate limit check should query solid_queue jobs table
+**AND** count completed TranslateRecipeJob entries with finished_at > 1 hour ago
+**AND** should NOT use last_translated_at directly for rate limit calculation
+**AND** last_translated_at is for display/audit purposes only
+**AND** solid_queue is the authoritative source for rate limit enforcement
+
+### AC-PHASE5-JOB-005: Job Skips Source Language
+**GIVEN** a TranslateRecipeJob is processing a recipe with source_language="ja"
+**WHEN** the job builds the list of target languages
+**THEN** ja should be excluded from translation targets
+**AND** only ko, zh-tw, zh-cn, es, fr should be translated
+**AND** no translation query with language="ja" should be executed
+
+### AC-PHASE5-JOB-006: Job Handles Deleted Recipe Gracefully
+**GIVEN** a TranslateRecipeJob is enqueued for recipe_id=999
+**WHEN** the job executes and the recipe has been deleted
+**THEN** the job should catch ActiveRecord::RecordNotFound
+**AND** the error should be logged with recipe_id and timestamp
+**AND** the job should complete without failing
+**AND** no exception should propagate to job queue
+
+### AC-PHASE5-DEDUP-003: Concurrent Update Prevention Detail
+**GIVEN** a recipe update that checks for pending TranslateRecipeJob
+**WHEN** the deduplication check executes
+**THEN** the check should query solid_queue for job class "TranslateRecipeJob"
+**AND** should filter by job arguments matching recipe_id
+**AND** should count only jobs with status "scheduled" or "executing"
+**AND** should not count completed, failed, or discarded jobs
+
+---
+
 ## Summary Statistics
 
-- **Total Acceptance Criteria:** 190
+- **Total Acceptance Criteria:** 205
 - **Smart Scaling:** 12 criteria
-- **Step Variants:** 9 criteria
+- **Step Variants:** 9 criteria (removed feature)
 - **Multi-lingual:** 9 criteria
 - **Internationalization (i18n):** 18 criteria
 - **Nutrition:** 13 criteria
@@ -1237,6 +1301,7 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 - **Performance & Reliability:** 12 criteria
 - **Additional Requirements:** 21 criteria (from ongoing analysis)
 - **Phase 3: Model Validations:** 45 criteria
+- **Phase 5: Auto-Triggered Translation Workflow:** 18 criteria
   - Recipe: 7 criteria
   - User: 11 criteria
   - Ingredient: 5 criteria
