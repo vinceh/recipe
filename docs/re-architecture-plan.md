@@ -838,17 +838,18 @@ Write comprehensive GIVEN/WHEN/THEN acceptance criteria for auto-triggered trans
 **Summary**: Implement locale support in API responses so endpoints return translations based on `?lang=` parameter or `Accept-Language` header. Leverage Mobility translation system (Phase 4) and auto-translation workflow (Phase 5) to serve all 7 languages (en, ja, ko, zh-tw, zh-cn, es, fr).
 
 **Step 1: Write Acceptance Criteria**
-- [ ] Define locale parameter extraction ACs (?lang parameter and Accept-Language header with priority)
-- [ ] Define locale-aware list endpoint response ACs
-- [ ] Define locale-aware detail endpoint response ACs
-- [ ] Define fallback behavior ACs (translation missing scenarios)
-- [ ] Define translation status tracking ACs (translations_completed, last_translated_at fields)
-- [ ] Define all 7 languages support ACs
-- [ ] Define error handling and edge cases ACs (invalid locales, malformed headers)
-- [ ] Define backward compatibility ACs (no locale param = English)
-- [ ] Run sub-agent with @acceptance-test-writing skill to review, identify gaps, and refine
-- [ ] Update ACs based on sub-agent recommendations
-- [ ] Commit ACs with message: `[Phase 6] Step 1: Write acceptance criteria for locale-aware API responses`
+- [x] Define locale parameter extraction ACs (?lang parameter and Accept-Language header with priority)
+- [x] Define locale-aware list endpoint response ACs
+- [x] Define locale-aware detail endpoint response ACs
+- [x] Define fallback behavior ACs (translation missing scenarios)
+- [x] Define all 7 languages support ACs
+- [x] Define error handling and edge cases ACs (invalid locales, malformed headers, concurrent requests)
+- [x] Define backward compatibility ACs (no locale param = English)
+- [x] Define admin endpoints locale support ACs
+- [x] Run acceptance-test-writing skill to review, identify gaps, and refine
+- [x] Apply quality refinements (observable behavior focus, moved implementation-specific ACs)
+- [x] Commit ACs with message: `[Phase 6] Step 1: Write acceptance criteria for locale-aware API responses`
+- [x] Commit refinements with message: `[Phase 6] Step 1: Refine acceptance criteria based on quality review`
 
 **Step 2: Implement Locale Parameter Extraction**
 - [ ] Add `before_action :set_locale_from_request` to BaseController
