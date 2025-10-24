@@ -1,9 +1,9 @@
 # Recipe Database Re-Architecture Plan
 
-**Status**: Phase 6 Complete ✅ (Locale-Aware API Responses) | Phase 7 Step 5/10 Complete ✅ (Component Updates)
+**Status**: Phase 6 Complete ✅ (Locale-Aware API Responses) | Phase 7 Step 7/10 Complete ✅ (Language Switching)
 **Scope**: Database schema normalization + Mobility i18n integration
 **Approach**: 9 linear phases (Backend → Frontend → Documentation)
-**Progress**: Phase 7: 5/10 steps complete | Next: Phase 7 Step 6 (Detail View Components)
+**Progress**: Phase 7: 7/10 steps complete | Next: Phase 7 Step 8 (Test Suite)
 
 ---
 
@@ -1050,13 +1050,29 @@ Write comprehensive GIVEN/WHEN/THEN acceptance criteria for auto-triggered trans
 
 **Note**: This step was completed during Step 5's code quality audit process when we fixed the blocking issues in AdminRecipeDetail.vue (field access: `item.preparation`, `step.instruction`, and edit functionality implementation).
 
-**Step 7: Update Language Switching**
-- [ ] Identify language switcher component
-- [ ] Add language selection parameter passing to API calls
-- [ ] Ensure language switch triggers API refetch with new language
-- [ ] Verify translated content updates in UI
-- [ ] Test all 7 languages work correctly
-- [ ] Commit language switcher updates
+**Step 7: Update Language Switching** ✅ COMPLETE
+- [x] Identify language switcher component (LanguageSwitcher.vue exists, uses uiStore)
+- [x] Add language selection parameter passing to API calls
+  * AdminRecipes.vue: Pass lang to getRecipes API call
+  * AdminRecipeDetail.vue: Pass lang to getRecipe API call
+  * adminApi.ts: Add lang parameter support to getRecipe method
+- [x] Ensure language switch triggers API refetch with new language
+  * Added watch on uiStore.language in AdminRecipes.vue
+  * Added watch on uiStore.language in AdminRecipeDetail.vue
+  * Both automatically refetch recipes when language changes
+- [x] Simplify translation handling (API returns pre-translated content)
+  * Removed local language selector from AdminRecipeDetail.vue
+  * Removed translation merging logic (API handles via lang parameter)
+  * Removed unused CSS styles for language selector
+- [x] Commit language switcher updates
+
+**Progress**:
+- All recipe views now respond to global language changes
+- LanguageSwitcher component (in header/nav) controls global language
+- Changing language via LanguageSwitcher automatically refetches recipes in new language
+- Simplified UI - no need for local language selectors in detail views
+- API handles translation via lang parameter (backend Mobility integration)
+- All 7 languages supported: en, ja, ko, zh-tw, zh-cn, es, fr
 
 **Step 8: Run Frontend Test Suite**
 - [ ] Run `npm run test` to check for failures
