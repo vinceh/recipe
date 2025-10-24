@@ -652,29 +652,33 @@ end
 - [ ] **BACKEND ARCHITECTURE & I18N SYSTEM**
   - [x] `docs/new_claude/i18n-workflow.md` - COMPLETE ✅
 
-  - [ ] `docs/new_claude/architecture.md` - MOBILITY SECTION UPDATE
-    - [ ] Add "Mobility Translation System" section under Backend Architecture
-      - [ ] Table backend implementation
-      - [ ] Translation table relationships:
-        - [ ] Recipe → RecipeTranslation (one-to-many)
-        - [ ] IngredientGroup → IngredientGroupTranslation
-        - [ ] RecipeIngredient → RecipeIngredientTranslation
-        - [ ] RecipeStep → RecipeStepTranslation
-        - [ ] Equipment → EquipmentTranslation
-        - [ ] DataReference → DataReferenceTranslation
-      - [ ] `translates` declaration syntax and backend: :table configuration
-      - [ ] UUID foreign key support for Mobility
-      - [ ] Plugin configuration (reader, writer, query, fallbacks, presence, cache)
-    - [ ] Add code examples for:
-      - [ ] Reading translations in different locales
-      - [ ] Writing translations via Mobility
-      - [ ] Querying translated fields
-      - [ ] Fallback behavior when translations missing
-    - [ ] Add "TranslateRecipeJob Architecture" section with:
-      - [ ] Job diagram/flow
-      - [ ] apply_translations method documentation
-      - [ ] Nested model translation handling
-      - [ ] Eager loading strategy for N+1 prevention
+**Substep 7c: Refactor architecture.md** ✅ COMPLETE
+- [x] Add Mobility gem to Technology Stack
+- [x] Add `extend Mobility` and `translates` declarations to all models:
+  - [x] Recipe: translates :name
+  - [x] IngredientGroup: translates :name
+  - [x] RecipeIngredient: translates :ingredient_name, :preparation_notes
+  - [x] Equipment: translates :canonical_name
+  - [x] RecipeStep: translates :instruction_original, :instruction_easier, :instruction_no_equipment
+  - [x] DataReference: translates :display_name
+- [x] Add "Mobility Translation System" section with:
+  - [x] Translation table schema (6 tables with UUID foreign keys)
+  - [x] Mobility configuration (Table backend, plugins, fallback chain)
+  - [x] Reading translations (I18n.with_locale examples)
+  - [x] Writing translations (code examples)
+  - [x] Querying translated fields (Model.i18n.where)
+  - [x] API integration (?lang=ja parameter)
+  - [x] N+1 query prevention (eager loading)
+- [x] Update Services section to mention RecipeTranslator
+- [x] Update Background Jobs section with TranslateRecipeJob details
+- [x] Remove meta-commentary (Last Updated, Version, Status, CRITICAL warning)
+- [x] Replace narrative prose with structured bullets/lists
+- [x] Simplify Frontend i18n section (Vue I18n only)
+- [x] Run fluff detector: ✅ 0 critical errors, 1 false positive
+- [x] Size reduction: 1406 → 581 lines (58.7% reduction)
+- [x] Commit: `[Phase 4] Step 7: Refactor architecture.md - add Mobility section, remove meta-commentary`
+
+  - [x] `docs/new_claude/architecture.md` - COMPLETE ✅
 
 - [ ] **API DOCUMENTATION & RESPONSES**
   - [ ] `docs/api-reference.md` - LOCALE-AWARE RESPONSE SECTION
