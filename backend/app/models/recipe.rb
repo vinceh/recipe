@@ -73,15 +73,32 @@ class Recipe < ApplicationRecord
   end
 
   def enqueue_translation_on_update
-    # Step 1: Delete any pending job (latest recipe data always wins)
-    delete_pending_translation_job
-
-    # Step 2: Enqueue immediately or schedule for next available time
-    if translation_rate_limit_exceeded?
-      schedule_translation_at_next_available_time
-    else
-      TranslateRecipeJob.perform_later(id)
+    if has_translation_job_with_recipe_id?
+      delete_pending_translation_job unless has_running_translation_job?
     end
+    schedule_translation_at_next_available_time
+  end
+
+  def has_translation_job_with_recipe_id?
+    return false unless job_queue_available?
+
+    SolidQueue::Job.where(class_name: 'TranslateRecipeJob')
+      .where('arguments->0 = ?', id)
+      .exists?
+  rescue StandardError
+    false
+  end
+
+  def has_running_translation_job?
+    return false unless job_queue_available?
+
+    SolidQueue::Job.where(class_name: 'TranslateRecipeJob')
+      .where('arguments->0 = ?', id)
+      .joins("INNER JOIN solid_queue_claimed_executions ON solid_queue_jobs.id = solid_queue_claimed_executions.job_id")
+      .where('solid_queue_jobs.finished_at IS NULL')
+      .exists?
+  rescue StandardError
+    false
   end
 
   def translation_rate_limit_exceeded?
@@ -98,27 +115,36 @@ class Recipe < ApplicationRecord
     SolidQueue::Job.where(class_name: 'TranslateRecipeJob')
       .where('arguments->0 = ?', id)
       .where(finished_at: nil)
+      .joins("LEFT JOIN solid_queue_claimed_executions ON solid_queue_jobs.id = solid_queue_claimed_executions.job_id")
+      .where('solid_queue_claimed_executions.job_id IS NULL')
       .destroy_all
   rescue StandardError
     # Silently continue if job deletion fails
   end
 
   def schedule_translation_at_next_available_time
-    oldest_job = get_oldest_completed_translation_job
-    return unless oldest_job
-
-    rate_limit_window = Rails.application.config.recipe[:translation_rate_limit][:rate_limit_window]
-    earliest_available = oldest_job.finished_at + rate_limit_window.seconds + 1.second
-    delay = [0, (earliest_available - Time.current)].max
-
-    TranslateRecipeJob.set(wait: delay.seconds).perform_later(id)
+    if translation_rate_limit_exceeded?
+      oldest_job_in_window = get_oldest_completed_translation_job_in_window
+      if oldest_job_in_window
+        rate_limit_window = Rails.application.config.recipe[:translation_rate_limit][:rate_limit_window]
+        earliest_available = oldest_job_in_window.finished_at + rate_limit_window.seconds + 1.second
+        delay = [0, (earliest_available - Time.current)].max
+        TranslateRecipeJob.set(wait: delay.seconds).perform_later(id)
+      end
+    else
+      TranslateRecipeJob.perform_later(id)
+    end
   end
 
-  def get_oldest_completed_translation_job
+  def get_oldest_completed_translation_job_in_window
     return nil unless job_queue_available?
+
+    rate_limit_window = Rails.application.config.recipe[:translation_rate_limit][:rate_limit_window]
+    cutoff_time = Time.current - rate_limit_window.seconds
 
     SolidQueue::Job.where(class_name: 'TranslateRecipeJob')
       .where('arguments->0 = ?', id)
+      .where('finished_at > ?', cutoff_time)
       .where.not(finished_at: nil)
       .order(finished_at: :asc)
       .first

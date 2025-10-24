@@ -880,3 +880,417 @@ Phase 4 implements the Mobility gem for managing translations with:
 - **Database & Performance:** 5 ACs (includes AC-PHASE4-DB-005: Migration Rollback)
 
 All ACs ensure Mobility gem integration provides seamless multi-language support across core models while maintaining backward compatibility with existing API responses, validations, and serializers. Revised ACs address critical implementation gaps and edge cases identified during quality review.
+
+---
+
+# Phase 5: Auto-Triggered Translation Workflow - Job Queue Management Acceptance Criteria
+
+**Status:** Draft
+**Date:** 2025-10-24
+**Purpose:** Define acceptance criteria for implementing auto-triggered recipe translation workflow with SolidQueue job management, including deduplication logic, rolling window rate limiting, and intelligent scheduling.
+
+---
+
+## Overview
+
+Phase 5 implements automatic translation workflow triggered by recipe lifecycle events:
+- **Auto-trigger on create**: Enqueue `TranslateRecipeJob` immediately after recipe creation
+- **Auto-trigger on update**: Intelligently manage job queue on recipe updates with deduplication and rate limiting
+- **Job deduplication**: Delete pending (non-running) jobs when new update occurs (latest recipe data wins)
+- **Rate limiting**: Rolling window limit of 4 translations per recipe per hour
+- **Intelligent scheduling**: Schedule jobs at next available time when rate limited
+- **SolidQueue integration**: Use SolidQueue job system for queue management and execution tracking
+- **Silent operation**: Background processing with no user-facing delays or feedback
+
+---
+
+## Callback Behavior - Recipe Lifecycle
+
+### AC-PHASE5-CALLBACK-001: Auto-Trigger Translation on Recipe Create
+**GIVEN** new recipe is created via `Recipe.create!`
+**WHEN** recipe is saved to database (after_commit callback fires)
+**THEN** `TranslateRecipeJob.perform_later(recipe.id)` should be enqueued
+**AND** job should be queued immediately (no delay)
+**AND** callback should fire silently in background
+
+### AC-PHASE5-CALLBACK-002: Auto-Trigger Translation on Recipe Update
+**GIVEN** existing recipe is updated via `recipe.update!`
+**WHEN** recipe is saved to database (after_commit callback fires)
+**THEN** `enqueue_translation_on_update` callback should execute
+**AND** callback should check for existing jobs and apply deduplication logic
+**AND** callback should apply rate limiting and schedule at next available time
+**AND** callback should NEVER silently ignore the update request
+
+### AC-PHASE5-CALLBACK-003: No Double-Enqueue on Create
+**GIVEN** recipe is created with `Recipe.create!`
+**WHEN** after_commit :create callback fires
+**THEN** only ONE translation job should be enqueued
+**AND** no duplicate jobs should be created for same recipe_id
+
+### AC-PHASE5-CALLBACK-004: Callback Fires After Transaction Commit
+**GIVEN** recipe is created or updated within database transaction
+**WHEN** transaction commits successfully
+**THEN** callback should fire after commit (not before)
+**AND** job should only be enqueued if transaction succeeded
+**AND** no job should be enqueued if transaction rolled back
+
+---
+
+## Job Detection & Deduplication
+
+### AC-PHASE5-DEDUP-001: Detect Existing Translation Job for Recipe
+**GIVEN** recipe with pending `TranslateRecipeJob` in queue (same recipe_id)
+**WHEN** `has_translation_job_with_recipe_id?` is called
+**THEN** method should return true
+**AND** should query SolidQueue::Job for jobs matching recipe_id and class_name
+**AND** should include jobs in all states (pending, scheduled, claimed)
+
+### AC-PHASE5-DEDUP-002: Detect Running Translation Job
+**GIVEN** recipe with `TranslateRecipeJob` currently executing (has claimed_execution record)
+**WHEN** `has_running_translation_job?` is called
+**THEN** method should return true
+**AND** should join `solid_queue_jobs` with `solid_queue_claimed_executions`
+**AND** should check for jobs where `finished_at IS NULL` and claimed_execution exists
+
+### AC-PHASE5-DEDUP-003: Delete Pending Non-Running Jobs
+**GIVEN** recipe with pending translation job that is NOT currently running
+**WHEN** `delete_pending_translation_job` is called
+**THEN** pending job should be deleted from queue
+**AND** running jobs should NOT be deleted (cannot interrupt execution)
+**AND** deletion should be silent (rescue any errors)
+
+### AC-PHASE5-DEDUP-004: Do Not Delete Running Jobs
+**GIVEN** recipe with `TranslateRecipeJob` actively executing (worker claimed it)
+**WHEN** `delete_pending_translation_job` is called
+**THEN** running job should NOT be deleted
+**AND** method should exclude jobs with claimed_execution records
+**AND** running job should continue executing undisturbed
+
+### AC-PHASE5-DEDUP-005: Latest Recipe Data Wins
+**GIVEN** recipe updated multiple times in quick succession (e.g., 3 updates in 10 seconds)
+**WHEN** each update callback fires
+**THEN** only the LATEST update should remain in queue
+**AND** previous pending jobs should be deleted
+**AND** final job should have latest recipe data
+
+### AC-PHASE5-DEDUP-006: Handle No Existing Jobs Gracefully
+**GIVEN** recipe with no translation jobs in queue
+**WHEN** `has_translation_job_with_recipe_id?` is called
+**THEN** method should return false
+**AND** no errors should be raised
+
+---
+
+## Rate Limiting - Rolling Window
+
+### AC-PHASE5-RATE-001: Rate Limit Check - 4 Translations Per Hour
+**GIVEN** recipe with translation rate limit config: 4 per hour
+**WHEN** `translation_rate_limit_exceeded?` is called
+**THEN** method should count completed jobs within 1-hour rolling window
+**AND** should return true if count >= 4
+**AND** should return false if count < 4 or no completed jobs exist
+
+### AC-PHASE5-RATE-002: Rolling Window Calculation - 1 Hour Window
+**GIVEN** current time is 10:00, completed jobs at 9:15, 9:20, 9:40, 9:50
+**WHEN** `translation_rate_limit_exceeded?` is called
+**THEN** cutoff_time should be 09:00 (current time - 1 hour)
+**AND** all 4 jobs fall within window (all after 09:00)
+**AND** method should return true (rate limit exceeded)
+
+### AC-PHASE5-RATE-003: Oldest Job Falls Out of Window
+**GIVEN** current time is 10:16:01, completed jobs at 9:15, 9:20, 9:40, 9:50
+**WHEN** `translation_rate_limit_exceeded?` is called
+**THEN** cutoff_time should be 09:16:01
+**AND** oldest job (9:15) should be excluded (before cutoff)
+**AND** only 3 jobs remain in window
+**AND** method should return false (rate limit NOT exceeded)
+
+### AC-PHASE5-RATE-004: Get Oldest Completed Job Within Window Only
+**GIVEN** recipe with 100 translation jobs in history spanning weeks
+**WHEN** `get_oldest_completed_translation_job_in_window` is called
+**THEN** method should query jobs with `finished_at > Time.current - 1.hour`
+**AND** should return oldest job within 1-hour window only
+**AND** should NOT return jobs older than 1 hour (prevents bug with large history)
+
+### AC-PHASE5-RATE-005: No Completed Jobs Yet
+**GIVEN** recipe with no completed translation jobs (new recipe or first translation)
+**WHEN** `translation_rate_limit_exceeded?` is called
+**THEN** method should return false
+**AND** `completed_translation_job_count` should return 0
+**AND** no errors should be raised
+
+### AC-PHASE5-RATE-006: Rate Limit Uses Recipe-Specific Jobs Only
+**GIVEN** multiple recipes (recipe A, recipe B) each with translation jobs
+**WHEN** `translation_rate_limit_exceeded?` is called for recipe A
+**THEN** method should count only jobs with `arguments->0 = recipe_a.id`
+**AND** should NOT count jobs for recipe B
+**AND** rate limit is enforced per-recipe, not globally
+
+---
+
+## Job Scheduling - Next Available Time
+
+### AC-PHASE5-SCHEDULE-001: Schedule Immediately When Not Rate Limited
+**GIVEN** recipe with fewer than 4 completed jobs in past hour
+**WHEN** `schedule_translation_at_next_available_time` is called
+**THEN** `TranslateRecipeJob.perform_later(recipe.id)` should be called (no delay)
+**AND** job should be enqueued for immediate execution
+**AND** no delay calculation should occur
+
+### AC-PHASE5-SCHEDULE-002: Schedule With Delay When Rate Limited
+**GIVEN** recipe with 4 completed jobs in past hour (rate limit exceeded)
+**AND** oldest job in window finished at 09:15:00
+**AND** current time is 10:00:00
+**WHEN** `schedule_translation_at_next_available_time` is called
+**THEN** earliest_available should be 10:15:01 (oldest.finished_at + 1 hour + 1 second)
+**AND** delay should be 901 seconds (15 minutes 1 second)
+**AND** job should be scheduled with `TranslateRecipeJob.set(wait: 901.seconds).perform_later(recipe.id)`
+
+### AC-PHASE5-SCHEDULE-003: Handle Nil Oldest Job (No Completed Jobs)
+**GIVEN** recipe with no completed translation jobs
+**WHEN** `schedule_translation_at_next_available_time` is called
+**THEN** `get_oldest_completed_translation_job_in_window` returns nil
+**AND** should enqueue job immediately (no rate limit applies)
+**AND** should NOT attempt to calculate delay on nil job
+
+### AC-PHASE5-SCHEDULE-004: Delay Cannot Be Negative
+**GIVEN** oldest job finished at 09:15, current time is 10:20 (past the window expiry)
+**WHEN** delay calculation is performed
+**THEN** `delay = [0, (earliest_available - Time.current)].max` ensures delay >= 0
+**AND** job should be enqueued immediately (delay = 0)
+
+### AC-PHASE5-SCHEDULE-005: Scheduled Job Contains Correct Recipe ID
+**GIVEN** recipe with id = "abc-123"
+**WHEN** translation job is scheduled
+**THEN** job arguments should include recipe.id as first argument
+**AND** `TranslateRecipeJob.perform_later(id)` should pass correct recipe ID
+**AND** job can be queried later by recipe_id
+
+---
+
+## Update Callback Logic Flow
+
+### AC-PHASE5-FLOW-001: Update Callback - Job Exists and Not Running
+**GIVEN** recipe update and pending translation job exists (not running)
+**WHEN** `enqueue_translation_on_update` callback fires
+**THEN** `has_translation_job_with_recipe_id?` returns true
+**AND** `has_running_translation_job?` returns false
+**AND** `delete_pending_translation_job` should be called
+**AND** `schedule_translation_at_next_available_time` should be called
+**AND** new job with latest recipe data should be queued
+
+### AC-PHASE5-FLOW-002: Update Callback - Job Exists and Is Running
+**GIVEN** recipe update and translation job is currently executing
+**WHEN** `enqueue_translation_on_update` callback fires
+**THEN** `has_translation_job_with_recipe_id?` returns true
+**AND** `has_running_translation_job?` returns true
+**AND** `delete_pending_translation_job` should NOT be called
+**AND** `schedule_translation_at_next_available_time` should be called
+**AND** new job should be scheduled for next available time (after current job finishes)
+
+### AC-PHASE5-FLOW-003: Update Callback - No Existing Job
+**GIVEN** recipe update and no translation job exists in queue
+**WHEN** `enqueue_translation_on_update` callback fires
+**THEN** `has_translation_job_with_recipe_id?` returns false
+**AND** `delete_pending_translation_job` should NOT be called
+**AND** `schedule_translation_at_next_available_time` should be called
+**AND** job should be scheduled (immediately if not rate limited, with delay if rate limited)
+
+### AC-PHASE5-FLOW-004: Update Callback Always Schedules
+**GIVEN** any recipe update scenario
+**WHEN** `enqueue_translation_on_update` callback fires
+**THEN** callback should ALWAYS call `schedule_translation_at_next_available_time`
+**AND** callback should NEVER silently ignore the update
+**AND** scheduling method intelligently handles rate limiting (delay = 0 if not limited)
+
+---
+
+## SolidQueue Integration
+
+### AC-PHASE5-QUEUE-001: Query Jobs by Class Name and Recipe ID
+**GIVEN** multiple jobs in SolidQueue (various classes and recipe IDs)
+**WHEN** querying for `TranslateRecipeJob` with specific recipe_id
+**THEN** query should use `where(class_name: 'TranslateRecipeJob')`
+**AND** should filter by `where('arguments->0 = ?', recipe.id)` (JSONB query)
+**AND** should return only matching jobs
+
+### AC-PHASE5-QUEUE-002: Detect Running Jobs via Claimed Executions
+**GIVEN** `TranslateRecipeJob` being executed by worker
+**WHEN** checking if job is running
+**THEN** should join with `solid_queue_claimed_executions`
+**AND** should check for records where `solid_queue_jobs.finished_at IS NULL`
+**AND** claimed_execution record indicates job is actively running
+
+### AC-PHASE5-QUEUE-003: Handle SolidQueue Unavailable Gracefully
+**GIVEN** SolidQueue not available (test environment, job queue disabled)
+**WHEN** `job_queue_available?` is called
+**THEN** method should check `defined?(SolidQueue::Job) && SolidQueue::Job.table_exists?`
+**AND** should return false if not available
+**AND** job-related methods should short-circuit and return safe defaults
+
+### AC-PHASE5-QUEUE-004: Safe Job Deletion on Error
+**GIVEN** `delete_pending_translation_job` encounters database error
+**WHEN** deletion fails
+**THEN** method should rescue StandardError
+**AND** should silently continue (not raise exception)
+**AND** callback should complete successfully
+
+### AC-PHASE5-QUEUE-005: Safe Job Query on Error
+**GIVEN** job query encounters error (database timeout, connection issue)
+**WHEN** `get_oldest_completed_translation_job` or similar method fails
+**THEN** method should rescue StandardError
+**AND** should return nil or 0 (safe default)
+**AND** should not crash callback
+
+---
+
+## Edge Cases & Error Handling
+
+### AC-PHASE5-EDGE-001: Recipe with last_translated_at = nil
+**GIVEN** recipe never translated before (last_translated_at is nil)
+**WHEN** `translation_rate_limit_exceeded?` is called
+**THEN** method should return false (no rate limit applies)
+**AND** no errors should be raised accessing nil timestamp
+
+### AC-PHASE5-EDGE-002: SolidQueue Table Not Exists
+**GIVEN** SolidQueue tables not created (test environment, fresh database)
+**WHEN** `job_queue_available?` is called
+**THEN** method should return false
+**AND** job-related methods should skip queue operations
+**AND** no database errors should be raised
+
+### AC-PHASE5-EDGE-003: Multiple Rapid Updates
+**GIVEN** recipe updated 5 times in 2 seconds
+**WHEN** each update callback fires
+**THEN** first 4 pending jobs should be deleted
+**AND** only 5th job should remain in queue
+**AND** rate limiting should apply to final job scheduling
+
+### AC-PHASE5-EDGE-004: Job Finishes Between Check and Delete
+**GIVEN** job is pending when check occurs, but finishes before deletion
+**WHEN** `delete_pending_translation_job` executes
+**THEN** deletion should handle job no longer existing
+**AND** should not raise error
+**AND** should complete successfully
+
+### AC-PHASE5-EDGE-005: Concurrent Recipe Updates
+**GIVEN** two concurrent requests update same recipe simultaneously
+**WHEN** both callbacks fire and attempt to delete/enqueue jobs
+**THEN** database should handle concurrent operations safely
+**AND** one or both updates should succeed
+**AND** queue should be in consistent state (no corruption)
+
+### AC-PHASE5-EDGE-006: Time.current Changes During Calculation
+**GIVEN** delay calculation in progress and Time.current advances
+**WHEN** `earliest_available - Time.current` is calculated
+**THEN** delay should be calculated with consistent timestamp
+**AND** delay should be >= 0 (max with 0 prevents negative)
+
+### AC-PHASE5-EDGE-007: Rate Limit Config Missing or Invalid
+**GIVEN** rate limit config not set or set to invalid value
+**WHEN** accessing `Rails.application.config.recipe[:translation_rate_limit]`
+**THEN** should have sensible default or raise clear error
+**AND** should not cause silent failures
+
+### AC-PHASE5-EDGE-008: Recipe Deleted Before Job Executes
+**GIVEN** recipe deleted after job enqueued but before job executes
+**WHEN** `TranslateRecipeJob` executes
+**THEN** job should handle missing recipe gracefully
+**AND** should not crash worker
+**AND** should log error and complete
+
+---
+
+## Performance & Reliability
+
+### AC-PHASE5-PERF-001: Job Query Efficient with Index
+**GIVEN** 1000+ jobs in solid_queue_jobs table
+**WHEN** querying for translation jobs by recipe_id
+**THEN** query should use index on class_name
+**AND** JSONB query on arguments should be efficient
+**AND** query should complete within 50ms
+
+### AC-PHASE5-PERF-002: Callback Execution is Fast
+**GIVEN** recipe update triggers callback
+**WHEN** `enqueue_translation_on_update` executes
+**THEN** callback should complete within 100ms
+**AND** should not block user request
+**AND** should execute in after_commit (non-blocking)
+
+### AC-PHASE5-PERF-003: No N+1 Queries in Job Detection
+**GIVEN** checking for existing jobs
+**WHEN** `has_translation_job_with_recipe_id?` and `has_running_translation_job?` are called
+**THEN** should use single queries (or minimal queries)
+**AND** should not trigger N+1 query problems
+
+### AC-PHASE5-PERF-004: Efficient Job Deletion
+**GIVEN** multiple pending jobs for recipe
+**WHEN** `delete_pending_translation_job` is called
+**THEN** should use single DELETE query with WHERE clause
+**AND** should not fetch jobs into memory first
+**AND** should use `destroy_all` (or delete_all if callbacks not needed)
+
+---
+
+## Integration & Compatibility
+
+### AC-PHASE5-INTEG-001: Works with Admin Recipe Creation
+**GIVEN** admin creates recipe via POST /admin/recipes
+**WHEN** recipe is saved successfully
+**THEN** translation job should be auto-enqueued
+**AND** admin should receive immediate response (no blocking)
+
+### AC-PHASE5-INTEG-002: Works with Admin Recipe Update
+**GIVEN** admin updates recipe via PUT /admin/recipes/:id
+**WHEN** recipe is updated successfully
+**THEN** translation job should be intelligently queued (dedup + rate limit)
+**AND** admin should receive immediate response
+
+### AC-PHASE5-INTEG-003: Manual Translation Trigger Bypasses Rate Limit
+**GIVEN** admin requests manual translation via POST /admin/recipes/:id/regenerate_translations
+**WHEN** endpoint directly enqueues `TranslateRecipeJob.perform_later`
+**THEN** job should be enqueued immediately
+**AND** rate limiting should be bypassed
+**AND** deduplication should be bypassed
+
+### AC-PHASE5-INTEG-004: Callback Does Not Interfere with Save
+**GIVEN** recipe update triggers callback
+**WHEN** callback executes in after_commit
+**THEN** recipe.save should complete successfully
+**AND** callback errors should not cause save to fail
+**AND** callback should not modify recipe record
+
+---
+
+## Configuration
+
+### AC-PHASE5-CONFIG-001: Rate Limit Configuration
+**GIVEN** Rails application with config/application.rb
+**WHEN** config is loaded
+**THEN** `Rails.application.config.recipe[:translation_rate_limit][:max_translations_per_window]` should be set to 4
+**AND** `Rails.application.config.recipe[:translation_rate_limit][:rate_limit_window]` should be set to 3600 (1 hour in seconds)
+**AND** config should be accessible in Recipe model
+
+### AC-PHASE5-CONFIG-002: Config Override for Testing
+**GIVEN** test environment with need to override rate limits
+**WHEN** test sets custom rate limit
+**THEN** config should be overridable per test
+**AND** should not affect other tests (test isolation)
+
+---
+
+## Summary
+
+- **Total Phase 5 ACs:** 47
+- **Callback Behavior:** 4 ACs
+- **Job Detection & Deduplication:** 6 ACs
+- **Rate Limiting - Rolling Window:** 6 ACs
+- **Job Scheduling:** 5 ACs
+- **Update Callback Logic Flow:** 4 ACs
+- **SolidQueue Integration:** 5 ACs
+- **Edge Cases & Error Handling:** 8 ACs
+- **Performance & Reliability:** 4 ACs
+- **Integration & Compatibility:** 4 ACs
+- **Configuration:** 2 ACs
+
+All ACs ensure auto-triggered translation workflow operates reliably with proper job queue management, deduplication preventing redundant work, rolling window rate limiting preventing API overuse, and intelligent scheduling ensuring all translation requests are processed. Critical fixes address the "100 jobs in history" bug and ensure running jobs are never interrupted.

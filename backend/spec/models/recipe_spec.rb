@@ -1088,13 +1088,105 @@ RSpec.describe Recipe, type: :model do
         end
       end
 
-      describe 'get_oldest_completed_translation_job' do
+      describe 'has_translation_job_with_recipe_id?' do
         context 'when SolidQueue available' do
           before do
             skip 'SolidQueue not initialized in test environment' unless SolidQueue::Job.table_exists?
           end
 
-          it 'returns oldest completed job for recipe' do
+          it 'returns true when job exists for recipe' do
+            recipe = create(:recipe)
+
+            SolidQueue::Job.create!(
+              class_name: 'TranslateRecipeJob',
+              arguments: [recipe.id],
+              finished_at: nil
+            )
+
+            expect(recipe.send(:has_translation_job_with_recipe_id?)).to be true
+          end
+
+          it 'returns false when no job exists for recipe' do
+            recipe = create(:recipe)
+            expect(recipe.send(:has_translation_job_with_recipe_id?)).to be false
+          end
+
+          it 'returns false for jobs of different recipe' do
+            recipe1 = create(:recipe, name: "Recipe 1 #{SecureRandom.hex(4)}")
+            recipe2 = create(:recipe, name: "Recipe 2 #{SecureRandom.hex(4)}")
+
+            SolidQueue::Job.create!(
+              class_name: 'TranslateRecipeJob',
+              arguments: [recipe1.id],
+              finished_at: nil
+            )
+
+            expect(recipe2.send(:has_translation_job_with_recipe_id?)).to be false
+          end
+        end
+      end
+
+      describe 'has_running_translation_job?' do
+        context 'when SolidQueue available' do
+          before do
+            skip 'SolidQueue not initialized in test environment' unless SolidQueue::Job.table_exists?
+          end
+
+          it 'returns false when no claimed execution exists' do
+            recipe = create(:recipe)
+
+            SolidQueue::Job.create!(
+              class_name: 'TranslateRecipeJob',
+              arguments: [recipe.id],
+              finished_at: nil
+            )
+
+            expect(recipe.send(:has_running_translation_job?)).to be false
+          end
+
+          it 'returns true when job has claimed execution and no finished_at' do
+            recipe = create(:recipe)
+
+            job = SolidQueue::Job.create!(
+              class_name: 'TranslateRecipeJob',
+              arguments: [recipe.id],
+              finished_at: nil
+            )
+
+            SolidQueue::ClaimedExecution.create!(
+              job_id: job.id,
+              process_id: 'test_process'
+            )
+
+            expect(recipe.send(:has_running_translation_job?)).to be true
+          end
+
+          it 'returns false when job is completed (finished_at set)' do
+            recipe = create(:recipe)
+
+            job = SolidQueue::Job.create!(
+              class_name: 'TranslateRecipeJob',
+              arguments: [recipe.id],
+              finished_at: 10.minutes.ago
+            )
+
+            SolidQueue::ClaimedExecution.create!(
+              job_id: job.id,
+              process_id: 'test_process'
+            )
+
+            expect(recipe.send(:has_running_translation_job?)).to be false
+          end
+        end
+      end
+
+      describe 'get_oldest_completed_translation_job_in_window' do
+        context 'when SolidQueue available' do
+          before do
+            skip 'SolidQueue not initialized in test environment' unless SolidQueue::Job.table_exists?
+          end
+
+          it 'returns oldest completed job within 1-hour window' do
             recipe = create(:recipe)
 
             job1 = SolidQueue::Job.create!(
@@ -1109,7 +1201,7 @@ RSpec.describe Recipe, type: :model do
               finished_at: 5.minutes.ago
             )
 
-            oldest = recipe.send(:get_oldest_completed_translation_job)
+            oldest = recipe.send(:get_oldest_completed_translation_job_in_window)
             expect(oldest.id).to eq(job1.id)
           end
 
@@ -1128,15 +1220,60 @@ RSpec.describe Recipe, type: :model do
               finished_at: 10.minutes.ago
             )
 
-            oldest = recipe.send(:get_oldest_completed_translation_job)
+            oldest = recipe.send(:get_oldest_completed_translation_job_in_window)
             expect(oldest.id).to eq(completed_job.id)
           end
 
           it 'returns nil when no completed jobs' do
             recipe = create(:recipe)
 
-            oldest = recipe.send(:get_oldest_completed_translation_job)
+            oldest = recipe.send(:get_oldest_completed_translation_job_in_window)
             expect(oldest).to be_nil
+          end
+
+          it 'excludes jobs older than 1 hour (critical: prevents 100+ jobs bug)' do
+            recipe = create(:recipe)
+
+            # Job outside 1-hour window
+            old_job = SolidQueue::Job.create!(
+              class_name: 'TranslateRecipeJob',
+              arguments: [recipe.id],
+              finished_at: 90.minutes.ago
+            )
+
+            # Job within 1-hour window
+            recent_job = SolidQueue::Job.create!(
+              class_name: 'TranslateRecipeJob',
+              arguments: [recipe.id],
+              finished_at: 10.minutes.ago
+            )
+
+            oldest = recipe.send(:get_oldest_completed_translation_job_in_window)
+            expect(oldest.id).to eq(recent_job.id)
+            expect(oldest.id).not_to eq(old_job.id)
+          end
+
+          it 'handles 100+ jobs in history by only considering window' do
+            recipe = create(:recipe)
+
+            # Create many old jobs outside window
+            100.times do |i|
+              SolidQueue::Job.create!(
+                class_name: 'TranslateRecipeJob',
+                arguments: [recipe.id],
+                finished_at: (100 + i).minutes.ago
+              )
+            end
+
+            # Create one recent job in window
+            recent_job = SolidQueue::Job.create!(
+              class_name: 'TranslateRecipeJob',
+              arguments: [recipe.id],
+              finished_at: 10.minutes.ago
+            )
+
+            oldest = recipe.send(:get_oldest_completed_translation_job_in_window)
+            expect(oldest.id).to eq(recent_job.id)
           end
         end
       end
