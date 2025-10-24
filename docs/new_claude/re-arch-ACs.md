@@ -1,9 +1,5 @@
 # Recipe Database Re-Architecture - Acceptance Criteria
 
-**Project**: Database Schema Normalization + Mobility i18n Integration
-**Version**: 1.0
-**Status**: Draft
-
 ---
 
 ## Table of Contents
