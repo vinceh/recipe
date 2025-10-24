@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import { authApi } from '@/services/authApi'
-import type { User, Recipe, LoginCredentials, SignupCredentials } from '@/services/types'
+import type { User, Recipe, LoginCredentials, SignupData } from '@/services/types'
 
 export const useUserStore = defineStore('user', () => {
   // State
@@ -50,7 +50,7 @@ export const useUserStore = defineStore('user', () => {
     }
   }
 
-  async function signup(credentials: SignupCredentials) {
+  async function signup(credentials: SignupData) {
     loading.value = true
     error.value = null
 

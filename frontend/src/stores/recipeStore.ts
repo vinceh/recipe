@@ -46,8 +46,7 @@ export const useRecipeStore = defineStore('recipe', () => {
   })
 
   const currentRecipeNotes = computed(() => currentRecipe.value?.notes || [])
-  const currentRecipeVariants = computed(() => currentRecipe.value?.variants || [])
-  const currentRecipeTranslations = computed(() => currentRecipe.value?.translations || [])
+  const currentRecipeTranslations = computed(() => currentRecipe.value?.translations || {})
 
   // Actions
   async function fetchRecipes(newFilters?: RecipeFilters) {
@@ -107,9 +106,6 @@ export const useRecipeStore = defineStore('recipe', () => {
       const response = await recipeApi.scaleRecipe(id, payload)
 
       if (response.success && response.data) {
-        if (response.data.recipe) {
-          currentRecipe.value = response.data.recipe
-        }
         return response.data
       } else {
         throw new Error(response.message || 'Failed to scale recipe')
@@ -291,7 +287,6 @@ export const useRecipeStore = defineStore('recipe', () => {
     filteredByPrecision,
     filteredByTag,
     currentRecipeNotes,
-    currentRecipeVariants,
     currentRecipeTranslations,
 
     // Actions

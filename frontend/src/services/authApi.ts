@@ -1,5 +1,5 @@
 import apiClient from './api'
-import type { AuthResponse, LoginCredentials, SignupCredentials, User, ApiResponse, Recipe } from './types'
+import type { AuthResponse, LoginCredentials, SignupData, User, ApiResponse, Recipe } from './types'
 
 export const authApi = {
   async login(credentials: LoginCredentials): Promise<ApiResponse<AuthResponse>> {
@@ -17,7 +17,7 @@ export const authApi = {
     }
   },
 
-  async signup(credentials: SignupCredentials): Promise<ApiResponse<AuthResponse>> {
+  async signup(credentials: SignupData): Promise<ApiResponse<AuthResponse>> {
     const { data } = await apiClient.post('/auth/sign_up', { user: credentials })
     return data
   },

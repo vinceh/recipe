@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 interface Props {
@@ -28,10 +28,11 @@ const cookingPunKeys = [
 ]
 
 const currentPunIndex = ref(0)
-let intervalId: number | null = null
+const currentPunKey = computed((): string => cookingPunKeys[currentPunIndex.value]!)
+let intervalId: ReturnType<typeof setInterval> | null = null
 
 onMounted(() => {
-  intervalId = window.setInterval(() => {
+  intervalId = setInterval(() => {
     currentPunIndex.value = (currentPunIndex.value + 1) % cookingPunKeys.length
   }, 2000)
 })
@@ -59,7 +60,7 @@ onUnmounted(() => {
       </div>
       <div class="playful-loading-spinner__text">
         <p class="playful-loading-spinner__pun">
-          {{ t(cookingPunKeys[currentPunIndex]) }}
+          {{ t(currentPunKey) }}
         </p>
         <p class="playful-loading-spinner__subtitle">
           {{ t('admin.recipes.urlImportDialog.loadingSubtitle') }}

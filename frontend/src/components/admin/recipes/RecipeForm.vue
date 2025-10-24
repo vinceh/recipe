@@ -77,7 +77,7 @@ function addIngredientGroup() {
         name: '',
         amount: '',
         unit: '',
-        notes: '',
+        preparation: '',
         optional: false
       }
     ]
@@ -86,7 +86,8 @@ function addIngredientGroup() {
 
 function removeIngredientGroup(index: number) {
   if (formData.value.ingredient_groups && formData.value.ingredient_groups.length > 1) {
-    const groupName = formData.value.ingredient_groups[index].name || t('forms.recipe.sections.ingredients')
+    const group = formData.value.ingredient_groups[index]
+    const groupName = group?.name || t('forms.recipe.sections.ingredients')
     if (confirm(`Are you sure you want to remove the ingredient group "${groupName}"? This cannot be undone.`)) {
       formData.value.ingredient_groups.splice(index, 1)
     }
@@ -100,7 +101,7 @@ function addIngredient(groupIndex: number) {
       name: '',
       amount: '',
       unit: '',
-      notes: '',
+      preparation: '',
       optional: false
     })
   }
@@ -113,15 +114,14 @@ function removeIngredient(groupIndex: number, ingredientIndex: number) {
   }
 }
 
-// Step helpers - backend expects {id, instructions: {lang: "text"}}
+// Step helpers
 let nextStepId = 1
 function addStep() {
-  const currentLang = formData.value.language || 'en'
+  const currentOrder = (formData.value.steps?.length ?? 0) + 1
   formData.value.steps?.push({
-    id: nextStepId++,
-    instructions: {
-      [currentLang]: ''
-    }
+    id: `step-${nextStepId++}`,
+    order: currentOrder,
+    instruction: ''
   })
 }
 
@@ -212,20 +212,20 @@ const isValid = computed(() => {
 
   // Required: Servings validation
   if (!formData.value.servings ||
-      !formData.value.servings.original ||
+      formData.value.servings.original == null ||
       formData.value.servings.original <= 0) {
     validationErrors.value.push('Original servings must be greater than 0')
   }
 
-  if (formData.value.servings.min && formData.value.servings.min <= 0) {
+  if (formData.value.servings?.min != null && formData.value.servings.min <= 0) {
     validationErrors.value.push('Minimum servings must be greater than 0')
   }
 
-  if (formData.value.servings.max && formData.value.servings.max <= 0) {
+  if (formData.value.servings?.max != null && formData.value.servings.max <= 0) {
     validationErrors.value.push('Maximum servings must be greater than 0')
   }
 
-  if (formData.value.servings.min && formData.value.servings.max &&
+  if (formData.value.servings?.min != null && formData.value.servings?.max != null &&
       formData.value.servings.min > formData.value.servings.max) {
     validationErrors.value.push('Minimum servings cannot exceed maximum servings')
   }
@@ -237,14 +237,15 @@ const isValid = computed(() => {
     // Each ingredient group must have a name
     for (let i = 0; i < formData.value.ingredient_groups.length; i++) {
       const group = formData.value.ingredient_groups[i]
-      if (!group.name || group.name.trim().length === 0) {
+      if (!group || !group.name || group.name.trim().length === 0) {
         validationErrors.value.push(`Ingredient group ${i + 1} must have a name`)
       }
 
       // Each ingredient must have a name
-      if (group.items && group.items.length > 0) {
+      if (group?.items && group.items.length > 0) {
         for (let j = 0; j < group.items.length; j++) {
-          if (!group.items[j].name || group.items[j].name.trim().length === 0) {
+          const item = group.items[j]
+          if (!item || !item.name || item.name.trim().length === 0) {
             validationErrors.value.push(`Ingredient ${j + 1} in group "${group.name || i + 1}" must have a name`)
           }
         }
@@ -252,7 +253,7 @@ const isValid = computed(() => {
     }
 
     // At least one group must have ingredients
-    if (!formData.value.ingredient_groups.some(g => g.items && g.items.length > 0)) {
+    if (!formData.value.ingredient_groups.some(g => g?.items && g.items.length > 0)) {
       validationErrors.value.push('At least one ingredient is required')
     }
   }
@@ -261,12 +262,10 @@ const isValid = computed(() => {
   if (!formData.value.steps || formData.value.steps.length === 0) {
     validationErrors.value.push('At least one step is required')
   } else {
-    // Each step must have instructions in the current language
+    // Each step must have instructions
     for (let i = 0; i < formData.value.steps.length; i++) {
       const step = formData.value.steps[i]
-      const lang = formData.value.language || 'en'
-      if (!step.instructions || !step.instructions[lang] ||
-          step.instructions[lang].trim().length === 0) {
+      if (!step || !step.instruction || step.instruction.trim().length === 0) {
         validationErrors.value.push(`Step ${i + 1} must have instructions`)
       }
     }
@@ -274,13 +273,13 @@ const isValid = computed(() => {
 
   // Optional: Timing validation (if provided, must be non-negative)
   if (formData.value.timing) {
-    if (formData.value.timing.prep_minutes < 0) {
+    if (formData.value.timing.prep_minutes != null && formData.value.timing.prep_minutes < 0) {
       validationErrors.value.push('Prep time cannot be negative')
     }
-    if (formData.value.timing.cook_minutes < 0) {
+    if (formData.value.timing.cook_minutes != null && formData.value.timing.cook_minutes < 0) {
       validationErrors.value.push('Cook time cannot be negative')
     }
-    if (formData.value.timing.total_minutes < 0) {
+    if (formData.value.timing.total_minutes != null && formData.value.timing.total_minutes < 0) {
       validationErrors.value.push('Total time cannot be negative')
     }
   }
@@ -819,7 +818,7 @@ onMounted(async () => {
                 </label>
                 <InputText
                   :id="'ingredient-notes-' + groupIndex + '-' + itemIndex"
-                  v-model="item.notes"
+                  v-model="item.preparation"
                   :placeholder="$t('forms.recipe.ingredientNotesPlaceholder')"
                   class="recipe-form__input"
                 />
@@ -916,7 +915,7 @@ onMounted(async () => {
             </div>
           </div>
           <Textarea
-            v-model="step.instructions[formData.language!]"
+            v-model="step.instruction"
             :placeholder="$t('forms.recipe.stepInstruction')"
             rows="3"
             class="recipe-form__step-instruction"

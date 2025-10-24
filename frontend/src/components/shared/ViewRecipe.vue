@@ -29,10 +29,7 @@ const hasEquipment = computed(() => {
 })
 
 const hasSteps = computed(() => {
-  return props.recipe.steps?.some(s => {
-    if (typeof s === 'string') return s.trim().length > 0
-    return s.instructions?.[props.recipe.language || 'en']?.trim().length > 0
-  })
+  return props.recipe.steps?.some(s => s.instruction?.trim().length > 0)
 })
 
 const formattedServings = computed(() => {
@@ -63,7 +60,7 @@ function formatIngredient(item: any): string {
   if (item.unit) parts.push(item.unit)
   if (item.name) parts.push(item.name)
   let result = parts.join(' ')
-  if (item.notes) result += ` (${item.notes})`
+  if (item.preparation) result += ` (${item.preparation})`
   if (item.optional) result += ' (optional)'
   return result
 }
@@ -143,7 +140,7 @@ function formatIngredient(item: any): string {
         <h2>{{ $t('recipe.view.instructions') }}</h2>
         <ol class="steps-list">
           <li v-for="(step, index) in recipe.steps" :key="index">
-            {{ typeof step === 'string' ? step : (step.instructions?.[recipe.language || 'en'] || step.instructions?.en || '') }}
+            {{ step.instruction }}
           </li>
         </ol>
       </div>
