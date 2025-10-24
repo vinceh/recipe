@@ -865,11 +865,12 @@ Write comprehensive GIVEN/WHEN/THEN acceptance criteria for auto-triggered trans
 - [x] Commit test files
 
 **Step 3: Verify Serializers Work with Locale Context**
-- [ ] Test RecipeSerializer methods automatically pick up I18n.locale via Mobility
-- [ ] Verify translated fields work (recipe.name, ingredient_group.name, recipe_ingredient.ingredient_name/preparation_notes, recipe_step.instruction_original)
-- [ ] Test fallback chain behavior (ja→en, zh-tw→zh-cn→en, etc.)
-- [ ] Confirm no code changes needed (Mobility handles translation automatically)
-- [ ] Document findings
+- [x] Test RecipeSerializer methods automatically pick up I18n.locale via Mobility
+- [x] Verify translated fields work (recipe.name, ingredient_group.name, recipe_ingredient.ingredient_name/preparation_notes, recipe_step.instruction_original)
+- [x] Test fallback chain behavior (ja→en, zh-tw→zh-cn→en, etc.)
+- [x] Confirm no code changes needed (Mobility handles translation automatically)
+- [x] Document findings in phase-6-step-3-findings.md
+- [x] Commit verification document
 
 **Step 4: Add Translation Status to API Responses**
 - [ ] Update admin_recipe_json methods in Admin::RecipesController to include translations_completed and last_translated_at
