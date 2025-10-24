@@ -68,7 +68,10 @@
     "signIn": "Se connecter",
     "signInSubtitle": "Connectez-vous pour continuer",
     "backToHome": "Retour à l'accueil",
-    "loginError": "Échec de la connexion. Veuillez vérifier vos identifiants."
+    "loginError": "Échec de la connexion. Veuillez vérifier vos identifiants.",
+    "adminLogin": "Connexion Administrateur",
+    "adminSignInSubtitle": "Connectez-vous pour accéder au tableau de bord administrateur",
+    "adminAccessRequired": "Accès administrateur requis"
   },
   "forms": {
     "recipe": {

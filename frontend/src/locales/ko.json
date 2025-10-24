@@ -68,7 +68,10 @@
     "signIn": "로그인",
     "signInSubtitle": "로그인하여 계속하기",
     "backToHome": "홈으로 돌아가기",
-    "loginError": "로그인에 실패했습니다. 인증 정보를 확인해주세요."
+    "loginError": "로그인에 실패했습니다. 인증 정보를 확인해주세요.",
+    "adminLogin": "관리자 로그인",
+    "adminSignInSubtitle": "관리자 대시보드에 접근하려면 로그인하세요",
+    "adminAccessRequired": "관리자 액세스가 필요합니다"
   },
   "forms": {
     "recipe": {

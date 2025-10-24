@@ -68,7 +68,10 @@
     "signIn": "登录",
     "signInSubtitle": "登录以继续",
     "backToHome": "返回首页",
-    "loginError": "登录失败。请检查您的凭证。"
+    "loginError": "登录失败。请检查您的凭证。",
+    "adminLogin": "管理员登录",
+    "adminSignInSubtitle": "登录以访问管理员仪表板",
+    "adminAccessRequired": "需要管理员访问权限"
   },
   "forms": {
     "recipe": {

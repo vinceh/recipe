@@ -68,7 +68,10 @@
     "signIn": "ログイン",
     "signInSubtitle": "ログインして続行",
     "backToHome": "ホームに戻る",
-    "loginError": "ログインに失敗しました。認証情報を確認してください。"
+    "loginError": "ログインに失敗しました。認証情報を確認してください。",
+    "adminLogin": "管理者ログイン",
+    "adminSignInSubtitle": "管理者ダッシュボードにアクセスするにはサインインしてください",
+    "adminAccessRequired": "管理者アクセスが必要です"
   },
   "forms": {
     "recipe": {

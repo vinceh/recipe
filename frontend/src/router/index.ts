@@ -25,6 +25,11 @@ const router = createRouter({
       component: () => import('../views/LoginView.vue'),
     },
     {
+      path: '/admin/login',
+      name: 'admin-login',
+      component: () => import('../views/admin/AdminLoginView.vue'),
+    },
+    {
       path: '/admin',
       component: AdminLayout,
       meta: { requiresAdmin: true },
@@ -93,11 +98,17 @@ router.beforeEach(async (to, from, next) => {
     await userStore.initialize()
   }
 
+  // Redirect authenticated admins away from admin login page
+  if (to.name === 'admin-login' && userStore.isAuthenticated && userStore.isAdmin) {
+    next({ name: 'admin-dashboard' })
+    return
+  }
+
   // Check if route requires admin access
   if (to.meta.requiresAdmin) {
     if (!userStore.isAuthenticated) {
-      // Not logged in, redirect to login
-      next({ name: 'login', query: { redirect: to.fullPath } })
+      // Not logged in, redirect to admin login
+      next({ name: 'admin-login', query: { redirect: to.fullPath } })
     } else if (!userStore.isAdmin) {
       // Logged in but not admin, redirect to home
       next({ name: 'home' })

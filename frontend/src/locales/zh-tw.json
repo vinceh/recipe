@@ -68,7 +68,10 @@
     "signIn": "登入",
     "signInSubtitle": "登入以繼續",
     "backToHome": "返回首頁",
-    "loginError": "登入失敗。請檢查您的憑證。"
+    "loginError": "登入失敗。請檢查您的憑證。",
+    "adminLogin": "管理員登入",
+    "adminSignInSubtitle": "登入以存取管理員儀表板",
+    "adminAccessRequired": "需要管理員存取權限"
   },
   "forms": {
     "recipe": {

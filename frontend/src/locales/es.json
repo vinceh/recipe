@@ -68,7 +68,10 @@
     "signIn": "Iniciar sesión",
     "signInSubtitle": "Inicie sesión para continuar",
     "backToHome": "Volver al inicio",
-    "loginError": "Error al iniciar sesión. Verifique sus credenciales."
+    "loginError": "Error al iniciar sesión. Verifique sus credenciales.",
+    "adminLogin": "Acceso de administrador",
+    "adminSignInSubtitle": "Inicie sesión para acceder al panel de administración",
+    "adminAccessRequired": "Se requiere acceso de administrador"
   },
   "forms": {
     "recipe": {
