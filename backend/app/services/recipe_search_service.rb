@@ -66,8 +66,8 @@ class RecipeSearchService
     return recipes unless min_calories.present? || max_calories.present?
 
     recipes = recipes.joins(:recipe_nutrition)
-    recipes = recipes.where("recipe_nutrition.calories >= ?", min_calories.to_f) if min_calories.present?
-    recipes = recipes.where("recipe_nutrition.calories <= ?", max_calories.to_f) if max_calories.present?
+    recipes = recipes.where("recipe_nutritions.calories >= ?", min_calories.to_f) if min_calories.present?
+    recipes = recipes.where("recipe_nutritions.calories <= ?", max_calories.to_f) if max_calories.present?
     recipes
   end
 
@@ -77,7 +77,7 @@ class RecipeSearchService
 
     recipes = recipes.all if recipes.is_a?(Class)
     recipes.joins(:recipe_nutrition)
-           .where("recipe_nutrition.protein_g >= ?", min_protein.to_f)
+           .where("recipe_nutritions.protein_g >= ?", min_protein.to_f)
   end
 
   # AC-SEARCH-006: Filter by maximum carbs
@@ -86,7 +86,7 @@ class RecipeSearchService
 
     recipes = recipes.all if recipes.is_a?(Class)
     recipes.joins(:recipe_nutrition)
-           .where("recipe_nutrition.carbs_g <= ?", max_carbs.to_f)
+           .where("recipe_nutritions.carbs_g <= ?", max_carbs.to_f)
   end
 
   # AC-SEARCH-007: Filter by maximum fat
@@ -95,7 +95,7 @@ class RecipeSearchService
 
     recipes = recipes.all if recipes.is_a?(Class)
     recipes.joins(:recipe_nutrition)
-           .where("recipe_nutrition.fat_g <= ?", max_fat.to_f)
+           .where("recipe_nutritions.fat_g <= ?", max_fat.to_f)
   end
 
   # AC-SEARCH-008: Filter by multiple dietary tags (AND logic)
