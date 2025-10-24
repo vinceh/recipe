@@ -388,7 +388,88 @@
 
 ## Phase 7: Frontend Integration
 
-*ACs to be written in Phase 7*
+### AC-PHASE7-001: Recipe List View - Display New API Response Fields
+**GIVEN** frontend receives API response with new fields (translations_completed, last_translated_at, dietary_tags array)
+**WHEN** recipe list is rendered
+**THEN** should display recipe names, servings, timing information
+**AND** should display dietary_tags as a list
+**AND** should display pagination controls correctly
+
+### AC-PHASE7-002: Recipe Detail View - Display Ingredient Groups Structure
+**GIVEN** frontend receives recipe detail API response with ingredient_groups array
+**WHEN** ingredients section is rendered
+**THEN** should group ingredients by ingredient_group.name
+**THEN** within each group, display items with name, amount, unit, preparation
+**AND** should handle optional ingredients (mark as optional if present)
+
+### AC-PHASE7-003: Recipe Detail View - Display Recipe Steps
+**GIVEN** frontend receives recipe detail API response with recipe_steps array
+**WHEN** steps section is rendered
+**THEN** should display steps in order (step_number)
+**AND** each step should show: step number, instruction text
+**AND** should handle null instructions gracefully
+
+### AC-PHASE7-004: Recipe Detail View - Display Equipment and Tags
+**GIVEN** frontend receives recipe detail API response with equipment, dietary_tags, cuisines, dish_types, recipe_types arrays
+**WHEN** recipe metadata section is rendered
+**THEN** should display equipment as a list
+**AND** should display dietary_tags as tags/badges
+**AND** should display cuisines as tags/badges
+**AND** should display dish_types as tags/badges
+**AND** should display recipe_types as tags/badges
+**AND** should handle empty arrays gracefully
+
+### AC-PHASE7-005: Language Parameter - Query Parameter Supported
+**GIVEN** frontend has a language selection (en, ja, ko, zh-tw, zh-cn, es, fr)
+**WHEN** API call is made to getRecipes() or getRecipe()
+**THEN** should include ?lang=<selected_language> query parameter
+**AND** should use Accept-Language header as fallback if lang parameter not provided
+
+### AC-PHASE7-006: Language Switching - State Update and API Refetch
+**GIVEN** user is on recipe list or detail page with translations in language X
+**WHEN** user changes language to Y via language switcher
+**THEN** should call API with ?lang=Y parameter
+**AND** should update component state with new translated data
+**AND** should re-render page with translations in language Y
+
+### AC-PHASE7-007: List View Filtering and Search - Works with New API
+**GIVEN** frontend has search and filter functionality (name search, dietary_tags filter, etc.)
+**WHEN** user performs search or filter
+**THEN** should call API with search/filter parameters
+**AND** pagination should work correctly
+**AND** results should display with correct translations for current language
+
+### AC-PHASE7-008: Type Safety - TypeScript Types Match API Responses
+**GIVEN** API returns new response structures (ingredient_groups, recipe_steps, etc.)
+**WHEN** frontend code is compiled with TypeScript
+**THEN** should have no type errors
+**AND** types for Recipe, RecipeDetail, IngredientGroup, RecipeStep should exist
+**AND** types should include new fields: translations_completed, last_translated_at
+
+### AC-PHASE7-009: Error Handling - API Failures Handled Gracefully
+**GIVEN** API returns error response or times out
+**WHEN** recipe list or detail page is displayed
+**THEN** should show error message to user
+**AND** should not crash or display broken state
+
+### AC-PHASE7-010: Multi-Language Support - All 7 Languages Render Correctly
+**GIVEN** backend returns translations in all 7 languages (en, ja, ko, zh-tw, zh-cn, es, fr)
+**WHEN** user selects each language
+**THEN** should display recipe names, ingredients, steps, tags in selected language
+**AND** should display special characters correctly (Japanese, Chinese, etc.)
+**AND** should handle right-to-left text if applicable
+
+### AC-PHASE7-011: API Client - Accept-Language Header Format
+**GIVEN** frontend has not set explicit ?lang parameter
+**WHEN** API call is made
+**THEN** should include Accept-Language header (if implemented)
+**AND** header format should follow RFC 7231 (e.g., "en-US,en;q=0.9,ja;q=0.8")
+
+### AC-PHASE7-012: Pagination - Works with Language Parameter
+**GIVEN** user is viewing page 2 of recipes in language X
+**WHEN** user changes language to Y
+**THEN** API should be called with both ?lang=Y and ?page=2 parameters
+**AND** pagination state should be maintained across language change
 
 ---
 
