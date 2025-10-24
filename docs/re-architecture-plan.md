@@ -610,22 +610,139 @@ end
 - [x] Commit fixes: `[Phase 4] Step 6: Fix N+1 query and test mocking issues in TranslateRecipeJob`
 - ⏳ **READY FOR APPROVAL** before Step 7
 
-**Step 7: Update Documentation**
-- [ ] Update `docs/api-reference.md`:
-  - Document locale parameter handling in API requests
-  - Document Accept-Language header support
-  - Show examples of translated responses
-  - Explain fallback behavior
-- [ ] Update `docs/new_claude/architecture.md`:
-  - Explain Mobility integration architecture
-  - Document Table backend usage with existing translation tables
-  - Explain locale switching patterns
-  - Document fallback chain configuration
-  - Show code examples for reading/writing translations
-- [ ] Add section on translation workflow
-- [ ] Commit documentation updates
+**Step 7: Update Documentation** 📚 COMPREHENSIVE AUDIT REQUIRED
+- [ ] **BACKEND ARCHITECTURE & I18N SYSTEM**
+  - [ ] `docs/new_claude/i18n-workflow.md` - MAJOR UPDATE
+    - [ ] Replace "Static YAML-only translations" with "Mobility + YAML hybrid approach"
+    - [ ] Add "Dynamic Recipe Translation System" section explaining Mobility tables
+    - [ ] Add "TranslateRecipeJob Workflow" section with:
+      - [ ] Job trigger (recipe creation)
+      - [ ] RecipeTranslator service flow
+      - [ ] Mobility.with_locale translation storage (all 6 non-English languages)
+      - [ ] Translation completion flag update
+    - [ ] Add "Translated Models & Fields" section documenting which models/fields are translatable:
+      - [ ] Recipe.name
+      - [ ] IngredientGroup.name
+      - [ ] RecipeIngredient (ingredient_name, preparation_notes)
+      - [ ] RecipeStep (instruction_original, instruction_easier, instruction_no_equipment)
+      - [ ] Equipment.canonical_name
+      - [ ] DataReference.display_name
+    - [ ] Add "Locale Switching with Mobility" section with code examples
+    - [ ] Add "Fallback Chain" section (ja→en, ko→en, zh-tw→zh-cn→en, zh-cn→zh-tw→en, es→en, fr→en)
+    - [ ] Add "Reading Translations" section with examples (I18n.with_locale, Mobility.with_locale)
+    - [ ] Add "Writing Translations" section with examples
+    - [ ] Add "Translation API Endpoint Behavior" subsection
+
+  - [ ] `docs/new_claude/architecture.md` - MOBILITY SECTION UPDATE
+    - [ ] Add "Mobility Translation System" section under Backend Architecture
+      - [ ] Table backend implementation
+      - [ ] Translation table relationships:
+        - [ ] Recipe → RecipeTranslation (one-to-many)
+        - [ ] IngredientGroup → IngredientGroupTranslation
+        - [ ] RecipeIngredient → RecipeIngredientTranslation
+        - [ ] RecipeStep → RecipeStepTranslation
+        - [ ] Equipment → EquipmentTranslation
+        - [ ] DataReference → DataReferenceTranslation
+      - [ ] `translates` declaration syntax and backend: :table configuration
+      - [ ] UUID foreign key support for Mobility
+      - [ ] Plugin configuration (reader, writer, query, fallbacks, presence, cache)
+    - [ ] Add code examples for:
+      - [ ] Reading translations in different locales
+      - [ ] Writing translations via Mobility
+      - [ ] Querying translated fields
+      - [ ] Fallback behavior when translations missing
+    - [ ] Add "TranslateRecipeJob Architecture" section with:
+      - [ ] Job diagram/flow
+      - [ ] apply_translations method documentation
+      - [ ] Nested model translation handling
+      - [ ] Eager loading strategy for N+1 prevention
+
+- [ ] **API DOCUMENTATION & RESPONSES**
+  - [ ] `docs/api-reference.md` - LOCALE-AWARE RESPONSE SECTION
+    - [ ] Add "Locale-Aware API Responses" section (before endpoint list)
+      - [ ] Document `?lang=XX` query parameter
+      - [ ] Document `Accept-Language` header support
+      - [ ] Explain fallback chain behavior in API responses
+      - [ ] Show response structure with translations
+    - [ ] Add "Examples with Different Locales" to existing endpoint documentation:
+      - [ ] GET /api/v1/recipes/:id with examples for ?lang=en, ?lang=ja, ?lang=ko
+      - [ ] GET /api/v1/recipes/:id/variants with locale parameter examples
+    - [ ] Document error responses with locale-aware error messages
+    - [ ] Add note about translation table structure to Reference section
+
+- [ ] **DEVELOPMENT WORKFLOWS & CHECKLISTS**
+  - [ ] `docs/new_claude/development-workflow.md` - TRANSLATION WORKFLOW SECTION
+    - [ ] Add "Mobility Translation Workflow" section under Backend Development
+    - [ ] Document how to test translations locally during development
+    - [ ] Add subsection: "Working with Translated Fields"
+      - [ ] How to read translations in tests
+      - [ ] How to write test translations via I18n.with_locale
+      - [ ] How to test fallback behavior
+    - [ ] Add subsection: "TranslateRecipeJob Testing"
+      - [ ] How to mock RecipeTranslator in tests
+      - [ ] How to verify translations stored in translation tables
+    - [ ] Add best practices for:
+      - [ ] Eager loading to prevent N+1 queries with translations
+      - [ ] Handling missing translations gracefully
+
+  - [ ] `docs/new_claude/pre-commit-checklist.md` - TRANSLATION VERIFICATION
+    - [ ] Add to Backend Pre-Commit Checklist:
+      - [ ] "Translation completeness check" section
+      - [ ] Verify translated fields have appropriate migration constraints
+      - [ ] If modifying translatable models, check migration strategy
+      - [ ] Run translation-related RSpec tests: `bundle exec rspec spec/models/translations/`
+
+  - [ ] `docs/new_claude/development-checklist.md` - PHASE 4 TASKS
+    - [ ] Find Phase 3.5 i18n setup section and add Phase 4 subsection
+    - [ ] Add tasks for:
+      - [ ] Install and configure Mobility gem
+      - [ ] Add translation declarations to models
+      - [ ] Create/update translation table migrations
+      - [ ] Write and run Mobility translation tests
+      - [ ] Implement TranslateRecipeJob
+      - [ ] Verify locale-aware API responses
+
+- [ ] **PROJECT OVERVIEW & ENTRY POINT**
+  - [ ] `docs/new_claude/project-overview.md` - MULTI-LINGUAL SECTION UPDATE
+    - [ ] Line 82-88: "Multi-lingual Translation" section
+      - [ ] Update to explain Mobility system for dynamic translation
+      - [ ] Mention TranslateRecipeJob background processing
+      - [ ] Explain translation storage in database tables (not JSONB)
+    - [ ] Line 90-96: "Internationalization (i18n)" section
+      - [ ] Clarify distinction between:
+        - [ ] Static i18n (YAML files for UI text, 7 languages)
+        - [ ] Dynamic translation (Mobility for recipe content, 6 languages)
+    - [ ] Add note about translation completeness requirement
+
+  - [ ] `docs/new_claude/entry.md` - REFERENCE UPDATES
+    - [ ] Verify quick navigation table references are still accurate
+    - [ ] Add note that i18n-workflow.md now covers both YAML and Mobility systems
+
+- [ ] **ACCEPTANCE CRITERIA DOCUMENTATION**
+  - [ ] `docs/new_claude/re-arch-ACs.md` - PHASE 4 AC SECTION
+    - [ ] Find line 375-377 "Phase 4: Mobility Translation System - ACs to be written"
+    - [ ] Replace with comprehensive Phase 4 ACs from Phase 4 Step 1 (already written)
+    - [ ] Include sections for:
+      - [ ] Mobility installation and gem configuration
+      - [ ] Model translation declarations
+      - [ ] Translated field behavior and read/write operations
+      - [ ] Fallback chain behavior
+      - [ ] Querying translated fields
+      - [ ] Locale switching
+      - [ ] Translation table structure and relationships
+      - [ ] Migration strategy for translatable columns
+      - [ ] N+1 query prevention with eager loading
+      - [ ] TranslateRecipeJob behavior
+
+- [ ] **FINAL DOCUMENTATION REVIEW**
+  - [ ] Cross-reference check: Ensure all docs link to each other correctly
+  - [ ] Consistency check: Verify terminology is consistent across all docs
+  - [ ] Code example validation: Ensure all code samples are accurate
+  - [ ] Remove any outdated references to non-existent translation fields/JSONB columns
+
+- [ ] Commit documentation updates: `[Phase 4] Step 7: Complete - Update all documentation for Mobility translation system`
 - [ ] Run code-quality-auditor sub-agent review
-- [ ] Address any issues
+- [ ] Address any issues identified
 - [ ] Request approval before Step 8
 
 **Step 8: Final Review & Phase 4 Completion**
