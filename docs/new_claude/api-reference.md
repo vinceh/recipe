@@ -2540,7 +2540,15 @@ POST /admin/recipes/:id/regenerate_translations
 
 ##### Description
 
-Queues regeneration of all translations for a recipe.
+Manually triggers translation regeneration for a recipe, bypassing rate limiting and deduplication.
+
+**Behavior:**
+- Bypasses rate limiting (4 translations per hour)
+- Bypasses deduplication (does not check for existing jobs)
+- Directly enqueues `TranslateRecipeJob.perform_later(recipe.id)`
+- Always enqueues immediately
+
+**Use case:** Manual rerun when translations need regeneration
 
 ##### Path Parameters
 
@@ -2576,9 +2584,9 @@ curl -X POST http://localhost:3000/admin/recipes/1/regenerate_translations \
 
 ##### Notes
 
-- Acceptance Criteria: AC-ADMIN-008
-- Marks translations as incomplete to trigger regeneration
-- Actual translation service to be implemented
+- Acceptance Criteria: AC-ADMIN-008, AC-PHASE5-MANUAL-001, AC-PHASE5-MANUAL-002
+- Bypasses auto-triggered translation constraints (rate limiting, deduplication)
+- Enqueues job immediately regardless of recent translation history
 
 ##### Related Endpoints
 

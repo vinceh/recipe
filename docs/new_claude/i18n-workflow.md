@@ -210,7 +210,111 @@ end
 
 ---
 
-## 4. Adding New UI Translations
+## 4. Auto-Triggered Translation Workflow
+
+**Trigger:** Recipe creation or update (via `after_commit` callbacks)
+
+### Recipe Creation Flow
+
+**Process:**
+1. `after_commit :enqueue_translation_on_create`
+2. Immediately enqueue `TranslateRecipeJob.perform_later(id)`
+3. No rate limiting applied
+4. No deduplication check
+
+### Recipe Update Flow
+
+**Process:**
+1. `after_commit :enqueue_translation_on_update`
+2. Check for existing translation jobs: `has_translation_job_with_recipe_id?`
+3. If existing job found:
+   - Check if job is running: `has_running_translation_job?`
+   - If NOT running: Delete pending job via `delete_pending_translation_job`
+   - If running: Keep running job (never interrupt)
+4. Schedule new job at next available time: `schedule_translation_at_next_available_time`
+
+### Deduplication Logic
+
+**Purpose:** Ensure latest recipe data wins, prevent queue buildup
+
+**Delete pending jobs when:**
+- Existing translation job exists for this recipe
+- Job is NOT currently running (no `claimed_execution` record)
+
+**Never delete:**
+- Jobs with `claimed_execution` (currently executing)
+
+**Implementation:**
+```ruby
+SolidQueue::Job.where(class_name: 'TranslateRecipeJob')
+  .where('arguments->0 = ?', recipe_id)
+  .where(finished_at: nil)
+  .joins("LEFT JOIN solid_queue_claimed_executions ON solid_queue_jobs.id = solid_queue_claimed_executions.job_id")
+  .where('solid_queue_claimed_executions.job_id IS NULL')
+  .destroy_all
+```
+
+### Rate Limiting
+
+**Limit:** 4 translations per recipe per hour (rolling window)
+
+**Window:** 1 hour (3600 seconds) from `finished_at` timestamp
+
+**Count method:**
+```ruby
+SolidQueue::Job.where(class_name: 'TranslateRecipeJob')
+  .where('arguments->0 = ?', recipe_id)
+  .where('finished_at > ?', Time.current - 3600.seconds)
+  .where.not(finished_at: nil)
+  .count
+```
+
+**Scheduling logic:**
+
+If rate limit NOT exceeded:
+- Immediate enqueue: `TranslateRecipeJob.perform_later(id)`
+
+If rate limit exceeded:
+- Get oldest completed job in window: `get_oldest_completed_translation_job_in_window`
+- Calculate delay: `oldest_job.finished_at + 3601.seconds - Time.current`
+- Delay cannot be negative: `delay = [0, calculated_delay].max`
+- Schedule with delay: `TranslateRecipeJob.set(wait: delay.seconds).perform_later(id)`
+
+**Window scope:** Only counts jobs within 1-hour window
+
+### Helper Methods
+
+**`has_translation_job_with_recipe_id?`**
+- Checks if any translation job exists for this recipe
+- Returns `false` if SolidQueue unavailable
+
+**`has_running_translation_job?`**
+- Checks if job has `claimed_execution` and `finished_at IS NULL`
+- Returns `false` if SolidQueue unavailable
+
+**`get_oldest_completed_translation_job_in_window`**
+- Returns oldest completed job within 1-hour window
+- Used to calculate next available schedule time
+- Returns `nil` if no jobs in window or SolidQueue unavailable
+
+**`job_queue_available?`**
+- Checks `SolidQueue::Job` class exists and table exists
+- Prevents errors in test environment or before migrations
+
+### Manual Regenerate Endpoint
+
+**Endpoint:** `POST /admin/recipes/:id/regenerate_translations`
+
+**Behavior:**
+- Bypasses rate limiting (directly calls `TranslateRecipeJob.perform_later`)
+- Bypasses deduplication (does not check for existing jobs)
+- Always enqueues immediately
+
+**Use case:** Manual rerun when translations need regeneration
+
+---
+
+## 5. Adding New UI Translations
 
 ### Step 1: Add English (source of truth)
 
@@ -499,3 +603,4 @@ Output shows missing keys per locale.
 - [Mobility Gem](https://github.com/shioyama/mobility) - Translation system
 - [development-checklist.md](./development-checklist.md) - Phase 4 i18n tasks
 - [architecture.md](./architecture.md) - Mobility architecture details
+- [re-arch-ACs.md](../re-arch-ACs.md) - Phase 5 acceptance criteria (AC-PHASE5-*)

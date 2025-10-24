@@ -362,7 +362,7 @@ Generates translations for recipe content via Claude API. Used by TranslateRecip
 ## Background Jobs
 
 ### TranslateRecipeJob
-**Trigger:** Recipe creation
+**Trigger:** Recipe creation or update (via `after_commit` callbacks)
 
 **Process:**
 1. Load recipe with eager-loaded associations
@@ -372,9 +372,41 @@ Generates translations for recipe content via Claude API. Used by TranslateRecip
    - Store in Mobility translation tables via I18n.with_locale
 4. Set recipe.translations_completed = true
 
-**Queue:** default (Sidekiq)
+**Queue:** default (SolidQueue)
 
-**Retry:** On error, logs and re-raises for Sidekiq retry
+**Retry:** On error, logs and re-raises for SolidQueue retry
+
+### Recipe Translation Callbacks
+
+**Location:** `app/models/recipe.rb`
+
+**Callbacks:**
+```ruby
+after_commit :enqueue_translation_on_create, on: :create
+after_commit :enqueue_translation_on_update, on: :update
+```
+
+**Create callback behavior:**
+- Immediately enqueue `TranslateRecipeJob.perform_later(id)`
+- No rate limiting
+- No deduplication check
+
+**Update callback behavior:**
+1. Check for existing translation jobs: `has_translation_job_with_recipe_id?`
+2. If existing job found:
+   - Check if job is running: `has_running_translation_job?`
+   - If NOT running: Delete pending job via `delete_pending_translation_job`
+   - If running: Keep running job (never interrupt)
+3. Schedule new job: `schedule_translation_at_next_available_time`
+4. Apply rate limiting (4 translations per recipe per hour, rolling window)
+5. If rate limited: Schedule with delay
+6. If not rate limited: Schedule immediately
+
+**SolidQueue integration:**
+- Queries `solid_queue_jobs` table for job detection
+- Queries `solid_queue_claimed_executions` to detect running jobs
+- Uses JSONB `arguments` field to filter by recipe ID
+- Safe error handling when SolidQueue unavailable
 
 ---
 
