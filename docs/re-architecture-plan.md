@@ -768,26 +768,65 @@ end
 
 ---
 
-### Phase 5: Translation System & Background Jobs
+### Phase 5: Auto-Triggered Translation Workflow
 
 **BEFORE starting development:**
-Write comprehensive GIVEN/WHEN/THEN acceptance criteria for translation jobs and background processing in `docs/new_claude/acceptance-criteria.md`.
+Write comprehensive GIVEN/WHEN/THEN acceptance criteria for auto-triggered translation workflow in `docs/new_claude/acceptance-criteria.md`.
 
-1. Refactor `TranslateRecipeJob` to use Mobility instead of JSONB
-2. Update `StepVariantGenerator` to generate variants in source language first
-3. Update `RecipeTranslator` service to use `Mobility.with_locale`
-4. Add `after_commit` callback to Recipe model to trigger translation jobs
-5. Test translation workflow end-to-end
+**Background Context:**
+- ✅ TranslateRecipeJob already uses Mobility (completed in Phase 4)
+- ✅ RecipeTranslator already uses Mobility.with_locale (completed in Phase 4)
+- ✅ 110 translation tests passing (completed in Phase 4)
 
-Update `docs/api-reference.md` to show locale parameter handling.
+**Step 1: Write Acceptance Criteria**
+- [ ] Define callback behavior (create vs update)
+- [ ] Define rate limiting behavior (4 translations per hour on updates)
+- [ ] Define deduplication behavior
+- [ ] Define manual regenerate bypass behavior
+- [ ] Run @acceptance-test-writing skill to review
+- [ ] Update ACs based on recommendations
+- [ ] Commit ACs
 
-Update `docs/new_claude/architecture.md` job callback patterns.
+**Step 2: Add database migration**
+- [ ] Create migration to add `last_translated_at` timestamp to recipes table
+- [ ] Run migration
+- [ ] Commit migration
 
-Create `docs/i18n-workflow.md` explaining translation system.
+**Step 3: Implement callback with rate limiting and deduplication**
+- [ ] Add `after_commit :enqueue_translation_on_create, on: :create`
+- [ ] Add `after_commit :enqueue_translation_on_update, on: :update`
+- [ ] Implement `enqueue_translation_on_create` (no checks, just enqueue)
+- [ ] Implement `enqueue_translation_on_update` (with rate limit + deduplication checks)
+- [ ] Implement `translation_rate_limit_exceeded?` (max 4 per hour)
+- [ ] Implement `translation_job_pending?` (check SolidQueue for pending jobs)
+- [ ] Update TranslateRecipeJob to set `last_translated_at` on completion
+- [ ] Commit implementation
 
-**Deliverable**: Translation system working, jobs auto-trigger, documentation created
+**Step 4: Keep manual regenerate with bypass**
+- [ ] Verify regenerate_translations action exists in Admin::RecipesController
+- [ ] Ensure it bypasses rate limiting and deduplication
+- [ ] Commit any updates
 
-**End of Phase**: Write RSpec tests against Phase 5 ACs for translation jobs (verify variants generated, translations created)
+**Step 5: Write comprehensive tests**
+- [ ] Test: Recipe creation immediately enqueues job (no rate limit)
+- [ ] Test: Recipe update enqueues job (first time)
+- [ ] Test: Recipe update respects 4-per-hour rate limit
+- [ ] Test: Duplicate job not enqueued if one already pending
+- [ ] Test: Manual regenerate bypasses all limits
+- [ ] Test: Job completes and sets last_translated_at
+- [ ] Test: Job completes and sets translations_completed = true
+- [ ] All tests passing
+- [ ] Commit tests
+
+**Step 6: Update documentation**
+- [ ] Update `docs/i18n-workflow.md` with complete workflow (create, update, rate limiting, deduplication)
+- [ ] Update `docs/new_claude/architecture.md` with callback patterns
+- [ ] Update `docs/api-reference.md` with manual regenerate endpoint
+- [ ] Commit documentation
+
+**Deliverable**: Auto-triggered translation system with rate limiting and deduplication
+
+**End of Phase**: All RSpec tests pass, workflow works end-to-end
 
 ---
 
