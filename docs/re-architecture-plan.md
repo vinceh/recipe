@@ -611,27 +611,46 @@ end
 - ⏳ **READY FOR APPROVAL** before Step 7
 
 **Step 7: Update Documentation** 📚 COMPREHENSIVE AUDIT REQUIRED
+
+**Substep 7a: Create ai-doc-writing Skill** ✅ COMPLETE
+- [x] Research Oct 2025 LLM-friendly documentation best practices
+- [x] Define core principles: Completeness + Efficiency + Zero Fluff
+- [x] Create fluff detector script (Python, detects 20+ patterns)
+- [x] Create comprehensive style guide reference (8.1KB)
+- [x] Create SKILL.md with workflow, patterns, checklist
+- [x] Package skill: ai-doc-writing.zip (8.9KB)
+- [x] Commit: `.claude/skills/ai-doc-writing/`
+
+**Substep 7b: Refactor i18n-workflow.md** ✅ COMPLETE
+- [x] Refactor using ai-doc-writing skill
+- [x] Replace "Static YAML-only translations" with "Mobility + YAML hybrid approach"
+- [x] Add "Dynamic Recipe Translation System" section explaining Mobility tables
+- [x] Add "TranslateRecipeJob Workflow" section (Section 3) with:
+  - [x] Job trigger (recipe creation)
+  - [x] RecipeTranslator service flow
+  - [x] Mobility.with_locale translation storage (all 6 non-English languages)
+  - [x] Translation completion flag update
+  - [x] apply_translations method with full code
+- [x] Add "Translated Models & Fields" section (in Section 2) documenting:
+  - [x] Recipe.name
+  - [x] IngredientGroup.name
+  - [x] RecipeIngredient (ingredient_name, preparation_notes)
+  - [x] RecipeStep (instruction_original, instruction_easier, instruction_no_equipment)
+  - [x] Equipment.canonical_name
+  - [x] DataReference.display_name
+- [x] Add "Translation Tables" section showing schema
+- [x] Add "Fallback Chain" section (ja→en, ko→en, zh-tw→zh-cn→en, zh-cn→zh-tw→en, es→en, fr→en)
+- [x] Add "Reading Translations" section with code examples
+- [x] Add "Writing Translations" section with examples
+- [x] Run fluff detector: ✅ 0 critical errors, 2 minor warnings (false positives)
+- [x] Removed all meta-commentary (Author, Date, Version, Status)
+- [x] Replaced narrative prose with structured bullets/YAML
+- [x] Removed conversational language
+- [x] Reduced size by 19% (622 → 502 lines)
+- [x] Commit: `[Phase 4] Step 7: Refactor i18n-workflow.md using ai-doc-writing standards`
+
 - [ ] **BACKEND ARCHITECTURE & I18N SYSTEM**
-  - [ ] `docs/new_claude/i18n-workflow.md` - MAJOR UPDATE
-    - [ ] Replace "Static YAML-only translations" with "Mobility + YAML hybrid approach"
-    - [ ] Add "Dynamic Recipe Translation System" section explaining Mobility tables
-    - [ ] Add "TranslateRecipeJob Workflow" section with:
-      - [ ] Job trigger (recipe creation)
-      - [ ] RecipeTranslator service flow
-      - [ ] Mobility.with_locale translation storage (all 6 non-English languages)
-      - [ ] Translation completion flag update
-    - [ ] Add "Translated Models & Fields" section documenting which models/fields are translatable:
-      - [ ] Recipe.name
-      - [ ] IngredientGroup.name
-      - [ ] RecipeIngredient (ingredient_name, preparation_notes)
-      - [ ] RecipeStep (instruction_original, instruction_easier, instruction_no_equipment)
-      - [ ] Equipment.canonical_name
-      - [ ] DataReference.display_name
-    - [ ] Add "Locale Switching with Mobility" section with code examples
-    - [ ] Add "Fallback Chain" section (ja→en, ko→en, zh-tw→zh-cn→en, zh-cn→zh-tw→en, es→en, fr→en)
-    - [ ] Add "Reading Translations" section with examples (I18n.with_locale, Mobility.with_locale)
-    - [ ] Add "Writing Translations" section with examples
-    - [ ] Add "Translation API Endpoint Behavior" subsection
+  - [x] `docs/new_claude/i18n-workflow.md` - COMPLETE ✅
 
   - [ ] `docs/new_claude/architecture.md` - MOBILITY SECTION UPDATE
     - [ ] Add "Mobility Translation System" section under Backend Architecture
