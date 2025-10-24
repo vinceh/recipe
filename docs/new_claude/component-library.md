@@ -1,32 +1,6 @@
 # Component Library Documentation
 
-**Author:** V (with Claude Code)
-**Date:** 2025-10-08
-**Version:** 1.0
-**Status:** Living Document - **MUST BE UPDATED WITH EVERY NEW COMPONENT**
-
----
-
-## ⚠️ CRITICAL: Keeping This Document Updated
-
-**RULE: Every time a new component is created or modified, this document MUST be updated immediately.**
-
-### When to Update:
-- ✅ After creating any new component
-- ✅ After modifying component props or emits
-- ✅ After changing component behavior or functionality
-- ✅ After adding new slots or composables
-- ✅ After updating component styles or variants
-
-### What to Document:
-1. Component name and location
-2. Purpose and use case
-3. All props with types and defaults
-4. All emits with payload types
-5. All slots
-6. Usage examples (at least 2)
-7. Related components
-8. Notes and gotchas
+Update this document every time a component is created, modified, or removed. Each component must document: name, location, purpose, props, emits, slots, examples, related components, and notes.
 
 ---
 
@@ -1294,7 +1268,7 @@ interface Props {
 
 **Notes:**
 - Important considerations
-- Gotchas or limitations
+- limitations or limitations
 ```
 
 ---
@@ -1316,10 +1290,10 @@ interface Props {
 | RecipeForm | 📝 Placeholder | ⏳ Pending | - |
 
 **Legend:**
-- ✅ Defined - Component spec fully documented
-- 📝 Placeholder - Component not yet created
-- ⏳ Pending - Needs documentation
-- ❌ Outdated - Documentation out of sync
+- Defined - Component spec fully documented
+- Placeholder - Component not yet created
+- Pending - Needs documentation
+- Outdated - Documentation out of sync
 
 ---
 
@@ -1333,11 +1307,9 @@ Before marking any component work as "complete":
 - [ ] All slots are documented
 - [ ] At least 2 usage examples provided
 - [ ] Related components are listed
-- [ ] Notes section includes gotchas and best practices
+- [ ] Notes section includes limitations and best practices
 - [ ] Component status tracker is updated
 - [ ] `Last Updated` date is current
 
 ---
 
-**Last Updated:** 2025-10-08
-**Next Review:** Every component creation/update
