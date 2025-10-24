@@ -988,6 +988,8 @@ Write comprehensive GIVEN/WHEN/THEN acceptance criteria for auto-triggered trans
 - [x] Handle Accept-Language header as fallback (implemented via axios interceptor in api.ts)
 - [x] Support flexible ID types (string | number)
 - [x] Add lang parameter to scaleRecipe endpoint
+- [x] Run code-quality-auditor sub-agent review
+- [x] Address all identified issues
 - [x] Commit API client updates
 
 **Changes Made**:
@@ -995,7 +997,16 @@ Write comprehensive GIVEN/WHEN/THEN acceptance criteria for auto-triggered trans
 - `getRecipe(id, lang?)`: Added optional lang parameter
 - `scaleRecipe(id, payload, lang?)`: Added optional lang parameter
 - All endpoints support Accept-Language header fallback via axios interceptor
-- Documentation added explaining lang parameter behavior and fallback chain
+- Comprehensive JSDoc documentation with language resolution priority
+- Type safety: Added SupportedLanguage type union (en, ja, ko, zh-tw, zh-cn, es, fr)
+- Simplified params construction to let axios filter undefined values
+
+**Code Quality Audit Results**: ✅ PASSED (with improvements)
+- Fixed parameter design inconsistency across all methods
+- Added comprehensive JSDoc documentation
+- Added type safety for language codes
+- All recommendations from code-quality-auditor applied
+- No new type errors introduced (60 remaining, all component-level)
 
 **Step 5: Update Components - List View**
 - [ ] Update recipe list component to handle new fields
