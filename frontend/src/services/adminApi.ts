@@ -8,7 +8,8 @@ import type {
   ParseUrlPayload,
   CheckDuplicatesPayload,
   ApiResponse,
-  PaginationMeta
+  PaginationMeta,
+  SupportedLanguage
 } from './types'
 
 // Create a separate client for admin endpoints (not under /api/v1)
@@ -63,8 +64,9 @@ export const adminApi = {
     return data
   },
 
-  async getRecipe(id: string | number): Promise<ApiResponse<{ recipe: RecipeDetail }>> {
-    const { data } = await adminClient.get(getAdminUrl(`/recipes/${id}`))
+  async getRecipe(id: string | number, lang?: SupportedLanguage): Promise<ApiResponse<{ recipe: RecipeDetail }>> {
+    const params = lang ? { lang } : {}
+    const { data } = await adminClient.get(getAdminUrl(`/recipes/${id}`), { params })
     return data
   },
 

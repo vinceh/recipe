@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted, computed, watch } from 'vue'
 import { useRouter } from 'vue-router'
+import { useUiStore } from '@/stores'
 import PageHeader from '@/components/shared/PageHeader.vue'
 import EmptyState from '@/components/shared/EmptyState.vue'
 import ErrorMessage from '@/components/shared/ErrorMessage.vue'
@@ -8,6 +9,7 @@ import { adminApi } from '@/services/adminApi'
 import type { RecipeDetail, PaginationMeta } from '@/services/types'
 
 const router = useRouter()
+const uiStore = useUiStore()
 
 const recipes = ref<RecipeDetail[]>([])
 const pagination = ref<PaginationMeta | null>(null)
@@ -29,7 +31,8 @@ async function fetchRecipes() {
   try {
     const params: any = {
       page: currentPage.value,
-      per_page: perPage.value
+      per_page: perPage.value,
+      lang: uiStore.language
     }
 
     // Add search filter if set
@@ -44,7 +47,6 @@ async function fetchRecipes() {
       pagination.value = response.data.pagination
     }
   } catch (e) {
-    console.error('Fetch error:', e)
     error.value = e instanceof Error ? e : new Error('Failed to fetch recipes')
   } finally {
     loading.value = false
@@ -72,6 +74,12 @@ function viewRecipe(id: string | number) {
 function createRecipe() {
   router.push('/admin/recipes/new')
 }
+
+// Watch for language changes and refetch recipes
+watch(() => uiStore.language, () => {
+  currentPage.value = 1 // Reset to first page
+  fetchRecipes()
+})
 
 onMounted(() => {
   fetchRecipes()

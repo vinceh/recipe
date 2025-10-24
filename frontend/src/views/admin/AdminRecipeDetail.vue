@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted, computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { useUiStore } from '@/stores'
 import PageHeader from '@/components/shared/PageHeader.vue'
 import ErrorMessage from '@/components/shared/ErrorMessage.vue'
 import { adminApi } from '@/services/adminApi'
@@ -9,11 +10,11 @@ import { formatAmount } from '@/utils/ingredientFormatters'
 
 const route = useRoute()
 const router = useRouter()
+const uiStore = useUiStore()
 
 const recipe = ref<RecipeDetail | null>(null)
 const loading = ref(true)
 const error = ref<Error | null>(null)
-const selectedLanguage = ref<string>('')
 
 const recipeId = computed(() => route.params.id as string)
 
@@ -28,28 +29,8 @@ const availableLanguages = [
   { code: 'fr', name: 'Français (French)' }
 ]
 
-// Get the currently displayed recipe data (translated or original)
+// Get the currently displayed recipe data (API handles translation via lang parameter)
 const displayedRecipe = computed(() => {
-  if (!recipe.value) return null
-
-  // If no language selected or base language selected, return original
-  if (!selectedLanguage.value || selectedLanguage.value === (recipe.value as any).language) {
-    return recipe.value
-  }
-
-  // Check if translation exists
-  const translations = (recipe.value as any).translations
-  if (translations && translations[selectedLanguage.value]) {
-    // Merge translation with original recipe data
-    return {
-      ...recipe.value,
-      name: translations[selectedLanguage.value].name || (recipe.value as any).name,
-      ingredient_groups: translations[selectedLanguage.value].ingredient_groups || (recipe.value as any).ingredient_groups,
-      steps: translations[selectedLanguage.value].steps || (recipe.value as any).steps
-    }
-  }
-
-  // No translation available, return original
   return recipe.value
 })
 
@@ -58,12 +39,10 @@ async function fetchRecipe() {
   error.value = null
 
   try {
-    const response = await adminApi.getRecipe(recipeId.value)
+    const response = await adminApi.getRecipe(recipeId.value, uiStore.language)
 
     if (response.success && response.data) {
       recipe.value = response.data.recipe as any
-      // Initialize selected language to the recipe's base language
-      selectedLanguage.value = (recipe.value as any).language || 'en'
     }
   } catch (e) {
     error.value = e instanceof Error ? e : new Error('Failed to fetch recipe')
@@ -120,6 +99,11 @@ async function regenerateTranslations() {
   }
 }
 
+// Watch for language changes and refetch recipe with new language
+watch(() => uiStore.language, () => {
+  fetchRecipe()
+})
+
 onMounted(() => {
   fetchRecipe()
 })
@@ -158,24 +142,6 @@ onMounted(() => {
 
     <!-- Recipe content -->
     <div v-else-if="recipe" class="recipe-content">
-      <!-- Language Selector -->
-      <div class="language-selector-bar">
-        <div class="language-selector-label">
-          <i class="pi pi-globe"></i>
-          <span>View in:</span>
-        </div>
-        <select v-model="selectedLanguage" class="language-select">
-          <option v-for="lang in availableLanguages" :key="lang.code" :value="lang.code">
-            {{ lang.name }}
-            <span v-if="lang.code === (recipe as any).language">(Original)</span>
-          </option>
-        </select>
-        <div v-if="selectedLanguage !== (recipe as any).language" class="translation-indicator">
-          <i class="pi pi-info-circle"></i>
-          <span v-if="(recipe as any).translations?.[selectedLanguage]">Showing translation</span>
-          <span v-else class="warning">Translation not available - showing original</span>
-        </div>
-      </div>
       <!-- Nutrition Card -->
       <div v-if="(recipe as any).nutrition && (recipe as any).nutrition.per_serving" class="card">
         <div class="card-header">
@@ -628,71 +594,5 @@ onMounted(() => {
 
 .nutrition-note i {
   color: var(--color-primary);
-}
-
-.language-selector-bar {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
-  padding: var(--spacing-md) var(--spacing-lg);
-  background: var(--color-background);
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius-md);
-  margin-bottom: var(--spacing-lg);
-}
-
-.language-selector-label {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text);
-}
-
-.language-selector-label i {
-  color: var(--color-primary);
-  font-size: var(--font-size-lg);
-}
-
-.language-select {
-  padding: var(--spacing-sm) var(--spacing-md);
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius-sm);
-  background: var(--color-background);
-  color: var(--color-text);
-  font-size: var(--font-size-sm);
-  cursor: pointer;
-  transition: var(--transition-base);
-  min-width: 250px;
-}
-
-.language-select:hover {
-  border-color: var(--color-primary);
-}
-
-.language-select:focus {
-  outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.1);
-}
-
-.translation-indicator {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  padding: var(--spacing-xs) var(--spacing-md);
-  background: var(--color-background-secondary);
-  border-radius: var(--border-radius-sm);
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
-  margin-left: auto;
-}
-
-.translation-indicator i {
-  color: var(--color-primary);
-}
-
-.translation-indicator .warning {
-  color: var(--color-warning);
 }
 </style>
