@@ -102,7 +102,7 @@ RSpec.describe TranslateRecipeJob, type: :job do
 
     context 'when translation fails' do
       it 'logs error and re-raises exception' do
-        allow(Recipe).to receive(:find).and_raise(StandardError, 'Database error')
+        allow(Recipe).to receive_message_chain(:includes, :includes, :find).and_raise(StandardError, 'Database error')
         allow(Rails.logger).to receive(:error)
 
         expect {

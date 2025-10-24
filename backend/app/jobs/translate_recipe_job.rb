@@ -2,7 +2,11 @@ class TranslateRecipeJob < ApplicationJob
   queue_as :default
 
   def perform(recipe_id)
-    recipe = Recipe.find(recipe_id)
+    recipe = Recipe
+      .includes(ingredient_groups: :recipe_ingredients)
+      .includes(:recipe_steps, :equipment)
+      .find(recipe_id)
+
     translator = RecipeTranslator.new
 
     RecipeTranslator::LANGUAGES.keys.each do |lang|
