@@ -11,18 +11,5 @@ class User < ApplicationRecord
   has_many :favorite_recipes, through: :user_favorites, source: :recipe
 
   # Role enum (Rails 8 syntax)
-  enum :role, { user: 0, admin: 1 }
-
-  # Validations
-  validates :password, length: { minimum: 8 }, if: -> { password.present? }
-  validates :role, presence: true
-
-  # Default role to user
-  after_initialize :set_default_role, if: :new_record?
-
-  private
-
-  def set_default_role
-    self.role ||= :user
-  end
+  enum :role, { user: "user", admin: "admin" }
 end

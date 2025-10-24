@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :jwt_denylist do
-    sequence(:jti) { |n| "jwt_token_#{n}_#{SecureRandom.hex(16)}" }
-    exp { Time.current + 1.day }
+    jti { "MyString" }
+    exp { "2025-10-07 23:45:05" }
   end
 end
