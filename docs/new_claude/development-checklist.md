@@ -1,10 +1,5 @@
 # Recipe App - Development Checklist
 
-**Author:** V (with Winston, Architect Agent)
-**Date:** 2025-10-07
-**Version:** 1.0
-**Status:** Active
-
 ---
 
 ## Purpose
@@ -557,11 +552,68 @@ This is your **master checklist** for building the Recipe App MVP. Track progres
   - [x] Common translation patterns
   - [x] Troubleshooting guide
 
+### Phase 4: Mobility Translation System (Parallel) ✅ COMPLETE
+
+**Purpose:** Store dynamic recipe content translations (6 non-English languages) via Mobility gem and dedicated database tables.
+
+**Mobility Gem Setup** ✅
+- [x] Add `gem 'mobility', '~> 1.3.2'` to Gemfile
+- [x] Run `bundle install`
+- [x] Generate Mobility initializer: `rails generate mobility:install --without-tables`
+- [x] Configure `config/initializers/mobility.rb`:
+  - [x] Table backend with UUID foreign key support
+  - [x] Enable plugins: active_record, reader, writer, query, fallbacks, locale_accessors, presence, dirty, cache, backend_reader
+  - [x] Configure fallback chain: ja→en, ko→en, zh-tw→zh-cn→en, zh-cn→zh-tw→en, es→en, fr→en
+
+**Model Translations** ✅
+- [x] Recipe: `translates :name`
+- [x] IngredientGroup: `translates :name`
+- [x] RecipeIngredient: `translates :ingredient_name, :preparation_notes`
+- [x] RecipeStep: `translates :instruction_original, :instruction_easier, :instruction_no_equipment`
+- [x] Equipment: `translates :canonical_name`
+- [x] DataReference: `translates :display_name`
+
+**Translation Table Migrations** ✅
+- [x] Create RecipeTranslation table (recipe_id, locale, name)
+- [x] Create IngredientGroupTranslation table
+- [x] Create RecipeIngredientTranslation table
+- [x] Create RecipeStepTranslation table
+- [x] Create EquipmentTranslation table
+- [x] Create DataReferenceTranslation table
+- [x] Add UUID foreign keys and uniqueness constraints
+
+**RSpec Tests** ✅
+- [x] Write comprehensive Mobility translation tests (103 test cases)
+  - [x] Recipe translations (92 tests)
+  - [x] IngredientGroup translations (22 tests)
+  - [x] RecipeIngredient translations (16 tests)
+  - [x] Equipment translations (12 tests)
+  - [x] RecipeStep translations (18 tests)
+  - [x] DataReference translations (22 tests)
+- [x] Test reading, writing, querying, fallback behavior
+- [x] All 103 tests passing ✅
+
+**TranslateRecipeJob Implementation** ✅
+- [x] Create `TranslateRecipeJob` (app/jobs/translate_recipe_job.rb)
+- [x] Enqueue on recipe creation (via RecipeController callback)
+- [x] Load recipe with eager-loaded associations
+- [x] Instantiate RecipeTranslator service
+- [x] Translate to all 6 non-English languages via Claude API
+- [x] Store translations in Mobility translation tables via I18n.with_locale
+- [x] Set recipe.translations_completed = true
+- [x] Error handling with logging and retry
+- [x] N+1 query prevention with eager loading
+- [x] All 7 job tests passing ✅
+
+**Documentation** ✅
+- [x] Document Mobility architecture in `architecture.md`
+- [x] Document translation workflow in `i18n-workflow.md`
+- [x] Document TranslateRecipeJob in job comments
+
 ### Phase 3.5 Notes
-- **Not including Recipe Content Translation:** Recipe content translation (names, ingredients, steps) is handled separately via AI translation in Phase 2 (AC-TRANSLATE-001 through AC-TRANSLATE-009). This phase focuses on UI/system text only.
-- **RTL Not Required:** Right-to-left languages (Arabic, Hebrew) are not required for MVP (AC-I18N-018)
-- **Currency Not Required:** Currency formatting not needed for MVP (AC-I18N-009)
-- **Framework Choice:** Using Rails I18n for backend and Vue I18n v9 for frontend (composition API compatible)
+- **UI Translations (Vue I18n):** Phase 3.5 covers static UI text (buttons, labels, messages) in 7 languages
+- **Recipe Translations (Mobility):** Phase 4 covers dynamic recipe content (names, ingredients, steps) in 6 languages via AI
+- **Framework Choice:** Rails I18n for backend UI text, Vue I18n v9 for frontend UI, Mobility for recipe content
 - **Backend Implementation Status:**
   - ✅ Rails I18n configured in application.rb with 7 locales
   - ✅ I18n initializer created with missing translation handler
@@ -1156,4 +1208,3 @@ Before launch, verify all criteria are met:
 
 **End of Development Checklist**
 
-**Last Updated:** 2025-10-19
