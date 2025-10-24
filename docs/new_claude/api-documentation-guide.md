@@ -1,8 +1,5 @@
 # API Documentation Guide
 
-**Last Updated:** 2025-10-19
-**Purpose:** Guide for documenting API endpoints in api-reference.md
-
 ---
 
 ## When to Update API Documentation
@@ -10,12 +7,12 @@
 **CRITICAL: Update [api-reference.md](api-reference.md) when adding or modifying ANY endpoint.**
 
 You MUST update the API documentation whenever:
-- ✅ Adding a new API endpoint
-- ✅ Modifying an existing endpoint (request/response format)
-- ✅ Changing authentication requirements
-- ✅ Adding or removing query parameters
-- ✅ Changing error codes or messages
-- ✅ Updating validation rules
+- Adding a new API endpoint
+- Modifying an existing endpoint (request/response format)
+- Changing authentication requirements
+- Adding or removing query parameters
+- Changing error codes or messages
+- Updating validation rules
 
 ---
 
@@ -206,10 +203,10 @@ Don't assume developers will "figure it out."
 ### 2. Use Real Examples
 
 ```
-❌ BAD:
+**BAD:**
 "Returns an array of recipes"
 
-✅ GOOD:
+**GOOD:**
 {
   "recipes": [
     {
@@ -268,39 +265,39 @@ When you modify an endpoint:
 
 ## Common Mistakes to Avoid
 
-### ❌ Mistake 1: Not Testing Examples
+### Mistake 1: Not Testing Examples
 
 Don't copy-paste examples without testing. Broken examples frustrate developers.
 
-### ❌ Mistake 2: Incomplete Error Documentation
+### Mistake 2: Incomplete Error Documentation
 
 Don't just document 200 OK. Document 400, 401, 403, 404, 422, 500 cases.
 
-### ❌ Mistake 3: Vague Descriptions
+### Mistake 3: Vague Descriptions
 
 ```
-❌ BAD: "Creates a recipe"
+**BAD:** "Creates a recipe"
 
-✅ GOOD: "Creates a new recipe with ingredients, steps, and metadata.
+**GOOD:** "Creates a new recipe with ingredients, steps, and metadata.
 Admin only. Triggers background job to generate step variants."
 ```
 
-### ❌ Mistake 4: Missing Field Descriptions
+### Mistake 4: Missing Field Descriptions
 
 ```
-❌ BAD:
+**BAD:**
 {
   "servings": { "count": 4, "unit": "servings" }
 }
 
-✅ GOOD:
+**GOOD:**
 | Field | Type | Description |
 |-------|------|-------------|
 | `servings.count` | Integer | Number of servings this recipe makes |
 | `servings.unit` | String | Unit of servings (e.g., "servings", "cookies", "slices") |
 ```
 
-### ❌ Mistake 5: Not Updating TOC
+### Mistake 5: Not Updating TOC
 
 When adding endpoints, update the table of contents in api-reference.md.
 
@@ -329,7 +326,3 @@ Before marking API documentation complete:
 - **Speeds up development** - Frontend can work independently
 - **Improves onboarding** - New developers learn API quickly
 - **Documents decisions** - Captures the "why" behind design
-
----
-
-**Last Updated:** 2025-10-19
