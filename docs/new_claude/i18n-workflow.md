@@ -1,475 +1,363 @@
-# Internationalization (i18n) Workflow
+# Internationalization & Translation Workflow
 
-**Author:** V (with Claude Code)
-**Date:** 2025-10-08
-**Version:** 1.0
-**Status:** Living Document
-
----
-
-## Purpose
-
-This document explains how to work with internationalization in the Recipe App. It covers adding new translations, testing multilingual features, and maintaining 100% translation coverage across all 7 supported languages.
+Two complementary systems handle language support:
+- **Static i18n (YAML):** UI text, 7 languages, developer-maintained
+- **Dynamic translation (Mobility):** Recipe content, 6 languages, AI-generated
 
 ---
 
 ## Supported Languages
 
-The Recipe App supports 7 languages with 100% translation coverage:
+| Language | Code | Native | UI (YAML) | Recipes (Mobility) |
+|----------|------|--------|-----------|-------------------|
+| English | `en` | English | Yes | Yes |
+| Japanese | `ja` | 日本語 | Yes | Yes |
+| Korean | `ko` | 한국어 | Yes | Yes |
+| Traditional Chinese | `zh-tw` | 繁體中文 | Yes | Yes |
+| Simplified Chinese | `zh-cn` | 简体中文 | Yes | Yes |
+| Spanish | `es` | Español | Yes | Yes |
+| French | `fr` | Français | Yes | Yes |
 
-| Language | Code | Native Name | Flag |
-|----------|------|-------------|------|
-| English | `en` | English | 🇬🇧 |
-| Japanese | `ja` | 日本語 | 🇯🇵 |
-| Korean | `ko` | 한국어 | 🇰🇷 |
-| Traditional Chinese | `zh-tw` | 繁體中文 | 🇹🇼 |
-| Simplified Chinese | `zh-cn` | 简体中文 | 🇨🇳 |
-| Spanish | `es` | Español | 🇪🇸 |
-| French | `fr` | Français | 🇫🇷 |
-
-**CRITICAL:** ALL user-facing text must be translated into ALL 7 languages before committing.
+**Requirement:** 100% translation coverage for UI text (all 7 languages). Recipe translations auto-generated on creation.
 
 ---
 
-## Translation Architecture
+## 1. Static UI Translation (YAML)
 
-### Backend (Rails I18n)
+### Backend i18n
 
 **Location:** `backend/config/locales/`
 
-**Purpose:** Server-side translations for:
-- API response messages
-- Error messages
-- Email templates
-- Backend validation messages
-- System notifications
-
-**Files:**
-- `en.yml` - English (default)
-- `ja.yml` - Japanese
-- `ko.yml` - Korean
-- `zh-tw.yml` - Traditional Chinese
-- `zh-cn.yml` - Simplified Chinese
-- `es.yml` - Spanish
-- `fr.yml` - French
+**Files:** `en.yml`, `ja.yml`, `ko.yml`, `zh-tw.yml`, `zh-cn.yml`, `es.yml`, `fr.yml`
 
 **Namespaces:**
-- `common` - Shared UI strings (buttons, labels, messages)
+- `common` - Shared UI strings (buttons, labels)
 - `errors` - Validation and error messages
-- `navigation` - Navigation menus and links
+- `navigation` - Menu items and links
 - `forms` - Form labels and placeholders
-- `models` - Model attribute names
 - `api` - API response messages
 
-### Frontend (Vue I18n)
+**Usage:**
+```ruby
+I18n.t('api.recipe.created')
+I18n.t('errors.validation.required', field: 'Name')
+```
+
+### Frontend i18n (Vue)
 
 **Location:** `frontend/src/locales/`
 
-**Purpose:** Client-side translations for:
-- UI buttons and labels
-- Navigation items
-- Form fields
-- Validation messages
-- Empty states
-- Loading messages
-
-**Files:**
-- `en.json` - English (default)
-- `ja.json` - Japanese
-- `ko.json` - Korean
-- `zh-tw.json` - Traditional Chinese
-- `zh-cn.json` - Simplified Chinese
-- `es.json` - Spanish
-- `fr.json` - French
+**Files:** `en.json`, `ja.json`, `ko.json`, `zh-tw.json`, `zh-cn.json`, `es.json`, `fr.json`
 
 **Structure:**
 ```json
 {
   "common": {
-    "buttons": {},
-    "labels": {},
-    "messages": {}
-  },
-  "navigation": {},
-  "forms": {
-    "recipe": {},
-    "user": {}
+    "buttons": { "save": "...", "cancel": "..." },
+    "labels": { "name": "...", "email": "..." }
   },
   "errors": {
-    "validation": {}
+    "validation": { "required": "...", "invalid": "..." }
   }
 }
 ```
 
+**Usage in templates:**
+```vue
+{{ $t('recipe.title') }}
+{{ $t('common.buttons.save') }}
+<input :placeholder="$t('forms.recipe.name')" />
+```
+
+**Usage in script (Composition API):**
+```typescript
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+const message = t('common.messages.success')
+```
+
 ---
 
-## How to Add New Translation Keys
+## 2. Dynamic Recipe Translation (Mobility)
 
-### Step 1: Add to English Files First
+### What Gets Translated
 
-Always start with English as the source of truth.
+Entire recipe content translated to 6 non-English languages on creation via AI (Claude API).
 
-#### Backend Example:
+**Translated models & fields:**
+- Recipe: `name`
+- IngredientGroup: `name`
+- RecipeIngredient: `ingredient_name`, `preparation_notes`
+- RecipeStep: `instruction_original`, `instruction_easier`, `instruction_no_equipment`
+- Equipment: `canonical_name`
+- DataReference: `display_name`
+
+### Translation Tables
+
+**Pattern:** Each translatable model → dedicated translation table (normalized)
+
+```
+Recipe → RecipeTranslation (recipe_id, locale, name)
+IngredientGroup → IngredientGroupTranslation (ingredient_group_id, locale, name)
+RecipeIngredient → RecipeIngredientTranslation (recipe_ingredient_id, locale, ingredient_name, preparation_notes)
+RecipeStep → RecipeStepTranslation (recipe_step_id, locale, instruction_original, instruction_easier, instruction_no_equipment)
+Equipment → EquipmentTranslation (equipment_id, locale, canonical_name)
+DataReference → DataReferenceTranslation (data_reference_id, locale, display_name)
+```
+
+**Constraint:** `UNIQUE(entity_id, locale)`
+
+### Fallback Chain
+
+When translation missing for locale:
+
+```
+ja → en
+ko → en
+zh-tw → zh-cn → en
+zh-cn → zh-tw → en
+es → en
+fr → en
+```
+
+### Reading Translations
+
+**In specific locale:**
+```ruby
+recipe = Recipe.find(id)
+I18n.with_locale(:ja) { recipe.name }  # Japanese translation
+```
+
+**With fallback:**
+```ruby
+I18n.with_locale(:ja) { recipe.name }
+# Returns Japanese translation if exists, else fallback to English
+```
+
+**Via API:**
+```
+GET /api/v1/recipes/:id?lang=ja
+# Response contains all translations for 'ja' locale (with fallbacks)
+```
+
+### Writing Translations
+
+**In code:**
+```ruby
+recipe = Recipe.find(id)
+I18n.with_locale(:ja) { recipe.update(name: 'レシピ') }
+```
+
+**Via TranslateRecipeJob (automatic):**
+```ruby
+# Triggered on recipe creation
+TranslateRecipeJob.perform_later(recipe.id)
+```
+
+---
+
+## 3. TranslateRecipeJob Workflow
+
+**Trigger:** Recipe creation (enqueued automatically)
+
+**Process:**
+
+1. Load recipe with eager-loaded associations:
+   - `ingredient_groups` with `recipe_ingredients`
+   - `recipe_steps`, `equipment`
+
+2. Instantiate `RecipeTranslator` service
+
+3. For each language in `[ja, ko, zh-tw, zh-cn, es, fr]`:
+   - Call `translator.translate_recipe(recipe, lang)`
+   - Receive structured data: `{name, ingredient_groups, steps, equipment}`
+   - Apply translations via `apply_translations(recipe, data, lang)`
+
+4. Set `recipe.translations_completed = true`
+
+5. On error:
+   - Log error: "Translation failed for recipe #{recipe_id}: #{error}"
+   - Re-raise exception (Sidekiq retry)
+
+**apply_translations method:**
+```ruby
+I18n.with_locale(locale) do
+  recipe.update(name: data['name']) if data['name']
+
+  recipe.ingredient_groups.each_with_index do |group, idx|
+    group.update(name: data['ingredient_groups'][idx]['name'])
+
+    group.recipe_ingredients.each_with_index do |ingredient, item_idx|
+      item = data['ingredient_groups'][idx]['items'][item_idx]
+      ingredient.update(ingredient_name: item['name'], preparation_notes: item['preparation'])
+    end
+  end
+
+  recipe.recipe_steps.order(:step_number).each_with_index do |step, idx|
+    instructions = data['steps'][idx]['instructions']
+    step.update(
+      instruction_original: instructions['original'],
+      instruction_easier: instructions['easier'],
+      instruction_no_equipment: instructions['no_equipment']
+    )
+  end
+
+  recipe.equipment.each_with_index do |equipment, idx|
+    equipment.update(canonical_name: data['equipment'][idx])
+  end
+end
+```
+
+---
+
+## 4. Adding New UI Translations
+
+### Step 1: Add English (source of truth)
+
+**Backend:**
 ```yaml
 # backend/config/locales/en.yml
 en:
   api:
     recipe:
       created: "Recipe created successfully"
-      updated: "Recipe updated successfully"
-      deleted: "Recipe deleted successfully"
 ```
 
-#### Frontend Example:
+**Frontend:**
 ```json
 // frontend/src/locales/en.json
 {
   "recipe": {
     "actions": {
-      "create": "Create Recipe",
-      "update": "Update Recipe",
-      "delete": "Delete Recipe"
+      "create": "Create Recipe"
     }
   }
 }
 ```
 
-### Step 2: Add Translations to ALL 6 Other Languages
+### Step 2: Translate to 6 other languages
 
-**⚠️ MANDATORY:** You must translate the keys into ALL languages before committing.
+Use same structure in all locale files.
 
-Use the same structure and hierarchy in all locale files.  Use Haiku Sub-Agents for this task.
+**Naming conventions:**
+- Backend: `snake_case` keys
+- Frontend: `camelCase` keys
 
-#### Example for Japanese:
-```json
-// frontend/src/locales/ja.json
-{
-  "recipe": {
-    "actions": {
-      "create": "レシピを作成",
-      "update": "レシピを更新",
-      "delete": "レシピを削除"
-    }
-  }
-}
-```
+### Step 3: Verify coverage
 
-### Step 3: Verify Translation Coverage
-
-#### Backend Verification:
+**Backend:**
 ```bash
-# Check coverage for all languages
-rails i18n:coverage
-
-# Check for missing keys
-rails i18n:missing_keys
+rails i18n:coverage      # Should show 100%
+rails i18n:missing_keys  # Should show no missing keys
 ```
 
-Expected output:
-```
-✅ Translation Coverage: 100.0% average
-✅ No missing translation keys found!
+**Frontend:**
+```bash
+npm run check:i18n  # Must pass with 100% coverage
 ```
 
-#### Frontend Verification:
-1. Run the dev server: `npm run dev`
-2. Open browser console
-3. Switch between all 7 languages in the LanguageSwitcher
-4. Look for warnings: `[i18n] Missing translation: "key" for locale "xx"`
-5. Check UI for `[missing.key]` displayed in brackets
+**Manual check:**
+1. Start dev server: `npm run dev`
+2. Switch to each language in LanguageSwitcher
+3. Check for `[missing.key]` brackets in UI
+4. Check console for i18n warnings
 
 ---
 
-## Translation Key Naming Conventions
+## 5. Translation Key Naming
 
 ### Backend (YAML)
 
-Use snake_case for keys:
+**Format:** `snake_case`
 
 ```yaml
 errors:
   validation:
-    password_too_short: "Password is too short"
-    invalid_email: "Invalid email address"
+    password_too_short: "Password too short"
+    email_invalid: "Invalid email"
+
+api:
+  recipe:
+    created: "Recipe created"
+    updated: "Recipe updated"
 ```
 
 ### Frontend (JSON)
 
-Use camelCase for keys:
+**Format:** `camelCase` or `kebab-case` (choose one, use consistently)
 
 ```json
 {
   "errors": {
     "validation": {
-      "passwordTooShort": "Password is too short",
-      "invalidEmail": "Invalid email address"
+      "passwordTooShort": "Password too short",
+      "emailInvalid": "Invalid email"
+    }
+  },
+  "recipe": {
+    "actions": {
+      "create": "Create Recipe",
+      "update": "Update Recipe"
     }
   }
 }
 ```
 
-### Key Organization Guidelines
+### Key Organization
 
-1. **Group by feature/domain:**
-   ```json
-   {
-     "recipe": {
-       "title": "Recipe Title",
-       "servings": "Servings"
-     },
-     "ingredient": {
-       "name": "Ingredient Name",
-       "quantity": "Quantity"
-     }
-   }
-   ```
-
-2. **Use descriptive, hierarchical keys:**
-   - ✅ `forms.recipe.validation.titleRequired`
-   - ❌ `error1`, `msg_xyz`
-
-3. **Avoid duplication:**
-   - If the same text appears in multiple places, reuse the key
-   - Example: `common.buttons.save` instead of separate keys for each form
+- Group by feature/domain (recipe, ingredient, user, etc.)
+- Use hierarchical keys: `domain.category.specific`
+- Reuse keys (don't duplicate the same text under different keys)
 
 ---
 
-## Using Translations in Code
+## 6. Best Practices
 
-### Backend (Rails)
+### Use i18n consistently
 
-```ruby
-# In controllers or services
-I18n.t('api.recipe.created')
-# => "Recipe created successfully"
-
-# With interpolation
-I18n.t('api.recipe.created_by', name: user.name)
-# => "Recipe created by John"
-
-# In models (validation errors)
-validates :title, presence: { message: I18n.t('errors.validation.required') }
-```
-
-### Frontend (Vue)
-
-#### In Templates:
-```vue
-<template>
-  <!-- Basic usage -->
-  <h1>{{ $t('recipe.title') }}</h1>
-
-  <!-- With interpolation -->
-  <p>{{ $t('recipe.servings', { count: 4 }) }}</p>
-
-  <!-- For attributes -->
-  <input :placeholder="$t('forms.recipe.title')" />
-</template>
-```
-
-#### In Script (Composition API):
-```vue
-<script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
-
-const message = t('common.messages.success')
-</script>
-```
-
----
-
-## How to Test Translations
-
-### Manual Testing Checklist
-
-1. **Switch Languages:**
-   - Use the LanguageSwitcher dropdown (top-right corner)
-   - Switch to each of the 7 languages
-   - Verify UI text changes immediately
-
-2. **Check All Pages:**
-   - Navigate through all routes
-   - Verify no `[missing.key]` brackets appear
-   - Check browser console for i18n warnings
-
-3. **Test Forms:**
-   - Submit forms with validation errors
-   - Verify error messages display in the current language
-
-4. **Test API Responses:**
-   - Trigger API calls
-   - Check Network tab → Request Headers → `Accept-Language`
-   - Verify API responses return localized messages
-
-5. **Test Persistence:**
-   - Change language
-   - Refresh the page
-   - Verify language persists (from localStorage)
-
-### Automated Testing
-
-#### Backend (RSpec):
-```ruby
-# spec/services/i18n_service_spec.rb
-RSpec.describe I18nService do
-  describe '.set_locale' do
-    it 'sets locale from Accept-Language header' do
-      request = double(headers: { 'Accept-Language' => 'ja' })
-      I18nService.set_locale(request)
-      expect(I18n.locale).to eq(:ja)
-    end
-  end
-end
-```
-
-#### Frontend (Vitest):
-```typescript
-// tests/i18n.spec.ts
-import { mount } from '@vue/test-utils'
-import { createI18n } from 'vue-i18n'
-
-describe('i18n', () => {
-  it('switches language', async () => {
-    const i18n = createI18n({
-      legacy: false,
-      locale: 'en',
-      messages: { en: { hello: 'Hello' }, ja: { hello: 'こんにちは' } }
-    })
-
-    expect(i18n.global.t('hello')).toBe('Hello')
-
-    i18n.global.locale.value = 'ja'
-    expect(i18n.global.t('hello')).toBe('こんにちは')
-  })
-})
-```
-
----
-
-## Detecting Missing Translations
-
-### In Development
-
-Missing translations are automatically detected:
-
-1. **Console Warnings:**
-   ```
-   [i18n] Missing translation: "recipe.newKey" for locale "ja"
-   ```
-
-2. **Visual Indicators:**
-   - Missing keys display as `[recipe.newKey]` in the UI
-
-### Backend Detection
-
-Run the rake task:
-```bash
-rails i18n:missing_keys
-```
-
-Output shows missing keys by locale:
-```
-❌ Missing keys in ja:
-  - api.recipe.new_feature
-
-❌ Missing keys in es:
-  - api.recipe.new_feature
-```
-
-### Frontend Detection
-
-1. Open browser DevTools console
-2. Switch through all 7 languages
-3. Watch for `[i18n] Missing translation` warnings
-4. Check UI for `[missing.key]` text
-
----
-
-## Best Practices for Writing Translatable Text
-
-### 1. Avoid Hardcoded Strings
-
-❌ **Bad:**
+**Bad:** Hardcoded text
 ```vue
 <button>Save Recipe</button>
 ```
 
-✅ **Good:**
+**Good:** Translation key
 ```vue
 <button>{{ $t('recipe.actions.save') }}</button>
 ```
 
-### 2. Keep Text Concise
+### Use interpolation, not concatenation
 
-Shorter text is easier to translate and fits better in UI layouts.
-
-❌ **Bad:**
-```json
-{
-  "message": "This is a very long message that explains everything in great detail"
-}
-```
-
-✅ **Good:**
-```json
-{
-  "title": "Recipe Saved",
-  "message": "Your recipe has been saved successfully"
-}
-```
-
-### 3. Avoid String Concatenation
-
-Different languages have different grammar and word order.
-
-❌ **Bad:**
+**Bad:** String concatenation
 ```javascript
 const message = t('recipe.created') + ' ' + recipeName
 ```
 
-✅ **Good:**
+**Good:** Interpolation
 ```javascript
-// Use interpolation
 const message = t('recipe.createdWithName', { name: recipeName })
 ```
 
 ```json
 {
   "recipe": {
-    "createdWithName": "Recipe '{name}' created successfully"
+    "createdWithName": "Recipe '{name}' created"
   }
 }
 ```
 
-### 4. Provide Context in Key Names
+### Keep text concise
 
-❌ **Bad:**
-```json
-{
-  "save": "Save"
-}
-```
+- Shorter text easier to translate
+- Better UI layout fit
+- Example: "Recipe Saved" instead of "The recipe has been saved to the database"
 
-✅ **Good:**
-```json
-{
-  "recipe": {
-    "actions": {
-      "save": "Save Recipe"
-    }
-  }
-}
-```
+### Avoid gender assumptions
 
-### 5. Use Gender-Neutral Language
+Write gender-neutral English source text.
 
-Avoid assumptions about gender in English source text.
+### Handle pluralization
 
-### 6. Separate Pluralization
-
-Different languages have different pluralization rules.
+Different languages have different rules.
 
 ```json
 {
@@ -481,7 +369,73 @@ Different languages have different pluralization rules.
 
 ---
 
-## Common Translation Patterns
+## 7. Testing Translations
+
+### Manual verification
+
+1. **Switch languages:** Use LanguageSwitcher (top-right)
+2. **Check all routes:** Navigate entire app, no `[missing.key]` visible
+3. **Verify browser console:** No i18n warnings
+4. **Test API responses:** `Accept-Language` header affects response locale
+5. **Test persistence:** Change language, refresh page, verify persisted in localStorage
+
+### Automated tests
+
+**Backend (RSpec):**
+```ruby
+describe 'i18n' do
+  it 'sets locale from Accept-Language header' do
+    request = double(headers: { 'Accept-Language' => 'ja' })
+    service = I18nService.new
+    service.set_locale(request)
+    expect(I18n.locale).to eq(:ja)
+  end
+end
+```
+
+**Frontend (Vitest):**
+```typescript
+it('switches language', () => {
+  expect(i18n.global.t('hello')).toBe('Hello')
+  i18n.global.locale.value = 'ja'
+  expect(i18n.global.t('hello')).toBe('こんにちは')
+})
+```
+
+---
+
+## 8. Detecting Missing Translations
+
+### Backend
+
+```bash
+rails i18n:missing_keys
+```
+
+Output shows missing keys per locale.
+
+### Frontend
+
+1. Browser console for `[i18n] Missing translation` warnings
+2. UI displays `[namespace.key]` for missing translations
+
+---
+
+## 9. Pre-Commit Checklist
+
+**For UI text changes:**
+- [ ] English translation added
+- [ ] Translations for all 6 other languages added
+- [ ] `rails i18n:coverage` shows 100%
+- [ ] `rails i18n:missing_keys` shows no missing keys
+- [ ] `npm run check:i18n` passes with 100% coverage
+- [ ] Tested in browser with all 7 languages
+- [ ] No `[missing.key]` brackets visible
+- [ ] No console warnings
+
+---
+
+## 10. Common Translation Patterns
 
 ### Buttons
 ```json
@@ -490,34 +444,32 @@ Different languages have different pluralization rules.
     "buttons": {
       "save": "Save",
       "cancel": "Cancel",
-      "delete": "Delete",
-      "edit": "Edit",
-      "create": "Create"
+      "delete": "Delete"
     }
   }
 }
 ```
 
-### Form Validation
+### Validation errors
 ```json
 {
   "errors": {
     "validation": {
       "required": "This field is required",
-      "invalidEmail": "Invalid email address",
-      "tooShort": "Too short (minimum {min} characters)"
+      "invalid": "Invalid value",
+      "tooShort": "Too short (min {min} characters)"
     }
   }
 }
 ```
 
-### Empty States
+### Empty states
 ```json
 {
   "recipe": {
     "empty": {
-      "title": "No recipes yet",
-      "message": "Create your first recipe to get started"
+      "title": "No recipes",
+      "message": "Create your first recipe"
     }
   }
 }
@@ -525,97 +477,25 @@ Different languages have different pluralization rules.
 
 ---
 
-## Troubleshooting
+## 11. Troubleshooting
 
-### Issue: Translation not updating after changing locale file
+**Translation not updating after file change:**
+→ Restart dev server (`npm run dev`)
 
-**Solution:** Restart the dev server
-```bash
-# Stop and restart
-npm run dev
-```
+**Missing key warning but key exists:**
+→ Check for typos: `common.buttons.save` vs `common.button.save`
+→ Verify JSON syntax (trailing commas, quotes)
 
-### Issue: Missing key warning but key exists
-
-**Solution:** Check for typos in:
-1. Key path: `common.buttons.save` vs `common.button.save`
-2. Locale file structure (must match exactly)
-3. JSON syntax errors (trailing commas, missing quotes)
-
-### Issue: Chinese variants not working
-
-**Solution:** Ensure locale codes match:
-- Traditional Chinese: `zh-tw` (not `zh-TW` or `zh_tw`)
-- Simplified Chinese: `zh-cn` (not `zh-CN` or `zh_cn`)
+**Chinese locale codes not working:**
+→ Use `zh-tw` (Traditional), `zh-cn` (Simplified)
+→ Not `zh-TW`, `zh_tw`, `zh-CN`, `zh_cn`
 
 ---
 
-## Maintaining 100% Coverage
+## 12. References
 
-### Pre-Commit Checklist
-
-Before committing any code with user-facing text:
-
-- [ ] Added English translation to locale file(s)
-- [ ] Added translations for ALL 6 other languages
-- [ ] Ran `rails i18n:coverage` → shows 100%
-- [ ] Ran `rails i18n:missing_keys` → shows ✅
-- [ ] Tested in browser with all 7 languages
-- [ ] No `[missing.key]` brackets visible
-- [ ] No console warnings for missing translations
-
-### Monthly Audit
-
-Perform a comprehensive i18n audit once per month:
-
-1. Run coverage reports for backend and frontend
-2. Test all features in all 7 languages
-3. Check for outdated or unused keys
-4. Review and improve translation quality
-5. Update this workflow document as needed
-
----
-
-## Resources
-
-- [Vue I18n Documentation](https://vue-i18n.intlify.dev/)
 - [Rails I18n Guide](https://guides.rubyonrails.org/i18n.html)
-- [Unicode CLDR](http://cldr.unicode.org/) - Language data standards
-- [development-checklist.md](./development-checklist.md) - Phase 3.5 i18n tasks
-- [DOCUMENTATION-WORKFLOW.md](./DOCUMENTATION-WORKFLOW.md) - i18n requirements
-
----
-
-## Quick Reference
-
-### Add New Translation (Frontend)
-
-1. Add to `locales/en.json`
-2. Add to `locales/ja.json`
-3. Add to `locales/ko.json`
-4. Add to `locales/zh-tw.json`
-5. Add to `locales/zh-cn.json`
-6. Add to `locales/es.json`
-7. Add to `locales/fr.json`
-8. Test in browser
-
-### Add New Translation (Backend)
-
-1. Add to `config/locales/en.yml`
-2. Add to all 6 other `.yml` files
-3. Run `rails i18n:coverage`
-4. Run `rails i18n:missing_keys`
-
-### Use Translation in Vue
-
-```vue
-{{ $t('namespace.key') }}
-{{ $t('namespace.key', { param: value }) }}
-```
-
-### Use Translation in Rails
-
-```ruby
-I18n.t('namespace.key')
-I18n.t('namespace.key', param: value)
-```
+- [Vue I18n Documentation](https://vue-i18n.intlify.dev/)
+- [Mobility Gem](https://github.com/shioyama/mobility) - Translation system
+- [development-checklist.md](./development-checklist.md) - Phase 4 i18n tasks
+- [architecture.md](./architecture.md) - Mobility architecture details
