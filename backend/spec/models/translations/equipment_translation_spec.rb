@@ -143,7 +143,8 @@ describe 'Equipment Translations (AC-PHASE4-MODEL-004)', type: :model do
       end
 
       I18n.with_locale(:ja) do
-        expect(equipment.canonical_name).to eq('')
+        # Mobility presence plugin converts empty strings to nil
+        expect(equipment.canonical_name).to be_nil
       end
     end
   end

@@ -26,7 +26,7 @@ describe 'IngredientGroup Translations (AC-PHASE4-MODEL-002)', type: :model do
     it 'is scoped to ingredient_group and locale' do
       I18n.with_locale(:ja) { ingredient_group.update(name: 'メイン材料') }
 
-      other_group = create(:ingredient_group, recipe: recipe, name: 'Side')
+      other_group = create(:ingredient_group, recipe: recipe, name: 'Side', position: 2)
       I18n.with_locale(:ja) { other_group.update(name: '副材料') }
 
       ja_trans = IngredientGroupTranslation.find_by(
@@ -93,8 +93,8 @@ describe 'IngredientGroup Translations (AC-PHASE4-MODEL-002)', type: :model do
 
   describe 'Querying' do
     before do
-      create(:ingredient_group, recipe: recipe, name: 'Main')
-      create(:ingredient_group, recipe: recipe, name: 'Sides')
+      create(:ingredient_group, recipe: recipe, name: 'Main', position: 1)
+      create(:ingredient_group, recipe: recipe, name: 'Sides', position: 2)
     end
 
     it 'queries by translated field' do

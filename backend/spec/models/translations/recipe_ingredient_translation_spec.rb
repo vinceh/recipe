@@ -188,7 +188,8 @@ describe 'RecipeIngredient Translations (AC-PHASE4-MODEL-003)', type: :model do
         recipe_ingredient_id: recipe_ingredient.id,
         locale: 'ja'
       )
-      expect(translation.preparation_notes).to eq('')
+      # Mobility presence plugin converts empty strings to nil
+      expect(translation.preparation_notes).to be_nil
     end
   end
 

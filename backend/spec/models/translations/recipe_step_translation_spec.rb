@@ -233,7 +233,8 @@ describe 'RecipeStep Translations (AC-PHASE4-MODEL-005)', type: :model do
       end
 
       I18n.with_locale(:ja) do
-        expect(recipe_step.instruction_original).to eq('')
+        # Mobility presence plugin converts empty strings to nil
+        expect(recipe_step.instruction_original).to be_nil
       end
     end
   end
