@@ -238,7 +238,6 @@
           "adminNotes": "管理者メモ"
         },
         "actions": {
-          "regenerateVariants": "バリエーションを再生成",
           "regenerateTranslations": "翻訳を再生成"
         },
         "nutrition": {

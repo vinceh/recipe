@@ -100,32 +100,14 @@ RSpec.describe RecipeStep, type: :model do
 
   describe 'instructions' do
     # AC-PHASE2-STEP6-006: Recipe steps store instructions
-    it 'stores instruction variants' do
+    it 'stores the original instruction' do
       step = create(:recipe_step,
         recipe: recipe,
         step_number: 1,
-        instruction_original: 'Mix flour and water',
-        instruction_easier: 'Combine ingredients',
-        instruction_no_equipment: 'Mix by hand'
+        instruction_original: 'Mix flour and water'
       )
 
       expect(step.instruction_original).to eq('Mix flour and water')
-      expect(step.instruction_easier).to eq('Combine ingredients')
-      expect(step.instruction_no_equipment).to eq('Mix by hand')
-    end
-
-    it 'allows nil instruction variants' do
-      step = create(:recipe_step,
-        recipe: recipe,
-        step_number: 1,
-        instruction_original: 'Mix ingredients',
-        instruction_easier: nil,
-        instruction_no_equipment: nil
-      )
-
-      expect(step.instruction_original).to eq('Mix ingredients')
-      expect(step.instruction_easier).to be_nil
-      expect(step.instruction_no_equipment).to be_nil
     end
   end
 

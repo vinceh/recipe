@@ -9,3 +9,4 @@ This command guides development through the recipe database re-architecture proj
 - remember use task tool and run a sub-agent to use the code audit skill and address issues (if it's not step 1)
 - if it's a step 1, make sure to use task tool and run a sub-agent to use the AC skill and address issues
 - update documentation
+- use ai-doc-writing skill when updating documentation

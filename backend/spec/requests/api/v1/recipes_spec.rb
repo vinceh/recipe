@@ -362,12 +362,10 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
     end
   end
 
-  def create_recipe_step(recipe, step_number, original, easier: nil, no_equipment: nil)
+  def create_recipe_step(recipe, step_number, original)
     recipe.recipe_steps.create!(
       step_number: step_number,
-      instruction_original: original,
-      instruction_easier: easier,
-      instruction_no_equipment: no_equipment
+      instruction_original: original
     )
   end
 

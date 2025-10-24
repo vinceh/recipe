@@ -2,8 +2,6 @@
 
 **⚠️ DO NOT COMMIT until ALL checklist items are complete**
 
-**Last Updated:** 2025-10-19
-
 ---
 
 ## Backend Pre-Commit Checklist
@@ -40,7 +38,7 @@ Use this checklist before committing ANY backend code.
 
 **🔴 STOP: If ANY test fails or ANY AC uncovered, DO NOT COMMIT**
 
-### ✅ Internationalization (i18n)
+### ✅ Internationalization (i18n) - UI Text
 
 - [ ] **NO hardcoded user-facing text**
   - [ ] ✅ All strings use `I18n.t('key')` instead of hardcoded text
@@ -52,6 +50,25 @@ Use this checklist before committing ANY backend code.
     - `config/locales/zh-cn.yml` (Simplified Chinese)
     - `config/locales/es.yml` (Spanish)
     - `config/locales/fr.yml` (French)
+
+### ✅ Mobility Translations (Recipe Content)
+
+**If modifying translatable models (Recipe, IngredientGroup, RecipeStep, etc.):**
+
+- [ ] **Translation field constraints verified**
+  - [ ] ✅ Translatable column allows NULL (Mobility manages translations)
+  - [ ] ✅ No hardcoded translation data in model/controller
+- [ ] **Mobility declarations correct**
+  - [ ] ✅ Model extends Mobility
+  - [ ] ✅ `translates` declaration lists fields, uses `backend: :table`
+- [ ] **Translation tests pass**
+  - [ ] ✅ Run: `bundle exec rspec spec/models/translations/`
+  - [ ] ✅ Tests for read/write/fallback/querying
+- [ ] **TranslateRecipeJob flow verified**
+  - [ ] ✅ Translations triggered on recipe creation
+  - [ ] ✅ All 6 non-English languages translated via AI
+  - [ ] ✅ Translations stored in Mobility translation tables
+  - [ ] ✅ `recipes.translations_completed` flag set to true
 
 ### ✅ Documentation
 
@@ -282,4 +299,3 @@ If you're in a hurry, AT MINIMUM verify these before commit:
 
 ---
 
-**Last Updated:** 2025-10-19

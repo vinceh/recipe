@@ -1,6 +1,5 @@
 # Project Overview
 
-**Last Updated:** 2025-10-19
 **Project:** Recipe App (Ember)
 **Developer:** V
 **Timeline:** 8 weeks MVP
@@ -79,21 +78,22 @@ Recipes in Ember are structured data (not just text) with built-in intelligence:
 
 **Acceptance Criteria:** AC-VARIANT-001 to AC-VARIANT-008
 
-### 3. Multi-lingual Translation
+### 3. Dynamic Recipe Translation (Mobility)
+- 6 non-English languages (ja, ko, zh-tw, zh-cn, es, fr)
+- Entire recipe content translated via AI (Claude API)
+  - Recipe names, ingredient names, step instructions
+  - Preparation notes, equipment names
+- Stored in dedicated translation tables (not JSONB)
+- TranslateRecipeJob enqueued automatically on recipe creation
+- translations_completed flag tracks completion
+
+### 4. Internationalization (i18n) - UI Text
 - 7 supported languages (en, ja, ko, zh-tw, zh-cn, es, fr)
-- Entire recipe translated (name, ingredients, steps, equipment)
-- AI-powered translation with Claude API
-- User's preferred language saved and persists
-
-**Acceptance Criteria:** AC-TRANS-001 to AC-TRANS-010
-
-### 4. Internationalization (i18n)
-- 100% translation coverage requirement
-- Both frontend (Vue I18n) and backend (Rails I18n)
-- Language switcher in UI
+- UI text translations via Rails I18n (backend) + Vue I18n (frontend)
+- 100% translation coverage requirement (all 7 languages)
+- Language switcher in UI (top-right navbar)
 - `Accept-Language` header for API localization
-
-**Acceptance Criteria:** AC-I18N-001 to AC-I18N-006
+- User language preference saved and persists
 
 ### 5. Nutrition-First Search
 - Filter by dietary tags (vegan, gluten-free, dairy-free, etc.)
@@ -283,4 +283,3 @@ When starting a new AI session:
 
 ---
 
-**Last Updated:** 2025-10-19

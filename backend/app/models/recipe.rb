@@ -57,8 +57,58 @@ class Recipe < ApplicationRecord
   validates :source_language, presence: true, inclusion: { in: %w[en ja ko zh-tw zh-cn es fr] }
   validates :precision_reason, inclusion: { in: %w[baking confectionery fermentation molecular], allow_nil: true }
 
+  # Callbacks for auto-triggered translation workflow
+  after_commit :enqueue_translation_on_create, on: :create
+  after_commit :enqueue_translation_on_update, on: :update
+
   # Helper method for aliases
   def aliases
     recipe_aliases.pluck(:alias_name)
+  end
+
+  private
+
+  def enqueue_translation_on_create
+    TranslateRecipeJob.perform_later(id)
+  end
+
+  def enqueue_translation_on_update
+    return if translation_rate_limit_exceeded? || translation_job_pending?
+
+    TranslateRecipeJob.perform_later(id)
+  end
+
+  def translation_rate_limit_exceeded?
+    return false if last_translated_at.nil?
+
+    completed_translations_in_last_hour = completed_translation_job_count
+    completed_translations_in_last_hour >= 4
+  end
+
+  def translation_job_pending?
+    return false unless job_queue_available?
+
+    SolidQueue::Job.where(class_name: 'TranslateRecipeJob')
+      .where('arguments->0 = ?', id)
+      .where(finished_at: nil)
+      .exists?
+  rescue StandardError
+    false
+  end
+
+  def completed_translation_job_count
+    return 0 unless job_queue_available?
+
+    SolidQueue::Job.where(class_name: 'TranslateRecipeJob')
+      .where('arguments->0 = ?', id)
+      .where('finished_at > ?', 1.hour.ago)
+      .where.not(finished_at: nil)
+      .count
+  rescue StandardError
+    0
+  end
+
+  def job_queue_available?
+    defined?(SolidQueue::Job) && SolidQueue::Job.table_exists?
   end
 end

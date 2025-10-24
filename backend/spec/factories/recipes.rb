@@ -9,7 +9,6 @@ FactoryBot.define do
     cook_minutes { 20 }
     total_minutes { 30 }
     requires_precision { false }
-    variants_generated { false }
     translations_completed { false }
   end
 end

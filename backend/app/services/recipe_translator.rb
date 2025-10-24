@@ -52,11 +52,7 @@ class RecipeTranslator < AiService
       steps: recipe.recipe_steps.order(:step_number).map do |step|
         {
           order: step.step_number,
-          instructions: {
-            original: step.instruction_original,
-            easier: step.instruction_easier,
-            no_equipment: step.instruction_no_equipment
-          }
+          instruction: step.instruction_original
         }
       end,
       equipment: recipe.equipment.map(&:canonical_name)

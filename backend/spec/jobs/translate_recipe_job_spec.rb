@@ -109,7 +109,18 @@ RSpec.describe TranslateRecipeJob, type: :job do
           described_class.new.perform(recipe.id)
         }.to raise_error(StandardError, 'Database error')
 
-        expect(Rails.logger).to have_received(:error).with(/Translation failed for recipe/)
+        expect(Rails.logger).to have_received(:error).with(/Unexpected error in translation job for recipe/)
+      end
+
+      it 'logs and silently handles recipe not found' do
+        allow(Recipe).to receive_message_chain(:includes, :includes, :find).and_raise(ActiveRecord::RecordNotFound)
+        allow(Rails.logger).to receive(:error)
+
+        expect {
+          described_class.new.perform(999)
+        }.not_to raise_error
+
+        expect(Rails.logger).to have_received(:error).with(/Recipe not found for translation job/)
       end
     end
   end

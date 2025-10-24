@@ -238,7 +238,6 @@
           "adminNotes": "관리자 메모"
         },
         "actions": {
-          "regenerateVariants": "변형 재생성",
           "regenerateTranslations": "번역 재생성"
         },
         "nutrition": {

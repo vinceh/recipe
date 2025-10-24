@@ -238,7 +238,6 @@
           "adminNotes": "管理員備註"
         },
         "actions": {
-          "regenerateVariants": "重新生成變化版本",
           "regenerateTranslations": "重新生成翻譯"
         },
         "nutrition": {

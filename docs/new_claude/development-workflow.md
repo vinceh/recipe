@@ -1,6 +1,5 @@
 # Development Workflow
 
-**Last Updated:** 2025-10-21
 **Purpose:** Define MANDATORY step-by-step workflows for backend and frontend development
 
 ---
@@ -43,7 +42,6 @@
 - Counting: "How many Playwright tests exist for recipe features?"
 - Simple documentation reads: "Summarize the API pattern for POST endpoints"
 
-
 ### When to Use Sonnet Subagents
 
 **✅ Use Sonnet subagents for:**
@@ -68,7 +66,6 @@ Task(bmm-codebase-analyzer, model=sonnet):
 Task(Explore, model=haiku):
   "Find any hardcoded user-facing strings in components/admin/recipes/"
 ```
-
 
 ---
 
@@ -191,6 +188,76 @@ render json: { error: I18n.t('recipes.create.invalid_input') }
    - `config/locales/zh-cn.yml` (Simplified Chinese)
    - `config/locales/es.yml` (Spanish)
    - `config/locales/fr.yml` (French)
+
+---
+
+## Mobility Translation Workflow
+
+Use this workflow when implementing dynamic recipe content translations.
+
+### Working with Translated Fields
+
+**Read translation in specific locale:**
+```ruby
+I18n.with_locale(:ja) { recipe.name }  # Returns Japanese translation
+```
+
+**Write translation:**
+```ruby
+I18n.with_locale(:ja) { recipe.update(name: 'レシピ') }
+```
+
+**Test fallback behavior:**
+```ruby
+# Remove ja translation
+RecipeTranslation.where(recipe_id: recipe.id, locale: 'ja').delete_all
+recipe.reload
+
+# Verify fallback to en
+I18n.with_locale(:ja) { expect(recipe.name).to eq(english_value) }
+```
+
+### TranslateRecipeJob Testing
+
+**Mock RecipeTranslator in tests:**
+```ruby
+translator = instance_double(RecipeTranslator)
+allow(RecipeTranslator).to receive(:new).and_return(translator)
+
+RecipeTranslator::LANGUAGES.keys.each do |lang|
+  allow(translator).to receive(:translate_recipe)
+    .with(recipe, lang)
+    .and_return(translation_data)
+end
+
+TranslateRecipeJob.new.perform(recipe.id)
+```
+
+**Verify translations in translation tables:**
+```ruby
+I18n.with_locale(:ja) do
+  expect(recipe.reload.name).to eq('Translated ja')
+end
+```
+
+### N+1 Query Prevention
+
+Always eager-load when fetching multiple recipes with translations:
+
+```ruby
+recipes = Recipe
+  .includes(ingredient_groups: :recipe_ingredients)
+  .includes(:recipe_steps, :equipment)
+  .limit(50)
+```
+
+### Best Practices
+
+- Use `I18n.with_locale` for all translation reads/writes
+- Always eager-load nested associations in TranslateRecipeJob
+- Test fallback behavior in translation tests
+- Verify translations stored in translation tables, not JSONB
+- Run `bundle exec rspec spec/models/translations/` before committing
 
 ---
 
@@ -762,4 +829,3 @@ Task(bmm-pattern-detector, model=sonnet):
 
 ---
 
-**Last Updated:** 2025-10-22

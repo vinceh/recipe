@@ -38,8 +38,6 @@ oyakodon = Recipe.create!(
   requires_precision: false,
   precision_reason: nil,
   admin_notes: "Classic Japanese comfort food. Tests fixed servings.",
-  variants_generated: false,
-  variants_generated_at: nil,
   translations_completed: false
 )
 
@@ -138,8 +136,6 @@ bread = Recipe.create!(
   requires_precision: true,
   precision_reason: "baking",
   admin_notes: "Baking requires precise measurements and timing. Watch fermentation carefully.",
-  variants_generated: true,
-  variants_generated_at: Time.current,
   translations_completed: false
 )
 
@@ -199,7 +195,6 @@ stir_fry = Recipe.create!(
   total_minutes: 25,
   admin_notes: "Tests optional ingredients and variable servings. Popular weeknight meal.",
   requires_precision: false,
-  variants_generated: false,
   translations_completed: false
 )
 
@@ -285,7 +280,6 @@ pasta = Recipe.create!(
   total_minutes: 20,
   requires_precision: false,
   admin_notes: "Classic Italian pasta. Very simple with minimal ingredients.",
-  variants_generated: false,
   translations_completed: false
 )
 
@@ -346,7 +340,6 @@ tom_yum = Recipe.create!(
   total_minutes: 35,
   requires_precision: false,
   admin_notes: "Thai classic. Source from Bangkok street markets.",
-  variants_generated: false,
   translations_completed: false
 )
 
@@ -404,7 +397,6 @@ shakshuka = Recipe.create!(
   total_minutes: 35,
   requires_precision: false,
   admin_notes: "Middle Eastern egg dish. Popular for breakfast and brunch. High iron from tomato sauce.",
-  variants_generated: false,
   translations_completed: false
 )
 
@@ -583,7 +575,6 @@ additional_recipes.each_with_index do |data, idx|
     total_minutes: 35,
     requires_precision: false,
     admin_notes: data[:admin_notes],
-    variants_generated: idx.even?,
     translations_completed: idx.even?
   )
 

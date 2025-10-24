@@ -57,7 +57,6 @@ RSpec.describe 'Admin::Recipes', type: :request do
         recipe_json = json['data']['recipes'].first
 
         expect(recipe_json).to have_key('admin_notes')
-        expect(recipe_json).to have_key('variants_generated')
         expect(recipe_json).to have_key('translations_completed')
       end
     end
@@ -408,28 +407,6 @@ RSpec.describe 'Admin::Recipes', type: :request do
     end
   end
 
-  describe 'POST /admin/recipes/:id/regenerate_variants' do
-    context 'AC-ADMIN-007: Regenerate variants' do
-      before { sign_in admin_user }
-
-      let!(:recipe) { Recipe.create!(recipe_attributes) }
-
-      it 'queues variant regeneration' do
-        post "/admin/recipes/#{recipe.id}/regenerate_variants", headers: headers
-
-        expect(response).to have_http_status(:ok)
-        json = JSON.parse(response.body)
-
-        expect(json['success']).to be true
-        expect(json['message']).to eq('Step variants regeneration queued')
-
-        recipe.reload
-        expect(recipe.variants_generated).to be true
-        expect(recipe.variants_generated_at).to be_present
-      end
-    end
-  end
-
   describe 'POST /admin/recipes/:id/regenerate_translations' do
     context 'AC-ADMIN-008: Regenerate translations' do
       before { sign_in admin_user }
@@ -499,8 +476,8 @@ RSpec.describe 'Admin::Recipes', type: :request do
       it 'creates recipe with nested recipe_steps' do
         params = recipe_attributes.merge({
           recipe_steps_attributes: [
-            { step_number: 1, instruction_original: 'Mix dry ingredients', instruction_easier: 'Combine flour and sugar' },
-            { step_number: 2, instruction_original: 'Add wet ingredients', instruction_easier: 'Pour in milk' },
+            { step_number: 1, instruction_original: 'Mix dry ingredients' },
+            { step_number: 2, instruction_original: 'Add wet ingredients' },
             { step_number: 3, instruction_original: 'Bake at 350F' }
           ]
         })
@@ -516,8 +493,7 @@ RSpec.describe 'Admin::Recipes', type: :request do
         recipe = Recipe.last
         expect(recipe.recipe_steps.count).to eq(3)
         expect(recipe.recipe_steps.map(&:step_number)).to eq([1, 2, 3])
-        expect(recipe.recipe_steps.first.instruction_easier).to eq('Combine flour and sugar')
-        expect(recipe.recipe_steps.last.instruction_no_equipment).to be_nil
+        expect(recipe.recipe_steps.first.instruction_original).to eq('Mix dry ingredients')
       end
 
       it 'creates recipe with both nested ingredient_groups and recipe_steps' do

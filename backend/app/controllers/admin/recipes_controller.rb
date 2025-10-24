@@ -221,24 +221,6 @@ module Admin
       )
     end
 
-    # POST /admin/recipes/:id/regenerate_variants
-    # AC-ADMIN-007: Regenerate step variants
-    def regenerate_variants
-      recipe = Recipe.find(params[:id])
-
-      # This would call a service to regenerate easier/no-equipment variants
-      # For now, we'll just mark it as regenerated
-      recipe.update!(
-        variants_generated: true,
-        variants_generated_at: Time.current
-      )
-
-      render_success(
-        data: { recipe: admin_recipe_json(recipe) },
-        message: 'Step variants regeneration queued'
-      )
-    end
-
     # POST /admin/recipes/:id/regenerate_translations
     # AC-ADMIN-008: Regenerate translations
     def regenerate_translations
@@ -342,7 +324,7 @@ module Admin
           ]
         ],
         recipe_steps_attributes: [
-          :id, :step_number, :instruction_original, :instruction_easier, :instruction_no_equipment, :_destroy
+          :id, :step_number, :instruction_original, :_destroy
         ],
         recipe_nutrition_attributes: [
           :id, :calories, :protein_g, :carbs_g, :fat_g, :fiber_g, :sodium_mg, :sugar_g, :_destroy
@@ -391,8 +373,6 @@ module Admin
         admin_notes: recipe.admin_notes,
         requires_precision: recipe.requires_precision,
         precision_reason: recipe.precision_reason,
-        variants_generated: recipe.variants_generated,
-        variants_generated_at: recipe.variants_generated_at,
         translations_completed: recipe.translations_completed,
         created_at: recipe.created_at,
         updated_at: recipe.updated_at

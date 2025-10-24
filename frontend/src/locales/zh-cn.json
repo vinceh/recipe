@@ -238,7 +238,6 @@
           "adminNotes": "管理员备注"
         },
         "actions": {
-          "regenerateVariants": "重新生成变体",
           "regenerateTranslations": "重新生成翻译"
         },
         "nutrition": {

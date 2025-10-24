@@ -39,7 +39,6 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :recipes do
       member do
-        post :regenerate_variants
         post :regenerate_translations
       end
       collection do

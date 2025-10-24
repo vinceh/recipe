@@ -8,15 +8,29 @@ class TranslateRecipeJob < ApplicationJob
       .find(recipe_id)
 
     translator = RecipeTranslator.new
+    all_successful = true
 
-    RecipeTranslator::LANGUAGES.keys.each do |lang|
-      translation_data = translator.translate_recipe(recipe, lang)
-      apply_translations(recipe, translation_data, lang) if translation_data
+    target_languages = RecipeTranslator::LANGUAGES.keys.reject { |lang| lang == recipe.source_language }
+
+    target_languages.each do |lang|
+      begin
+        translation_data = translator.translate_recipe(recipe, lang)
+        apply_translations(recipe, translation_data, lang) if translation_data
+      rescue StandardError => e
+        Rails.logger.error("Translation failed for recipe #{recipe_id} language #{lang}: #{e.message}")
+        all_successful = false
+      end
     end
 
-    recipe.update!(translations_completed: true)
+    if all_successful
+      recipe.update!(translations_completed: true, last_translated_at: Time.current)
+    else
+      recipe.update!(translations_completed: false)
+    end
+  rescue ActiveRecord::RecordNotFound => e
+    Rails.logger.error("Recipe not found for translation job #{recipe_id}: #{e.message}")
   rescue StandardError => e
-    Rails.logger.error("Translation failed for recipe #{recipe_id}: #{e.message}")
+    Rails.logger.error("Unexpected error in translation job for recipe #{recipe_id}: #{e.message}")
     raise
   end
 
@@ -56,14 +70,7 @@ class TranslateRecipeJob < ApplicationJob
           step_data = translation_data['steps'][idx]
           next unless step_data
 
-          instructions = step_data['instructions']
-          if instructions
-            step.update(
-              instruction_original: instructions['original'],
-              instruction_easier: instructions['easier'],
-              instruction_no_equipment: instructions['no_equipment']
-            )
-          end
+          step.update(instruction_original: step_data['instruction']) if step_data['instruction']
         end
       end
 

@@ -238,7 +238,6 @@
           "adminNotes": "Notas del administrador"
         },
         "actions": {
-          "regenerateVariants": "Regenerar variantes",
           "regenerateTranslations": "Regenerar traducciones"
         },
         "nutrition": {

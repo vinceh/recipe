@@ -25,11 +25,7 @@ module RecipeSerializer
       {
         id: "step-#{step.step_number.to_s.rjust(3, '0')}",
         order: step.step_number,
-        instructions: {
-          original: step.instruction_original,
-          easier: step.instruction_easier,
-          no_equipment: step.instruction_no_equipment
-        }.compact
+        instruction: step.instruction_original
       }
     end
   end
