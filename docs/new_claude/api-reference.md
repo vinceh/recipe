@@ -1,9 +1,5 @@
 # Recipe API Reference
 
-**Version:** 1.0.0
-**Base URL:** `http://localhost:3000` (development)
-**Last Updated:** 2025-10-09
-
 ---
 
 ## Table of Contents
@@ -70,6 +66,63 @@
 - [Error Codes Reference](#error-codes-reference)
 
 ---
+
+## Locale-Aware API Responses
+
+All recipe-related endpoints support multi-language responses using the `?lang` query parameter or `Accept-Language` header:
+
+**Query Parameter:**
+```
+GET /api/v1/recipes/1?lang=ja
+```
+
+**Header:**
+```
+Accept-Language: ja
+```
+
+**Supported Languages:** en, ja, ko, zh-tw, zh-cn, es, fr
+
+**Translation Source:**
+- **Recipe Content** (name, ingredient names, step instructions): From Mobility translation tables (dynamic recipe translations)
+- **UI Text** (field labels, buttons, messages): From Rails i18n backend
+
+**Fallback Chain:**
+- ja → en
+- ko → en  
+- zh-tw → zh-cn → en
+- es → en
+- fr → en
+
+**Example - Japanese Response:**
+```json
+{
+  "success": true,
+  "data": {
+    "recipe": {
+      "id": 1,
+      "name": "和風ステーキ",
+      "ingredients": [
+        {
+          "ingredient_name": "牛肉",
+          "amount": 400,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "instruction_original": "牛肉をフライパンで焼く"
+        }
+      ]
+    }
+  }
+}
+```
+
+If translation unavailable, falls back to English automatically.
+
+---
+
 
 ## Overview
 
@@ -234,11 +287,6 @@ const token = response.headers.get('Authorization')
 - Token must be included in all authenticated requests
 - Default role is `user`; admin role must be assigned directly in database
 
-#### Related Endpoints
-
-- [User Login](#user-login)
-- [User Logout](#user-logout)
-
 ---
 
 ### User Login
@@ -355,11 +403,6 @@ localStorage.setItem('authToken', token)
 - Token should be stored and included in subsequent authenticated requests
 - Generic error messages prevent user enumeration attacks
 
-#### Related Endpoints
-
-- [User Registration](#user-registration)
-- [User Logout](#user-logout)
-
 ---
 
 ### User Logout
@@ -438,11 +481,6 @@ localStorage.removeItem('authToken')
 - Token is immediately invalidated and cannot be reused
 - Client should remove stored token after logout
 - Attempting to use token after logout will result in 401 errors
-
-#### Related Endpoints
-
-- [User Registration](#user-registration)
-- [User Login](#user-login)
 
 ---
 
