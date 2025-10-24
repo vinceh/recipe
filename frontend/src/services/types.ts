@@ -97,6 +97,16 @@ export interface ScaleRecipeResponse {
   scaled_ingredient_groups: RecipeIngredientGroup[]
 }
 
+// Data reference types (dietary tags, cuisines, dish types, recipe types)
+export interface DataReference {
+  id?: string | number
+  key: string
+  display_name: string
+  reference_type: string
+  sort_order?: number
+  active?: boolean
+}
+
 // API response wrapper
 export interface ApiResponse<T> {
   success: boolean
