@@ -1008,12 +1008,28 @@ Write comprehensive GIVEN/WHEN/THEN acceptance criteria for auto-triggered trans
 - All recommendations from code-quality-auditor applied
 - No new type errors introduced (60 remaining, all component-level)
 
-**Step 5: Update Components - List View**
-- [ ] Update recipe list component to handle new fields
-- [ ] Update filtering/searching to use new API structure
+**Step 5: Update Components - List View** ✅ IN PROGRESS
+- [x] Restore DataReference type needed by stores (was incorrectly removed in Step 3)
+- [x] Add missing sort_order field to DataReference
+- [x] Type errors reduced from 60 → 43 (-17 errors fixed)
+- [ ] Fix ingredient field rename: notes → preparation (RecipeForm, ViewRecipe)
+- [ ] Fix RecipeStep structure: instructions object → instruction string
+- [ ] Add null safety checks for optional fields
+- [ ] Fix RecipeForm ingredient handling (33 errors)
+- [ ] Fix ViewRecipe instruction handling (4 errors)
 - [ ] Verify pagination still works
 - [ ] Test recipe list display with different languages
+- [ ] Run code-quality-auditor on component updates
 - [ ] Commit list component updates
+
+**Progress**:
+- Identified that Step 3 cleanup removed DataReference type needed by stores
+- Restored DataReference with proper schema (id, key, display_name, reference_type, sort_order, active)
+- Current remaining errors: 43 (from 60)
+  * RecipeForm.vue: 33 errors (ingredient field renames, null checks, step structure)
+  * ViewRecipe.vue: 4 errors (instruction field references)
+  * recipeStore.ts: 3 errors (scale response structure, variants)
+  * Others: 3 errors
 
 **Step 6: Update Components - Detail View**
 - [ ] Update recipe detail component for new response structure
