@@ -946,16 +946,26 @@ Write comprehensive GIVEN/WHEN/THEN acceptance criteria for auto-triggered trans
 - No frontend unit tests but e2e test infrastructure exists
 - Recipe components don't re-fetch when language changes
 
-**Step 3: Update Type Definitions**
-- [ ] Add/update types for new API response structure
-- [ ] Add types for `ingredient_groups` array with items
-- [ ] Add types for `recipe_steps` array with instruction object
-- [ ] Add types for `equipment` array
-- [ ] Add types for `dietary_tags`, `dish_types`, `cuisines`, `recipe_types` arrays
-- [ ] Add types for `translations_completed` and `last_translated_at` fields
-- [ ] Update pagination types if needed
-- [ ] Run tests to verify no type errors
-- [ ] Commit type updates
+**Step 3: Update Type Definitions** ✅ COMPLETE
+- [x] Add/update types for new API response structure
+- [x] Add types for `ingredient_groups` array with items (already correct)
+- [x] Fix `recipe_steps` array - change from instructions object to instruction string
+- [x] Add types for `equipment` array (already correct)
+- [x] Types for `dietary_tags`, `dish_types`, `cuisines`, `recipe_types` arrays (already correct)
+- [x] Add `last_translated_at?: string` field to Recipe
+- [x] Update RecipeServings to make all fields optional
+- [x] Update RecipeIngredientItem: notes → preparation
+- [x] Update ScaleRecipeResponse structure to match API response
+- [x] Add lang parameter to RecipeFilters
+- [x] Commit type updates
+
+**Changes Made**:
+- RecipeStep: Removed RecipeStepInstructions object, now has `instruction: string` and `order: number`
+- Recipe: Added `last_translated_at?: string`
+- RecipeServings: All fields now optional (original?, min?, max?)
+- RecipeIngredientItem: Changed notes to preparation
+- ScaleRecipeResponse: Updated to match actual API structure
+- RecipeFilters: Added lang?: string parameter
 
 **Step 4: Update API Client**
 - [ ] Update `recipeApi.ts` to accept optional `lang` or `locale` parameter in getRecipes()
