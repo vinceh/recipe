@@ -56,7 +56,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_24_084105) do
   end
 
   create_table "equipment", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "canonical_name", null: false
+    t.string "canonical_name"
     t.string "category"
     t.jsonb "metadata", default: {}
     t.datetime "created_at", null: false
@@ -100,7 +100,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_24_084105) do
 
   create_table "ingredient_groups", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "recipe_id", null: false
-    t.string "name", null: false
+    t.string "name"
     t.integer "position", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -192,7 +192,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_24_084105) do
   create_table "recipe_ingredient_translations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "recipe_ingredient_id", null: false
     t.string "locale", null: false
-    t.string "name", null: false
+    t.string "ingredient_name", null: false
     t.text "preparation_notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -204,7 +204,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_24_084105) do
   create_table "recipe_ingredients", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "ingredient_group_id", null: false
     t.uuid "ingredient_id"
-    t.string "ingredient_name", null: false
+    t.string "ingredient_name"
     t.decimal "amount", precision: 10, scale: 2
     t.string "unit"
     t.text "preparation_notes"
@@ -257,8 +257,10 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_24_084105) do
   create_table "recipe_steps", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "recipe_id", null: false
     t.integer "step_number", null: false
+    t.integer "timing_minutes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "instruction_original"
     t.index ["recipe_id", "step_number"], name: "index_recipe_steps_on_recipe_id_and_step_number", unique: true
     t.index ["recipe_id"], name: "index_recipe_steps_on_recipe_id"
   end
@@ -275,7 +277,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_24_084105) do
   end
 
   create_table "recipes", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "name", null: false
+    t.string "name"
     t.string "source_language", default: "en", null: false
     t.integer "servings_original"
     t.integer "servings_min"
@@ -287,11 +289,10 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_24_084105) do
     t.string "precision_reason"
     t.string "source_url"
     t.text "admin_notes"
-    t.boolean "variants_generated", default: false
-    t.datetime "variants_generated_at"
     t.boolean "translations_completed", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "last_translated_at"
     t.index ["name"], name: "index_recipes_on_name"
     t.index ["source_language"], name: "index_recipes_on_source_language"
   end
@@ -320,9 +321,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_24_084105) do
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "email", null: false
     t.string "encrypted_password", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
     t.string "role", default: "user"
     t.string "preferred_language", default: "en"
     t.datetime "created_at", null: false

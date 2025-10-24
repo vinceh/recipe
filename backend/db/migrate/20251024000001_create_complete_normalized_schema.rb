@@ -29,7 +29,7 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     # RECIPES (NORMALIZED)
     # ============================================================================
     create_table :recipes, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.string :name, null: false
+      t.string :name
       t.string :source_language, default: "en", null: false
 
       t.integer :servings_original
@@ -51,7 +51,6 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
 
       t.timestamps
     end
-    add_index :recipes, :name
     add_index :recipes, :source_language
 
     # ============================================================================

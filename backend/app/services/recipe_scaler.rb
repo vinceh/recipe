@@ -152,7 +152,7 @@ class RecipeScaler
     return 'baking' if recipe.requires_precision
 
     precision_types = ['baking', 'confectionery', 'fermentation', 'molecular']
-    recipe.recipe_types.joins(:data_reference).where(data_references: { key: precision_types }).exists? ? 'baking' : 'cooking'
+    recipe.recipe_recipe_types.joins(:data_reference).where(data_references: { key: precision_types }).exists? ? 'baking' : 'cooking'
   end
 
   def find_ingredient_by_id(ingredient_id)
