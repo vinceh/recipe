@@ -77,59 +77,11 @@ export interface RecipeDetail extends Recipe {
   user_notes?: RecipeUserNote[]
 }
 
-/**
- * @deprecated Use RecipeIngredientItem and RecipeIngredientGroup instead.
- * Legacy interface kept for backward compatibility during transition to Phase 7.
- */
-export interface RecipeIngredient {
-  id: number
-  name: string
-  quantity?: string
-  unit?: string
-  preparation?: string
-  optional: boolean
-  order_index: number
-}
-
-/**
- * @deprecated Use RecipeStep instead.
- * Legacy interface kept for backward compatibility during transition to Phase 7.
- */
-export interface Step {
-  id: number
-  step_number: number
-  instruction: string
-}
-
 export interface RecipeUserNote {
   id: number
   content: string
   created_at: string
   updated_at: string
-}
-
-/**
- * @deprecated Translation data is now served by the API with locale parameter.
- * Use Recipe with lang parameter instead (e.g., getRecipe(id, { lang: 'ja' })).
- */
-export interface Translation {
-  id: number
-  language: string
-  title: string
-  ingredients: RecipeIngredient[]
-  steps: Step[]
-}
-
-/**
- * @deprecated Variants feature is not implemented in Phase 7.
- * This interface is kept for reference only.
- */
-export interface Variant {
-  id: number
-  variant_type: string
-  description: string
-  ingredients: RecipeIngredient[]
-  steps: Step[]
 }
 
 export interface ScaleRecipePayload {
@@ -141,19 +93,6 @@ export interface ScaleRecipeResponse {
   new_servings: number
   scale_factor: number
   scaled_ingredient_groups: RecipeIngredientGroup[]
-}
-
-// Data reference types
-export interface DataReference {
-  id?: number
-  category?: string
-  name?: string
-  key: string
-  display_name: string
-  reference_type?: string
-  sort_order?: number
-  active?: boolean
-  translations?: { [key: string]: string }
 }
 
 // API response wrapper
@@ -200,9 +139,6 @@ export interface AuthResponse {
   token: string
   user: User
 }
-
-// Legacy auth type alias
-export type SignupCredentials = SignupData
 
 // Admin-specific types
 export interface PaginationMeta {
