@@ -44,7 +44,7 @@ module Api
       # GET /api/v1/recipes/:id
       # Show single recipe with full details
       def show
-        recipe = Recipe.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :dish_types, :cuisines, :recipe_types, :recipe_aliases, recipe_steps: :recipe_step_translations).find(params[:id])
+        recipe = Recipe.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :dish_types, :cuisines, :recipe_types, :recipe_aliases, :recipe_steps).find(params[:id])
         render_success(data: { recipe: recipe_detail_json(recipe) })
       end
 

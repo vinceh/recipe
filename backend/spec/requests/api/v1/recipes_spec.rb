@@ -112,6 +112,8 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
           'dietary_tags',
           'dish_types',
           'cuisines',
+          'translations_completed',
+          'last_translated_at',
           'created_at',
           'updated_at'
         )
@@ -235,7 +237,7 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
       create_ingredient_group(recipe, 'Main Ingredients', [
         { name: 'flour', amount: '2', unit: 'cup', preparation: 'sifted' }
       ])
-      create_recipe_step(recipe, 1, 'Mix ingredients', easier: 'Combine flour and water', no_equipment: 'Mix by hand')
+      create_recipe_step(recipe, 1, 'Mix ingredients')
       create_equipment(recipe, 'oven')
       create_equipment(recipe, 'mixing bowl')
       create_dietary_tag(recipe, 'vegetarian')
@@ -334,6 +336,17 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
       equipment = json['data']['recipe']['equipment']
 
       expect(equipment).to contain_exactly('oven', 'mixing bowl')
+    end
+
+    it 'includes translation status fields' do
+      get "/api/v1/recipes/#{recipe.id}", headers: headers
+
+      json = JSON.parse(response.body)
+      recipe_json = json['data']['recipe']
+
+      expect(recipe_json).to have_key('translations_completed')
+      expect(recipe_json).to have_key('last_translated_at')
+      expect(recipe_json['translations_completed']).to be_in([true, false])
     end
 
     it 'returns 404 for non-existent recipe' do
