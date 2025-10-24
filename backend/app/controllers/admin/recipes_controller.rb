@@ -226,9 +226,8 @@ module Admin
     def regenerate_translations
       recipe = Recipe.find(params[:id])
 
-      # This would call a service to regenerate translations
-      # For now, we'll just mark it as regenerated
-      recipe.update!(translations_completed: false)
+      # Bypass rate limiting and deduplication by directly enqueueing the job
+      TranslateRecipeJob.perform_later(recipe.id)
 
       render_success(
         data: { recipe: admin_recipe_json(recipe) },
