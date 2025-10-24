@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, computed, watch } from 'vue'
+import { ref, onMounted, computed, watch, onBeforeUnmount } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useUiStore } from '@/stores'
 import PageHeader from '@/components/shared/PageHeader.vue'
@@ -15,39 +15,31 @@ const uiStore = useUiStore()
 const recipe = ref<RecipeDetail | null>(null)
 const loading = ref(true)
 const error = ref<Error | null>(null)
+const isComponentMounted = ref(true)
 
 const recipeId = computed(() => route.params.id as string)
 
-// Available languages for translation
-const availableLanguages = [
-  { code: 'en', name: 'English' },
-  { code: 'ja', name: '日本語 (Japanese)' },
-  { code: 'ko', name: '한국어 (Korean)' },
-  { code: 'zh-tw', name: '繁體中文 (Traditional Chinese)' },
-  { code: 'zh-cn', name: '简体中文 (Simplified Chinese)' },
-  { code: 'es', name: 'Español (Spanish)' },
-  { code: 'fr', name: 'Français (French)' }
-]
-
-// Get the currently displayed recipe data (API handles translation via lang parameter)
-const displayedRecipe = computed(() => {
-  return recipe.value
-})
-
 async function fetchRecipe() {
+  if (!isComponentMounted.value) return
+
   loading.value = true
   error.value = null
 
   try {
     const response = await adminApi.getRecipe(recipeId.value, uiStore.language)
 
+    if (!isComponentMounted.value) return
+
     if (response.success && response.data) {
-      recipe.value = response.data.recipe as any
+      recipe.value = response.data.recipe
     }
   } catch (e) {
+    if (!isComponentMounted.value) return
     error.value = e instanceof Error ? e : new Error('Failed to fetch recipe')
   } finally {
-    loading.value = false
+    if (isComponentMounted.value) {
+      loading.value = false
+    }
   }
 }
 
@@ -79,7 +71,7 @@ async function regenerateVariants() {
   try {
     const response = await adminApi.regenerateVariants(recipe.value.id)
     if (response.success) {
-      recipe.value = response.data.recipe as any
+      recipe.value = response.data.recipe
     }
   } catch (e) {
     error.value = e instanceof Error ? e : new Error('Failed to regenerate variants')
@@ -92,27 +84,43 @@ async function regenerateTranslations() {
   try {
     const response = await adminApi.regenerateTranslations(recipe.value.id)
     if (response.success) {
-      recipe.value = response.data.recipe as any
+      recipe.value = response.data.recipe
     }
   } catch (e) {
     error.value = e instanceof Error ? e : new Error('Failed to regenerate translations')
   }
 }
 
-// Watch for language changes and refetch recipe with new language
+// Debounce language changes to prevent race conditions from rapid switching
+let languageChangeTimeout: ReturnType<typeof setTimeout> | null = null
+
 watch(() => uiStore.language, () => {
-  fetchRecipe()
+  if (languageChangeTimeout) {
+    clearTimeout(languageChangeTimeout)
+  }
+
+  languageChangeTimeout = setTimeout(() => {
+    fetchRecipe()
+  }, 300)
 })
 
 onMounted(() => {
+  isComponentMounted.value = true
   fetchRecipe()
+})
+
+onBeforeUnmount(() => {
+  isComponentMounted.value = false
+  if (languageChangeTimeout) {
+    clearTimeout(languageChangeTimeout)
+  }
 })
 </script>
 
 <template>
   <div class="admin-recipe-detail">
     <PageHeader
-      :title="(recipe as any)?.name || $t('admin.recipes.detail.title')"
+      :title="recipe?.name || $t('admin.recipes.detail.title')"
       :subtitle="$t('admin.recipes.detail.subtitle')"
     >
       <template #actions>
@@ -143,30 +151,30 @@ onMounted(() => {
     <!-- Recipe content -->
     <div v-else-if="recipe" class="recipe-content">
       <!-- Nutrition Card -->
-      <div v-if="(recipe as any).nutrition && (recipe as any).nutrition.per_serving" class="card">
+      <div v-if="recipe?.nutrition?.per_serving" class="card">
         <div class="card-header">
           <h3>{{ $t('admin.recipes.detail.sections.nutrition') }}</h3>
         </div>
         <div class="card-body">
           <div class="nutrition-grid">
             <div class="nutrition-item">
-              <div class="nutrition-value">{{ (recipe as any).nutrition.per_serving.calories }}</div>
+              <div class="nutrition-value">{{ recipe?.nutrition?.per_serving?.calories }}</div>
               <div class="nutrition-label">{{ $t('admin.recipes.detail.nutrition.calories') }}</div>
             </div>
             <div class="nutrition-item">
-              <div class="nutrition-value">{{ (recipe as any).nutrition.per_serving.protein_g }}g</div>
+              <div class="nutrition-value">{{ recipe?.nutrition?.per_serving?.protein_g }}g</div>
               <div class="nutrition-label">{{ $t('admin.recipes.detail.nutrition.protein') }}</div>
             </div>
             <div class="nutrition-item">
-              <div class="nutrition-value">{{ (recipe as any).nutrition.per_serving.carbs_g }}g</div>
+              <div class="nutrition-value">{{ recipe?.nutrition?.per_serving?.carbs_g }}g</div>
               <div class="nutrition-label">{{ $t('admin.recipes.detail.nutrition.carbs') }}</div>
             </div>
             <div class="nutrition-item">
-              <div class="nutrition-value">{{ (recipe as any).nutrition.per_serving.fat_g }}g</div>
+              <div class="nutrition-value">{{ recipe?.nutrition?.per_serving?.fat_g }}g</div>
               <div class="nutrition-label">{{ $t('admin.recipes.detail.nutrition.fat') }}</div>
             </div>
             <div class="nutrition-item">
-              <div class="nutrition-value">{{ (recipe as any).nutrition.per_serving.fiber_g }}g</div>
+              <div class="nutrition-value">{{ recipe?.nutrition?.per_serving?.fiber_g }}g</div>
               <div class="nutrition-label">{{ $t('admin.recipes.detail.nutrition.fiber') }}</div>
             </div>
           </div>
@@ -186,7 +194,7 @@ onMounted(() => {
           <div class="info-grid">
             <div class="info-item">
               <label>{{ $t('admin.recipes.detail.fields.name') }}</label>
-              <p>{{ (displayedRecipe as any).name }}</p>
+              <p>{{ recipe?.name }}</p>
             </div>
             <div class="info-item">
               <label>{{ $t('admin.recipes.detail.fields.language') }}</label>
@@ -194,7 +202,7 @@ onMounted(() => {
             </div>
             <div class="info-item">
               <label>{{ $t('admin.recipes.detail.fields.servings') }}</label>
-              <p>{{ (recipe as any).servings?.original || recipe.servings || '-' }}</p>
+              <p>{{ recipe?.servings?.original || '-' }}</p>
             </div>
             <div class="info-item">
               <label>{{ $t('admin.recipes.detail.fields.timing') }}</label>
@@ -249,13 +257,13 @@ onMounted(() => {
               <label>{{ $t('admin.recipes.detail.fields.aliases') }}</label>
               <div class="tags">
                 <span
-                  v-for="alias in (recipe as any).aliases"
+                  v-for="alias in recipe?.aliases"
                   :key="alias"
                   class="tag"
                 >
                   {{ alias }}
                 </span>
-                <span v-if="!(recipe as any).aliases || (recipe as any).aliases.length === 0">-</span>
+                <span v-if="!recipe?.aliases || recipe.aliases.length === 0">-</span>
               </div>
             </div>
           </div>
@@ -263,41 +271,41 @@ onMounted(() => {
           <div class="info-grid">
             <div class="info-item">
               <label>{{ $t('admin.recipes.detail.fields.sourceUrl') }}</label>
-              <p v-if="(recipe as any).source_url">
-                <a :href="(recipe as any).source_url" target="_blank" rel="noopener noreferrer">
-                  {{ (recipe as any).source_url }}
+              <p v-if="recipe?.source_url">
+                <a :href="recipe.source_url" target="_blank" rel="noopener noreferrer">
+                  {{ recipe.source_url }}
                 </a>
               </p>
               <p v-else>-</p>
             </div>
             <div class="info-item">
               <label>{{ $t('admin.recipes.detail.fields.requiresPrecision') }}</label>
-              <p>{{ (recipe as any).requires_precision ? $t('common.labels.yes') : $t('common.labels.no') }}</p>
+              <p>{{ recipe?.requires_precision ? $t('common.labels.yes') : $t('common.labels.no') }}</p>
             </div>
           </div>
 
-          <div v-if="(recipe as any).admin_notes" class="info-item">
+          <div v-if="recipe?.admin_notes" class="info-item">
             <label>{{ $t('admin.recipes.detail.fields.adminNotes') }}</label>
-            <p>{{ (recipe as any).admin_notes }}</p>
+            <p>{{ recipe.admin_notes }}</p>
           </div>
         </div>
       </div>
 
       <!-- Ingredients Card -->
-      <div v-if="(displayedRecipe as any).ingredient_groups && (displayedRecipe as any).ingredient_groups.length > 0" class="card">
+      <div v-if="recipe?.ingredient_groups && recipe.ingredient_groups.length > 0" class="card">
         <div class="card-header">
           <h3>{{ $t('admin.recipes.detail.sections.ingredients') }}</h3>
         </div>
         <div class="card-body">
           <div
-            v-for="(group, index) in (displayedRecipe as any).ingredient_groups"
+            v-for="(group, index) in recipe?.ingredient_groups"
             :key="index"
             class="ingredient-group"
           >
             <h4 v-if="group.name">{{ group.name }}</h4>
             <ul class="ingredient-list">
               <li v-for="(item, idx) in group.items" :key="idx">
-                {{ formatAmount(item.amount, item.unit, item.name) }} {{ item.name }}
+                {{ formatAmount(item.amount ? Number(item.amount) : 0, item.unit || '', item.name) }} {{ item.name }}
                 <span v-if="item.preparation" class="preparation">({{ item.preparation }})</span>
               </li>
             </ul>
@@ -306,21 +314,15 @@ onMounted(() => {
       </div>
 
       <!-- Steps Card -->
-      <div v-if="(displayedRecipe as any).steps && (displayedRecipe as any).steps.length > 0" class="card">
+      <div v-if="recipe?.steps && recipe.steps.length > 0" class="card">
         <div class="card-header">
           <h3>{{ $t('admin.recipes.detail.sections.steps') }}</h3>
         </div>
         <div class="card-body">
           <ol class="steps-list">
-            <li v-for="(step, index) in (displayedRecipe as any).steps" :key="index">
+            <li v-for="(step, index) in recipe?.steps" :key="index">
               <div class="step-content">
                 <p class="step-instruction">{{ step.instruction }}</p>
-                <div v-if="step.equipment && step.equipment.length > 0" class="step-meta">
-                  <span class="step-equipment">
-                    <i class="pi pi-wrench"></i>
-                    {{ step.equipment.join(', ') }}
-                  </span>
-                </div>
               </div>
             </li>
           </ol>
@@ -328,14 +330,14 @@ onMounted(() => {
       </div>
 
       <!-- Equipment Card -->
-      <div v-if="(recipe as any).equipment && (recipe as any).equipment.length > 0" class="card">
+      <div v-if="recipe?.equipment && recipe.equipment.length > 0" class="card">
         <div class="card-header">
           <h3>{{ $t('admin.recipes.detail.sections.equipment') }}</h3>
         </div>
         <div class="card-body">
           <div class="tags">
             <span
-              v-for="item in (recipe as any).equipment"
+              v-for="item in recipe?.equipment"
               :key="item"
               class="tag"
             >

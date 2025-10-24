@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, computed, watch } from 'vue'
+import { ref, onMounted, computed, watch, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
 import { useUiStore } from '@/stores'
 import PageHeader from '@/components/shared/PageHeader.vue'
@@ -15,6 +15,7 @@ const recipes = ref<RecipeDetail[]>([])
 const pagination = ref<PaginationMeta | null>(null)
 const loading = ref(true)
 const error = ref<Error | null>(null)
+const isComponentMounted = ref(true)
 
 const currentPage = ref(1)
 const perPage = ref(20)
@@ -25,6 +26,8 @@ const searchQuery = ref('')
 const hasRecipes = computed(() => recipes.value.length > 0)
 
 async function fetchRecipes() {
+  if (!isComponentMounted.value) return
+
   loading.value = true
   error.value = null
 
@@ -42,14 +45,19 @@ async function fetchRecipes() {
 
     const response = await adminApi.getRecipes(params)
 
+    if (!isComponentMounted.value) return
+
     if (response.success && response.data) {
       recipes.value = response.data.recipes
       pagination.value = response.data.pagination
     }
   } catch (e) {
+    if (!isComponentMounted.value) return
     error.value = e instanceof Error ? e : new Error('Failed to fetch recipes')
   } finally {
-    loading.value = false
+    if (isComponentMounted.value) {
+      loading.value = false
+    }
   }
 }
 
@@ -75,14 +83,38 @@ function createRecipe() {
   router.push('/admin/recipes/new')
 }
 
-// Watch for language changes and refetch recipes
+// Debounce language changes to prevent race conditions from rapid switching
+let languageChangeTimeout: ReturnType<typeof setTimeout> | null = null
+
 watch(() => uiStore.language, () => {
-  currentPage.value = 1 // Reset to first page
-  fetchRecipes()
+  if (languageChangeTimeout) {
+    clearTimeout(languageChangeTimeout)
+  }
+
+  // Clear any pending search timeout
+  if (searchTimeout) {
+    clearTimeout(searchTimeout)
+  }
+
+  languageChangeTimeout = setTimeout(() => {
+    currentPage.value = 1 // Reset to first page
+    fetchRecipes()
+  }, 300)
 })
 
 onMounted(() => {
+  isComponentMounted.value = true
   fetchRecipes()
+})
+
+onBeforeUnmount(() => {
+  isComponentMounted.value = false
+  if (searchTimeout) {
+    clearTimeout(searchTimeout)
+  }
+  if (languageChangeTimeout) {
+    clearTimeout(languageChangeTimeout)
+  }
 })
 </script>
 
