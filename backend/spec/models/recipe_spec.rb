@@ -864,10 +864,10 @@ RSpec.describe Recipe, type: :model do
         skip 'SolidQueue not initialized in test environment' unless SolidQueue::Job.table_exists?
       end
 
-      it 'does not enqueue second job if one is already pending' do
+      it 'deletes pending job and enqueues new one with latest recipe data' do
         recipe = create(:recipe, last_translated_at: 2.hours.ago)
 
-        SolidQueue::Job.create!(
+        pending_job = SolidQueue::Job.create!(
           class_name: 'TranslateRecipeJob',
           arguments: [recipe.id],
           finished_at: nil
@@ -875,7 +875,10 @@ RSpec.describe Recipe, type: :model do
 
         expect {
           recipe.update(servings_original: 8)
-        }.not_to have_enqueued_job(TranslateRecipeJob)
+        }.to have_enqueued_job(TranslateRecipeJob).with(recipe.id)
+
+        # Verify pending job was deleted
+        expect(SolidQueue::Job.exists?(pending_job.id)).to be false
       end
 
       it 'allows enqueueing when pending job is for different recipe' do
@@ -919,26 +922,29 @@ RSpec.describe Recipe, type: :model do
         skip 'SolidQueue not initialized in test environment' unless SolidQueue::Job.table_exists?
       end
 
-      it 'only counts jobs with finished_at as nil (not completed or failed)' do
+      it 'deletes only pending jobs (not completed ones)' do
         recipe = create(:recipe, last_translated_at: 2.hours.ago)
 
-        # Completed job
-        SolidQueue::Job.create!(
+        # Completed job - should NOT be deleted
+        completed_job = SolidQueue::Job.create!(
           class_name: 'TranslateRecipeJob',
           arguments: [recipe.id],
           finished_at: 10.minutes.ago
         )
 
-        # Another pending job
-        SolidQueue::Job.create!(
+        # Pending job - should be deleted
+        pending_job = SolidQueue::Job.create!(
           class_name: 'TranslateRecipeJob',
           arguments: [recipe.id],
           finished_at: nil
         )
 
-        expect {
-          recipe.update(servings_original: 8)
-        }.not_to have_enqueued_job(TranslateRecipeJob)
+        recipe.update(servings_original: 8)
+
+        # Verify completed job still exists
+        expect(SolidQueue::Job.exists?(completed_job.id)).to be true
+        # Verify pending job was deleted
+        expect(SolidQueue::Job.exists?(pending_job.id)).to be false
       end
 
       it 'checks for pending jobs by matching recipe_id in arguments' do
@@ -946,7 +952,7 @@ RSpec.describe Recipe, type: :model do
         recipe2 = create(:recipe, name: "Recipe 2 #{SecureRandom.hex(4)}", last_translated_at: 2.hours.ago)
 
         # Pending job for recipe1 only
-        SolidQueue::Job.create!(
+        pending_job_recipe1 = SolidQueue::Job.create!(
           class_name: 'TranslateRecipeJob',
           arguments: [recipe1.id],
           finished_at: nil
@@ -956,6 +962,9 @@ RSpec.describe Recipe, type: :model do
         expect {
           recipe2.update(servings_original: 8)
         }.to have_enqueued_job(TranslateRecipeJob).with(recipe2.id)
+
+        # Verify recipe1 pending job was NOT deleted (different recipe)
+        expect(SolidQueue::Job.exists?(pending_job_recipe1.id)).to be true
       end
     end
 
@@ -992,52 +1001,142 @@ RSpec.describe Recipe, type: :model do
         end
       end
 
-      describe 'translation_job_pending?' do
-        it 'returns false when no pending jobs exist' do
-          recipe = create(:recipe)
-          expect(recipe.send(:translation_job_pending?)).to be false
-        end
-
+      describe 'delete_pending_translation_job' do
         context 'when SolidQueue available' do
           before do
             skip 'SolidQueue not initialized in test environment' unless SolidQueue::Job.table_exists?
           end
 
-          it 'returns true when pending job exists for recipe' do
+          it 'deletes pending jobs for recipe' do
             recipe = create(:recipe)
 
-            SolidQueue::Job.create!(
+            pending_job = SolidQueue::Job.create!(
               class_name: 'TranslateRecipeJob',
               arguments: [recipe.id],
               finished_at: nil
             )
 
-            expect(recipe.send(:translation_job_pending?)).to be true
+            recipe.send(:delete_pending_translation_job)
+            expect(SolidQueue::Job.exists?(pending_job.id)).to be false
           end
 
-          it 'returns false when job is completed' do
+          it 'does not delete completed jobs' do
             recipe = create(:recipe)
 
-            SolidQueue::Job.create!(
+            completed_job = SolidQueue::Job.create!(
               class_name: 'TranslateRecipeJob',
               arguments: [recipe.id],
               finished_at: 10.minutes.ago
             )
 
-            expect(recipe.send(:translation_job_pending?)).to be false
+            recipe.send(:delete_pending_translation_job)
+            expect(SolidQueue::Job.exists?(completed_job.id)).to be true
           end
 
-          it 'returns false when job is for different recipe' do
+          it 'does not delete jobs for other recipes' do
             recipe1 = create(:recipe, name: "Recipe 1 #{SecureRandom.hex(4)}")
             recipe2 = create(:recipe, name: "Recipe 2 #{SecureRandom.hex(4)}")
 
-            SolidQueue::Job.create!(
+            pending_job = SolidQueue::Job.create!(
               class_name: 'TranslateRecipeJob',
               arguments: [recipe1.id],
               finished_at: nil
             )
 
-            expect(recipe2.send(:translation_job_pending?)).to be false
+            recipe2.send(:delete_pending_translation_job)
+            expect(SolidQueue::Job.exists?(pending_job.id)).to be true
+          end
+        end
+      end
+
+      describe 'schedule_translation_at_next_available_time' do
+        context 'when SolidQueue available' do
+          before do
+            skip 'SolidQueue not initialized in test environment' unless SolidQueue::Job.table_exists?
+          end
+
+          it 'schedules job with correct delay based on rolling window' do
+            recipe = create(:recipe)
+
+            # Create 4 completed jobs at specific times
+            # 9:15, 9:20, 9:40, 9:50 (current time is 10:00)
+            freeze_time do
+              now = Time.current
+              [45, 40, 20, 10].each do |minutes_ago|
+                SolidQueue::Job.create!(
+                  class_name: 'TranslateRecipeJob',
+                  arguments: [recipe.id],
+                  finished_at: now - minutes_ago.minutes
+                )
+              end
+
+              # At 10:00, oldest job (45 min ago, at 9:15) falls out of window at 10:16
+              # Delay should be 16 minutes
+              recipe.send(:schedule_translation_at_next_available_time)
+
+              # Check that job was enqueued with approximately 16 minute delay
+              enqueued_jobs = ActiveJob::Base.queue_adapter.enqueued_jobs.select do |job|
+                job[:job] == TranslateRecipeJob && job[:args] == [recipe.id]
+              end
+
+              expect(enqueued_jobs.length).to eq(1)
+              # wait_until should be approximately 16 minutes from now
+              delay_seconds = enqueued_jobs.last[:wait]
+              expect(delay_seconds).to be_between(950, 1010) # ~16 minutes in seconds
+            end
+          end
+        end
+      end
+
+      describe 'get_oldest_completed_translation_job' do
+        context 'when SolidQueue available' do
+          before do
+            skip 'SolidQueue not initialized in test environment' unless SolidQueue::Job.table_exists?
+          end
+
+          it 'returns oldest completed job for recipe' do
+            recipe = create(:recipe)
+
+            job1 = SolidQueue::Job.create!(
+              class_name: 'TranslateRecipeJob',
+              arguments: [recipe.id],
+              finished_at: 10.minutes.ago
+            )
+
+            job2 = SolidQueue::Job.create!(
+              class_name: 'TranslateRecipeJob',
+              arguments: [recipe.id],
+              finished_at: 5.minutes.ago
+            )
+
+            oldest = recipe.send(:get_oldest_completed_translation_job)
+            expect(oldest.id).to eq(job1.id)
+          end
+
+          it 'ignores pending jobs' do
+            recipe = create(:recipe)
+
+            pending_job = SolidQueue::Job.create!(
+              class_name: 'TranslateRecipeJob',
+              arguments: [recipe.id],
+              finished_at: nil
+            )
+
+            completed_job = SolidQueue::Job.create!(
+              class_name: 'TranslateRecipeJob',
+              arguments: [recipe.id],
+              finished_at: 10.minutes.ago
+            )
+
+            oldest = recipe.send(:get_oldest_completed_translation_job)
+            expect(oldest.id).to eq(completed_job.id)
+          end
+
+          it 'returns nil when no completed jobs' do
+            recipe = create(:recipe)
+
+            oldest = recipe.send(:get_oldest_completed_translation_job)
+            expect(oldest).to be_nil
           end
         end
       end
