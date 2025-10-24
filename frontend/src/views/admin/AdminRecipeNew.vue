@@ -18,26 +18,23 @@ const { t, locale } = useI18n()
 const formData = ref<Partial<RecipeDetail>>({})
 
 function transformParsedRecipe(recipe: any): Partial<RecipeDetail> {
-  const language = recipe.language || locale.value || 'en'
-
-  // Transform ingredient items: move 'preparation' to 'notes'
+  // Transform ingredient items to match new API structure
   const transformedIngredientGroups = recipe.ingredient_groups?.map((group: any) => ({
     ...group,
     items: group.items?.map((item: any) => ({
       name: item.name,
       amount: item.amount,
       unit: item.unit,
-      notes: item.preparation || item.notes || '',
+      preparation: item.preparation || item.notes || '',
       optional: item.optional || false
     }))
   }))
 
-  // Transform steps: map 'original' to language-based key
-  const transformedSteps = recipe.steps?.map((step: any) => ({
+  // Transform steps to match new API structure (flat instruction field with order)
+  const transformedSteps = recipe.steps?.map((step: any, index: number) => ({
     id: step.id,
-    instructions: {
-      [language]: step.instructions?.original || step.instructions?.[language] || ''
-    }
+    order: index + 1,
+    instruction: step.instruction || step.instructions?.original || step.instructions?.[recipe.language || 'en'] || ''
   }))
 
   return {
@@ -59,16 +56,13 @@ async function handleSaveRecipe() {
   error.value = null
 
   try {
-    console.log('Sending recipe data to backend:', JSON.stringify(formData.value, null, 2))
     const response = await adminApi.createRecipe(formData.value as any)
-    console.log('Backend response:', response)
     if (response.success && response.data) {
       router.push(`/admin/recipes/${response.data.recipe.id}`)
     } else {
       throw new Error(response.message || 'Failed to create recipe')
     }
   } catch (e) {
-    console.error('Save error:', e)
     error.value = e instanceof Error ? e : new Error('Failed to save recipe')
   } finally {
     saving.value = false

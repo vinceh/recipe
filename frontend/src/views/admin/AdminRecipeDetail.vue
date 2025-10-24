@@ -66,7 +66,6 @@ async function fetchRecipe() {
       selectedLanguage.value = (recipe.value as any).language || 'en'
     }
   } catch (e) {
-    console.error('Fetch error:', e)
     error.value = e instanceof Error ? e : new Error('Failed to fetch recipe')
   } finally {
     loading.value = false
@@ -78,8 +77,8 @@ function goBack() {
 }
 
 function editRecipe() {
-  // TODO: Implement edit functionality
-  console.log('Edit recipe', recipe.value)
+  if (!recipe.value) return
+  router.push(`/admin/recipes/${recipe.value.id}/edit`)
 }
 
 async function deleteRecipe() {
@@ -91,7 +90,6 @@ async function deleteRecipe() {
     await adminApi.deleteRecipe(recipe.value.id)
     router.push('/admin/recipes')
   } catch (e) {
-    console.error('Delete error:', e)
     error.value = e instanceof Error ? e : new Error('Failed to delete recipe')
   }
 }
@@ -105,7 +103,7 @@ async function regenerateVariants() {
       recipe.value = response.data.recipe as any
     }
   } catch (e) {
-    console.error('Regenerate variants error:', e)
+    error.value = e instanceof Error ? e : new Error('Failed to regenerate variants')
   }
 }
 
@@ -118,7 +116,7 @@ async function regenerateTranslations() {
       recipe.value = response.data.recipe as any
     }
   } catch (e) {
-    console.error('Regenerate translations error:', e)
+    error.value = e instanceof Error ? e : new Error('Failed to regenerate translations')
   }
 }
 
@@ -334,7 +332,7 @@ onMounted(() => {
             <ul class="ingredient-list">
               <li v-for="(item, idx) in group.items" :key="idx">
                 {{ formatAmount(item.amount, item.unit, item.name) }} {{ item.name }}
-                <span v-if="item.notes" class="preparation">({{ item.notes }})</span>
+                <span v-if="item.preparation" class="preparation">({{ item.preparation }})</span>
               </li>
             </ul>
           </div>
@@ -350,7 +348,7 @@ onMounted(() => {
           <ol class="steps-list">
             <li v-for="(step, index) in (displayedRecipe as any).steps" :key="index">
               <div class="step-content">
-                <p class="step-instruction">{{ step.instructions?.[recipe?.language || 'en'] || step.instructions?.en || step }}</p>
+                <p class="step-instruction">{{ step.instruction }}</p>
                 <div v-if="step.equipment && step.equipment.length > 0" class="step-meta">
                   <span class="step-equipment">
                     <i class="pi pi-wrench"></i>

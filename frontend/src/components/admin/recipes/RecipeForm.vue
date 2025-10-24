@@ -344,7 +344,6 @@ watch(formData, (newValue) => {
 
 // Methods
 function handleSave() {
-  console.log('Form data being sent:', JSON.stringify(formData.value, null, 2))
   emit('update:modelValue', formData.value)
   emit('save')
 }
@@ -355,14 +354,11 @@ function handleCancel() {
 
 // Lifecycle
 onMounted(async () => {
-  console.log('RecipeForm mounted - checking data stores...')
-
   // Fetch data references if not already loaded
   if (dataStore.dietaryTags.length === 0 ||
       dataStore.dishTypes.length === 0 ||
       dataStore.cuisines.length === 0 ||
       dataStore.recipeTypes.length === 0) {
-    console.log('Fetching data references...')
     await dataStore.fetchAll()
   }
 
