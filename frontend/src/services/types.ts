@@ -8,9 +8,9 @@ export interface RecipeServings {
 }
 
 export interface RecipeTiming {
-  prep_minutes: number
-  cook_minutes: number
-  total_minutes: number
+  prep_minutes?: number
+  cook_minutes?: number
+  total_minutes?: number
 }
 
 export interface RecipeNutritionPerServing {
@@ -46,8 +46,8 @@ export interface RecipeStep {
 
 export interface Recipe {
   id: string | number
-  name: string  // Backend uses 'name', not 'title'
-  language: string  // Backend uses 'language', not 'base_language'
+  name: string  // Translated via Mobility based on Accept-Language or ?lang parameter
+  language: string  // The source language of the recipe (e.g., 'en')
   source_url?: string
   requires_precision?: boolean
   precision_reason?: 'baking' | 'confectionery' | 'fermentation' | 'molecular'
@@ -77,7 +77,10 @@ export interface RecipeDetail extends Recipe {
   user_notes?: RecipeUserNote[]
 }
 
-// Legacy interfaces - keeping for backward compatibility during transition
+/**
+ * @deprecated Use RecipeIngredientItem and RecipeIngredientGroup instead.
+ * Legacy interface kept for backward compatibility during transition to Phase 7.
+ */
 export interface RecipeIngredient {
   id: number
   name: string
@@ -88,6 +91,10 @@ export interface RecipeIngredient {
   order_index: number
 }
 
+/**
+ * @deprecated Use RecipeStep instead.
+ * Legacy interface kept for backward compatibility during transition to Phase 7.
+ */
 export interface Step {
   id: number
   step_number: number
@@ -101,6 +108,10 @@ export interface RecipeUserNote {
   updated_at: string
 }
 
+/**
+ * @deprecated Translation data is now served by the API with locale parameter.
+ * Use Recipe with lang parameter instead (e.g., getRecipe(id, { lang: 'ja' })).
+ */
 export interface Translation {
   id: number
   language: string
@@ -109,6 +120,10 @@ export interface Translation {
   steps: Step[]
 }
 
+/**
+ * @deprecated Variants feature is not implemented in Phase 7.
+ * This interface is kept for reference only.
+ */
 export interface Variant {
   id: number
   variant_type: string
@@ -205,6 +220,11 @@ export interface RecipeListResponse {
 
 export interface RecipeFilters {
   q?: string
+  /**
+   * Filter by dietary tags. Accepts single tag or array of tags.
+   * Single: Used for "Add Another" filter patterns
+   * Array: Used for multi-select filter forms
+   */
   dietary_tags?: string | string[]
   dish_types?: string | string[]
   cuisines?: string | string[]
@@ -214,6 +234,13 @@ export interface RecipeFilters {
   max_total_time?: number
   page?: number
   per_page?: number
+  /**
+   * Request recipes translated to specific language.
+   * Passes as ?lang=XX query parameter to backend.
+   * Backend uses Mobility to return translations in requested language.
+   * Falls back to source language if translation missing.
+   * If not specified, defaults to Accept-Language header value or 'en'.
+   */
   lang?: string
 }
 
