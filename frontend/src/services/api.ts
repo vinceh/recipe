@@ -33,9 +33,13 @@ apiClient.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      // Handle unauthorized - clear token and redirect to login
+      // Handle unauthorized - clear token and reject with error
+      // Don't auto-redirect - let the component handle the error message
       localStorage.removeItem('authToken')
-      window.location.href = '/login'
+      // Only redirect if not already on a login page
+      if (!window.location.pathname.includes('/login')) {
+        window.location.href = '/login'
+      }
     }
     return Promise.reject(error)
   }

@@ -77,16 +77,17 @@ test.describe('Admin Authentication - AC-ADMIN-AUTH Tests', () => {
     // Submit form
     await page.locator('[data-testid="admin-login-button"]').click()
 
-    // Wait for request to complete
-    await page.waitForTimeout(2000)
+    // Should show error message (alert element with error content)
+    const errorMessage = page.locator('[role="alert"]')
+    await expect(errorMessage).toBeVisible()
 
-    // Should not redirect to admin dashboard (no successful login)
+    // Should stay on admin/login page (not redirect)
     const url = page.url()
-    expect(url).not.toContain('/admin/dashboard')
-    expect(url).not.toMatch(/\/admin$/)
+    expect(url).toContain('/admin/login')
 
-    // The page is still in the login flow (either still on /admin/login or redirected to /login)
-    expect(url).toMatch(/login/)
+    // Error message should contain error text (not empty)
+    const errorText = await errorMessage.textContent()
+    expect(errorText).toBeTruthy()
   })
 
   // AC-ADMIN-AUTH-004: Non-Admin User Login Attempt
