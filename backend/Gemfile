@@ -47,7 +47,7 @@ gem "redis", "~> 5.0"
 gem "faraday", "~> 2.7"
 
 # AI integration
-gem "anthropic", "~> 0.3"
+gem "ruby-anthropic", "~> 0.4"
 
 # String similarity (using pure Ruby implementation - compatible with all platforms)
 gem "damerau-levenshtein", "~> 1.3"
