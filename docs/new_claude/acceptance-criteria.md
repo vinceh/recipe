@@ -1,15 +1,6 @@
 # Recipe App - Acceptance Criteria
 
-**Author:** V (with Winston, Architect Agent)
-**Date:** 2025-10-07
-**Version:** 1.0
-**Status:** Draft
-
----
-
-## Purpose
-
-This document defines atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN-WHEN-THEN format. Each criterion is assigned a unique ID for traceability to technical components and tests.
+Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN-WHEN-THEN format. Each criterion has a unique ID for traceability to technical components and tests.
 
 ---
 
