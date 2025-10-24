@@ -12,17 +12,21 @@ import type {
 export const recipeApi = {
   // Public API endpoints
   async getRecipes(filters: RecipeFilters = {}): Promise<ApiResponse<RecipeListResponse>> {
+    // lang parameter will be passed as query param if provided in filters
+    // Accept-Language header is automatically added by axios interceptor
     const { data } = await apiClient.get('/recipes', { params: filters })
     return data
   },
 
-  async getRecipe(id: number): Promise<ApiResponse<{ recipe: RecipeDetail }>> {
-    const { data } = await apiClient.get(`/recipes/${id}`)
+  async getRecipe(id: number | string, lang?: string): Promise<ApiResponse<{ recipe: RecipeDetail }>> {
+    const params = lang ? { lang } : {}
+    const { data } = await apiClient.get(`/recipes/${id}`, { params })
     return data
   },
 
-  async scaleRecipe(id: number, payload: ScaleRecipePayload): Promise<ApiResponse<ScaleRecipeResponse>> {
-    const { data } = await apiClient.post(`/recipes/${id}/scale`, payload)
+  async scaleRecipe(id: number | string, payload: ScaleRecipePayload, lang?: string): Promise<ApiResponse<ScaleRecipeResponse>> {
+    const params = lang ? { lang } : {}
+    const { data } = await apiClient.post(`/recipes/${id}/scale`, payload, { params })
     return data
   },
 
