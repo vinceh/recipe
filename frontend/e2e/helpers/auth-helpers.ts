@@ -21,11 +21,16 @@ export async function loginAsAdmin(page: Page, email: string, password: string) 
  */
 export async function clearAuthState(page: Page) {
   await page.context().clearCookies()
-  await page.evaluate(() => {
-    localStorage.clear()
-    sessionStorage.clear()
-  })
-  await page.reload()
+  // Wait for page to be ready before accessing localStorage
+  await page.waitForLoadState('domcontentloaded').catch(() => {})
+  try {
+    await page.evaluate(() => {
+      localStorage.clear()
+      sessionStorage.clear()
+    })
+  } catch (e) {
+    // localStorage might not be accessible, skip if error
+  }
 }
 
 /**
