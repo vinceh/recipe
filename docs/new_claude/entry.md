@@ -1,7 +1,5 @@
 # Quick Start Guide for AI & Developers
 
-**Last Updated:** 2025-10-19
-
 This folder contains the essential documentation for AI-assisted development of the Recipe App.
 
 ---
@@ -11,16 +9,16 @@ This folder contains the essential documentation for AI-assisted development of 
 ### Backend Development
 
 **BEFORE starting development:**
-1. ✅ **Check [acceptance-criteria.md](acceptance-criteria.md)** for existing ACs covering your feature
-2. ✅ **If no ACs exist** → STOP and write comprehensive ACs first (GIVEN-WHEN-THEN format)
-3. ✅ **Review [api-reference.md](api-reference.md)** → understand existing endpoints to avoid duplication
+1. **Check [acceptance-criteria.md](acceptance-criteria.md)** for existing ACs covering your feature
+2. **If no ACs exist** → STOP and write comprehensive ACs first (GIVEN-WHEN-THEN format)
+3. **Review [api-reference.md](api-reference.md)** → understand existing endpoints to avoid duplication
 
 **AFTER development is complete:**
-1. ✅ **Write RSpec tests** for EVERY AC (test-driven development)
-2. ✅ **Run `bundle exec rspec`** → 100% pass required (zero failures, zero pending)
-3. ✅ **Update [api-reference.md](api-reference.md)** if endpoints were added/modified
-4. ✅ **Update other relevant docs** (architecture.md, etc.)
-5. ✅ **Mark task complete** in [development-checklist.md](development-checklist.md)
+1. **Write RSpec tests** for EVERY AC (test-driven development)
+2. **Run `bundle exec rspec`** → 100% pass required (zero failures, zero pending)
+3. **Update [api-reference.md](api-reference.md)** if endpoints were added/modified
+4. **Update other relevant docs** (architecture.md, etc.)
+5. **Mark task complete** in [development-checklist.md](development-checklist.md)
 
 **DO NOT commit if:**
 - Any RSpec test fails
@@ -32,20 +30,20 @@ This folder contains the essential documentation for AI-assisted development of 
 ### Frontend Development
 
 **BEFORE starting development:**
-1. ✅ **Check [component-library.md](component-library.md)** for existing components
-2. ✅ **Reuse existing components** whenever possible (avoid creating duplicates)
-3. ✅ **Review [architecture.md](architecture.md)** → understand design system and folder structure
+1. **Check [component-library.md](component-library.md)** for existing components
+2. **Reuse existing components** whenever possible (avoid creating duplicates)
+3. **Review [architecture.md](architecture.md)** → understand design system and folder structure
 
 **AFTER development is complete:**
-1. ✅ **Document new components** in [component-library.md](component-library.md)
+1. **Document new components** in [component-library.md](component-library.md)
    - Props, emits, slots
    - At least 2 usage examples
-2. ✅ **Ensure 100% i18n coverage** (all 7 languages: en, ja, ko, zh-tw, zh-cn, es, fr)
+2. **Ensure 100% i18n coverage** (all 7 languages: en, ja, ko, zh-tw, zh-cn, es, fr)
    - See [i18n-workflow.md](i18n-workflow.md) for details
-3. ✅ **Run `npm run check:i18n`** → must pass with 100% coverage
-4. ✅ **Test in browser** → switch through all 7 languages, verify no `[missing.key]` brackets
-5. ✅ **Update [architecture.md](architecture.md)** if new folders/CSS patterns added
-6. ✅ **Mark task complete** in [development-checklist.md](development-checklist.md)
+3. **Run `npm run check:i18n`** → must pass with 100% coverage
+4. **Test in browser** → switch through all 7 languages, verify no `[missing.key]` brackets
+5. **Update [architecture.md](architecture.md)** if new folders/CSS patterns added
+6. **Mark task complete** in [development-checklist.md](development-checklist.md)
 
 **DO NOT commit if:**
 - i18n coverage < 100%
@@ -148,7 +146,3 @@ Other documentation lives in parent folders:
 
 - **[../reference/](../reference/)** - Reference data (dietary tags, cuisines, technical designs, AI prompts)
 - **[../planning/](../planning/)** - Historical planning docs (PRD, technical spec, epics)
-
----
-
-**Last Updated:** 2025-10-19
