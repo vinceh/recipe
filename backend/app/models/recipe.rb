@@ -81,8 +81,9 @@ class Recipe < ApplicationRecord
   def translation_rate_limit_exceeded?
     return false if last_translated_at.nil?
 
-    completed_translations_in_last_hour = completed_translation_job_count
-    completed_translations_in_last_hour >= 4
+    completed_translations = completed_translation_job_count
+    max_allowed = Rails.application.config.recipe[:translation_rate_limit][:max_translations_per_window]
+    completed_translations >= max_allowed
   end
 
   def translation_job_pending?
@@ -99,9 +100,12 @@ class Recipe < ApplicationRecord
   def completed_translation_job_count
     return 0 unless job_queue_available?
 
+    rate_limit_window = Rails.application.config.recipe[:translation_rate_limit][:rate_limit_window]
+    cutoff_time = Time.current - rate_limit_window.seconds
+
     SolidQueue::Job.where(class_name: 'TranslateRecipeJob')
       .where('arguments->0 = ?', id)
-      .where('finished_at > ?', 1.hour.ago)
+      .where('finished_at > ?', cutoff_time)
       .where.not(finished_at: nil)
       .count
   rescue StandardError
