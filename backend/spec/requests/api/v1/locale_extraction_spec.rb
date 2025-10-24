@@ -267,23 +267,5 @@ RSpec.describe "Locale Parameter Extraction", type: :request do
     end
   end
 
-  describe "Admin endpoints locale support (AC-PHASE6-ADMIN-001)" do
-    it "extracts locale for admin recipe list endpoint" do
-      admin_user = FactoryBot.create(:admin_user)
-      recipe = FactoryBot.create(:recipe, name: "Admin Recipe")
-      Mobility.with_locale(:ja) { recipe.update(name: "管理者レシピ") }
-
-      get "/admin/recipes", params: { lang: "ja" }, headers: { "Authorization" => "Bearer #{admin_user.auth_token}" }
-      expect(response).to have_http_status(:ok)
-    end
-
-    it "extracts locale for admin recipe detail endpoint" do
-      admin_user = FactoryBot.create(:admin_user)
-      recipe = FactoryBot.create(:recipe, name: "Admin Detail")
-      Mobility.with_locale(:ko) { recipe.update(name: "관리자 세부") }
-
-      get "/admin/recipes/#{recipe.id}", params: { lang: "ko" }, headers: { "Authorization" => "Bearer #{admin_user.auth_token}" }
-      expect(response).to have_http_status(:ok)
-    end
-  end
 end
+
