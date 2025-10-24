@@ -13,30 +13,30 @@ module Admin
 
       # Filter by cuisines (multiple)
       if params[:cuisines].present?
-        cuisine_names = params[:cuisines].is_a?(Array) ? params[:cuisines] : [params[:cuisines]]
-        cuisine_ids = DataReference.where(reference_type: 'cuisine', display_name: cuisine_names).pluck(:id)
+        cuisine_names = params[:cuisines].is_a?(Array) ? params[:cuisines] : [ params[:cuisines] ]
+        cuisine_ids = DataReference.where(reference_type: "cuisine", display_name: cuisine_names).pluck(:id)
         recipes = recipes.joins(:recipe_cuisines).where(recipe_cuisines: { data_reference_id: cuisine_ids }).distinct
       elsif params[:cuisine].present?
-        cuisine_id = DataReference.where(reference_type: 'cuisine', display_name: params[:cuisine]).pluck(:id).first
+        cuisine_id = DataReference.where(reference_type: "cuisine", display_name: params[:cuisine]).pluck(:id).first
         recipes = recipes.joins(:recipe_cuisines).where(recipe_cuisines: { data_reference_id: cuisine_id }).distinct if cuisine_id
       end
 
       # Filter by dish types (multiple)
       if params[:dish_types].present?
-        type_names = params[:dish_types].is_a?(Array) ? params[:dish_types] : [params[:dish_types]]
-        type_ids = DataReference.where(reference_type: 'dish_type', display_name: type_names).pluck(:id)
+        type_names = params[:dish_types].is_a?(Array) ? params[:dish_types] : [ params[:dish_types] ]
+        type_ids = DataReference.where(reference_type: "dish_type", display_name: type_names).pluck(:id)
         recipes = recipes.joins(:recipe_dish_types).where(recipe_dish_types: { data_reference_id: type_ids }).distinct
       end
 
       # Filter by max prep time
       if params[:max_prep_time].present?
         max_time = params[:max_prep_time].to_i
-        recipes = recipes.where('prep_minutes <= ?', max_time)
+        recipes = recipes.where("prep_minutes <= ?", max_time)
       end
 
       # Filter by dietary tag
       if params[:dietary_tag].present?
-        tag_id = DataReference.where(reference_type: 'dietary_tag', display_name: params[:dietary_tag]).pluck(:id).first
+        tag_id = DataReference.where(reference_type: "dietary_tag", display_name: params[:dietary_tag]).pluck(:id).first
         recipes = recipes.joins(:recipe_dietary_tags).where(recipe_dietary_tags: { data_reference_id: tag_id }).distinct if tag_id
       end
 
@@ -44,7 +44,7 @@ module Admin
       total_count = recipes.count
       page = params[:page]&.to_i || 1
       per_page = params[:per_page]&.to_i || 20
-      per_page = [per_page, 100].min
+      per_page = [ per_page, 100 ].min
       total_pages = (total_count.to_f / per_page).ceil
 
       # Eager load associations for serialization
@@ -85,12 +85,12 @@ module Admin
       if recipe.save
         render_success(
           data: { recipe: admin_recipe_json(recipe) },
-          message: 'Recipe created successfully',
+          message: "Recipe created successfully",
           status: :created
         )
       else
         render_error(
-          message: 'Failed to create recipe',
+          message: "Failed to create recipe",
           errors: recipe.errors.full_messages
         )
       end
@@ -104,11 +104,11 @@ module Admin
       if recipe.update(recipe_params)
         render_success(
           data: { recipe: admin_recipe_json(recipe) },
-          message: 'Recipe updated successfully'
+          message: "Recipe updated successfully"
         )
       else
         render_error(
-          message: 'Failed to update recipe',
+          message: "Failed to update recipe",
           errors: recipe.errors.full_messages
         )
       end
@@ -122,7 +122,7 @@ module Admin
 
       render_success(
         data: { deleted: true },
-        message: 'Recipe deleted successfully'
+        message: "Recipe deleted successfully"
       )
     end
 
@@ -137,12 +137,12 @@ module Admin
       if recipe_data
         render_success(
           data: { recipe_data: recipe_data },
-          message: 'Recipe parsed successfully'
+          message: "Recipe parsed successfully"
         )
       else
         render_error(
-          message: 'Failed to parse recipe from text',
-          errors: ['Could not extract valid recipe data']
+          message: "Failed to parse recipe from text",
+          errors: [ "Could not extract valid recipe data" ]
         )
       end
     end
@@ -158,18 +158,18 @@ module Admin
       if recipe_data
         render_success(
           data: { recipe_data: recipe_data },
-          message: 'Recipe parsed successfully from URL'
+          message: "Recipe parsed successfully from URL"
         )
       else
         render_error(
-          message: 'Failed to parse recipe from URL',
-          errors: ['Could not extract valid recipe data']
+          message: "Failed to parse recipe from URL",
+          errors: [ "Could not extract valid recipe data" ]
         )
       end
     rescue StandardError => e
       render_error(
-        message: 'Failed to fetch or parse URL',
-        errors: [e.message]
+        message: "Failed to fetch or parse URL",
+        errors: [ e.message ]
       )
     end
 
@@ -180,9 +180,9 @@ module Admin
       if params[:image_file].present?
         # File upload - save temporarily
         uploaded_file = params[:image_file]
-        temp_path = Rails.root.join('tmp', 'uploads', uploaded_file.original_filename)
+        temp_path = Rails.root.join("tmp", "uploads", uploaded_file.original_filename)
         FileUtils.mkdir_p(File.dirname(temp_path))
-        File.open(temp_path, 'wb') do |file|
+        File.open(temp_path, "wb") do |file|
           file.write(uploaded_file.read)
         end
 
@@ -197,8 +197,8 @@ module Admin
         recipe_data = parser.parse_image(params[:image_url])
       else
         return render_error(
-          message: 'Image file or URL required',
-          errors: ['Provide either image_file or image_url parameter'],
+          message: "Image file or URL required",
+          errors: [ "Provide either image_file or image_url parameter" ],
           status: :bad_request
         )
       end
@@ -206,18 +206,18 @@ module Admin
       if recipe_data
         render_success(
           data: { recipe_data: recipe_data },
-          message: 'Recipe parsed successfully from image'
+          message: "Recipe parsed successfully from image"
         )
       else
         render_error(
-          message: 'Failed to parse recipe from image',
-          errors: ['Could not extract valid recipe data']
+          message: "Failed to parse recipe from image",
+          errors: [ "Could not extract valid recipe data" ]
         )
       end
     rescue StandardError => e
       render_error(
-        message: 'Failed to process image',
-        errors: [e.message]
+        message: "Failed to process image",
+        errors: [ e.message ]
       )
     end
 
@@ -231,7 +231,7 @@ module Admin
 
       render_success(
         data: { recipe: admin_recipe_json(recipe) },
-        message: 'Translation regeneration queued'
+        message: "Translation regeneration queued"
       )
     end
 
@@ -283,7 +283,7 @@ module Admin
 
       unless recipe_ids.is_a?(Array)
         return render_error(
-          message: 'recipe_ids must be an array',
+          message: "recipe_ids must be an array",
           status: :bad_request
         )
       end
@@ -387,6 +387,5 @@ module Admin
         nutrition: recipe.recipe_nutrition ? serialize_nutrition(recipe.recipe_nutrition) : nil
       )
     end
-
   end
 end

@@ -388,22 +388,42 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
   end
 
   def create_dietary_tag(recipe, name)
-    tag = DataReference.find_or_create_by!(reference_type: 'dietary_tag', key: name.downcase.gsub(/\s/, '_'), display_name: name)
+    key = name.downcase.gsub(/\s/, '_')
+    tag = DataReference.find_or_create_by!(reference_type: 'dietary_tag', key: key, display_name: name)
     recipe.recipe_dietary_tags.create!(data_reference: tag)
+  rescue ActiveRecord::RecordInvalid => e
+    # If display_name uniqueness fails, try to find existing and link
+    tag = DataReference.find_by(reference_type: 'dietary_tag', key: key)
+    recipe.recipe_dietary_tags.find_or_create_by!(data_reference: tag) if tag
   end
 
   def create_cuisine(recipe, name)
-    cuisine = DataReference.find_or_create_by!(reference_type: 'cuisine', key: name.downcase.gsub(/\s/, '_'), display_name: name)
+    key = name.downcase.gsub(/\s/, '_')
+    cuisine = DataReference.find_or_create_by!(reference_type: 'cuisine', key: key, display_name: name)
     recipe.recipe_cuisines.create!(data_reference: cuisine)
+  rescue ActiveRecord::RecordInvalid => e
+    # If display_name uniqueness fails, try to find existing and link
+    cuisine = DataReference.find_by(reference_type: 'cuisine', key: key)
+    recipe.recipe_cuisines.find_or_create_by!(data_reference: cuisine) if cuisine
   end
 
   def create_dish_type(recipe, name)
-    dish_type = DataReference.find_or_create_by!(reference_type: 'dish_type', key: name.downcase.gsub(/\s/, '_'), display_name: name)
+    key = name.downcase.gsub(/\s/, '_')
+    dish_type = DataReference.find_or_create_by!(reference_type: 'dish_type', key: key, display_name: name)
     recipe.recipe_dish_types.create!(data_reference: dish_type)
+  rescue ActiveRecord::RecordInvalid => e
+    # If display_name uniqueness fails, try to find existing and link
+    dish_type = DataReference.find_by(reference_type: 'dish_type', key: key)
+    recipe.recipe_dish_types.find_or_create_by!(data_reference: dish_type) if dish_type
   end
 
   def create_recipe_type(recipe, name)
-    recipe_type = DataReference.find_or_create_by!(reference_type: 'recipe_type', key: name.downcase.gsub(/\s/, '_'), display_name: name)
+    key = name.downcase.gsub(/\s/, '_')
+    recipe_type = DataReference.find_or_create_by!(reference_type: 'recipe_type', key: key, display_name: name)
     recipe.recipe_recipe_types.create!(data_reference: recipe_type)
+  rescue ActiveRecord::RecordInvalid => e
+    # If display_name uniqueness fails, try to find existing and link
+    recipe_type = DataReference.find_by(reference_type: 'recipe_type', key: key)
+    recipe.recipe_recipe_types.find_or_create_by!(data_reference: recipe_type) if recipe_type
   end
 end

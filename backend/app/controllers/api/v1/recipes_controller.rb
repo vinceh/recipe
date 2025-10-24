@@ -17,11 +17,11 @@ module Api
         total_count = recipes.count
         page = params[:page]&.to_i || 1
         per_page = params[:per_page]&.to_i || 20
-        per_page = [per_page, 100].min # Max 100 per page
+        per_page = [ per_page, 100 ].min # Max 100 per page
         total_pages = (total_count.to_f / per_page).ceil
 
         # Eager load associations for list view
-        recipes = recipes.includes(:ingredient_groups, :recipe_ingredients, :equipment, :dietary_tags, :dish_types, :cuisines, :recipe_types, recipe_steps: :recipe_step_translations)
+        recipes = recipes.includes(:ingredient_groups, :recipe_ingredients, :equipment, :dietary_tags, :dish_types, :cuisines, :recipe_types, :recipe_steps)
 
         paginated_recipes = recipes
           .order(created_at: :desc)
@@ -71,17 +71,17 @@ module Api
         # Scale ingredient amounts using normalized structure
         scaled_ingredient_groups = recipe.ingredient_groups.map do |group|
           {
-            'name' => group.name,
-            'items' => group.recipe_ingredients.map do |item|
+            "name" => group.name,
+            "items" => group.recipe_ingredients.map do |item|
               original_amount = item.amount.to_f
               scaled_amount = (original_amount * scale_factor).round(2)
 
               {
-                'name' => item.ingredient_name,
-                'amount' => scaled_amount.to_s,
-                'unit' => item.unit,
-                'preparation' => item.preparation_notes,
-                'optional' => item.optional
+                "name" => item.ingredient_name,
+                "amount" => scaled_amount.to_s,
+                "unit" => item.unit,
+                "preparation" => item.preparation_notes,
+                "optional" => item.optional
               }
             end
           }
@@ -115,43 +115,43 @@ module Api
         # Search query (name only)
         if params[:q].present?
           query = "%#{params[:q]}%"
-          recipes = recipes.where('recipes.name ILIKE ?', query)
+          recipes = recipes.where("recipes.name ILIKE ?", query)
         end
 
         # Filter by dietary tags
         if params[:dietary_tags].present?
-          tag_names = params[:dietary_tags].split(',').map(&:strip)
-          tag_ids = DataReference.where(reference_type: 'dietary_tag', display_name: tag_names).pluck(:id)
+          tag_names = params[:dietary_tags].split(",").map(&:strip)
+          tag_ids = DataReference.where(reference_type: "dietary_tag", display_name: tag_names).pluck(:id)
           recipes = recipes.joins(:recipe_dietary_tags).where(recipe_dietary_tags: { data_reference_id: tag_ids }).distinct
         end
 
         # Filter by dish types
         if params[:dish_types].present?
-          type_names = params[:dish_types].split(',').map(&:strip)
-          type_ids = DataReference.where(reference_type: 'dish_type', display_name: type_names).pluck(:id)
+          type_names = params[:dish_types].split(",").map(&:strip)
+          type_ids = DataReference.where(reference_type: "dish_type", display_name: type_names).pluck(:id)
           recipes = recipes.joins(:recipe_dish_types).where(recipe_dish_types: { data_reference_id: type_ids }).distinct
         end
 
         # Filter by cuisines
         if params[:cuisines].present?
-          cuisine_names = params[:cuisines].split(',').map(&:strip)
-          cuisine_ids = DataReference.where(reference_type: 'cuisine', display_name: cuisine_names).pluck(:id)
+          cuisine_names = params[:cuisines].split(",").map(&:strip)
+          cuisine_ids = DataReference.where(reference_type: "cuisine", display_name: cuisine_names).pluck(:id)
           recipes = recipes.joins(:recipe_cuisines).where(recipe_cuisines: { data_reference_id: cuisine_ids }).distinct
         end
 
         # Filter by cook time
         if params[:max_cook_time].present?
-          recipes = recipes.where('cook_minutes <= ?', params[:max_cook_time].to_i)
+          recipes = recipes.where("cook_minutes <= ?", params[:max_cook_time].to_i)
         end
 
         # Filter by prep time
         if params[:max_prep_time].present?
-          recipes = recipes.where('prep_minutes <= ?', params[:max_prep_time].to_i)
+          recipes = recipes.where("prep_minutes <= ?", params[:max_prep_time].to_i)
         end
 
         # Filter by total time
         if params[:max_total_time].present?
-          recipes = recipes.where('total_minutes <= ?', params[:max_total_time].to_i)
+          recipes = recipes.where("total_minutes <= ?", params[:max_total_time].to_i)
         end
 
         recipes
@@ -217,7 +217,6 @@ module Api
           updated_at: recipe.updated_at
         }
       end
-
     end
   end
 end
