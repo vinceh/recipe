@@ -13,11 +13,12 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 5. [Nutrition System](#nutrition-system)
 6. [Search & Filtering](#search--filtering)
 7. [User Features](#user-features)
-8. [Admin Recipe Management](#admin-recipe-management)
-9. [Recipe Viewing](#recipe-viewing)
-10. [Performance & Reliability](#performance--reliability)
-11. [Phase 3: Model Validations](#phase-3-model-validations)
-12. [Phase 5: Auto-Triggered Translation Workflow](#phase-5-auto-triggered-translation-workflow)
+8. [Admin Authentication](#admin-authentication)
+9. [Admin Recipe Management](#admin-recipe-management)
+10. [Recipe Viewing](#recipe-viewing)
+11. [Performance & Reliability](#performance--reliability)
+12. [Phase 3: Model Validations](#phase-3-model-validations)
+13. [Phase 5: Auto-Triggered Translation Workflow](#phase-5-auto-triggered-translation-workflow)
 
 ---
 
@@ -505,6 +506,124 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 **WHEN** user selects Japanese as preferred language
 **THEN** user record should update preferred_language = "ja"
 **AND** all recipes should display in Japanese by default
+
+---
+
+## Admin Authentication
+
+### AC-ADMIN-AUTH-001: Admin Login Page Access
+**GIVEN** an unauthenticated user
+**WHEN** navigates to /admin/login
+**THEN** display dedicated admin login form with "Admin Login" title
+**AND** form should contain email and password input fields
+**AND** should display admin-specific branding or messaging
+
+### AC-ADMIN-AUTH-002: Valid Admin Login - Happy Path
+**GIVEN** an admin user enters valid credentials (email: admin@ember.app, password: correct)
+**WHEN** form is submitted
+**THEN** display loading spinner on submit button
+**AND** send authentication request to POST /api/v1/auth/sign_in
+**AND** store JWT token in localStorage
+**AND** redirect to /admin dashboard after successful authentication
+**AND** update user store with current user data
+
+### AC-ADMIN-AUTH-003: Invalid Credentials - Error Display
+**GIVEN** user enters incorrect email or password
+**WHEN** form is submitted
+**THEN** authentication request returns error
+**AND** display error message "Invalid email or password"
+**AND** keep user on /admin/login page
+**AND** clear password field for security
+**AND** re-enable form for retry
+
+### AC-ADMIN-AUTH-004: Non-Admin User Login Attempt
+**GIVEN** a regular (non-admin) user enters valid credentials
+**WHEN** form is submitted and server validates user is not admin
+**THEN** display error message "Admin access required"
+**AND** do not redirect to admin dashboard
+**AND** do not store authentication token
+**AND** keep user on login page
+
+### AC-ADMIN-AUTH-005: Email Field Validation
+**GIVEN** email input field
+**WHEN** user enters invalid email format (e.g., "invalid.email")
+**THEN** display validation error "Please enter a valid email"
+**AND** disable submit button until email is valid
+**AND** highlight email field with error styling
+
+### AC-ADMIN-AUTH-006: Required Field Validation
+**GIVEN** login form with empty email or password fields
+**WHEN** user attempts to submit form
+**THEN** display validation error on each empty field
+**AND** prevent form submission
+**AND** highlight required fields with error styling
+
+### AC-ADMIN-AUTH-007: Loading State During Authentication
+**GIVEN** user submits login form with valid credentials
+**WHEN** authentication request is in progress
+**THEN** display loading spinner on submit button
+**AND** disable email and password input fields
+**AND** disable submit button
+**AND** prevent multiple form submissions
+
+### AC-ADMIN-AUTH-008: Network Error Handling
+**GIVEN** authentication API request fails due to network error
+**WHEN** timeout or connection error occurs
+**THEN** display error message "Unable to connect. Please try again."
+**AND** clear loading state
+**AND** re-enable form inputs for retry
+**AND** keep user on login page
+
+### AC-ADMIN-AUTH-009: Already Authenticated Admin Access
+**GIVEN** admin user is already logged in (JWT token in localStorage)
+**WHEN** admin navigates to /admin/login
+**THEN** redirect to /admin dashboard automatically
+**AND** do not display login form
+**AND** skip login page entirely
+
+### AC-ADMIN-AUTH-010: Redirect After Login with Query Parameter
+**GIVEN** unauthenticated user tries to access /admin/recipes
+**WHEN** redirected to /admin/login with query parameter (?redirect=/admin/recipes)
+**THEN** after successful login, redirect to /admin/recipes
+**AND** preserve the original redirect query parameter
+**AND** do not redirect to default /admin dashboard
+
+### AC-ADMIN-AUTH-011: Password Field Security - Masking
+**GIVEN** admin enters password in password field
+**WHEN** user types password
+**THEN** display characters as masked dots (•••)
+**AND** set HTML attribute autocomplete="current-password"
+**AND** never display plain text password on screen
+
+### AC-ADMIN-AUTH-012: Form Accessibility
+**GIVEN** admin login form
+**WHEN** rendered in browser
+**THEN** all input fields should have visible associated labels
+**AND** form should be submittable with Enter key
+**AND** tab order should follow logical flow (email → password → submit)
+**AND** error messages should be announced to screen readers
+
+### AC-ADMIN-AUTH-013: Session Persistence on Page Refresh
+**GIVEN** admin successfully logs in and stores JWT token
+**WHEN** admin refreshes page or reopens browser window
+**THEN** admin should remain authenticated
+**AND** user store should restore user data from localStorage
+**AND** can access admin routes without re-login
+
+### AC-ADMIN-AUTH-014: Logout Navigation
+**GIVEN** authenticated admin is on any admin page
+**WHEN** admin clicks logout button
+**THEN** send DELETE request to /api/v1/auth/sign_out
+**AND** clear JWT token from localStorage
+**AND** clear user data from store
+**AND** redirect to /admin/login page
+**AND** log user out completely
+
+### AC-ADMIN-AUTH-015: Back to Home Navigation
+**GIVEN** user is on /admin/login page
+**WHEN** user clicks "Back to Home" link
+**THEN** navigate to public home page (/)
+**AND** do not interfere with form data
 
 ---
 
