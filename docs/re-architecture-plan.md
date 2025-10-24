@@ -802,10 +802,10 @@ Write comprehensive GIVEN/WHEN/THEN acceptance criteria for auto-triggered trans
 - [x] Update TranslateRecipeJob to set `last_translated_at` on completion, skip source language
 - [x] Commit implementation (with graceful SolidQueue fallback for dev)
 
-**Step 4: Keep manual regenerate with bypass**
-- [ ] Verify regenerate_translations action exists in Admin::RecipesController
-- [ ] Ensure it bypasses rate limiting and deduplication
-- [ ] Commit any updates
+**Step 4: Keep manual regenerate with bypass** ✅ COMPLETE
+- [x] Verify regenerate_translations action exists in Admin::RecipesController
+- [x] Ensure it bypasses rate limiting and deduplication (directly enqueue job)
+- [x] Commit updates
 
 **Step 5: Write comprehensive tests** ✅ COMPLETE
 - [x] Test: Recipe creation immediately enqueues job (no rate limit)
