@@ -873,11 +873,11 @@ Write comprehensive GIVEN/WHEN/THEN acceptance criteria for auto-triggered trans
 - [x] Commit verification document
 
 **Step 4: Add Translation Status to API Responses**
-- [ ] Update admin_recipe_json methods in Admin::RecipesController to include translations_completed and last_translated_at
-- [ ] Update API::V1::RecipesController serialization to include translation status fields
-- [ ] Test in Rails console with various locale scenarios
-- [ ] Commit implementation
-- [ ] Run code-quality-auditor sub-agent review
+- [x] Update admin_recipe_json methods in Admin::RecipesController to include translations_completed and last_translated_at
+- [x] Update API::V1::RecipesController serialization to include translation status fields
+- [x] Test in Rails console with various locale scenarios
+- [x] Commit implementation with message: `[Phase 6] Step 4: Add translation status fields to API responses`
+- [x] Run code-quality-auditor sub-agent review (PASS - production-ready, minor test coverage recommendations)
 
 **Step 5: Write Comprehensive RSpec Tests**
 - [ ] Write specs for locale parameter extraction (all 7 languages, ?lang param, Accept-Language header)
