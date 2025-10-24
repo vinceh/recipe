@@ -792,15 +792,15 @@ Write comprehensive GIVEN/WHEN/THEN acceptance criteria for auto-triggered trans
 - [x] Run migration
 - [x] Commit migration
 
-**Step 3: Implement callback with rate limiting and deduplication**
-- [ ] Add `after_commit :enqueue_translation_on_create, on: :create`
-- [ ] Add `after_commit :enqueue_translation_on_update, on: :update`
-- [ ] Implement `enqueue_translation_on_create` (no checks, just enqueue)
-- [ ] Implement `enqueue_translation_on_update` (with rate limit + deduplication checks)
-- [ ] Implement `translation_rate_limit_exceeded?` (max 4 per hour)
-- [ ] Implement `translation_job_pending?` (check SolidQueue for pending jobs)
-- [ ] Update TranslateRecipeJob to set `last_translated_at` on completion
-- [ ] Commit implementation
+**Step 3: Implement callback with rate limiting and deduplication** ✅
+- [x] Add `after_commit :enqueue_translation_on_create, on: :create`
+- [x] Add `after_commit :enqueue_translation_on_update, on: :update`
+- [x] Implement `enqueue_translation_on_create` (no checks, just enqueue)
+- [x] Implement `enqueue_translation_on_update` (with rate limit + deduplication checks)
+- [x] Implement `translation_rate_limit_exceeded?` (max 4 per hour via SolidQueue)
+- [x] Implement `translation_job_pending?` (check SolidQueue for pending jobs)
+- [x] Update TranslateRecipeJob to set `last_translated_at` on completion, skip source language
+- [x] Commit implementation (with graceful SolidQueue fallback for dev)
 
 **Step 4: Keep manual regenerate with bypass**
 - [ ] Verify regenerate_translations action exists in Admin::RecipesController
