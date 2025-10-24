@@ -112,30 +112,31 @@ module Api
 
       # Apply basic search and filter parameters (backwards compatible)
       def apply_basic_search_filters(recipes)
-        # Search query (name only)
+        # Search query (name only) - find matching recipe IDs from translation table
         if params[:q].present?
           query = "%#{params[:q]}%"
-          recipes = recipes.where("recipes.name ILIKE ?", query)
+          matching_ids = RecipeTranslation.where("name ILIKE ?", query).pluck(:recipe_id)
+          recipes = recipes.where(id: matching_ids)
         end
 
         # Filter by dietary tags
         if params[:dietary_tags].present?
           tag_names = params[:dietary_tags].split(",").map(&:strip)
-          tag_ids = DataReference.where(reference_type: "dietary_tag", display_name: tag_names).pluck(:id)
+          tag_ids = DataReferenceTranslation.where(display_name: tag_names, data_reference_id: DataReference.where(reference_type: "dietary_tag").pluck(:id)).distinct.pluck(:data_reference_id)
           recipes = recipes.joins(:recipe_dietary_tags).where(recipe_dietary_tags: { data_reference_id: tag_ids }).distinct
         end
 
         # Filter by dish types
         if params[:dish_types].present?
           type_names = params[:dish_types].split(",").map(&:strip)
-          type_ids = DataReference.where(reference_type: "dish_type", display_name: type_names).pluck(:id)
+          type_ids = DataReferenceTranslation.where(display_name: type_names, data_reference_id: DataReference.where(reference_type: "dish_type").pluck(:id)).distinct.pluck(:data_reference_id)
           recipes = recipes.joins(:recipe_dish_types).where(recipe_dish_types: { data_reference_id: type_ids }).distinct
         end
 
         # Filter by cuisines
         if params[:cuisines].present?
           cuisine_names = params[:cuisines].split(",").map(&:strip)
-          cuisine_ids = DataReference.where(reference_type: "cuisine", display_name: cuisine_names).pluck(:id)
+          cuisine_ids = DataReferenceTranslation.where(display_name: cuisine_names, data_reference_id: DataReference.where(reference_type: "cuisine").pluck(:id)).distinct.pluck(:data_reference_id)
           recipes = recipes.joins(:recipe_cuisines).where(recipe_cuisines: { data_reference_id: cuisine_ids }).distinct
         end
 
@@ -173,9 +174,9 @@ module Api
             cook_minutes: recipe.cook_minutes,
             total_minutes: recipe.total_minutes
           },
-          dietary_tags: recipe.dietary_tags.pluck(:display_name),
-          dish_types: recipe.dish_types.pluck(:display_name),
-          cuisines: recipe.cuisines.pluck(:display_name),
+          dietary_tags: recipe.dietary_tags.map(&:display_name).compact,
+          dish_types: recipe.dish_types.map(&:display_name).compact,
+          cuisines: recipe.cuisines.map(&:display_name).compact,
           source_url: recipe.source_url,
           translations_completed: recipe.translations_completed,
           last_translated_at: recipe.last_translated_at,
@@ -200,13 +201,13 @@ module Api
             cook_minutes: recipe.cook_minutes,
             total_minutes: recipe.total_minutes
           },
-          dietary_tags: recipe.dietary_tags.pluck(:display_name),
-          dish_types: recipe.dish_types.pluck(:display_name),
-          recipe_types: recipe.recipe_types.pluck(:display_name),
-          cuisines: recipe.cuisines.pluck(:display_name),
+          dietary_tags: recipe.dietary_tags.map(&:display_name).compact,
+          dish_types: recipe.dish_types.map(&:display_name).compact,
+          recipe_types: recipe.recipe_types.map(&:display_name).compact,
+          cuisines: recipe.cuisines.map(&:display_name).compact,
           ingredient_groups: serialize_ingredient_groups(recipe),
           steps: serialize_recipe_steps(recipe),
-          equipment: recipe.equipment.pluck(:canonical_name),
+          equipment: recipe.equipment.map(&:canonical_name).compact,
           nutrition: recipe.recipe_nutrition ? serialize_nutrition(recipe.recipe_nutrition) : nil,
           requires_precision: recipe.requires_precision,
           precision_reason: recipe.precision_reason,

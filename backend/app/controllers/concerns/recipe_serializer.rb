@@ -21,7 +21,7 @@ module RecipeSerializer
   end
 
   def serialize_recipe_steps(recipe)
-    recipe.recipe_steps.order(:step_number).map do |step|
+    recipe.recipe_steps.map do |step|
       {
         id: "step-#{step.step_number.to_s.rjust(3, '0')}",
         order: step.step_number,

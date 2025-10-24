@@ -314,7 +314,7 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
       expect(item['preparation']).to eq('sifted')
     end
 
-    it 'includes steps with all instruction variants' do
+    it 'includes steps with instruction' do
       get "/api/v1/recipes/#{recipe.id}", headers: headers
 
       json = JSON.parse(response.body)
@@ -324,9 +324,7 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
       step = steps.first
       expect(step['id']).to eq('step-001')
       expect(step['order']).to eq(1)
-      expect(step['instructions']['original']).to eq('Mix ingredients')
-      expect(step['instructions']['easier']).to eq('Combine flour and water')
-      expect(step['instructions']['no_equipment']).to eq('Mix by hand')
+      expect(step['instruction']).to eq('Mix ingredients')
     end
 
     it 'includes equipment list' do
@@ -384,46 +382,46 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
 
   def create_equipment(recipe, name)
     equipment = Equipment.find_or_create_by!(canonical_name: name)
-    recipe.recipe_equipment.create!(equipment: equipment)
+    recipe.recipe_equipment.create!(equipment_id: equipment.id) unless recipe.recipe_equipment.exists?(equipment_id: equipment.id)
   end
 
   def create_dietary_tag(recipe, name)
     key = name.downcase.gsub(/\s/, '_')
-    tag = DataReference.find_or_create_by!(reference_type: 'dietary_tag', key: key, display_name: name)
-    recipe.recipe_dietary_tags.create!(data_reference: tag)
-  rescue ActiveRecord::RecordInvalid => e
-    # If display_name uniqueness fails, try to find existing and link
-    tag = DataReference.find_by(reference_type: 'dietary_tag', key: key)
-    recipe.recipe_dietary_tags.find_or_create_by!(data_reference: tag) if tag
+    begin
+      tag = DataReference.create!(reference_type: 'dietary_tag', key: key, display_name: name)
+    rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid
+      tag = DataReference.find_by!(reference_type: 'dietary_tag', key: key)
+    end
+    recipe.recipe_dietary_tags.create!(data_reference_id: tag.id) unless recipe.recipe_dietary_tags.exists?(data_reference_id: tag.id)
   end
 
   def create_cuisine(recipe, name)
     key = name.downcase.gsub(/\s/, '_')
-    cuisine = DataReference.find_or_create_by!(reference_type: 'cuisine', key: key, display_name: name)
-    recipe.recipe_cuisines.create!(data_reference: cuisine)
-  rescue ActiveRecord::RecordInvalid => e
-    # If display_name uniqueness fails, try to find existing and link
-    cuisine = DataReference.find_by(reference_type: 'cuisine', key: key)
-    recipe.recipe_cuisines.find_or_create_by!(data_reference: cuisine) if cuisine
+    begin
+      cuisine = DataReference.create!(reference_type: 'cuisine', key: key, display_name: name)
+    rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid
+      cuisine = DataReference.find_by!(reference_type: 'cuisine', key: key)
+    end
+    recipe.recipe_cuisines.create!(data_reference_id: cuisine.id) unless recipe.recipe_cuisines.exists?(data_reference_id: cuisine.id)
   end
 
   def create_dish_type(recipe, name)
     key = name.downcase.gsub(/\s/, '_')
-    dish_type = DataReference.find_or_create_by!(reference_type: 'dish_type', key: key, display_name: name)
-    recipe.recipe_dish_types.create!(data_reference: dish_type)
-  rescue ActiveRecord::RecordInvalid => e
-    # If display_name uniqueness fails, try to find existing and link
-    dish_type = DataReference.find_by(reference_type: 'dish_type', key: key)
-    recipe.recipe_dish_types.find_or_create_by!(data_reference: dish_type) if dish_type
+    begin
+      dish_type = DataReference.create!(reference_type: 'dish_type', key: key, display_name: name)
+    rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid
+      dish_type = DataReference.find_by!(reference_type: 'dish_type', key: key)
+    end
+    recipe.recipe_dish_types.create!(data_reference_id: dish_type.id) unless recipe.recipe_dish_types.exists?(data_reference_id: dish_type.id)
   end
 
   def create_recipe_type(recipe, name)
     key = name.downcase.gsub(/\s/, '_')
-    recipe_type = DataReference.find_or_create_by!(reference_type: 'recipe_type', key: key, display_name: name)
-    recipe.recipe_recipe_types.create!(data_reference: recipe_type)
-  rescue ActiveRecord::RecordInvalid => e
-    # If display_name uniqueness fails, try to find existing and link
-    recipe_type = DataReference.find_by(reference_type: 'recipe_type', key: key)
-    recipe.recipe_recipe_types.find_or_create_by!(data_reference: recipe_type) if recipe_type
+    begin
+      recipe_type = DataReference.create!(reference_type: 'recipe_type', key: key, display_name: name)
+    rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid
+      recipe_type = DataReference.find_by!(reference_type: 'recipe_type', key: key)
+    end
+    recipe.recipe_recipe_types.create!(data_reference_id: recipe_type.id) unless recipe.recipe_recipe_types.exists?(data_reference_id: recipe_type.id)
   end
 end
