@@ -1,9 +1,9 @@
 # Recipe Database Re-Architecture Plan
 
-**Status**: Phase 6 Complete ✅ (Locale-Aware API Responses) | Next: Phase 7 (Frontend Integration)
+**Status**: Phase 6 Complete ✅ (Locale-Aware API Responses) | Starting: Phase 7 (Frontend Integration)
 **Scope**: Database schema normalization + Mobility i18n integration
 **Approach**: 9 linear phases (Backend → Frontend → Documentation)
-**Progress**: 6/9 phases complete
+**Progress**: 6/9 phases complete | Next: Phase 7 - 10 steps planned
 
 ---
 
@@ -913,19 +913,99 @@ Write comprehensive GIVEN/WHEN/THEN acceptance criteria for auto-triggered trans
 
 ### Phase 7: Frontend Integration
 
-**BEFORE starting development:**
-Write comprehensive GIVEN/WHEN/THEN acceptance criteria for frontend integration with all 7 languages in `docs/new_claude/acceptance-criteria.md`.
+**Summary**: Update React frontend to consume normalized API responses, support all 7 languages via Accept-Language/lang parameter, and handle new ingredient_groups/steps relational structure. Verify all components work with multi-language translations.
 
-1. Run existing frontend tests to identify breaks: `npm run test`
-2. Update `frontend/src/types.ts` for normalized API responses
-3. Update `frontend/src/api/recipeApi.ts` to pass `?locale=` parameter
-4. Update components to handle new relational data structure (ingredients, steps, nutrition)
-5. Test all 7 languages - verify language switcher triggers API refetch
-6. Update `docs/component-library.md` with changes
+**Step 1: Write Acceptance Criteria**
+- [ ] Define ACs for frontend list view with new API response format
+- [ ] Define ACs for frontend detail view with ingredient_groups structure
+- [ ] Define ACs for recipe steps serialization format
+- [ ] Define ACs for language switching behavior (component state update + API refetch)
+- [ ] Define ACs for Accept-Language header and ?lang parameter handling in frontend
+- [ ] Define ACs for error handling with new API format
+- [ ] Define ACs for all 7 languages rendering correctly
+- [ ] Run acceptance-test-writing skill to review, identify gaps, and refine
+- [ ] Apply quality refinements
+- [ ] Commit ACs
 
-**Deliverable**: All frontend tests pass, all 7 languages work
+**Step 2: Analyze Frontend Codebase and Test Status**
+- [ ] Run existing frontend tests: `npm run test` and document failures
+- [ ] Examine current `frontend/src/types.ts` structure
+- [ ] Examine current `frontend/src/api/recipeApi.ts` implementation
+- [ ] Check how language switching currently works (if at all)
+- [ ] Identify which components need updates (list, detail, ingredients, steps, equipment)
+- [ ] Document dependencies and import relationships
+- [ ] Commit analysis findings to analysis document
 
-**End of Phase**: Run frontend test suite, verify 100% pass
+**Step 3: Update Type Definitions**
+- [ ] Add/update types for new API response structure
+- [ ] Add types for `ingredient_groups` array with items
+- [ ] Add types for `recipe_steps` array with instruction object
+- [ ] Add types for `equipment` array
+- [ ] Add types for `dietary_tags`, `dish_types`, `cuisines`, `recipe_types` arrays
+- [ ] Add types for `translations_completed` and `last_translated_at` fields
+- [ ] Update pagination types if needed
+- [ ] Run tests to verify no type errors
+- [ ] Commit type updates
+
+**Step 4: Update API Client**
+- [ ] Update `recipeApi.ts` to accept optional `lang` or `locale` parameter in getRecipes()
+- [ ] Update `recipeApi.ts` to pass `?lang=` query parameter to API
+- [ ] Update `recipeApi.ts` to accept optional `lang` parameter in getRecipe()
+- [ ] Handle Accept-Language header as fallback (if implemented in frontend)
+- [ ] Update error handling for new API response format
+- [ ] Test API client with different languages
+- [ ] Commit API client updates
+
+**Step 5: Update Components - List View**
+- [ ] Update recipe list component to handle new fields
+- [ ] Update filtering/searching to use new API structure
+- [ ] Verify pagination still works
+- [ ] Test recipe list display with different languages
+- [ ] Commit list component updates
+
+**Step 6: Update Components - Detail View**
+- [ ] Update recipe detail component for new response structure
+- [ ] Update ingredient rendering to iterate through `ingredient_groups`
+- [ ] Update steps rendering with new format (verify instruction object shape)
+- [ ] Update equipment display
+- [ ] Update dietary tags, cuisines, dish types display
+- [ ] Test detail view with different languages
+- [ ] Commit detail component updates
+
+**Step 7: Update Language Switching**
+- [ ] Identify language switcher component
+- [ ] Add language selection parameter passing to API calls
+- [ ] Ensure language switch triggers API refetch with new language
+- [ ] Verify translated content updates in UI
+- [ ] Test all 7 languages work correctly
+- [ ] Commit language switcher updates
+
+**Step 8: Run Frontend Test Suite**
+- [ ] Run `npm run test` to check for failures
+- [ ] Fix broken tests due to API structure changes
+- [ ] Verify all existing tests still pass
+- [ ] Add new tests for multi-language support if needed
+- [ ] Reach 100% test pass rate
+- [ ] Commit test fixes
+
+**Step 9: Update Documentation**
+- [ ] Update `docs/component-library.md` with new component props/interface
+- [ ] Document the new ingredient_groups structure with examples
+- [ ] Document the new recipe_steps structure with examples
+- [ ] Document language parameter handling
+- [ ] Commit documentation updates
+
+**Step 10: Final Review and Phase Completion**
+- [ ] Run full frontend test suite one final time: `npm run test`
+- [ ] Verify 100% pass rate
+- [ ] Manually test all 7 languages in UI
+- [ ] Verify language switcher works end-to-end
+- [ ] Update re-architecture-plan.md to mark Phase 7 complete
+- [ ] Create final Phase 7 commit
+
+**Deliverable**: All frontend tests passing, all 7 languages work in UI, language switching functional
+
+**End of Phase**: Run `npm run test`, verify 100% pass, all languages render correctly
 
 ---
 
