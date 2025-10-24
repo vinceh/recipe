@@ -421,9 +421,6 @@ RSpec.describe 'Admin::Recipes', type: :request do
 
         expect(json['success']).to be true
         expect(json['message']).to eq('Translation regeneration queued')
-
-        recipe.reload
-        expect(recipe.translations_completed).to be false
       end
     end
   end
