@@ -1,4 +1,7 @@
 class RecipeIngredient < ApplicationRecord
+  extend Mobility
+  translates :ingredient_name, :preparation_notes, backend: :table
+
   belongs_to :ingredient_group, inverse_of: :recipe_ingredients
   belongs_to :ingredient, optional: true
 

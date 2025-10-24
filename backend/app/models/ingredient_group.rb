@@ -1,4 +1,7 @@
 class IngredientGroup < ApplicationRecord
+  extend Mobility
+  translates :name, backend: :table
+
   belongs_to :recipe
   has_many :recipe_ingredients, -> { order(:position) }, dependent: :destroy
 

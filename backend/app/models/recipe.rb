@@ -1,4 +1,7 @@
 class Recipe < ApplicationRecord
+  extend Mobility
+  translates :name, backend: :table
+
   # Existing associations
   has_many :user_recipe_notes, dependent: :destroy
   has_many :user_favorites, dependent: :destroy

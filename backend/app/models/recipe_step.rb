@@ -1,6 +1,8 @@
 class RecipeStep < ApplicationRecord
+  extend Mobility
+  translates :instruction_original, :instruction_easier, :instruction_no_equipment, backend: :table
+
   belongs_to :recipe
-  has_many :recipe_step_translations, dependent: :destroy
 
   validates :recipe_id, presence: true
   validates :step_number, presence: true, numericality: { only_integer: true, greater_than: 0 }

@@ -1,4 +1,7 @@
 class DataReference < ApplicationRecord
+  extend Mobility
+  translates :display_name, backend: :table
+
   # Associations
   has_many :recipe_dietary_tags, dependent: :destroy
   has_many :recipe_dish_types, dependent: :destroy
