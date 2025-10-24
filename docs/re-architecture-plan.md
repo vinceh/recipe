@@ -787,10 +787,10 @@ Write comprehensive GIVEN/WHEN/THEN acceptance criteria for auto-triggered trans
 - [x] Update ACs based on recommendations (fixed 4 critical, added 3 new)
 - [x] Commit ACs (18 total Phase 5 ACs)
 
-**Step 2: Add database migration**
-- [ ] Create migration to add `last_translated_at` timestamp to recipes table
-- [ ] Run migration
-- [ ] Commit migration
+**Step 2: Add database migration** ✅
+- [x] Create migration to add `last_translated_at` timestamp to recipes table
+- [x] Run migration
+- [x] Commit migration
 
 **Step 3: Implement callback with rate limiting and deduplication**
 - [ ] Add `after_commit :enqueue_translation_on_create, on: :create`
