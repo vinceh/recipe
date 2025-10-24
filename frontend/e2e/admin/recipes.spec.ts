@@ -37,23 +37,19 @@ test.describe('Admin Recipes List - AC-ADMIN-RECIPES Tests', () => {
 
     // Navigate to recipes page
     await page.goto('/admin/recipes')
-
-    // Wait for page to load
     await page.waitForLoadState('networkidle')
 
     // Page header should be visible with title
     const pageHeader = page.locator('h1')
     await expect(pageHeader).toBeVisible()
 
-    // Create Recipe button should be visible - use data-testid or more specific selector
+    // Create Recipe button should be visible
     const createButton = page.locator('button').filter({ hasText: /Create Recipe/ }).first()
-    const buttonExists = await createButton.isVisible({ timeout: 2000 }).catch(() => false)
-    expect(buttonExists).toBeTruthy()
+    await expect(createButton).toBeVisible()
 
     // Search bar should be displayed
     const searchInput = page.locator('input[type="text"]')
-    const searchExists = await searchInput.isVisible({ timeout: 2000 }).catch(() => false)
-    expect(searchExists).toBeTruthy()
+    await expect(searchInput).toBeVisible()
   })
 
   // AC-ADMIN-RECIPES-003: Recipe List Display with Data
@@ -139,25 +135,19 @@ test.describe('Admin Recipes List - AC-ADMIN-RECIPES Tests', () => {
     // Wait for page to be ready
     await page.waitForLoadState('networkidle')
 
-    // Find search input - any text input in search container
+    // Find search input
     const searchInput = page.locator('input[type="text"]').first()
-    const searchExists = await searchInput.isVisible({ timeout: 2000 }).catch(() => false)
-    expect(searchExists).toBeTruthy()
+    await expect(searchInput).toBeVisible()
 
     // Type search query
-    const searchQuery = 'test'
-    await searchInput.fill(searchQuery)
+    await searchInput.fill('test')
 
-    // Wait for debounce (300ms + network time)
-    await page.waitForTimeout(600)
+    // Wait for debounce and content update
+    await page.waitForLoadState('networkidle')
 
-    // After loading completes, table or content should be visible
-    const table = page.locator('table')
+    // Content should be visible
     const adminRecipesContent = page.locator('.admin-recipes')
-
-    // Should have some content
-    const contentExists = await adminRecipesContent.isVisible({ timeout: 2000 }).catch(() => false)
-    expect(contentExists).toBeTruthy()
+    await expect(adminRecipesContent).toBeVisible()
   })
 
   // AC-ADMIN-RECIPES-006: Search Clear Button
@@ -173,25 +163,19 @@ test.describe('Admin Recipes List - AC-ADMIN-RECIPES Tests', () => {
     const clearButton = page.locator('.clear-search')
 
     // Initially, clear button should not be visible (no search query)
-    let isClearButtonVisible = await clearButton.isVisible({ timeout: 500 }).catch(() => false)
-    expect(isClearButtonVisible).toBe(false)
+    await expect(clearButton).not.toBeVisible()
 
     // Type search query
     await searchInput.fill('test recipe')
 
     // Clear button should now be visible
-    const clearExists = await clearButton.isVisible({ timeout: 2000 }).catch(() => false)
-    expect(clearExists).toBe(true)
+    await expect(clearButton).toBeVisible()
 
     // Click clear button
-    if (clearExists) {
-      await clearButton.click()
+    await clearButton.click()
 
-      // Search input should be cleared after a moment
-      await page.waitForTimeout(100)
-      const inputValue = await searchInput.inputValue()
-      expect(inputValue).toBe('')
-    }
+    // Search input should be cleared
+    expect(await searchInput.inputValue()).toBe('')
   })
 
   // AC-ADMIN-RECIPES-007: Pagination Navigation
@@ -272,21 +256,17 @@ test.describe('Admin Recipes List - AC-ADMIN-RECIPES Tests', () => {
     await page.goto('/admin/login')
     await loginAsAdmin(page, ADMIN_EMAIL, ADMIN_PASSWORD)
     await page.goto('/admin/recipes')
-
     await page.waitForLoadState('networkidle')
 
     // Find and click create recipe button
     const createButton = page.locator('button').filter({ hasText: /Create Recipe/ }).first()
-    const buttonExists = await createButton.isVisible({ timeout: 2000 }).catch(() => false)
-    expect(buttonExists).toBeTruthy()
+    await expect(createButton).toBeVisible()
 
-    if (buttonExists) {
-      await createButton.click()
+    await createButton.click()
 
-      // Should navigate to /admin/recipes/new
-      await page.waitForURL(/.*\/admin\/recipes\/new.*/, { timeout: 5000 }).catch(() => {})
-      expect(page.url()).toContain('/admin/recipes/new')
-    }
+    // Should navigate to /admin/recipes/new
+    await page.waitForURL(/.*\/admin\/recipes\/new.*/)
+    expect(page.url()).toContain('/admin/recipes/new')
   })
 
   // AC-ADMIN-RECIPES-010: Loading State Display
@@ -295,17 +275,15 @@ test.describe('Admin Recipes List - AC-ADMIN-RECIPES Tests', () => {
     await page.goto('/admin/login')
     await loginAsAdmin(page, ADMIN_EMAIL, ADMIN_PASSWORD)
 
-    // Navigate to recipes (will show loading briefly)
+    // Navigate to recipes
     await page.goto('/admin/recipes')
-
-    // Wait for content to load
     await page.waitForLoadState('networkidle')
 
     // After loading completes, page should have content
     const adminRecipesContainer = page.locator('.admin-recipes')
     await expect(adminRecipesContainer).toBeVisible()
 
-    // Should have table or some recipe content
+    // Verify page has content
     const pageText = await adminRecipesContainer.textContent()
     expect(pageText).toBeTruthy()
   })
@@ -321,29 +299,21 @@ test.describe('Admin Recipes List - AC-ADMIN-RECIPES Tests', () => {
       route.abort('failed')
     })
 
-    // Navigate to recipes - will fail to load
+    // Navigate to recipes
     await page.goto('/admin/recipes')
+    await page.waitForLoadState('networkidle').catch(() => {})
 
-    // Wait for error to be handled
-    await page.waitForTimeout(2000)
-
-    // Page should load but either show error or may redirect based on error handling
-    // At minimum, the recipes API call should have been attempted and failed
+    // Page should load with error handling
     const adminRecipesContainer = page.locator('.admin-recipes')
-    const containerExists = await adminRecipesContainer.isVisible({ timeout: 2000 }).catch(() => false)
-
-    // Container should exist (error handling should work gracefully)
-    expect(containerExists).toBe(true)
+    await expect(adminRecipesContainer).toBeVisible()
   })
 
   // AC-ADMIN-RECIPES-012: Language Switching Refetch
-  test('AC-ADMIN-RECIPES-012: Language Switching Refetch', async ({ page, context }) => {
+  test('AC-ADMIN-RECIPES-012: Language Switching Refetch', async ({ page }) => {
     // Login first
     await page.goto('/admin/login')
     await loginAsAdmin(page, ADMIN_EMAIL, ADMIN_PASSWORD)
     await page.goto('/admin/recipes')
-
-    // Wait for initial load
     await page.waitForLoadState('networkidle')
 
     // Verify page is loaded
@@ -351,13 +321,7 @@ test.describe('Admin Recipes List - AC-ADMIN-RECIPES Tests', () => {
     await expect(adminRecipesContainer).toBeVisible()
 
     // Page should have content
-    const initialContent = await adminRecipesContainer.textContent()
-    expect(initialContent).toBeTruthy()
-
-    // Verify page is still functional after language switching
-    // Language switching is typically handled by locale change in store
-    // For now, verify that page can handle locale changes
-    const pageText = await page.textContent('body')
+    const pageText = await adminRecipesContainer.textContent()
     expect(pageText).toBeTruthy()
   })
 })

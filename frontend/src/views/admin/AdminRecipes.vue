@@ -231,7 +231,7 @@ onBeforeUnmount(() => {
                   </span>
                 </div>
               </td>
-              <td>{{ (recipe as any).servings?.original || recipe.servings || '-' }}</td>
+              <td>{{ recipe.servings?.original ?? '-' }}</td>
               <td>
                 <span v-if="recipe.timing?.total_minutes">
                   {{ recipe.timing.total_minutes }} {{ $t('admin.recipes.table.minutes') }}

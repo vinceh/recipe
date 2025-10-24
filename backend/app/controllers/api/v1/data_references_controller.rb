@@ -5,10 +5,10 @@ module Api
       # Get all reference data (dietary tags, dish types, cuisines, etc.)
       def index
         data = {
-          dietary_tags: DataReference.dietary_tags.active.pluck(:key, :display_name).map { |k, d| { key: k, display_name: d } },
-          dish_types: DataReference.dish_types.active.pluck(:key, :display_name).map { |k, d| { key: k, display_name: d } },
-          recipe_types: DataReference.recipe_types.active.pluck(:key, :display_name).map { |k, d| { key: k, display_name: d } },
-          cuisines: DataReference.cuisines.active.pluck(:key, :display_name).map { |k, d| { key: k, display_name: d } }
+          dietary_tags: DataReference.dietary_tags.active.map { |ref| { key: ref.key, display_name: ref.display_name } },
+          dish_types: DataReference.dish_types.active.map { |ref| { key: ref.key, display_name: ref.display_name } },
+          recipe_types: DataReference.recipe_types.active.map { |ref| { key: ref.key, display_name: ref.display_name } },
+          cuisines: DataReference.cuisines.active.map { |ref| { key: ref.key, display_name: ref.display_name } }
         }
 
         # Filter by category if requested

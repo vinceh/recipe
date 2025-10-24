@@ -48,7 +48,7 @@ module Admin
       total_pages = (total_count.to_f / per_page).ceil
 
       # Eager load associations for serialization
-      recipes = recipes.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :dish_types, :cuisines, :recipe_types, recipe_steps: :recipe_step_translations)
+      recipes = recipes.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :dish_types, :cuisines, :recipe_types, recipe_steps: :translations)
 
       paginated_recipes = recipes
         .offset((page - 1) * per_page)
@@ -70,7 +70,7 @@ module Admin
     # GET /admin/recipes/:id
     # Show a single recipe with full details
     def show
-      recipe = Recipe.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :dish_types, :cuisines, :recipe_types, :recipe_aliases, recipe_steps: :recipe_step_translations).find(params[:id])
+      recipe = Recipe.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :dish_types, :cuisines, :recipe_types, :recipe_aliases, recipe_steps: :translations).find(params[:id])
 
       render_success(
         data: { recipe: admin_recipe_json_full(recipe) }
@@ -364,10 +364,10 @@ module Admin
           cook_minutes: recipe.cook_minutes,
           total_minutes: recipe.total_minutes
         },
-        dietary_tags: recipe.dietary_tags.pluck(:display_name),
-        dish_types: recipe.dish_types.pluck(:display_name),
-        recipe_types: recipe.recipe_types.pluck(:display_name),
-        cuisines: recipe.cuisines.pluck(:display_name),
+        dietary_tags: recipe.dietary_tags.map(&:display_name),
+        dish_types: recipe.dish_types.map(&:display_name),
+        recipe_types: recipe.recipe_types.map(&:display_name),
+        cuisines: recipe.cuisines.map(&:display_name),
         source_url: recipe.source_url,
         admin_notes: recipe.admin_notes,
         requires_precision: recipe.requires_precision,
@@ -383,7 +383,7 @@ module Admin
       admin_recipe_json(recipe).merge(
         ingredient_groups: serialize_ingredient_groups(recipe),
         steps: serialize_recipe_steps(recipe),
-        equipment: recipe.equipment.pluck(:canonical_name),
+        equipment: recipe.equipment.map(&:canonical_name),
         nutrition: recipe.recipe_nutrition ? serialize_nutrition(recipe.recipe_nutrition) : nil
       )
     end
