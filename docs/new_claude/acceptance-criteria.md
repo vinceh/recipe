@@ -14,11 +14,12 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 6. [Search & Filtering](#search--filtering)
 7. [User Features](#user-features)
 8. [Admin Authentication](#admin-authentication)
-9. [Admin Recipe Management](#admin-recipe-management)
-10. [Recipe Viewing](#recipe-viewing)
-11. [Performance & Reliability](#performance--reliability)
-12. [Phase 3: Model Validations](#phase-3-model-validations)
-13. [Phase 5: Auto-Triggered Translation Workflow](#phase-5-auto-triggered-translation-workflow)
+9. [Admin Recipes List](#admin-recipes-list)
+10. [Admin Recipe Management](#admin-recipe-management)
+11. [Recipe Viewing](#recipe-viewing)
+12. [Performance & Reliability](#performance--reliability)
+13. [Phase 3: Model Validations](#phase-3-model-validations)
+14. [Phase 5: Auto-Triggered Translation Workflow](#phase-5-auto-triggered-translation-workflow)
 
 ---
 
@@ -624,6 +625,110 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 **WHEN** user clicks "Back to Home" link
 **THEN** navigate to public home page (/)
 **AND** do not interfere with form data
+
+---
+
+## Admin Recipes List
+
+### AC-ADMIN-RECIPES-001: Unauthenticated Access Redirect
+**GIVEN** an unauthenticated user
+**WHEN** navigates directly to /admin/recipes
+**THEN** should be redirected to /admin/login
+**AND** login page should preserve redirect query parameter (?redirect=/admin/recipes)
+**AND** after successful login, should be redirected to /admin/recipes
+
+### AC-ADMIN-RECIPES-002: Authenticated Admin Page Access
+**GIVEN** an authenticated admin user
+**WHEN** navigates to /admin/recipes
+**THEN** page should load with PageHeader showing "Recipes" title and subtitle
+**AND** "Create Recipe" button should be visible in page header
+**AND** search bar should be displayed
+**AND** recipe table should be rendered
+
+### AC-ADMIN-RECIPES-003: Recipe List Display with Data
+**GIVEN** recipes exist in the system
+**WHEN** admin visits /admin/recipes
+**THEN** recipe table should display rows for each recipe
+**AND** each row should show: name, language badge, cuisines, dish types, servings, total minutes
+**AND** cuisines and dish types should show max 2 tags with "+X more" if exceeding 2
+**AND** clicking a recipe row should navigate to /admin/recipes/{id}
+**AND** edit icon button should be visible in actions column
+
+### AC-ADMIN-RECIPES-004: Empty State Display
+**GIVEN** no recipes exist in the system
+**WHEN** admin visits /admin/recipes
+**THEN** table should not be displayed
+**AND** EmptyState component should show with book icon
+**AND** message should say "No recipes" with description "Create your first recipe..."
+**AND** "Create Recipe" button should be present in empty state
+
+### AC-ADMIN-RECIPES-005: Search Functionality
+**GIVEN** recipes exist in the system
+**WHEN** admin types text into search input
+**AND** waits 300ms for debounce
+**THEN** API call should be made with query parameter q="{search_term}"
+**AND** page should be reset to page 1
+**AND** table should update showing only matching recipes
+**AND** loading state should display while fetching
+
+### AC-ADMIN-RECIPES-006: Search Clear Button
+**GIVEN** search query is entered
+**WHEN** user clicks the clear button (X icon)
+**THEN** search input should be cleared
+**AND** fetchRecipes should be called with empty query
+**AND** full recipe list should be displayed
+**AND** clear button should only be visible when search query exists
+
+### AC-ADMIN-RECIPES-007: Pagination Navigation
+**GIVEN** more than 20 recipes exist (pagination enabled)
+**WHEN** page loads with multiple pages
+**THEN** pagination controls should display at bottom with Previous/Next buttons
+**AND** current page indicator should show "Page X / Y"
+**WHEN** user clicks Previous button
+**AND** currently on page > 1
+**THEN** currentPage should decrement
+**AND** fetchRecipes should be called with new page number
+**WHEN** user clicks Next button
+**AND** currently on page < total_pages
+**THEN** currentPage should increment
+**AND** fetchRecipes should be called with new page number
+**AND** buttons should be disabled when at first/last page
+
+### AC-ADMIN-RECIPES-008: Recipe Row Click Navigation
+**GIVEN** admin is viewing recipe list
+**WHEN** admin clicks on any recipe row
+**THEN** should navigate to /admin/recipes/{recipe_id}
+**AND** recipe detail page should load with that recipe's data
+
+### AC-ADMIN-RECIPES-009: Create Recipe Button Navigation
+**GIVEN** admin is viewing recipes list
+**WHEN** admin clicks "Create Recipe" button (in header or empty state)
+**THEN** should navigate to /admin/recipes/new
+**AND** recipe creation form should load
+
+### AC-ADMIN-RECIPES-010: Loading State Display
+**GIVEN** admin navigates to /admin/recipes
+**WHEN** recipes are being fetched
+**THEN** loading spinner icon should be visible
+**AND** "Loading..." message should display
+**AND** recipe table should not be shown during loading
+
+### AC-ADMIN-RECIPES-011: Error State Display
+**GIVEN** API call to fetch recipes fails
+**WHEN** error is received from server
+**THEN** ErrorMessage component should display
+**AND** error message text should be visible
+**AND** table should not be shown
+
+### AC-ADMIN-RECIPES-012: Language Switching Refetch
+**GIVEN** admin is on /admin/recipes with language set to English
+**WHEN** admin switches language to another language (e.g., Chinese)
+**THEN** page should debounce for 300ms
+**AND** fetchRecipes should be called with new language parameter (lang={new_language})
+**AND** currentPage should reset to 1
+**AND** search query should be cleared
+**AND** recipe list should update with recipes in new language
+**AND** loading state should display during fetch
 
 ---
 
