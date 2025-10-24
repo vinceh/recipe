@@ -535,19 +535,27 @@ end
 - [x] Address all audit issues
 - ⏳ **READY FOR APPROVAL** before Step 4
 
-**Step 4: Add Translation Declarations to Models**
-- [ ] Recipe: Add `extend Mobility` and `translates :name, backend: :table`
-- [ ] IngredientGroup: Add `extend Mobility` and `translates :name, backend: :table`
-- [ ] RecipeIngredient: Add `extend Mobility` and `translates :ingredient_name, :preparation_notes, backend: :table`
-- [ ] Equipment: Add `extend Mobility` and `translates :canonical_name, backend: :table`
-- [ ] RecipeStep: Add `extend Mobility` and `translates :instruction_original, :instruction_easier, :instruction_no_equipment, backend: :table`
-  - Remove conflicting `has_many :recipe_step_translations` (Mobility manages this)
-- [ ] DataReference: Add `extend Mobility` and `translates :display_name, backend: :table`
-- [ ] Test in Rails console that translations can be read via Mobility (using existing data)
-- [ ] Commit implementation
-- [ ] Run code-quality-auditor sub-agent review
-- [ ] Address any issues
-- [ ] Request approval before Step 5
+**Step 4: Add Translation Declarations to Models** ✅ COMPLETE
+- [x] Recipe: Add `extend Mobility` and `translates :name, backend: :table`
+- [x] IngredientGroup: Add `extend Mobility` and `translates :name, backend: :table`
+- [x] RecipeIngredient: Add `extend Mobility` and `translates :ingredient_name, :preparation_notes, backend: :table`
+- [x] Equipment: Add `extend Mobility` and `translates :canonical_name, backend: :table`
+- [x] RecipeStep: Add `extend Mobility` and `translates :instruction_original, :instruction_easier, :instruction_no_equipment, backend: :table`
+  - [x] Remove conflicting `has_many :recipe_step_translations` (Mobility manages this)
+- [x] DataReference: Add `extend Mobility` and `translates :display_name, backend: :table`
+- [x] Test in Rails console that translations can be read via Mobility (using existing data)
+  - ✅ All 6 models load successfully
+  - ✅ Translation tables correctly queried
+  - ✅ UUID foreign keys properly established
+  - ✅ No conflicts or errors
+- [x] Commit implementation: `[Phase 4] Step 4: Add translation declarations to models`
+- [x] Run code-quality-auditor sub-agent review
+  - ✅ Zero critical issues
+  - ✅ Zero major issues
+  - ✅ Zero minor issues
+  - ✅ Production-ready
+- [x] Address any issues (none identified)
+- ⏳ **READY FOR APPROVAL** before Step 5
 
 **Step 5: Write RSpec Tests for Mobility Functionality**
 - [ ] Create spec/models/translations/ directory for translation-specific tests
