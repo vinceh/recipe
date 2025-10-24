@@ -778,14 +778,14 @@ Write comprehensive GIVEN/WHEN/THEN acceptance criteria for auto-triggered trans
 - ✅ RecipeTranslator already uses Mobility.with_locale (completed in Phase 4)
 - ✅ 110 translation tests passing (completed in Phase 4)
 
-**Step 1: Write Acceptance Criteria**
-- [ ] Define callback behavior (create vs update)
-- [ ] Define rate limiting behavior (4 translations per hour on updates)
-- [ ] Define deduplication behavior
-- [ ] Define manual regenerate bypass behavior
-- [ ] Run @acceptance-test-writing skill to review
-- [ ] Update ACs based on recommendations
-- [ ] Commit ACs
+**Step 1: Write Acceptance Criteria** ✅
+- [x] Define callback behavior (create vs update)
+- [x] Define rate limiting behavior (4 translations per hour on updates)
+- [x] Define deduplication behavior
+- [x] Define manual regenerate bypass behavior
+- [x] Run @acceptance-test-writing skill using a sub-agent to review
+- [x] Update ACs based on recommendations (fixed 4 critical, added 3 new)
+- [x] Commit ACs (18 total Phase 5 ACs)
 
 **Step 2: Add database migration**
 - [ ] Create migration to add `last_translated_at` timestamp to recipes table
@@ -818,10 +818,11 @@ Write comprehensive GIVEN/WHEN/THEN acceptance criteria for auto-triggered trans
 - [ ] All tests passing
 - [ ] Commit tests
 
-**Step 6: Update documentation**
+**Step 6: Update documentation using ai-doc-writing skill**
 - [ ] Update `docs/i18n-workflow.md` with complete workflow (create, update, rate limiting, deduplication)
 - [ ] Update `docs/new_claude/architecture.md` with callback patterns
 - [ ] Update `docs/api-reference.md` with manual regenerate endpoint
+- [ ] Check the rest of `docs/` to see if anything else needs to be updated and update it
 - [ ] Commit documentation
 
 **Deliverable**: Auto-triggered translation system with rate limiting and deduplication
