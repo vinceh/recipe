@@ -807,16 +807,18 @@ Write comprehensive GIVEN/WHEN/THEN acceptance criteria for auto-triggered trans
 - [ ] Ensure it bypasses rate limiting and deduplication
 - [ ] Commit any updates
 
-**Step 5: Write comprehensive tests**
-- [ ] Test: Recipe creation immediately enqueues job (no rate limit)
-- [ ] Test: Recipe update enqueues job (first time)
-- [ ] Test: Recipe update respects 4-per-hour rate limit
-- [ ] Test: Duplicate job not enqueued if one already pending
-- [ ] Test: Manual regenerate bypasses all limits
-- [ ] Test: Job completes and sets last_translated_at
-- [ ] Test: Job completes and sets translations_completed = true
-- [ ] All tests passing
-- [ ] Commit tests
+**Step 5: Write comprehensive tests** ✅ COMPLETE
+- [x] Test: Recipe creation immediately enqueues job (no rate limit)
+- [x] Test: Recipe update enqueues job (first time)
+- [x] Test: Recipe update respects 4-per-hour rate limit
+- [x] Test: Duplicate job not enqueued if one already pending
+- [x] Test: Manual regenerate bypasses all limits
+- [x] Test: Job completes and sets last_translated_at
+- [x] Test: Job completes and sets translations_completed = true
+- [x] All tests passing (40 Phase 5 tests, 23 justified SolidQueue skips)
+- [x] Commit tests
+- [x] Fix hardcoded rate limit and time window (make configurable)
+- [x] Commit configuration changes
 
 **Step 6: Update documentation using ai-doc-writing skill**
 - [ ] Update `docs/i18n-workflow.md` with complete workflow (create, update, rate limiting, deduplication)
