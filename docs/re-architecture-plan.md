@@ -833,22 +833,74 @@ Write comprehensive GIVEN/WHEN/THEN acceptance criteria for auto-triggered trans
 
 ---
 
-### Phase 6: New Backend Specs
+### Phase 6: Locale-Aware API Responses
 
-**BEFORE starting development:**
-Write comprehensive GIVEN/WHEN/THEN acceptance criteria for locale-aware API responses in `docs/new_claude/acceptance-criteria.md`.
+**Summary**: Implement locale support in API responses so endpoints return translations based on `?lang=` parameter or `Accept-Language` header. Leverage Mobility translation system (Phase 4) and auto-translation workflow (Phase 5) to serve all 7 languages (en, ja, ko, zh-tw, zh-cn, es, fr).
 
-Write RSpec tests for all remaining backend ACs:
-- API responses include locale-aware translations
-- Fallback behavior when translation missing
-- Translation status tracking
-- API accepts `?locale=` parameter correctly
+**Step 1: Write Acceptance Criteria**
+- [ ] Define locale parameter extraction ACs (?lang parameter and Accept-Language header with priority)
+- [ ] Define locale-aware list endpoint response ACs
+- [ ] Define locale-aware detail endpoint response ACs
+- [ ] Define fallback behavior ACs (translation missing scenarios)
+- [ ] Define translation status tracking ACs (translations_completed, last_translated_at fields)
+- [ ] Define all 7 languages support ACs
+- [ ] Define error handling and edge cases ACs (invalid locales, malformed headers)
+- [ ] Define backward compatibility ACs (no locale param = English)
+- [ ] Run sub-agent with @acceptance-test-writing skill to review, identify gaps, and refine
+- [ ] Update ACs based on sub-agent recommendations
+- [ ] Commit ACs with message: `[Phase 6] Step 1: Write acceptance criteria for locale-aware API responses`
 
-Ensure 100% pass.
+**Step 2: Implement Locale Parameter Extraction**
+- [ ] Add `before_action :set_locale_from_request` to BaseController
+- [ ] Implement `set_locale_from_request` method (priority: ?lang param > Accept-Language header > default 'en')
+- [ ] Implement `extract_locale_from_header` helper (parse RFC 7231 format)
+- [ ] Implement `valid_locale?` helper (check against I18n.available_locales)
+- [ ] Test locale extraction in Rails console with all 7 languages
+- [ ] Verify I18n.locale is request-scoped and isolated
+- [ ] Commit implementation
+- [ ] Run code-quality-auditor sub-agent review
+- [ ] Address any critical issues and commit fixes
 
-**Deliverable**: All backend ACs have passing tests
+**Step 3: Verify Serializers Work with Locale Context**
+- [ ] Test RecipeSerializer methods automatically pick up I18n.locale via Mobility
+- [ ] Verify translated fields work (recipe.name, ingredient_group.name, recipe_ingredient.ingredient_name/preparation_notes, recipe_step.instruction_original)
+- [ ] Test fallback chain behavior (ja→en, zh-tw→zh-cn→en, etc.)
+- [ ] Confirm no code changes needed (Mobility handles translation automatically)
+- [ ] Document findings
 
-**End of Phase**: All backend tests pass
+**Step 4: Add Translation Status to API Responses**
+- [ ] Update admin_recipe_json methods in Admin::RecipesController to include translations_completed and last_translated_at
+- [ ] Update API::V1::RecipesController serialization to include translation status fields
+- [ ] Test in Rails console with various locale scenarios
+- [ ] Commit implementation
+- [ ] Run code-quality-auditor sub-agent review
+
+**Step 5: Write Comprehensive RSpec Tests**
+- [ ] Write specs for locale parameter extraction (all 7 languages, ?lang param, Accept-Language header)
+- [ ] Write specs for locale parameter priority (param > header > default)
+- [ ] Write specs for invalid locale handling (fallback to English)
+- [ ] Write specs for API list endpoint with locale support (all 7 languages)
+- [ ] Write specs for API detail endpoint with locale support (all 7 languages)
+- [ ] Write specs for fallback behavior when translations missing
+- [ ] Write specs for translation status fields in responses
+- [ ] Write specs for backward compatibility (no locale param = English)
+- [ ] Write specs for scaling endpoint with locale support
+- [ ] Run full test suite: `bundle exec rspec`
+- [ ] Ensure 100% pass
+- [ ] Commit tests
+
+**Step 6: Final Review and Phase Completion**
+- [ ] Run code-quality-auditor skill sub-agent on all Phase 6 code
+- [ ] Address any critical issues
+- [ ] Run full test suite one final time
+- [ ] Verify 100% pass
+- [ ] Update documentation (api-reference.md, i18n-workflow.md, architecture.md) using ai-doc-writing skill
+- [ ] Update re-architecture-plan.md to mark Phase 6 complete
+- [ ] Create final Phase 6 commit
+
+**Deliverable**: All backend ACs have passing tests, locale-aware API responses working for all 7 languages
+
+**End of Phase**: All backend tests pass, all locale-aware API endpoints functional
 
 ---
 
