@@ -6,26 +6,57 @@ import type {
   ScaleRecipeResponse,
   Note,
   RecipeFilters,
-  ApiResponse
+  ApiResponse,
+  SupportedLanguage
 } from './types'
 
 export const recipeApi = {
-  // Public API endpoints
+  /**
+   * Fetch recipes with search, filter, and pagination options
+   *
+   * Language resolution (priority high to low):
+   * 1. filters.lang (explicit ?lang=XX query param)
+   * 2. Accept-Language header (from localStorage via axios interceptor)
+   * 3. Backend default (en)
+   *
+   * @param filters - Search/filter/pagination criteria, optionally includes lang
+   */
   async getRecipes(filters: RecipeFilters = {}): Promise<ApiResponse<RecipeListResponse>> {
-    // lang parameter will be passed as query param if provided in filters
-    // Accept-Language header is automatically added by axios interceptor
     const { data } = await apiClient.get('/recipes', { params: filters })
     return data
   },
 
-  async getRecipe(id: number | string, lang?: string): Promise<ApiResponse<{ recipe: RecipeDetail }>> {
-    const params = lang ? { lang } : {}
+  /**
+   * Fetch single recipe with full details
+   *
+   * Language resolution (priority high to low):
+   * 1. lang parameter (explicit ?lang=XX query param)
+   * 2. Accept-Language header (from localStorage via axios interceptor)
+   * 3. Backend default (en)
+   *
+   * @param id - Recipe ID (UUID string or numeric ID)
+   * @param lang - Optional language code (en, ja, ko, zh-tw, zh-cn, es, fr)
+   */
+  async getRecipe(id: string | number, lang?: SupportedLanguage): Promise<ApiResponse<{ recipe: RecipeDetail }>> {
+    const params = { lang }
     const { data } = await apiClient.get(`/recipes/${id}`, { params })
     return data
   },
 
-  async scaleRecipe(id: number | string, payload: ScaleRecipePayload, lang?: string): Promise<ApiResponse<ScaleRecipeResponse>> {
-    const params = lang ? { lang } : {}
+  /**
+   * Scale recipe ingredients to new serving size
+   *
+   * Language resolution (priority high to low):
+   * 1. lang parameter (explicit ?lang=XX query param)
+   * 2. Accept-Language header (from localStorage via axios interceptor)
+   * 3. Backend default (en)
+   *
+   * @param id - Recipe ID (UUID string or numeric ID)
+   * @param payload - Scaling request with new servings count
+   * @param lang - Optional language code (en, ja, ko, zh-tw, zh-cn, es, fr)
+   */
+  async scaleRecipe(id: string | number, payload: ScaleRecipePayload, lang?: SupportedLanguage): Promise<ApiResponse<ScaleRecipeResponse>> {
+    const params = { lang }
     const { data } = await apiClient.post(`/recipes/${id}/scale`, payload, { params })
     return data
   },

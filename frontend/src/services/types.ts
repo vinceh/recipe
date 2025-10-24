@@ -1,6 +1,8 @@
 // TypeScript interfaces for API responses
 // These match the backend Recipe model structure exactly
 
+export type SupportedLanguage = 'en' | 'ja' | 'ko' | 'zh-tw' | 'zh-cn' | 'es' | 'fr'
+
 export interface RecipeServings {
   original?: number
   min?: number
@@ -177,7 +179,7 @@ export interface RecipeFilters {
    * Falls back to source language if translation missing.
    * If not specified, defaults to Accept-Language header value or 'en'.
    */
-  lang?: string
+  lang?: SupportedLanguage
 }
 
 export interface Note {
