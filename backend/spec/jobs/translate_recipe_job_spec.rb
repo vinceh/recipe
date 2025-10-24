@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe TranslateRecipeJob, type: :job do
-  let(:recipe) { create(:recipe, name: 'Test Recipe', translations: {}, translations_completed: false) }
+  let(:recipe) { create(:recipe, name: 'Test Recipe', translations_completed: false) }
 
   before do
     # Create translation prompts
@@ -22,14 +22,31 @@ RSpec.describe TranslateRecipeJob, type: :job do
   end
 
   describe '#perform' do
-    it 'translates recipe to all 6 languages' do
+    let(:ingredient_group) { create(:ingredient_group, recipe: recipe, name: 'Main Ingredients', position: 1) }
+    let(:recipe_ingredient) { create(:recipe_ingredient, ingredient_group: ingredient_group, ingredient_name: 'Chicken') }
+    let(:recipe_step) { create(:recipe_step, recipe: recipe, step_number: 1, instruction_original: 'Cook it') }
+    let(:equipment) { create(:equipment, canonical_name: 'Pot') }
+
+    before do
+      ingredient_group
+      recipe_ingredient
+      recipe_step
+      recipe.equipment << equipment
+    end
+
+    it 'translates recipe to all 6 languages via Mobility' do
       translator = instance_double(RecipeTranslator)
       allow(RecipeTranslator).to receive(:new).and_return(translator)
 
       RecipeTranslator::LANGUAGES.keys.each do |lang|
         allow(translator).to receive(:translate_recipe)
           .with(recipe, lang)
-          .and_return({ 'name' => "Translated #{lang}" })
+          .and_return({
+            'name' => "Recipe #{lang}",
+            'ingredient_groups' => [{ 'name' => "Group #{lang}", 'items' => [] }],
+            'steps' => [],
+            'equipment' => []
+          })
       end
 
       described_class.new.perform(recipe.id)
@@ -39,22 +56,32 @@ RSpec.describe TranslateRecipeJob, type: :job do
       end
     end
 
-    it 'updates recipe with translations hash' do
+    it 'stores translations via Mobility translation tables' do
       translator = instance_double(RecipeTranslator)
       allow(RecipeTranslator).to receive(:new).and_return(translator)
 
       RecipeTranslator::LANGUAGES.keys.each do |lang|
         allow(translator).to receive(:translate_recipe)
           .with(recipe, lang)
-          .and_return({ 'name' => "Translated #{lang}" })
+          .and_return({
+            'name' => "Translated #{lang}",
+            'ingredient_groups' => [{ 'name' => "Group #{lang}", 'items' => [] }],
+            'steps' => [],
+            'equipment' => []
+          })
       end
 
       described_class.new.perform(recipe.id)
-      recipe.reload
 
-      expect(recipe.translations).to be_a(Hash)
-      expect(recipe.translations.keys).to contain_exactly('ja', 'ko', 'zh-tw', 'zh-cn', 'es', 'fr')
-      expect(recipe.translations['ja']).to eq({ 'name' => 'Translated ja' })
+      # Verify translations stored in Mobility tables
+      I18n.with_locale(:ja) do
+        expect(recipe.reload.name).to eq('Translated ja')
+        expect(ingredient_group.reload.name).to eq('Group ja')
+      end
+
+      I18n.with_locale(:es) do
+        expect(recipe.reload.name).to eq('Translated es')
+      end
     end
 
     it 'sets translations_completed to true' do
@@ -62,7 +89,9 @@ RSpec.describe TranslateRecipeJob, type: :job do
       allow(RecipeTranslator).to receive(:new).and_return(translator)
 
       RecipeTranslator::LANGUAGES.keys.each do |lang|
-        allow(translator).to receive(:translate_recipe).and_return({})
+        allow(translator).to receive(:translate_recipe)
+          .with(recipe, lang)
+          .and_return({})
       end
 
       described_class.new.perform(recipe.id)
@@ -92,20 +121,31 @@ RSpec.describe TranslateRecipeJob, type: :job do
       }.to have_enqueued_job(TranslateRecipeJob).with(recipe.id)
     end
 
-    it 'processes all 6 languages and marks complete' do
+    it 'processes all 6 languages and marks complete via Mobility' do
       translator = instance_double(RecipeTranslator)
       allow(RecipeTranslator).to receive(:new).and_return(translator)
 
       RecipeTranslator::LANGUAGES.keys.each do |lang|
         allow(translator).to receive(:translate_recipe)
           .with(recipe, lang)
-          .and_return({ 'name' => "Name in #{lang}" })
+          .and_return({
+            'name' => "Name in #{lang}",
+            'ingredient_groups' => [],
+            'steps' => [],
+            'equipment' => []
+          })
       end
 
       described_class.new.perform(recipe.id)
       recipe.reload
 
-      expect(recipe.translations.size).to eq(6)
+      # Verify all 6 languages were translated
+      RecipeTranslator::LANGUAGES.keys.each do |lang|
+        I18n.with_locale(lang) do
+          expect(recipe.reload.name).to eq("Name in #{lang}")
+        end
+      end
+
       expect(recipe.translations_completed).to be true
     end
   end
