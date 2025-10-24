@@ -391,85 +391,103 @@
 ### AC-PHASE7-001: Recipe List View - Display New API Response Fields
 **GIVEN** frontend receives API response with new fields (translations_completed, last_translated_at, dietary_tags array)
 **WHEN** recipe list is rendered
-**THEN** should display recipe names, servings, timing information
-**AND** should display dietary_tags as a list
-**AND** should display pagination controls correctly
+**THEN** recipe names, servings, and timing information should be visible to user
+**AND** dietary_tags should be displayed as a list
+**AND** pagination controls should be visible and functional
+**AND** no errors should occur during rendering
 
 ### AC-PHASE7-002: Recipe Detail View - Display Ingredient Groups Structure
 **GIVEN** frontend receives recipe detail API response with ingredient_groups array
 **WHEN** ingredients section is rendered
-**THEN** should group ingredients by ingredient_group.name
-**THEN** within each group, display items with name, amount, unit, preparation
-**AND** should handle optional ingredients (mark as optional if present)
+**THEN** ingredients should be grouped by ingredient_group.name
+**AND** within each group, items should display: name, amount, unit, preparation notes
+**AND** optional ingredients should be marked as optional
+**AND** all information should be visible without scrolling errors
 
 ### AC-PHASE7-003: Recipe Detail View - Display Recipe Steps
 **GIVEN** frontend receives recipe detail API response with recipe_steps array
 **WHEN** steps section is rendered
-**THEN** should display steps in order (step_number)
+**THEN** steps should display in order by step_number (1, 2, 3, etc.)
 **AND** each step should show: step number, instruction text
-**AND** should handle null instructions gracefully
+**AND** steps with null/missing instructions should display a placeholder instead of breaking the UI
 
 ### AC-PHASE7-004: Recipe Detail View - Display Equipment and Tags
 **GIVEN** frontend receives recipe detail API response with equipment, dietary_tags, cuisines, dish_types, recipe_types arrays
 **WHEN** recipe metadata section is rendered
-**THEN** should display equipment as a list
-**AND** should display dietary_tags as tags/badges
-**AND** should display cuisines as tags/badges
-**AND** should display dish_types as tags/badges
-**AND** should display recipe_types as tags/badges
-**AND** should handle empty arrays gracefully
+**THEN** equipment should be visible as a list
+**AND** dietary_tags should be visible as tags/badges
+**AND** cuisines should be visible as tags/badges
+**AND** dish_types should be visible as tags/badges
+**AND** recipe_types should be visible as tags/badges
+**AND** empty arrays should display gracefully (no errors, empty state clear to user)
 
-### AC-PHASE7-005: Language Parameter - Query Parameter Supported
-**GIVEN** frontend has a language selection (en, ja, ko, zh-tw, zh-cn, es, fr)
-**WHEN** API call is made to getRecipes() or getRecipe()
-**THEN** should include ?lang=<selected_language> query parameter
-**AND** should use Accept-Language header as fallback if lang parameter not provided
+### AC-PHASE7-005A: Language Parameter - Explicit Locale in Query String
+**GIVEN** frontend has language selection (en, ja, ko, zh-tw, zh-cn, es, fr)
+**WHEN** user selects a language and API call is made to getRecipes() or getRecipe()
+**THEN** query parameter ?lang=<selected_language> should be included in request
+**AND** API should return response in selected language
+**AND** no error should occur due to language parameter
 
-### AC-PHASE7-006: Language Switching - State Update and API Refetch
-**GIVEN** user is on recipe list or detail page with translations in language X
-**WHEN** user changes language to Y via language switcher
-**THEN** should call API with ?lang=Y parameter
-**AND** should update component state with new translated data
-**AND** should re-render page with translations in language Y
+### AC-PHASE7-005B: Language Parameter - Accept-Language Header Fallback
+**GIVEN** frontend does not have explicit ?lang parameter set
+**WHEN** API call is made
+**THEN** Accept-Language header should be sent in HTTP request
+**AND** header format should follow RFC 7231 (e.g., "en-US,en;q=0.9,ja;q=0.8")
+**AND** API should interpret header and return appropriate language translation
+
+### AC-PHASE7-006: Language Switching - Refetch with New Language
+**GIVEN** user is viewing a recipe in English (en)
+**WHEN** user switches language to Japanese (ja) via language switcher
+**THEN** API should be called with ?lang=ja parameter
+**AND** component state should update with Japanese translation data
+**AND** page should re-render with recipe name, ingredients, steps, and tags in Japanese
+**AND** no loading errors should occur during language switch
 
 ### AC-PHASE7-007: List View Filtering and Search - Works with New API
 **GIVEN** frontend has search and filter functionality (name search, dietary_tags filter, etc.)
 **WHEN** user performs search or filter
-**THEN** should call API with search/filter parameters
-**AND** pagination should work correctly
-**AND** results should display with correct translations for current language
+**THEN** API should be called with search/filter parameters
+**AND** pagination should work correctly (total_count, current_page, per_page)
+**AND** results should display with translations in current language
+**AND** filtered results should update without errors
 
-### AC-PHASE7-008: Type Safety - TypeScript Types Match API Responses
-**GIVEN** API returns new response structures (ingredient_groups, recipe_steps, etc.)
-**WHEN** frontend code is compiled with TypeScript
-**THEN** should have no type errors
-**AND** types for Recipe, RecipeDetail, IngredientGroup, RecipeStep should exist
+### AC-PHASE7-008: Type Safety - TypeScript Compilation Without Errors
+**GIVEN** new API response structures with ingredient_groups, recipe_steps, etc.
+**WHEN** TypeScript compiler runs on frontend code
+**THEN** src/types.ts should compile without errors
+**AND** RecipeList, RecipeDetail, IngredientGroup, RecipeStep component files should compile without type errors
 **AND** types should include new fields: translations_completed, last_translated_at
 
 ### AC-PHASE7-009: Error Handling - API Failures Handled Gracefully
-**GIVEN** API returns error response or times out
-**WHEN** recipe list or detail page is displayed
-**THEN** should show error message to user
-**AND** should not crash or display broken state
+**GIVEN** API returns error response (400, 500) or request times out
+**WHEN** recipe list or detail page attempts to load data
+**THEN** user-friendly error message should be displayed (e.g., "Failed to load recipes. Please try again.")
+**AND** UI should not crash or show broken layout
+**AND** user should be able to retry the operation
 
 ### AC-PHASE7-010: Multi-Language Support - All 7 Languages Render Correctly
 **GIVEN** backend returns translations in all 7 languages (en, ja, ko, zh-tw, zh-cn, es, fr)
 **WHEN** user selects each language
-**THEN** should display recipe names, ingredients, steps, tags in selected language
-**AND** should display special characters correctly (Japanese, Chinese, etc.)
-**AND** should handle right-to-left text if applicable
+**THEN** recipe names should display in selected language
+**AND** ingredient names should display in selected language
+**AND** recipe steps should display in selected language
+**AND** tags (dietary, cuisines, dish types) should display in selected language
+**AND** Japanese and Chinese special characters should render correctly without encoding issues
 
-### AC-PHASE7-011: API Client - Accept-Language Header Format
-**GIVEN** frontend has not set explicit ?lang parameter
-**WHEN** API call is made
-**THEN** should include Accept-Language header (if implemented)
-**AND** header format should follow RFC 7231 (e.g., "en-US,en;q=0.9,ja;q=0.8")
+### AC-PHASE7-011: Language Parameter in Pagination
+**GIVEN** user is viewing page 2 of recipes in English (en)
+**WHEN** user switches language to Japanese (ja)
+**THEN** API should be called with both ?lang=ja and ?page=2 parameters
+**AND** results should display page 2 of recipes in Japanese
+**AND** pagination state (current page, per page) should be maintained
 
-### AC-PHASE7-012: Pagination - Works with Language Parameter
-**GIVEN** user is viewing page 2 of recipes in language X
-**WHEN** user changes language to Y
-**THEN** API should be called with both ?lang=Y and ?page=2 parameters
-**AND** pagination state should be maintained across language change
+### AC-PHASE7-012: Recipe Scaling with Language Support
+**GIVEN** user is viewing a recipe in a non-English language (e.g., ja for Japanese)
+**WHEN** user scales the recipe to a different serving size
+**THEN** API should be called to scale ingredients
+**AND** scaled ingredient amounts should display in the current language
+**AND** no language switching should occur during scaling operation
+**AND** scaled values should be accurate and readable
 
 ---
 

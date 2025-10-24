@@ -916,16 +916,16 @@ Write comprehensive GIVEN/WHEN/THEN acceptance criteria for auto-triggered trans
 **Summary**: Update React frontend to consume normalized API responses, support all 7 languages via Accept-Language/lang parameter, and handle new ingredient_groups/steps relational structure. Verify all components work with multi-language translations.
 
 **Step 1: Write Acceptance Criteria**
-- [ ] Define ACs for frontend list view with new API response format
-- [ ] Define ACs for frontend detail view with ingredient_groups structure
-- [ ] Define ACs for recipe steps serialization format
-- [ ] Define ACs for language switching behavior (component state update + API refetch)
-- [ ] Define ACs for Accept-Language header and ?lang parameter handling in frontend
-- [ ] Define ACs for error handling with new API format
-- [ ] Define ACs for all 7 languages rendering correctly
-- [ ] Run acceptance-test-writing skill to review, identify gaps, and refine
-- [ ] Apply quality refinements
-- [ ] Commit ACs
+- [x] Define ACs for frontend list view with new API response format
+- [x] Define ACs for frontend detail view with ingredient_groups structure
+- [x] Define ACs for recipe steps serialization format
+- [x] Define ACs for language switching behavior (component state update + API refetch)
+- [x] Define ACs for Accept-Language header and ?lang parameter handling in frontend
+- [x] Define ACs for error handling with new API format
+- [x] Define ACs for all 7 languages rendering correctly
+- [x] Run acceptance-test-writing skill to review, identify gaps, and refine
+- [x] Apply quality refinements (made ACs more specific, added recipe scaling AC, split language param AC)
+- [x] Commit ACs
 
 **Step 2: Analyze Frontend Codebase and Test Status**
 - [ ] Run existing frontend tests: `npm run test` and document failures
