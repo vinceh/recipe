@@ -268,11 +268,12 @@ describe 'Recipe Translations (AC-PHASE4-MODEL-001, READ, WRITE, QUERY)', type: 
   end
 
   describe 'Edge Cases' do
-    it 'handles reading empty string translation (AC-PHASE4-EDGE-001)' do
+    it 'converts empty strings to nil (Mobility presence plugin, AC-PHASE4-EDGE-001)' do
       I18n.with_locale(:ja) { recipe.update(name: '') }
 
       I18n.with_locale(:ja) do
-        expect(recipe.name).to eq('')
+        # Mobility presence plugin converts empty strings to nil
+        expect(recipe.name).to be_nil
       end
     end
 

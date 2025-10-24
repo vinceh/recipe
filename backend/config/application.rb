@@ -49,7 +49,14 @@ module Backend
     # I18n configuration
     config.i18n.default_locale = :en
     config.i18n.available_locales = [:en, :ja, :ko, :'zh-tw', :'zh-cn', :es, :fr]
-    config.i18n.fallbacks = [:en]
+    config.i18n.fallbacks = {
+      ja: :en,
+      ko: :en,
+      'zh-tw': [:'zh-cn', :en],
+      'zh-cn': [:'zh-tw', :en],
+      es: :en,
+      fr: :en
+    }
     config.i18n.enforce_available_locales = true
   end
 end

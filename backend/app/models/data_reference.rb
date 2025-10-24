@@ -16,7 +16,7 @@ class DataReference < ApplicationRecord
   # Validations
   validates :reference_type, presence: true, inclusion: { in: %w[dietary_tag recipe_type cuisine unit dish_type] }
   validates :key, presence: true, uniqueness: { scope: :reference_type }
-  validates :display_name, presence: true
+  validates :display_name, presence: true, uniqueness: { scope: :reference_type, message: 'must be unique within the same reference type' }
 
   # Scopes
   scope :dietary_tags, -> { where(reference_type: 'dietary_tag') }

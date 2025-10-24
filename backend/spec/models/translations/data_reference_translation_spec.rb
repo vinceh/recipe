@@ -195,13 +195,14 @@ describe 'DataReference Translations (AC-PHASE4-MODEL-006)', type: :model do
       end
     end
 
-    it 'handles empty string' do
+    it 'converts empty strings to nil (Mobility presence plugin)' do
       I18n.with_locale(:ja) do
         data_reference.update(display_name: '')
       end
 
       I18n.with_locale(:ja) do
-        expect(data_reference.display_name).to eq('')
+        # Mobility presence plugin converts empty strings to nil
+        expect(data_reference.display_name).to be_nil
       end
     end
   end
