@@ -373,6 +373,7 @@ module Admin
         requires_precision: recipe.requires_precision,
         precision_reason: recipe.precision_reason,
         translations_completed: recipe.translations_completed,
+        last_translated_at: recipe.last_translated_at,
         created_at: recipe.created_at,
         updated_at: recipe.updated_at
       }

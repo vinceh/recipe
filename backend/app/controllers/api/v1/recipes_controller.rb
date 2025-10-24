@@ -177,6 +177,8 @@ module Api
           dish_types: recipe.dish_types.pluck(:display_name),
           cuisines: recipe.cuisines.pluck(:display_name),
           source_url: recipe.source_url,
+          translations_completed: recipe.translations_completed,
+          last_translated_at: recipe.last_translated_at,
           created_at: recipe.created_at,
           updated_at: recipe.updated_at
         }
@@ -209,6 +211,8 @@ module Api
           requires_precision: recipe.requires_precision,
           precision_reason: recipe.precision_reason,
           source_url: recipe.source_url,
+          translations_completed: recipe.translations_completed,
+          last_translated_at: recipe.last_translated_at,
           created_at: recipe.created_at,
           updated_at: recipe.updated_at
         }
