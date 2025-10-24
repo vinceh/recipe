@@ -1308,32 +1308,36 @@ All ACs ensure auto-triggered translation workflow operates reliably with proper
 ### AC-PHASE6-LOCALE-001: Extract locale from ?lang parameter
 **GIVEN** a request to any API endpoint
 **WHEN** the request includes `?lang=ja` parameter
-**THEN** the I18n.locale should be set to `:ja` for the request duration
-**AND** the response should contain translations in Japanese
+**THEN** the response should contain translations in Japanese
+**AND** recipe names, ingredient names, and step instructions appear in Japanese
 
 ### AC-PHASE6-LOCALE-002: Extract locale from Accept-Language header
 **GIVEN** a request without ?lang parameter
 **WHEN** the request includes `Accept-Language: ko-KR,ko;q=0.9,en;q=0.8` header
-**THEN** the I18n.locale should be set to `:ko` (extracted from first language tag)
-**AND** the response should contain translations in Korean
+**THEN** the response should contain translations in Korean
+**AND** recipe names, ingredient names, and step instructions appear in Korean
+**AND** language code is extracted from the first language tag (ignoring quality factors)
 
 ### AC-PHASE6-LOCALE-003: Parameter priority over header
 **GIVEN** a request with both ?lang parameter and Accept-Language header
 **WHEN** request includes `?lang=es` and `Accept-Language: ja-JP,ja;q=0.9`
-**THEN** the I18n.locale should be set to `:es` (parameter takes priority)
-**AND** header should be ignored in favor of parameter
+**THEN** the response should contain translations in Spanish
+**AND** the Accept-Language header is ignored in favor of the ?lang parameter
+**AND** recipe appears in Spanish despite the header requesting Japanese
 
 ### AC-PHASE6-LOCALE-004: Fallback to default locale for invalid locale
 **GIVEN** a request with an unsupported locale
-**WHEN** request includes `?lang=invalid_locale` (not in I18n.available_locales)
-**THEN** the I18n.locale should default to `:en` (I18n.default_locale)
-**AND** response should contain English translations
+**WHEN** request includes `?lang=invalid_locale` (not in supported languages)
+**THEN** the response should contain English translations
+**AND** recipe appears in English (default fallback)
+**AND** request does not fail or return error
 
 ### AC-PHASE6-LOCALE-005: Default to English when no locale specified
 **GIVEN** a request without ?lang parameter and no Accept-Language header
 **WHEN** client calls GET /api/v1/recipes
-**THEN** the I18n.locale should default to `:en`
-**AND** response should contain English translations
+**THEN** the response should contain English translations
+**AND** recipe names, ingredient names, and step instructions appear in English
+**AND** English is used as the default fallback
 
 ---
 
@@ -1371,11 +1375,12 @@ All ACs ensure auto-triggered translation workflow operates reliably with proper
 **AND** full recipe detail structure maintained (ingredient_groups, steps, nutrition, equipment)
 
 ### AC-PHASE6-DETAIL-002: GET /api/v1/recipes/:id with partial translations
-**GIVEN** recipe where some translations exist but not all
+**GIVEN** recipe where recipe.name has Japanese translation but recipe_step.instruction_original does not
 **WHEN** client calls GET /api/v1/recipes/:id?lang=ja
-**THEN** translated fields should appear in Japanese if available
-**AND** missing translations should fallback to English
-**AND** response should not have null/undefined fields
+**THEN** recipe name appears in Japanese
+**AND** recipe_step instruction_original appears in English (missing translation fallback)
+**AND** response contains no null/undefined fields for any translatable field
+**AND** all fields maintain their expected structure regardless of translation availability
 
 ### AC-PHASE6-DETAIL-003: Scaling endpoint with locale parameter
 **GIVEN** recipe with translations and scaling functionality
@@ -1383,6 +1388,13 @@ All ACs ensure auto-triggered translation workflow operates reliably with proper
 **THEN** scaled response should include recipe name in Korean
 **AND** ingredient names should be in Korean
 **AND** scaling math unchanged, only language changes
+
+### AC-PHASE6-ADMIN-001: Admin endpoints support locale parameter
+**GIVEN** admin recipe management endpoints
+**WHEN** admin calls GET /admin/recipes?lang=ja or GET /admin/recipes/:id?lang=ja
+**THEN** response should contain translations in Japanese
+**AND** recipe names and all translatable fields appear in Japanese
+**AND** admin response structure unchanged, only translations differ
 
 ---
 
@@ -1460,25 +1472,7 @@ All ACs ensure auto-triggered translation workflow operates reliably with proper
 
 ---
 
-## Translation Status in API Responses
-
-### AC-PHASE6-STATUS-001: Translation completion status in response
-**GIVEN** recipe that has completed translations
-**WHEN** client calls GET /api/v1/recipes/:id
-**THEN** response should include `translations_completed: true` field
-**AND** response should include `last_translated_at: "2025-10-24T12:30:00Z"` timestamp
-
-### AC-PHASE6-STATUS-002: Translation status for untranslated recipe
-**GIVEN** newly created recipe without any translations yet
-**WHEN** client calls GET /api/v1/recipes/:id
-**THEN** response should include `translations_completed: false`
-**AND** `last_translated_at` should be null or omitted
-
-### AC-PHASE6-STATUS-003: Translation status on list endpoint
-**GIVEN** multiple recipes with different translation statuses
-**WHEN** client calls GET /api/v1/recipes
-**THEN** each recipe should include translations_completed and last_translated_at fields
-**AND** status accurate for each recipe
+**Note**: Translation status fields (translations_completed, last_translated_at) are implementation requirements defined in Phase 6 Step 4 and will have separate acceptance criteria for their API response behavior.
 
 ---
 
@@ -1511,6 +1505,13 @@ All ACs ensure auto-triggered translation workflow operates reliably with proper
 **THEN** each request should use its own I18n.locale
 **AND** locales should not interfere with each other
 **AND** both should complete correctly
+
+### AC-PHASE6-EDGE-003: Invalid locale in Accept-Language header
+**GIVEN** request with unsupported locale in Accept-Language header
+**WHEN** client calls API with `Accept-Language: xx-XX,en;q=0.9`
+**THEN** the unsupported locale (xx-XX) should be skipped
+**AND** fallback to next available language in header preference (en)
+**AND** response should contain English translations
 
 ---
 
@@ -1548,26 +1549,33 @@ All ACs ensure auto-triggered translation workflow operates reliably with proper
 **AND** each request should maintain its own locale context
 **AND** no thread safety issues
 
-### AC-PHASE6-PERF-002: No N+1 queries introduced
-**GIVEN** API endpoint that previously loaded data efficiently
-**WHEN** locale support is added
-**THEN** query count should not increase significantly
-**AND** translations should be accessed via Mobility without N+1
-**AND** eager loading of translations should work where applicable
+### AC-PHASE6-PERF-002: API response time remains consistent with locale support
+**GIVEN** API endpoint with locale support enabled
+**WHEN** client requests recipes in different languages
+**THEN** response time should not increase significantly compared to default English response
+**AND** loading translations for 10 recipes should not require excessive database queries
+**AND** response completes within acceptable performance bounds for typical recipe list (100 recipes or fewer)
 
 ---
 
 ## Summary
 
-- **Total Phase 6 ACs:** 31
-- **Locale Parameter Extraction:** 5 ACs
-- **Locale-Aware List Endpoint:** 3 ACs
-- **Locale-Aware Detail Endpoint:** 3 ACs
-- **Fallback Behavior:** 4 ACs
-- **All 7 Languages Support:** 7 ACs
-- **Translation Status in Responses:** 3 ACs
-- **Error Handling & Edge Cases:** 4 ACs
-- **Backward Compatibility:** 3 ACs
-- **Performance & Efficiency:** 2 ACs
+- **Total Phase 6 ACs:** 33
+- **Locale Parameter Extraction:** 5 ACs (LOCALE-001 through LOCALE-005)
+- **Locale-Aware List Endpoint:** 3 ACs (LIST-001 through LIST-003)
+- **Locale-Aware Detail Endpoint:** 4 ACs (DETAIL-001 through DETAIL-003, ADMIN-001)
+- **Fallback Behavior:** 4 ACs (FALLBACK-001 through FALLBACK-004)
+- **All 7 Languages Support:** 7 ACs (LANG-001 through LANG-007)
+- **Error Handling & Edge Cases:** 5 ACs (ERROR-001, ERROR-002, EDGE-001 through EDGE-003)
+- **Backward Compatibility:** 3 ACs (COMPAT-001 through COMPAT-003)
+- **Performance & Efficiency:** 2 ACs (PERF-001, PERF-002)
 
-All ACs ensure locale-aware API responses work correctly across all 7 languages with proper parameter extraction, fallback behavior, translation status tracking, error handling, and complete backward compatibility with existing API consumers.
+**Refinements Applied**:
+- Observable response behavior focus (not internal I18n.locale state)
+- Added AC for admin endpoints locale support (ADMIN-001)
+- Added AC for invalid locale in Accept-Language header fallback (EDGE-003)
+- Moved translation status fields to Phase 6 Step 4 (implementation-specific)
+- More specific AC for partial translations (DETAIL-002)
+- Performance AC focused on response time observable behavior
+
+All ACs ensure locale-aware API responses work correctly across all 7 languages with proper parameter extraction, fallback behavior, error handling, edge case coverage, and complete backward compatibility with existing API consumers.
