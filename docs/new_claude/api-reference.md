@@ -566,6 +566,8 @@ The API automatically detects which mode to use based on the parameters provided
         "dish_types": ["main-course", "soup"],
         "cuisines": ["taiwanese", "chinese"],
         "source_url": "https://example.com/recipe",
+        "translations_completed": true,
+        "last_translated_at": "2025-10-09T10:00:00Z",
         "created_at": "2025-10-09T12:00:00Z",
         "updated_at": "2025-10-09T12:00:00Z"
       }
@@ -717,6 +719,7 @@ Returns complete recipe details including ingredients, steps, equipment, nutriti
       "variants_generated": true,
       "variants_generated_at": "2025-10-09T12:00:00Z",
       "translations_completed": false,
+      "last_translated_at": null,
       "created_at": "2025-10-09T12:00:00Z",
       "updated_at": "2025-10-09T12:00:00Z"
     }
@@ -1121,6 +1124,8 @@ Returns a paginated list of recipes that the current user has favorited, ordered
         "dish_types": ["main-course", "soup"],
         "cuisines": ["taiwanese", "chinese"],
         "source_url": "https://example.com/recipe",
+        "translations_completed": true,
+        "last_translated_at": "2025-10-09T10:00:00Z",
         "created_at": "2025-10-09T12:00:00Z",
         "updated_at": "2025-10-09T12:00:00Z",
         "favorited_at": "2025-10-09T14:30:00Z"
@@ -1708,6 +1713,7 @@ Returns a paginated list of all recipes with admin metadata. Supports advanced f
         "variants_generated": true,
         "variants_generated_at": "2025-10-08T10:00:00Z",
         "translations_completed": true,
+        "last_translated_at": "2025-10-09T10:00:00Z",
         "created_at": "2025-10-09T12:00:00Z",
         "updated_at": "2025-10-09T12:00:00Z"
       }
@@ -1806,6 +1812,7 @@ Returns complete recipe information including all fields, translations, and admi
       "variants_generated": true,
       "variants_generated_at": "2025-10-08T10:00:00Z",
       "translations_completed": true,
+      "last_translated_at": "2025-10-09T10:00:00Z",
       "created_at": "2025-10-09T12:00:00Z",
       "updated_at": "2025-10-09T12:00:00Z",
       "ingredient_groups": [],
@@ -2566,7 +2573,8 @@ Manually triggers translation regeneration for a recipe, bypassing rate limiting
   "data": {
     "recipe": {
       "id": 1,
-      "translations_completed": false
+      "translations_completed": false,
+      "last_translated_at": null
     }
   },
   "message": "Translation regeneration queued"
