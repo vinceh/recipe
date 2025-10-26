@@ -508,7 +508,6 @@ onMounted(async () => {
           <label
             for="requires_precision"
             class="recipe-form__checkbox-label"
-            @click="formData.requires_precision = !formData.requires_precision"
           >
             <Checkbox
               id="requires_precision"
