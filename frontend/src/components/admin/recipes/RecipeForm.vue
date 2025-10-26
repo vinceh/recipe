@@ -360,10 +360,18 @@ function handleCancel() {
   emit('cancel')
 }
 
-// Expose validation for parent component
+// Method to set precision_reason from external scripts (like formtest.js)
+function setPrecisionReason(value: string) {
+  if (formData.value) {
+    formData.value.precision_reason = value
+  }
+}
+
+// Expose validation and setter methods for parent and external scripts
 defineExpose({
   validateForm,
-  isValid
+  isValid,
+  setPrecisionReason
 })
 
 // Lifecycle
@@ -505,9 +513,10 @@ onMounted(async () => {
         </div>
 
         <div class="recipe-form__field">
-          <label
-            for="requires_precision"
-            class="recipe-form__checkbox-label"
+          <button
+            type="button"
+            class="recipe-form__checkbox-button"
+            @click="formData.requires_precision = !formData.requires_precision"
           >
             <Checkbox
               id="requires_precision"
@@ -517,7 +526,7 @@ onMounted(async () => {
             <span class="recipe-form__label-inline">
               {{ $t('forms.recipe.requiresPrecision') }}
             </span>
-          </label>
+          </button>
           <small class="recipe-form__help-text">{{ $t('forms.recipe.requiresPrecisionHint') }}</small>
         </div>
 
@@ -1216,6 +1225,29 @@ hr {
   gap: var(--spacing-sm);
   cursor: pointer;
   user-select: none;
+}
+
+.recipe-form__checkbox-button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  user-select: none;
+  font-size: var(--font-size-md);
+  transition: all 0.2s ease;
+}
+
+.recipe-form__checkbox-button:hover {
+  background: var(--color-gray-50);
+  border-color: var(--color-primary-light);
+}
+
+.recipe-form__checkbox-button:active {
+  background: var(--color-gray-100);
 }
 
 .recipe-form__optional-box {
