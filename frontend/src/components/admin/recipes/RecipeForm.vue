@@ -32,7 +32,7 @@ const emit = defineEmits<{
 }>()
 
 // Composables
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const dataStore = useDataReferenceStore()
 const uiStore = useUiStore()
 
@@ -186,12 +186,12 @@ const languageOptions = [
   { label: 'Français', value: 'fr' }
 ]
 
-const precisionReasonOptions = [
+const precisionReasonOptions = computed(() => [
   { label: t('forms.recipe.precisionReasons.baking'), value: 'baking' },
   { label: t('forms.recipe.precisionReasons.confectionery'), value: 'confectionery' },
   { label: t('forms.recipe.precisionReasons.fermentation'), value: 'fermentation' },
   { label: t('forms.recipe.precisionReasons.molecular'), value: 'molecular' }
-]
+])
 
 // Flag to prevent recursive updates
 const isUpdatingFromProp = ref(false)
