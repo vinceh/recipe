@@ -3,6 +3,7 @@ require 'base64'
 require 'net/http'
 require 'uri'
 require 'openssl'
+require 'nokogiri'
 
 class RecipeParserService < AiService
   # Parse a large text block containing a recipe
@@ -97,7 +98,7 @@ class RecipeParserService < AiService
   def fetch_url_content(url)
     uri = URI.parse(url)
 
-    html = Net::HTTP.start(
+    raw_html = Net::HTTP.start(
       uri.host,
       uri.port,
       use_ssl: uri.scheme == 'https',
@@ -113,9 +114,12 @@ class RecipeParserService < AiService
       response.body
     end
 
-    # Remove script and style tags to reduce size
-    html = html.gsub(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/im, '')
-    html = html.gsub(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/im, '')
+    # Parse HTML and remove script/style tags
+    doc = Nokogiri::HTML(raw_html)
+    doc.xpath('//script | //style').remove
+
+    # Get cleaned HTML
+    html = doc.to_html
 
     # Limit to first 100KB to avoid API request size limits
     html = html[0...(100 * 1024)] if html.length > 100_000

@@ -46,6 +46,9 @@ gem "redis", "~> 5.0"
 # HTTP client
 gem "faraday", "~> 2.7"
 
+# HTML parsing and sanitization
+gem "nokogiri", "~> 1.16"
+
 # AI integration
 gem "ruby-anthropic", "~> 0.4"
 
