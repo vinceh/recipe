@@ -15,6 +15,8 @@ const hasBasicInfo = computed(() => {
          props.recipe.timing?.cook_minutes ||
          props.recipe.timing?.total_minutes ||
          props.recipe.aliases?.length ||
+         props.recipe.source_url ||
+         props.recipe.recipe_types?.length ||
          props.recipe.cuisines?.length ||
          props.recipe.dietary_tags?.length ||
          props.recipe.dish_types?.length
@@ -96,14 +98,31 @@ function formatIngredient(item: any): string {
           </div>
         </div>
 
-        <div v-if="recipe.cuisines?.length || recipe.dietary_tags?.length || recipe.dish_types?.length" class="recipe-tags">
+        <div v-if="recipe.cuisines?.length || recipe.dietary_tags?.length || recipe.dish_types?.length || recipe.recipe_types?.length" class="recipe-tags">
           <span v-for="cuisine in recipe.cuisines" :key="cuisine" class="tag tag-cuisine">{{ cuisine }}</span>
           <span v-for="tag in recipe.dietary_tags" :key="tag" class="tag tag-dietary">{{ tag }}</span>
           <span v-for="type in recipe.dish_types" :key="type" class="tag tag-dish">{{ type }}</span>
+          <span v-for="rtype in recipe.recipe_types" :key="rtype" class="tag tag-recipe-type">{{ rtype }}</span>
+        </div>
+
+        <div v-if="recipe.source_url" class="recipe-source">
+          <i class="pi pi-link"></i>
+          <a :href="recipe.source_url" target="_blank" rel="noopener noreferrer">{{ recipe.source_url }}</a>
         </div>
       </div>
       <div v-else class="section-placeholder">
         <span>{{ $t('forms.recipe.sections.basicInfo') }}</span>
+      </div>
+
+      <!-- Equipment -->
+      <div v-if="hasEquipment" class="recipe-section">
+        <h2>{{ $t('recipe.view.equipment') }}</h2>
+        <ul class="equipment-list">
+          <li v-for="item in recipe.equipment" :key="item" class="equipment-item">{{ item }}</li>
+        </ul>
+      </div>
+      <div v-else class="section-placeholder">
+        <span>{{ $t('forms.recipe.sections.equipment') }}</span>
       </div>
 
       <!-- Ingredients -->
@@ -122,17 +141,6 @@ function formatIngredient(item: any): string {
       </div>
       <div v-else class="section-placeholder">
         <span>{{ $t('forms.recipe.sections.ingredients') }}</span>
-      </div>
-
-      <!-- Equipment -->
-      <div v-if="hasEquipment" class="recipe-section">
-        <h2>{{ $t('recipe.view.equipment') }}</h2>
-        <ul class="equipment-list">
-          <li v-for="item in recipe.equipment" :key="item" class="equipment-item">{{ item }}</li>
-        </ul>
-      </div>
-      <div v-else class="section-placeholder">
-        <span>{{ $t('forms.recipe.sections.equipment') }}</span>
       </div>
 
       <!-- Instructions -->
@@ -237,6 +245,28 @@ function formatIngredient(item: any): string {
   content: '"';
 }
 
+.recipe-source {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-md);
+  font-size: var(--font-size-sm);
+}
+
+.recipe-source i {
+  color: var(--color-primary);
+}
+
+.recipe-source a {
+  color: var(--color-primary);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.recipe-source a:hover {
+  text-decoration: underline;
+}
+
 .recipe-meta {
   display: flex;
   gap: var(--spacing-lg);
@@ -282,6 +312,11 @@ function formatIngredient(item: any): string {
 .tag-dish {
   background: var(--color-gray-200);
   color: var(--color-text);
+}
+
+.tag-recipe-type {
+  background: var(--color-warning);
+  color: white;
 }
 
 .recipe-section {
