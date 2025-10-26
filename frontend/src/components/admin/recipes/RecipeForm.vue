@@ -2,6 +2,7 @@
 import { ref, computed, watch, onMounted, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useDataReferenceStore } from '@/stores/dataReferenceStore'
+import { useUiStore } from '@/stores/uiStore'
 import type { Recipe, RecipeIngredientGroup, RecipeIngredientItem, RecipeStep } from '@/services/types'
 import InputText from 'primevue/inputtext'
 import InputNumber from 'primevue/inputnumber'
@@ -33,6 +34,7 @@ const emit = defineEmits<{
 // Composables
 const { t } = useI18n()
 const dataStore = useDataReferenceStore()
+const uiStore = useUiStore()
 
 // Form state - matches backend Recipe model exactly
 const formData = ref<Partial<Recipe>>({
@@ -394,6 +396,11 @@ onMounted(async () => {
   if (formData.value.steps && formData.value.steps.length === 0) {
     addStep()
   }
+})
+
+// Watch for language changes and reload data references
+watch(() => uiStore.language, async () => {
+  await dataStore.fetchAll()
 })
 </script>
 
