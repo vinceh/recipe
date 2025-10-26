@@ -306,6 +306,8 @@ function handleSwitchToText(url: string) {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
+  height: 100%;
+  min-height: 0;
 }
 
 .form-panel {
@@ -315,6 +317,7 @@ function handleSwitchToText(url: string) {
   overflow-y: auto;
   border: 1px solid var(--color-border);
   flex: 1;
+  min-height: 0;
 }
 
 .form-actions {
@@ -339,6 +342,7 @@ function handleSwitchToText(url: string) {
   flex-direction: column;
   overflow: hidden;
   border: 1px solid var(--color-border);
+  height: 100%;
 }
 
 .preview-header {
@@ -368,6 +372,7 @@ function handleSwitchToText(url: string) {
 .preview-content {
   flex: 1;
   overflow-y: auto;
+  min-height: 0;
 }
 
 @media (max-width: 1024px) {

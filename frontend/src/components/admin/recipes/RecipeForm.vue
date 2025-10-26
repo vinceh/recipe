@@ -272,17 +272,23 @@ const isValid = computed(() => {
     }
   }
 
-  // Optional: Timing validation (if provided, must be non-negative)
-  if (formData.value.timing) {
-    if (formData.value.timing.prep_minutes != null && formData.value.timing.prep_minutes < 0) {
-      validationErrors.value.push('Prep time cannot be negative')
-    }
-    if (formData.value.timing.cook_minutes != null && formData.value.timing.cook_minutes < 0) {
-      validationErrors.value.push('Cook time cannot be negative')
-    }
-    if (formData.value.timing.total_minutes != null && formData.value.timing.total_minutes < 0) {
-      validationErrors.value.push('Total time cannot be negative')
-    }
+  // Required: Timing fields must be provided and non-negative
+  if (formData.value.timing?.prep_minutes == null) {
+    validationErrors.value.push('Prep time is required')
+  } else if (formData.value.timing.prep_minutes < 0) {
+    validationErrors.value.push('Prep time cannot be negative')
+  }
+
+  if (formData.value.timing?.cook_minutes == null) {
+    validationErrors.value.push('Cook time is required')
+  } else if (formData.value.timing.cook_minutes < 0) {
+    validationErrors.value.push('Cook time cannot be negative')
+  }
+
+  if (formData.value.timing?.total_minutes == null) {
+    validationErrors.value.push('Total time is required')
+  } else if (formData.value.timing.total_minutes < 0) {
+    validationErrors.value.push('Total time cannot be negative')
   }
 
   // Optional: Precision reason validation
