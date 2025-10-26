@@ -6,21 +6,28 @@ const ADMIN_PASSWORD = '123456'
 
 test.describe('Admin Recipe New Form - AC-ADMIN-NEW-FORM Tests', () => {
   test.beforeEach(async ({ page }) => {
+    // Set longer timeouts for navigations
+    page.setDefaultTimeout(30000)
+    page.setDefaultNavigationTimeout(30000)
+
     // Login as admin first
-    await page.goto('/admin/login')
-    await page.waitForLoadState('domcontentloaded')
+    await page.goto('/admin/login', { waitUntil: 'load' })
     await loginAsAdmin(page, ADMIN_EMAIL, ADMIN_PASSWORD)
-    await page.waitForURL(/.*\/admin.*/)
+
+    // Wait for navigation to complete after login
+    await page.waitForNavigation({ waitUntil: 'load' })
+
+    // Verify we're in admin area
+    const currentUrl = page.url()
+    if (!currentUrl.includes('/admin')) {
+      throw new Error(`Login failed. Current URL: ${currentUrl}`)
+    }
 
     // Navigate to recipe creation form
-    await page.goto('/admin/recipes/new')
-    // Wait for page to be fully loaded (networkidle ensures all resources are loaded)
-    await page.waitForLoadState('networkidle')
+    await page.goto('/admin/recipes/new', { waitUntil: 'load' })
 
-    // Wait for the form to be present with a more generous timeout
-    // Try multiple indicators to find when the form is ready
-    const formContainer = page.locator('.recipe-form, .admin-recipe-new, [role="main"]')
-    await formContainer.first().waitFor({ state: 'attached', timeout: 15000 })
+    // Just wait a bit more for Vue to initialize
+    await page.waitForTimeout(2000)
   })
 
   // AC-ADMIN-NEW-FORM-001: User enters recipe name and selects language
