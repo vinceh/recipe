@@ -505,16 +505,20 @@ onMounted(async () => {
         </div>
 
         <div class="recipe-form__field">
-          <div class="recipe-form__checkbox-field">
+          <label
+            for="requires_precision"
+            class="recipe-form__checkbox-label"
+            @click="formData.requires_precision = !formData.requires_precision"
+          >
             <Checkbox
               id="requires_precision"
               v-model="formData.requires_precision"
               :binary="true"
             />
-            <label for="requires_precision" class="recipe-form__label-inline">
+            <span class="recipe-form__label-inline">
               {{ $t('forms.recipe.requiresPrecision') }}
-            </label>
-          </div>
+            </span>
+          </label>
           <small class="recipe-form__help-text">{{ $t('forms.recipe.requiresPrecisionHint') }}</small>
         </div>
 
@@ -1205,6 +1209,14 @@ hr {
   grid-template-columns: 1fr 2fr;
   margin-bottom: 0;
   align-items: center;
+}
+
+.recipe-form__checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+  user-select: none;
 }
 
 .recipe-form__optional-box {
