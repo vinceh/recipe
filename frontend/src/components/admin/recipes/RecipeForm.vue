@@ -196,6 +196,7 @@ const isUpdatingFromProp = ref(false)
 
 // Validation
 const validationErrors = ref<string[]>([])
+const showValidationErrors = ref(false)
 
 const isValid = computed(() => {
   validationErrors.value = []
@@ -344,6 +345,11 @@ watch(formData, (newValue) => {
 
 // Methods
 function handleSave() {
+  if (!isValid.value) {
+    showValidationErrors.value = true
+    return
+  }
+  showValidationErrors.value = false
   emit('update:modelValue', formData.value)
   emit('save')
 }
@@ -378,6 +384,17 @@ onMounted(async () => {
 <template>
   <div class="recipe-form">
     <form @submit.prevent="handleSave">
+      <!-- Validation Error Messages -->
+      <div v-if="showValidationErrors && validationErrors.length > 0" role="alert" class="recipe-form__validation-errors">
+        <div class="recipe-form__error-header">
+          <i class="pi pi-exclamation-circle"></i>
+          <span>Please fix the following errors:</span>
+        </div>
+        <ul class="recipe-form__error-list">
+          <li v-for="(error, index) in validationErrors" :key="index">{{ error }}</li>
+        </ul>
+      </div>
+
       <!-- Import Buttons -->
       <div class="recipe-form__import-buttons">
         <Button
@@ -635,11 +652,11 @@ onMounted(async () => {
 
         <div class="recipe-form__row">
           <div class="recipe-form__field recipe-form__field--narrow">
-            <label for="prep_time" class="recipe-form__label">
+            <label for="timing_prep_minutes" class="recipe-form__label">
               {{ $t('forms.recipe.prepTime') }}
             </label>
             <InputNumber
-              id="prep_time"
+              id="timing_prep_minutes"
               v-model="formData.timing!.prep_minutes"
               :min="0"
               :max="1440"
@@ -651,11 +668,11 @@ onMounted(async () => {
           </div>
 
           <div class="recipe-form__field recipe-form__field--narrow">
-            <label for="cook_time" class="recipe-form__label">
+            <label for="timing_cook_minutes" class="recipe-form__label">
               {{ $t('forms.recipe.cookTime') }}
             </label>
             <InputNumber
-              id="cook_time"
+              id="timing_cook_minutes"
               v-model="formData.timing!.cook_minutes"
               :min="0"
               :max="1440"
@@ -667,11 +684,11 @@ onMounted(async () => {
           </div>
 
           <div class="recipe-form__field recipe-form__field--narrow">
-            <label for="total_time" class="recipe-form__label">
+            <label for="timing_total_minutes" class="recipe-form__label">
               {{ $t('forms.recipe.totalTime') }}
             </label>
             <InputNumber
-              id="total_time"
+              id="timing_total_minutes"
               v-model="formData.timing!.total_minutes"
               :min="0"
               :max="1440"
@@ -987,6 +1004,38 @@ onMounted(async () => {
 .recipe-form {
   background: var(--color-surface);
   border-radius: var(--border-radius-lg);
+}
+
+.recipe-form__validation-errors {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  border-radius: var(--border-radius-md);
+  padding: 16px;
+  margin-bottom: 20px;
+  color: #d32f2f;
+}
+
+.recipe-form__error-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.recipe-form__error-header i {
+  font-size: 20px;
+}
+
+.recipe-form__error-list {
+  list-style: disc;
+  margin: 0;
+  padding-left: 24px;
+}
+
+.recipe-form__error-list li {
+  margin: 4px 0;
+  font-size: 14px;
 }
 
 hr {
