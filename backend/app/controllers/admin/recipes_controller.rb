@@ -167,6 +167,8 @@ module Admin
         )
       end
     rescue StandardError => e
+      Rails.logger.error("URL parsing failed: #{e.class} - #{e.message}")
+      Rails.logger.error(e.backtrace.join("\n"))
       render_error(
         message: "Failed to fetch or parse URL",
         errors: [ e.message ]

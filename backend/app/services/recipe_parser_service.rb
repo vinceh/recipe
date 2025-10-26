@@ -24,21 +24,38 @@ class RecipeParserService < AiService
   end
 
   # Parse a recipe from a URL
-  # Fetches HTML content and sends to Claude for parsing
+  # Uses tiered approach: JSON-LD extraction > Claude parsing
   # Returns structured recipe JSON with source_url
   def parse_url(url)
     validate_url(url)
 
     Rails.logger.info("Attempting to parse recipe from URL: #{url}")
 
-    # Fetch HTML content from the URL
-    html_content = fetch_url_content(url)
+    # Fetch raw HTML
+    raw_html = fetch_raw_html(url)
+
+    # Tier 1: Try JSON-LD structured data extraction (0 API cost, instant)
+    if structured_recipe = extract_json_ld_recipe(raw_html)
+      # Validate that JSON-LD extraction gave us sufficient detail
+      if looks_complete?(structured_recipe)
+        Rails.logger.info("Successfully extracted complete recipe from JSON-LD (Tier 1)")
+        structured_recipe['source_url'] = url
+        return transform_for_frontend(structured_recipe)
+      else
+        Rails.logger.info("JSON-LD extraction incomplete (#{structured_recipe['steps']&.length || 0} steps), falling back to Claude (Tier 2)")
+      end
+    else
+      Rails.logger.info("No JSON-LD found, falling back to Claude parsing (Tier 2)")
+    end
+
+    # Tier 2: Fall back to Claude parsing with cleaned HTML
+    html_content = clean_html(raw_html)
 
     # Get prompts from database
     system_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_url_system')
     user_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_url_user')
 
-    # Send HTML content to Claude for parsing
+    # Send cleaned HTML content to Claude for parsing
     rendered_user_prompt = user_prompt.render(url: url, html_content: html_content)
 
     response = call_claude(
@@ -50,7 +67,7 @@ class RecipeParserService < AiService
 
     result = parse_response(response)
     if result.is_a?(Hash)
-      Rails.logger.info("Successfully parsed URL content")
+      Rails.logger.info("Successfully parsed URL content with Claude")
       result['source_url'] = url
       return result
     end
@@ -94,11 +111,11 @@ class RecipeParserService < AiService
     end
   end
 
-  # Fetch HTML content from a URL
-  def fetch_url_content(url)
+  # Fetch raw HTML from URL (no cleaning)
+  def fetch_raw_html(url)
     uri = URI.parse(url)
 
-    raw_html = Net::HTTP.start(
+    Net::HTTP.start(
       uri.host,
       uri.port,
       use_ssl: uri.scheme == 'https',
@@ -113,10 +130,23 @@ class RecipeParserService < AiService
 
       response.body
     end
+  rescue => e
+    Rails.logger.error("Failed to fetch URL: #{e.message}")
+    raise "Could not fetch content from URL: #{e.message}"
+  end
 
-    # Parse HTML and remove script/style tags
-    doc = Nokogiri::HTML(raw_html)
-    doc.xpath('//script | //style').remove
+  # Clean HTML by removing noise elements and unnecessary attributes
+  def clean_html(raw_html)
+    # Parse HTML with configuration to handle encoding better
+    doc = Nokogiri::HTML(raw_html) do |config|
+      config.noblanks
+    end
+
+    # Remove script, style, and other unwanted elements
+    doc.css('script, style, iframe, noscript, meta, link[rel="stylesheet"], svg').remove
+
+    # Remove unwanted attributes that add noise
+    doc.xpath('//@style | //@class | //@id | //@onclick | //@onload').remove
 
     # Get cleaned HTML
     html = doc.to_html
@@ -126,8 +156,140 @@ class RecipeParserService < AiService
 
     html
   rescue => e
-    Rails.logger.error("Failed to fetch URL content: #{e.message}")
-    raise "Could not fetch content from URL: #{e.message}"
+    Rails.logger.error("Failed to clean HTML: #{e.message}")
+    raise "Could not clean HTML: #{e.message}"
+  end
+
+  # Extract Recipe structured data from JSON-LD script tags (Tier 1: 0 API cost)
+  def extract_json_ld_recipe(raw_html)
+    doc = Nokogiri::HTML(raw_html)
+
+    # Find all JSON-LD script tags
+    json_ld_scripts = doc.css('script[type="application/ld+json"]')
+
+    json_ld_scripts.each do |script|
+      begin
+        data = JSON.parse(script.content)
+
+        # Extract items to search based on structure
+        items_to_search = []
+
+        if data.is_a?(Hash)
+          if data['@graph'].is_a?(Array)
+            # Handle @graph structure (common in WordPress schema)
+            items_to_search = data['@graph']
+          else
+            # Single object
+            items_to_search = [data]
+          end
+        elsif data.is_a?(Array)
+          # Array of objects
+          items_to_search = data
+        end
+
+        # Find Recipe type in the JSON-LD data
+        recipe = items_to_search.find { |item| item.is_a?(Hash) && item['@type'] == 'Recipe' }
+
+        if recipe
+          Rails.logger.info("Found JSON-LD Recipe: #{recipe['name']}")
+          return normalize_json_ld_recipe(recipe)
+        end
+      rescue JSON::ParserError => e
+        Rails.logger.debug("Failed to parse JSON-LD: #{e.message}")
+        next
+      end
+    end
+
+    nil
+  rescue => e
+    Rails.logger.debug("Error extracting JSON-LD: #{e.message}")
+    nil
+  end
+
+  # Normalize JSON-LD Recipe data to match our internal format
+  def normalize_json_ld_recipe(json_ld_recipe)
+    {
+      'name' => json_ld_recipe['name'],
+      'language' => 'en',
+      'servings_original' => extract_servings(json_ld_recipe['recipeYield']),
+      'prep_minutes' => duration_to_minutes(json_ld_recipe['prepTime']),
+      'cook_minutes' => duration_to_minutes(json_ld_recipe['cookTime']),
+      'total_minutes' => duration_to_minutes(json_ld_recipe['totalTime']),
+      'ingredient_groups' => normalize_ingredients(json_ld_recipe['recipeIngredient']),
+      'steps' => normalize_steps(json_ld_recipe['recipeInstructions']),
+      'equipment' => json_ld_recipe['tool'] || [],
+      'admin_notes' => "Extracted from JSON-LD structured data on #{Time.current.strftime('%B %d, %Y')}. Source: #{json_ld_recipe['url'] || 'Unknown'}"
+    }
+  end
+
+  # Extract servings count from recipeYield (can be string or number)
+  def extract_servings(recipe_yield)
+    return nil unless recipe_yield
+
+    if recipe_yield.is_a?(Array)
+      recipe_yield = recipe_yield.first
+    end
+
+    if recipe_yield.is_a?(String)
+      # Try to extract number from strings like "4 servings" or "Serves 4"
+      recipe_yield.match(/\d+/)&.[](0)&.to_i
+    else
+      recipe_yield.to_i
+    end
+  end
+
+  # Convert ISO 8601 duration to minutes (e.g., PT30M = 30 minutes)
+  def duration_to_minutes(duration)
+    return nil unless duration
+
+    # Parse ISO 8601 format: PT[n]H[n]M[n]S
+    if duration.match?(/^PT/)
+      hours = duration.match(/(\d+)H/)&.[](1)&.to_i || 0
+      minutes = duration.match(/(\d+)M/)&.[](1)&.to_i || 0
+      (hours * 60) + minutes
+    else
+      nil
+    end
+  end
+
+  # Normalize ingredients from JSON-LD format to internal format
+  def normalize_ingredients(recipe_ingredients)
+    return [] unless recipe_ingredients
+
+    # Group ingredients into a single group since JSON-LD doesn't have grouping
+    items = recipe_ingredients.map do |ingredient|
+      {
+        'name' => ingredient,
+        'amount' => nil,
+        'unit' => nil,
+        'preparation' => nil,
+        'optional' => false
+      }
+    end
+
+    [{ 'name' => 'Ingredients', 'items' => items }]
+  end
+
+  # Normalize recipe steps from JSON-LD format to internal format
+  def normalize_steps(recipe_instructions)
+    return [] unless recipe_instructions
+
+    case recipe_instructions
+    when Array
+      # Array of strings or objects
+      recipe_instructions.each_with_index.map do |instruction, idx|
+        {
+          'instructions' => instruction.is_a?(String) ? instruction : instruction['text'],
+          'order' => idx + 1
+        }
+      end
+    when String
+      # Single string
+      [{ 'instructions' => recipe_instructions, 'order' => 1 }]
+    else
+      # Fallback
+      []
+    end
   end
 
 
@@ -350,5 +512,19 @@ class RecipeParserService < AiService
         }
       end
     }
+  end
+
+  # Check if extracted recipe looks complete (not a summary)
+  # JSON-LD often contains simplified versions of recipes with only 5-10 steps
+  # This detects incomplete extractions and triggers fallback to Claude
+  def looks_complete?(recipe_data)
+    steps = recipe_data['steps'] || []
+    ingredients = recipe_data['ingredient_groups']&.sum { |g| g['items']&.length || 0 } || 0
+
+    # Consider complete if:
+    # - Has at least 5 steps (summaries usually have 3-5)
+    # - Has at least 3 ingredients
+    # - Has reasonable timing info
+    steps.length >= 5 && ingredients >= 3
   end
 end

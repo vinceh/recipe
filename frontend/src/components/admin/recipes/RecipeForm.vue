@@ -285,6 +285,11 @@ const isValid = computed(() => {
     validationErrors.value.push('Precision reason is required when precision is enabled')
   }
 
+  // Required: At least one cuisine
+  if (!formData.value.cuisines || formData.value.cuisines.length === 0) {
+    validationErrors.value.push('At least one cuisine is required')
+  }
+
   return validationErrors.value.length === 0
 })
 
@@ -561,6 +566,23 @@ watch(() => uiStore.language, async () => {
         <h2 class="recipe-form__section-title">{{ $t('forms.recipe.sections.classification') }}</h2>
 
         <div class="recipe-form__field">
+          <label for="cuisines" class="recipe-form__label required">
+            {{ $t('forms.recipe.cuisines') }}
+          </label>
+          <MultiSelect
+            id="cuisines"
+            v-model="formData.cuisines"
+            :options="dataStore.cuisines"
+            optionLabel="display_name"
+            optionValue="key"
+            :placeholder="$t('forms.recipe.cuisinesPlaceholder')"
+            class="recipe-form__input"
+            display="chip"
+            filter
+          />
+        </div>
+
+        <div class="recipe-form__field">
           <label for="dietary_tags" class="recipe-form__label">
             {{ $t('forms.recipe.dietaryTags') }}
           </label>
@@ -571,23 +593,6 @@ watch(() => uiStore.language, async () => {
             optionLabel="display_name"
             optionValue="key"
             :placeholder="$t('forms.recipe.dietaryTagsPlaceholder')"
-            class="recipe-form__input"
-            display="chip"
-            filter
-          />
-        </div>
-
-        <div class="recipe-form__field">
-          <label for="cuisines" class="recipe-form__label">
-            {{ $t('forms.recipe.cuisines') }}
-          </label>
-          <MultiSelect
-            id="cuisines"
-            v-model="formData.cuisines"
-            :options="dataStore.cuisines"
-            optionLabel="display_name"
-            optionValue="key"
-            :placeholder="$t('forms.recipe.cuisinesPlaceholder')"
             class="recipe-form__input"
             display="chip"
             filter

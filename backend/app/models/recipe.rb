@@ -62,6 +62,7 @@ class Recipe < ApplicationRecord
   validates :precision_reason, inclusion: { in: %w[baking confectionery fermentation molecular], allow_nil: true }
   validate :at_least_one_ingredient_group
   validate :at_least_one_step
+  validate :at_least_one_cuisine
 
   # Callbacks for auto-triggered translation workflow
   after_commit :enqueue_translation_on_create, on: :create
@@ -188,5 +189,11 @@ class Recipe < ApplicationRecord
     return if recipe_steps.any? { |step| step.persisted? || step._destroy != true }
 
     errors.add(:recipe_steps, 'At least one step is required')
+  end
+
+  def at_least_one_cuisine
+    return if recipe_cuisines.any? { |cuisine| cuisine.persisted? || cuisine._destroy != true }
+
+    errors.add(:cuisines, 'At least one cuisine is required')
   end
 end
