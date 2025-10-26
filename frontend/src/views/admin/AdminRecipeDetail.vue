@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, computed, watch, onBeforeUnmount } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { useUiStore } from '@/stores'
+import { useUiStore, useDataReferenceStore } from '@/stores'
 import PageHeader from '@/components/shared/PageHeader.vue'
 import ErrorMessage from '@/components/shared/ErrorMessage.vue'
 import { adminApi } from '@/services/adminApi'
@@ -11,6 +11,7 @@ import { formatAmount } from '@/utils/ingredientFormatters'
 const route = useRoute()
 const router = useRouter()
 const uiStore = useUiStore()
+const dataStore = useDataReferenceStore()
 
 const recipe = ref<RecipeDetail | null>(null)
 const loading = ref(true)
@@ -33,6 +34,13 @@ async function fetchRecipe() {
     if (response.success && response.data) {
       recipe.value = response.data.recipe
     }
+
+    // Ensure data references are loaded for the current language
+    if (dataStore.dietaryTags.length === 0 ||
+        dataStore.dishTypes.length === 0 ||
+        dataStore.cuisines.length === 0) {
+      await dataStore.fetchAll()
+    }
   } catch (e) {
     if (!isComponentMounted.value) return
     error.value = e instanceof Error ? e : new Error('Failed to fetch recipe')
@@ -42,6 +50,22 @@ async function fetchRecipe() {
     }
   }
 }
+
+// Helper functions to map tag keys to display names
+function getDisplayName(key: string, category: 'dietary_tags' | 'dish_types' | 'cuisines'): string {
+  if (category === 'dietary_tags') {
+    return dataStore.dietaryTags.find(tag => tag.key === key)?.display_name || key
+  } else if (category === 'dish_types') {
+    return dataStore.dishTypes.find(type => type.key === key)?.display_name || key
+  } else if (category === 'cuisines') {
+    return dataStore.cuisines.find(cuisine => cuisine.key === key)?.display_name || key
+  }
+  return key
+}
+
+const getCuisineDisplayName = (key: string) => getDisplayName(key, 'cuisines')
+const getDishTypeDisplayName = (key: string) => getDisplayName(key, 'dish_types')
+const getDietaryTagDisplayName = (key: string) => getDisplayName(key, 'dietary_tags')
 
 function goBack() {
   router.push('/admin/recipes')
@@ -222,7 +246,7 @@ onBeforeUnmount(() => {
                   :key="cuisine"
                   class="tag"
                 >
-                  {{ cuisine }}
+                  {{ getCuisineDisplayName(cuisine) }}
                 </span>
                 <span v-if="!recipe.cuisines || recipe.cuisines.length === 0">-</span>
               </div>
@@ -235,7 +259,7 @@ onBeforeUnmount(() => {
                   :key="type"
                   class="tag"
                 >
-                  {{ type }}
+                  {{ getDishTypeDisplayName(type) }}
                 </span>
                 <span v-if="!recipe.dish_types || recipe.dish_types.length === 0">-</span>
               </div>
@@ -248,7 +272,7 @@ onBeforeUnmount(() => {
                   :key="tag"
                   class="tag"
                 >
-                  {{ tag }}
+                  {{ getDietaryTagDisplayName(tag) }}
                 </span>
                 <span v-if="!recipe.dietary_tags || recipe.dietary_tags.length === 0">-</span>
               </div>
