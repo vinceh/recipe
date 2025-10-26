@@ -98,16 +98,16 @@ function transformFormDataToBackend(data: Partial<RecipeDetail>): any {
       const id = getDataReferenceIdByKey(type, 'recipe_type')
       return id ? { data_reference_id: id } : null
     }).filter(Boolean) || [],
-    ingredient_groups_attributes: data.ingredient_groups?.map((group, groupIdx) => ({
+    ingredient_groups_attributes: data.ingredient_groups?.filter(group => group.name?.trim()).map((group, groupIdx) => ({
       name: group.name,
       position: groupIdx + 1,
-      recipe_ingredients_attributes: group.items?.map((item, idx) => ({
+      recipe_ingredients_attributes: group.items?.filter(item => item.name?.trim()).map((item, itemIdx) => ({
         ingredient_name: item.name,
         amount: item.amount,
         unit: item.unit,
         preparation_notes: item.preparation,
         optional: item.optional,
-        position: idx + 1
+        position: itemIdx + 1
       })) || []
     })) || [],
     recipe_steps_attributes: data.steps?.map(step => ({
