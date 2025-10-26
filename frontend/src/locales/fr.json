@@ -87,12 +87,7 @@
       "totalTimeHint": "Temps total du début à la fin",
       "language": "Langue",
       "languagePlaceholder": "Sélectionnez la langue",
-      "servings": {
-        "original": "Portions par défaut",
-        "min": "Portions minimales",
-        "max": "Portions maximales",
-        "hint": "Spécifiez la plage de portions pour adapter cette recette"
-      },
+      "servings": "Portions",
       "requiresPrecision": "Nécessite des mesures précises",
       "requiresPrecisionHint": "Activez pour des recettes comme la pâtisserie où les mesures exactes sont critiques",
       "precisionReason": "Raison de la nécessité de précision",

@@ -87,12 +87,7 @@
       "totalTimeHint": "Total time from start to finish",
       "language": "Language",
       "languagePlaceholder": "Select language",
-      "servings": {
-        "original": "Default Servings",
-        "min": "Minimum Servings",
-        "max": "Maximum Servings",
-        "hint": "Specify the range of servings this recipe can be scaled to"
-      },
+      "servings": "Servings",
       "requiresPrecision": "Requires precise measurements",
       "requiresPrecisionHint": "Enable for recipes like baking where exact measurements are critical",
       "precisionReason": "Reason for precision requirement",

@@ -87,12 +87,7 @@
       "totalTimeHint": "시작부터 완성까지의 총 시간",
       "language": "언어",
       "languagePlaceholder": "언어 선택",
-      "servings": {
-        "original": "기본 인분",
-        "min": "최소 인분",
-        "max": "최대 인분",
-        "hint": "이 레시피를 조정할 수 있는 인분 범위 지정"
-      },
+      "servings": "인분",
       "requiresPrecision": "정확한 계량 필요",
       "requiresPrecisionHint": "베이킹 등 정확한 계량이 중요한 레시피에 활성화",
       "precisionReason": "정확한 계량이 필요한 이유",

@@ -87,12 +87,7 @@
       "totalTimeHint": "从开始到完成的总时间",
       "language": "语言",
       "languagePlaceholder": "选择语言",
-      "servings": {
-        "original": "默认份数",
-        "min": "最少份数",
-        "max": "最多份数",
-        "hint": "指定此食谱可缩放的份数范围"
-      },
+      "servings": "份数",
       "requiresPrecision": "需要精确计量",
       "requiresPrecisionHint": "在烘焙等需要精确计量的食谱中启用",
       "precisionReason": "需要精确计量的原因",
