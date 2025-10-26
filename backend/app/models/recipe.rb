@@ -53,8 +53,15 @@ class Recipe < ApplicationRecord
     reject_if: proc { |attrs| attrs['alias_name'].blank? }
 
   # Validations
+  validates :name, presence: true
   validates :source_language, presence: true, inclusion: { in: %w[en ja ko zh-tw zh-cn es fr] }
+  validates :servings_original, presence: true, numericality: { only_integer: true, greater_than: 0 }
+  validates :prep_minutes, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :cook_minutes, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :total_minutes, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :precision_reason, inclusion: { in: %w[baking confectionery fermentation molecular], allow_nil: true }
+  validate :at_least_one_ingredient_group
+  validate :at_least_one_step
 
   # Callbacks for auto-triggered translation workflow
   after_commit :enqueue_translation_on_create, on: :create
@@ -168,5 +175,18 @@ class Recipe < ApplicationRecord
 
   def job_queue_available?
     defined?(SolidQueue::Job) && SolidQueue::Job.table_exists?
+  end
+
+  def at_least_one_ingredient_group
+    valid_groups = ingredient_groups.select { |group| group.persisted? || group._destroy != true }
+    return if valid_groups.any? { |group| group.recipe_ingredients.any? { |ing| ing.persisted? || ing._destroy != true } }
+
+    errors.add(:ingredient_groups, 'At least one ingredient is required')
+  end
+
+  def at_least_one_step
+    return if recipe_steps.any? { |step| step.persisted? || step._destroy != true }
+
+    errors.add(:recipe_steps, 'At least one step is required')
   end
 end
