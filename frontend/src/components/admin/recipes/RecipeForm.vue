@@ -1272,6 +1272,13 @@ hr {
   color: white;
 }
 
+/* Ingredient grid responsive at 2200px */
+@media (max-width: 2200px) {
+  .recipe-form__ingredients-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
   .recipe-form__row {
