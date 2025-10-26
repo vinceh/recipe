@@ -732,6 +732,293 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 
 ---
 
+## Admin Recipe New Form
+
+### AC-ADMIN-NEW-FORM-001: User enters recipe name and selects language
+**GIVEN** the user is on the admin recipe creation page
+**WHEN** the user enters "Chocolate Cake" in the recipe name field
+**AND** the user selects "English" from the language dropdown
+**THEN** the recipe name "Chocolate Cake" is entered in the form
+**AND** "English" is selected in the language dropdown
+
+### AC-ADMIN-NEW-FORM-002: User cannot submit form without recipe name
+**GIVEN** the user is on the admin recipe creation page
+**WHEN** the user leaves the recipe name field empty
+**AND** the user attempts to save the recipe
+**THEN** the form is not submitted
+**AND** a validation error "Recipe name is required" appears
+
+### AC-ADMIN-NEW-FORM-003: User enters recipe source URL
+**GIVEN** the user is on the admin recipe creation page
+**WHEN** the user enters "https://example.com/recipe" in the source URL field
+**THEN** "https://example.com/recipe" is displayed in the source URL field
+
+### AC-ADMIN-NEW-FORM-004: User adds recipe aliases
+**GIVEN** the user is on the admin recipe creation page
+**WHEN** the user types "Chocolate Torte" in the aliases field
+**AND** the user presses Enter
+**THEN** "Chocolate Torte" appears as a tag in the aliases section
+**WHEN** the user types "Devil's Food" and presses Enter
+**THEN** both "Chocolate Torte" and "Devil's Food" tags are visible
+**AND** the user can click the × button on "Chocolate Torte" to remove it
+**THEN** only "Devil's Food" remains
+
+### AC-ADMIN-NEW-FORM-005: User marks recipe as requiring precision and selects reason
+**GIVEN** the user is on the admin recipe creation page
+**WHEN** the user checks the "Requires Precision" checkbox
+**THEN** the "Precision Reason" dropdown appears
+**WHEN** the user selects "Baking" from the precision reason dropdown
+**THEN** "Baking" is selected
+
+### AC-ADMIN-NEW-FORM-006: User cannot submit without precision reason when precision is required
+**GIVEN** the user is on the admin recipe creation page
+**AND** the user has checked "Requires Precision"
+**WHEN** the user attempts to save the recipe without selecting a precision reason
+**THEN** the form is not submitted
+**AND** a validation error appears for the precision reason field
+
+### AC-ADMIN-NEW-FORM-007: User selects dietary tags
+**GIVEN** the user is on the admin recipe creation page
+**WHEN** the user clicks on the dietary tags field
+**AND** the user selects "Vegetarian", "Gluten-Free" from the list
+**THEN** both tags appear as chips in the dietary tags field
+
+### AC-ADMIN-NEW-FORM-008: User selects multiple classification tags
+**GIVEN** the user is on the admin recipe creation page
+**WHEN** the user selects "Dessert" from the dish types dropdown
+**AND** the user selects "French" from the cuisines dropdown
+**AND** the user selects "No-Bake" from the recipe types dropdown
+**THEN** all three selections are visible as chips in their respective fields
+
+### AC-ADMIN-NEW-FORM-009: User can remove classification tags
+**GIVEN** the user has selected "Vegetarian" dietary tag
+**WHEN** the user clicks the × button on the "Vegetarian" tag
+**THEN** the tag is removed from the dietary tags field
+
+### AC-ADMIN-NEW-FORM-010: User enters servings information
+**GIVEN** the user is on the admin recipe creation page
+**WHEN** the user enters "4" for original servings
+**AND** the user enters "2" for minimum servings
+**AND** the user enters "8" for maximum servings
+**THEN** original servings shows "4"
+**AND** minimum servings shows "2"
+**AND** maximum servings shows "8"
+
+### AC-ADMIN-NEW-FORM-011: User cannot submit without original servings
+**GIVEN** the user is on the admin recipe creation page
+**WHEN** the user leaves the original servings field empty
+**AND** the user attempts to save the recipe
+**THEN** the form is not submitted
+**AND** a validation error appears for servings
+
+### AC-ADMIN-NEW-FORM-012: User cannot enter invalid servings range
+**GIVEN** the user is on the admin recipe creation page
+**WHEN** the user enters "2" for minimum servings
+**AND** the user enters "1" for maximum servings
+**THEN** a validation error "Minimum servings cannot exceed maximum servings" appears
+**AND** the form cannot be saved
+
+### AC-ADMIN-NEW-FORM-013: User enters cooking timing information
+**GIVEN** the user is on the admin recipe creation page
+**WHEN** the user enters "15" for prep time
+**AND** the user enters "45" for cook time
+**AND** the user enters "60" for total time
+**THEN** prep time shows "15 min"
+**AND** cook time shows "45 min"
+**AND** total time shows "60 min"
+
+### AC-ADMIN-NEW-FORM-014: User can enter zero for timing fields
+**GIVEN** the user is on the admin recipe creation page
+**WHEN** the user enters "0" for prep time
+**THEN** prep time shows "0 min"
+**AND** the form can be saved
+
+### AC-ADMIN-NEW-FORM-015: User adds equipment items
+**GIVEN** the user is on the admin recipe creation page
+**WHEN** the user types "Mixer" in the equipment field
+**AND** the user presses Enter
+**THEN** "Mixer" appears as a tag in the equipment section
+**WHEN** the user adds "Oven", "Baking Pans"
+**THEN** all three equipment tags are visible
+**AND** the user can remove "Mixer" by clicking the × button
+**THEN** only "Oven" and "Baking Pans" remain
+
+### AC-ADMIN-NEW-FORM-016: User cannot submit without ingredients
+**GIVEN** the user is on the admin recipe creation page
+**AND** the form initializes with one empty ingredient group
+**WHEN** the user attempts to save the recipe without adding any ingredients
+**THEN** the form is not submitted
+**AND** a validation error "At least one ingredient is required" appears
+
+### AC-ADMIN-NEW-FORM-017: User adds ingredient to default group
+**GIVEN** the user is on the admin recipe creation page
+**AND** an ingredient group with label "Ingredients" is pre-populated
+**WHEN** the user clicks "Add Ingredient" in that group
+**AND** the user enters "Flour" in the ingredient name
+**AND** the user enters "2" in the amount field
+**AND** the user selects "cups" from the unit dropdown
+**THEN** the ingredient row displays "Flour" | "2" | "cups"
+
+### AC-ADMIN-NEW-FORM-018: User adds ingredient preparation notes
+**GIVEN** the user is on the admin recipe creation page
+**AND** an ingredient "Flour" has been added
+**WHEN** the user enters "sifted" in the preparation notes field
+**THEN** "sifted" appears in the preparation row below the ingredient name
+
+### AC-ADMIN-NEW-FORM-019: User marks ingredient as optional
+**GIVEN** the user is on the admin recipe creation page
+**AND** an ingredient "Vanilla Extract" has been added
+**WHEN** the user checks the optional checkbox for that ingredient
+**THEN** the ingredient is marked as optional
+
+### AC-ADMIN-NEW-FORM-020: User creates multiple ingredient groups
+**GIVEN** the user is on the admin recipe creation page
+**WHEN** the user clicks "Add Group" in the ingredients section
+**THEN** a second ingredient group with label "Group 2" appears
+**WHEN** the user enters "Filling" as the group name
+**THEN** the group is renamed to "Filling"
+**WHEN** the user adds ingredient "Chocolate" to the "Filling" group
+**AND** the user adds ingredient "Butter" to the "Ingredients" group
+**THEN** both ingredients appear in their respective groups
+
+### AC-ADMIN-NEW-FORM-021: User cannot remove all ingredient groups
+**GIVEN** the user is on the admin recipe creation page
+**AND** only one ingredient group exists
+**THEN** the delete button for that group is disabled
+
+### AC-ADMIN-NEW-FORM-022: User removes an ingredient group with ingredients
+**GIVEN** the user has created two ingredient groups
+**AND** the first group "Dough" contains three ingredients
+**WHEN** the user clicks the delete button for the "Dough" group
+**THEN** the group and all its ingredients are removed
+**AND** only the "Glaze" group remains
+
+### AC-ADMIN-NEW-FORM-023: User cannot have empty ingredient group name
+**GIVEN** the user is on the admin recipe creation page
+**AND** an ingredient group is displayed
+**WHEN** the user clears the group name field
+**AND** the user attempts to save the recipe
+**THEN** the form is not submitted
+**AND** a validation error "Group name is required" appears
+
+### AC-ADMIN-NEW-FORM-024: User cannot submit without steps
+**GIVEN** the user is on the admin recipe creation page
+**AND** the form initializes with one empty step
+**WHEN** the user attempts to save the recipe without entering any steps
+**THEN** the form is not submitted
+**AND** a validation error "At least one step is required" appears
+
+### AC-ADMIN-NEW-FORM-025: User enters recipe steps
+**GIVEN** the user is on the admin recipe creation page
+**AND** "Step 1" is displayed with an empty instruction field
+**WHEN** the user enters "Preheat oven to 350°F" in the step 1 instruction field
+**THEN** the instruction text is entered and displayed
+**WHEN** the user clicks "Add Step"
+**THEN** "Step 2" appears below "Step 1"
+**WHEN** the user enters "Mix dry ingredients in a large bowl"
+**THEN** step 2 contains the instruction
+
+### AC-ADMIN-NEW-FORM-026: User reorders steps
+**GIVEN** the user has entered three recipe steps
+**AND** step 1 is "Preheat oven"
+**AND** step 2 is "Mix ingredients"
+**AND** step 3 is "Bake for 30 minutes"
+**WHEN** the user clicks the down arrow on step 1
+**THEN** step 2 "Mix ingredients" moves to position 1
+**AND** step 1 "Preheat oven" moves to position 2
+**AND** step 3 remains in position 3
+**AND** the step numbers are recalculated
+
+### AC-ADMIN-NEW-FORM-027: Step reordering buttons are correctly disabled
+**GIVEN** the user has entered three recipe steps
+**THEN** the up arrow button for step 1 is disabled
+**AND** the down arrow button for step 3 is disabled
+**AND** the up/down arrows for step 2 are enabled
+**WHEN** the user clicks the down arrow on step 1
+**THEN** the up arrow for step 2 (formerly step 1) becomes enabled
+
+### AC-ADMIN-NEW-FORM-028: User removes a step
+**GIVEN** the user has entered three recipe steps
+**WHEN** the user clicks the delete button on step 2
+**THEN** step 2 is removed
+**AND** the former step 3 becomes the new step 2
+**AND** step numbering is sequential
+
+### AC-ADMIN-NEW-FORM-029: User enters admin notes
+**GIVEN** the user is on the admin recipe creation page
+**WHEN** the user enters "Recipe source is reliable, can be marked as verified" in the admin notes field
+**THEN** the text appears in the admin notes textarea
+
+### AC-ADMIN-NEW-FORM-030: User successfully submits recipe with all required fields
+**GIVEN** the user is on the admin recipe creation page
+**AND** the user has entered the recipe name "Chocolate Cake"
+**AND** the user has selected language "English"
+**AND** the user has entered servings "4"
+**AND** the user has added ingredient "Flour" with amount "2" and unit "cups"
+**AND** the user has entered step 1 instruction "Mix ingredients"
+**WHEN** the user clicks the Save button
+**THEN** the recipe is created in the system
+**AND** the user is redirected to the recipe detail page
+**AND** the recipe name "Chocolate Cake" is displayed
+
+### AC-ADMIN-NEW-FORM-031: Save button is disabled when form has validation errors
+**GIVEN** the user is on the admin recipe creation page
+**AND** the recipe name field is empty
+**WHEN** the user hovers over the Save button
+**THEN** the Save button is disabled
+**AND** a tooltip showing the first validation error appears
+
+### AC-ADMIN-NEW-FORM-032: Save button shows loading state during submission
+**GIVEN** the user has filled all required fields
+**AND** the user is ready to submit
+**WHEN** the user clicks the Save button
+**THEN** the button shows a loading indicator
+**AND** the button is disabled
+**AND** the form fields remain visible but uneditable
+
+### AC-ADMIN-NEW-FORM-033: User cancels recipe creation
+**GIVEN** the user is on the admin recipe creation page
+**AND** the user has entered some recipe data
+**WHEN** the user clicks the Cancel button
+**THEN** the user is redirected to the admin recipes list
+**AND** the recipe creation is cancelled
+**AND** no recipe is created in the system
+
+### AC-ADMIN-NEW-FORM-034: Preview updates in real-time as user enters data
+**GIVEN** the user is on the admin recipe creation page
+**AND** the preview panel is visible on the right side
+**WHEN** the user enters recipe name "Pasta Carbonara"
+**THEN** the preview panel displays "Pasta Carbonara" as the recipe title
+**WHEN** the user adds "Spaghetti" as the first ingredient
+**THEN** the preview shows "Spaghetti" in the ingredients list
+**WHEN** the user enters step 1 "Cook pasta in salted water"
+**THEN** the preview shows "Cook pasta in salted water" in the steps section
+
+### AC-ADMIN-NEW-FORM-035: Preview reflects all recipe classifications
+**GIVEN** the user is on the admin recipe creation page
+**AND** the preview panel is visible
+**WHEN** the user selects dietary tags "Vegetarian"
+**AND** the user selects cuisine "Italian"
+**AND** the user selects dish type "Pasta"
+**THEN** the preview displays all three classifications
+
+### AC-ADMIN-NEW-FORM-036: Preview displays cooking times
+**GIVEN** the user is on the admin recipe creation page
+**AND** the preview panel is visible
+**WHEN** the user enters prep time "10" minutes
+**AND** the user enters cook time "20" minutes
+**THEN** the preview displays "Prep: 10 min" and "Cook: 20 min"
+
+### AC-ADMIN-NEW-FORM-037: Preview shows serving information
+**GIVEN** the user is on the admin recipe creation page
+**AND** the preview panel is visible
+**WHEN** the user enters original servings "6"
+**AND** the user enters minimum servings "4"
+**AND** the user enters maximum servings "8"
+**THEN** the preview displays "Servings: 6" with the range "4-8"
+
+---
+
 ## Admin Recipe Management
 
 ### AC-ADMIN-001: Manual Recipe Creation - Full Form
