@@ -673,7 +673,7 @@ onMounted(async () => {
 
         <div class="recipe-form__row">
           <div class="recipe-form__field recipe-form__field--narrow">
-            <label for="timing_prep_minutes" class="recipe-form__label">
+            <label for="timing_prep_minutes" class="recipe-form__label required">
               {{ $t('forms.recipe.prepTime') }}
             </label>
             <InputNumber
@@ -689,7 +689,7 @@ onMounted(async () => {
           </div>
 
           <div class="recipe-form__field recipe-form__field--narrow">
-            <label for="timing_cook_minutes" class="recipe-form__label">
+            <label for="timing_cook_minutes" class="recipe-form__label required">
               {{ $t('forms.recipe.cookTime') }}
             </label>
             <InputNumber
@@ -705,7 +705,7 @@ onMounted(async () => {
           </div>
 
           <div class="recipe-form__field recipe-form__field--narrow">
-            <label for="timing_total_minutes" class="recipe-form__label">
+            <label for="timing_total_minutes" class="recipe-form__label required">
               {{ $t('forms.recipe.totalTime') }}
             </label>
             <InputNumber
