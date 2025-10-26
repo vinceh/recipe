@@ -966,19 +966,6 @@ onMounted(async () => {
           <small class="recipe-form__help-text">{{ $t('forms.recipe.adminNotesHint') }}</small>
         </div>
       </section>
-
-      <!-- Form Actions -->
-      <div class="recipe-form__actions">
-        <Button
-          type="submit"
-          :label="$t('common.buttons.save')"
-          severity="success"
-          :loading="loading"
-          :disabled="!isValid"
-          :title="!isValid ? validationErrors[0] : ''"
-          class="recipe-form__save-button"
-        />
-      </div>
     </form>
   </div>
 </template>
@@ -998,16 +985,6 @@ onMounted(async () => {
 .recipe-form {
   background: var(--color-surface);
   border-radius: var(--border-radius-lg);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.recipe-form form {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
 }
 
 .recipe-form__validation-errors {
@@ -1301,23 +1278,6 @@ hr {
 
 .recipe-form__step-instruction {
   width: 100%;
-}
-
-/* Actions */
-.recipe-form__actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: var(--spacing-md);
-  padding: var(--spacing-xl);
-  border-top: 1px solid var(--color-border);
-  background: var(--color-surface);
-  flex-shrink: 0;
-  width: 100%;
-}
-
-.recipe-form__save-button {
-  width: 100%;
-  min-height: 44px;
 }
 
 /* Mobile responsive */

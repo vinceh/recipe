@@ -215,15 +215,24 @@ function handleSwitchToText(url: string) {
 
     <!-- Split Panel Layout -->
     <div class="split-panel-container">
-      <div class="form-panel">
-        <RecipeForm
-          v-model="formData"
-          :loading="saving"
-          @save="handleSaveRecipe"
-          @cancel="handleCancelRecipe"
-          @import-text="openImportDialog"
-          @import-url="openUrlImportDialog"
-        />
+      <div class="form-column">
+        <div class="form-panel">
+          <RecipeForm
+            v-model="formData"
+            @import-text="openImportDialog"
+            @import-url="openUrlImportDialog"
+          />
+        </div>
+        <div class="form-actions">
+          <Button
+            type="button"
+            :label="$t('common.buttons.save')"
+            severity="success"
+            :loading="saving"
+            @click="handleSaveRecipe"
+            class="form-actions__button"
+          />
+        </div>
       </div>
 
       <div class="preview-panel">
@@ -293,12 +302,34 @@ function handleSwitchToText(url: string) {
   overflow: hidden;
 }
 
+.form-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
 .form-panel {
   background: white;
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-xl);
   overflow-y: auto;
   border: 1px solid var(--color-border);
+  flex: 1;
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background: white;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.form-actions__button {
+  width: 100%;
+  min-height: 44px;
 }
 
 .preview-panel {
@@ -343,6 +374,10 @@ function handleSwitchToText(url: string) {
   .split-panel-container {
     grid-template-columns: 1fr;
     overflow: visible;
+  }
+
+  .form-column {
+    gap: var(--spacing-md);
   }
 
   .form-panel,
