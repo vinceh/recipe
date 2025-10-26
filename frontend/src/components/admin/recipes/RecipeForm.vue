@@ -616,7 +616,7 @@ onMounted(async () => {
         <h2 class="recipe-form__section-title">{{ $t('forms.recipe.sections.servings') }} & {{ $t('forms.recipe.sections.timing') }}</h2>
 
         <div class="recipe-form__row">
-          <div class="recipe-form__field recipe-form__field--narrow">
+          <div class="recipe-form__field recipe-form__field--one-third">
             <label for="servings_original" class="recipe-form__label required">
               {{ $t('forms.recipe.servings.label') }}
             </label>
@@ -1073,6 +1073,10 @@ hr {
 
 .recipe-form__field--medium {
   max-width: 350px;
+}
+
+.recipe-form__field--one-third {
+  max-width: 280px;
 }
 
 .recipe-form__label {
