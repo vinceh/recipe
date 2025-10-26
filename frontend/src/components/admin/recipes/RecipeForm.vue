@@ -215,20 +215,7 @@ const isValid = computed(() => {
   if (!formData.value.servings ||
       formData.value.servings.original == null ||
       formData.value.servings.original <= 0) {
-    validationErrors.value.push('Original servings must be greater than 0')
-  }
-
-  if (formData.value.servings?.min != null && formData.value.servings.min <= 0) {
-    validationErrors.value.push('Minimum servings must be greater than 0')
-  }
-
-  if (formData.value.servings?.max != null && formData.value.servings.max <= 0) {
-    validationErrors.value.push('Maximum servings must be greater than 0')
-  }
-
-  if (formData.value.servings?.min != null && formData.value.servings?.max != null &&
-      formData.value.servings.min > formData.value.servings.max) {
-    validationErrors.value.push('Minimum servings cannot exceed maximum servings')
+    validationErrors.value.push('Servings must be greater than 0')
   }
 
   // Required: At least one ingredient group with name and items
@@ -631,7 +618,7 @@ onMounted(async () => {
         <div class="recipe-form__row">
           <div class="recipe-form__field recipe-form__field--narrow">
             <label for="servings_original" class="recipe-form__label required">
-              {{ $t('forms.recipe.servings.original') }}
+              {{ $t('forms.recipe.servings') }}
             </label>
             <InputNumber
               id="servings_original"
@@ -642,32 +629,6 @@ onMounted(async () => {
               required
             />
             <small class="recipe-form__help-text">{{ $t('forms.recipe.servings.hint') }}</small>
-          </div>
-
-          <div class="recipe-form__field recipe-form__field--narrow">
-            <label for="servings_min" class="recipe-form__label">
-              {{ $t('forms.recipe.servings.min') }}
-            </label>
-            <InputNumber
-              id="servings_min"
-              v-model="formData.servings!.min"
-              :min="1"
-              :max="100"
-              class="recipe-form__input"
-            />
-          </div>
-
-          <div class="recipe-form__field recipe-form__field--narrow">
-            <label for="servings_max" class="recipe-form__label">
-              {{ $t('forms.recipe.servings.max') }}
-            </label>
-            <InputNumber
-              id="servings_max"
-              v-model="formData.servings!.max"
-              :min="1"
-              :max="100"
-              class="recipe-form__input"
-            />
           </div>
         </div>
 
