@@ -87,7 +87,10 @@
       "totalTimeHint": "開始から完成までの合計時間",
       "language": "言語",
       "languagePlaceholder": "言語を選択",
-      "servings": "人数",
+      "servings": {
+        "label": "人数",
+        "hint": "このレシピが作る人数"
+      },
       "requiresPrecision": "正確な計量が必要",
       "requiresPrecisionHint": "ベーキングなど正確な計量が重要なレシピで有効にします",
       "precisionReason": "正確な計量が必要な理由",

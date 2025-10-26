@@ -618,7 +618,7 @@ onMounted(async () => {
         <div class="recipe-form__row">
           <div class="recipe-form__field recipe-form__field--narrow">
             <label for="servings_original" class="recipe-form__label required">
-              {{ $t('forms.recipe.servings') }}
+              {{ $t('forms.recipe.servings.label') }}
             </label>
             <InputNumber
               id="servings_original"

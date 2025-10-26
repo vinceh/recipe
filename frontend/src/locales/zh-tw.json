@@ -87,7 +87,10 @@
       "totalTimeHint": "從開始到完成的總時間",
       "language": "語言",
       "languagePlaceholder": "選擇語言",
-      "servings": "份數",
+      "servings": {
+        "label": "份數",
+        "hint": "此食譜製作的份數"
+      },
       "requiresPrecision": "需要精確計量",
       "requiresPrecisionHint": "在烘焙等需要精確計量的食譜中啟用",
       "precisionReason": "需要精確計量的原因",
