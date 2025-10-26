@@ -124,47 +124,9 @@ class RecipeParserService < AiService
   end
 
   # Extract pure text from HTML, removing all markup and noise
-  # Removes ~90% of tokens compared to raw HTML while preserving recipe content
+  # Removes ~97% of tokens compared to raw HTML while preserving recipe content
   def clean_html(raw_html)
-    doc = Nokogiri::HTML(raw_html) { |config| config.noblanks }
-
-    # Remove noise elements: scripts, styles, ads, navigation, comments, etc.
-    doc.css('script, style, nav, header, footer, aside, iframe,
-             noscript, meta, link, svg,
-             .ad, .advertisement, .ads, .social-share, .comments,
-             .newsletter, .popup, .modal, .sidebar, .widget,
-             [class*="nav"], [class*="menu"], [class*="related"],
-             [class*="widget"], [class*="banner"], [class*="ad"]').remove
-
-    # Find main content area - try common recipe containers first
-    content = doc.at_css('article,
-                          [role="main"],
-                          .recipe,
-                          [itemtype*="Recipe"],
-                          .post-content,
-                          .entry-content,
-                          main')
-
-    # Fallback to body if nothing specific found
-    content ||= doc.at_css('body')
-
-    return '' unless content
-
-    # Add newlines after block-level elements to preserve structure
-    content.css('p, div, li, h1, h2, h3, h4, h5, h6, br, tr, td,
-                 article, section, header, footer').each do |elem|
-      elem.add_next_sibling(Nokogiri::XML::Text.new("\n", doc))
-    end
-
-    # Extract pure text and normalize whitespace
-    text = content.text
-      .gsub(/[ \t]+/, ' ')           # Multiple spaces/tabs to single space
-      .gsub(/\n[ \t]+/, "\n")        # Remove leading spaces after newlines
-      .gsub(/\n{3,}/, "\n\n")        # Max 2 consecutive newlines
-      .strip
-
-    # Limit content size
-    text.length > 50_000 ? text[0...50_000] : text
+    HtmlToTextConverter.new(raw_html).convert
   rescue => e
     Rails.logger.error("Failed to clean HTML: #{e.message}")
     raise "Could not clean HTML: #{e.message}"
