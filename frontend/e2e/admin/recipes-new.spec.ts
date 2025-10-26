@@ -6,25 +6,15 @@ const ADMIN_PASSWORD = '123456'
 
 test.describe('Admin Recipe New Form - AC-ADMIN-NEW-FORM Tests', () => {
   test.beforeEach(async ({ page }) => {
-    // Set reasonable timeouts
-    page.setDefaultTimeout(25000)
-    page.setDefaultNavigationTimeout(20000)
-
     // Login as admin first
     await page.goto('/admin/login')
+    await page.waitForLoadState('domcontentloaded')
     await loginAsAdmin(page, ADMIN_EMAIL, ADMIN_PASSWORD)
-
-    // Wait for redirect after login
-    await page.waitForURL(/.*\/admin.*/, { timeout: 8000 })
+    await page.waitForURL(/.*\/admin.*/)
 
     // Navigate to recipe creation form
     await page.goto('/admin/recipes/new')
-
-    // Wait for the form to render - check for critical element
-    await page.locator('#name').waitFor({ state: 'attached', timeout: 10000 })
-
-    // Give it a moment to fully render and become interactive
-    await page.waitForLoadState('networkidle')
+    await page.waitForLoadState('domcontentloaded')
   })
 
   // AC-ADMIN-NEW-FORM-001: User enters recipe name and selects language
