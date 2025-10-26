@@ -14,7 +14,11 @@ test.describe('Admin Recipe New Form - AC-ADMIN-NEW-FORM Tests', () => {
 
     // Navigate to recipe creation form
     await page.goto('/admin/recipes/new')
-    await page.waitForLoadState('domcontentloaded')
+    // Wait for the Vue component to fully initialize
+    // The #name input is a good indicator that RecipeForm has mounted and initialized
+    await page.locator('#name').waitFor({ state: 'visible', timeout: 10000 })
+    // Also ensure the input is enabled (no loading state)
+    await page.locator('#name').isEnabled()
   })
 
   // AC-ADMIN-NEW-FORM-001: User enters recipe name and selects language
