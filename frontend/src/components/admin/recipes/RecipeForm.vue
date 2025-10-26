@@ -998,6 +998,16 @@ onMounted(async () => {
 .recipe-form {
   background: var(--color-surface);
   border-radius: var(--border-radius-lg);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.recipe-form form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
 .recipe-form__validation-errors {
@@ -1299,16 +1309,15 @@ hr {
   justify-content: flex-end;
   gap: var(--spacing-md);
   padding: var(--spacing-xl);
-  margin-top: var(--spacing-lg);
   border-top: 1px solid var(--color-border);
-  background: white;
-  position: sticky;
-  bottom: 0;
-  z-index: 10;
+  background: var(--color-surface);
+  flex-shrink: 0;
+  width: 100%;
 }
 
 .recipe-form__save-button {
-  min-width: 120px;
+  width: 100%;
+  min-height: 44px;
 }
 
 /* Mobile responsive */
