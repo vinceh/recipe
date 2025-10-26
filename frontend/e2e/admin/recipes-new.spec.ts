@@ -35,6 +35,10 @@ test.describe('Admin Recipe New Form - AC-ADMIN-NEW-FORM Tests', () => {
 
     // Small delay to ensure Vue reactivity is complete
     await page.waitForTimeout(500)
+
+    // FIX #3: Wait for async data loading (dataStore.fetchAll) to complete
+    // This ensures dropdown options (dietary tags, dish types, etc.) are populated
+    await page.waitForTimeout(1500)
   })
 
   // AC-ADMIN-NEW-FORM-001: User enters recipe name and selects language
