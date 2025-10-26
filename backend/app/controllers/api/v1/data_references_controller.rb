@@ -5,10 +5,10 @@ module Api
       # Get all reference data (dietary tags, dish types, cuisines, etc.)
       def index
         data = {
-          dietary_tags: DataReference.dietary_tags.active.map { |ref| { id: ref.id, key: ref.key, display_name: ref.display_name } },
-          dish_types: DataReference.dish_types.active.map { |ref| { id: ref.id, key: ref.key, display_name: ref.display_name } },
-          recipe_types: DataReference.recipe_types.active.map { |ref| { id: ref.id, key: ref.key, display_name: ref.display_name } },
-          cuisines: DataReference.cuisines.active.map { |ref| { id: ref.id, key: ref.key, display_name: ref.display_name } }
+          dietary_tags: DataReference.dietary_tags.active.map { |ref| { id: ref.id, key: ref.key, display_name: I18n.t("data_references.dietary_tags.#{ref.key}", default: ref.key) } },
+          dish_types: DataReference.dish_types.active.map { |ref| { id: ref.id, key: ref.key, display_name: I18n.t("data_references.dish_types.#{ref.key}", default: ref.key) } },
+          recipe_types: DataReference.recipe_types.active.map { |ref| { id: ref.id, key: ref.key, display_name: I18n.t("data_references.recipe_types.#{ref.key}", default: ref.key) } },
+          cuisines: DataReference.cuisines.active.map { |ref| { id: ref.id, key: ref.key, display_name: I18n.t("data_references.cuisines.#{ref.key}", default: ref.key) } }
         }
 
         # Filter by category if requested
