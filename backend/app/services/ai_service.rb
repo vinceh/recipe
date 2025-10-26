@@ -4,7 +4,7 @@ class AiService
     @last_call_time = nil
   end
 
-  def call_claude(system_prompt:, user_prompt:, max_tokens: 2048, enable_websearch: false)
+  def call_claude(system_prompt:, user_prompt:, max_tokens: 2048, enable_web_search: false)
     # Rate limiting: ensure 1 second between calls
     enforce_rate_limit!
 
@@ -25,8 +25,15 @@ class AiService
         ]
       }
 
-      # Enable web search if requested
-      params[:betas] = ['interop-2024-12-19'] if enable_websearch
+      if enable_web_search
+        params[:tools] = [
+          {
+            type: 'web_search_20250305',
+            name: 'web_search',
+            max_uses: 1
+          }
+        ]
+      end
 
       response = @client.messages(parameters: params)
 
@@ -38,7 +45,22 @@ class AiService
         success: true
       )
 
-      response.dig('content', 0, 'text')
+      # Extract text from response
+      # With web search, Claude may use tools, so we need to find the text content
+      text_content = nil
+      if response.dig('content').is_a?(Array)
+        response['content'].each do |item|
+          if item['type'] == 'text'
+            text_content = item['text']
+            break
+          end
+        end
+      else
+        # Fallback for old response format
+        text_content = response.dig('content', 0, 'text')
+      end
+
+      text_content
 
     rescue Anthropic::Error => e
       retries += 1

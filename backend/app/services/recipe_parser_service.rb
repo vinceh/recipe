@@ -1,5 +1,8 @@
 # Recipe Parser Service - AI-based recipe extraction from text, URL, and images
 require 'base64'
+require 'net/http'
+require 'uri'
+require 'openssl'
 
 class RecipeParserService < AiService
   # Parse a large text block containing a recipe
@@ -20,35 +23,41 @@ class RecipeParserService < AiService
   end
 
   # Parse a recipe from a URL
-  # Uses Claude's native web search capability to access and parse URLs
+  # Fetches HTML content and sends to Claude for parsing
   # Returns structured recipe JSON with source_url
   def parse_url(url)
-    # Validate URL format
     validate_url(url)
 
     Rails.logger.info("Attempting to parse recipe from URL: #{url}")
 
+    # Fetch HTML content from the URL
+    html_content = fetch_url_content(url)
+
+    # Get prompts from database
     system_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_url_system')
     user_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_url_user')
 
-    rendered_user_prompt = user_prompt.render(url: url)
+    # Send HTML content to Claude for parsing
+    rendered_user_prompt = user_prompt.render(url: url, html_content: html_content)
 
-    Rails.logger.info("Using Claude web search to access URL: #{url}")
     response = call_claude(
       system_prompt: system_prompt.prompt_text,
       user_prompt: rendered_user_prompt,
       max_tokens: 4096,
-      enable_websearch: true
+      enable_web_search: false
     )
 
     result = parse_response(response)
     if result.is_a?(Hash)
-      Rails.logger.info("Successfully parsed URL using Claude web search")
+      Rails.logger.info("Successfully parsed URL content")
       result['source_url'] = url
       return result
     end
 
     raise "Failed to parse recipe from URL"
+  rescue StandardError => e
+    Rails.logger.error("URL parse failed: #{e.message}")
+    raise
   end
 
   # Parse a recipe from an image using Claude Vision API
@@ -84,12 +93,48 @@ class RecipeParserService < AiService
     end
   end
 
+  # Fetch HTML content from a URL
+  def fetch_url_content(url)
+    uri = URI.parse(url)
+
+    html = Net::HTTP.start(
+      uri.host,
+      uri.port,
+      use_ssl: uri.scheme == 'https',
+      verify_mode: OpenSSL::SSL::VERIFY_NONE,
+      read_timeout: 10
+    ) do |http|
+      request = Net::HTTP::Get.new(uri.request_uri)
+      request['User-Agent'] = 'Mozilla/5.0 (compatible; RecipeParser/1.0)'
+
+      response = http.request(request)
+      raise "Failed to fetch URL: HTTP #{response.code}" unless response.is_a?(Net::HTTPSuccess)
+
+      response.body
+    end
+
+    # Remove script and style tags to reduce size
+    html = html.gsub(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/im, '')
+    html = html.gsub(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/im, '')
+
+    # Limit to first 100KB to avoid API request size limits
+    html = html[0...(100 * 1024)] if html.length > 100_000
+
+    html
+  rescue => e
+    Rails.logger.error("Failed to fetch URL content: #{e.message}")
+    raise "Could not fetch content from URL: #{e.message}"
+  end
+
 
   # Parse Claude's response and extract JSON
   def parse_response(response)
     # Extract JSON from response (Claude may wrap it in markdown or text)
     json_match = response.match(/```json\s*(.*?)\s*```/m) || response.match(/\{.*\}/m)
-    return nil unless json_match
+    unless json_match
+      Rails.logger.error("Could not extract JSON from response: #{response[0..500]}")
+      return nil
+    end
 
     json_string = json_match[1] || json_match[0]
     recipe_data = JSON.parse(json_string)
@@ -97,10 +142,13 @@ class RecipeParserService < AiService
     # Validate required fields
     validate_recipe_structure(recipe_data)
 
-    # Transform to normalized attributes format for nested record creation
-    transform_to_normalized_attributes(recipe_data)
+    # Transform to frontend format for use in form
+    transform_for_frontend(recipe_data)
   rescue JSON::ParserError => e
     Rails.logger.error("Recipe parsing failed: #{e.message}")
+    nil
+  rescue StandardError => e
+    Rails.logger.error("Recipe processing failed: #{e.class} - #{e.message}")
     nil
   end
 
@@ -204,10 +252,52 @@ class RecipeParserService < AiService
     end
 
     recipe_data['steps'].each do |step|
-      unless step['instructions'].is_a?(Hash)
-        raise "Each step must have 'instructions' hash"
+      unless step['instructions'].present?
+        raise "Each step must have 'instructions'"
       end
     end
+  end
+
+  # Transform parsed recipe data to frontend format for form display
+  def transform_for_frontend(recipe_data)
+    valid_dietary_tags = DataReference.where(reference_type: 'dietary_tag').pluck(:key).to_set
+    valid_cuisines = DataReference.where(reference_type: 'cuisine').pluck(:key).to_set
+    valid_dish_types = DataReference.where(reference_type: 'dish_type').pluck(:key).to_set
+    valid_recipe_types = DataReference.where(reference_type: 'recipe_type').pluck(:key).to_set
+
+    {
+      name: recipe_data['name'],
+      language: recipe_data['language'] || 'en',
+      source_url: recipe_data['source_url'],
+      requires_precision: recipe_data['requires_precision'] || false,
+      precision_reason: recipe_data['precision_reason'],
+      servings: {
+        original: recipe_data['servings_original'],
+        min: recipe_data['servings_min'],
+        max: recipe_data['servings_max']
+      },
+      timing: {
+        prep_minutes: recipe_data['prep_minutes'],
+        cook_minutes: recipe_data['cook_minutes'],
+        total_minutes: recipe_data['total_minutes']
+      },
+      aliases: recipe_data['aliases'] || [],
+      dietary_tags: (recipe_data['dietary_tags'] || []).select { |tag| valid_dietary_tags.include?(tag) },
+      cuisines: (recipe_data['cuisines'] || []).select { |tag| valid_cuisines.include?(tag) },
+      dish_types: (recipe_data['dish_types'] || []).select { |tag| valid_dish_types.include?(tag) },
+      recipe_types: (recipe_data['recipe_types'] || []).select { |tag| valid_recipe_types.include?(tag) },
+      ingredient_groups: recipe_data['ingredient_groups'] || [],
+      steps: (recipe_data['steps'] || []).each_with_index.map do |step, idx|
+        {
+          order: idx + 1,
+          instruction: step['instructions'].is_a?(String) ? step['instructions'] :
+                       step['instructions'].is_a?(Hash) ? (step.dig('instructions', 'original') || step.dig('instructions', 'en') || step['instructions'].values.first) :
+                       step['instruction']
+        }
+      end,
+      equipment: recipe_data['equipment'] || [],
+      admin_notes: recipe_data['admin_notes']
+    }
   end
 
   # Transform parsed JSONB-like structure to normalized attributes format
@@ -241,9 +331,18 @@ class RecipeParserService < AiService
         }
       end,
       recipe_steps_attributes: recipe_data['steps'].each_with_index.map do |step, idx|
+        # Handle different instruction formats from Claude
+        instruction = if step['instructions'].is_a?(String)
+                        step['instructions']
+                      elsif step['instructions'].is_a?(Hash)
+                        step.dig('instructions', 'original') || step.dig('instructions', 'en') || step['instructions'].values.first
+                      else
+                        step['instruction'] # fallback to singular
+                      end
+
         {
           step_number: idx + 1,
-          instruction_original: step.dig('instructions', 'original') || step.dig('instructions', 'en')
+          instruction_original: instruction
         }
       end
     }
