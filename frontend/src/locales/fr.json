@@ -236,7 +236,8 @@
           "aliases": "Alias",
           "sourceUrl": "URL source",
           "requiresPrecision": "Nécessite de la précision",
-          "adminNotes": "Notes administrateur"
+          "adminNotes": "Notes administrateur",
+          "recipeTypes": "Types de Recette"
         },
         "actions": {
           "regenerateTranslations": "Régénérer les traductions"

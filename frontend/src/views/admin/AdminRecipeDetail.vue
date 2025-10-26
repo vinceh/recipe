@@ -270,6 +270,9 @@ onBeforeUnmount(() => {
                 <span v-if="!recipe.dish_types || recipe.dish_types.length === 0">-</span>
               </div>
             </div>
+          </div>
+
+          <div class="info-grid">
             <div class="info-item">
               <label>{{ $t('admin.recipes.detail.fields.dietaryTags') }}</label>
               <div class="tags">
@@ -300,22 +303,6 @@ onBeforeUnmount(() => {
 
           <div class="info-grid">
             <div class="info-item">
-              <label>{{ $t('admin.recipes.detail.fields.aliases') }}</label>
-              <div class="tags">
-                <span
-                  v-for="alias in recipe?.aliases"
-                  :key="alias"
-                  class="tag"
-                >
-                  {{ alias }}
-                </span>
-                <span v-if="!recipe?.aliases || recipe.aliases.length === 0">-</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="info-grid">
-            <div class="info-item">
               <label>{{ $t('admin.recipes.detail.fields.sourceUrl') }}</label>
               <p v-if="recipe?.source_url">
                 <a :href="recipe.source_url" target="_blank" rel="noopener noreferrer">
@@ -327,6 +314,22 @@ onBeforeUnmount(() => {
             <div class="info-item">
               <label>{{ $t('admin.recipes.detail.fields.requiresPrecision') }}</label>
               <p>{{ recipe?.requires_precision ? $t('common.labels.yes') : $t('common.labels.no') }}</p>
+            </div>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-item">
+              <label>{{ $t('admin.recipes.detail.fields.aliases') }}</label>
+              <div class="tags">
+                <span
+                  v-for="alias in recipe?.aliases"
+                  :key="alias"
+                  class="tag"
+                >
+                  {{ alias }}
+                </span>
+                <span v-if="!recipe?.aliases || recipe.aliases.length === 0">-</span>
+              </div>
             </div>
           </div>
 

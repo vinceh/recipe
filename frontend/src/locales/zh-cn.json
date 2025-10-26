@@ -236,7 +236,8 @@
           "aliases": "别名",
           "sourceUrl": "来源网址",
           "requiresPrecision": "需要精确度",
-          "adminNotes": "管理员备注"
+          "adminNotes": "管理员备注",
+          "recipeTypes": "食谱类型"
         },
         "actions": {
           "regenerateTranslations": "重新生成翻译"

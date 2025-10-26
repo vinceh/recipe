@@ -236,7 +236,8 @@
           "aliases": "別名",
           "sourceUrl": "ソースURL",
           "requiresPrecision": "精度が必要",
-          "adminNotes": "管理者メモ"
+          "adminNotes": "管理者メモ",
+          "recipeTypes": "レシピタイプ"
         },
         "actions": {
           "regenerateTranslations": "翻訳を再生成"

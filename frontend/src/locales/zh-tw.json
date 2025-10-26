@@ -236,7 +236,8 @@
           "aliases": "別名",
           "sourceUrl": "來源網址",
           "requiresPrecision": "需要精確度",
-          "adminNotes": "管理員備註"
+          "adminNotes": "管理員備註",
+          "recipeTypes": "食譜類型"
         },
         "actions": {
           "regenerateTranslations": "重新生成翻譯"

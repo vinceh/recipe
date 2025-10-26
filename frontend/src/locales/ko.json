@@ -236,7 +236,8 @@
           "aliases": "별칭",
           "sourceUrl": "출처 URL",
           "requiresPrecision": "정밀도 필요",
-          "adminNotes": "관리자 메모"
+          "adminNotes": "관리자 메모",
+          "recipeTypes": "레시피 타입"
         },
         "actions": {
           "regenerateTranslations": "번역 재생성"
