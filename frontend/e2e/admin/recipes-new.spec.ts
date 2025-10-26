@@ -26,8 +26,11 @@ test.describe('Admin Recipe New Form - AC-ADMIN-NEW-FORM Tests', () => {
     // Navigate to recipe creation form
     await page.goto('/admin/recipes/new', { waitUntil: 'load' })
 
-    // Just wait a bit more for Vue to initialize
-    await page.waitForTimeout(2000)
+    // Wait for networkidle to ensure all async operations (like dataStore.fetchAll) are complete
+    await page.waitForLoadState('networkidle')
+
+    // Wait for the Save button to be visible - indicates form initialization is complete
+    await page.locator('button:has-text("Save")').first().waitFor({ state: 'visible', timeout: 10000 })
   })
 
   // AC-ADMIN-NEW-FORM-001: User enters recipe name and selects language
