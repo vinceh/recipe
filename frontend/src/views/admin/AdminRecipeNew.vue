@@ -67,7 +67,8 @@ function transformFormDataToBackend(data: Partial<RecipeDetail>): any {
     cook_minutes: data.timing?.cook_minutes,
     total_minutes: data.timing?.total_minutes,
     recipe_aliases_attributes: data.aliases?.map(alias => ({
-      alias_name: alias
+      alias_name: alias,
+      language: data.language || 'en'
     })) || [],
     recipe_dietary_tags_attributes: data.dietary_tags?.map(tag => ({
       data_reference_id: tag
