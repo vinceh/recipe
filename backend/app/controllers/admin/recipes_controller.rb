@@ -368,6 +368,7 @@ module Admin
         dish_types: recipe.dish_types.map(&:display_name),
         recipe_types: recipe.recipe_types.map(&:display_name),
         cuisines: recipe.cuisines.map(&:display_name),
+        aliases: recipe.recipe_aliases.map(&:alias_name),
         source_url: recipe.source_url,
         admin_notes: recipe.admin_notes,
         requires_precision: recipe.requires_precision,

@@ -11,6 +11,6 @@ class IngredientGroup < ApplicationRecord
 
   validates :name, presence: true
   validates :position, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
-  validates :recipe_id, presence: true
+  validates :recipe, presence: true
   validates :position, uniqueness: { scope: :recipe_id }
 end

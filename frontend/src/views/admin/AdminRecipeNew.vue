@@ -129,6 +129,7 @@ async function handleSaveRecipe() {
   try {
     const backendData = transformFormDataToBackend(formData.value)
     const response = await adminApi.createRecipe(backendData)
+
     if (response.success && response.data) {
       router.push(`/admin/recipes/${response.data.recipe.id}`)
     } else {

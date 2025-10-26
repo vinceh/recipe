@@ -134,113 +134,37 @@
 
   // 8. Check requires precision
   const precisionButton = Array.from(document.querySelectorAll('button')).find(b => b.textContent.includes('Requires precise measurements') || b.textContent.includes('requires precise'));
-  console.log("🔍 Looking for precision button...");
-  console.log("All buttons on page:", Array.from(document.querySelectorAll('button')).map(b => b.textContent.trim()).slice(0, 20));
 
   if (precisionButton) {
-    console.log("Found precision button:", precisionButton);
-    console.log("Button HTML before click:", precisionButton.outerHTML.substring(0, 200));
     precisionButton.click();
-    console.log("✅ Clicked requires precision button");
     await sleep(200);
-
-    const checkbox = precisionButton.querySelector('input[type="checkbox"]');
-    console.log("Checkbox found:", checkbox);
-    console.log("Checkbox checked status:", checkbox?.checked);
-    console.log("Button HTML after click:", precisionButton.outerHTML.substring(0, 200));
 
     // Select precision reason - wait for field to render
     await sleep(500);
 
     const allLabels = Array.from(document.querySelectorAll('label'));
-    console.log("Total labels on page:", allLabels.length);
-    console.log("All labels:", allLabels.map(l => l.textContent.trim()).filter(t => t.length > 0));
-
-    // Try different ways to find the reason label
     let reasonLabel = allLabels.find(l => l.textContent.trim().toLowerCase().includes('reason'));
-    console.log("Label with 'reason':", reasonLabel?.textContent.trim());
 
     if (!reasonLabel) {
       reasonLabel = allLabels.find(l => l.textContent.trim().toLowerCase().includes('precision'));
-      console.log("Label with 'precision':", reasonLabel?.textContent.trim());
     }
 
     if (reasonLabel) {
       const fieldParent = reasonLabel.closest('.recipe-form__field');
-      console.log("Field parent found:", !!fieldParent);
-      console.log("Field parent HTML:", fieldParent?.outerHTML.substring(0, 300));
 
       if (fieldParent) {
-        console.log("Looking for select dropdown...");
-        const selectComponent = findPrimeVueComponent(fieldParent, 'select');
-        console.log("Select component found:", !!selectComponent);
-
         await clickDropdown(fieldParent, 'select', 200);
-        await sleep(200);
+        await sleep(400);
 
-        const allOptions = Array.from(document.querySelectorAll('[role="option"]'));
-        console.log("All available options:", allOptions.map(o => o.textContent.trim()));
-
-        // Try to directly update Vue data - find the root RecipeForm component
-        console.log("\n🔎 Looking for RecipeForm component instance...");
-        let recipeFormComponent = null;
-        let current = fieldParent;
-        let level = 0;
-
-        // Walk up the tree to find RecipeForm or other components
-        while (current && level < 15) {
-          if (current.__vueParentComponent) {
-            const vueInstance = current.__vueParentComponent.proxy;
-            const componentName = vueInstance?.$options?.name || 'unknown';
-
-            console.log(`Level ${level}: Found component "${componentName}"`);
-
-            // Check if this component has the exposed setPrecisionReason method
-            if (typeof vueInstance?.setPrecisionReason === 'function') {
-              console.log(`  ✓ This component has setPrecisionReason method!`);
-              recipeFormComponent = vueInstance;
-              break;
-            }
-
-            // Fallback: Check if this component has formData
-            if (vueInstance && (vueInstance.formData || vueInstance.formData?.value)) {
-              console.log(`  ✓ This component has formData!`);
-              recipeFormComponent = vueInstance;
-              break;
-            }
-
-            // Also try checking $data
-            if (vueInstance && vueInstance.$data) {
-              const dataKeys = Object.keys(vueInstance.$data);
-              if (dataKeys.includes('formData')) {
-                console.log(`  ✓ This component has formData in $data!`);
-                recipeFormComponent = vueInstance;
-                break;
-              }
-            }
-          }
-
-          current = current.parentElement;
-          level++;
-        }
-
-        // Use the exposed component method instead of DOM manipulation
-        if (recipeFormComponent && typeof recipeFormComponent.setPrecisionReason === 'function') {
-          try {
-            recipeFormComponent.setPrecisionReason('baking');
-            console.log("✅ Set precision reason using component method: baking");
-            await sleep(300);
-          } catch (e) {
-            console.log("⚠️  Error calling setPrecisionReason:", e.message);
-          }
+        // Use the existing selectOptionFromDropdown function which works for other dropdowns
+        // Try to select "Baking" which is the first option
+        const selected = await selectOptionFromDropdown('Baking', 300);
+        if (selected) {
+          console.log("✅ Set precision reason");
         } else {
-          console.log("⚠️  setPrecisionReason method not available on component");
+          console.log("⚠️  Could not select precision reason");
         }
-      } else {
-        console.log("⚠️  Could not find precision reason field parent");
       }
-    } else {
-      console.log("⚠️  Could not find any precision reason label");
     }
   } else {
     console.log("⚠️  Could not find requires precision button");
@@ -284,22 +208,9 @@
   if (recipeTypeLabel) {
     const fieldParent = recipeTypeLabel.closest('.recipe-form__field');
     if (fieldParent) {
-      console.log("📋 Found Recipe Types field, opening dropdown...");
       await clickDropdown(fieldParent, 'multiselect', 200);
-      const allOptions = Array.from(document.querySelectorAll('[role="option"]'));
-      console.log(`Found ${allOptions.length} options in dropdown`);
-      allOptions.slice(0, 10).forEach(opt => console.log(`  - ${opt.textContent.trim()}`));
-      const selected = await selectOptionFromDropdown('Baking', 150);
-      if (selected) {
-        console.log("✅ Added recipe type: Baking");
-      } else {
-        console.log("⚠️  Could not find 'Baking' option");
-      }
-    } else {
-      console.log("⚠️  Could not find Recipe Types field parent");
+      await selectOptionFromDropdown('Baking', 150);
     }
-  } else {
-    console.log("⚠️  Could not find Recipe Types label");
   }
 
   document.body.click();
@@ -380,30 +291,55 @@
       if (i > 0) {
         const addIngBtn = Array.from(groupContainer.querySelectorAll('button')).find(b => b.textContent.includes('Add Ingredient'));
         if (addIngBtn) {
+          console.log(`  Adding ingredient ${i + 1}...`);
           addIngBtn.click();
-          await sleep(300);
+          await sleep(500); // Increased wait time for form to initialize
         }
       }
 
-      // Now find and fill the i-th ingredient inputs
-      const nameInputs = groupContainer.querySelectorAll('input[placeholder*="ingredient" i], input[id*="ingredient-name"]');
-      const amountInputs = groupContainer.querySelectorAll('input[placeholder*="amount" i], input[id*="ingredient-amount"]');
-      const unitInputs = groupContainer.querySelectorAll('input[placeholder*="unit" i], input[id*="ingredient-unit"]');
-      const prepInputs = groupContainer.querySelectorAll('input[placeholder*="notes" i], input[id*="ingredient-notes"]');
+      // Find ALL ingredient name inputs in this group (exclude group-name inputs!)
+      let allIngInputs = Array.from(groupContainer.querySelectorAll('input[placeholder*="ingredient" i], input[id*="ingredient-name"]')).filter(inp => !inp.id.includes('group-name'));
 
-      const nameInput = nameInputs[i];
-      if (nameInput) {
-        setPrimeVueInputValue(nameInput, ing.name);
+      if (allIngInputs.length <= i) {
+        console.log(`  ⚠️  Ingredient ${i} not found. Found ${allIngInputs.length} total ingredients.`);
+        continue;
       }
 
-      const amountInput = amountInputs[i];
-      if (amountInput) setPrimeVueInputValue(amountInput, ing.amount);
+      const nameInput = allIngInputs[i];
 
-      const unitInput = unitInputs[i];
-      if (unitInput) setPrimeVueInputValue(unitInput, ing.unit);
+      // Find the closest parent container that holds this ingredient's inputs
+      let ingredientContainer = nameInput.parentElement;
+      let depth = 0;
+      while (ingredientContainer && depth < 10) {
+        const hasAmount = ingredientContainer.querySelector('input[placeholder*="amount" i], input[id*="ingredient-amount"]');
+        const hasUnit = ingredientContainer.querySelector('input[placeholder*="unit" i], input[id*="ingredient-unit"]');
+        if (hasAmount && hasUnit) {
+          break;
+        }
+        ingredientContainer = ingredientContainer.parentElement;
+        depth++;
+      }
 
-      const prepInput = prepInputs[i];
-      if (prepInput) setPrimeVueInputValue(prepInput, ing.prep);
+      // Get all inputs from this container
+      const amountInput = ingredientContainer?.querySelector('input[placeholder*="amount" i], input[id*="ingredient-amount"]');
+      const unitInput = ingredientContainer?.querySelector('input[placeholder*="unit" i], input[id*="ingredient-unit"]');
+      const prepInput = ingredientContainer?.querySelector('input[placeholder*="notes" i], input[id*="ingredient-notes"]');
+
+      // Fill the inputs
+      setPrimeVueInputValue(nameInput, ing.name);
+      console.log(`    ✓ ${ing.name}`);
+
+      if (amountInput) {
+        setPrimeVueInputValue(amountInput, ing.amount);
+      }
+      if (unitInput) {
+        setPrimeVueInputValue(unitInput, ing.unit);
+      }
+      if (prepInput) {
+        setPrimeVueInputValue(prepInput, ing.prep);
+      }
+
+      await sleep(100);
     }
     return true;
   }
