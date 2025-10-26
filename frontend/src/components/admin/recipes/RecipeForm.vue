@@ -1076,7 +1076,7 @@ hr {
 }
 
 .recipe-form__field--one-third {
-  max-width: 280px;
+  max-width: calc(33.333% - var(--spacing-md) / 3);
 }
 
 .recipe-form__label {
