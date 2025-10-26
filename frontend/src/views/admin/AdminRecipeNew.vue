@@ -78,22 +78,26 @@ function transformFormDataToBackend(data: Partial<RecipeDetail>): any {
     prep_minutes: data.timing?.prep_minutes,
     cook_minutes: data.timing?.cook_minutes,
     total_minutes: data.timing?.total_minutes,
-    recipe_aliases_attributes: data.aliases?.map(alias => ({
+    recipe_aliases_attributes: data.aliases?.filter(alias => alias && alias.trim()).map(alias => ({
       alias_name: alias,
       language: data.language || 'en'
     })) || [],
-    recipe_dietary_tags_attributes: data.dietary_tags?.map(tag => ({
-      data_reference_id: getDataReferenceIdByKey(tag, 'dietary_tag')
-    })) || [],
-    recipe_dish_types_attributes: data.dish_types?.map(type => ({
-      data_reference_id: getDataReferenceIdByKey(type, 'dish_type')
-    })) || [],
-    recipe_cuisines_attributes: data.cuisines?.map(cuisine => ({
-      data_reference_id: getDataReferenceIdByKey(cuisine, 'cuisine')
-    })) || [],
-    recipe_recipe_types_attributes: data.recipe_types?.map(type => ({
-      data_reference_id: getDataReferenceIdByKey(type, 'recipe_type')
-    })) || [],
+    recipe_dietary_tags_attributes: data.dietary_tags?.filter(tag => tag).map(tag => {
+      const id = getDataReferenceIdByKey(tag, 'dietary_tag')
+      return id ? { data_reference_id: id } : null
+    }).filter(Boolean) || [],
+    recipe_dish_types_attributes: data.dish_types?.filter(type => type).map(type => {
+      const id = getDataReferenceIdByKey(type, 'dish_type')
+      return id ? { data_reference_id: id } : null
+    }).filter(Boolean) || [],
+    recipe_cuisines_attributes: data.cuisines?.filter(cuisine => cuisine).map(cuisine => {
+      const id = getDataReferenceIdByKey(cuisine, 'cuisine')
+      return id ? { data_reference_id: id } : null
+    }).filter(Boolean) || [],
+    recipe_recipe_types_attributes: data.recipe_types?.filter(type => type).map(type => {
+      const id = getDataReferenceIdByKey(type, 'recipe_type')
+      return id ? { data_reference_id: id } : null
+    }).filter(Boolean) || [],
     ingredient_groups_attributes: data.ingredient_groups?.map(group => ({
       name: group.name,
       recipe_ingredients_attributes: group.items?.map((item, idx) => ({
