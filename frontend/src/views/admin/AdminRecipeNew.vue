@@ -2,6 +2,7 @@
 import { ref, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import { useDataReferenceStore } from '@/stores/dataReferenceStore'
 import PageHeader from '@/components/shared/PageHeader.vue'
 import ErrorMessage from '@/components/shared/ErrorMessage.vue'
 import RecipeForm from '@/components/admin/recipes/RecipeForm.vue'
@@ -14,8 +15,19 @@ import type { RecipeDetail } from '@/services/types'
 
 const router = useRouter()
 const { t, locale } = useI18n()
+const dataStore = useDataReferenceStore()
 
 const formData = ref<Partial<RecipeDetail>>({})
+
+function getDataReferenceIdByKey(key: string, referenceType: 'dietary_tag' | 'cuisine' | 'dish_type' | 'recipe_type'): string | undefined {
+  const refMap: Record<string, any[]> = {
+    'dietary_tag': dataStore.dietaryTags,
+    'cuisine': dataStore.cuisines,
+    'dish_type': dataStore.dishTypes,
+    'recipe_type': dataStore.recipeTypes
+  }
+  return refMap[referenceType]?.find(ref => ref.key === key)?.id
+}
 
 function transformParsedRecipe(recipe: any): Partial<RecipeDetail> {
   // Transform ingredient items to match new API structure
@@ -71,16 +83,16 @@ function transformFormDataToBackend(data: Partial<RecipeDetail>): any {
       language: data.language || 'en'
     })) || [],
     recipe_dietary_tags_attributes: data.dietary_tags?.map(tag => ({
-      data_reference_id: tag
+      data_reference_id: getDataReferenceIdByKey(tag, 'dietary_tag')
     })) || [],
     recipe_dish_types_attributes: data.dish_types?.map(type => ({
-      data_reference_id: type
+      data_reference_id: getDataReferenceIdByKey(type, 'dish_type')
     })) || [],
     recipe_cuisines_attributes: data.cuisines?.map(cuisine => ({
-      data_reference_id: cuisine
+      data_reference_id: getDataReferenceIdByKey(cuisine, 'cuisine')
     })) || [],
     recipe_recipe_types_attributes: data.recipe_types?.map(type => ({
-      data_reference_id: type
+      data_reference_id: getDataReferenceIdByKey(type, 'recipe_type')
     })) || [],
     ingredient_groups_attributes: data.ingredient_groups?.map(group => ({
       name: group.name,
