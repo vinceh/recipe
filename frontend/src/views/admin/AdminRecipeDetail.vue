@@ -27,19 +27,17 @@ async function fetchRecipe() {
   error.value = null
 
   try {
-    const response = await adminApi.getRecipe(recipeId.value, uiStore.language)
+    // Always fetch data references first to ensure tags can be properly displayed
+    // Use Promise.all to fetch in parallel for better performance
+    const [recipeResponse] = await Promise.all([
+      adminApi.getRecipe(recipeId.value, uiStore.language),
+      dataStore.fetchAll()
+    ])
 
     if (!isComponentMounted.value) return
 
-    if (response.success && response.data) {
-      recipe.value = response.data.recipe
-    }
-
-    // Ensure data references are loaded for the current language
-    if (dataStore.dietaryTags.length === 0 ||
-        dataStore.dishTypes.length === 0 ||
-        dataStore.cuisines.length === 0) {
-      await dataStore.fetchAll()
+    if (recipeResponse.success && recipeResponse.data) {
+      recipe.value = recipeResponse.data.recipe
     }
   } catch (e) {
     if (!isComponentMounted.value) return
@@ -127,10 +125,10 @@ watch(() => uiStore.language, () => {
   }
 
   languageChangeTimeout = setTimeout(async () => {
-    // Clear old data references and fetch new ones in the new language
+    // Clear old data references to force fresh fetch in the new language
+    // fetchRecipe() will fetch both recipe and data references in parallel
     dataStore.clearAll()
     await fetchRecipe()
-    await dataStore.fetchAll()
   }, 300)
 })
 
