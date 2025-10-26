@@ -147,6 +147,13 @@ export const useDataReferenceStore = defineStore('dataReference', () => {
     ])
   }
 
+  function clearAll() {
+    dietaryTags.value = []
+    dishTypes.value = []
+    cuisines.value = []
+    recipeTypes.value = []
+  }
+
   function clearError() {
     error.value = null
   }
@@ -176,6 +183,7 @@ export const useDataReferenceStore = defineStore('dataReference', () => {
     fetchCuisines,
     fetchRecipeTypes,
     fetchAll,
+    clearAll,
     clearError
   }
 })

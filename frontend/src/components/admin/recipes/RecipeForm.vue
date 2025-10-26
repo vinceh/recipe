@@ -400,6 +400,7 @@ onMounted(async () => {
 
 // Watch for language changes and reload data references
 watch(() => uiStore.language, async () => {
+  dataStore.clearAll()
   await dataStore.fetchAll()
 })
 </script>

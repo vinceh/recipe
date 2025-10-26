@@ -124,7 +124,8 @@ watch(() => uiStore.language, () => {
   }
 
   languageChangeTimeout = setTimeout(async () => {
-    // Fetch both recipe and data references in the new language
+    // Clear old data references and fetch new ones in the new language
+    dataStore.clearAll()
     await fetchRecipe()
     await dataStore.fetchAll()
   }, 300)
