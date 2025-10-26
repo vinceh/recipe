@@ -783,8 +783,8 @@ onMounted(async () => {
             :label="$t('forms.recipe.removeGroup')"
             severity="danger"
             size="small"
-            outlined
             @click="removeIngredientGroup(groupIndex)"
+            class="recipe-form__remove-group-btn"
           />
         </div>
 
@@ -876,6 +876,7 @@ onMounted(async () => {
               </label>
 
               <Button
+                v-if="group.items?.length > 1"
                 type="button"
                 icon="pi pi-trash"
                 severity="danger"
@@ -939,6 +940,7 @@ onMounted(async () => {
                 @click="moveStepDown(index)"
               />
               <Button
+                v-if="formData.steps?.length > 1"
                 type="button"
                 icon="pi pi-trash"
                 severity="danger"
@@ -1299,6 +1301,10 @@ hr {
 
 .recipe-form__step-instruction {
   width: 100%;
+}
+
+.recipe-form__remove-group-btn :deep(.p-button-label) {
+  color: white;
 }
 
 /* Mobile responsive */
