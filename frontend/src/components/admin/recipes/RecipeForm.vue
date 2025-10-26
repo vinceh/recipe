@@ -350,6 +350,15 @@ watch(formData, (newValue) => {
 }, { deep: true, flush: 'post' })
 
 // Methods
+function validateForm(): boolean {
+  if (!isValid.value) {
+    showValidationErrors.value = true
+    return false
+  }
+  showValidationErrors.value = false
+  return true
+}
+
 function handleSave() {
   if (!isValid.value) {
     showValidationErrors.value = true
@@ -363,6 +372,12 @@ function handleSave() {
 function handleCancel() {
   emit('cancel')
 }
+
+// Expose validation for parent component
+defineExpose({
+  validateForm,
+  isValid
+})
 
 // Lifecycle
 onMounted(async () => {

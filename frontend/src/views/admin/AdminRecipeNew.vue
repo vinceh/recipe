@@ -50,8 +50,14 @@ const urlImportDialogVisible = ref(false)
 const successMessage = ref('')
 const textImportDialogRef = ref<InstanceType<typeof TextImportDialog> | null>(null)
 const urlImportDialogRef = ref<InstanceType<typeof UrlImportDialog> | null>(null)
+const recipeFormRef = ref<InstanceType<typeof RecipeForm> | null>(null)
 
 async function handleSaveRecipe() {
+  // Validate form before attempting to save
+  if (!recipeFormRef.value?.validateForm()) {
+    return
+  }
+
   saving.value = true
   error.value = null
 
@@ -218,6 +224,7 @@ function handleSwitchToText(url: string) {
       <div class="form-column">
         <div class="form-panel">
           <RecipeForm
+            ref="recipeFormRef"
             v-model="formData"
             @import-text="openImportDialog"
             @import-url="openUrlImportDialog"
@@ -229,6 +236,7 @@ function handleSwitchToText(url: string) {
             :label="$t('common.buttons.save')"
             severity="success"
             :loading="saving"
+            :disabled="saving || !(recipeFormRef?.isValid)"
             @click="handleSaveRecipe"
             class="form-actions__button"
           />
