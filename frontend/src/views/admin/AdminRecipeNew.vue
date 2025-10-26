@@ -52,6 +52,53 @@ const textImportDialogRef = ref<InstanceType<typeof TextImportDialog> | null>(nu
 const urlImportDialogRef = ref<InstanceType<typeof UrlImportDialog> | null>(null)
 const recipeFormRef = ref<InstanceType<typeof RecipeForm> | null>(null)
 
+function transformFormDataToBackend(data: Partial<RecipeDetail>): any {
+  return {
+    name: data.name,
+    source_language: data.language,
+    source_url: data.source_url,
+    requires_precision: data.requires_precision,
+    precision_reason: data.precision_reason,
+    admin_notes: data.admin_notes,
+    servings_original: data.servings?.original,
+    servings_min: data.servings?.min,
+    servings_max: data.servings?.max,
+    prep_minutes: data.timing?.prep_minutes,
+    cook_minutes: data.timing?.cook_minutes,
+    total_minutes: data.timing?.total_minutes,
+    recipe_aliases_attributes: data.aliases?.map(alias => ({
+      alias_name: alias
+    })) || [],
+    recipe_dietary_tags_attributes: data.dietary_tags?.map(tag => ({
+      data_reference_id: tag
+    })) || [],
+    recipe_dish_types_attributes: data.dish_types?.map(type => ({
+      data_reference_id: type
+    })) || [],
+    recipe_cuisines_attributes: data.cuisines?.map(cuisine => ({
+      data_reference_id: cuisine
+    })) || [],
+    recipe_recipe_types_attributes: data.recipe_types?.map(type => ({
+      data_reference_id: type
+    })) || [],
+    ingredient_groups_attributes: data.ingredient_groups?.map(group => ({
+      name: group.name,
+      recipe_ingredients_attributes: group.items?.map((item, idx) => ({
+        ingredient_name: item.name,
+        amount: item.amount,
+        unit: item.unit,
+        preparation_notes: item.preparation,
+        optional: item.optional,
+        position: idx + 1
+      })) || []
+    })) || [],
+    recipe_steps_attributes: data.steps?.map(step => ({
+      step_number: step.order,
+      instruction_original: step.instruction
+    })) || []
+  }
+}
+
 async function handleSaveRecipe() {
   // Validate form before attempting to save
   if (!recipeFormRef.value?.validateForm()) {
@@ -62,7 +109,8 @@ async function handleSaveRecipe() {
   error.value = null
 
   try {
-    const response = await adminApi.createRecipe(formData.value as any)
+    const backendData = transformFormDataToBackend(formData.value)
+    const response = await adminApi.createRecipe(backendData)
     if (response.success && response.data) {
       router.push(`/admin/recipes/${response.data.recipe.id}`)
     } else {
