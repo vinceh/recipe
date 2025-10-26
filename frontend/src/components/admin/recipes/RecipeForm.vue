@@ -970,19 +970,13 @@ onMounted(async () => {
       <!-- Form Actions -->
       <div class="recipe-form__actions">
         <Button
-          type="button"
-          :label="$t('common.buttons.cancel')"
-          severity="secondary"
-          outlined
-          @click="handleCancel"
-        />
-        <Button
           type="submit"
           :label="$t('common.buttons.save')"
           severity="success"
           :loading="loading"
           :disabled="!isValid"
           :title="!isValid ? validationErrors[0] : ''"
+          class="recipe-form__save-button"
         />
       </div>
     </form>
@@ -1304,7 +1298,17 @@ hr {
   display: flex;
   justify-content: flex-end;
   gap: var(--spacing-md);
-  padding-top: var(--spacing-xl);
+  padding: var(--spacing-xl);
+  margin-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+  background: white;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+}
+
+.recipe-form__save-button {
+  min-width: 120px;
 }
 
 /* Mobile responsive */
