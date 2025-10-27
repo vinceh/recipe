@@ -87,7 +87,7 @@ const error = ref<string | null>(null);
 const searchQuery = ref("");
 
 function getTimeLabel(key: string): string {
-  return t(`recipe.table.${key}`);
+  return t(`admin.recipes.table.${key}`);
 }
 
 async function loadRecipes() {
