@@ -231,6 +231,28 @@
   }
 }
 
+/* ==================== LANGUAGE-SPECIFIC FONTS ==================== */
+
+/* Japanese - Noto Serif JP */
+:root[lang="ja"] {
+  --font-family-heading: 'Noto Serif JP', serif;
+}
+
+/* Korean - Noto Serif KR */
+:root[lang="ko"] {
+  --font-family-heading: 'Noto Serif KR', serif;
+}
+
+/* Traditional Chinese - Noto Serif TC */
+:root[lang="zh-tw"] {
+  --font-family-heading: 'Noto Serif TC', serif;
+}
+
+/* Simplified Chinese - Noto Serif SC */
+:root[lang="zh-cn"] {
+  --font-family-heading: 'Noto Serif SC', serif;
+}
+
 /* Manual dark mode toggle (when user explicitly chooses dark mode) */
 [data-theme="dark"] {
   /* Same overrides as prefers-color-scheme: dark */
