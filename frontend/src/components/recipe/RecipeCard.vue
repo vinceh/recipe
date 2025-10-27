@@ -99,7 +99,7 @@ function getPreviewText(): string {
 .recipe-card__meta {
   display: flex;
   gap: 6px;
-  font-size: 11px;
+  font-size: 13px;
   color: #383630;
   margin: 0;
   font-family: var(--font-family-base);
@@ -111,8 +111,8 @@ function getPreviewText(): string {
 }
 
 .recipe-card__meta-item:not(:last-child)::after {
-  content: ' · ';
-  margin-left: 6px;
+  content: '  ·  ';
+  margin-left: 0;
 }
 
 .recipe-card__description {

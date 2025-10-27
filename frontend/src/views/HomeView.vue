@@ -365,7 +365,7 @@ onMounted(() => {
 .recipe-item__meta {
   display: flex;
   gap: 6px;
-  font-size: 11px;
+  font-size: 13px;
   color: var(--color-provisions-border);
   margin: 3px 0 10px 0;
   font-family: var(--font-family-base);
@@ -373,8 +373,8 @@ onMounted(() => {
 }
 
 .recipe-item__meta span:not(:last-child)::after {
-  content: " · ";
-  margin-left: 6px;
+  content: "  ·  ";
+  margin-left: 0;
 }
 
 .recipe-item__description {
