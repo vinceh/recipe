@@ -414,6 +414,13 @@ puts "   ✅ Created #{AiPrompt.where(feature_area: 'translation').count} transl
 puts "\n🍽️  Seeding recipes..."
 load Rails.root.join('db/seeds/recipes.rb')
 
+# =============================================================================
+# DATA REFERENCE TRANSLATIONS
+# =============================================================================
+puts "\n🌐 Seeding data reference translations..."
+load Rails.root.join('db/seeds/02_data_reference_translations_data.rb')
+apply_data_reference_translations
+
 puts "\n" + "="*60
 puts "✨ Database seeding complete!"
 puts "="*60
