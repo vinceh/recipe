@@ -233,24 +233,35 @@
 
 /* ==================== LANGUAGE-SPECIFIC FONTS ==================== */
 
-/* Japanese - Noto Serif JP */
+/* Japanese - Noto Serif JP & Noto Sans JP */
 :root[lang="ja"] {
   --font-family-heading: 'Noto Serif JP', serif;
+  --font-family-base: 'Noto Sans JP', sans-serif;
 }
 
-/* Korean - Noto Serif KR */
+/* Korean - Noto Serif KR & Noto Sans KR */
 :root[lang="ko"] {
   --font-family-heading: 'Noto Serif KR', serif;
+  --font-family-base: 'Noto Sans KR', sans-serif;
 }
 
-/* Traditional Chinese - Noto Serif TC */
+/* Traditional Chinese - Noto Serif TC & Noto Sans TC */
 :root[lang="zh-tw"] {
   --font-family-heading: 'Noto Serif TC', serif;
+  --font-family-base: 'Noto Sans TC', sans-serif;
 }
 
-/* Simplified Chinese - Noto Serif SC */
+/* Simplified Chinese - Noto Serif SC & Noto Sans SC */
 :root[lang="zh-cn"] {
   --font-family-heading: 'Noto Serif SC', serif;
+  --font-family-base: 'Noto Sans SC', sans-serif;
+}
+
+/* Spanish, French - same as English (Garamond + Gill) */
+:root[lang="es"],
+:root[lang="fr"] {
+  --font-family-heading: 'Cormorant Garamond', serif;
+  --font-family-base: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
 
 /* Manual dark mode toggle (when user explicitly chooses dark mode) */
