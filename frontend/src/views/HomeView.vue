@@ -113,13 +113,14 @@ function handleSearch() {
 }
 
 function formatTime(minutes: number): string {
+  const minLabel = t('recipe.table.minutes');
+  const hourLabel = t('recipe.table.hours');
+
   if (minutes < 60) {
-    return `${minutes}${t('recipe.table.minutes')}`;
+    return `${minutes}${minLabel}`;
   }
   const hours = Math.floor(minutes / 60);
   const mins = minutes % 60;
-  const minLabel = t('recipe.table.minutes');
-  const hourLabel = t('recipe.table.hours');
   return mins > 0 ? `${hours}${hourLabel} ${mins}${minLabel}` : `${hours}${hourLabel}`;
 }
 
