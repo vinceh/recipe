@@ -216,7 +216,8 @@
         "dishTypes": "料理タイプ",
         "servings": "人数",
         "timing": "時間",
-        "minutes": "分"
+        "minutes": "分",
+        "hours": "時間"
       },
       "pagination": {
         "page": "ページ",

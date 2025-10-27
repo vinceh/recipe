@@ -216,7 +216,8 @@
         "dishTypes": "菜式類型",
         "servings": "份數",
         "timing": "時間",
-        "minutes": "分鐘"
+        "minutes": "分鐘",
+        "hours": "小時"
       },
       "pagination": {
         "page": "頁面",

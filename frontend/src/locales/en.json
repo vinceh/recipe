@@ -216,7 +216,8 @@
         "dishTypes": "Dish Types",
         "servings": "Servings",
         "timing": "Time",
-        "minutes": "min"
+        "minutes": "min",
+        "hours": "h"
       },
       "pagination": {
         "page": "Page",

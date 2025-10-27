@@ -216,7 +216,8 @@
         "dishTypes": "Types de plat",
         "servings": "Portions",
         "timing": "Temps",
-        "minutes": "min"
+        "minutes": "min",
+        "hours": "h"
       },
       "pagination": {
         "page": "Page",

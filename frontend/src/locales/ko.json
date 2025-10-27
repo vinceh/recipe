@@ -216,7 +216,8 @@
         "dishTypes": "음식 유형",
         "servings": "인분",
         "timing": "시간",
-        "minutes": "분"
+        "minutes": "분",
+        "hours": "시간"
       },
       "pagination": {
         "page": "페이지",
