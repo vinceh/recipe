@@ -32,7 +32,7 @@
         <LoadingSpinner v-if="loading" :center="true" />
         <ErrorMessage v-else-if="error" :message="error" severity="error" />
         <div v-else class="featured-section">
-          <h2 class="featured-section__title">Recipes</h2>
+          <h2 class="featured-section__title">{{ $t('navigation.recipes') }}</h2>
 
           <div class="recipe-grid">
             <div
