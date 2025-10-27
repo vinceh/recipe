@@ -48,7 +48,7 @@ function formatTime(minutes: number): string {
 }
 
 function getPreviewText(): string {
-  return props.recipe.description || ''
+  return props.recipe.description
 }
 </script>
 

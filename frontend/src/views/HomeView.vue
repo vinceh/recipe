@@ -121,7 +121,7 @@ function formatTime(minutes: number): string {
 }
 
 function getPreviewText(recipe: Recipe): string {
-  return recipe.description || "";
+  return recipe.description;
 }
 
 onMounted(() => {
