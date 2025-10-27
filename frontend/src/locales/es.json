@@ -34,7 +34,8 @@
       "updatedAt": "Fecha de actualización",
       "actions": "Acciones",
       "yes": "Sí",
-      "no": "No"
+      "no": "No",
+      "servings": "Porciones"
     },
     "messages": {
       "success": "Operación completada exitosamente",
@@ -170,6 +171,12 @@
       "passwordsDontMatch": "Las contraseñas no coinciden",
       "invalidFormat": "Formato no válido"
     }
+  },
+  "home": {
+    "subtitle": "Explora nuestra colección de recetas",
+    "searchPlaceholder": "Buscar recetas...",
+    "noRecipes": "No se encontraron recetas",
+    "noRecipesDescription": "Ajusta tu búsqueda o explora todas las recetas"
   },
   "recipe": {
     "view": {

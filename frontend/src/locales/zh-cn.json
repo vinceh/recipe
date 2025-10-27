@@ -34,7 +34,8 @@
       "updatedAt": "更新时间",
       "actions": "操作",
       "yes": "是",
-      "no": "否"
+      "no": "否",
+      "servings": "份"
     },
     "messages": {
       "success": "操作成功完成",
@@ -170,6 +171,12 @@
       "passwordsDontMatch": "密码不匹配",
       "invalidFormat": "格式无效"
     }
+  },
+  "home": {
+    "subtitle": "探索食谱集合",
+    "searchPlaceholder": "搜索食谱...",
+    "noRecipes": "找不到食谱",
+    "noRecipesDescription": "调整您的搜索或浏览所有食谱"
   },
   "recipe": {
     "view": {

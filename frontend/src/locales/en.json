@@ -34,7 +34,8 @@
       "updatedAt": "Updated At",
       "actions": "Actions",
       "yes": "Yes",
-      "no": "No"
+      "no": "No",
+      "servings": "servings"
     },
     "messages": {
       "success": "Operation completed successfully",
@@ -170,6 +171,12 @@
       "passwordsDontMatch": "Passwords don't match",
       "invalidFormat": "Invalid format"
     }
+  },
+  "home": {
+    "subtitle": "Explore our collection of recipes",
+    "searchPlaceholder": "search for recipes...",
+    "noRecipes": "No recipes found",
+    "noRecipesDescription": "Try adjusting your search or browse all recipes"
   },
   "recipe": {
     "view": {

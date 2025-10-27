@@ -34,7 +34,8 @@
       "updatedAt": "수정일",
       "actions": "작업",
       "yes": "예",
-      "no": "아니오"
+      "no": "아니오",
+      "servings": "인분"
     },
     "messages": {
       "success": "작업이 성공적으로 완료되었습니다",
@@ -170,6 +171,12 @@
       "passwordsDontMatch": "비밀번호가 일치하지 않습니다",
       "invalidFormat": "잘못된 형식입니다"
     }
+  },
+  "home": {
+    "subtitle": "레시피 컬렉션 탐색",
+    "searchPlaceholder": "레시피 검색...",
+    "noRecipes": "레시피를 찾을 수 없습니다",
+    "noRecipesDescription": "검색을 조정하거나 모든 레시피를 찾아보세요"
   },
   "recipe": {
     "view": {

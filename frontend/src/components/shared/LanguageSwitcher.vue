@@ -47,7 +47,7 @@ function changeLanguage(languageCode: Language) {
         :key="language.code"
         :value="language.code"
       >
-        {{ language.flag }} {{ language.nativeName }}
+        {{ language.nativeName }}
       </option>
     </select>
   </div>
@@ -59,26 +59,32 @@ function changeLanguage(languageCode: Language) {
 }
 
 .language-select {
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius-sm);
-  background-color: var(--color-background);
-  color: var(--color-text);
-  font-size: var(--font-size-base);
-  font-family: var(--font-family-base) !important;
-  font-weight: var(--font-weight-normal);
+  padding: 5px 14px;
+  padding-right: 30px;
+  border: 1px solid var(--color-provisions-border);
+  border-radius: 0;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23383630' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  color: var(--color-provisions-border);
+  font-size: 20px;
+  font-family: var(--font-family-heading) !important;
+  font-weight: var(--font-weight-semibold);
   cursor: pointer;
   transition: var(--transition-base);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .language-select:hover {
-  border-color: var(--color-primary);
+  border-color: var(--color-provisions-border);
 }
 
 .language-select:focus {
   outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px var(--color-primary-alpha);
+  border-color: var(--color-provisions-border);
 }
 
 .language-select option {

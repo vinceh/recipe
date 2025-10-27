@@ -10,16 +10,16 @@
 :root {
   /* ==================== COLOR PALETTE ==================== */
 
-  /* Primary Brand Colors */
-  --color-primary: #C87A5A;           /* Warm Terracotta - main brand color */
-  --color-primary-dark: #A85E42;      /* Darker shade for hover states */
-  --color-primary-light: #E09977;     /* Lighter shade for backgrounds */
-  --color-primary-pale: #F4E0D8;      /* Very light for subtle backgrounds */
+  /* Primary Brand Colors - Provisions Sophisticated Palette */
+  --color-primary: #9B8B7E;           /* Warm Taupe - main brand color (sophisticated) */
+  --color-primary-dark: #7A6B5F;      /* Darker taupe for hover states */
+  --color-primary-light: #C2B5AA;     /* Lighter taupe for backgrounds */
+  --color-primary-pale: #E8E2DB;      /* Very light for subtle backgrounds */
 
   /* Secondary Brand Colors */
-  --color-secondary: #7A9B6C;         /* Warm Sage - success, positive actions */
-  --color-secondary-dark: #5F7A54;    /* Darker sage */
-  --color-secondary-light: #9FB593;   /* Lighter sage */
+  --color-secondary: #8B9B7A;         /* Warm Sage - success, positive actions */
+  --color-secondary-dark: #6B7A5A;    /* Darker sage */
+  --color-secondary-light: #A5B593;   /* Lighter sage */
   --color-secondary-pale: #E5EDE1;    /* Very light sage */
 
   /* Semantic Colors */
@@ -74,6 +74,14 @@
   --color-border-dark: #D6CCC2;       /* Emphasized borders */
   --color-border-focus: #C87A5A;      /* Focus rings */
 
+  /* Provisions-specific Colors */
+  --color-provisions-bg: #e6e4e2;     /* Main background */
+  --color-provisions-border: #383630; /* Borders and primary text */
+  --color-provisions-text-muted: #6b5b54; /* Search text, secondary text */
+  --color-provisions-placeholder: #b3b1ac; /* Placeholder text, icons */
+  --color-provisions-card-bg: #f5ebe0; /* Recipe card image background */
+  --color-provisions-text-dark: #3e2d28; /* Recipe titles, descriptions */
+
   /* ==================== SPACING SCALE ==================== */
 
   --spacing-xs: 0.25rem;    /* 4px */
@@ -87,9 +95,8 @@
   /* ==================== TYPOGRAPHY ==================== */
 
   /* Font Families */
-  --font-family-base: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif;
-  --font-family-heading: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif;
-  --font-family-mono: 'Roboto Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+  --font-family-base: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  --font-family-heading: 'Cormorant Garamond', serif;
 
   /* Font Sizes */
   --font-size-xs: 0.75rem;      /* 12px */

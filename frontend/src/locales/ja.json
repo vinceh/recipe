@@ -34,7 +34,8 @@
       "updatedAt": "更新日時",
       "actions": "操作",
       "yes": "はい",
-      "no": "いいえ"
+      "no": "いいえ",
+      "servings": "人分"
     },
     "messages": {
       "success": "操作が正常に完了しました",
@@ -170,6 +171,12 @@
       "passwordsDontMatch": "パスワードが一致しません",
       "invalidFormat": "無効な形式です"
     }
+  },
+  "home": {
+    "subtitle": "レシピコレクションを探索",
+    "searchPlaceholder": "レシピを検索...",
+    "noRecipes": "レシピが見つかりません",
+    "noRecipesDescription": "検索を調整するか、すべてのレシピを参照してください"
   },
   "recipe": {
     "view": {
