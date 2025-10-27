@@ -48,7 +48,7 @@ Mobility gem table for translating recipe name and other text fields.
 | `id` | Integer | Primary key | Auto-incrementing |
 | `recipe_id` | UUID | Foreign key to recipes | NOT NULL, indexed |
 | `locale` | String | Language code | NOT NULL, ISO 639-1 code |
-| `key` | String | Field name being translated | NOT NULL, e.g., `name` |
+| `key` | String | Field name being translated | NOT NULL, e.g., `name`, `description` |
 | `value` | Text | Translated content | Text or null |
 | `created_at` | DateTime | Created timestamp | ISO 8601 |
 | `updated_at` | DateTime | Last updated timestamp | ISO 8601 |
@@ -60,7 +60,9 @@ Mobility gem table for translating recipe name and other text fields.
 - Index on `(recipe_id, locale)` for efficient lookup by recipe and language
 - Index on `recipe_id` for foreign key queries
 
-**Translatable Fields:** `name` (recipe name)
+**Translatable Fields:**
+- `name` - recipe name
+- `description` - recipe description, overview, and context (NOT NULL, TEXT type)
 
 ---
 

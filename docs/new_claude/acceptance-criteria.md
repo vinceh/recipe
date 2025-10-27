@@ -17,9 +17,10 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 9. [Admin Recipes List](#admin-recipes-list)
 10. [Admin Recipe Management](#admin-recipe-management)
 11. [Recipe Viewing](#recipe-viewing)
-12. [Performance & Reliability](#performance--reliability)
-13. [Phase 3: Model Validations](#phase-3-model-validations)
-14. [Phase 5: Auto-Triggered Translation Workflow](#phase-5-auto-triggered-translation-workflow)
+12. [Recipe Description](#recipe-description)
+13. [Performance & Reliability](#performance--reliability)
+14. [Phase 3: Model Validations](#phase-3-model-validations)
+15. [Phase 5: Auto-Triggered Translation Workflow](#phase-5-auto-triggered-translation-workflow)
 
 ---
 
@@ -1310,6 +1311,52 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 **WHEN** viewing recipe ingredients
 **THEN** ingredient list should be readable without horizontal scroll
 **AND** font size should be minimum 16px for legibility
+
+---
+
+## Recipe Description
+
+### AC-DESC-001: Description Storage - Translatable Field
+**GIVEN** admin creates a recipe with a description
+**WHEN** recipe is saved
+**THEN** description should be stored in recipe_translations table as translatable field
+**AND** description should be NOT NULL constraint enforced at database level
+
+### AC-DESC-002: Description API Response - List Endpoint
+**GIVEN** user requests recipe list via GET /api/v1/recipes
+**WHEN** API returns response
+**THEN** each recipe in response should include a `description` field
+**AND** description should contain human-readable overview of the recipe
+
+### AC-DESC-003: Description API Response - Detail Endpoint
+**GIVEN** user requests recipe detail via GET /api/v1/recipes/:id
+**WHEN** API returns response
+**THEN** recipe should include a `description` field
+**AND** description should be translated to the requested language (with fallback to source language)
+
+### AC-DESC-004: Description Translation
+**GIVEN** admin creates a recipe with English description
+**WHEN** background translation job processes the recipe
+**THEN** description should be translated to all target languages (ja, ko, zh-tw, zh-cn, es, fr)
+**AND** translations_completed flag should be true once all translations are done
+
+### AC-DESC-005: Description Display - Recipe Card
+**GIVEN** a user views recipe in list
+**WHEN** recipe card is displayed
+**THEN** description should appear as preview text (max 150 characters) below recipe name
+**AND** text should be truncated with ellipsis if longer
+
+### AC-DESC-006: Description Display - Recipe Detail
+**GIVEN** a user views full recipe details
+**WHEN** recipe detail page loads
+**THEN** full description should be prominently displayed below recipe title
+**AND** description should wrap and be fully readable without truncation
+
+### AC-DESC-007: Description Supports Mobility i18n
+**GIVEN** user has preferred language set to Japanese
+**WHEN** user views a recipe with completed translations
+**THEN** description should automatically display in Japanese
+**AND** if Japanese translation not available, fall back to source language
 
 ---
 

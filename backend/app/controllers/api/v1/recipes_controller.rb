@@ -163,6 +163,7 @@ module Api
         {
           id: recipe.id,
           name: recipe.name,
+          description: recipe.description,
           language: recipe.source_language,
           servings: {
             original: recipe.servings_original,
@@ -190,6 +191,7 @@ module Api
         {
           id: recipe.id,
           name: recipe.name,
+          description: recipe.description,
           language: recipe.source_language,
           servings: {
             original: recipe.servings_original,

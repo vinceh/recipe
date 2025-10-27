@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_10_24_084105) do
+ActiveRecord::Schema[8.0].define(version: 2025_10_27_120000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pg_trgm"
@@ -271,6 +271,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_24_084105) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description", null: false
     t.index ["locale"], name: "index_recipe_translations_on_locale"
     t.index ["recipe_id", "locale"], name: "index_recipe_translations_on_recipe_id_and_locale", unique: true
     t.index ["recipe_id"], name: "index_recipe_translations_on_recipe_id"

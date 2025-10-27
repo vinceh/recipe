@@ -130,97 +130,25 @@ module Admin
     # AC-ADMIN-002: Parse recipe from text block
     def parse_text
       text_content = params.require(:text_content)
-
-      parser = RecipeParserService.new
-      recipe_data = parser.parse_text_block(text_content)
-
-      if recipe_data
-        render_success(
-          data: { recipe_data: recipe_data },
-          message: "Recipe parsed successfully"
-        )
-      else
-        render_error(
-          message: "Failed to parse recipe from text",
-          errors: [ "Could not extract valid recipe data" ]
-        )
-      end
+      handle_parse('text') { |parser| parser.parse_text_block(text_content) }
     end
 
     # POST /admin/recipes/parse_url
     # AC-ADMIN-003: Parse recipe from URL
     def parse_url
       url = params.require(:url)
-
-      parser = RecipeParserService.new
-      recipe_data = parser.parse_url(url)
-
-      if recipe_data
-        render_success(
-          data: { recipe_data: recipe_data },
-          message: "Recipe parsed successfully from URL"
-        )
-      else
-        render_error(
-          message: "Failed to parse recipe from URL",
-          errors: [ "Could not extract valid recipe data" ]
-        )
-      end
-    rescue StandardError => e
-      Rails.logger.error("URL parsing failed: #{e.class} - #{e.message}")
-      Rails.logger.error(e.backtrace.join("\n"))
-      render_error(
-        message: "Failed to fetch or parse URL",
-        errors: [ e.message ]
-      )
+      handle_parse('URL') { |parser| parser.parse_url(url) }
     end
 
     # POST /admin/recipes/parse_image
     # AC-ADMIN-004: Parse recipe from image
     def parse_image
-      # Handle both file upload and URL
-      if params[:image_file].present?
-        # File upload - save temporarily
-        uploaded_file = params[:image_file]
-        temp_path = Rails.root.join("tmp", "uploads", uploaded_file.original_filename)
-        FileUtils.mkdir_p(File.dirname(temp_path))
-        File.open(temp_path, "wb") do |file|
-          file.write(uploaded_file.read)
-        end
+      image_source = extract_image_source
+      return unless image_source
 
-        parser = RecipeParserService.new
-        recipe_data = parser.parse_image(temp_path.to_s)
-
-        # Clean up temp file
-        File.delete(temp_path) if File.exist?(temp_path)
-      elsif params[:image_url].present?
-        # URL to image
-        parser = RecipeParserService.new
-        recipe_data = parser.parse_image(params[:image_url])
-      else
-        return render_error(
-          message: "Image file or URL required",
-          errors: [ "Provide either image_file or image_url parameter" ],
-          status: :bad_request
-        )
-      end
-
-      if recipe_data
-        render_success(
-          data: { recipe_data: recipe_data },
-          message: "Recipe parsed successfully from image"
-        )
-      else
-        render_error(
-          message: "Failed to parse recipe from image",
-          errors: [ "Could not extract valid recipe data" ]
-        )
-      end
-    rescue StandardError => e
-      render_error(
-        message: "Failed to process image",
-        errors: [ e.message ]
-      )
+      handle_parse('image') { |parser| parser.parse_image(image_source[:path]) }
+    ensure
+      File.delete(image_source[:path]) if image_source&.dig(:cleanup) && File.exist?(image_source[:path])
     end
 
     # POST /admin/recipes/:id/regenerate_translations
@@ -306,6 +234,7 @@ module Admin
     def recipe_params
       params.require(:recipe).permit(
         :name,
+        :description,
         :source_language,
         :requires_precision,
         :precision_reason,
@@ -355,6 +284,7 @@ module Admin
       {
         id: recipe.id,
         name: recipe.name,
+        description: recipe.description,
         language: recipe.source_language,
         servings: {
           original: recipe.servings_original,
@@ -389,6 +319,51 @@ module Admin
         equipment: recipe.equipment.map(&:canonical_name),
         nutrition: recipe.recipe_nutrition ? serialize_nutrition(recipe.recipe_nutrition) : nil
       )
+    end
+
+    # Generic handler for all parsing endpoints
+    def handle_parse(source_type)
+      parser = RecipeParserService.new
+      recipe_data = yield(parser)
+
+      if recipe_data
+        render_success(
+          data: { recipe_data: recipe_data },
+          message: "Recipe parsed successfully from #{source_type}"
+        )
+      else
+        render_error(
+          message: "Failed to parse recipe from #{source_type}",
+          errors: [ "Could not extract valid recipe data" ]
+        )
+      end
+    rescue StandardError => e
+      Rails.logger.error("#{source_type.capitalize} parsing failed: #{e.class} - #{e.message}")
+      Rails.logger.error(e.backtrace.join("\n")) if Rails.env.development?
+      render_error(
+        message: "Failed to parse recipe from #{source_type}",
+        errors: [ e.message ]
+      )
+    end
+
+    # Extract image source from params (file upload or URL)
+    def extract_image_source
+      if params[:image_file].present?
+        uploaded_file = params[:image_file]
+        temp_path = Rails.root.join("tmp", "uploads", uploaded_file.original_filename)
+        FileUtils.mkdir_p(File.dirname(temp_path))
+        File.open(temp_path, "wb") { |file| file.write(uploaded_file.read) }
+        { path: temp_path.to_s, cleanup: true }
+      elsif params[:image_url].present?
+        { path: params[:image_url], cleanup: false }
+      else
+        render_error(
+          message: "Image file or URL required",
+          errors: [ "Provide either image_file or image_url parameter" ],
+          status: :bad_request
+        )
+        nil
+      end
     end
   end
 end

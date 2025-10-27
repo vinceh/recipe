@@ -9,18 +9,9 @@ class RecipeParserService < AiService
   # Parse a large text block containing a recipe
   # Returns structured recipe JSON
   def parse_text_block(text_content)
-    system_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_text_system')
-    user_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_text_user')
-
-    rendered_user_prompt = user_prompt.render(text_content: text_content)
-
-    response = call_claude(
-      system_prompt: system_prompt.prompt_text,
-      user_prompt: rendered_user_prompt,
-      max_tokens: 4096
-    )
-
-    parse_response(response)
+    parse_with_prompts('recipe_parse_text') do |user_prompt|
+      user_prompt.render(text_content: text_content)
+    end
   end
 
   # Parse a recipe from a URL
@@ -31,29 +22,15 @@ class RecipeParserService < AiService
 
     Rails.logger.info("Attempting to parse recipe from URL: #{url}")
 
-    # Fetch raw HTML
     raw_html = fetch_raw_html(url)
-
-    # Clean HTML to reduce token usage (removes 60-80% of tokens)
     html_content = clean_html(raw_html)
 
     Rails.logger.info("Cleaned HTML from #{raw_html.length} to #{html_content.length} bytes")
 
-    # Get prompts from database
-    system_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_url_system')
-    user_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_url_user')
+    result = parse_with_prompts('recipe_parse_url', enable_web_search: false) do |user_prompt|
+      user_prompt.render(url: url, html_content: html_content)
+    end
 
-    # Send cleaned HTML content to Claude for parsing
-    rendered_user_prompt = user_prompt.render(url: url, html_content: html_content)
-
-    response = call_claude(
-      system_prompt: system_prompt.prompt_text,
-      user_prompt: rendered_user_prompt,
-      max_tokens: 4096,
-      enable_web_search: false
-    )
-
-    result = parse_response(response)
     if result.is_a?(Hash)
       Rails.logger.info("Successfully parsed URL content with Claude")
       result['source_url'] = url
@@ -69,11 +46,35 @@ class RecipeParserService < AiService
   # Parse a recipe from an image using Claude Vision API
   # Returns structured recipe JSON
   def parse_image(image_path_or_url)
-    system_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_image_system')
-    user_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_parse_image_user')
-
-    # Prepare image for Claude Vision API
     image_content = prepare_image(image_path_or_url)
+
+    parse_with_vision('recipe_parse_image', image_content: image_content)
+  end
+
+  private
+
+  # Generic prompt-based parsing method
+  # Yields user_prompt for rendering with source-specific variables
+  def parse_with_prompts(prompt_base_key, **claude_options)
+    system_prompt = AiPrompt.active.find_by!(prompt_key: "#{prompt_base_key}_system")
+    user_prompt = AiPrompt.active.find_by!(prompt_key: "#{prompt_base_key}_user")
+
+    rendered_user_prompt = yield(user_prompt)
+
+    response = call_claude(
+      system_prompt: system_prompt.prompt_text,
+      user_prompt: rendered_user_prompt,
+      max_tokens: 4096,
+      **claude_options
+    )
+
+    parse_response(response)
+  end
+
+  # Vision-specific parsing method
+  def parse_with_vision(prompt_base_key, image_content:)
+    system_prompt = AiPrompt.active.find_by!(prompt_key: "#{prompt_base_key}_system")
+    user_prompt = AiPrompt.active.find_by!(prompt_key: "#{prompt_base_key}_user")
 
     response = call_claude_vision(
       system_prompt: system_prompt.prompt_text,
@@ -84,8 +85,6 @@ class RecipeParserService < AiService
 
     parse_response(response)
   end
-
-  private
 
   # Validate URL format
   def validate_url(url)

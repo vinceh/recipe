@@ -555,6 +555,7 @@ The API automatically detects which mode to use based on the parameters provided
       {
         "id": 1,
         "name": "Taiwanese Beef Noodle Soup",
+        "description": "A rich and aromatic beef noodle soup from Taiwan featuring tender braised beef, chewy noodles, and a deeply flavorful broth infused with star anise and Sichuan peppercorns.",
         "language": "en",
         "servings": 4,
         "timing": {
@@ -664,6 +665,7 @@ Returns complete recipe details including ingredients, steps, equipment, nutriti
     "recipe": {
       "id": 1,
       "name": "Taiwanese Beef Noodle Soup",
+      "description": "A rich and aromatic beef noodle soup from Taiwan featuring tender braised beef, chewy noodles, and a deeply flavorful broth infused with star anise and Sichuan peppercorns.",
       "source_language": "en",
       "servings_original": 4,
       "servings_min": 2,

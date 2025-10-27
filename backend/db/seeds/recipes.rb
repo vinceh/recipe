@@ -37,6 +37,7 @@ end
 # ============================================================================
 margherita = Recipe.new(
   name: "Margherita Pizza",
+  description: "The quintessential Italian pizza featuring a perfect combination of crispy crust, tangy tomato sauce, creamy fresh mozzarella, and aromatic basil. This Neapolitan classic demonstrates the philosophy that quality ingredients require minimal preparation.",
   source_language: "en",
   source_url: "https://www.justonecookbook.com/margherita-pizza/",
   servings_original: 2,
@@ -156,6 +157,7 @@ puts "   ✅ Recipe 1: Margherita Pizza"
 # ============================================================================
 pad_thai = Recipe.new(
   name: "Pad Thai",
+  description: "Thailand's most iconic noodle dish, famous for its perfect balance of sweet, sour, salty, and spicy flavors. Quick-cooked rice noodles tossed with eggs, shrimp, and tofu, this street food favorite is customizable and brings restaurant-quality results to home kitchens.",
   source_language: "en",
   source_url: "https://www.thewoksoflife.com/pad-thai/",
   servings_original: 2,
@@ -308,6 +310,7 @@ puts "   ✅ Recipe 2: Pad Thai"
 # ============================================================================
 shakshuka = Recipe.new(
   name: "Shakshuka",
+  description: "A beloved Middle Eastern breakfast and brunch staple featuring poached eggs nested in a richly spiced tomato and pepper sauce. This aromatic dish is perfect for feeding a crowd and can be prepared ahead, making it ideal for weekend entertaining.",
   source_language: "en",
   servings_original: 4,
   servings_min: 2,
@@ -443,6 +446,7 @@ puts "   ✅ Recipe 3: Shakshuka"
 # ============================================================================
 tom_yum = Recipe.new(
   name: "Tom Yum Soup",
+  description: "Thailand's most famous soup, a aromatic and intensely flavored broth infused with lemongrass, galangal, and lime. The perfect balance of hot, sour, and spicy notes with tender shrimp makes this a beloved restaurant staple that's surprisingly easy to recreate at home.",
   source_language: "en",
   source_url: "https://www.thewoksoflife.com/tom-yum/",
   servings_original: 4,
@@ -583,6 +587,7 @@ puts "   ✅ Recipe 4: Tom Yum Soup"
 # ============================================================================
 aglio_olio = Recipe.new(
   name: "Spaghetti Aglio e Olio",
+  description: "An iconic Roman pasta dish featuring just pasta, garlic, olive oil, and red pepper flakes. This minimalist masterpiece showcases how quality ingredients and proper technique can create an unforgettable meal in under 20 minutes.",
   source_language: "en",
   source_url: "https://www.italianfoodforever.com/aglio-olio/",
   servings_original: 2,
@@ -674,6 +679,7 @@ puts "   ✅ Recipe 5: Spaghetti Aglio e Olio"
 # ============================================================================
 oyakodon = Recipe.new(
   name: "Oyakodon",
+  description: "A cherished Japanese comfort dish consisting of tender chicken and silky poached eggs served over steaming rice in a savory dashi broth. The name 'oyako' means parent and child, referring to the chicken and egg combination, making this a soul-satisfying meal.",
   source_language: "en",
   source_url: "https://www.justonecookbook.com/oyakodon/",
   servings_original: 2,
@@ -801,6 +807,7 @@ puts "   ✅ Recipe 6: Oyakodon"
 # ============================================================================
 greek_salad = Recipe.new(
   name: "Greek Salad",
+  description: "A vibrant Mediterranean classic combining crisp vegetables, creamy feta cheese, and briny Kalamata olives tossed with a simple olive oil and oregano dressing. This refreshing salad celebrates the essence of summer and Greek cuisine.",
   source_language: "en",
   servings_original: 4,
   servings_min: 2,
@@ -922,6 +929,7 @@ puts "   ✅ Recipe 7: Greek Salad"
 # ============================================================================
 sourdough = Recipe.new(
   name: "Sourdough Bread",
+  description: "A rustic artisan bread with a tangy flavor and beautiful open crumb structure, achieved through slow fermentation and careful technique. This weekend project rewards patience with incredible flavor and texture that commercial breads cannot match.",
   source_language: "en",
   servings_original: 1,
   servings_min: 1,
@@ -1008,6 +1016,7 @@ puts "   ✅ Recipe 8: Sourdough Bread"
 # ============================================================================
 beef_tacos = Recipe.new(
   name: "Beef Tacos",
+  description: "Authentic Mexican street-style tacos featuring seasoned ground beef in soft tortillas, topped with fresh cilantro, onions, and a squeeze of lime. Quick to prepare and incredibly versatile, these tacos are perfect for casual dinners and entertaining.",
   source_language: "en",
   servings_original: 4,
   servings_min: 2,
@@ -1154,6 +1163,7 @@ puts "   ✅ Recipe 9: Beef Tacos"
 # ============================================================================
 kimchi_jjigae = Recipe.new(
   name: "Kimchi Jjigae",
+  description: "A beloved Korean comfort stew combining spicy fermented kimchi with tender pork belly and tofu, simmered in a rich, warming broth. This aromatic dish showcases the complex flavors of Korean cuisine and is best enjoyed with steamed rice.",
   source_language: "en",
   servings_original: 4,
   servings_min: 2,
@@ -1285,6 +1295,7 @@ puts "   ✅ Recipe 10: Kimchi Jjigae"
 # ============================================================================
 onion_soup = Recipe.new(
   name: "French Onion Soup",
+  description: "A classic French bistro soup featuring deeply caramelized onions simmered in a savory beef broth, crowned with crusty bread and melted Gruyère cheese. This elegant yet humble dish is pure comfort in a bowl.",
   source_language: "en",
   servings_original: 4,
   servings_min: 4,
@@ -1411,6 +1422,7 @@ puts "   ✅ Recipe 11: French Onion Soup"
 # ============================================================================
 cookies = Recipe.new(
   name: "Chocolate Chip Cookies",
+  description: "The ultimate American classic featuring butter, brown sugar, and dark chocolate chips baked into the perfect chewy-crispy cookie. This timeless recipe has been beloved for generations and never goes out of style.",
   source_language: "en",
   source_url: "https://www.allrecipes.com/recipe/274077/toll-house-cookies/",
   servings_original: 24,
@@ -1539,6 +1551,7 @@ puts "   ✅ Recipe 12: Chocolate Chip Cookies"
 # ============================================================================
 guacamole = Recipe.new(
   name: "Guacamole",
+  description: "A simple yet legendary Mexican dip made from creamy avocados, fresh lime, cilantro, and tomatoes. Perfect as an appetizer with tortilla chips or as a topping for tacos and other Mexican dishes, this party favorite takes just minutes to prepare.",
   source_language: "en",
   servings_original: 4,
   servings_min: 4,
@@ -1645,6 +1658,7 @@ puts "   ✅ Recipe 13: Guacamole"
 # ============================================================================
 ratatouille = Recipe.new(
   name: "Ratatouille",
+  description: "A rustic and colorful French Provençal vegetable stew featuring eggplant, zucchini, bell peppers, and tomatoes simmered together in aromatic herbs. This versatile dish is equally delicious served warm or at room temperature, making it perfect for entertaining.",
   source_language: "en",
   servings_original: 4,
   servings_min: 3,
@@ -1777,6 +1791,7 @@ puts "   ✅ Recipe 14: Ratatouille"
 # ============================================================================
 teriyaki = Recipe.new(
   name: "Chicken Teriyaki",
+  description: "A beloved Japanese dish featuring glazed and grilled chicken with a sweet and savory homemade teriyaki sauce. Quick to prepare yet impressive enough for entertaining, this dish is best served over steamed rice with fresh vegetables.",
   source_language: "en",
   servings_original: 4,
   servings_min: 2,
