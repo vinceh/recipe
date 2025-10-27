@@ -53,7 +53,7 @@
                   }}</span>
                   <span v-if="recipe.cuisines?.length">{{ recipe.cuisines[0] }}</span>
                   <span v-if="recipe.servings?.original"
-                    >{{ recipe.servings.original }} Servings</span
+                    >{{ recipe.servings.original }} {{ $t('common.labels.servings') }}</span
                   >
                 </p>
                 <p class="recipe-item__description">{{ getPreviewText(recipe) }}</p>
