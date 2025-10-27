@@ -378,9 +378,9 @@ onMounted(() => {
 }
 
 .recipe-item__description {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--color-provisions-text-dark);
-  margin: 0;
+  margin: 0 0 30px 0;
   line-height: 1.4;
   font-family: var(--font-family-heading);
   font-weight: normal;

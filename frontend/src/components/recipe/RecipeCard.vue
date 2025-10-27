@@ -118,7 +118,7 @@ function getPreviewText(): string {
 .recipe-card__description {
   font-size: 14px;
   color: #383630;
-  margin: 0;
+  margin: 0 0 30px 0;
   line-height: 1.4;
   font-family: var(--font-family-heading);
   display: -webkit-box;
