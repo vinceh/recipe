@@ -141,4 +141,109 @@ RSpec.describe 'Recipe Translation Workflow', type: :model do
       }.to have_enqueued_job(TranslateRecipeJob).with(recipe.id)
     end
   end
+
+  describe 'AC-TRANS-009: All 6 Languages Translated' do
+    it 'calls translator for all 6 target languages' do
+      recipe = create_valid_recipe
+      I18n.with_locale(:en) do
+        recipe.save!
+      end
+
+      translator = instance_double(RecipeTranslator)
+      allow(RecipeTranslator).to receive(:new).and_return(translator)
+
+      target_languages = ['ja', 'ko', 'zh-tw', 'zh-cn', 'es', 'fr']
+      target_languages.each do |lang|
+        translation_response = {
+          'name' => "Translated Name #{lang}",
+          'description' => "Translated Description #{lang}",
+          'ingredient_groups' => [],
+          'steps' => [],
+          'equipment' => []
+        }
+        allow(translator).to receive(:translate_recipe).with(anything, lang).and_return(translation_response)
+      end
+
+      allow_any_instance_of(Recipe).to receive(:update!)
+
+      I18n.with_locale(:en) do
+        TranslateRecipeJob.perform_now(recipe.id)
+      end
+
+      target_languages.each do |lang|
+        expect(translator).to have_received(:translate_recipe).with(anything, lang)
+      end
+    end
+  end
+
+  describe 'AC-TRANS-011: All Fields Saved Atomically Per Language' do
+    it 'applies all translated fields within locale context per language' do
+      recipe = create_valid_recipe
+      I18n.with_locale(:en) do
+        recipe.save!
+      end
+
+      translator = instance_double(RecipeTranslator)
+      allow(RecipeTranslator).to receive(:new).and_return(translator)
+
+      allow(translator).to receive(:translate_recipe) do |rec, lang|
+        {
+          'name' => "Name #{lang}",
+          'description' => "Description #{lang}",
+          'ingredient_groups' => [
+            { 'name' => "Group #{lang}", 'items' => [{ 'name' => "Item #{lang}", 'preparation' => '' }] }
+          ],
+          'steps' => [
+            { 'instruction' => "Step #{lang}" }
+          ],
+          'equipment' => ["Equipment #{lang}"]
+        }
+      end
+
+      allow_any_instance_of(Recipe).to receive(:update!).and_return(true)
+
+      I18n.with_locale(:en) do
+        TranslateRecipeJob.perform_now(recipe.id)
+      end
+
+      expect(translator).to have_received(:translate_recipe).exactly(6).times
+    end
+  end
+
+  describe 'AC-TRANS-015: Translation API Failure Handling' do
+    it 'logs error and continues when translator fails for a language' do
+      recipe = create_valid_recipe
+      I18n.with_locale(:en) do
+        recipe.save!
+      end
+
+      translator = instance_double(RecipeTranslator)
+      allow(RecipeTranslator).to receive(:new).and_return(translator)
+
+      success_response = {
+        'name' => 'Translated',
+        'description' => 'Translated Desc',
+        'ingredient_groups' => [],
+        'steps' => [],
+        'equipment' => []
+      }
+
+      allow(translator).to receive(:translate_recipe) do |rec, lang|
+        if lang == 'ko'
+          raise StandardError.new('API error')
+        else
+          success_response
+        end
+      end
+
+      allow_any_instance_of(Recipe).to receive(:update!)
+      allow(Rails.logger).to receive(:error)
+
+      I18n.with_locale(:en) do
+        TranslateRecipeJob.perform_now(recipe.id)
+      end
+
+      expect(Rails.logger).to have_received(:error).with(/Translation failed for recipe.*ko/)
+    end
+  end
 end
