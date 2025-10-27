@@ -32,6 +32,37 @@ def create_data_reference(type, key, display_name)
   end
 end
 
+# Load recipe translations for all languages
+load File.join(File.dirname(__FILE__), '01_recipe_translations_data.rb')
+
+def apply_recipe_translations(recipe, recipe_key)
+  return unless defined?(RECIPE_TRANSLATIONS) && RECIPE_TRANSLATIONS[recipe_key.to_sym]
+
+  # Reload to ensure fresh state
+  recipe.reload
+
+  # Map translation keys to I18n locales (hyphens vs underscores)
+  locale_map = {
+    'ja' => :ja,
+    'ko' => :ko,
+    'zh_tw' => :'zh-tw',
+    'zh_cn' => :'zh-cn',
+    'es' => :es,
+    'fr' => :fr
+  }
+
+  locale_map.each do |trans_key, i18n_locale|
+    trans_key_sym = trans_key.to_sym
+    next unless RECIPE_TRANSLATIONS[recipe_key.to_sym] && RECIPE_TRANSLATIONS[recipe_key.to_sym][trans_key_sym]
+
+    I18n.with_locale(i18n_locale) do
+      recipe.name = RECIPE_TRANSLATIONS[recipe_key.to_sym][trans_key_sym][:name]
+      recipe.description = RECIPE_TRANSLATIONS[recipe_key.to_sym][trans_key_sym][:description]
+      recipe.save!
+    end
+  end
+end
+
 # ============================================================================
 # RECIPE 1: Margherita Pizza (Italian, from Naples)
 # ============================================================================
@@ -143,6 +174,7 @@ margherita.recipe_aliases.build(alias_name: "ピザ・マルゲリータ", langu
 
 
 margherita.save!
+apply_recipe_translations(margherita, :margherita)
 
 margherita.recipe_equipment.create!(equipment: find_or_create_equipment("Pizza Stone"), optional: false)
 margherita.recipe_equipment.create!(equipment: find_or_create_equipment("Mixing Bowl"), optional: false)
@@ -297,6 +329,7 @@ pad_thai.recipe_aliases.build(alias_name: "ผัดไทย", language: "th")
 
 
 pad_thai.save!
+apply_recipe_translations(pad_thai, :pad_thai)
 
 pad_thai.recipe_equipment.create!(equipment: find_or_create_equipment("Wok"), optional: false)
 pad_thai.recipe_equipment.create!(equipment: find_or_create_equipment("Wooden Spatula"), optional: false)
@@ -433,6 +466,7 @@ shakshuka.recipe_aliases.build(alias_name: "شکشوک", language: "ar")
 
 
 shakshuka.save!
+apply_recipe_translations(shakshuka, :shakshuka)
 
 shakshuka.recipe_equipment.create!(equipment: find_or_create_equipment("Large Skillet"), optional: false)
 shakshuka.recipe_equipment.create!(equipment: find_or_create_equipment("Skillet Lid"), optional: true)
@@ -575,6 +609,7 @@ tom_yum.recipe_aliases.build(alias_name: "ต้มยำกุ้ง", language
 
 
 tom_yum.save!
+apply_recipe_translations(tom_yum, :tom_yum)
 
 tom_yum.recipe_equipment.create!(equipment: find_or_create_equipment("Large Pot"), optional: false)
 
@@ -666,6 +701,7 @@ aglio_olio.recipe_aliases.build(alias_name: "パスタ・アーリオ・オー�
 
 
 aglio_olio.save!
+apply_recipe_translations(aglio_olio, :aglio_olio)
 
 aglio_olio.recipe_equipment.create!(equipment: find_or_create_equipment("Large Pot"), optional: false)
 aglio_olio.recipe_equipment.create!(equipment: find_or_create_equipment("Large Skillet"), optional: false)
@@ -794,6 +830,7 @@ oyakodon.recipe_aliases.build(alias_name: "親子丼", language: "ja")
 
 
 oyakodon.save!
+apply_recipe_translations(oyakodon, :oyakodon)
 
 oyakodon.recipe_equipment.create!(equipment: find_or_create_equipment("Donburi Pan or Skillet"), optional: false)
 oyakodon.recipe_equipment.create!(equipment: find_or_create_equipment("Rice Cooker"), optional: true)
@@ -916,6 +953,7 @@ greek_salad.recipe_aliases.build(alias_name: "Ελληνική Σαλάτα", la
 
 
 greek_salad.save!
+apply_recipe_translations(greek_salad, :greek_salad)
 
 greek_salad.recipe_equipment.create!(equipment: find_or_create_equipment("Cutting Board"), optional: false)
 greek_salad.recipe_equipment.create!(equipment: find_or_create_equipment("Large Bowl"), optional: false)
@@ -1002,6 +1040,7 @@ sourdough.recipe_aliases.build(alias_name: "サワードウ", language: "ja")
 
 
 sourdough.save!
+apply_recipe_translations(sourdough, :sourdough)
 
 sourdough.recipe_equipment.create!(equipment: find_or_create_equipment("Dutch Oven"), optional: false)
 sourdough.recipe_equipment.create!(equipment: find_or_create_equipment("Banneton Basket"), optional: false)
@@ -1151,6 +1190,7 @@ beef_tacos.recipe_aliases.build(alias_name: "Tacos de Carne Molida", language: "
 
 
 beef_tacos.save!
+apply_recipe_translations(beef_tacos, :beef_tacos)
 
 beef_tacos.recipe_equipment.create!(equipment: find_or_create_equipment("Large Skillet"), optional: false)
 
@@ -1283,6 +1323,7 @@ kimchi_jjigae.recipe_aliases.build(alias_name: "김치찌개", language: "ko")
 
 
 kimchi_jjigae.save!
+apply_recipe_translations(kimchi_jjigae, :kimchi_jjigae)
 
 kimchi_jjigae.recipe_equipment.create!(equipment: find_or_create_equipment("Stone Bowl or Pot"), optional: false)
 
@@ -1409,6 +1450,7 @@ onion_soup.recipe_aliases.build(alias_name: "玉ねぎのスープ", language: "
 
 
 onion_soup.save!
+apply_recipe_translations(onion_soup, :onion_soup)
 
 onion_soup.recipe_equipment.create!(equipment: find_or_create_equipment("Large Heavy Pot"), optional: false)
 onion_soup.recipe_equipment.create!(equipment: find_or_create_equipment("Oven-Safe Bowls"), optional: false)
@@ -1538,6 +1580,7 @@ cookies.recipe_aliases.build(alias_name: "チョコレートチップクッキ�
 
 
 cookies.save!
+apply_recipe_translations(cookies, :cookies)
 
 cookies.recipe_equipment.create!(equipment: find_or_create_equipment("Baking Sheet"), optional: false)
 cookies.recipe_equipment.create!(equipment: find_or_create_equipment("Mixing Bowls"), optional: false)
@@ -1645,6 +1688,7 @@ guacamole.recipe_aliases.build(alias_name: "Guacamole de Aguacate", language: "e
 
 
 guacamole.save!
+apply_recipe_translations(guacamole, :guacamole)
 
 guacamole.recipe_equipment.create!(equipment: find_or_create_equipment("Bowl"), optional: false)
 guacamole.recipe_equipment.create!(equipment: find_or_create_equipment("Fork"), optional: false)
@@ -1779,6 +1823,7 @@ ratatouille.recipe_aliases.build(alias_name: "Ratatouille Niçoise", language: "
 
 
 ratatouille.save!
+apply_recipe_translations(ratatouille, :ratatouille)
 
 ratatouille.recipe_equipment.create!(equipment: find_or_create_equipment("Large Deep Skillet"), optional: false)
 
@@ -1921,6 +1966,7 @@ teriyaki.recipe_aliases.build(alias_name: "照り焼きチキン", language: "ja
 
 
 teriyaki.save!
+apply_recipe_translations(teriyaki, :teriyaki)
 
 teriyaki.recipe_equipment.create!(equipment: find_or_create_equipment("Large Skillet"), optional: false)
 teriyaki.recipe_equipment.create!(equipment: find_or_create_equipment("Saucepan"), optional: false)
