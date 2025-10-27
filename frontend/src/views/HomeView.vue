@@ -16,8 +16,8 @@
       </div>
       <div class="navbar-right">
         <LanguageSwitcher />
-        <router-link to="/about" class="navbar__link">about</router-link>
-        <router-link to="/contact" class="navbar__link">contact</router-link>
+        <router-link to="/about" class="navbar__link">{{ $t('navigation.about') }}</router-link>
+        <router-link to="/contact" class="navbar__link">{{ $t('navigation.contact') }}</router-link>
       </div>
     </nav>
 
