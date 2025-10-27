@@ -23,9 +23,9 @@ class TranslateRecipeJob < ApplicationJob
     end
 
     if all_successful
-      recipe.update!(translations_completed: true, last_translated_at: Time.current)
+      recipe.update_columns(translations_completed: true, last_translated_at: Time.current)
     else
-      recipe.update!(translations_completed: false)
+      recipe.update_columns(translations_completed: false)
     end
   rescue ActiveRecord::RecordNotFound => e
     Rails.logger.error("Recipe not found for translation job #{recipe_id}: #{e.message}")
@@ -38,8 +38,10 @@ class TranslateRecipeJob < ApplicationJob
 
   def apply_translations(recipe, translation_data, locale)
     I18n.with_locale(locale) do
-      recipe.update(name: translation_data['name']) if translation_data['name']
-      recipe.update(description: translation_data['description']) if translation_data['description']
+      recipe.update(
+        name: translation_data['name'],
+        description: translation_data['description']
+      )
 
       # Update ingredient groups and their ingredients
       if translation_data['ingredient_groups'].present?

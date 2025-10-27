@@ -164,8 +164,6 @@ RSpec.describe 'Recipe Translation Workflow', type: :model do
         allow(translator).to receive(:translate_recipe).with(anything, lang).and_return(translation_response)
       end
 
-      allow_any_instance_of(Recipe).to receive(:update!)
-
       I18n.with_locale(:en) do
         TranslateRecipeJob.perform_now(recipe.id)
       end
@@ -199,8 +197,6 @@ RSpec.describe 'Recipe Translation Workflow', type: :model do
           'equipment' => ["Equipment #{lang}"]
         }
       end
-
-      allow_any_instance_of(Recipe).to receive(:update!).and_return(true)
 
       I18n.with_locale(:en) do
         TranslateRecipeJob.perform_now(recipe.id)
@@ -236,7 +232,6 @@ RSpec.describe 'Recipe Translation Workflow', type: :model do
         end
       end
 
-      allow_any_instance_of(Recipe).to receive(:update!)
       allow(Rails.logger).to receive(:error)
 
       I18n.with_locale(:en) do
