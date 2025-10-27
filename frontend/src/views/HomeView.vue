@@ -1,34 +1,42 @@
 <template>
   <div class="home">
-    <!-- Main Container with nav inside -->
+    <!-- Top Navigation Bar with Search -->
+    <nav class="navbar navbar--top">
+      <div class="navbar-left">
+        <h1 class="navbar__title">Provisions</h1>
+      </div>
+      <div class="navbar-center">
+        <input
+          v-model="searchQuery"
+          type="text"
+          class="navbar__search"
+          :placeholder="$t('home.searchPlaceholder')"
+          @input="handleSearch"
+        />
+      </div>
+      <div class="navbar-right">
+        <LanguageSwitcher />
+        <router-link to="/about" class="navbar__link">about</router-link>
+        <router-link to="/contact" class="navbar__link">contact</router-link>
+      </div>
+    </nav>
+
+    <!-- Main Container -->
     <div class="container main-container">
       <!-- Left Sidebar -->
       <div class="sidebar sidebar--left">
-        <nav class="navbar navbar--left">
-          <h1 class="navbar__title">Provisions</h1>
-        </nav>
       </div>
 
       <!-- Center Content Area -->
-      <div class="content">
-        <nav class="navbar navbar--center">
-          <input
-            v-model="searchQuery"
-            type="text"
-            class="navbar__search"
-            :placeholder="$t('home.searchPlaceholder')"
-            @input="handleSearch"
-          />
-        </nav>
-
+      <div class="content center-content">
         <LoadingSpinner v-if="loading" :center="true" />
         <ErrorMessage v-else-if="error" :message="error" severity="error" />
         <div v-else class="featured-section">
-          <h2 class="featured-section__title">Featured</h2>
+          <h2 class="featured-section__title">Recipes</h2>
 
           <div class="recipe-grid">
             <div
-              v-for="(recipe, idx) in recipes.slice(0, 4)"
+              v-for="(recipe, idx) in recipes.slice(0, 14)"
               :key="recipe.id"
               class="recipe-item"
             >
@@ -57,13 +65,6 @@
 
       <!-- Right Sidebar -->
       <div class="sidebar sidebar--right">
-        <nav class="navbar navbar--right">
-          <div class="navbar__language">
-            <LanguageSwitcher />
-          </div>
-          <router-link to="/about" class="navbar__link">about</router-link>
-          <router-link to="/contact" class="navbar__link">contact</router-link>
-        </nav>
       </div>
     </div>
   </div>
@@ -135,6 +136,12 @@ onMounted(() => {
 </script>
 
 <style scoped>
+
+.center-content {
+  border-left: 1px solid var(--color-provisions-border);
+  border-right: 1px solid var(--color-provisions-border); 
+}
+
 .main-container {
   padding: 0;
 }
@@ -142,12 +149,57 @@ onMounted(() => {
 .home {
   min-height: 100vh;
   background: var(--color-provisions-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Navbar */
+.navbar--top {
+  height: 60px;
+  background: var(--color-provisions-bg);
+  border-bottom: 1px solid var(--color-provisions-border);
+  display: flex;
+  align-items: center;
+  gap: 0;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  flex-shrink: 0;
+}
+
+.navbar-left {
+  flex: 1;
+  padding: 0 var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar-center {
+  flex: 0 0 600px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  border-right: 1px solid var(--color-provisions-border);
+  border-left: 1px solid var(--color-provisions-border);
+  height: 100%;
+}
+
+.navbar-right {
+  flex: 1;
+  padding: 0 var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--spacing-lg);
 }
 
 /* Container Layout */
 .container {
   display: flex;
-  min-height: 100vh;
+  flex: 1;
+  overflow: hidden;
 }
 
 .sidebar {
@@ -157,20 +209,13 @@ onMounted(() => {
   flex-direction: column;
 }
 
-.sidebar--left {
-  border-right: 1px solid var(--color-provisions-border);
-}
-
-.sidebar--right {
-  border-left: 1px solid var(--color-provisions-border);
-}
-
 .content {
   flex: 0 0 600px;
   background: var(--color-provisions-bg);
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* Navigation Bar */
@@ -181,6 +226,9 @@ onMounted(() => {
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .navbar--left {
@@ -192,6 +240,7 @@ onMounted(() => {
   padding: 0;
   justify-content: stretch;
 }
+
 
 .navbar--right {
   font-size: 20px;
@@ -212,7 +261,7 @@ onMounted(() => {
 .navbar__search {
   width: 100%;
   height: 100%;
-  padding: 25px;
+  padding: 0 25px;
   border: none;
   background: transparent;
   font-family: var(--font-family-heading);
@@ -246,6 +295,7 @@ onMounted(() => {
   color: var(--color-provisions-border);
   text-decoration: none;
   cursor: pointer;
+  font-size: 16px;
 }
 
 /* Featured Section */
@@ -269,7 +319,6 @@ onMounted(() => {
   grid-template-columns: 1fr 1fr;
   gap: 0;
   border-top: 1px solid var(--color-provisions-border);
-  border-bottom: 1px solid var(--color-provisions-border);
 }
 
 /* Recipe Items */
@@ -286,10 +335,6 @@ onMounted(() => {
 
 .recipe-item:nth-child(odd):last-of-type {
   border-right: none;
-}
-
-.recipe-item:nth-last-child(-n + 2) {
-  border-bottom: none;
 }
 
 .recipe-item__image {
