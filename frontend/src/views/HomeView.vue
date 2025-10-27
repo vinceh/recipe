@@ -71,7 +71,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { ref, onMounted, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { recipeApi } from "@/services/recipeApi";
 import type { Recipe } from "@/services/types";
@@ -79,7 +79,7 @@ import LanguageSwitcher from "@/components/shared/LanguageSwitcher.vue";
 import LoadingSpinner from "@/components/shared/LoadingSpinner.vue";
 import ErrorMessage from "@/components/shared/ErrorMessage.vue";
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 const recipes = ref<Recipe[]>([]);
 const loading = ref(true);
@@ -93,6 +93,7 @@ async function loadRecipes() {
     const response = await recipeApi.getRecipes({
       q: searchQuery.value || undefined,
       per_page: 100,
+      lang: locale.value as any,
     });
 
     if (response.success) {
@@ -125,6 +126,10 @@ function getPreviewText(recipe: Recipe): string {
 }
 
 onMounted(() => {
+  loadRecipes();
+});
+
+watch(locale, () => {
   loadRecipes();
 });
 </script>
@@ -244,7 +249,7 @@ onMounted(() => {
 }
 
 .navbar__title {
-  font-family: var(--font-family-heading);
+  font-family: 'Cormorant Garamond', serif;
   font-size: 20px;
   font-weight: 700;
   margin: 0;
