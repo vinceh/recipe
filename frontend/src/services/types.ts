@@ -49,6 +49,7 @@ export interface RecipeStep {
 export interface Recipe {
   id: string | number
   name: string  // Translated via Mobility based on Accept-Language or ?lang parameter
+  description?: string  // Translated via Mobility
   language: string  // The source language of the recipe (e.g., 'en')
   source_url?: string
   requires_precision?: boolean

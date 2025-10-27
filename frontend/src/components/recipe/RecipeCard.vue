@@ -48,8 +48,7 @@ function formatTime(minutes: number): string {
 }
 
 function getPreviewText(): string {
-  const items = props.recipe.ingredient_groups?.[0]?.items || []
-  return items.slice(0, 3).map((item) => item.name).join(', ') + '...'
+  return props.recipe.description || ''
 }
 </script>
 
@@ -122,5 +121,10 @@ function getPreviewText(): string {
   margin: 0;
   line-height: 1.4;
   font-family: var(--font-family-heading);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 </style>

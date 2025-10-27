@@ -121,13 +121,7 @@ function formatTime(minutes: number): string {
 }
 
 function getPreviewText(recipe: Recipe): string {
-  const items = recipe.ingredient_groups?.[0]?.items || [];
-  return (
-    items
-      .slice(0, 3)
-      .map((item) => item.name)
-      .join(", ") + "..."
-  );
+  return recipe.description || "";
 }
 
 onMounted(() => {
@@ -390,6 +384,11 @@ onMounted(() => {
   line-height: 1.4;
   font-family: var(--font-family-heading);
   font-weight: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Responsive */
