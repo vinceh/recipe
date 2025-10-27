@@ -36,6 +36,7 @@ class RecipeTranslator < AiService
   def build_recipe_json_for_translation(recipe)
     {
       name: recipe.name,
+      description: recipe.description,
       ingredient_groups: recipe.ingredient_groups.includes(:recipe_ingredients).map do |group|
         {
           name: group.name,

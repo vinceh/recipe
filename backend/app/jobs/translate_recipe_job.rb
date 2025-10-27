@@ -38,8 +38,8 @@ class TranslateRecipeJob < ApplicationJob
 
   def apply_translations(recipe, translation_data, locale)
     I18n.with_locale(locale) do
-      # Update recipe name
       recipe.update(name: translation_data['name']) if translation_data['name']
+      recipe.update(description: translation_data['description']) if translation_data['description']
 
       # Update ingredient groups and their ingredients
       if translation_data['ingredient_groups'].present?
