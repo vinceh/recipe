@@ -86,6 +86,10 @@ const loading = ref(true);
 const error = ref<string | null>(null);
 const searchQuery = ref("");
 
+function getTimeLabel(key: string): string {
+  return t(`recipe.table.${key}`);
+}
+
 async function loadRecipes() {
   try {
     loading.value = true;
@@ -113,8 +117,8 @@ function handleSearch() {
 }
 
 function formatTime(minutes: number): string {
-  const minLabel = t('recipe.table.minutes');
-  const hourLabel = t('recipe.table.hours');
+  const minLabel = getTimeLabel('minutes');
+  const hourLabel = getTimeLabel('hours');
 
   if (minutes < 60) {
     return `${minutes}${minLabel}`;
