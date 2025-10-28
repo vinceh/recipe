@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_10_27_120000) do
+ActiveRecord::Schema[8.0].define(version: 2025_10_28_000000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pg_trgm"
@@ -169,16 +169,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_27_120000) do
     t.index ["recipe_id"], name: "index_recipe_dietary_tags_on_recipe_id"
   end
 
-  create_table "recipe_dish_types", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "recipe_id", null: false
-    t.uuid "data_reference_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["data_reference_id"], name: "index_recipe_dish_types_on_data_reference_id"
-    t.index ["recipe_id", "data_reference_id"], name: "index_recipe_dish_types_on_recipe_id_and_data_reference_id", unique: true
-    t.index ["recipe_id"], name: "index_recipe_dish_types_on_recipe_id"
-  end
-
   create_table "recipe_equipments", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "recipe_id", null: false
     t.uuid "equipment_id", null: false
@@ -229,16 +219,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_27_120000) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["recipe_id"], name: "index_recipe_nutritions_on_recipe_id", unique: true
-  end
-
-  create_table "recipe_recipe_types", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "recipe_id", null: false
-    t.uuid "data_reference_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["data_reference_id"], name: "index_recipe_recipe_types_on_data_reference_id"
-    t.index ["recipe_id", "data_reference_id"], name: "index_recipe_recipe_types_on_recipe_id_and_data_reference_id", unique: true
-    t.index ["recipe_id"], name: "index_recipe_recipe_types_on_recipe_id"
   end
 
   create_table "recipe_step_translations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -340,16 +320,12 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_27_120000) do
   add_foreign_key "recipe_cuisines", "recipes", on_delete: :cascade
   add_foreign_key "recipe_dietary_tags", "data_references", on_delete: :cascade
   add_foreign_key "recipe_dietary_tags", "recipes", on_delete: :cascade
-  add_foreign_key "recipe_dish_types", "data_references", on_delete: :cascade
-  add_foreign_key "recipe_dish_types", "recipes", on_delete: :cascade
   add_foreign_key "recipe_equipments", "equipment", on_delete: :cascade
   add_foreign_key "recipe_equipments", "recipes", on_delete: :cascade
   add_foreign_key "recipe_ingredient_translations", "recipe_ingredients", on_delete: :cascade
   add_foreign_key "recipe_ingredients", "ingredient_groups", on_delete: :cascade
   add_foreign_key "recipe_ingredients", "ingredients", on_delete: :nullify
   add_foreign_key "recipe_nutritions", "recipes", on_delete: :cascade
-  add_foreign_key "recipe_recipe_types", "data_references", on_delete: :cascade
-  add_foreign_key "recipe_recipe_types", "recipes", on_delete: :cascade
   add_foreign_key "recipe_step_translations", "recipe_steps", on_delete: :cascade
   add_foreign_key "recipe_steps", "recipes", on_delete: :cascade
   add_foreign_key "recipe_translations", "recipes", on_delete: :cascade

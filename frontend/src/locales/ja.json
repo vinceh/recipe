@@ -107,10 +107,6 @@
       "dietaryTagsPlaceholder": "食事タグを選択",
       "cuisines": "料理の種類",
       "cuisinesPlaceholder": "料理の種類を選択",
-      "dishTypes": "料理タイプ",
-      "dishTypesPlaceholder": "料理タイプを選択",
-      "recipeTypes": "レシピタイプ",
-      "recipeTypesPlaceholder": "レシピタイプを選択",
       "aliases": "別名",
       "aliasesPlaceholder": "例：「チョコチップクッキー」や「CCC」",
       "aliasesHint": "Enterキーで追加。ユーザーが別の名前でレシピを見つけやすくなります",
@@ -213,7 +209,6 @@
         "name": "名前",
         "language": "言語",
         "cuisines": "料理の種類",
-        "dishTypes": "料理タイプ",
         "servings": "人数",
         "timing": "時間",
         "minutes": "分",
@@ -240,13 +235,11 @@
           "servings": "人数",
           "timing": "合計時間",
           "cuisines": "料理の種類",
-          "dishTypes": "料理タイプ",
           "dietaryTags": "食事タグ",
           "aliases": "別名",
           "sourceUrl": "ソースURL",
           "requiresPrecision": "精度が必要",
-          "adminNotes": "管理者メモ",
-          "recipeTypes": "レシピタイプ"
+          "adminNotes": "管理者メモ"
         },
         "actions": {
           "regenerateTranslations": "翻訳を再生成"

@@ -123,31 +123,7 @@ class RecipeSearchService
            .distinct
   end
 
-  # AC-SEARCH-010: Filter by dish type
-  def self.filter_by_dish_types(recipes, dish_types)
-    return recipes if dish_types.blank?
-
-    recipes = recipes.all if recipes.is_a?(Class)
-    dish_types = dish_types.split(',').map(&:strip) if dish_types.is_a?(String)
-
-    recipes.joins(:dish_types)
-           .where(data_references: { key: dish_types })
-           .distinct
-  end
-
-  # AC-SEARCH-011: Filter by recipe type
-  def self.filter_by_recipe_types(recipes, recipe_types)
-    return recipes if recipe_types.blank?
-
-    recipes = recipes.all if recipes.is_a?(Class)
-    recipe_types = recipe_types.split(',').map(&:strip) if recipe_types.is_a?(String)
-
-    recipes.joins(:recipe_types)
-           .where(data_references: { key: recipe_types })
-           .distinct
-  end
-
-  # AC-SEARCH-012: Filter by prep time
+  # AC-SEARCH-010: Filter by prep time
   def self.filter_by_prep_time(recipes, max_prep: nil)
     return recipes if max_prep.blank?
 
@@ -155,7 +131,7 @@ class RecipeSearchService
     recipes.where("prep_minutes <= ?", max_prep.to_i)
   end
 
-  # AC-SEARCH-013: Filter by cook time
+  # AC-SEARCH-011: Filter by cook time
   def self.filter_by_cook_time(recipes, max_cook: nil)
     return recipes if max_cook.blank?
 
@@ -163,7 +139,7 @@ class RecipeSearchService
     recipes.where("cook_minutes <= ?", max_cook.to_i)
   end
 
-  # AC-SEARCH-014: Filter by total time
+  # AC-SEARCH-012: Filter by total time
   def self.filter_by_total_time(recipes, max_total: nil)
     return recipes if max_total.blank?
 
@@ -171,7 +147,7 @@ class RecipeSearchService
     recipes.where("total_minutes <= ?", max_total.to_i)
   end
 
-  # AC-SEARCH-015: Filter by serving size range
+  # AC-SEARCH-013: Filter by serving size range
   def self.filter_by_servings(recipes, min_servings: nil, max_servings: nil)
     recipes = recipes.all if recipes.is_a?(Class)
 
@@ -186,7 +162,7 @@ class RecipeSearchService
     recipes
   end
 
-  # AC-SEARCH-016: Exclude recipes with specific ingredients (allergen filtering)
+  # AC-SEARCH-014: Exclude recipes with specific ingredients (allergen filtering)
   def self.exclude_ingredients(recipes, excluded_ingredients)
     return recipes if excluded_ingredients.blank?
 
@@ -236,8 +212,6 @@ class RecipeSearchService
     # Category filters
     recipes = filter_by_dietary_tags_all(recipes, params[:dietary_tags]) if params[:dietary_tags].present?
     recipes = filter_by_cuisines(recipes, params[:cuisines]) if params[:cuisines].present?
-    recipes = filter_by_dish_types(recipes, params[:dish_types]) if params[:dish_types].present?
-    recipes = filter_by_recipe_types(recipes, params[:recipe_types]) if params[:recipe_types].present?
 
     # Time filters
     recipes = filter_by_prep_time(recipes, max_prep: params[:max_prep_time])

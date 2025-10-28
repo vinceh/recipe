@@ -73,8 +73,6 @@ es:
       difficulty: "Dificultad"
       dietary_tags: "Etiquetas dietéticas"
       cuisines: "Cocinas"
-      dish_types: "Tipos de plato"
-      recipe_types: "Tipos de receta"
       ingredients: "Ingredientes"
       steps: "Pasos"
       equipment: "Equipo"

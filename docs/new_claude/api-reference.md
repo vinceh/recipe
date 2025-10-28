@@ -523,7 +523,6 @@ The API automatically detects which mode to use based on the parameters provided
 | `per_page` | Integer | No | 20 | Items per page (max 100) |
 | `q` | String | No | - | Search query for recipe names (case-insensitive) |
 | `dietary_tags` | String | No | - | Comma-separated dietary tags (OR logic) |
-| `dish_types` | String | No | - | Comma-separated dish types (OR logic) |
 | `cuisines` | String | No | - | Comma-separated cuisines (OR logic) |
 | `max_cook_time` | Integer | No | - | Maximum cook time in minutes |
 | `max_prep_time` | Integer | No | - | Maximum prep time in minutes |
@@ -564,7 +563,6 @@ The API automatically detects which mode to use based on the parameters provided
           "total_minutes": 180
         },
         "dietary_tags": ["gluten-free-adaptable"],
-        "dish_types": ["main-course", "soup"],
         "cuisines": ["taiwanese", "chinese"],
         "source_url": "https://example.com/recipe",
         "translations_completed": true,
@@ -618,7 +616,7 @@ const data = await response.json()
 
 - Results are ordered by creation date (newest first)
 - Advanced search is triggered automatically when nutrition or ingredient parameters are present
-- Multiple values for dietary_tags, dish_types, and cuisines use OR logic
+- Multiple values for dietary_tags and cuisines use OR logic
 - Search is case-insensitive
 
 ##### Related Endpoints
@@ -674,8 +672,6 @@ Returns complete recipe details including ingredients, steps, equipment, nutriti
       "cook_minutes": 150,
       "total_minutes": 180,
       "dietary_tags": ["gluten-free-adaptable"],
-      "dish_types": ["main-course", "soup"],
-      "recipe_types": ["comfort-food"],
       "cuisines": ["taiwanese", "chinese"],
       "ingredient_groups": [
         {
@@ -1123,7 +1119,6 @@ Returns a paginated list of recipes that the current user has favorited, ordered
           "total_minutes": 180
         },
         "dietary_tags": ["gluten-free-adaptable"],
-        "dish_types": ["main-course", "soup"],
         "cuisines": ["taiwanese", "chinese"],
         "source_url": "https://example.com/recipe",
         "translations_completed": true,
@@ -1543,13 +1538,13 @@ GET /api/v1/data_references
 
 ##### Description
 
-Returns all active reference data including dietary tags, dish types, recipe types, and cuisines. This data is used to populate filters, dropdowns, and tags throughout the application.
+Returns all active reference data including dietary tags and cuisines. This data is used to populate filters, dropdowns, and tags throughout the application.
 
 ##### Query Parameters
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
-| `category` | String | No | Filter by specific category: dietary_tags, dish_types, recipe_types, or cuisines |
+| `category` | String | No | Filter by specific category: dietary_tags or cuisines |
 
 ##### Response
 
@@ -1562,13 +1557,6 @@ Returns all active reference data including dietary tags, dish types, recipe typ
     "dietary_tags": [
       { "key": "vegetarian", "display_name": "Vegetarian" },
       { "key": "vegan", "display_name": "Vegan" }
-    ],
-    "dish_types": [
-      { "key": "main-course", "display_name": "Main Course" },
-      { "key": "dessert", "display_name": "Dessert" }
-    ],
-    "recipe_types": [
-      { "key": "comfort-food", "display_name": "Comfort Food" }
     ],
     "cuisines": [
       { "key": "italian", "display_name": "Italian" },
@@ -1598,7 +1586,7 @@ Returns all active reference data including dietary tags, dish types, recipe typ
 ```json
 {
   "success": false,
-  "message": "Invalid category. Valid categories: dietary_tags, dish_types, recipe_types, cuisines"
+  "message": "Invalid category. Valid categories: dietary_tags, cuisines"
 }
 ```
 
@@ -1676,7 +1664,6 @@ Returns a paginated list of all recipes with admin metadata. Supports advanced f
 | `q` | String | No | - | Search by recipe name (case-insensitive) |
 | `cuisines` | Array | No | - | Filter by multiple cuisines (AND logic) |
 | `cuisine` | String | No | - | Legacy: Filter by single cuisine |
-| `dish_types` | Array | No | - | Filter by multiple dish types (AND logic) |
 | `dietary_tag` | String | No | - | Filter by single dietary tag |
 | `max_prep_time` | Integer | No | - | Maximum prep time in minutes |
 
@@ -1704,8 +1691,6 @@ Returns a paginated list of all recipes with admin metadata. Supports advanced f
           "total_minutes": 180
         },
         "dietary_tags": ["gluten-free-adaptable"],
-        "dish_types": ["main-course", "soup"],
-        "recipe_types": ["comfort-food"],
         "cuisines": ["taiwanese", "chinese"],
         "aliases": ["牛肉麺", "Niu Rou Mian"],
         "source_url": "https://example.com/recipe",
@@ -1743,7 +1728,7 @@ curl -X GET "http://localhost:3000/admin/recipes?cuisines[]=taiwanese&max_prep_t
 
 - Returns all recipes including inactive ones (unlike public API)
 - Includes admin-specific fields: admin_notes, variants_generated, translations_completed
-- Multiple cuisines/dish_types use AND logic (recipe must have all specified)
+- Multiple cuisines use AND logic (recipe must have all specified)
 - Results ordered by creation date (newest first)
 
 ##### Related Endpoints
@@ -1803,8 +1788,6 @@ Returns complete recipe information including all fields, translations, and admi
         "total_minutes": 180
       },
       "dietary_tags": ["gluten-free-adaptable"],
-      "dish_types": ["main-course", "soup"],
-      "recipe_types": ["comfort-food"],
       "cuisines": ["taiwanese", "chinese"],
       "aliases": ["牛肉麺", "Niu Rou Mian"],
       "source_url": "https://example.com/recipe",
@@ -1920,14 +1903,8 @@ Creates a new recipe manually. This is used for recipes that are created from sc
     "recipe_dietary_tags_attributes": [
       {"data_reference_id": 1}
     ],
-    "recipe_dish_types_attributes": [
-      {"data_reference_id": 2}
-    ],
     "recipe_cuisines_attributes": [
-      {"data_reference_id": 3}
-    ],
-    "recipe_recipe_types_attributes": [
-      {"data_reference_id": 4}
+      {"data_reference_id": 2}
     ],
     "recipe_equipment_attributes": [
       {"equipment_id": 1, "optional": false}
@@ -1988,7 +1965,7 @@ curl -X POST http://localhost:3000/admin/recipes \
 - Servings and timing are now normalized columns (servings_original, servings_min, servings_max, prep_minutes, cook_minutes, total_minutes)
 - Nested attributes use Rails accepts_nested_attributes_for: ingredient_groups_attributes, recipe_steps_attributes, recipe_nutrition_attributes, etc.
 - Use _destroy: true flag to delete nested records during updates
-- DataReference arrays (dietary_tags, dish_types, cuisines, recipe_types) reference data_reference_id
+- DataReference arrays (dietary_tags, cuisines) reference data_reference_id
 
 ##### Related Endpoints
 
@@ -2804,13 +2781,13 @@ GET /admin/data_references
 
 ##### Description
 
-Returns all data references (dietary tags, cuisines, dish types, etc.) with admin metadata including inactive entries.
+Returns all data references (dietary tags, cuisines, etc.) with admin metadata including inactive entries.
 
 ##### Query Parameters
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
-| `reference_type` | String | No | Filter by type: dietary_tag, dish_type, recipe_type, cuisine, unit |
+| `reference_type` | String | No | Filter by type: dietary_tag, cuisine, unit |
 | `active` | String | No | Filter by active status: "true" or "false" |
 
 ##### Response
@@ -2957,7 +2934,7 @@ POST /admin/data_references
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
-| `reference_type` | String | Yes | Type: dietary_tag, dish_type, recipe_type, cuisine, unit |
+| `reference_type` | String | Yes | Type: dietary_tag, cuisine, unit |
 | `key` | String | Yes | Unique key (lowercase, hyphenated) |
 | `display_name` | String | Yes | Human-readable name |
 | `active` | Boolean | No | Whether active (default: true) |

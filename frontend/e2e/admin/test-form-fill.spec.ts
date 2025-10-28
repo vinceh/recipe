@@ -64,9 +64,7 @@ test.describe('Form Fill Testing', () => {
 
         // Tags
         fd.dietary_tags = ['vegetarian']
-        fd.dish_types = ['dessert']
         fd.cuisines = ['american']
-        fd.recipe_types = ['baking']
         fd.aliases = ['Choco Cake', 'Easy Cake']
         fd.equipment = ['Mixing bowl', 'Whisk', '9-inch round cake pan', 'Oven']
 

@@ -391,17 +391,7 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 **WHEN** search executes
 **THEN** only recipes with cuisine "japanese" should appear
 
-### AC-SEARCH-010: Dish Type Filter - Main Course
-**GIVEN** user selects "Main Course" dish type
-**WHEN** search executes
-**THEN** only recipes with dish_type "main-course" should appear
-
-### AC-SEARCH-011: Recipe Type Filter - Quick Weeknight
-**GIVEN** user selects "Quick Weeknight" recipe type
-**WHEN** search executes
-**THEN** only recipes with recipe_type "quick-weeknight" should appear
-
-### AC-SEARCH-012: Cooking Time Filter - Total Time Range
+### AC-SEARCH-010: Cooking Time Filter - Total Time Range
 **GIVEN** user sets total time filter to 10-30 minutes
 **WHEN** search executes
 **THEN** only recipes with total_minutes between 10-30 should appear
@@ -1133,7 +1123,7 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 **AND** recipe form should populate with all extracted fields:
   - name, source_url, servings, difficulty, language
   - timing (prep_minutes, cook_minutes, total_minutes)
-  - tags (dietary_tags, cuisines, dish_types, recipe_types)
+  - tags (dietary_tags, cuisines)
   - aliases array
   - ingredient_groups with all items (name, amount, unit, notes, optional flag)
   - steps with instructions and timing
@@ -1626,12 +1616,12 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 
 #### AC-MODEL-DATAREF-005: Key Uniqueness Scoped to Reference Type
 **GIVEN** a DataReference with key="vegetarian" and reference_type="dietary_tag"
-**WHEN** attempting to create another with key="vegetarian" but reference_type="recipe_type"
+**WHEN** attempting to create another with key="vegetarian" but reference_type="cuisine"
 **THEN** the new record should be persisted successfully (different reference_type allows duplicate key)
 
 #### AC-MODEL-DATAREF-006: Reference Type Enum Constraint - Valid Values
 **GIVEN** a DataReference model instance
-**WHEN** attempting to set reference_type to valid values ("dietary_tag", "dish_type", "cuisine", "recipe_type")
+**WHEN** attempting to set reference_type to valid values ("dietary_tag", "cuisine", "unit")
 **THEN** the record should be persisted successfully
 **AND** the reference_type should be stored correctly
 

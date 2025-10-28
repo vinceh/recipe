@@ -165,9 +165,6 @@ margherita.recipe_steps.build(step_number: 9, instruction_original: "Remove from
 
 
 margherita.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "italian", "Italian"))
-margherita.recipe_dish_types.build(data_reference: create_data_reference("dish_type", "main-course", "Main Course"))
-margherita.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "pizza", "Pizza"))
-margherita.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "weekend-project", "Weekend Project"))
 
 margherita.recipe_aliases.build(alias_name: "Pizza Margherita", language: "en")
 margherita.recipe_aliases.build(alias_name: "ピザ・マルゲリータ", language: "ja")
@@ -319,9 +316,6 @@ pad_thai.recipe_steps.build(step_number: 9, instruction_original: "Transfer to p
 
 
 pad_thai.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "thai", "Thai"))
-pad_thai.recipe_dish_types.build(data_reference: create_data_reference("dish_type", "main-course", "Main Course"))
-pad_thai.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "stir-fry", "Stir Fry"))
-pad_thai.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "quick-weeknight", "Quick Weeknight"))
 pad_thai.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "shellfish-free", "Shellfish-Free"))
 
 pad_thai.recipe_aliases.build(alias_name: "Thai Stir-Fried Noodles", language: "en")
@@ -456,8 +450,6 @@ shakshuka.recipe_steps.build(step_number: 9, instruction_original: "Garnish with
 
 
 shakshuka.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "middle-eastern", "Middle Eastern"))
-shakshuka.recipe_dish_types.build(data_reference: create_data_reference("dish_type", "main-course", "Main Course"))
-shakshuka.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "breakfast", "Breakfast"))
 shakshuka.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "vegetarian", "Vegetarian"))
 shakshuka.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "gluten-free", "Gluten-Free"))
 
@@ -601,8 +593,6 @@ tom_yum.recipe_steps.build(step_number: 8, instruction_original: "Ladle into bow
 
 
 tom_yum.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "thai", "Thai"))
-tom_yum.recipe_dish_types.build(data_reference: create_data_reference("dish_type", "soup", "Soup"))
-tom_yum.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "seafood", "Seafood"))
 
 tom_yum.recipe_aliases.build(alias_name: "Hot & Sour Shrimp Soup", language: "en")
 tom_yum.recipe_aliases.build(alias_name: "ต้มยำกุ้ง", language: "th")
@@ -691,9 +681,6 @@ aglio_olio.recipe_steps.build(step_number: 8, instruction_original: "Serve immed
 
 
 aglio_olio.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "italian", "Italian"))
-aglio_olio.recipe_dish_types.build(data_reference: create_data_reference("dish_type", "main-course", "Main Course"))
-aglio_olio.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "pasta", "Pasta"))
-aglio_olio.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "under-30-min", "Under 30 Minutes"))
 aglio_olio.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "vegan", "Vegan"))
 
 aglio_olio.recipe_aliases.build(alias_name: "Garlic and Oil Pasta", language: "en")
@@ -821,9 +808,6 @@ oyakodon.recipe_steps.build(step_number: 9, instruction_original: "Garnish with 
 
 
 oyakodon.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "japanese", "Japanese"))
-oyakodon.recipe_dish_types.build(data_reference: create_data_reference("dish_type", "main-course", "Main Course"))
-oyakodon.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "breakfast", "Breakfast"))
-oyakodon.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "quick-weeknight", "Quick Weeknight"))
 
 oyakodon.recipe_aliases.build(alias_name: "Parent-and-Child Rice Bowl", language: "en")
 oyakodon.recipe_aliases.build(alias_name: "親子丼", language: "ja")
@@ -943,9 +927,6 @@ greek_salad.recipe_steps.build(step_number: 5, instruction_original: "Top with c
 
 
 greek_salad.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "greek", "Greek"))
-greek_salad.recipe_dish_types.build(data_reference: create_data_reference("dish_type", "salad", "Salad"))
-greek_salad.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "vegetable-focused", "Vegetable-Focused"))
-greek_salad.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "no-cook", "No Cook"))
 greek_salad.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "vegetarian", "Vegetarian"))
 
 greek_salad.recipe_aliases.build(alias_name: "Horiatiki Salad", language: "en")
@@ -1030,9 +1011,6 @@ sourdough.recipe_steps.build(step_number: 10, instruction_original: "Remove lid 
 
 
 sourdough.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "american", "American"))
-sourdough.recipe_dish_types.build(data_reference: create_data_reference("dish_type", "bread", "Bread"))
-sourdough.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "baking", "Baking"))
-sourdough.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "weekend-project", "Weekend Project"))
 sourdough.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "vegan", "Vegan"))
 
 sourdough.recipe_aliases.build(alias_name: "Artisan Bread", language: "en")
@@ -1181,9 +1159,6 @@ beef_tacos.recipe_steps.build(step_number: 8, instruction_original: "Top with le
 
 
 beef_tacos.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "mexican", "Mexican"))
-beef_tacos.recipe_dish_types.build(data_reference: create_data_reference("dish_type", "main-course", "Main Course"))
-beef_tacos.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "taco", "Taco"))
-beef_tacos.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "quick-weeknight", "Quick Weeknight"))
 
 beef_tacos.recipe_aliases.build(alias_name: "Street Tacos", language: "en")
 beef_tacos.recipe_aliases.build(alias_name: "Tacos de Carne Molida", language: "es")
@@ -1315,8 +1290,6 @@ kimchi_jjigae.recipe_steps.build(step_number: 8, instruction_original: "Ladle in
 
 
 kimchi_jjigae.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "korean", "Korean"))
-kimchi_jjigae.recipe_dish_types.build(data_reference: create_data_reference("dish_type", "soup", "Soup"))
-kimchi_jjigae.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "stew", "Stew"))
 
 kimchi_jjigae.recipe_aliases.build(alias_name: "Kimchi Stew", language: "en")
 kimchi_jjigae.recipe_aliases.build(alias_name: "김치찌개", language: "ko")
@@ -1441,8 +1414,6 @@ onion_soup.recipe_steps.build(step_number: 9, instruction_original: "Pile shredd
 
 
 onion_soup.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "french", "French"))
-onion_soup.recipe_dish_types.build(data_reference: create_data_reference("dish_type", "soup", "Soup"))
-onion_soup.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "vegetable-focused", "Vegetable-Focused"))
 onion_soup.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "vegetarian", "Vegetarian"))
 
 onion_soup.recipe_aliases.build(alias_name: "Soupe à l'Oignon", language: "fr")
@@ -1571,9 +1542,6 @@ cookies.recipe_steps.build(step_number: 9, instruction_original: "Cool on baking
 
 
 cookies.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "american", "American"))
-cookies.recipe_dish_types.build(data_reference: create_data_reference("dish_type", "desserts", "Desserts"))
-cookies.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "baking", "Baking"))
-cookies.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "cookies", "Cookies"))
 
 cookies.recipe_aliases.build(alias_name: "Toll House Cookies", language: "en")
 cookies.recipe_aliases.build(alias_name: "チョコレートチップクッキー", language: "ja")
@@ -1677,9 +1645,6 @@ guacamole.recipe_steps.build(step_number: 7, instruction_original: "Taste and ad
 
 
 guacamole.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "mexican", "Mexican"))
-guacamole.recipe_dish_types.build(data_reference: create_data_reference("dish_type", "starter", "Starter"))
-guacamole.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "appetizer", "Appetizer"))
-guacamole.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "no-cook", "No Cook"))
 guacamole.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "vegan", "Vegan"))
 guacamole.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "gluten-free", "Gluten-Free"))
 
@@ -1813,9 +1778,6 @@ ratatouille.recipe_steps.build(step_number: 9, instruction_original: "Serve warm
 
 
 ratatouille.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "french", "French"))
-ratatouille.recipe_dish_types.build(data_reference: create_data_reference("dish_type", "side-dish", "Side Dish"))
-ratatouille.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "vegetable-focused", "Vegetable-Focused"))
-ratatouille.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "make-ahead", "Make-Ahead"))
 ratatouille.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "vegan", "Vegan"))
 
 ratatouille.recipe_aliases.build(alias_name: "Vegetable Stew", language: "en")
@@ -1957,9 +1919,6 @@ teriyaki.recipe_steps.build(step_number: 9, instruction_original: "Serve chicken
 
 
 teriyaki.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "japanese", "Japanese"))
-teriyaki.recipe_dish_types.build(data_reference: create_data_reference("dish_type", "main-course", "Main Course"))
-teriyaki.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "grilled", "Grilled"))
-teriyaki.recipe_recipe_types.build(data_reference: create_data_reference("recipe_type", "quick-weeknight", "Quick Weeknight"))
 
 teriyaki.recipe_aliases.build(alias_name: "Glazed Chicken", language: "en")
 teriyaki.recipe_aliases.build(alias_name: "照り焼きチキン", language: "ja")
@@ -1977,7 +1936,7 @@ puts "   ✅ Recipe 15: Chicken Teriyaki"
 
 puts "\n✅ All 15 authentic recipes created with comprehensive data!"
 puts "   • All recipes have instruction_original text for every step ✓"
-puts "   • All recipes have complete cuisine, dish_type, recipe_type assignments ✓"
+puts "   • All recipes have complete cuisine assignments ✓"
 puts "   • All recipes have realistic nutrition data ✓"
 puts "   • All recipes have proper ingredient groups and amounts ✓"
 puts "   • All recipes have equipment specifications ✓"

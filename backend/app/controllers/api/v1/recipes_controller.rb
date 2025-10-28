@@ -21,7 +21,7 @@ module Api
         total_pages = (total_count.to_f / per_page).ceil
 
         # Eager load associations for list view
-        recipes = recipes.includes(:ingredient_groups, :recipe_ingredients, :equipment, :dietary_tags, :dish_types, :cuisines, :recipe_types, :recipe_steps)
+        recipes = recipes.includes(:ingredient_groups, :recipe_ingredients, :equipment, :dietary_tags, :cuisines, :recipe_steps)
 
         paginated_recipes = recipes
           .order(created_at: :desc)
@@ -44,7 +44,7 @@ module Api
       # GET /api/v1/recipes/:id
       # Show single recipe with full details
       def show
-        recipe = Recipe.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :dish_types, :cuisines, :recipe_types, :recipe_aliases, :recipe_steps).find(params[:id])
+        recipe = Recipe.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :cuisines, :recipe_aliases, :recipe_steps).find(params[:id])
         render_success(data: { recipe: recipe_detail_json(recipe) })
       end
 
@@ -126,13 +126,6 @@ module Api
           recipes = recipes.joins(:recipe_dietary_tags).where(recipe_dietary_tags: { data_reference_id: tag_ids }).distinct
         end
 
-        # Filter by dish types
-        if params[:dish_types].present?
-          type_names = params[:dish_types].split(",").map(&:strip)
-          type_ids = DataReferenceTranslation.where(display_name: type_names, data_reference_id: DataReference.where(reference_type: "dish_type").pluck(:id)).distinct.pluck(:data_reference_id)
-          recipes = recipes.joins(:recipe_dish_types).where(recipe_dish_types: { data_reference_id: type_ids }).distinct
-        end
-
         # Filter by cuisines
         if params[:cuisines].present?
           cuisine_names = params[:cuisines].split(",").map(&:strip)
@@ -176,7 +169,6 @@ module Api
             total_minutes: recipe.total_minutes
           },
           dietary_tags: recipe.dietary_tags.map(&:display_name).compact,
-          dish_types: recipe.dish_types.map(&:display_name).compact,
           cuisines: recipe.cuisines.map(&:display_name).compact,
           source_url: recipe.source_url,
           translations_completed: recipe.translations_completed,
@@ -204,8 +196,6 @@ module Api
             total_minutes: recipe.total_minutes
           },
           dietary_tags: recipe.dietary_tags.map(&:display_name).compact,
-          dish_types: recipe.dish_types.map(&:display_name).compact,
-          recipe_types: recipe.recipe_types.map(&:display_name).compact,
           cuisines: recipe.cuisines.map(&:display_name).compact,
           ingredient_groups: serialize_ingredient_groups(recipe),
           steps: serialize_recipe_steps(recipe),

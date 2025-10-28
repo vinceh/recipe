@@ -73,8 +73,6 @@ ko:
       difficulty: "난이도"
       dietary_tags: "식단 태그"
       cuisines: "요리 종류"
-      dish_types: "음식 유형"
-      recipe_types: "레시피 유형"
       ingredients: "재료"
       steps: "조리 순서"
       equipment: "조리 도구"

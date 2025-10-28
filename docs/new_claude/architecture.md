@@ -72,12 +72,8 @@ class Recipe < ApplicationRecord
   # Reference data
   has_many :recipe_dietary_tags, dependent: :destroy
   has_many :dietary_tags, through: :recipe_dietary_tags, source: :data_reference
-  has_many :recipe_dish_types, dependent: :destroy
-  has_many :dish_types, through: :recipe_dish_types, source: :data_reference
   has_many :recipe_cuisines, dependent: :destroy
   has_many :cuisines, through: :recipe_cuisines, source: :data_reference
-  has_many :recipe_recipe_types, dependent: :destroy
-  has_many :recipe_types, through: :recipe_recipe_types, source: :data_reference
 
   # Other
   has_many :recipe_aliases, dependent: :destroy
@@ -87,9 +83,7 @@ class Recipe < ApplicationRecord
   accepts_nested_attributes_for :recipe_nutrition, allow_destroy: true, reject_if: :all_blank
   accepts_nested_attributes_for :recipe_equipment, allow_destroy: true, reject_if: proc { |attrs| attrs['equipment_id'].blank? }
   accepts_nested_attributes_for :recipe_dietary_tags, allow_destroy: true, reject_if: proc { |attrs| attrs['data_reference_id'].blank? }
-  accepts_nested_attributes_for :recipe_dish_types, allow_destroy: true, reject_if: proc { |attrs| attrs['data_reference_id'].blank? }
   accepts_nested_attributes_for :recipe_cuisines, allow_destroy: true, reject_if: proc { |attrs| attrs['data_reference_id'].blank? }
-  accepts_nested_attributes_for :recipe_recipe_types, allow_destroy: true, reject_if: proc { |attrs| attrs['data_reference_id'].blank? }
   accepts_nested_attributes_for :recipe_aliases, allow_destroy: true, reject_if: proc { |attrs| attrs['alias_name'].blank? }
 
   validates :name, presence: true
@@ -187,7 +181,7 @@ class DataReference < ApplicationRecord
 
   translates :display_name, backend: :table
 
-  VALID_TYPES = %w[dietary_tag cuisine dish_type recipe_type].freeze
+  VALID_TYPES = %w[dietary_tag cuisine unit].freeze
 
   validates :reference_type, presence: true, inclusion: { in: VALID_TYPES }
   validates :key, presence: true, uniqueness: { scope: :reference_type }
@@ -195,8 +189,6 @@ class DataReference < ApplicationRecord
 
   scope :dietary_tags, -> { where(reference_type: 'dietary_tag') }
   scope :cuisines, -> { where(reference_type: 'cuisine') }
-  scope :dish_types, -> { where(reference_type: 'dish_type') }
-  scope :recipe_types, -> { where(reference_type: 'recipe_type') }
   scope :active, -> { where(active: true) }
 end
 ```

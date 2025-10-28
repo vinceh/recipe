@@ -19,12 +19,10 @@ const dataStore = useDataReferenceStore()
 
 const formData = ref<Partial<RecipeDetail>>({})
 
-function getDataReferenceIdByKey(key: string, referenceType: 'dietary_tag' | 'cuisine' | 'dish_type' | 'recipe_type'): string | undefined {
+function getDataReferenceIdByKey(key: string, referenceType: 'dietary_tag' | 'cuisine'): string | undefined {
   const refMap: Record<string, any[]> = {
     'dietary_tag': dataStore.dietaryTags,
-    'cuisine': dataStore.cuisines,
-    'dish_type': dataStore.dishTypes,
-    'recipe_type': dataStore.recipeTypes
+    'cuisine': dataStore.cuisines
   }
   return refMap[referenceType]?.find(ref => ref.key === key)?.id
 }
@@ -86,16 +84,8 @@ function transformFormDataToBackend(data: Partial<RecipeDetail>): any {
       const id = getDataReferenceIdByKey(tag, 'dietary_tag')
       return id ? { data_reference_id: id } : null
     }).filter(Boolean) || [],
-    recipe_dish_types_attributes: data.dish_types?.filter(type => type).map(type => {
-      const id = getDataReferenceIdByKey(type, 'dish_type')
-      return id ? { data_reference_id: id } : null
-    }).filter(Boolean) || [],
     recipe_cuisines_attributes: data.cuisines?.filter(cuisine => cuisine).map(cuisine => {
       const id = getDataReferenceIdByKey(cuisine, 'cuisine')
-      return id ? { data_reference_id: id } : null
-    }).filter(Boolean) || [],
-    recipe_recipe_types_attributes: data.recipe_types?.filter(type => type).map(type => {
-      const id = getDataReferenceIdByKey(type, 'recipe_type')
       return id ? { data_reference_id: id } : null
     }).filter(Boolean) || [],
     ingredient_groups_attributes: data.ingredient_groups?.filter(group => group.name?.trim()).map((group, groupIdx) => ({

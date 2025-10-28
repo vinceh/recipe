@@ -353,50 +353,6 @@ RSpec.describe RecipeSearchService, type: :service do
         expect(results).to include(recipe_jp, recipe_it)
       end
     end
-
-    context 'AC-SEARCH-010: Dish Type Filter - Main Course' do
-      it 'filters recipes by dish type' do
-        main_course = find_or_create_data_reference("dish_type", "main-course")
-        dessert = find_or_create_data_reference("dish_type", "dessert")
-
-        recipe_main = make_recipe
-        recipe_main.name = "Main"
-        recipe_main.save
-        create(:recipe_dish_type, recipe: recipe_main, data_reference: main_course)
-
-        recipe_dessert = make_recipe
-        recipe_dessert.name = "Dessert"
-        recipe_dessert.save
-        create(:recipe_dish_type, recipe: recipe_dessert, data_reference: dessert)
-
-        results = RecipeSearchService.filter_by_dish_types(Recipe.all, ["main-course"])
-
-        expect(results).to include(recipe_main)
-        expect(results).not_to include(recipe_dessert)
-      end
-    end
-
-    context 'AC-SEARCH-011: Recipe Type Filter - Quick Weeknight' do
-      it 'filters recipes by recipe type' do
-        quick = find_or_create_data_reference("recipe_type", "quick-weeknight")
-        slow = find_or_create_data_reference("recipe_type", "slow-cooker")
-
-        recipe_quick = make_recipe
-        recipe_quick.name = "Quick"
-        recipe_quick.save
-        create(:recipe_recipe_type, recipe: recipe_quick, data_reference: quick)
-
-        recipe_slow = make_recipe
-        recipe_slow.name = "Slow"
-        recipe_slow.save
-        create(:recipe_recipe_type, recipe: recipe_slow, data_reference: slow)
-
-        results = RecipeSearchService.filter_by_recipe_types(Recipe.all, ["quick-weeknight"])
-
-        expect(results).to include(recipe_quick)
-        expect(results).not_to include(recipe_slow)
-      end
-    end
   end
 
   describe 'Time Filters' do

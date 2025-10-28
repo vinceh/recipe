@@ -186,7 +186,6 @@ onBeforeUnmount(() => {
               <th>{{ $t('admin.recipes.table.name') }}</th>
               <th>{{ $t('admin.recipes.table.language') }}</th>
               <th>{{ $t('admin.recipes.table.cuisines') }}</th>
-              <th>{{ $t('admin.recipes.table.dishTypes') }}</th>
               <th>{{ $t('admin.recipes.table.servings') }}</th>
               <th>{{ $t('admin.recipes.table.timing') }}</th>
               <th>{{ $t('common.labels.actions') }}</th>
@@ -214,20 +213,6 @@ onBeforeUnmount(() => {
                   </span>
                   <span v-if="recipe.cuisines && recipe.cuisines.length > 2" class="tag-more">
                     +{{ recipe.cuisines.length - 2 }}
-                  </span>
-                </div>
-              </td>
-              <td>
-                <div class="tags">
-                  <span
-                    v-for="type in recipe.dish_types?.slice(0, 2)"
-                    :key="type"
-                    class="tag"
-                  >
-                    {{ type }}
-                  </span>
-                  <span v-if="recipe.dish_types && recipe.dish_types.length > 2" class="tag-more">
-                    +{{ recipe.dish_types.length - 2 }}
                   </span>
                 </div>
               </td>

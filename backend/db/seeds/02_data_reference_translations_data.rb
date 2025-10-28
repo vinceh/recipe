@@ -194,44 +194,6 @@ DATA_REFERENCE_TRANSLATIONS = {
       'low-carb' => 'Faible en glucides', 'low-sodium' => 'Faible en sodium', 'kidney-friendly' => 'Adapté aux reins', 'immuno-supportive' => 'Soutien immunitaire', 'alcohol-free' => 'Sans alcool',
       'alcohol-cocktail' => 'Cocktail', 'no-oil-added' => 'Sans huile ajoutée', 'fodmap-free' => 'Faible en FODMAP', 'whole30' => 'Whole30', 'raw' => 'Cru'
     }
-  },
-  'dish_type' => {
-    'ja' => {
-      'biscuits-and-cookies' => 'ビスケットとクッキー', 'bread' => 'パン', 'cereals' => 'シリアル', 'condiments-and-sauces' => '調味料とソース', 'desserts' => 'デザート',
-      'drinks' => '飲み物', 'main-course' => 'メインディッシュ', 'pancake' => 'パンケーキ', 'preps' => '下ごしらえ', 'preserve' => '保存食',
-      'salad' => 'サラダ', 'sandwiches' => 'サンドイッチ', 'side-dish' => '副菜', 'soup' => 'スープ', 'starter' => '前菜',
-      'sweets' => 'お菓子'
-    },
-    'ko' => {
-      'biscuits-and-cookies' => '비스킷과 쿠키', 'bread' => '빵', 'cereals' => '시리얼', 'condiments-and-sauces' => '양념과 소스', 'desserts' => '디저트',
-      'drinks' => '음료', 'main-course' => '메인 요리', 'pancake' => '팬케이크', 'preps' => '준비', 'preserve' => '보존식품',
-      'salad' => '샐러드', 'sandwiches' => '샌드위치', 'side-dish' => '반찬', 'soup' => '국', 'starter' => '애피타이저',
-      'sweets' => '과자'
-    },
-    'zh_tw' => {
-      'biscuits-and-cookies' => '餅乾', 'bread' => '麵包', 'cereals' => '穀物', 'condiments-and-sauces' => '調味料和醬汁', 'desserts' => '甜點',
-      'drinks' => '飲品', 'main-course' => '主菜', 'pancake' => '鬆餅', 'preps' => '備料', 'preserve' => '醃製品',
-      'salad' => '沙拉', 'sandwiches' => '三明治', 'side-dish' => '配菜', 'soup' => '湯', 'starter' => '前菜',
-      'sweets' => '甜食'
-    },
-    'zh_cn' => {
-      'biscuits-and-cookies' => '饼干', 'bread' => '面包', 'cereals' => '谷物', 'condiments-and-sauces' => '调味料和酱汁', 'desserts' => '甜点',
-      'drinks' => '饮品', 'main-course' => '主菜', 'pancake' => '煎饼', 'preps' => '备料', 'preserve' => '腌制品',
-      'salad' => '沙拉', 'sandwiches' => '三明治', 'side-dish' => '配菜', 'soup' => '汤', 'starter' => '前菜',
-      'sweets' => '甜食'
-    },
-    'es' => {
-      'biscuits-and-cookies' => 'Galletas', 'bread' => 'Pan', 'cereals' => 'Cereales', 'condiments-and-sauces' => 'Condimentos y salsas', 'desserts' => 'Postres',
-      'drinks' => 'Bebidas', 'main-course' => 'Plato principal', 'pancake' => 'Panqueque', 'preps' => 'Preparaciones', 'preserve' => 'Conservas',
-      'salad' => 'Ensalada', 'sandwiches' => 'Sándwiches', 'side-dish' => 'Guarnición', 'soup' => 'Sopa', 'starter' => 'Entrante',
-      'sweets' => 'Dulces'
-    },
-    'fr' => {
-      'biscuits-and-cookies' => 'Biscuits', 'bread' => 'Pain', 'cereals' => 'Céréales', 'condiments-and-sauces' => 'Condiments et sauces', 'desserts' => 'Desserts',
-      'drinks' => 'Boissons', 'main-course' => 'Plat principal', 'pancake' => 'Crêpe', 'preps' => 'Préparations', 'preserve' => 'Conserves',
-      'salad' => 'Salade', 'sandwiches' => 'Sandwichs', 'side-dish' => 'Accompagnement', 'soup' => 'Soupe', 'starter' => 'Entrée',
-      'sweets' => 'Friandises'
-    }
   }
 }
 

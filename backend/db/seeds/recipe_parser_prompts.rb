@@ -18,8 +18,6 @@ RECIPE_JSON_SCHEMA = <<~JSON.freeze
       "total_minutes": 45
     },
     "dietary_tags": ["vegetarian", "gluten-free"],
-    "dish_types": ["main-course"],
-    "recipe_types": ["quick-weeknight"],
     "cuisines": ["japanese"],
     "ingredient_groups": [
       {

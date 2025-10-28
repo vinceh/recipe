@@ -107,10 +107,6 @@
       "dietaryTagsPlaceholder": "选择饮食标签",
       "cuisines": "料理类型",
       "cuisinesPlaceholder": "选择料理类型",
-      "dishTypes": "菜式类型",
-      "dishTypesPlaceholder": "选择菜式类型",
-      "recipeTypes": "食谱类型",
-      "recipeTypesPlaceholder": "选择食谱类型",
       "aliases": "别名",
       "aliasesPlaceholder": "例如：「巧克力饼干」或「CCC」",
       "aliasesHint": "按 Enter 添加。这些别名可帮助用户以不同名称找到食谱",
@@ -213,7 +209,6 @@
         "name": "名称",
         "language": "语言",
         "cuisines": "料理类型",
-        "dishTypes": "菜式类型",
         "servings": "份数",
         "timing": "时间",
         "minutes": "分钟",
@@ -240,13 +235,11 @@
           "servings": "份数",
           "timing": "总时间",
           "cuisines": "料理类型",
-          "dishTypes": "菜式类型",
           "dietaryTags": "饮食标签",
           "aliases": "别名",
           "sourceUrl": "来源网址",
           "requiresPrecision": "需要精确度",
-          "adminNotes": "管理员备注",
-          "recipeTypes": "食谱类型"
+          "adminNotes": "管理员备注"
         },
         "actions": {
           "regenerateTranslations": "重新生成翻译"

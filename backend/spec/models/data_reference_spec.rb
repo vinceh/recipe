@@ -36,14 +36,14 @@ RSpec.describe DataReference, type: :model do
 
       it 'allows same key with different reference_type (AC-MODEL-DATAREF-005)' do
         create(:data_reference, key: 'vegetarian', reference_type: 'dietary_tag')
-        ref = build(:data_reference, key: 'vegetarian', reference_type: 'recipe_type')
+        ref = build(:data_reference, key: 'vegetarian', reference_type: 'cuisine')
         expect(ref).to be_valid
       end
     end
 
     describe 'reference_type enum' do
       it 'accepts valid reference_type values (AC-MODEL-DATAREF-006)' do
-        %w[dietary_tag dish_type cuisine recipe_type unit].each do |type|
+        %w[dietary_tag cuisine unit].each do |type|
           ref = build(:data_reference, reference_type: type)
           expect(ref).to be_valid, "Expected reference_type '#{type}' to be valid"
         end
@@ -62,19 +62,9 @@ RSpec.describe DataReference, type: :model do
       expect(ref).to respond_to(:recipes_as_dietary_tag)
     end
 
-    it 'has many recipes as dish_type' do
-      ref = create(:data_reference, reference_type: 'dish_type')
-      expect(ref).to respond_to(:recipes_as_dish_type)
-    end
-
     it 'has many recipes as cuisine' do
       ref = create(:data_reference, reference_type: 'cuisine')
       expect(ref).to respond_to(:recipes_as_cuisine)
-    end
-
-    it 'has many recipes as recipe_type' do
-      ref = create(:data_reference, reference_type: 'recipe_type')
-      expect(ref).to respond_to(:recipes_as_recipe_type)
     end
   end
 end

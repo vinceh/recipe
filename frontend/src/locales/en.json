@@ -107,10 +107,6 @@
       "dietaryTagsPlaceholder": "Select dietary tags",
       "cuisines": "Cuisines",
       "cuisinesPlaceholder": "Select cuisines",
-      "dishTypes": "Dish Types",
-      "dishTypesPlaceholder": "Select dish types",
-      "recipeTypes": "Recipe Types",
-      "recipeTypesPlaceholder": "Select recipe types",
       "aliases": "Alternate Names",
       "aliasesPlaceholder": "e.g., 'Chocolate Chip Cookies' or 'CCC'",
       "aliasesHint": "Press Enter to add. These help users find the recipe by different names.",
@@ -213,7 +209,6 @@
         "name": "Name",
         "language": "Language",
         "cuisines": "Cuisines",
-        "dishTypes": "Dish Types",
         "servings": "Servings",
         "timing": "Time",
         "minutes": "min",
@@ -240,13 +235,11 @@
           "servings": "Servings",
           "timing": "Total Time",
           "cuisines": "Cuisines",
-          "dishTypes": "Dish Types",
           "dietaryTags": "Dietary Tags",
           "aliases": "Aliases",
           "sourceUrl": "Source URL",
           "requiresPrecision": "Requires Precision",
-          "adminNotes": "Admin Notes",
-          "recipeTypes": "Recipe Types"
+          "adminNotes": "Admin Notes"
         },
         "actions": {
           "regenerateTranslations": "Regenerate Translations"

@@ -148,11 +148,8 @@ class RecipeScaler
   end
 
   def detect_cooking_context(recipe)
-    # Check if recipe requires precision (baking, confectionery, etc.)
-    return 'baking' if recipe.requires_precision
-
-    precision_types = ['baking', 'confectionery', 'fermentation', 'molecular']
-    recipe.recipe_recipe_types.joins(:data_reference).where(data_references: { key: precision_types }).exists? ? 'baking' : 'cooking'
+    # Use requires_precision flag to determine cooking context
+    recipe.requires_precision ? 'baking' : 'cooking'
   end
 
   def find_ingredient_by_id(ingredient_id)

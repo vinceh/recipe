@@ -21,13 +21,6 @@ module Admin
         recipes = recipes.joins(:recipe_cuisines).where(recipe_cuisines: { data_reference_id: cuisine_id }).distinct if cuisine_id
       end
 
-      # Filter by dish types (multiple)
-      if params[:dish_types].present?
-        type_names = params[:dish_types].is_a?(Array) ? params[:dish_types] : [ params[:dish_types] ]
-        type_ids = DataReference.where(reference_type: "dish_type", display_name: type_names).pluck(:id)
-        recipes = recipes.joins(:recipe_dish_types).where(recipe_dish_types: { data_reference_id: type_ids }).distinct
-      end
-
       # Filter by max prep time
       if params[:max_prep_time].present?
         max_time = params[:max_prep_time].to_i
@@ -48,7 +41,7 @@ module Admin
       total_pages = (total_count.to_f / per_page).ceil
 
       # Eager load associations for serialization
-      recipes = recipes.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :dish_types, :cuisines, :recipe_types, recipe_steps: :translations)
+      recipes = recipes.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :cuisines, recipe_steps: :translations)
 
       paginated_recipes = recipes
         .offset((page - 1) * per_page)
@@ -70,7 +63,7 @@ module Admin
     # GET /admin/recipes/:id
     # Show a single recipe with full details
     def show
-      recipe = Recipe.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :dish_types, :cuisines, :recipe_types, :recipe_aliases, recipe_steps: :translations).find(params[:id])
+      recipe = Recipe.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :cuisines, :recipe_aliases, recipe_steps: :translations).find(params[:id])
 
       render_success(
         data: { recipe: admin_recipe_json_full(recipe) }
@@ -265,13 +258,7 @@ module Admin
         recipe_dietary_tags_attributes: [
           :id, :data_reference_id, :_destroy
         ],
-        recipe_dish_types_attributes: [
-          :id, :data_reference_id, :_destroy
-        ],
         recipe_cuisines_attributes: [
-          :id, :data_reference_id, :_destroy
-        ],
-        recipe_recipe_types_attributes: [
           :id, :data_reference_id, :_destroy
         ],
         recipe_aliases_attributes: [
@@ -297,8 +284,6 @@ module Admin
           total_minutes: recipe.total_minutes
         },
         dietary_tags: recipe.dietary_tags.map(&:key),
-        dish_types: recipe.dish_types.map(&:key),
-        recipe_types: recipe.recipe_types.map(&:key),
         cuisines: recipe.cuisines.map(&:key),
         aliases: recipe.recipe_aliases.map(&:alias_name),
         source_url: recipe.source_url,

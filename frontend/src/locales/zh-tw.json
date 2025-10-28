@@ -107,10 +107,6 @@
       "dietaryTagsPlaceholder": "選擇飲食標籤",
       "cuisines": "料理類型",
       "cuisinesPlaceholder": "選擇料理類型",
-      "dishTypes": "菜式類型",
-      "dishTypesPlaceholder": "選擇菜式類型",
-      "recipeTypes": "食譜類型",
-      "recipeTypesPlaceholder": "選擇食譜類型",
       "aliases": "別名",
       "aliasesPlaceholder": "例如：「巧克力餅乾」或「CCC」",
       "aliasesHint": "按 Enter 新增。這些別名可幫助使用者以不同名稱找到食譜",
@@ -213,7 +209,6 @@
         "name": "名稱",
         "language": "語言",
         "cuisines": "料理類型",
-        "dishTypes": "菜式類型",
         "servings": "份數",
         "timing": "時間",
         "minutes": "分鐘",
@@ -240,13 +235,11 @@
           "servings": "份數",
           "timing": "總時間",
           "cuisines": "料理類型",
-          "dishTypes": "菜式類型",
           "dietaryTags": "飲食標籤",
           "aliases": "別名",
           "sourceUrl": "來源網址",
           "requiresPrecision": "需要精確度",
-          "adminNotes": "管理員備註",
-          "recipeTypes": "食譜類型"
+          "adminNotes": "管理員備註"
         },
         "actions": {
           "regenerateTranslations": "重新生成翻譯"

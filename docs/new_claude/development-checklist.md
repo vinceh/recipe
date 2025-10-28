@@ -86,16 +86,14 @@ This is your **master checklist** for building the Recipe App MVP. Track progres
 - [x] Create Ingredient model (has_one nutrition, has_many aliases)
 - [x] Create IngredientNutrition model (belongs_to ingredient)
 - [x] Create IngredientAlias model (belongs_to ingredient)
-- [x] Create DataReference model (with scopes: dietary_tags, recipe_types, cuisines)
+- [x] Create DataReference model (with scopes: dietary_tags, cuisines)
 - [x] Create AiPrompt model (with scopes: active, by_feature)
 - [x] Add model associations (has_many, belongs_to, through)
 - [x] Add indexes for performance (all migrations include appropriate indexes)
 
 ### Database Seeds ✅
 - [x] Seed dietary tags (42 tags from data-references/dietary-tags.md) - 40 created
-- [x] Seed dish types (16 types from data-references/dish-types.md) - 16 created
 - [x] Seed cuisines (100+ from data-references/cuisines.md) - 99 created
-- [x] Seed recipe types (70+ from data-references/recipe-types.md) - 74 created
 - [x] Seed AI prompts (step variants, translation, discovery, nutrition) - Deferred to Phase 2
 - [x] Create admin user (admin@recipe.app / password123) - Created
 - [x] Run seeds (`rails db:seed`) - Successful
@@ -219,7 +217,7 @@ This is your **master checklist** for building the Recipe App MVP. Track progres
 - [x] Implement GET /api/v1/recipes (list/search with pagination)
   - Pagination: page, per_page (max 100)
   - Search: q parameter (recipe name, case insensitive)
-  - Filters: dietary_tags, dish_types, cuisines (OR logic for multiple values)
+  - Filters: dietary_tags, cuisines (OR logic for multiple values)
   - Time filters: max_cook_time, max_prep_time, max_total_time
 - [x] Implement GET /api/v1/recipes/:id (show full recipe details)
 - [x] Write RSpec tests for recipes API - 23/23 passing
@@ -246,7 +244,7 @@ This is your **master checklist** for building the Recipe App MVP. Track progres
 - [x] Implement GET /api/v1/recipes/:recipe_id/notes (requires authentication)
   - Returns only current user's notes for the recipe
 - [x] Implement GET /api/v1/data_references
-  - Returns all reference data: dietary_tags, dish_types, cuisines, recipe_types
+  - Returns all reference data: dietary_tags, cuisines
   - Optional category filter
 - [x] Write RSpec tests for all new endpoints - 60/60 passing
   - ✅ Recipe scaling: 5 tests
@@ -286,25 +284,19 @@ This is your **master checklist** for building the Recipe App MVP. Track progres
 - [x] AC-SEARCH-009: Multiple cuisines with OR logic ✅
   - Comma-separated cuisines, matches ANY
   - Uses JSONB @> operator with OR conditions
-- [x] AC-SEARCH-010: Dish type filter with OR logic ✅
-  - Supports multiple dish types
-  - e.g., appetizer,side-dish matches either
-- [x] AC-SEARCH-011: Recipe type filter with OR logic ✅
-  - Filters by recipe_types (quick-weeknight, meal-prep, etc.)
-  - Supports multiple values
-- [x] AC-SEARCH-012: Prep time filter ✅
+- [x] AC-SEARCH-010: Prep time filter ✅
   - Filters by max_prep_time
   - Uses timing->prep_minutes
-- [x] AC-SEARCH-013: Cook time filter ✅
+- [x] AC-SEARCH-011: Cook time filter ✅
   - Filters by max_cook_time
   - Uses timing->cook_minutes
-- [x] AC-SEARCH-014: Total time filter ✅
+- [x] AC-SEARCH-012: Total time filter ✅
   - Filters by max_total_time
   - Uses timing->total_minutes
-- [x] AC-SEARCH-015: Servings range filter ✅
+- [x] AC-SEARCH-013: Servings range filter ✅
   - Filters by min_servings and/or max_servings
   - Uses servings->original
-- [x] AC-SEARCH-016: Allergen filtering (ingredient exclusion) ✅
+- [x] AC-SEARCH-014: Allergen filtering (ingredient exclusion) ✅
   - Excludes recipes containing specified ingredients
   - Supports comma-separated exclusion list
   - Useful for peanut, shellfish, dairy allergies

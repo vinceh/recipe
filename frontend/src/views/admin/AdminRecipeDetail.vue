@@ -50,23 +50,17 @@ async function fetchRecipe() {
 }
 
 // Helper functions to map tag keys to display names
-function getDisplayName(key: string, category: 'dietary_tags' | 'dish_types' | 'cuisines' | 'recipe_types'): string {
+function getDisplayName(key: string, category: 'dietary_tags' | 'cuisines'): string {
   if (category === 'dietary_tags') {
     return dataStore.dietaryTags.find(tag => tag.key === key)?.display_name || key
-  } else if (category === 'dish_types') {
-    return dataStore.dishTypes.find(type => type.key === key)?.display_name || key
   } else if (category === 'cuisines') {
     return dataStore.cuisines.find(cuisine => cuisine.key === key)?.display_name || key
-  } else if (category === 'recipe_types') {
-    return dataStore.recipeTypes.find(type => type.key === key)?.display_name || key
   }
   return key
 }
 
 const getCuisineDisplayName = (key: string) => getDisplayName(key, 'cuisines')
-const getDishTypeDisplayName = (key: string) => getDisplayName(key, 'dish_types')
 const getDietaryTagDisplayName = (key: string) => getDisplayName(key, 'dietary_tags')
-const getRecipeTypeDisplayName = (key: string) => getDisplayName(key, 'recipe_types')
 
 function goBack() {
   router.push('/admin/recipes')
@@ -255,19 +249,6 @@ onBeforeUnmount(() => {
                 <span v-if="!recipe.cuisines || recipe.cuisines.length === 0">-</span>
               </div>
             </div>
-            <div class="info-item">
-              <label>{{ $t('admin.recipes.detail.fields.dishTypes') }}</label>
-              <div class="tags">
-                <span
-                  v-for="type in recipe.dish_types"
-                  :key="type"
-                  class="tag"
-                >
-                  {{ getDishTypeDisplayName(type) }}
-                </span>
-                <span v-if="!recipe.dish_types || recipe.dish_types.length === 0">-</span>
-              </div>
-            </div>
           </div>
 
           <div class="info-grid">
@@ -282,19 +263,6 @@ onBeforeUnmount(() => {
                   {{ getDietaryTagDisplayName(tag) }}
                 </span>
                 <span v-if="!recipe.dietary_tags || recipe.dietary_tags.length === 0">-</span>
-              </div>
-            </div>
-            <div class="info-item">
-              <label>{{ $t('admin.recipes.detail.fields.recipeTypes') }}</label>
-              <div class="tags">
-                <span
-                  v-for="type in recipe.recipe_types"
-                  :key="type"
-                  class="tag"
-                >
-                  {{ getRecipeTypeDisplayName(type) }}
-                </span>
-                <span v-if="!recipe.recipe_types || recipe.recipe_types.length === 0">-</span>
               </div>
             </div>
           </div>

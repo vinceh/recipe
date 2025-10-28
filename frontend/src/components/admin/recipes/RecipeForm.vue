@@ -56,9 +56,7 @@ const formData = ref<Partial<Recipe>>({
   nutrition: undefined,
   aliases: [],
   dietary_tags: [],
-  dish_types: [],
   cuisines: [],
-  recipe_types: [],
   ingredient_groups: [
     {
       name: '',
@@ -324,9 +322,7 @@ watch(() => props.modelValue, (newValue) => {
     if (!formData.value.equipment) formData.value.equipment = []
     if (!formData.value.aliases) formData.value.aliases = []
     if (!formData.value.dietary_tags) formData.value.dietary_tags = []
-    if (!formData.value.dish_types) formData.value.dish_types = []
     if (!formData.value.cuisines) formData.value.cuisines = []
-    if (!formData.value.recipe_types) formData.value.recipe_types = []
 
     // Reset flag on next tick to allow subsequent user changes to emit
     nextTick(() => {
@@ -385,9 +381,7 @@ defineExpose({
 onMounted(async () => {
   // Fetch data references if not already loaded
   if (dataStore.dietaryTags.length === 0 ||
-      dataStore.dishTypes.length === 0 ||
-      dataStore.cuisines.length === 0 ||
-      dataStore.recipeTypes.length === 0) {
+      dataStore.cuisines.length === 0) {
     await dataStore.fetchAll()
   }
 
@@ -593,40 +587,6 @@ watch(() => uiStore.language, async () => {
             optionLabel="display_name"
             optionValue="key"
             :placeholder="$t('forms.recipe.dietaryTagsPlaceholder')"
-            class="recipe-form__input"
-            display="chip"
-            filter
-          />
-        </div>
-
-        <div class="recipe-form__field">
-          <label for="dish_types" class="recipe-form__label">
-            {{ $t('forms.recipe.dishTypes') }}
-          </label>
-          <MultiSelect
-            id="dish_types"
-            v-model="formData.dish_types"
-            :options="dataStore.dishTypes"
-            optionLabel="display_name"
-            optionValue="key"
-            :placeholder="$t('forms.recipe.dishTypesPlaceholder')"
-            class="recipe-form__input"
-            display="chip"
-            filter
-          />
-        </div>
-
-        <div class="recipe-form__field">
-          <label for="recipe_types" class="recipe-form__label">
-            {{ $t('forms.recipe.recipeTypes') }}
-          </label>
-          <MultiSelect
-            id="recipe_types"
-            v-model="formData.recipe_types"
-            :options="dataStore.recipeTypes"
-            optionLabel="display_name"
-            optionValue="key"
-            :placeholder="$t('forms.recipe.recipeTypesPlaceholder')"
             class="recipe-form__input"
             display="chip"
             filter

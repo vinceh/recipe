@@ -16,10 +16,8 @@ const hasBasicInfo = computed(() => {
          props.recipe.timing?.total_minutes ||
          props.recipe.aliases?.length ||
          props.recipe.source_url ||
-         props.recipe.recipe_types?.length ||
          props.recipe.cuisines?.length ||
-         props.recipe.dietary_tags?.length ||
-         props.recipe.dish_types?.length
+         props.recipe.dietary_tags?.length
 })
 
 const hasIngredients = computed(() => {
@@ -98,11 +96,9 @@ function formatIngredient(item: any): string {
           </div>
         </div>
 
-        <div v-if="recipe.cuisines?.length || recipe.dietary_tags?.length || recipe.dish_types?.length || recipe.recipe_types?.length" class="recipe-tags">
+        <div v-if="recipe.cuisines?.length || recipe.dietary_tags?.length" class="recipe-tags">
           <span v-for="cuisine in recipe.cuisines" :key="cuisine" class="tag tag-cuisine">{{ cuisine }}</span>
           <span v-for="tag in recipe.dietary_tags" :key="tag" class="tag tag-dietary">{{ tag }}</span>
-          <span v-for="type in recipe.dish_types" :key="type" class="tag tag-dish">{{ type }}</span>
-          <span v-for="rtype in recipe.recipe_types" :key="rtype" class="tag tag-recipe-type">{{ rtype }}</span>
         </div>
 
         <div v-if="recipe.source_url" class="recipe-source">
@@ -306,16 +302,6 @@ function formatIngredient(item: any): string {
 
 .tag-dietary {
   background: var(--color-success);
-  color: white;
-}
-
-.tag-dish {
-  background: var(--color-gray-200);
-  color: var(--color-text);
-}
-
-.tag-recipe-type {
-  background: var(--color-warning);
   color: white;
 }
 

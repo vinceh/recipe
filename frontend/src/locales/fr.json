@@ -107,10 +107,6 @@
       "dietaryTagsPlaceholder": "Sélectionnez les étiquettes diététiques",
       "cuisines": "Cuisines",
       "cuisinesPlaceholder": "Sélectionnez les cuisines",
-      "dishTypes": "Types de plat",
-      "dishTypesPlaceholder": "Sélectionnez les types de plat",
-      "recipeTypes": "Types de recette",
-      "recipeTypesPlaceholder": "Sélectionnez les types de recette",
       "aliases": "Noms alternatifs",
       "aliasesPlaceholder": "par ex. : 'Cookies au chocolat' ou 'CCC'",
       "aliasesHint": "Appuyez sur Entrée pour ajouter. Ceux-ci aident les utilisateurs à trouver la recette par différents noms",
@@ -213,7 +209,6 @@
         "name": "Nom",
         "language": "Langue",
         "cuisines": "Cuisines",
-        "dishTypes": "Types de plat",
         "servings": "Portions",
         "timing": "Temps",
         "minutes": "min",
@@ -240,13 +235,11 @@
           "servings": "Portions",
           "timing": "Temps total",
           "cuisines": "Cuisines",
-          "dishTypes": "Types de plat",
           "dietaryTags": "Étiquettes diététiques",
           "aliases": "Alias",
           "sourceUrl": "URL source",
           "requiresPrecision": "Nécessite de la précision",
-          "adminNotes": "Notes administrateur",
-          "recipeTypes": "Types de Recette"
+          "adminNotes": "Notes administrateur"
         },
         "actions": {
           "regenerateTranslations": "Régénérer les traductions"

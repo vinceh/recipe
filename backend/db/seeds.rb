@@ -65,42 +65,6 @@ end
 puts "   ✅ Created #{DIETARY_TAGS.count} dietary tags"
 
 # =============================================================================
-# DISH TYPES (16 types)
-# =============================================================================
-puts "\n🍽️  Seeding dish types..."
-
-DISH_TYPES = {
-  'biscuits-and-cookies' => 'Biscuits & Cookies',
-  'bread' => 'Bread',
-  'cereals' => 'Cereals',
-  'condiments-and-sauces' => 'Condiments & Sauces',
-  'desserts' => 'Desserts',
-  'drinks' => 'Drinks',
-  'main-course' => 'Main Course',
-  'pancake' => 'Pancakes & Waffles',
-  'preps' => 'Meal Prep',
-  'preserve' => 'Preserves',
-  'salad' => 'Salad',
-  'sandwiches' => 'Sandwiches',
-  'side-dish' => 'Side Dish',
-  'soup' => 'Soup',
-  'starter' => 'Starter',
-  'sweets' => 'Sweets'
-}
-
-DISH_TYPES.each_with_index do |(key, display_name), index|
-  DataReference.find_or_create_by!(
-    reference_type: 'dish_type',
-    key: key
-  ) do |ref|
-    ref.display_name = display_name
-    ref.sort_order = index
-    ref.active = true
-  end
-end
-
-puts "   ✅ Created #{DISH_TYPES.count} dish types"
-
 # =============================================================================
 # CUISINES (100+ cuisines)
 # =============================================================================
@@ -228,108 +192,6 @@ end
 puts "   ✅ Created #{CUISINES.count} cuisines"
 
 # =============================================================================
-# RECIPE TYPES (70+ types)
-# =============================================================================
-puts "\n👨‍🍳 Seeding recipe types..."
-
-RECIPE_TYPES = {
-  # Meal Categories
-  'appetizer' => 'Appetizer',
-  'breakfast' => 'Breakfast',
-  'brunch' => 'Brunch',
-  'lunch' => 'Lunch',
-  'dinner' => 'Dinner',
-  'snack' => 'Snack',
-  'dessert' => 'Dessert',
-  'beverage' => 'Beverage',
-  # Cooking Methods
-  'baking' => 'Baking',
-  'grilled' => 'Grilled',
-  'fried' => 'Fried',
-  'roasted' => 'Roasted',
-  'steamed' => 'Steamed',
-  'raw' => 'Raw',
-  'slow-cooked' => 'Slow Cooked',
-  'instant-pot' => 'Instant Pot',
-  'air-fried' => 'Air Fried',
-  'sous-vide' => 'Sous Vide',
-  'fermented' => 'Fermented',
-  'stir-fry' => 'Stir Fry',
-  'braised' => 'Braised',
-  'sauteed' => 'Sautéed',
-  'blanched' => 'Blanched',
-  'poached' => 'Poached',
-  # Dish Types
-  'casserole' => 'Casserole',
-  'stew' => 'Stew',
-  'curry' => 'Curry',
-  'pasta' => 'Pasta',
-  'rice-bowl' => 'Rice Bowl',
-  'noodles' => 'Noodles',
-  'pizza' => 'Pizza',
-  'sandwich' => 'Sandwich',
-  'taco' => 'Taco',
-  'burrito' => 'Burrito',
-  'pie' => 'Pie',
-  'tart' => 'Tart',
-  'cake' => 'Cake',
-  'cookies' => 'Cookies',
-  'pastry' => 'Pastry',
-  'pudding' => 'Pudding',
-  'ice-cream' => 'Ice Cream',
-  'candy' => 'Candy',
-  # Protein Types
-  'chicken' => 'Chicken',
-  'beef' => 'Beef',
-  'pork' => 'Pork',
-  'lamb' => 'Lamb',
-  'seafood' => 'Seafood',
-  'fish' => 'Fish',
-  'shellfish' => 'Shellfish',
-  'vegetable-focused' => 'Vegetable-Focused',
-  'legume-based' => 'Legume-Based',
-  'tofu' => 'Tofu',
-  'tempeh' => 'Tempeh',
-  # Preparation Styles
-  'one-pot' => 'One-Pot',
-  'sheet-pan' => 'Sheet Pan',
-  'meal-prep' => 'Meal Prep',
-  'make-ahead' => 'Make-Ahead',
-  'freezer-friendly' => 'Freezer-Friendly',
-  'no-cook' => 'No Cook',
-  'pressure-cooker' => 'Pressure Cooker',
-  # Speed & Difficulty
-  'quick-weeknight' => 'Quick Weeknight',
-  'under-30-min' => 'Under 30 Minutes',
-  'under-15-min' => 'Under 15 Minutes',
-  'weekend-project' => 'Weekend Project',
-  'beginner-friendly' => 'Beginner-Friendly',
-  'intermediate' => 'Intermediate',
-  'advanced' => 'Advanced',
-  # Occasion
-  'comfort-food' => 'Comfort Food',
-  'holiday' => 'Holiday',
-  'party' => 'Party',
-  'date-night' => 'Date Night',
-  'family-friendly' => 'Family-Friendly',
-  'kid-friendly' => 'Kid-Friendly',
-  'batch-cooking' => 'Batch Cooking'
-}
-
-RECIPE_TYPES.each_with_index do |(key, display_name), index|
-  DataReference.find_or_create_by!(
-    reference_type: 'recipe_type',
-    key: key
-  ) do |ref|
-    ref.display_name = display_name
-    ref.sort_order = index
-    ref.active = true
-  end
-end
-
-puts "   ✅ Created #{RECIPE_TYPES.count} recipe types"
-
-# =============================================================================
 # ADMIN USER
 # =============================================================================
 puts "\n👤 Creating admin user..."
@@ -426,9 +288,7 @@ puts "✨ Database seeding complete!"
 puts "="*60
 puts "📊 Summary:"
 puts "   • Dietary Tags: #{DataReference.dietary_tags.count}"
-puts "   • Dish Types: #{DataReference.dish_types.count}"
 puts "   • Cuisines: #{DataReference.cuisines.count}"
-puts "   • Recipe Types: #{DataReference.recipe_types.count}"
 puts "   • Recipes: #{Recipe.count}"
 puts "   • AI Prompts: #{AiPrompt.count}"
 puts "   • Admin Users: #{User.admin.count}"

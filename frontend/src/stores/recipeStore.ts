@@ -22,9 +22,7 @@ export const useRecipeStore = defineStore('recipe', () => {
   })
   const filters = ref<RecipeFilters>({
     dietary_tags: [],
-    dish_types: [],
     cuisines: [],
-    recipe_types: [],
     page: 1,
     per_page: 20
   })
@@ -240,9 +238,7 @@ export const useRecipeStore = defineStore('recipe', () => {
   function clearFilters() {
     filters.value = {
       dietary_tags: [],
-      dish_types: [],
       cuisines: [],
-      recipe_types: [],
       page: 1,
       per_page: 20
     }

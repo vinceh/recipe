@@ -59,9 +59,7 @@ export interface Recipe {
   nutrition?: RecipeNutrition
   aliases?: string[]
   dietary_tags?: string[]
-  dish_types?: string[]
   cuisines?: string[]
-  recipe_types?: string[]
   ingredient_groups: RecipeIngredientGroup[]
   steps: RecipeStep[]
   equipment?: string[]
@@ -120,9 +118,7 @@ export interface ApiResponse<T> {
 export interface RecipeSearchParams {
   q?: string
   dietary_tags?: string[]
-  dish_types?: string[]
   cuisines?: string[]
-  recipe_types?: string[]
   max_prep_time?: number
   max_cook_time?: number
   max_total_time?: number
@@ -175,9 +171,7 @@ export interface RecipeFilters {
    * Array: Used for multi-select filter forms
    */
   dietary_tags?: string | string[]
-  dish_types?: string | string[]
   cuisines?: string | string[]
-  recipe_types?: string | string[]
   max_prep_time?: number
   max_cook_time?: number
   max_total_time?: number

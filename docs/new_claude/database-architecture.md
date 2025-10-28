@@ -233,38 +233,6 @@ Many-to-many relationship between recipes and dietary tags.
 
 **Examples:** vegetarian, vegan, gluten-free, dairy-free, nut-free, paleo, keto, low-carb
 
-#### `recipe_dish_types` (Join Table)
-Many-to-many relationship between recipes and dish types.
-
-| Field | Type | Description |
-|-------|------|-------------|
-| `id` | UUID | Primary key |
-| `recipe_id` | UUID | Foreign key to recipes |
-| `dish_type_id` | UUID | Foreign key to data_references |
-| `created_at` | DateTime | Created timestamp |
-
-**Unique Constraint:** `(recipe_id, dish_type_id)`
-
-**Indexes:** Foreign key indexes
-
-**Examples:** main-course, side-dish, appetizer, dessert, breakfast, beverage, condiment
-
-#### `recipe_recipe_types` (Join Table)
-Many-to-many relationship between recipes and recipe types.
-
-| Field | Type | Description |
-|-------|------|-------------|
-| `id` | UUID | Primary key |
-| `recipe_id` | UUID | Foreign key to recipes |
-| `recipe_type_id` | UUID | Foreign key to data_references |
-| `created_at` | DateTime | Created timestamp |
-
-**Unique Constraint:** `(recipe_id, recipe_type_id)`
-
-**Indexes:** Foreign key indexes
-
-**Examples:** quick-weeknight, slow-cooker, instant-pot, one-pot, baked, grilled, no-cook, make-ahead
-
 #### `recipe_cuisines` (Join Table)
 Many-to-many relationship between recipes and cuisines.
 
@@ -282,12 +250,12 @@ Many-to-many relationship between recipes and cuisines.
 **Examples:** italian, french, japanese, thai, mexican, indian, chinese, korean, mediterranean, middle-eastern
 
 #### `data_references`
-Reference data for categories like dietary tags, cuisines, dish types, etc.
+Reference data for categories like dietary tags and cuisines.
 
 | Field | Type | Description |
 |-------|------|-------------|
 | `id` | UUID | Primary key |
-| `reference_type` | String | Type of reference: `dietary_tags`, `dish_types`, `recipe_types`, `cuisines` |
+| `reference_type` | String | Type of reference: `dietary_tag`, `cuisine`, `unit` |
 | `key` | String | Machine-readable key (kebab-case) |
 | `sort_order` | Integer | Display order |
 | `active` | Boolean | Whether this reference is currently in use |

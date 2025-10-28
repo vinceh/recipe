@@ -92,7 +92,6 @@ module Api
           servings: recipe.servings['original'],
           timing: recipe.timing,
           dietary_tags: recipe.dietary_tags,
-          dish_types: recipe.dish_types,
           cuisines: recipe.cuisines,
           source_url: recipe.source_url,
           created_at: recipe.created_at,

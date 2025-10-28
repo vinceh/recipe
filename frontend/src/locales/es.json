@@ -107,10 +107,6 @@
       "dietaryTagsPlaceholder": "Seleccione etiquetas dietéticas",
       "cuisines": "Cocinas",
       "cuisinesPlaceholder": "Seleccione cocinas",
-      "dishTypes": "Tipos de plato",
-      "dishTypesPlaceholder": "Seleccione tipos de plato",
-      "recipeTypes": "Tipos de receta",
-      "recipeTypesPlaceholder": "Seleccione tipos de receta",
       "aliases": "Nombres alternativos",
       "aliasesPlaceholder": "p. ej.: 'Galletas de chocolate' o 'CCC'",
       "aliasesHint": "Presione Enter para agregar. Estos ayudan a los usuarios a encontrar la receta por diferentes nombres",
@@ -213,7 +209,6 @@
         "name": "Nombre",
         "language": "Idioma",
         "cuisines": "Cocinas",
-        "dishTypes": "Tipos de plato",
         "servings": "Porciones",
         "timing": "Tiempo",
         "minutes": "min",
@@ -240,13 +235,11 @@
           "servings": "Porciones",
           "timing": "Tiempo total",
           "cuisines": "Cocinas",
-          "dishTypes": "Tipos de plato",
           "dietaryTags": "Etiquetas dietéticas",
           "aliases": "Alias",
           "sourceUrl": "URL de origen",
           "requiresPrecision": "Requiere precisión",
-          "adminNotes": "Notas del administrador",
-          "recipeTypes": "Tipos de Receta"
+          "adminNotes": "Notas del administrador"
         },
         "actions": {
           "regenerateTranslations": "Regenerar traducciones"
