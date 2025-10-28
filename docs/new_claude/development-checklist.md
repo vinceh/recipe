@@ -663,7 +663,7 @@ See `DOCUMENTATION-WORKFLOW.md` for the complete process.
 - [x] Create recipeStore (state: currentRecipe, recipes, filters)
 - [x] Create userStore (state: currentUser, favorites)
 - [x] Create uiStore (state: language, theme)
-- [x] Create dataReferenceStore (state: dietaryTags, dishTypes, cuisines, recipeTypes)
+- [x] Create dataReferenceStore (state: dietaryTags, cuisines)
 - [x] Create adminStore (state: recipes, dataReferences, aiPrompts, ingredients)
 - [x] Implement actions for API calls
 - [x] Implement getters for computed properties
@@ -768,7 +768,7 @@ See `DOCUMENTATION-WORKFLOW.md` for the complete process.
   - Form fields: title, source_url, servings, timing, difficulty
   - Ingredient groups builder (add/remove groups and ingredients)
   - Steps builder (add/remove/reorder steps)
-  - Tags/cuisine/dish type multi-select (uses dataReferenceStore)
+  - Tags/cuisine multi-select (uses dataReferenceStore)
   - Equipment multi-select
   - Validation for required fields
   - [x] Document in component-library.md

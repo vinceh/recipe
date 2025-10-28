@@ -821,8 +821,6 @@ None
 3. **Tags & Classification**
    - Dietary tags (multi-select from dataReferenceStore)
    - Cuisines (multi-select)
-   - Dish types (multi-select)
-   - Recipe types (multi-select)
 
 4. **Ingredient Groups**
    - Dynamic ingredient groups with add/remove
@@ -842,7 +840,7 @@ None
 
 **Features:**
 - **Validation:** Form validates required fields (title, servings > 0, at least 1 ingredient, at least 1 step)
-- **Auto-fetch Data References:** Automatically loads dietary tags, cuisines, dish types, recipe types on mount
+- **Auto-fetch Data References:** Automatically loads dietary tags, cuisines on mount
 - **Responsive:** Mobile-friendly layout with grid-to-column transformation
 - **i18n:** 100% translated in all 7 languages
 - **Design Tokens:** Uses CSS custom properties for all styling
@@ -850,7 +848,7 @@ None
 **Related Components:**
 - RecipeImportModal (will use this form for preview/edit)
 - RecipeListAdmin (navigation to this form)
-- DataReferenceStore (provides tag/cuisine/dish type/recipe type options)
+- DataReferenceStore (provides tag/cuisine options)
 
 **Notes:**
 - Form initializes with 1 empty ingredient and 1 empty step on mount
