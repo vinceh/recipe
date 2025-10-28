@@ -527,6 +527,7 @@ The API automatically detects which mode to use based on the parameters provided
 | `max_cook_time` | Integer | No | - | Maximum cook time in minutes |
 | `max_prep_time` | Integer | No | - | Maximum prep time in minutes |
 | `max_total_time` | Integer | No | - | Maximum total time in minutes |
+| `difficulty_level` | String | No | - | Filter recipes by difficulty level. Values: easy, medium, hard |
 
 **Advanced Search Parameters:**
 
@@ -565,6 +566,7 @@ The API automatically detects which mode to use based on the parameters provided
         "dietary_tags": ["gluten-free-adaptable"],
         "cuisines": ["taiwanese", "chinese"],
         "source_url": "https://example.com/recipe",
+        "difficulty_level": "medium",
         "translations_completed": true,
         "last_translated_at": "2025-10-09T10:00:00Z",
         "created_at": "2025-10-09T12:00:00Z",
@@ -712,6 +714,7 @@ Returns complete recipe details including ingredients, steps, equipment, nutriti
       },
       "requires_precision": false,
       "precision_reason": null,
+      "difficulty_level": "medium",
       "source_url": "https://example.com/recipe",
       "admin_notes": "Popular traditional recipe",
       "variants_generated": true,
@@ -1121,6 +1124,7 @@ Returns a paginated list of recipes that the current user has favorited, ordered
         "dietary_tags": ["gluten-free-adaptable"],
         "cuisines": ["taiwanese", "chinese"],
         "source_url": "https://example.com/recipe",
+        "difficulty_level": "medium",
         "translations_completed": true,
         "last_translated_at": "2025-10-09T10:00:00Z",
         "created_at": "2025-10-09T12:00:00Z",
@@ -1666,6 +1670,7 @@ Returns a paginated list of all recipes with admin metadata. Supports advanced f
 | `cuisine` | String | No | - | Legacy: Filter by single cuisine |
 | `dietary_tag` | String | No | - | Filter by single dietary tag |
 | `max_prep_time` | Integer | No | - | Maximum prep time in minutes |
+| `difficulty_level` | String | No | - | Filter recipes by difficulty level. Values: easy, medium, hard |
 
 ##### Response
 
@@ -1794,6 +1799,7 @@ Returns complete recipe information including all fields, translations, and admi
       "admin_notes": "Popular recipe, gets good engagement",
       "requires_precision": false,
       "precision_reason": null,
+      "difficulty_level": "medium",
       "variants_generated": true,
       "variants_generated_at": "2025-10-08T10:00:00Z",
       "translations_completed": true,
@@ -1857,6 +1863,7 @@ Creates a new recipe manually. This is used for recipes that are created from sc
     "precision_reason": null,
     "source_url": "https://example.com/recipe",
     "admin_notes": "Popular traditional recipe",
+    "difficulty_level": "medium",
     "servings_original": 4,
     "servings_min": 2,
     "servings_max": 8,
@@ -1963,6 +1970,7 @@ curl -X POST http://localhost:3000/admin/recipes \
 - Acceptance Criteria: AC-ADMIN-001
 - Minimum required fields: name, source_language
 - Servings and timing are now normalized columns (servings_original, servings_min, servings_max, prep_minutes, cook_minutes, total_minutes)
+- difficulty_level is an optional string field with values: easy, medium, hard
 - Nested attributes use Rails accepts_nested_attributes_for: ingredient_groups_attributes, recipe_steps_attributes, recipe_nutrition_attributes, etc.
 - Use _destroy: true flag to delete nested records during updates
 - DataReference arrays (dietary_tags, cuisines) reference data_reference_id

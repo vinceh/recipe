@@ -79,6 +79,7 @@ margherita = Recipe.new(
   total_minutes: 42,
   requires_precision: true,
   precision_reason: "baking",
+  difficulty_level: :medium,
   admin_notes: "Classic Neapolitan pizza. Traditional recipe with pizza stone oven technique.",
   translations_completed: true
 )
@@ -196,6 +197,7 @@ pad_thai = Recipe.new(
   cook_minutes: 10,
   total_minutes: 25,
   requires_precision: false,
+  difficulty_level: :medium,
   admin_notes: "Authentic Thai street food noodle dish. Balance of sweet, sour, salty, spicy flavors.",
   translations_completed: true
 )
@@ -346,6 +348,7 @@ shakshuka = Recipe.new(
   cook_minutes: 20,
   total_minutes: 30,
   requires_precision: false,
+  difficulty_level: :medium,
   admin_notes: "Traditional Middle Eastern breakfast dish with poached eggs in spiced tomato sauce.",
   translations_completed: true
 )
@@ -481,6 +484,7 @@ tom_yum = Recipe.new(
   prep_minutes: 15,
   cook_minutes: 20,
   total_minutes: 35,
+  difficulty_level: :medium,
   requires_precision: false,
   admin_notes: "Authentic Thai hot and sour soup with shrimp. Aromatic and flavorful.",
   translations_completed: true
@@ -620,6 +624,7 @@ aglio_olio = Recipe.new(
   servings_max: 4,
   prep_minutes: 5,
   cook_minutes: 15,
+  difficulty_level: :medium,
   total_minutes: 20,
   requires_precision: false,
   admin_notes: "Classic Roman pasta. Simple, elegant, uses only 4 ingredients plus pasta.",
@@ -709,6 +714,7 @@ oyakodon = Recipe.new(
   servings_min: 2,
   servings_max: 2,
   prep_minutes: 10,
+  difficulty_level: :medium,
   cook_minutes: 15,
   total_minutes: 25,
   requires_precision: false,
@@ -833,6 +839,7 @@ greek_salad = Recipe.new(
   servings_original: 4,
   servings_min: 2,
   servings_max: 6,
+  difficulty_level: :medium,
   prep_minutes: 15,
   cook_minutes: 0,
   total_minutes: 15,
@@ -958,6 +965,7 @@ sourdough = Recipe.new(
   total_minutes: 1080,
   requires_precision: true,
   precision_reason: "baking",
+  difficulty_level: :medium,
   admin_notes: "Artisan sourdough with long fermentation. Requires sourdough starter.",
   translations_completed: true
 )
@@ -1037,6 +1045,7 @@ beef_tacos = Recipe.new(
   source_language: "en",
   servings_original: 4,
   servings_min: 2,
+  difficulty_level: :medium,
   servings_max: 6,
   prep_minutes: 15,
   cook_minutes: 15,
@@ -1181,6 +1190,7 @@ kimchi_jjigae = Recipe.new(
   description: "A beloved Korean comfort stew combining spicy fermented kimchi with tender pork belly and tofu, simmered in a rich, warming broth. This aromatic dish showcases the complex flavors of Korean cuisine and is best enjoyed with steamed rice.",
   source_language: "en",
   servings_original: 4,
+  difficulty_level: :medium,
   servings_min: 2,
   servings_max: 4,
   prep_minutes: 10,
@@ -1311,6 +1321,7 @@ onion_soup = Recipe.new(
   name: "French Onion Soup",
   description: "A classic French bistro soup featuring deeply caramelized onions simmered in a savory beef broth, crowned with crusty bread and melted Gruyère cheese. This elegant yet humble dish is pure comfort in a bowl.",
   source_language: "en",
+  difficulty_level: :medium,
   servings_original: 4,
   servings_min: 4,
   servings_max: 6,
@@ -1446,6 +1457,7 @@ cookies = Recipe.new(
   total_minutes: 27,
   requires_precision: true,
   precision_reason: "baking",
+  difficulty_level: :medium,
   admin_notes: "Classic Toll House recipe. Buttery, chewy, with melty chocolate chips.",
   translations_completed: true
 )
@@ -1562,6 +1574,7 @@ puts "   ✅ Recipe 12: Chocolate Chip Cookies"
 # ============================================================================
 guacamole = Recipe.new(
   name: "Guacamole",
+  difficulty_level: :medium,
   description: "A simple yet legendary Mexican dip made from creamy avocados, fresh lime, cilantro, and tomatoes. Perfect as an appetizer with tortilla chips or as a topping for tacos and other Mexican dishes, this party favorite takes just minutes to prepare.",
   source_language: "en",
   servings_original: 4,
@@ -1666,6 +1679,7 @@ puts "   ✅ Recipe 13: Guacamole"
 # RECIPE 14: Ratatouille (French Vegetable Stew)
 # ============================================================================
 ratatouille = Recipe.new(
+  difficulty_level: :medium,
   name: "Ratatouille",
   description: "A rustic and colorful French Provençal vegetable stew featuring eggplant, zucchini, bell peppers, and tomatoes simmered together in aromatic herbs. This versatile dish is equally delicious served warm or at room temperature, making it perfect for entertaining.",
   source_language: "en",
@@ -1807,6 +1821,7 @@ teriyaki = Recipe.new(
   cook_minutes: 20,
   total_minutes: 30,
   requires_precision: false,
+  difficulty_level: :medium,
   admin_notes: "Japanese grilled chicken with homemade teriyaki glaze. Served with rice.",
   translations_completed: true
 )

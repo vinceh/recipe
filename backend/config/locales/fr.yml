@@ -117,3 +117,10 @@ fr:
       signed_in: "Connexion réussie"
       signed_out: "Déconnexion réussie"
       signed_up: "Compte créé avec succès"
+  activerecord:
+    attributes:
+      recipe:
+        difficulty_levels:
+          easy: "Facile"
+          medium: "Moyen"
+          hard: "Difficile"

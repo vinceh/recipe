@@ -19,6 +19,7 @@ RECIPE_JSON_SCHEMA = <<~JSON.freeze
     },
     "dietary_tags": ["vegetarian", "gluten-free"],
     "cuisines": ["japanese"],
+    "difficulty_level": "medium",
     "ingredient_groups": [
       {
         "name": "Main Ingredients",
@@ -52,7 +53,8 @@ CORE_GUIDELINES = [
   "Use lowercase, kebab-case for tags (e.g., \"gluten-free\" not \"Gluten Free\")",
   "Ingredient amounts should be numeric strings",
   "Step IDs should be \"step-001\", \"step-002\", etc.",
-  "Only include \"original\" instruction variant (AI will generate easier/no-equipment later)"
+  "Only include \"original\" instruction variant (AI will generate easier/no-equipment later)",
+  "Difficulty level should be one of: easy, medium, hard. Analyze based on technique complexity, timing, and precision requirements"
 ].freeze
 
 # Helper to build system prompts with consistent structure

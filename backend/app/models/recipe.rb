@@ -2,6 +2,8 @@ class Recipe < ApplicationRecord
   extend Mobility
   translates :name, :description, backend: :table
 
+  enum :difficulty_level, { easy: 0, medium: 1, hard: 2 }
+
   # Existing associations
   has_many :user_recipe_notes, dependent: :destroy
   has_many :user_favorites, dependent: :destroy
@@ -50,6 +52,7 @@ class Recipe < ApplicationRecord
   validates :cook_minutes, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :total_minutes, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :precision_reason, inclusion: { in: %w[baking confectionery fermentation molecular], allow_nil: true }
+  validates :difficulty_level, presence: true, inclusion: { in: difficulty_levels.keys }
   validate :at_least_one_ingredient_group
   validate :at_least_one_step
   validate :at_least_one_cuisine

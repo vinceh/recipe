@@ -414,6 +414,134 @@ RSpec.describe RecipeSearchService, type: :service do
     end
   end
 
+  describe 'Difficulty Level Filters' do
+    context 'AC-SEARCH-014: Difficulty Level Filter' do
+      it 'filters recipes by easy difficulty' do
+        recipe_easy = make_recipe(difficulty_level: :easy)
+        recipe_easy.name = "Easy Recipe"
+        recipe_easy.save
+
+        recipe_hard = make_recipe(difficulty_level: :hard)
+        recipe_hard.name = "Hard Recipe"
+        recipe_hard.save
+
+        results = RecipeSearchService.filter_by_difficulty(Recipe.all, difficulty_level: 'easy')
+
+        expect(results).to include(recipe_easy)
+        expect(results).not_to include(recipe_hard)
+      end
+
+      it 'filters recipes by medium difficulty' do
+        recipe_easy = make_recipe(difficulty_level: :easy)
+        recipe_easy.name = "Easy Recipe"
+        recipe_easy.save
+
+        recipe_medium = make_recipe(difficulty_level: :medium)
+        recipe_medium.name = "Medium Recipe"
+        recipe_medium.save
+
+        recipe_hard = make_recipe(difficulty_level: :hard)
+        recipe_hard.name = "Hard Recipe"
+        recipe_hard.save
+
+        results = RecipeSearchService.filter_by_difficulty(Recipe.all, difficulty_level: 'medium')
+
+        expect(results).to include(recipe_medium)
+        expect(results).not_to include(recipe_easy, recipe_hard)
+      end
+
+      it 'filters recipes by hard difficulty' do
+        recipe_medium = make_recipe(difficulty_level: :medium)
+        recipe_medium.name = "Medium Recipe"
+        recipe_medium.save
+
+        recipe_hard = make_recipe(difficulty_level: :hard)
+        recipe_hard.name = "Hard Recipe"
+        recipe_hard.save
+
+        results = RecipeSearchService.filter_by_difficulty(Recipe.all, difficulty_level: 'hard')
+
+        expect(results).to include(recipe_hard)
+        expect(results).not_to include(recipe_medium)
+      end
+
+      it 'returns all recipes when difficulty_level is blank' do
+        recipe_easy = make_recipe(difficulty_level: :easy)
+        recipe_easy.name = "Easy"
+        recipe_easy.save
+
+        recipe_hard = make_recipe(difficulty_level: :hard)
+        recipe_hard.name = "Hard"
+        recipe_hard.save
+
+        results = RecipeSearchService.filter_by_difficulty(Recipe.all, difficulty_level: nil)
+
+        expect(results).to include(recipe_easy, recipe_hard)
+      end
+
+      it 'returns all recipes when difficulty_level is empty string' do
+        recipe_easy = make_recipe(difficulty_level: :easy)
+        recipe_easy.name = "Easy"
+        recipe_easy.save
+
+        recipe_hard = make_recipe(difficulty_level: :hard)
+        recipe_hard.name = "Hard"
+        recipe_hard.save
+
+        results = RecipeSearchService.filter_by_difficulty(Recipe.all, difficulty_level: '')
+
+        expect(results).to include(recipe_easy, recipe_hard)
+      end
+    end
+
+    context 'AC-SEARCH-014: Difficulty Level in Advanced Search' do
+      it 'filters by difficulty_level in advanced_search' do
+        recipe_easy = make_recipe(difficulty_level: :easy, total_minutes: 20)
+        recipe_easy.name = "Easy Fast"
+        recipe_easy.save
+
+        recipe_hard = make_recipe(difficulty_level: :hard, total_minutes: 20)
+        recipe_hard.name = "Hard Fast"
+        recipe_hard.save
+
+        results = RecipeSearchService.advanced_search(difficulty_level: 'easy')
+
+        expect(results).to include(recipe_easy)
+        expect(results).not_to include(recipe_hard)
+      end
+
+      it 'combines difficulty_level with other filters in advanced_search' do
+        japanese = find_or_create_data_reference("cuisine", "japanese")
+
+        recipe_easy_jp = make_recipe(difficulty_level: :easy, total_minutes: 20)
+        recipe_easy_jp.name = "Easy JP"
+        recipe_easy_jp.save
+        create(:recipe_cuisine, recipe: recipe_easy_jp, data_reference: japanese)
+        create(:recipe_nutrition, recipe: recipe_easy_jp, calories: 400)
+
+        recipe_hard_jp = make_recipe(difficulty_level: :hard, total_minutes: 20)
+        recipe_hard_jp.name = "Hard JP"
+        recipe_hard_jp.save
+        create(:recipe_cuisine, recipe: recipe_hard_jp, data_reference: japanese)
+        create(:recipe_nutrition, recipe: recipe_hard_jp, calories: 400)
+
+        recipe_easy_other = make_recipe(difficulty_level: :easy, total_minutes: 20)
+        recipe_easy_other.name = "Easy Other"
+        recipe_easy_other.save
+        create(:recipe_nutrition, recipe: recipe_easy_other, calories: 400)
+
+        results = RecipeSearchService.advanced_search(
+          difficulty_level: 'easy',
+          cuisines: 'japanese',
+          max_calories: 500
+        )
+
+        expect(results).to include(recipe_easy_jp)
+        expect(results).not_to include(recipe_hard_jp, recipe_easy_other)
+      end
+    end
+  end
+
   describe 'Combined Filters' do
     context 'AC-SEARCH-013: Combined Filters - AND Logic' do
       it 'applies multiple filters with AND logic' do

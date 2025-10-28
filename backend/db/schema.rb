@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_10_28_000000) do
+ActiveRecord::Schema[8.0].define(version: 2025_10_28_094922) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pg_trgm"
@@ -274,6 +274,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_28_000000) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "last_translated_at"
+    t.integer "difficulty_level", default: 1, null: false
+    t.index ["difficulty_level"], name: "index_recipes_on_difficulty_level"
     t.index ["name"], name: "index_recipes_on_name"
     t.index ["source_language"], name: "index_recipes_on_source_language"
   end

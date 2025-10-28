@@ -162,7 +162,15 @@ class RecipeSearchService
     recipes
   end
 
-  # AC-SEARCH-014: Exclude recipes with specific ingredients (allergen filtering)
+  # AC-SEARCH-014: Filter by difficulty level
+  def self.filter_by_difficulty(recipes, difficulty_level: nil)
+    return recipes if difficulty_level.blank?
+
+    recipes = recipes.all if recipes.is_a?(Class)
+    recipes.where(difficulty_level: difficulty_level)
+  end
+
+  # AC-SEARCH-015: Exclude recipes with specific ingredients (allergen filtering)
   def self.exclude_ingredients(recipes, excluded_ingredients)
     return recipes if excluded_ingredients.blank?
 
@@ -223,6 +231,9 @@ class RecipeSearchService
       min_servings: params[:min_servings],
       max_servings: params[:max_servings]
     )
+
+    # Difficulty filter
+    recipes = filter_by_difficulty(recipes, difficulty_level: params[:difficulty_level])
 
     recipes
   end

@@ -117,3 +117,10 @@ zh-tw:
       signed_in: "登入成功"
       signed_out: "登出成功"
       signed_up: "帳戶建立成功"
+  activerecord:
+    attributes:
+      recipe:
+        difficulty_levels:
+          easy: "簡單"
+          medium: "中等"
+          hard: "困難"

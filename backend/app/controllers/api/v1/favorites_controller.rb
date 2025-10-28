@@ -94,6 +94,7 @@ module Api
           dietary_tags: recipe.dietary_tags,
           cuisines: recipe.cuisines,
           source_url: recipe.source_url,
+          difficulty_level: recipe.difficulty_level,
           created_at: recipe.created_at,
           updated_at: recipe.updated_at
         }

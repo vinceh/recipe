@@ -104,7 +104,8 @@ module Api
         advanced_params = [
           :ingredient, :exclude_ingredients,
           :min_calories, :max_calories, :min_protein, :max_carbs, :max_fat,
-          :min_servings, :max_servings
+          :min_servings, :max_servings,
+          :difficulty_level
         ]
 
         advanced_params.any? { |param| params[param].present? }
@@ -148,6 +149,11 @@ module Api
           recipes = recipes.where("total_minutes <= ?", params[:max_total_time].to_i)
         end
 
+        # Filter by difficulty level
+        if params[:difficulty_level].present?
+          recipes = recipes.where(difficulty_level: params[:difficulty_level])
+        end
+
         recipes
       end
 
@@ -171,6 +177,7 @@ module Api
           dietary_tags: recipe.dietary_tags.map(&:display_name).compact,
           cuisines: recipe.cuisines.map(&:display_name).compact,
           source_url: recipe.source_url,
+          difficulty_level: recipe.difficulty_level,
           translations_completed: recipe.translations_completed,
           last_translated_at: recipe.last_translated_at,
           created_at: recipe.created_at,
@@ -203,6 +210,7 @@ module Api
           nutrition: recipe.recipe_nutrition ? serialize_nutrition(recipe.recipe_nutrition) : nil,
           requires_precision: recipe.requires_precision,
           precision_reason: recipe.precision_reason,
+          difficulty_level: recipe.difficulty_level,
           source_url: recipe.source_url,
           translations_completed: recipe.translations_completed,
           last_translated_at: recipe.last_translated_at,

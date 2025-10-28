@@ -33,6 +33,11 @@ module Admin
         recipes = recipes.joins(:recipe_dietary_tags).where(recipe_dietary_tags: { data_reference_id: tag_id }).distinct if tag_id
       end
 
+      # Filter by difficulty level
+      if params[:difficulty_level].present?
+        recipes = recipes.where(difficulty_level: params[:difficulty_level])
+      end
+
       # Get count before eager loading for efficiency
       total_count = recipes.count
       page = params[:page]&.to_i || 1
@@ -231,6 +236,7 @@ module Admin
         :source_language,
         :requires_precision,
         :precision_reason,
+        :difficulty_level,
         :source_url,
         :admin_notes,
         :translations_completed,
@@ -290,6 +296,7 @@ module Admin
         admin_notes: recipe.admin_notes,
         requires_precision: recipe.requires_precision,
         precision_reason: recipe.precision_reason,
+        difficulty_level: recipe.difficulty_level,
         translations_completed: recipe.translations_completed,
         last_translated_at: recipe.last_translated_at,
         created_at: recipe.created_at,

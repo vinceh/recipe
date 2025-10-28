@@ -117,3 +117,11 @@ en:
       signed_in: "Signed in successfully"
       signed_out: "Signed out successfully"
       signed_up: "Account created successfully"
+
+  activerecord:
+    attributes:
+      recipe:
+        difficulty_levels:
+          easy: "Easy"
+          medium: "Medium"
+          hard: "Hard"

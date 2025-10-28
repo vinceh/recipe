@@ -8,6 +8,7 @@ FactoryBot.define do
     cook_minutes { 20 }
     total_minutes { 30 }
     requires_precision { false }
+    difficulty_level { :medium }
     translations_completed { false }
 
     after(:build) do |recipe|

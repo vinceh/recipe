@@ -117,3 +117,10 @@ es:
       signed_in: "Sesión iniciada exitosamente"
       signed_out: "Sesión cerrada exitosamente"
       signed_up: "Cuenta creada exitosamente"
+  activerecord:
+    attributes:
+      recipe:
+        difficulty_levels:
+          easy: "Fácil"
+          medium: "Medio"
+          hard: "Difícil"

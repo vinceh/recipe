@@ -20,6 +20,7 @@ Stores the main recipe information with source language and structural data.
 | `source_language` | String | Language the recipe was authored in | ISO 639-1 code: `en`, `ja`, `ko`, `zh-tw`, `zh-cn`, `es`, `fr` |
 | `requires_precision` | Boolean | Whether precise measurements are critical | `true` or `false` |
 | `precision_reason` | String | Reason why precision is required | One of: `baking`, `confectionery`, `fermentation`, `molecular` |
+| `difficulty_level` | Integer | Recipe difficulty/skill level | Enum: `0` = easy, `1` = medium, `2` = hard |
 | `servings_original` | Integer | Default number of servings | Positive integer |
 | `servings_min` | Integer | Minimum servings for scaling | Positive integer, ≤ `servings_original` |
 | `servings_max` | Integer | Maximum servings for scaling | Positive integer, ≥ `servings_original` |
@@ -38,6 +39,7 @@ Stores the main recipe information with source language and structural data.
 **Indexes:**
 - Primary key on `id` (UUID)
 - Index on `source_language` (for filtering by authoring language)
+- Index on `difficulty_level` (for filtering by recipe difficulty)
 - Index on `created_at` (for chronological queries)
 
 #### `recipe_translations`
