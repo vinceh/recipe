@@ -191,6 +191,32 @@ render json: { error: I18n.t('recipes.create.invalid_input') }
 
 ---
 
+## Image Upload Workflow
+
+### When
+During recipe creation/editing in admin forms
+
+### Input
+File selected by admin (PNG, JPG, GIF, WebP, max 10MB)
+
+### Process
+
+1. Admin selects file in RecipeForm.vue
+2. Client validates format and size
+3. RecipeForm exposes selectedImageFile ref
+4. AdminRecipeNew.vue detects file and creates FormData
+5. FormData includes recipe data + image File object
+6. adminApi.createRecipe(formData) sends multipart request
+7. Backend processes image via Active Storage
+
+### Output
+Recipe with image_url in API response
+
+### Error Handling
+Validation errors shown inline; upload errors caught in AdminRecipeNew
+
+---
+
 ## Mobility Translation Workflow
 
 Use this workflow when implementing dynamic recipe content translations.

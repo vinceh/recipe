@@ -17,6 +17,7 @@
       "close": "Fermer",
       "clear": "Effacer",
       "add": "Ajouter",
+      "remove": "Supprimer",
       "createRecipe": "Créer une recette",
       "manageData": "Gérer les données",
       "addReferenceData": "Ajouter des données de référence",
@@ -35,7 +36,8 @@
       "actions": "Actions",
       "yes": "Oui",
       "no": "Non",
-      "servings": "Portions"
+      "servings": "Portions",
+      "difficulty": "Difficulté"
     },
     "messages": {
       "success": "Opération terminée avec succès",
@@ -103,6 +105,13 @@
         "fermentation": "Fermentation",
         "molecular": "Gastronomie moléculaire"
       },
+      "difficultyLevel": "Niveau de difficulté",
+      "difficultyLevelPlaceholder": "Sélectionnez le niveau de difficulté",
+      "difficultyLevels": {
+        "easy": "Facile",
+        "medium": "Moyen",
+        "hard": "Difficile"
+      },
       "dietaryTags": "Étiquettes diététiques",
       "dietaryTagsPlaceholder": "Sélectionnez les étiquettes diététiques",
       "cuisines": "Cuisines",
@@ -136,9 +145,13 @@
       "adminNotes": "Notes administrateur",
       "adminNotesPlaceholder": "Notes internes (non visibles pour les utilisateurs)",
       "adminNotesHint": "Ajoutez des notes internes sur cette recette",
+      "image": "Image de la Recette",
+      "imageUploadPlaceholder": "Cliquez ou glissez-déposez pour télécharger l'image",
+      "imageUploadHint": "Formats supportés: PNG, JPG, GIF, WebP. Taille maximale: 10MB",
       "sections": {
         "import": "Importer",
         "basicInfo": "Informations de base",
+        "image": "Image de la Recette",
         "servings": "Portions",
         "timing": "Temps",
         "precision": "Exigences de précision",
@@ -210,6 +223,7 @@
         "language": "Langue",
         "cuisines": "Cuisines",
         "servings": "Portions",
+        "difficulty": "Difficulté",
         "timing": "Temps",
         "minutes": "min",
         "hours": "h"
@@ -233,6 +247,7 @@
           "name": "Nom",
           "language": "Langue",
           "servings": "Portions",
+          "difficultyLevel": "Niveau de difficulté",
           "timing": "Temps total",
           "cuisines": "Cuisines",
           "dietaryTags": "Étiquettes diététiques",

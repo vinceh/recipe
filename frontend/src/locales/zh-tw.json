@@ -17,6 +17,7 @@
       "close": "關閉",
       "clear": "清除",
       "add": "新增",
+      "remove": "移除",
       "createRecipe": "建立食譜",
       "manageData": "管理資料",
       "addReferenceData": "新增參考資料",
@@ -35,7 +36,8 @@
       "actions": "操作",
       "yes": "是",
       "no": "否",
-      "servings": "份"
+      "servings": "份",
+      "difficulty": "難度"
     },
     "messages": {
       "success": "操作成功完成",
@@ -103,6 +105,13 @@
         "fermentation": "發酵",
         "molecular": "分子料理"
       },
+      "difficultyLevel": "難度",
+      "difficultyLevelPlaceholder": "選擇難度",
+      "difficultyLevels": {
+        "easy": "簡單",
+        "medium": "中等",
+        "hard": "困難"
+      },
       "dietaryTags": "飲食標籤",
       "dietaryTagsPlaceholder": "選擇飲食標籤",
       "cuisines": "料理類型",
@@ -136,9 +145,13 @@
       "adminNotes": "管理員備註",
       "adminNotesPlaceholder": "內部備註（使用者不可見）",
       "adminNotesHint": "新增關於此食譜的內部備註",
+      "image": "食譜圖片",
+      "imageUploadPlaceholder": "按一下或拖曳以上傳圖片",
+      "imageUploadHint": "支援的格式: PNG、JPG、GIF、WebP。最大大小: 10MB",
       "sections": {
         "import": "匯入",
         "basicInfo": "基本資訊",
+        "image": "食譜圖片",
         "servings": "份數",
         "timing": "時間",
         "precision": "精確度要求",
@@ -210,6 +223,7 @@
         "language": "語言",
         "cuisines": "料理類型",
         "servings": "份數",
+        "difficulty": "難度",
         "timing": "時間",
         "minutes": "分鐘",
         "hours": "小時"
@@ -233,6 +247,7 @@
           "name": "名稱",
           "language": "語言",
           "servings": "份數",
+          "difficultyLevel": "難度",
           "timing": "總時間",
           "cuisines": "料理類型",
           "dietaryTags": "飲食標籤",

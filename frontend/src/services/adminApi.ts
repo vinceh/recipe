@@ -70,13 +70,15 @@ export const adminApi = {
     return data
   },
 
-  async createRecipe(recipe: Partial<RecipeDetail>): Promise<ApiResponse<{ recipe: RecipeDetail }>> {
-    const { data } = await adminClient.post(getAdminUrl('/recipes'), { recipe })
+  async createRecipe(recipe: Partial<RecipeDetail> | FormData): Promise<ApiResponse<{ recipe: RecipeDetail }>> {
+    const payload = recipe instanceof FormData ? recipe : { recipe }
+    const { data } = await adminClient.post(getAdminUrl('/recipes'), payload)
     return data
   },
 
-  async updateRecipe(id: string | number, recipe: Partial<RecipeDetail>): Promise<ApiResponse<{ recipe: RecipeDetail }>> {
-    const { data } = await adminClient.put(getAdminUrl(`/recipes/${id}`), { recipe })
+  async updateRecipe(id: string | number, recipe: Partial<RecipeDetail> | FormData): Promise<ApiResponse<{ recipe: RecipeDetail }>> {
+    const payload = recipe instanceof FormData ? recipe : { recipe }
+    const { data } = await adminClient.put(getAdminUrl(`/recipes/${id}`), payload)
     return data
   },
 

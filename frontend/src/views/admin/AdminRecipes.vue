@@ -186,7 +186,9 @@ onBeforeUnmount(() => {
               <th>{{ $t('admin.recipes.table.name') }}</th>
               <th>{{ $t('admin.recipes.table.language') }}</th>
               <th>{{ $t('admin.recipes.table.cuisines') }}</th>
+              <th>Dietary Tags</th>
               <th>{{ $t('admin.recipes.table.servings') }}</th>
+              <th>{{ $t('admin.recipes.table.difficulty') }}</th>
               <th>{{ $t('admin.recipes.table.timing') }}</th>
               <th>{{ $t('common.labels.actions') }}</th>
             </tr>
@@ -216,7 +218,27 @@ onBeforeUnmount(() => {
                   </span>
                 </div>
               </td>
+              <td>
+                <div class="tags">
+                  <span
+                    v-for="tag in recipe.dietary_tags?.slice(0, 2)"
+                    :key="tag"
+                    class="tag"
+                  >
+                    {{ tag }}
+                  </span>
+                  <span v-if="recipe.dietary_tags && recipe.dietary_tags.length > 2" class="tag-more">
+                    +{{ recipe.dietary_tags.length - 2 }}
+                  </span>
+                </div>
+              </td>
               <td>{{ recipe.servings?.original ?? '-' }}</td>
+              <td>
+                <span v-if="recipe.difficulty_level" class="difficulty-badge" :class="`difficulty-${recipe.difficulty_level}`">
+                  {{ $t(`forms.recipe.difficultyLevels.${recipe.difficulty_level}`) }}
+                </span>
+                <span v-else>-</span>
+              </td>
               <td>
                 <span v-if="recipe.timing?.total_minutes">
                   {{ recipe.timing.total_minutes }} {{ $t('admin.recipes.table.minutes') }}
@@ -350,6 +372,30 @@ td {
 .badge-secondary {
   background: var(--color-background-secondary);
   color: var(--color-text);
+}
+
+.difficulty-badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: capitalize;
+}
+
+.difficulty-easy {
+  background: #d4f4dd;
+  color: #1b5e20;
+}
+
+.difficulty-medium {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.difficulty-hard {
+  background: #f8d7da;
+  color: #721c24;
 }
 
 .tags {

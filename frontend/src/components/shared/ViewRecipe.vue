@@ -17,7 +17,8 @@ const hasBasicInfo = computed(() => {
          props.recipe.aliases?.length ||
          props.recipe.source_url ||
          props.recipe.cuisines?.length ||
-         props.recipe.dietary_tags?.length
+         props.recipe.dietary_tags?.length ||
+         props.recipe.difficulty_level
 })
 
 const hasIngredients = computed(() => {
@@ -68,6 +69,11 @@ function formatIngredient(item: any): string {
 
 <template>
   <div class="view-recipe">
+    <!-- Recipe Image Hero -->
+    <div v-if="recipe.image_url" class="recipe-image-hero">
+      <img :src="recipe.image_url" :alt="recipe.name" class="recipe-hero-img" />
+    </div>
+
     <div class="recipe-content">
       <!-- Basic Information / Header -->
       <div v-if="hasBasicInfo" class="recipe-header">
@@ -81,6 +87,12 @@ function formatIngredient(item: any): string {
           <div v-if="formattedServings" class="meta-item">
             <i class="pi pi-users"></i>
             <span>{{ formattedServings }} {{ $t('recipe.view.servings') }}</span>
+          </div>
+          <div v-if="recipe.difficulty_level" class="meta-item">
+            <i class="pi pi-bolt"></i>
+            <span class="difficulty-meta" :class="`difficulty-${recipe.difficulty_level}`">
+              {{ $t(`forms.recipe.difficultyLevels.${recipe.difficulty_level}`) }}
+            </span>
           </div>
           <div v-if="formattedTiming?.prep" class="meta-item">
             <i class="pi pi-clock"></i>
@@ -184,10 +196,27 @@ function formatIngredient(item: any): string {
   width: 100%;
   height: 100%;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-image-hero {
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.recipe-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .recipe-content {
   padding: var(--spacing-xl);
+  flex: 1;
 }
 
 .section-placeholder {
@@ -280,6 +309,30 @@ function formatIngredient(item: any): string {
 
 .meta-item i {
   color: var(--color-primary);
+}
+
+.difficulty-meta {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: capitalize;
+}
+
+.difficulty-easy {
+  background: #d4f4dd;
+  color: #1b5e20;
+}
+
+.difficulty-medium {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.difficulty-hard {
+  background: #f8d7da;
+  color: #721c24;
 }
 
 .recipe-tags {

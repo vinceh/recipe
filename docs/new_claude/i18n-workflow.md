@@ -584,6 +584,16 @@ Output shows missing keys per locale.
 }
 ```
 
+### Image Upload Fields (forms.recipe)
+
+Image-related strings follow the same localization pattern:
+- `image` - Section title (e.g., "Recipe Image", "レシピ画像")
+- `imageUploadPlaceholder` - Prompt text (e.g., "Click or drag to upload")
+- `imageUploadHint` - Validation info (e.g., "Supported formats: PNG, JPG, GIF, WebP. Max 10MB")
+- `sections.image` - Form section name
+
+Also add `remove` to common.buttons in all 7 languages for the image removal functionality.
+
 ### Empty states
 ```json
 {

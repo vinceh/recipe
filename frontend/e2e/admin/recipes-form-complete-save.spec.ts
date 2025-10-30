@@ -27,6 +27,7 @@ test.describe('Complete Recipe Form - Save & Verification', () => {
       language: 'English',
       requiresPrecision: true,
       precisionReason: 'baking',
+      difficultyLevel: 'hard',
       servingsOriginal: 6,
       servingsMin: 4,
       servingsMax: 8,
@@ -119,6 +120,7 @@ test.describe('Complete Recipe Form - Save & Verification', () => {
       language: 'English',
       requiresPrecision: true,
       precisionReason: 'baking',
+      difficultyLevel: 'medium',
       servingsOriginal: 1,
       prepMinutes: 480,
       cookMinutes: 60,
@@ -183,6 +185,7 @@ test.describe('Complete Recipe Form - Save & Verification', () => {
       sourceUrl: 'https://www.example.com/buddha-bowl',
       language: 'English',
       requiresPrecision: false,
+      difficultyLevel: 'easy',
       servingsOriginal: 2,
       prepMinutes: 20,
       cookMinutes: 0,
@@ -251,6 +254,7 @@ test.describe('Complete Recipe Form - Save & Verification', () => {
       sourceUrl: '',
       language: 'English',
       requiresPrecision: false,
+      difficultyLevel: 'medium',
       servingsOriginal: 1,
       prepMinutes: 5,
       cookMinutes: 5,
@@ -284,5 +288,64 @@ test.describe('Complete Recipe Form - Save & Verification', () => {
     // Recipe should be saved even with minimal data
     await expect(page).toHaveURL(/\/admin\/recipes(?!\/)/, { timeout: 15000 });
     await expect(page.getByText(minimalData.name)).toBeVisible({ timeout: 5000 });
+  });
+
+  test('recipe form with image upload saves successfully', async ({ page }) => {
+    // Given: A recipe with an image file
+    const recipeWithImage: RecipeFormData = {
+      name: 'Beautiful Pasta Dish',
+      sourceUrl: 'https://www.example.com/pasta',
+      language: 'English',
+      requiresPrecision: false,
+      difficultyLevel: 'medium',
+      servingsOriginal: 4,
+      prepMinutes: 15,
+      cookMinutes: 20,
+      totalMinutes: 35,
+      adminNotes: 'Classic Italian pasta recipe with fresh herbs.',
+      equipment: ['Pot', 'Colander', 'Pan'],
+      aliases: ['Italian Pasta', 'Fresh Pasta'],
+      dietaryTags: ['vegetarian'],
+      cuisines: ['italian'],
+      dishTypes: [],
+      recipeTypes: [],
+      imagePath: 'backend/spec/fixtures/files/test_image.png',
+      ingredientGroups: [
+        {
+          name: 'Main',
+          items: [
+            { name: 'Pasta', amount: '400', unit: 'g', preparation: '' },
+            { name: 'Olive oil', amount: '3', unit: 'tbsp', preparation: '' },
+            { name: 'Garlic', amount: '4', unit: 'cloves', preparation: 'minced' },
+            { name: 'Fresh basil', amount: '1', unit: 'cup', preparation: 'chopped' }
+          ]
+        }
+      ],
+      steps: [
+        'Cook pasta in salted boiling water until al dente',
+        'Heat olive oil and sauté garlic until fragrant',
+        'Toss cooked pasta with garlic oil and fresh basil',
+        'Serve immediately with fresh Parmesan cheese'
+      ]
+    };
+
+    // When: User fills form including image upload
+    await recipeFormPage.fillCompleteForm(recipeWithImage);
+
+    // Then: Image should be selected (verify input has file)
+    const imageInput = recipeFormPage.imageInput;
+    const files = await imageInput.inputValue();
+    expect(files).toBeTruthy();
+
+    // When: User submits the form
+    await recipeFormPage.submitForm();
+
+    // Then: User should be redirected and recipe should appear in list
+    await expect(page).toHaveURL(/\/admin\/recipes(?!\/)/, { timeout: 15000 });
+    await expect(page.getByText(recipeWithImage.name)).toBeVisible({ timeout: 5000 });
+
+    // And: When viewing recipe details, image should be visible
+    await page.getByText(recipeWithImage.name).first().click();
+    await expect(page.locator('img[alt*="Beautiful Pasta"]')).toBeVisible({ timeout: 5000 });
   });
 });

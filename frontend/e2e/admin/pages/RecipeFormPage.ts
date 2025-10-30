@@ -6,6 +6,7 @@ export interface RecipeFormData {
   language: string;
   requiresPrecision: boolean;
   precisionReason?: string;
+  difficultyLevel?: string;
   servingsOriginal: number;
   servingsMin?: number;
   servingsMax?: number;
@@ -19,6 +20,7 @@ export interface RecipeFormData {
   cuisines: string[];
   dishTypes: string[];
   recipeTypes: string[];
+  imagePath?: string;
   ingredientGroups: IngredientGroup[];
   steps: string[];
 }
@@ -43,6 +45,7 @@ export class RecipeFormPage {
   readonly sourceUrlInput: Locator;
   readonly adminNotesInput: Locator;
   readonly languageSelect: Locator;
+  readonly imageInput: Locator;
   readonly saveButton: Locator;
   readonly cancelButton: Locator;
 
@@ -52,6 +55,7 @@ export class RecipeFormPage {
     this.sourceUrlInput = page.locator('#source_url');
     this.adminNotesInput = page.locator('#admin_notes');
     this.languageSelect = page.locator('#language');
+    this.imageInput = page.locator('#recipe-image');
     this.saveButton = page.getByRole('button', { name: /save|submit/i });
     this.cancelButton = page.getByRole('button', { name: /cancel/i });
   }
@@ -107,6 +111,10 @@ export class RecipeFormPage {
     const totalField = totalLabel.locator('..');
     const totalInput = totalField.locator('input[inputmode="decimal"], input[type="text"]').first();
     await totalInput.fill(String(data.totalMinutes));
+  }
+
+  async fillDifficultyLevel(level: string) {
+    await this.selectDropdown('difficulty_level', level);
   }
 
   async setPrecisionRequirement(required: boolean, reason?: string) {
@@ -276,6 +284,11 @@ export class RecipeFormPage {
     }
   }
 
+  async uploadImage(imagePath: string) {
+    await this.imageInput.setInputFiles(imagePath);
+    await this.page.waitForTimeout(500);
+  }
+
   async fillCompleteForm(data: RecipeFormData) {
     // Fill basic info
     await this.fillBasicInfo({
@@ -284,6 +297,11 @@ export class RecipeFormPage {
       language: data.language,
       adminNotes: data.adminNotes,
     });
+
+    // Upload image if provided
+    if (data.imagePath) {
+      await this.uploadImage(data.imagePath);
+    }
 
     // Fill servings
     await this.fillServings({
@@ -298,6 +316,11 @@ export class RecipeFormPage {
       cookMinutes: data.cookMinutes,
       totalMinutes: data.totalMinutes,
     });
+
+    // Fill difficulty level
+    if (data.difficultyLevel) {
+      await this.fillDifficultyLevel(data.difficultyLevel);
+    }
 
     // Set precision requirement
     await this.setPrecisionRequirement(data.requiresPrecision, data.precisionReason);

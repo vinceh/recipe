@@ -54,6 +54,7 @@ export interface Recipe {
   source_url?: string
   requires_precision?: boolean
   precision_reason?: 'baking' | 'confectionery' | 'fermentation' | 'molecular'
+  difficulty_level?: 'easy' | 'medium' | 'hard'
   servings: RecipeServings
   timing?: RecipeTiming
   nutrition?: RecipeNutrition
@@ -69,6 +70,7 @@ export interface Recipe {
   admin_notes?: string
   favorite?: boolean
   notes?: Note[]
+  image_url?: string
   created_at: string
   updated_at: string
 }
@@ -119,6 +121,7 @@ export interface RecipeSearchParams {
   q?: string
   dietary_tags?: string[]
   cuisines?: string[]
+  difficulty_level?: 'easy' | 'medium' | 'hard'
   max_prep_time?: number
   max_cook_time?: number
   max_total_time?: number
@@ -172,6 +175,7 @@ export interface RecipeFilters {
    */
   dietary_tags?: string | string[]
   cuisines?: string | string[]
+  difficulty_level?: 'easy' | 'medium' | 'hard' | string[]
   max_prep_time?: number
   max_cook_time?: number
   max_total_time?: number

@@ -1,6 +1,8 @@
 # Authentic, Real-World Recipes with Complete Field Coverage
 # Each recipe is verified from reputable sources
 
+require 'stringio'
+
 puts "🍳 Seeding recipes with authentic, real-world data..."
 
 # Helper functions
@@ -63,12 +65,12 @@ def apply_recipe_translations(recipe, recipe_key)
   end
 end
 
-def attach_seed_image(recipe)
+def attach_image_to_recipe(recipe)
   image_path = Rails.root.join('db/seeds/assets/foodimg.png')
   return unless File.exist?(image_path)
 
   recipe.image.attach(
-    io: File.open(image_path),
+    io: StringIO.new(File.read(image_path)),
     filename: 'foodimg.png',
     content_type: 'image/png'
   )
@@ -183,8 +185,7 @@ margherita.recipe_dietary_tags.build(data_reference: create_data_reference("diet
 margherita.recipe_aliases.build(alias_name: "Pizza Margherita", language: "en")
 margherita.recipe_aliases.build(alias_name: "ピザ・マルゲリータ", language: "ja")
 
-
-attach_seed_image(margherita)
+attach_image_to_recipe(margherita)
 margherita.save!
 apply_recipe_translations(margherita, :margherita)
 
@@ -339,8 +340,7 @@ pad_thai.recipe_dietary_tags.build(data_reference: create_data_reference("dietar
 pad_thai.recipe_aliases.build(alias_name: "Thai Stir-Fried Noodles", language: "en")
 pad_thai.recipe_aliases.build(alias_name: "ผัดไทย", language: "th")
 
-
-attach_seed_image(pad_thai)
+attach_image_to_recipe(pad_thai)
 pad_thai.save!
 apply_recipe_translations(pad_thai, :pad_thai)
 
@@ -479,8 +479,8 @@ shakshuka.recipe_aliases.build(alias_name: "Eggs in Tomato Sauce", language: "en
 shakshuka.recipe_aliases.build(alias_name: "شکشوک", language: "ar")
 
 
-attach_seed_image(shakshuka)
-shakshuka.save!
+attach_image_to_recipe(shakshuka)
+shakshuka.save!  # TODO: Fix attachment issue for this recipe
 apply_recipe_translations(shakshuka, :shakshuka)
 
 shakshuka.recipe_equipment.create!(equipment: find_or_create_equipment("Large Skillet"), optional: false)
@@ -625,7 +625,7 @@ tom_yum.recipe_aliases.build(alias_name: "Hot & Sour Shrimp Soup", language: "en
 tom_yum.recipe_aliases.build(alias_name: "ต้มยำกุ้ง", language: "th")
 
 
-attach_seed_image(tom_yum)
+attach_image_to_recipe(tom_yum)
 tom_yum.save!
 apply_recipe_translations(tom_yum, :tom_yum)
 
@@ -718,7 +718,7 @@ aglio_olio.recipe_aliases.build(alias_name: "Garlic and Oil Pasta", language: "e
 aglio_olio.recipe_aliases.build(alias_name: "パスタ・アーリオ・オーリオ", language: "ja")
 
 
-attach_seed_image(aglio_olio)
+attach_image_to_recipe(aglio_olio)
 aglio_olio.save!
 apply_recipe_translations(aglio_olio, :aglio_olio)
 
@@ -846,7 +846,7 @@ oyakodon.recipe_aliases.build(alias_name: "Parent-and-Child Rice Bowl", language
 oyakodon.recipe_aliases.build(alias_name: "親子丼", language: "ja")
 
 
-attach_seed_image(oyakodon)
+attach_image_to_recipe(oyakodon)
 oyakodon.save!
 apply_recipe_translations(oyakodon, :oyakodon)
 
@@ -970,7 +970,7 @@ greek_salad.recipe_aliases.build(alias_name: "Horiatiki Salad", language: "en")
 greek_salad.recipe_aliases.build(alias_name: "Ελληνική Σαλάτα", language: "el")
 
 
-attach_seed_image(greek_salad)
+attach_image_to_recipe(greek_salad)
 greek_salad.save!
 apply_recipe_translations(greek_salad, :greek_salad)
 
@@ -1056,7 +1056,7 @@ sourdough.recipe_aliases.build(alias_name: "Artisan Bread", language: "en")
 sourdough.recipe_aliases.build(alias_name: "サワードウ", language: "ja")
 
 
-attach_seed_image(sourdough)
+attach_image_to_recipe(sourdough)
 sourdough.save!
 apply_recipe_translations(sourdough, :sourdough)
 
@@ -1205,8 +1205,8 @@ beef_tacos.recipe_aliases.build(alias_name: "Street Tacos", language: "en")
 beef_tacos.recipe_aliases.build(alias_name: "Tacos de Carne Molida", language: "es")
 
 
-attach_seed_image(beef_tacos)
-beef_tacos.save!
+attach_image_to_recipe(beef_tacos)
+beef_tacos.save!  # TODO: Fix attachment issue for this recipe
 apply_recipe_translations(beef_tacos, :beef_tacos)
 
 beef_tacos.recipe_equipment.create!(equipment: find_or_create_equipment("Large Skillet"), optional: false)
@@ -1338,8 +1338,8 @@ kimchi_jjigae.recipe_aliases.build(alias_name: "Kimchi Stew", language: "en")
 kimchi_jjigae.recipe_aliases.build(alias_name: "김치찌개", language: "ko")
 
 
-attach_seed_image(kimchi_jjigae)
-kimchi_jjigae.save!
+attach_image_to_recipe(kimchi_jjigae)
+kimchi_jjigae.save!  # TODO: Fix attachment issue for this recipe
 apply_recipe_translations(kimchi_jjigae, :kimchi_jjigae)
 
 kimchi_jjigae.recipe_equipment.create!(equipment: find_or_create_equipment("Stone Bowl or Pot"), optional: false)
@@ -1465,7 +1465,7 @@ onion_soup.recipe_aliases.build(alias_name: "Soupe à l'Oignon", language: "fr")
 onion_soup.recipe_aliases.build(alias_name: "玉ねぎのスープ", language: "ja")
 
 
-attach_seed_image(onion_soup)
+attach_image_to_recipe(onion_soup)
 onion_soup.save!
 apply_recipe_translations(onion_soup, :onion_soup)
 
@@ -1594,7 +1594,7 @@ cookies.recipe_aliases.build(alias_name: "Toll House Cookies", language: "en")
 cookies.recipe_aliases.build(alias_name: "チョコレートチップクッキー", language: "ja")
 
 
-attach_seed_image(cookies)
+attach_image_to_recipe(cookies)
 cookies.save!
 apply_recipe_translations(cookies, :cookies)
 
@@ -1703,7 +1703,7 @@ guacamole.recipe_aliases.build(alias_name: "Avocado Dip", language: "en")
 guacamole.recipe_aliases.build(alias_name: "Guacamole de Aguacate", language: "es")
 
 
-attach_seed_image(guacamole)
+attach_image_to_recipe(guacamole)
 guacamole.save!
 apply_recipe_translations(guacamole, :guacamole)
 
@@ -1837,8 +1837,8 @@ ratatouille.recipe_aliases.build(alias_name: "Vegetable Stew", language: "en")
 ratatouille.recipe_aliases.build(alias_name: "Ratatouille Niçoise", language: "fr")
 
 
-attach_seed_image(ratatouille)
-ratatouille.save!
+attach_image_to_recipe(ratatouille)
+ratatouille.save!  # TODO: Fix attachment issue for this recipe
 apply_recipe_translations(ratatouille, :ratatouille)
 
 ratatouille.recipe_equipment.create!(equipment: find_or_create_equipment("Large Deep Skillet"), optional: false)
@@ -1979,7 +1979,7 @@ teriyaki.recipe_aliases.build(alias_name: "Glazed Chicken", language: "en")
 teriyaki.recipe_aliases.build(alias_name: "照り焼きチキン", language: "ja")
 
 
-attach_seed_image(teriyaki)
+attach_image_to_recipe(teriyaki)
 teriyaki.save!
 apply_recipe_translations(teriyaki, :teriyaki)
 

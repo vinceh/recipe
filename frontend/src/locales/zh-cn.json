@@ -17,6 +17,7 @@
       "close": "关闭",
       "clear": "清除",
       "add": "添加",
+      "remove": "移除",
       "createRecipe": "创建食谱",
       "manageData": "管理数据",
       "addReferenceData": "添加参考数据",
@@ -35,7 +36,8 @@
       "actions": "操作",
       "yes": "是",
       "no": "否",
-      "servings": "份"
+      "servings": "份",
+      "difficulty": "难度"
     },
     "messages": {
       "success": "操作成功完成",
@@ -103,6 +105,13 @@
         "fermentation": "发酵",
         "molecular": "分子料理"
       },
+      "difficultyLevel": "难度",
+      "difficultyLevelPlaceholder": "选择难度",
+      "difficultyLevels": {
+        "easy": "简单",
+        "medium": "中等",
+        "hard": "困难"
+      },
       "dietaryTags": "饮食标签",
       "dietaryTagsPlaceholder": "选择饮食标签",
       "cuisines": "料理类型",
@@ -136,9 +145,13 @@
       "adminNotes": "管理员备注",
       "adminNotesPlaceholder": "内部备注（用户不可见）",
       "adminNotesHint": "添加关于此食谱的内部备注",
+      "image": "食谱图片",
+      "imageUploadPlaceholder": "点击或拖放以上传图片",
+      "imageUploadHint": "支持的格式: PNG、JPG、GIF、WebP。最大大小: 10MB",
       "sections": {
         "import": "导入",
         "basicInfo": "基本信息",
+        "image": "食谱图片",
         "servings": "份数",
         "timing": "时间",
         "precision": "精确度要求",
@@ -210,6 +223,7 @@
         "language": "语言",
         "cuisines": "料理类型",
         "servings": "份数",
+        "difficulty": "难度",
         "timing": "时间",
         "minutes": "分钟",
         "hours": "小时"
@@ -233,6 +247,7 @@
           "name": "名称",
           "language": "语言",
           "servings": "份数",
+          "difficultyLevel": "难度",
           "timing": "总时间",
           "cuisines": "料理类型",
           "dietaryTags": "饮食标签",

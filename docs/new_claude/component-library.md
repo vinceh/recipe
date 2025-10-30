@@ -860,6 +860,29 @@ None
 
 ---
 
+#### Image Upload Component
+
+**File:** `frontend/src/components/admin/recipes/RecipeForm.vue`
+
+**Usage:** Admin recipe creation and editing
+
+**Props:** Exposed ref `selectedImageFile: Ref<File | null>`
+
+**Features:**
+- File input with drag-and-drop visualization
+- Image preview with remove button
+- Client-side validation (format: PNG, JPG, GIF, WebP; max 10MB)
+- Integrated error messaging
+
+**Localization Keys:**
+- `forms.recipe.sections.image` - Section title
+- `forms.recipe.image` - Field label
+- `forms.recipe.imageUploadPlaceholder` - Upload prompt
+- `forms.recipe.imageUploadHint` - Validation help text
+- `common.buttons.remove` - Remove image button
+
+---
+
 #### TextImportDialog
 
 **Location:** `components/admin/recipes/TextImportDialog.vue`

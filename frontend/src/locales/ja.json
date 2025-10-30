@@ -17,6 +17,7 @@
       "close": "閉じる",
       "clear": "クリア",
       "add": "追加",
+      "remove": "削除",
       "createRecipe": "レシピを作成",
       "manageData": "データを管理",
       "addReferenceData": "参照データを追加",
@@ -35,7 +36,8 @@
       "actions": "操作",
       "yes": "はい",
       "no": "いいえ",
-      "servings": "人分"
+      "servings": "人分",
+      "difficulty": "難易度"
     },
     "messages": {
       "success": "操作が正常に完了しました",
@@ -103,6 +105,13 @@
         "fermentation": "発酵",
         "molecular": "分子ガストロノミー"
       },
+      "difficultyLevel": "難易度",
+      "difficultyLevelPlaceholder": "難易度を選択",
+      "difficultyLevels": {
+        "easy": "簡単",
+        "medium": "普通",
+        "hard": "難しい"
+      },
       "dietaryTags": "食事タグ",
       "dietaryTagsPlaceholder": "食事タグを選択",
       "cuisines": "料理の種類",
@@ -136,9 +145,13 @@
       "adminNotes": "管理者メモ",
       "adminNotesPlaceholder": "内部メモ（ユーザーには表示されません）",
       "adminNotesHint": "このレシピに関する内部メモを追加",
+      "image": "レシピ画像",
+      "imageUploadPlaceholder": "画像をクリックまたはドラッグ&ドロップで追加",
+      "imageUploadHint": "サポートされている形式: PNG、JPG、GIF、WebP。最大サイズ: 10MB",
       "sections": {
         "import": "インポート",
         "basicInfo": "基本情報",
+        "image": "レシピ画像",
         "servings": "人数",
         "timing": "時間",
         "precision": "正確性の要件",
@@ -210,6 +223,7 @@
         "language": "言語",
         "cuisines": "料理の種類",
         "servings": "人数",
+        "difficulty": "難易度",
         "timing": "時間",
         "minutes": "分",
         "hours": "時間"
@@ -233,6 +247,7 @@
           "name": "名前",
           "language": "言語",
           "servings": "人数",
+          "difficultyLevel": "難易度",
           "timing": "合計時間",
           "cuisines": "料理の種類",
           "dietaryTags": "食事タグ",

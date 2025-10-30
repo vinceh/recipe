@@ -41,7 +41,13 @@
               class="recipe-item"
             >
               <div class="recipe-item__image">
-                <div class="recipe-item__image-placeholder">
+                <img
+                  v-if="recipe.image_url"
+                  :src="recipe.image_url"
+                  :alt="recipe.name"
+                  class="recipe-item__image-img"
+                />
+                <div v-else class="recipe-item__image-placeholder">
                   <i class="pi pi-image"></i>
                 </div>
               </div>
@@ -51,10 +57,32 @@
                   <span v-if="recipe.timing?.total_minutes">{{
                     formatTime(recipe.timing.total_minutes)
                   }}</span>
-                  <span v-if="recipe.cuisines?.length">{{ recipe.cuisines[0] }}</span>
                   <span v-if="recipe.servings?.original"
                     >{{ recipe.servings.original }} {{ $t('common.labels.servings') }}</span
                   >
+                  <span v-if="recipe.difficulty_level">
+                    {{ $t(`forms.recipe.difficultyLevels.${recipe.difficulty_level}`) }}
+                  </span>
+                </p>
+                <template v-if="recipe.cuisines?.length && recipe.dietary_tags?.length">
+                  <p v-if="canFitOneLine(recipe.cuisines, recipe.dietary_tags)" class="recipe-item__meta">
+                    <span>{{ recipe.cuisines.join(', ') }}</span>
+                    <span>{{ recipe.dietary_tags.join(', ') }}</span>
+                  </p>
+                  <template v-else>
+                    <p class="recipe-item__meta">
+                      <span>{{ recipe.cuisines.join(', ') }}</span>
+                    </p>
+                    <p class="recipe-item__meta">
+                      <span>{{ recipe.dietary_tags.join(', ') }}</span>
+                    </p>
+                  </template>
+                </template>
+                <p v-else-if="recipe.cuisines?.length" class="recipe-item__meta">
+                  <span>{{ recipe.cuisines.join(', ') }}</span>
+                </p>
+                <p v-else-if="recipe.dietary_tags?.length" class="recipe-item__meta">
+                  <span>{{ recipe.dietary_tags.join(', ') }}</span>
                 </p>
                 <p class="recipe-item__description">{{ getPreviewText(recipe) }}</p>
               </div>
@@ -130,6 +158,19 @@ function formatTime(minutes: number): string {
 
 function getPreviewText(recipe: Recipe): string {
   return recipe.description;
+}
+
+function canFitOneLine(cuisines: string[] | undefined, dietaryTags: string[] | undefined): boolean {
+  if (!cuisines?.length || !dietaryTags?.length) {
+    return true;
+  }
+
+  const cuisinesText = cuisines.join(', ');
+  const dietaryTagsText = dietaryTags.join(', ');
+  const combinedText = `${cuisinesText} · ${dietaryTagsText}`;
+
+  // Threshold of 40 characters for fitting on one line
+  return combinedText.length <= 40;
 }
 
 onMounted(() => {
@@ -351,6 +392,13 @@ watch(locale, () => {
   border-bottom: 1px solid var(--color-provisions-border);
 }
 
+.recipe-item__image-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .recipe-item__image-placeholder {
   width: 100%;
   height: 100%;
@@ -369,7 +417,7 @@ watch(locale, () => {
   font-family: var(--font-family-heading);
   font-size: 16px;
   font-weight: 600;
-  margin: 0;
+  margin: 0 0 3px 0;
   color: var(--color-provisions-text-dark);
   line-height: 1.3;
 }
@@ -379,9 +427,17 @@ watch(locale, () => {
   gap: 6px;
   font-size: 13px;
   color: var(--color-provisions-border);
-  margin: 3px 0 10px 0;
+  margin: 3px 0 0 0;
   font-family: var(--font-family-base);
   font-weight: 300;
+}
+
+.recipe-item__meta + .recipe-item__meta {
+  margin-top: 0;
+}
+
+.recipe-item__meta:last-of-type {
+  margin-bottom: 10px;
 }
 
 .recipe-item__meta span:not(:last-child)::after {
@@ -392,7 +448,7 @@ watch(locale, () => {
 .recipe-item__description {
   font-size: 14px;
   color: var(--color-provisions-text-dark);
-  margin: 0 0 15px 0;
+  margin: 15px 0 15px 0;
   line-height: 1.4;
   font-family: var(--font-family-heading);
   font-weight: normal;

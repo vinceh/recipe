@@ -765,14 +765,14 @@ See `DOCUMENTATION-WORKFLOW.md` for the complete process.
 **Every component MUST be documented in `component-library.md` with full examples.**
 
 - [x] Create RecipeForm.vue (manual recipe creation/editing)
-  - Form fields: title, source_url, servings, timing, difficulty
-  - Image upload field (PNG/JPG/GIF/WebP, max 10MB)
-  - Image preview with remove option
-  - Ingredient groups builder (add/remove groups and ingredients)
-  - Steps builder (add/remove/reorder steps)
-  - Tags/cuisine multi-select (uses dataReferenceStore)
-  - Equipment multi-select
-  - Validation for required fields including image
+  - [x] Form fields: title, source_url, servings, timing, difficulty
+  - [x] Image upload field (PNG/JPG/GIF/WebP, max 10MB)
+  - [x] Image preview with remove option
+  - [x] Ingredient groups builder (add/remove groups and ingredients)
+  - [x] Steps builder (add/remove/reorder steps)
+  - [x] Tags/cuisine multi-select (uses dataReferenceStore)
+  - [x] Equipment multi-select
+  - [x] Validation for required fields including image
   - [x] Document in component-library.md
 - [ ] Create RecipeImportModal.vue (3 import methods)
   - [x] Tab 1: Text block import (textarea + parse button)
@@ -814,11 +814,11 @@ See `DOCUMENTATION-WORKFLOW.md` for the complete process.
 - [ ] Test responsive mobile menu (<768px breakpoint)
 
 ### Recipe Display Components (Priority 4)
-- [ ] AC-VIEW-001: Create RecipeDetail.vue with all fields visible
-  - Display: name, image, servings, timing, nutrition, dietary tags, cuisines, ingredients, steps, equipment
-  - Display hero image at top (from Active Storage URL)
-  - Show placeholder if no image
-  - Validate all fields render correctly
+- [x] AC-VIEW-001: Create RecipeDetail.vue with all fields visible
+  - [x] Display: name, image, servings, timing, nutrition, dietary tags, cuisines, ingredients, steps, equipment
+  - [x] Display hero image at top (from Active Storage URL)
+  - [x] Show placeholder if no image
+  - [x] Validate all fields render correctly
 - [ ] AC-VIEW-002: Create IngredientList.vue with ingredient groups
   - Display group headers ("Main Ingredients", "Sauce", etc.)
   - Group ingredients by ingredient_groups
@@ -845,12 +845,12 @@ See `DOCUMENTATION-WORKFLOW.md` for the complete process.
   - Show nutrition panel on recipe detail page
   - Auto-update nutrition when servings scaled (integration with ScalingControls)
   - Write component tests for nutrition display
-- [ ] Create RecipeCard.vue (for list view)
-  - Display recipe image from Active Storage URL
-  - Show placeholder for recipes without images
-  - Image dimensions: responsive with fixed aspect ratio
-  - Show recipe title, description snippet, tags
-  - Click to navigate to recipe detail
+- [x] Create RecipeCard.vue (for list view)
+  - [x] Display recipe image from Active Storage URL
+  - [x] Show placeholder for recipes without images
+  - [x] Image dimensions: responsive with fixed aspect ratio
+  - [x] Show recipe title, description snippet, tags
+  - [x] Click to navigate to recipe detail
 - [ ] Create StepVariantToggle.vue
 - [ ] Create ScalingControls.vue
 - [ ] Write component tests for all recipe viewing ACs (AC-VIEW-001 through AC-VIEW-007, AC-NUTR-010)

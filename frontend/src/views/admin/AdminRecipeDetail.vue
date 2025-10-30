@@ -172,6 +172,13 @@ onBeforeUnmount(() => {
 
     <!-- Recipe content -->
     <div v-else-if="recipe" class="recipe-content">
+      <!-- Recipe Image Card -->
+      <div v-if="recipe?.image_url" class="card">
+        <div class="card-body recipe-image-card">
+          <img :src="recipe.image_url" :alt="recipe.name" class="recipe-detail-image" />
+        </div>
+      </div>
+
       <!-- Nutrition Card -->
       <div v-if="recipe?.nutrition?.per_serving" class="card">
         <div class="card-header">
@@ -225,6 +232,13 @@ onBeforeUnmount(() => {
             <div class="info-item">
               <label>{{ $t('admin.recipes.detail.fields.servings') }}</label>
               <p>{{ recipe?.servings?.original || '-' }}</p>
+            </div>
+            <div class="info-item">
+              <label>{{ $t('admin.recipes.detail.fields.difficultyLevel') }}</label>
+              <p v-if="recipe?.difficulty_level" class="difficulty-label" :class="`difficulty-${recipe.difficulty_level}`">
+                {{ $t(`forms.recipe.difficultyLevels.${recipe.difficulty_level}`) }}
+              </p>
+              <p v-else>-</p>
             </div>
             <div class="info-item">
               <label>{{ $t('admin.recipes.detail.fields.timing') }}</label>
@@ -433,6 +447,19 @@ onBeforeUnmount(() => {
   padding: var(--spacing-lg);
 }
 
+.recipe-image-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.recipe-detail-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -470,6 +497,30 @@ onBeforeUnmount(() => {
 
 .info-item a:hover {
   text-decoration: underline;
+}
+
+.difficulty-label {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-transform: capitalize;
+}
+
+.difficulty-easy {
+  background: #d4f4dd;
+  color: #1b5e20;
+}
+
+.difficulty-medium {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.difficulty-hard {
+  background: #f8d7da;
+  color: #721c24;
 }
 
 .tags {

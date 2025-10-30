@@ -43,6 +43,7 @@ const formData = ref<Partial<Recipe>>({
   source_url: '',
   requires_precision: false,
   precision_reason: undefined,
+  difficulty_level: undefined,
   servings: {
     original: undefined,
     min: undefined,
@@ -147,6 +148,46 @@ function moveStepDown(index: number) {
   }
 }
 
+// Image upload handling
+const selectedImageFile = ref<File | null>(null)
+const imagePreview = ref<string | null>(null)
+
+function handleImageSelect(event: Event) {
+  const input = event.target as HTMLInputElement
+  const file = input.files?.[0]
+
+  if (file) {
+    const validTypes = ['image/png', 'image/jpeg', 'image/gif', 'image/webp']
+    const maxSize = 10 * 1024 * 1024
+
+    if (!validTypes.includes(file.type)) {
+      alert('Please select a valid image file (PNG, JPG, GIF, or WebP)')
+      return
+    }
+
+    if (file.size > maxSize) {
+      alert('Image size must be less than 10MB')
+      return
+    }
+
+    selectedImageFile.value = file
+    const reader = new FileReader()
+    reader.onload = (e) => {
+      imagePreview.value = e.target?.result as string
+    }
+    reader.readAsDataURL(file)
+  }
+}
+
+function removeImage() {
+  selectedImageFile.value = null
+  imagePreview.value = null
+  const fileInput = document.getElementById('recipe-image') as HTMLInputElement
+  if (fileInput) {
+    fileInput.value = ''
+  }
+}
+
 // Equipment - simple string array
 const equipmentInput = ref('')
 function addEquipment() {
@@ -191,6 +232,12 @@ const precisionReasonOptions = computed(() => [
   { label: t('forms.recipe.precisionReasons.molecular'), value: 'molecular' }
 ])
 
+const difficultyLevelOptions = computed(() => [
+  { label: t('forms.recipe.difficultyLevels.easy'), value: 'easy' },
+  { label: t('forms.recipe.difficultyLevels.medium'), value: 'medium' },
+  { label: t('forms.recipe.difficultyLevels.hard'), value: 'hard' }
+])
+
 // Flag to prevent recursive updates
 const isUpdatingFromProp = ref(false)
 
@@ -209,6 +256,11 @@ const isValid = computed(() => {
   // Required: Language
   if (!formData.value.language) {
     validationErrors.value.push('Language is required')
+  }
+
+  // Required: Difficulty level
+  if (!formData.value.difficulty_level) {
+    validationErrors.value.push('Difficulty level is required')
   }
 
   // Required: Servings validation
@@ -323,6 +375,7 @@ watch(() => props.modelValue, (newValue) => {
     if (!formData.value.aliases) formData.value.aliases = []
     if (!formData.value.dietary_tags) formData.value.dietary_tags = []
     if (!formData.value.cuisines) formData.value.cuisines = []
+    if (!formData.value.difficulty_level) formData.value.difficulty_level = undefined
 
     // Reset flag on next tick to allow subsequent user changes to emit
     nextTick(() => {
@@ -366,7 +419,7 @@ function handleCancel() {
 // Method to set precision_reason from external scripts (like formtest.js)
 function setPrecisionReason(value: string) {
   if (formData.value) {
-    formData.value.precision_reason = value
+    formData.value.precision_reason = value as 'baking' | 'confectionery' | 'fermentation' | 'molecular'
   }
 }
 
@@ -374,7 +427,8 @@ function setPrecisionReason(value: string) {
 defineExpose({
   validateForm,
   isValid,
-  setPrecisionReason
+  setPrecisionReason,
+  selectedImageFile
 })
 
 // Lifecycle
@@ -519,6 +573,21 @@ watch(() => uiStore.language, async () => {
           />
         </div>
 
+        <div class="recipe-form__field recipe-form__field--medium">
+          <label for="difficulty_level" class="recipe-form__label required">
+            {{ $t('forms.recipe.difficultyLevel') }}
+          </label>
+          <Select
+            id="difficulty_level"
+            v-model="formData.difficulty_level"
+            :options="difficultyLevelOptions"
+            optionLabel="label"
+            optionValue="value"
+            :placeholder="$t('forms.recipe.difficultyLevelPlaceholder')"
+            class="recipe-form__input"
+          />
+        </div>
+
         <div class="recipe-form__field">
           <button
             type="button"
@@ -549,6 +618,46 @@ watch(() => uiStore.language, async () => {
             optionValue="value"
             :placeholder="$t('forms.recipe.precisionReasonPlaceholder')"
             class="recipe-form__input"
+          />
+        </div>
+      </section>
+
+      <hr/>
+
+      <!-- Recipe Image -->
+      <section class="recipe-form__section">
+        <h2 class="recipe-form__section-title">{{ $t('forms.recipe.sections.image') }}</h2>
+
+        <div class="recipe-form__field">
+          <label for="recipe-image" class="recipe-form__label">
+            {{ $t('forms.recipe.image') }}
+          </label>
+          <div class="recipe-form__image-upload">
+            <input
+              id="recipe-image"
+              type="file"
+              accept="image/png,image/jpeg,image/gif,image/webp"
+              class="recipe-form__file-input"
+              @change="handleImageSelect"
+            />
+            <label for="recipe-image" class="recipe-form__file-label">
+              <i class="pi pi-cloud-upload"></i>
+              <span>{{ $t('forms.recipe.imageUploadPlaceholder') }}</span>
+            </label>
+          </div>
+          <small class="recipe-form__help-text">{{ $t('forms.recipe.imageUploadHint') }}</small>
+        </div>
+
+        <div v-if="imagePreview || formData.image_url" class="recipe-form__image-preview">
+          <img :src="imagePreview || formData.image_url" :alt="formData.name || 'Recipe image'" />
+          <Button
+            type="button"
+            icon="pi pi-trash"
+            severity="danger"
+            size="small"
+            :label="$t('common.buttons.remove')"
+            @click="removeImage"
+            class="recipe-form__remove-image-btn"
           />
         </div>
       </section>
@@ -886,7 +995,7 @@ watch(() => uiStore.language, async () => {
                 @click="moveStepDown(index)"
               />
               <Button
-                v-if="formData.steps?.length > 1"
+                v-if="(formData.steps?.length ?? 0) > 1"
                 type="button"
                 icon="pi pi-trash"
                 severity="danger"
@@ -1295,6 +1404,64 @@ hr {
   }
 }
 
+/* Image upload styling */
+.recipe-form__image-upload {
+  position: relative;
+}
+
+.recipe-form__file-input {
+  display: none;
+}
+
+.recipe-form__file-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-2xl);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--border-radius-md);
+  background: var(--color-gray-50);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.recipe-form__file-label:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.recipe-form__file-label i {
+  font-size: 32px;
+}
+
+.recipe-form__image-preview {
+  margin-top: var(--spacing-lg);
+  position: relative;
+  display: inline-block;
+  max-width: 300px;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.recipe-form__image-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius-md);
+}
+
+.recipe-form__remove-image-btn {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
   .recipe-form__row {
@@ -1307,6 +1474,10 @@ hr {
 
   .recipe-form__ingredient-row {
     grid-template-columns: 1fr;
+  }
+
+  .recipe-form__image-preview {
+    max-width: 100%;
   }
 }
 </style>

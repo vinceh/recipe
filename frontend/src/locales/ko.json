@@ -17,6 +17,7 @@
       "close": "닫기",
       "clear": "지우기",
       "add": "추가",
+      "remove": "제거",
       "createRecipe": "레시피 만들기",
       "manageData": "데이터 관리",
       "addReferenceData": "참조 데이터 추가",
@@ -35,7 +36,8 @@
       "actions": "작업",
       "yes": "예",
       "no": "아니오",
-      "servings": "인분"
+      "servings": "인분",
+      "difficulty": "난이도"
     },
     "messages": {
       "success": "작업이 성공적으로 완료되었습니다",
@@ -103,6 +105,13 @@
         "fermentation": "발효",
         "molecular": "분자 요리"
       },
+      "difficultyLevel": "난이도",
+      "difficultyLevelPlaceholder": "난이도 선택",
+      "difficultyLevels": {
+        "easy": "쉬움",
+        "medium": "보통",
+        "hard": "어려움"
+      },
       "dietaryTags": "식단 태그",
       "dietaryTagsPlaceholder": "식단 태그 선택",
       "cuisines": "요리 종류",
@@ -136,9 +145,13 @@
       "adminNotes": "관리자 메모",
       "adminNotesPlaceholder": "내부 메모 (사용자에게 표시되지 않음)",
       "adminNotesHint": "이 레시피에 대한 내부 메모 추가",
+      "image": "레시피 이미지",
+      "imageUploadPlaceholder": "클릭하거나 드래그&드롭으로 이미지 업로드",
+      "imageUploadHint": "지원되는 형식: PNG, JPG, GIF, WebP. 최대 크기: 10MB",
       "sections": {
         "import": "가져오기",
         "basicInfo": "기본 정보",
+        "image": "레시피 이미지",
         "servings": "인분",
         "timing": "시간",
         "precision": "정확도 요구사항",
@@ -210,6 +223,7 @@
         "language": "언어",
         "cuisines": "요리 종류",
         "servings": "인분",
+        "difficulty": "난이도",
         "timing": "시간",
         "minutes": "분",
         "hours": "시간"
@@ -233,6 +247,7 @@
           "name": "이름",
           "language": "언어",
           "servings": "인분",
+          "difficultyLevel": "난이도",
           "timing": "총 시간",
           "cuisines": "요리 종류",
           "dietaryTags": "식단 태그",

@@ -101,6 +101,21 @@ Use this checklist before committing ANY frontend code.
   - [ ] ✅ Reused existing components wherever possible
   - [ ] ✅ Did not create duplicate components
 
+### ✅ Image Upload Feature
+
+- [ ] **Image upload field visible in RecipeForm.vue**
+- [ ] **Image preview displays correctly with remove button**
+- [ ] **File validation enforces PNG/JPG/GIF/WebP format**
+- [ ] **File size limit (10MB) is enforced**
+- [ ] **FormData submission works in AdminRecipeNew.vue**
+- [ ] **Image displays in HomeView recipe grid (object-fit: cover)**
+- [ ] **Image displays in RecipeCard component**
+- [ ] **Image displays as hero in ViewRecipe.vue**
+- [ ] **Image displays in AdminRecipeDetail.vue**
+- [ ] **Localization keys present in all 7 locale files**
+- [ ] **Error handling for invalid image formats**
+- [ ] **Error handling for files exceeding size limit**
+
 ### ✅ Internationalization (i18n) - MANDATORY 100% Coverage
 
 - [ ] **ALL user-facing text translated to ALL 7 languages**

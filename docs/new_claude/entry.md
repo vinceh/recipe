@@ -140,6 +140,26 @@ docs/
 
 ---
 
+## Features Implementation Summary
+
+### Recipe Images (Image Upload Feature)
+
+**Backend:** Active Storage integration for PNG/JPG/GIF/WebP images (max 10MB)
+- Image validations in Recipe model
+- Image URL returned in API responses
+- See: `backend/app/models/recipe.rb`, `backend/config/storage.yml`
+
+**Frontend:** Image upload in admin forms + display in recipe views
+- File upload with preview in RecipeForm.vue
+- FormData handling in AdminRecipeNew.vue, AdminRecipeDetail.vue
+- Image display in HomeView, RecipeCard, ViewRecipe
+- See: `frontend/src/components/admin/recipes/RecipeForm.vue`, etc.
+
+**Localization:** Image labels in 7 languages
+- See: `frontend/src/locales/` (en, ja, ko, zh-cn, zh-tw, es, fr)
+
+---
+
 ## Additional Documentation
 
 Other documentation lives in parent folders:

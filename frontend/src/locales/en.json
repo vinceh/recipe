@@ -17,6 +17,7 @@
       "close": "Close",
       "clear": "Clear",
       "add": "Add",
+      "remove": "Remove",
       "createRecipe": "Create Recipe",
       "manageData": "Manage Data",
       "addReferenceData": "Add Reference Data",
@@ -35,7 +36,8 @@
       "actions": "Actions",
       "yes": "Yes",
       "no": "No",
-      "servings": "servings"
+      "servings": "servings",
+      "difficulty": "Difficulty"
     },
     "messages": {
       "success": "Operation completed successfully",
@@ -103,6 +105,13 @@
         "fermentation": "Fermentation",
         "molecular": "Molecular Gastronomy"
       },
+      "difficultyLevel": "Difficulty Level",
+      "difficultyLevelPlaceholder": "Select difficulty level",
+      "difficultyLevels": {
+        "easy": "Easy",
+        "medium": "Medium",
+        "hard": "Hard"
+      },
       "dietaryTags": "Dietary Tags",
       "dietaryTagsPlaceholder": "Select dietary tags",
       "cuisines": "Cuisines",
@@ -136,9 +145,13 @@
       "adminNotes": "Admin Notes",
       "adminNotesPlaceholder": "Internal notes (not visible to users)",
       "adminNotesHint": "Add any internal notes about this recipe",
+      "image": "Recipe Image",
+      "imageUploadPlaceholder": "Click or drag and drop to upload image",
+      "imageUploadHint": "Supported formats: PNG, JPG, GIF, WebP. Max size: 10MB",
       "sections": {
         "import": "Import",
         "basicInfo": "Basic Information",
+        "image": "Recipe Image",
         "servings": "Servings",
         "timing": "Timing",
         "precision": "Precision Requirements",
@@ -210,6 +223,7 @@
         "language": "Language",
         "cuisines": "Cuisines",
         "servings": "Servings",
+        "difficulty": "Difficulty",
         "timing": "Time",
         "minutes": "min",
         "hours": "h"
@@ -233,6 +247,7 @@
           "name": "Name",
           "language": "Language",
           "servings": "Servings",
+          "difficultyLevel": "Difficulty Level",
           "timing": "Total Time",
           "cuisines": "Cuisines",
           "dietaryTags": "Dietary Tags",
