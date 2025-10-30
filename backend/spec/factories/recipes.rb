@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :recipe do
+    name { "Test Recipe #{SecureRandom.hex(4)}" }
     source_language { 'en' }
     servings_original { 2 }
     servings_min { 2 }
@@ -13,7 +14,6 @@ FactoryBot.define do
     description { "A delicious test recipe" }
 
     after(:build) do |recipe|
-      recipe.name = "Test Recipe #{SecureRandom.hex(4)}"
 
       # Add required ingredient group with recipe ingredient
       ingredient = Ingredient.find_or_create_by!(canonical_name: "test ingredient") { |i| i.category = "vegetable" }

@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 describe 'Api::V1::RecipesController', type: :request do
+  before do
+    create(:recipe, description: 'Test recipe description')
+  end
+
   describe 'GET /api/v1/recipes' do
     it 'includes description in list response' do
       get '/api/v1/recipes'
