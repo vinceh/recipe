@@ -66,7 +66,7 @@ This is your **master checklist** for building the Recipe App MVP. Track progres
 
 ### Database Migrations ✅
 - [x] Create recipes table migration (technical-specification.md:40-80) - BIGINT, JSONB fields, GIN indexes
-- [x] Update users table migration to use UUID (Devise + role field)
+- [x] Update users table migration to use BIGINT (Devise + role field)
 - [x] Create user_recipe_notes table migration - BIGINT with foreign keys
 - [x] Create user_favorites table migration - BIGINT with unique index
 - [x] Create ingredients table migration - BIGINT, canonical_name unique index

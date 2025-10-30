@@ -37,7 +37,7 @@ Stores the main recipe information with source language and structural data.
 | `updated_at` | DateTime | Last updated timestamp | ISO 8601 timestamp |
 
 **Indexes:**
-- Primary key on `id` (UUID)
+- Primary key on `id` (BIGINT auto-incrementing)
 - Index on `source_language` (for filtering by authoring language)
 - Index on `difficulty_level` (for filtering by recipe difficulty)
 - Index on `created_at` (for chronological queries)
@@ -316,7 +316,7 @@ Stores metadata about uploaded files.
 | Field | Type | Description |
 |-------|------|-------------|
 | `id` | BigInt | Primary key |
-| `key` | String | Unique storage key (UUID format) |
+| `key` | String | Unique storage key |
 | `filename` | String | Original filename uploaded |
 | `content_type` | String | MIME type (e.g., `image/jpeg`, `image/png`) |
 | `metadata` | JSON | Additional file metadata |
