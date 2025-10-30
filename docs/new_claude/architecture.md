@@ -26,13 +26,12 @@ Backend and frontend architecture patterns, organization, design systems.
 
 **Auth & Security:**
 - Devise + Devise-JWT
-- pgcrypto (UUID generation)
 
 **Search & Optimization:**
 - pg_trgm (fuzzy search)
 
 **Translation:**
-- Mobility ~1.3.2 (dynamic translation via Table backend, UUID foreign keys)
+- Mobility ~1.3.2 (dynamic translation via Table backend)
 
 **Testing:**
 - RSpec
@@ -217,13 +216,13 @@ DataReference → DataReferenceTranslation (data_reference_id, locale, display_n
 
 **Constraint:** `UNIQUE(entity_id, locale)` for each table
 
-**Foreign Keys:** UUID primary keys with ON DELETE CASCADE
+**Foreign Keys:** BIGINT primary keys with ON DELETE CASCADE
 
 ### Mobility Configuration
 
 **Location:** `config/initializers/mobility.rb`
 
-**Backend:** Table (UUID foreign key support)
+**Backend:** Table
 
 **Plugins:** active_record, reader, writer, query, fallbacks, locale_accessors, presence, dirty, cache, backend_reader
 

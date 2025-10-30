@@ -239,7 +239,6 @@ recipe/
 
 ### Backend
 - **JSONB for flexibility** - Recipes as structured data, not rigid schema
-- **UUID primary keys** - Security and scalability
 - **Service objects** - Complex logic outside controllers
 - **Background jobs** - AI operations don't block requests
 - **Test-driven** - Every AC has RSpec tests

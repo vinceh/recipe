@@ -106,7 +106,7 @@ Scale a recipe to a different serving size or ingredient amount.
 **Authentication:** Not required (public endpoint)
 
 **Path Parameters:**
-- `id` (UUID, required) - Recipe ID
+- `id` (Integer, required) - Recipe ID
 
 **Request Body:**
 | Field | Type | Required | Description |
@@ -226,7 +226,7 @@ Don't assume developers will "figure it out."
 
 Be explicit about:
 - Required vs optional fields
-- Data types (String, Integer, Boolean, UUID, etc.)
+- Data types (String, Integer, Boolean, etc.)
 - Format constraints (email, URL, date)
 - Min/max values
 - Allowed values (enums)

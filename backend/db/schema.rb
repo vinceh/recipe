@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
+ActiveRecord::Schema[8.0].define(version: 2025_10_30_103531) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pg_trgm"
-  enable_extension "pgcrypto"
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -44,7 +43,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "ai_prompts", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "ai_prompts", force: :cascade do |t|
     t.string "prompt_key", null: false
     t.string "prompt_type", null: false
     t.string "feature_area", null: false
@@ -59,8 +58,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["prompt_key"], name: "index_ai_prompts_on_prompt_key", unique: true
   end
 
-  create_table "data_reference_translations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "data_reference_id", null: false
+  create_table "data_reference_translations", force: :cascade do |t|
+    t.bigint "data_reference_id", null: false
     t.string "locale", null: false
     t.string "display_name", null: false
     t.datetime "created_at", null: false
@@ -70,7 +69,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["locale"], name: "index_data_reference_translations_on_locale"
   end
 
-  create_table "data_references", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "data_references", force: :cascade do |t|
     t.string "reference_type", null: false
     t.string "key", null: false
     t.string "display_name"
@@ -83,7 +82,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["reference_type"], name: "index_data_references_on_reference_type"
   end
 
-  create_table "equipment", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "equipment", force: :cascade do |t|
     t.string "canonical_name"
     t.string "category"
     t.jsonb "metadata", default: {}
@@ -93,8 +92,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["category"], name: "index_equipment_on_category"
   end
 
-  create_table "equipment_translations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "equipment_id", null: false
+  create_table "equipment_translations", force: :cascade do |t|
+    t.bigint "equipment_id", null: false
     t.string "locale", null: false
     t.string "canonical_name", null: false
     t.datetime "created_at", null: false
@@ -104,8 +103,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["locale"], name: "index_equipment_translations_on_locale"
   end
 
-  create_table "ingredient_aliases", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "ingredient_id", null: false
+  create_table "ingredient_aliases", force: :cascade do |t|
+    t.bigint "ingredient_id", null: false
     t.string "alias", null: false
     t.string "language"
     t.string "alias_type"
@@ -115,8 +114,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["ingredient_id"], name: "index_ingredient_aliases_on_ingredient_id"
   end
 
-  create_table "ingredient_group_translations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "ingredient_group_id", null: false
+  create_table "ingredient_group_translations", force: :cascade do |t|
+    t.bigint "ingredient_group_id", null: false
     t.string "locale", null: false
     t.string "name", null: false
     t.datetime "created_at", null: false
@@ -126,8 +125,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["locale"], name: "index_ingredient_group_translations_on_locale"
   end
 
-  create_table "ingredient_groups", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "recipe_id", null: false
+  create_table "ingredient_groups", force: :cascade do |t|
+    t.bigint "recipe_id", null: false
     t.string "name"
     t.integer "position", null: false
     t.datetime "created_at", null: false
@@ -136,8 +135,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["recipe_id"], name: "index_ingredient_groups_on_recipe_id"
   end
 
-  create_table "ingredient_nutrition", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "ingredient_id", null: false
+  create_table "ingredient_nutrition", force: :cascade do |t|
+    t.bigint "ingredient_id", null: false
     t.decimal "calories", precision: 8, scale: 2
     t.decimal "protein_g", precision: 6, scale: 2
     t.decimal "carbs_g", precision: 6, scale: 2
@@ -150,7 +149,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["ingredient_id"], name: "index_ingredient_nutrition_on_ingredient_id"
   end
 
-  create_table "ingredients", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "ingredients", force: :cascade do |t|
     t.string "canonical_name", null: false
     t.string "category"
     t.datetime "created_at", null: false
@@ -167,8 +166,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["jti"], name: "index_jwt_denylists_on_jti"
   end
 
-  create_table "recipe_aliases", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "recipe_id", null: false
+  create_table "recipe_aliases", force: :cascade do |t|
+    t.bigint "recipe_id", null: false
     t.string "alias_name", null: false
     t.string "language", default: "en", null: false
     t.datetime "created_at", null: false
@@ -177,9 +176,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["recipe_id"], name: "index_recipe_aliases_on_recipe_id"
   end
 
-  create_table "recipe_cuisines", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "recipe_id", null: false
-    t.uuid "data_reference_id", null: false
+  create_table "recipe_cuisines", force: :cascade do |t|
+    t.bigint "recipe_id", null: false
+    t.bigint "data_reference_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["data_reference_id"], name: "index_recipe_cuisines_on_data_reference_id"
@@ -187,9 +186,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["recipe_id"], name: "index_recipe_cuisines_on_recipe_id"
   end
 
-  create_table "recipe_dietary_tags", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "recipe_id", null: false
-    t.uuid "data_reference_id", null: false
+  create_table "recipe_dietary_tags", force: :cascade do |t|
+    t.bigint "recipe_id", null: false
+    t.bigint "data_reference_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["data_reference_id"], name: "index_recipe_dietary_tags_on_data_reference_id"
@@ -197,9 +196,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["recipe_id"], name: "index_recipe_dietary_tags_on_recipe_id"
   end
 
-  create_table "recipe_equipments", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "recipe_id", null: false
-    t.uuid "equipment_id", null: false
+  create_table "recipe_equipments", force: :cascade do |t|
+    t.bigint "recipe_id", null: false
+    t.bigint "equipment_id", null: false
     t.boolean "optional", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -207,8 +206,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["recipe_id"], name: "index_recipe_equipments_on_recipe_id"
   end
 
-  create_table "recipe_ingredient_translations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "recipe_ingredient_id", null: false
+  create_table "recipe_ingredient_translations", force: :cascade do |t|
+    t.bigint "recipe_ingredient_id", null: false
     t.string "locale", null: false
     t.string "ingredient_name", null: false
     t.text "preparation_notes"
@@ -219,9 +218,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["recipe_ingredient_id"], name: "index_recipe_ingredient_translations_on_recipe_ingredient_id"
   end
 
-  create_table "recipe_ingredients", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "ingredient_group_id", null: false
-    t.uuid "ingredient_id"
+  create_table "recipe_ingredients", force: :cascade do |t|
+    t.bigint "ingredient_group_id", null: false
+    t.bigint "ingredient_id"
     t.string "ingredient_name"
     t.decimal "amount", precision: 10, scale: 2
     t.string "unit"
@@ -235,8 +234,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["ingredient_id"], name: "index_recipe_ingredients_on_ingredient_id"
   end
 
-  create_table "recipe_nutritions", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "recipe_id", null: false
+  create_table "recipe_nutritions", force: :cascade do |t|
+    t.bigint "recipe_id", null: false
     t.decimal "calories", precision: 8, scale: 2
     t.decimal "protein_g", precision: 8, scale: 2
     t.decimal "carbs_g", precision: 8, scale: 2
@@ -249,8 +248,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["recipe_id"], name: "index_recipe_nutritions_on_recipe_id", unique: true
   end
 
-  create_table "recipe_step_translations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "recipe_step_id", null: false
+  create_table "recipe_step_translations", force: :cascade do |t|
+    t.bigint "recipe_step_id", null: false
     t.string "locale", null: false
     t.text "instruction_original"
     t.text "instruction_easier"
@@ -262,10 +261,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["recipe_step_id"], name: "index_recipe_step_translations_on_recipe_step_id"
   end
 
-  create_table "recipe_steps", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "recipe_id", null: false
+  create_table "recipe_steps", force: :cascade do |t|
+    t.bigint "recipe_id", null: false
     t.integer "step_number", null: false
-    t.integer "timing_minutes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "instruction_original"
@@ -273,8 +271,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["recipe_id"], name: "index_recipe_steps_on_recipe_id"
   end
 
-  create_table "recipe_translations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "recipe_id", null: false
+  create_table "recipe_translations", force: :cascade do |t|
+    t.bigint "recipe_id", null: false
     t.string "locale", null: false
     t.string "name", null: false
     t.datetime "created_at", null: false
@@ -285,7 +283,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["recipe_id"], name: "index_recipe_translations_on_recipe_id"
   end
 
-  create_table "recipes", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "recipes", force: :cascade do |t|
     t.string "name"
     t.string "source_language", default: "en", null: false
     t.integer "servings_original"
@@ -304,13 +302,12 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.datetime "last_translated_at"
     t.integer "difficulty_level", default: 1, null: false
     t.index ["difficulty_level"], name: "index_recipes_on_difficulty_level"
-    t.index ["name"], name: "index_recipes_on_name"
     t.index ["source_language"], name: "index_recipes_on_source_language"
   end
 
-  create_table "user_favorites", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "user_id", null: false
-    t.uuid "recipe_id", null: false
+  create_table "user_favorites", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "recipe_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["recipe_id"], name: "index_user_favorites_on_recipe_id"
@@ -318,9 +315,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["user_id"], name: "index_user_favorites_on_user_id"
   end
 
-  create_table "user_recipe_notes", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "user_id", null: false
-    t.uuid "recipe_id", null: false
+  create_table "user_recipe_notes", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "recipe_id", null: false
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -329,9 +326,12 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_153254) do
     t.index ["user_id"], name: "index_user_recipe_notes_on_user_id"
   end
 
-  create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "encrypted_password", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.string "role", default: "user"
     t.string "preferred_language", default: "en"
     t.datetime "created_at", null: false

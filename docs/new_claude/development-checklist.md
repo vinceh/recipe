@@ -65,18 +65,17 @@ This is your **master checklist** for building the Recipe App MVP. Track progres
 ## Phase 1: Database & Models (Week 1-2) ✅ COMPLETE
 
 ### Database Migrations ✅
-- [x] Create recipes table migration (technical-specification.md:40-80) - UUID, JSONB fields, GIN indexes
+- [x] Create recipes table migration (technical-specification.md:40-80) - BIGINT, JSONB fields, GIN indexes
 - [x] Update users table migration to use UUID (Devise + role field)
-- [x] Create user_recipe_notes table migration - UUID with foreign keys
-- [x] Create user_favorites table migration - UUID with unique index
-- [x] Create ingredients table migration - UUID, canonical_name unique index
-- [x] Create ingredient_nutrition table migration - UUID with decimal precision
-- [x] Create ingredient_aliases table migration - UUID with language support
-- [x] Create data_references table migration - UUID with JSONB metadata
-- [x] Create ai_prompts table migration - UUID with versioning
-- [x] Enable pgcrypto extension for UUID support
+- [x] Create user_recipe_notes table migration - BIGINT with foreign keys
+- [x] Create user_favorites table migration - BIGINT with unique index
+- [x] Create ingredients table migration - BIGINT, canonical_name unique index
+- [x] Create ingredient_nutrition table migration - BIGINT with decimal precision
+- [x] Create ingredient_aliases table migration - BIGINT with language support
+- [x] Create data_references table migration - BIGINT with JSONB metadata
+- [x] Create ai_prompts table migration - BIGINT with versioning
 - [x] Run all migrations (`rails db:migrate`) - All 9 migrations successful
-- [x] Verify schema.rb matches technical spec - All tables use UUID primary keys
+- [x] Verify schema.rb matches technical spec - All tables use BIGINT primary keys
 
 ### Models ✅
 - [x] Create Recipe model with JSONB validations (servings, timing, nutrition, ingredient_groups, steps)
@@ -100,7 +99,7 @@ This is your **master checklist** for building the Recipe App MVP. Track progres
 - [x] Verify data in database - 229 DataReferences + 1 admin user verified
 
 ### Phase 1 Notes
-- **UUID Strategy:** All tables use UUID primary keys via pgcrypto extension
+- **Primary Key Strategy:** All tables use BIGINT auto-incrementing primary keys
 - **JSONB Validations:** Recipe model validates structure of servings, timing, nutrition, ingredient_groups, and steps (critical for AC-SCALE-001 through AC-SCALE-012)
 - **Foreign Keys:** All relationships use proper foreign key constraints
 - **Indexes:** GIN indexes on JSONB arrays (dietary_tags, cuisines, etc.) for fast queries
@@ -553,7 +552,7 @@ This is your **master checklist** for building the Recipe App MVP. Track progres
 - [x] Run `bundle install`
 - [x] Generate Mobility initializer: `rails generate mobility:install --without-tables`
 - [x] Configure `config/initializers/mobility.rb`:
-  - [x] Table backend with UUID foreign key support
+  - [x] Table backend
   - [x] Enable plugins: active_record, reader, writer, query, fallbacks, locale_accessors, presence, dirty, cache, backend_reader
   - [x] Configure fallback chain: ja→en, ko→en, zh-tw→zh-cn→en, zh-cn→zh-tw→en, es→en, fr→en
 
@@ -572,7 +571,7 @@ This is your **master checklist** for building the Recipe App MVP. Track progres
 - [x] Create RecipeStepTranslation table
 - [x] Create EquipmentTranslation table
 - [x] Create DataReferenceTranslation table
-- [x] Add UUID foreign keys and uniqueness constraints
+- [x] Add foreign keys and uniqueness constraints
 
 **RSpec Tests** ✅
 - [x] Write comprehensive Mobility translation tests (103 test cases)

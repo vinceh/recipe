@@ -1,12 +1,11 @@
 class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
   def change
-    enable_extension "pgcrypto" unless extension_enabled?("pgcrypto")
     enable_extension "pg_trgm" unless extension_enabled?("pg_trgm")
 
     # ============================================================================
     # USERS & AUTH
     # ============================================================================
-    create_table :users, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
+    create_table :users do |t|
       t.string :email, null: false
       t.string :encrypted_password, null: false
       t.string :reset_password_token
@@ -28,7 +27,7 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     # ============================================================================
     # RECIPES (NORMALIZED)
     # ============================================================================
-    create_table :recipes, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
+    create_table :recipes do |t|
       t.string :name
       t.string :source_language, default: "en", null: false
 
@@ -56,8 +55,8 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     # ============================================================================
     # INGREDIENT GROUPS & INGREDIENTS
     # ============================================================================
-    create_table :ingredient_groups, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :recipe_id, null: false
+    create_table :ingredient_groups do |t|
+      t.bigint :recipe_id, null: false
       t.string :name, null: false
       t.integer :position, null: false
       t.timestamps
@@ -65,16 +64,16 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     add_index :ingredient_groups, :recipe_id
     add_index :ingredient_groups, [:recipe_id, :position], unique: true
 
-    create_table :ingredients, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
+    create_table :ingredients do |t|
       t.string :canonical_name, null: false
       t.string :category
       t.timestamps
     end
     add_index :ingredients, :canonical_name, unique: true
 
-    create_table :recipe_ingredients, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :ingredient_group_id, null: false
-      t.uuid :ingredient_id
+    create_table :recipe_ingredients do |t|
+      t.bigint :ingredient_group_id, null: false
+      t.bigint :ingredient_id
       t.string :ingredient_name, null: false
       t.decimal :amount, precision: 10, scale: 2
       t.string :unit
@@ -87,8 +86,8 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     add_index :recipe_ingredients, :ingredient_id
     add_index :recipe_ingredients, [:ingredient_group_id, :position]
 
-    create_table :ingredient_nutrition, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :ingredient_id, null: false
+    create_table :ingredient_nutrition do |t|
+      t.bigint :ingredient_id, null: false
       t.decimal :calories, precision: 8, scale: 2
       t.decimal :protein_g, precision: 6, scale: 2
       t.decimal :carbs_g, precision: 6, scale: 2
@@ -100,8 +99,8 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     end
     add_index :ingredient_nutrition, :ingredient_id
 
-    create_table :ingredient_aliases, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :ingredient_id, null: false
+    create_table :ingredient_aliases do |t|
+      t.bigint :ingredient_id, null: false
       t.string :alias, null: false
       t.string :language
       t.string :alias_type
@@ -113,8 +112,8 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     # ============================================================================
     # RECIPE STEPS
     # ============================================================================
-    create_table :recipe_steps, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :recipe_id, null: false
+    create_table :recipe_steps do |t|
+      t.bigint :recipe_id, null: false
       t.integer :step_number, null: false
       t.timestamps
     end
@@ -124,7 +123,7 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     # ============================================================================
     # EQUIPMENT
     # ============================================================================
-    create_table :equipment, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
+    create_table :equipment do |t|
       t.string :canonical_name, null: false
       t.string :category
       t.jsonb :metadata, default: {}
@@ -132,9 +131,9 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     end
     add_index :equipment, :canonical_name, unique: true
 
-    create_table :recipe_equipments, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :recipe_id, null: false
-      t.uuid :equipment_id, null: false
+    create_table :recipe_equipments do |t|
+      t.bigint :recipe_id, null: false
+      t.bigint :equipment_id, null: false
       t.boolean :optional, default: false
       t.timestamps
     end
@@ -144,7 +143,7 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     # ============================================================================
     # REFERENCE DATA
     # ============================================================================
-    create_table :data_references, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
+    create_table :data_references do |t|
       t.string :reference_type, null: false
       t.string :key, null: false
       t.string :display_name
@@ -156,44 +155,44 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     add_index :data_references, [:reference_type, :key], unique: true
     add_index :data_references, :reference_type
 
-    create_table :recipe_dietary_tags, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :recipe_id, null: false
-      t.uuid :data_reference_id, null: false
+    create_table :recipe_dietary_tags do |t|
+      t.bigint :recipe_id, null: false
+      t.bigint :data_reference_id, null: false
       t.timestamps
     end
     add_index :recipe_dietary_tags, :recipe_id
     add_index :recipe_dietary_tags, :data_reference_id
     add_index :recipe_dietary_tags, [:recipe_id, :data_reference_id], unique: true
 
-    create_table :recipe_dish_types, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :recipe_id, null: false
-      t.uuid :data_reference_id, null: false
+    create_table :recipe_dish_types do |t|
+      t.bigint :recipe_id, null: false
+      t.bigint :data_reference_id, null: false
       t.timestamps
     end
     add_index :recipe_dish_types, :recipe_id
     add_index :recipe_dish_types, :data_reference_id
     add_index :recipe_dish_types, [:recipe_id, :data_reference_id], unique: true
 
-    create_table :recipe_cuisines, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :recipe_id, null: false
-      t.uuid :data_reference_id, null: false
+    create_table :recipe_cuisines do |t|
+      t.bigint :recipe_id, null: false
+      t.bigint :data_reference_id, null: false
       t.timestamps
     end
     add_index :recipe_cuisines, :recipe_id
     add_index :recipe_cuisines, :data_reference_id
     add_index :recipe_cuisines, [:recipe_id, :data_reference_id], unique: true
 
-    create_table :recipe_recipe_types, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :recipe_id, null: false
-      t.uuid :data_reference_id, null: false
+    create_table :recipe_recipe_types do |t|
+      t.bigint :recipe_id, null: false
+      t.bigint :data_reference_id, null: false
       t.timestamps
     end
     add_index :recipe_recipe_types, :recipe_id
     add_index :recipe_recipe_types, :data_reference_id
     add_index :recipe_recipe_types, [:recipe_id, :data_reference_id], unique: true
 
-    create_table :recipe_aliases, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :recipe_id, null: false
+    create_table :recipe_aliases do |t|
+      t.bigint :recipe_id, null: false
       t.string :alias_name, null: false
       t.string :language, default: "en", null: false
       t.timestamps
@@ -204,8 +203,8 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     # ============================================================================
     # RECIPE NUTRITION
     # ============================================================================
-    create_table :recipe_nutritions, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :recipe_id, null: false
+    create_table :recipe_nutritions do |t|
+      t.bigint :recipe_id, null: false
       t.decimal :calories, precision: 8, scale: 2
       t.decimal :protein_g, precision: 8, scale: 2
       t.decimal :carbs_g, precision: 8, scale: 2
@@ -220,9 +219,9 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     # ============================================================================
     # USER INTERACTIONS
     # ============================================================================
-    create_table :user_recipe_notes, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :user_id, null: false
-      t.uuid :recipe_id, null: false
+    create_table :user_recipe_notes do |t|
+      t.bigint :user_id, null: false
+      t.bigint :recipe_id, null: false
       t.text :notes
       t.timestamps
     end
@@ -230,9 +229,9 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     add_index :user_recipe_notes, :recipe_id
     add_index :user_recipe_notes, [:user_id, :recipe_id], unique: true
 
-    create_table :user_favorites, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :user_id, null: false
-      t.uuid :recipe_id, null: false
+    create_table :user_favorites do |t|
+      t.bigint :user_id, null: false
+      t.bigint :recipe_id, null: false
       t.timestamps
     end
     add_index :user_favorites, :user_id
@@ -242,7 +241,7 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     # ============================================================================
     # AI PROMPTS
     # ============================================================================
-    create_table :ai_prompts, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
+    create_table :ai_prompts do |t|
       t.string :prompt_key, null: false
       t.string :prompt_type, null: false
       t.string :feature_area, null: false
@@ -259,8 +258,8 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     # ============================================================================
     # TRANSLATION TABLES
     # ============================================================================
-    create_table :recipe_translations, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :recipe_id, null: false
+    create_table :recipe_translations do |t|
+      t.bigint :recipe_id, null: false
       t.string :locale, null: false
       t.string :name, null: false
       t.timestamps
@@ -269,8 +268,8 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     add_index :recipe_translations, :locale
     add_index :recipe_translations, [:recipe_id, :locale], unique: true
 
-    create_table :ingredient_group_translations, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :ingredient_group_id, null: false
+    create_table :ingredient_group_translations do |t|
+      t.bigint :ingredient_group_id, null: false
       t.string :locale, null: false
       t.string :name, null: false
       t.timestamps
@@ -279,8 +278,8 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     add_index :ingredient_group_translations, :locale
     add_index :ingredient_group_translations, [:ingredient_group_id, :locale], unique: true
 
-    create_table :recipe_ingredient_translations, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :recipe_ingredient_id, null: false
+    create_table :recipe_ingredient_translations do |t|
+      t.bigint :recipe_ingredient_id, null: false
       t.string :locale, null: false
       t.string :name, null: false
       t.text :preparation_notes
@@ -290,8 +289,8 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     add_index :recipe_ingredient_translations, :locale
     add_index :recipe_ingredient_translations, [:recipe_ingredient_id, :locale], unique: true
 
-    create_table :equipment_translations, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :equipment_id, null: false
+    create_table :equipment_translations do |t|
+      t.bigint :equipment_id, null: false
       t.string :locale, null: false
       t.string :canonical_name, null: false
       t.timestamps
@@ -300,8 +299,8 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     add_index :equipment_translations, :locale
     add_index :equipment_translations, [:equipment_id, :locale], unique: true
 
-    create_table :recipe_step_translations, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :recipe_step_id, null: false
+    create_table :recipe_step_translations do |t|
+      t.bigint :recipe_step_id, null: false
       t.string :locale, null: false
       t.text :instruction_original
       t.text :instruction_easier
@@ -312,8 +311,8 @@ class CreateCompleteNormalizedSchema < ActiveRecord::Migration[8.0]
     add_index :recipe_step_translations, :locale
     add_index :recipe_step_translations, [:recipe_step_id, :locale], unique: true
 
-    create_table :data_reference_translations, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :data_reference_id, null: false
+    create_table :data_reference_translations do |t|
+      t.bigint :data_reference_id, null: false
       t.string :locale, null: false
       t.string :display_name, null: false
       t.timestamps

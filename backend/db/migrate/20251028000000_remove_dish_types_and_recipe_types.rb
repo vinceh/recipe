@@ -16,9 +16,9 @@ class RemoveDishTypesAndRecipeTypes < ActiveRecord::Migration[7.0]
 
   def down
     # Recreate the join tables
-    create_table :recipe_dish_types, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :recipe_id, null: false
-      t.uuid :data_reference_id, null: false
+    create_table :recipe_dish_types do |t|
+      t.bigint :recipe_id, null: false
+      t.bigint :data_reference_id, null: false
       t.datetime :created_at, null: false
       t.datetime :updated_at, null: false
     end
@@ -28,9 +28,9 @@ class RemoveDishTypesAndRecipeTypes < ActiveRecord::Migration[7.0]
     add_foreign_key :recipe_dish_types, :recipes, on_delete: :cascade
     add_foreign_key :recipe_dish_types, :data_references, on_delete: :cascade
 
-    create_table :recipe_recipe_types, id: :uuid, default: -> { "gen_random_uuid()" } do |t|
-      t.uuid :recipe_id, null: false
-      t.uuid :data_reference_id, null: false
+    create_table :recipe_recipe_types do |t|
+      t.bigint :recipe_id, null: false
+      t.bigint :data_reference_id, null: false
       t.datetime :created_at, null: false
       t.datetime :updated_at, null: false
     end

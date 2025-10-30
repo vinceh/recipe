@@ -41,13 +41,13 @@ export interface RecipeIngredientGroup {
 }
 
 export interface RecipeStep {
-  id: string
+  id: number
   order: number
   instruction: string
 }
 
 export interface Recipe {
-  id: string | number
+  id: number
   name: string  // Translated via Mobility based on Accept-Language or ?lang parameter
   description: string  // Translated via Mobility
   language: string  // The source language of the recipe (e.g., 'en')
@@ -100,7 +100,7 @@ export interface ScaleRecipeResponse {
 
 // Data reference types (dietary tags, cuisines, dish types, recipe types)
 export interface DataReference {
-  id?: string | number
+  id?: number
   key: string
   display_name: string
   reference_type: string
@@ -140,7 +140,7 @@ export interface SignupData extends LoginCredentials {
 }
 
 export interface User {
-  id: string | number
+  id: number
   email: string
   name?: string
   role: 'user' | 'admin'
