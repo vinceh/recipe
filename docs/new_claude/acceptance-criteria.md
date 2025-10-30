@@ -1261,6 +1261,40 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 **THEN** system should show rendered prompt with variables substituted
 **AND** display character count and estimated token count
 
+### AC-ADMIN-016: Recipe Image Upload - Valid File
+**GIVEN** admin is creating or editing a recipe
+**WHEN** admin uploads a valid image (PNG/JPG/JPEG/GIF/WebP, < 10MB)
+**THEN** image should be attached to recipe
+**AND** image preview should appear
+**AND** image_url should be returned in API response
+**AND** image should be accessible via signed Active Storage URL
+
+### AC-ADMIN-017: Recipe Image Upload - Invalid Format
+**GIVEN** admin attempts to upload invalid image format (e.g., .pdf, .txt)
+**WHEN** form is submitted
+**THEN** validation error should display: "Image must be PNG, JPG, JPEG, GIF, or WebP"
+**AND** recipe should not be saved
+**AND** error message should be in red
+
+### AC-ADMIN-018: Recipe Image Upload - Size Limit
+**GIVEN** admin attempts to upload image > 10MB
+**WHEN** form is submitted
+**THEN** validation error should display: "Image must be less than 10 MB"
+**AND** recipe should not be saved
+
+### AC-ADMIN-019: Recipe Image Display - Admin View
+**GIVEN** recipe has attached image
+**WHEN** admin views recipe in admin list or detail
+**THEN** recipe image should display as thumbnail or preview
+**AND** image should load from Active Storage
+
+### AC-ADMIN-020: Recipe Image Display - API Response
+**GIVEN** recipe has attached image
+**WHEN** recipe is retrieved via API endpoint
+**THEN** response should include `image_url` field
+**AND** image_url should be signed Active Storage URL
+**AND** URL should be valid and accessible
+
 ---
 
 ## Recipe Viewing

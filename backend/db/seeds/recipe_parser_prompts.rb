@@ -170,36 +170,4 @@ AiPrompt.find_or_create_by!(prompt_key: 'recipe_parse_url_user') do |prompt|
   prompt.active = true
 end
 
-# Image Parsing Prompts (Vision API)
-AiPrompt.find_or_create_by!(prompt_key: 'recipe_parse_image_system') do |prompt|
-  prompt.prompt_type = 'system'
-  prompt.feature_area = 'recipe_parsing'
-  prompt.description = 'System prompt for parsing recipe from image using Vision API'
-  prompt.prompt_text = build_system_prompt(
-    intro: "You are a recipe data extraction expert with vision capabilities. Your task is to extract recipe information from images (cookbook photos, screenshots, handwritten notes) and structure it as JSON.\n\nAnalyze the image carefully and extract all visible recipe information including:\n- Recipe name/title\n- Ingredients with amounts and units\n- Step-by-step instructions\n- Timing information if visible\n- Any dietary tags or cuisine information",
-    source_specific_guidelines: [
-      "If handwritten, do your best to interpret the text accurately",
-      "If units are unclear or using abbreviations (tbsp, tsp, oz), expand them",
-      "If information is missing or unclear, use reasonable defaults or omit"
-    ]
-  )
-  prompt.variables = []
-  prompt.active = true
-end
-
-AiPrompt.find_or_create_by!(prompt_key: 'recipe_parse_image_user') do |prompt|
-  prompt.prompt_type = 'user'
-  prompt.feature_area = 'recipe_parsing'
-  prompt.description = 'User prompt for parsing recipe from image'
-  prompt.prompt_text = <<~PROMPT
-    Please extract the recipe from this image and return it as structured JSON.
-
-    The image may be a cookbook photo, screenshot, or handwritten recipe card. Extract all visible recipe information.
-
-    Return ONLY the JSON object with no additional text.
-  PROMPT
-  prompt.variables = []
-  prompt.active = true
-end
-
-puts "✅ Recipe parser prompts seeded (8 prompts)"
+puts "✅ Recipe parser prompts seeded (6 prompts)"

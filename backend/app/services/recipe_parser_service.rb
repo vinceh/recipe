@@ -43,14 +43,6 @@ class RecipeParserService < AiService
     raise
   end
 
-  # Parse a recipe from an image using Claude Vision API
-  # Returns structured recipe JSON
-  def parse_image(image_path_or_url)
-    image_content = prepare_image(image_path_or_url)
-
-    parse_with_vision('recipe_parse_image', image_content: image_content)
-  end
-
   private
 
   # Generic prompt-based parsing method
@@ -66,21 +58,6 @@ class RecipeParserService < AiService
       user_prompt: rendered_user_prompt,
       max_tokens: 4096,
       **claude_options
-    )
-
-    parse_response(response)
-  end
-
-  # Vision-specific parsing method
-  def parse_with_vision(prompt_base_key, image_content:)
-    system_prompt = AiPrompt.active.find_by!(prompt_key: "#{prompt_base_key}_system")
-    user_prompt = AiPrompt.active.find_by!(prompt_key: "#{prompt_base_key}_user")
-
-    response = call_claude_vision(
-      system_prompt: system_prompt.prompt_text,
-      user_prompt: user_prompt.prompt_text,
-      image_content: image_content,
-      max_tokens: 4096
     )
 
     parse_response(response)
@@ -129,5 +106,36 @@ class RecipeParserService < AiService
   rescue => e
     Rails.logger.error("Failed to clean HTML: #{e.message}")
     raise "Could not clean HTML: #{e.message}"
+  end
+
+  # Parse Claude's response to extract recipe JSON
+  # Claude returns JSON wrapped in markdown code blocks, extract the JSON object
+  def parse_response(response)
+    return nil unless response.present?
+
+    # Try to extract JSON from markdown code blocks first
+    if response.include?('```json')
+      json_match = response.match(/```json\s*(.*?)\s*```/m)
+      if json_match
+        json_str = json_match[1]
+        return JSON.parse(json_str)
+      end
+    end
+
+    # Try to extract JSON from plain code blocks
+    if response.include?('```')
+      json_match = response.match(/```\s*(.*?)\s*```/m)
+      if json_match
+        json_str = json_match[1]
+        return JSON.parse(json_str)
+      end
+    end
+
+    # Try to parse as plain JSON
+    JSON.parse(response)
+  rescue JSON::ParserError => e
+    Rails.logger.error("Failed to parse Claude response as JSON: #{e.message}")
+    Rails.logger.debug("Response was: #{response}")
+    nil
   end
 end

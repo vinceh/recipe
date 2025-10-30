@@ -89,4 +89,52 @@ describe 'Api::V1::RecipesController', type: :request do
       expect(data['recipe']['difficulty_level']).to be_in(['easy', 'medium', 'hard'])
     end
   end
+
+  describe 'GET /api/v1/recipes with image_url' do
+    it 'includes image_url in list response' do
+      get '/api/v1/recipes'
+
+      expect(response).to have_http_status(:ok)
+      data = JSON.parse(response.body)['data']
+
+      recipe_item = data['recipes'].first
+      expect(recipe_item).to have_key('image_url')
+    end
+
+    it 'image_url contains a valid URL' do
+      get '/api/v1/recipes'
+
+      expect(response).to have_http_status(:ok)
+      data = JSON.parse(response.body)['data']
+
+      recipe_item = data['recipes'].first
+      expect(recipe_item['image_url']).to match(%r{^https?://})
+    end
+  end
+
+  describe 'GET /api/v1/recipes/:id with image_url' do
+    it 'includes image_url in detail response' do
+      recipe = Recipe.first
+      skip "No recipes in database" unless recipe
+
+      get "/api/v1/recipes/#{recipe.id}"
+
+      expect(response).to have_http_status(:ok)
+      data = JSON.parse(response.body)['data']
+
+      expect(data['recipe']).to have_key('image_url')
+    end
+
+    it 'image_url contains a valid URL in detail response' do
+      recipe = Recipe.first
+      skip "No recipes in database" unless recipe
+
+      get "/api/v1/recipes/#{recipe.id}"
+
+      expect(response).to have_http_status(:ok)
+      data = JSON.parse(response.body)['data']
+
+      expect(data['recipe']['image_url']).to match(%r{^https?://})
+    end
+  end
 end

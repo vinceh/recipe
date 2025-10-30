@@ -306,6 +306,74 @@ Equipment needed for the recipe. Currently stored as JSONB array of strings (nor
 
 ---
 
+### Active Storage Tables (File Storage)
+
+Recipe images are stored using Rails Active Storage. This framework provides three tables to manage file uploads.
+
+#### `active_storage_blobs`
+Stores metadata about uploaded files.
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `id` | BigInt | Primary key |
+| `key` | String | Unique storage key (UUID format) |
+| `filename` | String | Original filename uploaded |
+| `content_type` | String | MIME type (e.g., `image/jpeg`, `image/png`) |
+| `metadata` | JSON | Additional file metadata |
+| `byte_size` | BigInt | File size in bytes |
+| `checksum` | String | MD5 checksum for integrity verification |
+| `created_at` | DateTime | Upload timestamp |
+
+**Indexes:**
+- Primary key on `id`
+- Unique index on `key` (for fast retrieval)
+
+**Notes:** One blob record per uploaded file, regardless of how many models reference it.
+
+#### `active_storage_attachments`
+Links stored files (blobs) to models using polymorphic association.
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `id` | BigInt | Primary key |
+| `name` | String | Attachment name (e.g., `image`) |
+| `record_type` | String | Model type (e.g., `Recipe`) |
+| `record_id` | UUID | Model ID (e.g., recipe ID) |
+| `blob_id` | BigInt | Foreign key to `active_storage_blobs` |
+| `created_at` | DateTime | Attachment timestamp |
+
+**Unique Constraint:** `(record_type, record_id, name, blob_id)` - prevents duplicate attachments
+
+**Indexes:**
+- Unique index on `(record_type, record_id, name, blob_id)`
+- Index on `blob_id` for fast blob lookup
+
+**Usage:** For recipes, this links recipe images to their corresponding recipe records.
+
+#### `active_storage_variant_records`
+Stores pre-generated image variants (thumbnails, resized versions, etc.).
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `id` | BigInt | Primary key |
+| `blob_id` | BigInt | Foreign key to `active_storage_blobs` |
+| `variation_digest` | String | Hash of variant transformation parameters |
+
+**Unique Constraint:** `(blob_id, variation_digest)` - one variant per unique transformation
+
+**Indexes:**
+- Unique index on `(blob_id, variation_digest)`
+
+**Notes:** Currently not in use - added automatically by Rails. Future enhancement for image thumbnails and responsive sizes.
+
+**Relationship to Recipes:**
+- Recipe has many attachments (polymorphic)
+- Each recipe can have one image attachment via `has_one_attached :image`
+- Image attachment references blob via `active_storage_attachments`
+- Blob contains file metadata and storage key
+
+---
+
 ## JSONB Structures
 
 ### Translation Status JSONB

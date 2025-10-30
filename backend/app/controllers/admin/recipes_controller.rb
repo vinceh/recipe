@@ -138,17 +138,6 @@ module Admin
       handle_parse('URL') { |parser| parser.parse_url(url) }
     end
 
-    # POST /admin/recipes/parse_image
-    # AC-ADMIN-004: Parse recipe from image
-    def parse_image
-      image_source = extract_image_source
-      return unless image_source
-
-      handle_parse('image') { |parser| parser.parse_image(image_source[:path]) }
-    ensure
-      File.delete(image_source[:path]) if image_source&.dig(:cleanup) && File.exist?(image_source[:path])
-    end
-
     # POST /admin/recipes/:id/regenerate_translations
     # AC-ADMIN-008: Regenerate translations
     def regenerate_translations
@@ -240,6 +229,7 @@ module Admin
         :source_url,
         :admin_notes,
         :translations_completed,
+        :image,
         :servings_original,
         :servings_min,
         :servings_max,
@@ -279,6 +269,7 @@ module Admin
         name: recipe.name,
         description: recipe.description,
         language: recipe.source_language,
+        image_url: recipe.image.attached? ? rails_blob_url(recipe.image, only_path: false) : nil,
         servings: {
           original: recipe.servings_original,
           min: recipe.servings_min,
@@ -338,24 +329,5 @@ module Admin
       )
     end
 
-    # Extract image source from params (file upload or URL)
-    def extract_image_source
-      if params[:image_file].present?
-        uploaded_file = params[:image_file]
-        temp_path = Rails.root.join("tmp", "uploads", uploaded_file.original_filename)
-        FileUtils.mkdir_p(File.dirname(temp_path))
-        File.open(temp_path, "wb") { |file| file.write(uploaded_file.read) }
-        { path: temp_path.to_s, cleanup: true }
-      elsif params[:image_url].present?
-        { path: params[:image_url], cleanup: false }
-      else
-        render_error(
-          message: "Image file or URL required",
-          errors: [ "Provide either image_file or image_url parameter" ],
-          status: :bad_request
-        )
-        nil
-      end
-    end
   end
 end

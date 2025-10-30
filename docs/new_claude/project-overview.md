@@ -113,10 +113,12 @@ Recipes in Ember are structured data (not just text) with built-in intelligence:
 **Acceptance Criteria:** AC-USER-001 to AC-USER-008
 
 ### 7. Admin Recipe Management
-- Create recipes manually
+- Create recipes manually with image upload
+- Upload recipe display images (PNG/JPG/GIF/WebP, max 10MB)
+- Active Storage support (local disk + AWS S3)
 - Import recipes from URLs (AI parsing)
 - Import recipes from text (AI parsing)
-- Import recipes from images (AI parsing)
+- Import recipes from images (Vision AI parsing for text extraction)
 - Generate step variants (AI)
 - Translate recipes to all 7 languages (AI)
 - Manage ingredient database

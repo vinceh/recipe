@@ -21,6 +21,9 @@ class Recipe < ApplicationRecord
   has_many :cuisines, through: :recipe_cuisines, source: :data_reference
   has_many :recipe_aliases, dependent: :destroy
 
+  # File attachments
+  has_one_attached :image
+
   # Nested attributes for normalized schema
   accepts_nested_attributes_for :ingredient_groups,
     allow_destroy: true,
@@ -53,6 +56,9 @@ class Recipe < ApplicationRecord
   validates :total_minutes, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :precision_reason, inclusion: { in: %w[baking confectionery fermentation molecular], allow_nil: true }
   validates :difficulty_level, presence: true, inclusion: { in: difficulty_levels.keys }
+  validates :image, presence: { message: 'must be attached' }
+  validate :validate_image_content_type
+  validate :validate_image_size
   validate :at_least_one_ingredient_group
   validate :at_least_one_step
   validate :at_least_one_cuisine
@@ -188,5 +194,20 @@ class Recipe < ApplicationRecord
     return if recipe_cuisines.any? { |cuisine| cuisine.persisted? || cuisine._destroy != true }
 
     errors.add(:cuisines, 'At least one cuisine is required')
+  end
+
+  def validate_image_content_type
+    return unless image.attached?
+
+    allowed_types = %w(image/png image/jpg image/jpeg image/gif image/webp)
+    errors.add(:image, 'must be a valid image format') unless allowed_types.include?(image.content_type)
+  end
+
+  def validate_image_size
+    return unless image.attached?
+
+    if image.byte_size > 10.megabytes
+      errors.add(:image, 'must be less than 10MB')
+    end
   end
 end

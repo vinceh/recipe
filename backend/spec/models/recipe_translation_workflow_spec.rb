@@ -20,6 +20,11 @@ RSpec.describe 'Recipe Translation Workflow', type: :model do
     ingredient = Ingredient.find_or_create_by!(canonical_name: "test ingredient") { |i| i.category = "vegetable" }
     ig.recipe_ingredients.build(ingredient_id: ingredient.id, ingredient_name: "test ingredient", amount: 1, unit: "cup", position: 1)
     recipe.recipe_cuisines.build(data_reference: cuisine)
+    recipe.image.attach(
+      io: File.open(Rails.root.join('spec/fixtures/files/test_image.png')),
+      filename: 'test_image.png',
+      content_type: 'image/png'
+    )
     recipe
   end
 

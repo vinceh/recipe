@@ -21,6 +21,11 @@ describe Recipe do
       ingredient = Ingredient.find_or_create_by!(canonical_name: "test ingredient") { |i| i.category = "vegetable" }
       ig.recipe_ingredients.build(ingredient_id: ingredient.id, ingredient_name: "test ingredient", amount: 1, unit: "cup", position: 1)
       recipe.recipe_cuisines.build(data_reference: cuisine)
+      recipe.image.attach(
+        io: File.open(Rails.root.join('spec/fixtures/files/test_image.png')),
+        filename: 'test_image.png',
+        content_type: 'image/png'
+      )
       recipe
     end
 
@@ -83,6 +88,11 @@ describe Recipe do
       ingredient = Ingredient.find_or_create_by!(canonical_name: "test ingredient") { |i| i.category = "vegetable" }
       ig.recipe_ingredients.build(ingredient_id: ingredient.id, ingredient_name: "test ingredient", amount: 1, unit: "cup", position: 1)
       recipe.recipe_cuisines.build(data_reference: cuisine)
+      recipe.image.attach(
+        io: File.open(Rails.root.join('spec/fixtures/files/test_image.png')),
+        filename: 'test_image.png',
+        content_type: 'image/png'
+      )
       recipe
     end
 
@@ -129,6 +139,61 @@ describe Recipe do
 
       expect(Recipe.hard).to include(recipe)
       expect(Recipe.easy).not_to include(recipe)
+    end
+  end
+
+  describe 'image attachment' do
+    it 'has one attached image after creation' do
+      recipe = create(:recipe)
+      expect(recipe.image).to be_attached
+    end
+
+    it 'requires an image to be present' do
+      recipe = create(:recipe)
+      recipe.image.purge
+      expect(recipe).not_to be_valid
+      expect(recipe.errors[:image]).to include('must be attached')
+    end
+
+    it 'accepts valid image formats' do
+      %w[image/png image/jpg image/jpeg image/gif image/webp].each do |content_type|
+        recipe = create(:recipe)
+        recipe.image.purge
+        recipe.image.attach(
+          io: StringIO.new('fake'),
+          filename: 'test.png',
+          content_type: content_type
+        )
+        expect(recipe).to be_valid
+      end
+    end
+
+    it 'rejects invalid image formats' do
+      recipe = create(:recipe)
+      recipe.image.purge
+      recipe.image.attach(
+        io: StringIO.new('fake'),
+        filename: 'test.pdf',
+        content_type: 'application/pdf'
+      )
+      expect(recipe).not_to be_valid
+      expect(recipe.errors[:image]).not_to be_empty
+    end
+
+    it 'enforces maximum file size of 10MB' do
+      recipe = create(:recipe)
+      recipe.image.purge
+
+      large_file = StringIO.new('x' * (11 * 1024 * 1024))
+      allow(large_file).to receive(:size).and_return(11 * 1024 * 1024)
+
+      recipe.image.attach(
+        io: large_file,
+        filename: 'large.png',
+        content_type: 'image/png'
+      )
+      expect(recipe).not_to be_valid
+      expect(recipe.errors[:image]).not_to be_empty
     end
   end
 end

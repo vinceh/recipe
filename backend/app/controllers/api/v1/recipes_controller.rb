@@ -164,6 +164,7 @@ module Api
           name: recipe.name,
           description: recipe.description,
           language: recipe.source_language,
+          image_url: recipe.image.attached? ? rails_blob_url(recipe.image, only_path: false) : nil,
           servings: {
             original: recipe.servings_original,
             min: recipe.servings_min,
@@ -192,6 +193,7 @@ module Api
           name: recipe.name,
           description: recipe.description,
           language: recipe.source_language,
+          image_url: recipe.image.attached? ? rails_blob_url(recipe.image, only_path: false) : nil,
           servings: {
             original: recipe.servings_original,
             min: recipe.servings_min,

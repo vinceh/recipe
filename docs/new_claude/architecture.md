@@ -92,6 +92,9 @@ class Recipe < ApplicationRecord
   validates :servings_min, numericality: { greater_than_or_equal_to: 1, allow_nil: true }
   validates :servings_max, numericality: { greater_than_or_equal_to: 1, allow_nil: true }
   validates :prep_minutes, :cook_minutes, :total_minutes, numericality: { greater_than_or_equal_to: 0, allow_nil: true }
+  validates :difficulty_level, presence: true, inclusion: { in: :difficulty_levels }
+
+  enum :difficulty_level, { easy: 0, medium: 1, hard: 2 }
 end
 ```
 
@@ -299,6 +302,84 @@ recipes = Recipe
   .includes(:recipe_steps, :equipment)
   .all
 ```
+
+---
+
+## File Storage (Active Storage)
+
+Rails Active Storage manages recipe image uploads with support for local and S3 storage backends.
+
+### Configuration
+
+**Storage Location:** `config/storage.yml`
+
+**Environment Configuration:**
+- **Development/Test:** Disk storage (local filesystem)
+- **Production:** Amazon S3
+
+### Image Upload Flow
+
+1. Admin uploads image via RecipeForm
+2. Active Storage creates `active_storage_blobs` record with file metadata
+3. Active Storage creates `active_storage_attachments` record linking blob to recipe
+4. File is stored in configured storage backend (local disk or S3)
+5. Signed URL is generated for secure file access
+6. API returns `image_url` in recipe JSON responses
+
+### Model Integration
+
+**Recipe Model:**
+```ruby
+has_one_attached :image
+
+validates :image,
+  content_type: ['image/png', 'image/jpg', 'image/jpeg', 'image/gif', 'image/webp'],
+  size: { less_than: 10.megabytes }
+```
+
+### Image Requirements
+
+- **Required:** Yes (all recipes must have an image)
+- **Formats:** PNG, JPG/JPEG, GIF, WebP
+- **Maximum Size:** 10 MB
+- **Stored As:** Active Storage blob with polymorphic attachment
+
+### URL Generation
+
+Images are served via signed Active Storage URLs:
+
+```ruby
+recipe.image.attached? ? rails_blob_url(recipe.image) : nil
+```
+
+**Example URL Format:**
+```
+/rails/active_storage/blobs/:signed_id/:filename
+https://example.com/rails/active_storage/blobs/eyJfcmFpbHMi...--abc123/image.jpg
+```
+
+**Security:** Signed URLs prevent unauthorized direct file access and expire automatically.
+
+### Storage Backend Details
+
+**Local Storage (Development):**
+- Files stored in `storage/` directory
+- Useful for local development without AWS account
+
+**S3 Storage (Production):**
+- Credentials via environment variables: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, `AWS_BUCKET`
+- Files uploaded to configured S3 bucket
+- CloudFront CDN recommended for production
+
+### Database Tables
+
+Three Active Storage tables manage file storage:
+
+1. **`active_storage_blobs`** - File metadata and storage keys
+2. **`active_storage_attachments`** - Polymorphic link between files and models
+3. **`active_storage_variant_records`** - Pre-generated image variants (future use)
+
+See [Database Architecture](./database-architecture.md#active-storage-tables-file-storage) for detailed schema.
 
 ---
 

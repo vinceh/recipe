@@ -35,6 +35,9 @@ gem "thruster", require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 gem "rack-cors"
 
+# AWS S3 for file storage
+gem "aws-sdk-s3", "~> 1", require: false
+
 # Authentication
 gem "devise", "~> 4.9"
 gem "devise-jwt", "~> 0.12"

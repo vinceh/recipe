@@ -567,6 +567,23 @@ Output shows missing keys per locale.
 }
 ```
 
+### Enum fields (e.g., Difficulty)
+```json
+{
+  "forms": {
+    "recipe": {
+      "difficultyLevel": "Difficulty Level",
+      "difficultyLevelPlaceholder": "Select difficulty level",
+      "difficultyLevels": {
+        "easy": "Easy",
+        "medium": "Medium",
+        "hard": "Hard"
+      }
+    }
+  }
+}
+```
+
 ### Empty states
 ```json
 {

@@ -44,7 +44,6 @@ Rails.application.routes.draw do
       collection do
         post :parse_text
         post :parse_url
-        post :parse_image
         post :check_duplicates
         delete :bulk_delete
       end

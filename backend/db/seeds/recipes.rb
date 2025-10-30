@@ -58,9 +58,20 @@ def apply_recipe_translations(recipe, recipe_key)
     I18n.with_locale(i18n_locale) do
       recipe.name = RECIPE_TRANSLATIONS[recipe_key.to_sym][trans_key_sym][:name]
       recipe.description = RECIPE_TRANSLATIONS[recipe_key.to_sym][trans_key_sym][:description]
-      recipe.save!
+      recipe.save!(validate: false)
     end
   end
+end
+
+def attach_seed_image(recipe)
+  image_path = Rails.root.join('db/seeds/assets/foodimg.png')
+  return unless File.exist?(image_path)
+
+  recipe.image.attach(
+    io: File.open(image_path),
+    filename: 'foodimg.png',
+    content_type: 'image/png'
+  )
 end
 
 # ============================================================================
@@ -166,11 +177,14 @@ margherita.recipe_steps.build(step_number: 9, instruction_original: "Remove from
 
 
 margherita.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "italian", "Italian"))
+margherita.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "mediterranean", "Mediterranean"))
+margherita.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "vegetarian", "Vegetarian"))
 
 margherita.recipe_aliases.build(alias_name: "Pizza Margherita", language: "en")
 margherita.recipe_aliases.build(alias_name: "ピザ・マルゲリータ", language: "ja")
 
 
+attach_seed_image(margherita)
 margherita.save!
 apply_recipe_translations(margherita, :margherita)
 
@@ -318,12 +332,15 @@ pad_thai.recipe_steps.build(step_number: 9, instruction_original: "Transfer to p
 
 
 pad_thai.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "thai", "Thai"))
+pad_thai.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "asian-fusion", "Asian Fusion"))
 pad_thai.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "shellfish-free", "Shellfish-Free"))
+pad_thai.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "gluten-free", "Gluten-Free"))
 
 pad_thai.recipe_aliases.build(alias_name: "Thai Stir-Fried Noodles", language: "en")
 pad_thai.recipe_aliases.build(alias_name: "ผัดไทย", language: "th")
 
 
+attach_seed_image(pad_thai)
 pad_thai.save!
 apply_recipe_translations(pad_thai, :pad_thai)
 
@@ -453,6 +470,8 @@ shakshuka.recipe_steps.build(step_number: 9, instruction_original: "Garnish with
 
 
 shakshuka.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "middle-eastern", "Middle Eastern"))
+shakshuka.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "mediterranean", "Mediterranean"))
+shakshuka.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "israeli", "Israeli"))
 shakshuka.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "vegetarian", "Vegetarian"))
 shakshuka.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "gluten-free", "Gluten-Free"))
 
@@ -460,6 +479,7 @@ shakshuka.recipe_aliases.build(alias_name: "Eggs in Tomato Sauce", language: "en
 shakshuka.recipe_aliases.build(alias_name: "شکشوک", language: "ar")
 
 
+attach_seed_image(shakshuka)
 shakshuka.save!
 apply_recipe_translations(shakshuka, :shakshuka)
 
@@ -597,11 +617,15 @@ tom_yum.recipe_steps.build(step_number: 8, instruction_original: "Ladle into bow
 
 
 tom_yum.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "thai", "Thai"))
+tom_yum.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "asian-fusion", "Asian Fusion"))
+tom_yum.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "dairy-free", "Dairy-Free"))
+tom_yum.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "gluten-free", "Gluten-Free"))
 
 tom_yum.recipe_aliases.build(alias_name: "Hot & Sour Shrimp Soup", language: "en")
 tom_yum.recipe_aliases.build(alias_name: "ต้มยำกุ้ง", language: "th")
 
 
+attach_seed_image(tom_yum)
 tom_yum.save!
 apply_recipe_translations(tom_yum, :tom_yum)
 
@@ -686,12 +710,15 @@ aglio_olio.recipe_steps.build(step_number: 8, instruction_original: "Serve immed
 
 
 aglio_olio.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "italian", "Italian"))
+aglio_olio.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "mediterranean", "Mediterranean"))
 aglio_olio.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "vegan", "Vegan"))
+aglio_olio.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "gluten-free", "Gluten-Free"))
 
 aglio_olio.recipe_aliases.build(alias_name: "Garlic and Oil Pasta", language: "en")
 aglio_olio.recipe_aliases.build(alias_name: "パスタ・アーリオ・オーリオ", language: "ja")
 
 
+attach_seed_image(aglio_olio)
 aglio_olio.save!
 apply_recipe_translations(aglio_olio, :aglio_olio)
 
@@ -819,6 +846,7 @@ oyakodon.recipe_aliases.build(alias_name: "Parent-and-Child Rice Bowl", language
 oyakodon.recipe_aliases.build(alias_name: "親子丼", language: "ja")
 
 
+attach_seed_image(oyakodon)
 oyakodon.save!
 apply_recipe_translations(oyakodon, :oyakodon)
 
@@ -934,12 +962,15 @@ greek_salad.recipe_steps.build(step_number: 5, instruction_original: "Top with c
 
 
 greek_salad.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "greek", "Greek"))
+greek_salad.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "mediterranean", "Mediterranean"))
 greek_salad.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "vegetarian", "Vegetarian"))
+greek_salad.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "gluten-free", "Gluten-Free"))
 
 greek_salad.recipe_aliases.build(alias_name: "Horiatiki Salad", language: "en")
 greek_salad.recipe_aliases.build(alias_name: "Ελληνική Σαλάτα", language: "el")
 
 
+attach_seed_image(greek_salad)
 greek_salad.save!
 apply_recipe_translations(greek_salad, :greek_salad)
 
@@ -1025,6 +1056,7 @@ sourdough.recipe_aliases.build(alias_name: "Artisan Bread", language: "en")
 sourdough.recipe_aliases.build(alias_name: "サワードウ", language: "ja")
 
 
+attach_seed_image(sourdough)
 sourdough.save!
 apply_recipe_translations(sourdough, :sourdough)
 
@@ -1173,6 +1205,7 @@ beef_tacos.recipe_aliases.build(alias_name: "Street Tacos", language: "en")
 beef_tacos.recipe_aliases.build(alias_name: "Tacos de Carne Molida", language: "es")
 
 
+attach_seed_image(beef_tacos)
 beef_tacos.save!
 apply_recipe_translations(beef_tacos, :beef_tacos)
 
@@ -1305,6 +1338,7 @@ kimchi_jjigae.recipe_aliases.build(alias_name: "Kimchi Stew", language: "en")
 kimchi_jjigae.recipe_aliases.build(alias_name: "김치찌개", language: "ko")
 
 
+attach_seed_image(kimchi_jjigae)
 kimchi_jjigae.save!
 apply_recipe_translations(kimchi_jjigae, :kimchi_jjigae)
 
@@ -1431,6 +1465,7 @@ onion_soup.recipe_aliases.build(alias_name: "Soupe à l'Oignon", language: "fr")
 onion_soup.recipe_aliases.build(alias_name: "玉ねぎのスープ", language: "ja")
 
 
+attach_seed_image(onion_soup)
 onion_soup.save!
 apply_recipe_translations(onion_soup, :onion_soup)
 
@@ -1559,6 +1594,7 @@ cookies.recipe_aliases.build(alias_name: "Toll House Cookies", language: "en")
 cookies.recipe_aliases.build(alias_name: "チョコレートチップクッキー", language: "ja")
 
 
+attach_seed_image(cookies)
 cookies.save!
 apply_recipe_translations(cookies, :cookies)
 
@@ -1658,13 +1694,16 @@ guacamole.recipe_steps.build(step_number: 7, instruction_original: "Taste and ad
 
 
 guacamole.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "mexican", "Mexican"))
+guacamole.recipe_cuisines.build(data_reference: create_data_reference("cuisine", "tex-mex", "Tex-Mex"))
 guacamole.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "vegan", "Vegan"))
 guacamole.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "gluten-free", "Gluten-Free"))
+guacamole.recipe_dietary_tags.build(data_reference: create_data_reference("dietary_tag", "dairy-free", "Dairy-Free"))
 
 guacamole.recipe_aliases.build(alias_name: "Avocado Dip", language: "en")
 guacamole.recipe_aliases.build(alias_name: "Guacamole de Aguacate", language: "es")
 
 
+attach_seed_image(guacamole)
 guacamole.save!
 apply_recipe_translations(guacamole, :guacamole)
 
@@ -1798,6 +1837,7 @@ ratatouille.recipe_aliases.build(alias_name: "Vegetable Stew", language: "en")
 ratatouille.recipe_aliases.build(alias_name: "Ratatouille Niçoise", language: "fr")
 
 
+attach_seed_image(ratatouille)
 ratatouille.save!
 apply_recipe_translations(ratatouille, :ratatouille)
 
@@ -1939,6 +1979,7 @@ teriyaki.recipe_aliases.build(alias_name: "Glazed Chicken", language: "en")
 teriyaki.recipe_aliases.build(alias_name: "照り焼きチキン", language: "ja")
 
 
+attach_seed_image(teriyaki)
 teriyaki.save!
 apply_recipe_translations(teriyaki, :teriyaki)
 
