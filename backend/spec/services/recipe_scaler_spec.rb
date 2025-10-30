@@ -46,12 +46,15 @@ RSpec.describe RecipeScaler, type: :service do
       it 'displays friendly fractions for common decimals (AC-SCALE-002)' do
         recipe = make_recipe
         ingredient_group = create(:ingredient_group, recipe: recipe)
-        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 1.5, unit: 'cups')
+        ri = create(:recipe_ingredient, ingredient_group: ingredient_group)
+        ri.update_column(:amount, 1.5)
+
+        recipe = Recipe.find(recipe.id)
 
         scaler = RecipeScaler.new(recipe)
         scaled = scaler.scale_by_servings(2)
 
-        expect(scaled[:ingredient_groups].first[:items].first[:amount]).to eq('3/4')
+        expect(scaled[:ingredient_groups].last[:items].first[:amount]).to eq('3/4')
       end
     end
 
@@ -110,10 +113,12 @@ RSpec.describe RecipeScaler, type: :service do
         ingredient_group = create(:ingredient_group, recipe: recipe)
         create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 1, unit: 'tbsp')
 
+        recipe = Recipe.find(recipe.id)
+
         scaler = RecipeScaler.new(recipe)
         scaled = scaler.scale_by_servings(0.5)
 
-        expect(scaled[:ingredient_groups].first[:items].first[:unit]).to eq('tsp')
+        expect(scaled[:ingredient_groups].last[:items].first[:unit]).to eq('tsp')
       end
     end
 

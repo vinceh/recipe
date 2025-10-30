@@ -66,15 +66,18 @@ class RecipeScaler
       end
     else
       scaled_amount = round_to_friendly_fraction(raw_amount)
-      unit = step_down_unit(scaled_amount, unit)
+      new_unit = step_down_unit(scaled_amount, unit)
+      unit = new_unit
     end
 
-    {
+    result_hash = {
       name: ingredient.ingredient_name,
       amount: scaled_amount.to_s,
       unit: unit,
       preparation: ingredient.preparation_notes.presence
     }.compact
+
+    result_hash
   end
 
   def step_down_unit(amount, unit)
@@ -91,11 +94,14 @@ class RecipeScaler
 
   def round_to_friendly_fraction(amount)
     # Try whole number first
-    return amount.round if (amount - amount.round).abs < 0.1
+    if (amount - amount.round).abs < 0.1
+      return amount.round
+    end
 
     # Try simple fraction
     FRIENDLY_FRACTIONS.each do |decimal, fraction|
-      return fraction if (amount - decimal).abs < 0.05
+      diff = (amount - decimal).abs
+      return fraction if diff < 0.05
     end
 
     # Try mixed number (e.g., 1 1/2)
