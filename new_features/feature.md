@@ -1,0 +1,6 @@
+- each step in a recipe can optionally have an image attached to it, refer to @file.jpg
+- maximum 1 image per step
+- 25mb maximum file size
+- when display the steps, it should should the step words and then the image @file2.jpg
+  - on mobile the image should span the entire width of the screen
+- use AWS
