@@ -4,5 +4,11 @@
     "message": "[ANCHOR-AI] Feature: Describe feature",
     "phase": "Feature",
     "timestamp": "2025-11-10T18:21:16.339Z"
+  },
+  {
+    "hash": "6eba5673dd05ae9e4dec7503b1bd13b37d2e1b54",
+    "message": "[ANCHOR-AI] Plan: Feature planned with BE/FE breakdown",
+    "phase": "Plan",
+    "timestamp": "2025-11-10T18:28:32.853Z"
   }
 ]

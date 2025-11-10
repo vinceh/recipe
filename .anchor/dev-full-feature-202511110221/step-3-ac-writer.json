@@ -1,0 +1,354 @@
+{
+  "backend": [
+    {
+      "scenario": "Create recipe with tags",
+      "given": "I am authenticated as admin user",
+      "when": "I POST to /admin/recipes with recipe data including recipe_tags_attributes: [{tag: 'vegan'}, {tag: 'quick'}]",
+      "then": "Response status is 201 Created and recipe is created with 2 tags 'vegan' and 'quick' and response includes tags array"
+    },
+    {
+      "scenario": "Create recipe with tag exceeding 40 characters",
+      "given": "I am authenticated as admin user",
+      "when": "I POST to /admin/recipes with recipe_tags_attributes containing tag with 41 characters",
+      "then": "Response status is 422 Unprocessable Entity and error message indicates 'Tag is too long (maximum is 40 characters)' and no recipe is created"
+    },
+    {
+      "scenario": "Create recipe with tag containing leading/trailing whitespace",
+      "given": "I am authenticated as admin user",
+      "when": "I POST to /admin/recipes with recipe_tags_attributes: [{tag: '  vegan  '}]",
+      "then": "Recipe is created with tag 'vegan' (whitespace trimmed) and response status is 201 Created"
+    },
+    {
+      "scenario": "Create recipe with duplicate tags",
+      "given": "I am authenticated as admin user",
+      "when": "I POST to /admin/recipes with recipe_tags_attributes: [{tag: 'vegan'}, {tag: 'vegan'}]",
+      "then": "Response status is 422 Unprocessable Entity and error message indicates duplicate tags are not allowed and only one 'vegan' tag should exist"
+    },
+    {
+      "scenario": "Create recipe with blank tag",
+      "given": "I am authenticated as admin user",
+      "when": "I POST to /admin/recipes with recipe_tags_attributes: [{tag: ''}]",
+      "then": "Recipe is created but blank tag is rejected via accepts_nested_attributes reject_if and response status is 201 Created with no tags"
+    },
+    {
+      "scenario": "Create recipe with mixed case tags preserves case",
+      "given": "I am authenticated as admin user",
+      "when": "I POST to /admin/recipes with recipe_tags_attributes: [{tag: 'Vegan'}, {tag: 'QUICK'}]",
+      "then": "Recipe is created with tags 'Vegan' and 'QUICK' with case preserved and response status is 201 Created"
+    },
+    {
+      "scenario": "Update recipe to add new tags",
+      "given": "Recipe with id 5 exists with tags ['vegan']",
+      "when": "I PATCH /admin/recipes/5 with recipe_tags_attributes: [{tag: 'vegan'}, {tag: 'healthy'}]",
+      "then": "Recipe is updated with tags ['vegan', 'healthy'] and response status is 200 OK and response includes updated tags array"
+    },
+    {
+      "scenario": "Update recipe to remove tags",
+      "given": "Recipe with id 5 exists with tags ['vegan', 'healthy']",
+      "when": "I PATCH /admin/recipes/5 with recipe_tags_attributes: [{id: tag_id_for_healthy, _destroy: true}]",
+      "then": "Recipe is updated with tags ['vegan'] only and response status is 200 OK and 'healthy' tag is removed"
+    },
+    {
+      "scenario": "Get recipe returns tags array",
+      "given": "Recipe with id 5 exists with tags ['vegan', 'quick', 'healthy']",
+      "when": "I GET /admin/recipes/5",
+      "then": "Response status is 200 OK and response body includes tags: ['vegan', 'quick', 'healthy']"
+    },
+    {
+      "scenario": "List recipes returns tags for each recipe",
+      "given": "3 recipes exist with different tags",
+      "when": "I GET /admin/recipes",
+      "then": "Response status is 200 OK and each recipe in response array includes tags field with array of tag strings"
+    },
+    {
+      "scenario": "Delete recipe cascades to tags",
+      "given": "Recipe with id 5 exists with 3 tags",
+      "when": "I DELETE /admin/recipes/5",
+      "then": "Recipe is deleted and all 3 associated tags are also deleted from recipe_tags table and response status is 200 OK"
+    },
+    {
+      "scenario": "Search recipes by exact tag match",
+      "given": "Recipe A has tag 'vegan' and Recipe B has tag 'vegetarian'",
+      "when": "I GET /admin/recipes?tag=vegan",
+      "then": "Response status is 200 OK and response contains Recipe A only"
+    },
+    {
+      "scenario": "Search recipes by fuzzy tag match",
+      "given": "Recipe A has tag 'vegan' and Recipe B has tag 'vegetarian'",
+      "when": "I GET /admin/recipes?tag=vgan (typo)",
+      "then": "Response status is 200 OK and response contains Recipe A with fuzzy match on 'vegan' tag"
+    },
+    {
+      "scenario": "Search recipes by tag with case insensitive matching",
+      "given": "Recipe A has tag 'Vegan'",
+      "when": "I GET /admin/recipes?tag=VEGAN",
+      "then": "Response status is 200 OK and response contains Recipe A with case-insensitive match"
+    },
+    {
+      "scenario": "Search recipes by partial tag match",
+      "given": "Recipe A has tag 'vegetarian'",
+      "when": "I GET /admin/recipes?tag=veget",
+      "then": "Response status is 200 OK and response contains Recipe A with partial match on 'vegetarian' tag"
+    },
+    {
+      "scenario": "Search recipes by multiple tags (OR logic)",
+      "given": "Recipe A has tag 'vegan', Recipe B has tag 'quick', Recipe C has tag 'healthy'",
+      "when": "I GET /admin/recipes?tags[]=vegan&tags[]=quick",
+      "then": "Response status is 200 OK and response contains Recipe A and Recipe B (OR logic)"
+    },
+    {
+      "scenario": "Comprehensive search includes tag matches",
+      "given": "Recipe A has name 'Pasta' and Recipe B has tag 'pasta'",
+      "when": "I GET /admin/recipes?q=pasta",
+      "then": "Response status is 200 OK and response contains both Recipe A and Recipe B with tag match included in comprehensive search"
+    },
+    {
+      "scenario": "Tag search returns results ordered by similarity score",
+      "given": "Recipe A has tag 'vegan', Recipe B has tag 'vegetarian', Recipe C has tag 'veggies'",
+      "when": "I GET /admin/recipes?tag=vega",
+      "then": "Response status is 200 OK and response contains recipes ordered by similarity score with Recipe A first (highest similarity)"
+    },
+    {
+      "scenario": "Tag search with no matches returns empty array",
+      "given": "No recipes have tag 'nonexistent'",
+      "when": "I GET /admin/recipes?tag=nonexistent",
+      "then": "Response status is 200 OK and response contains empty array with pagination metadata"
+    },
+    {
+      "scenario": "Public API search by tag",
+      "given": "Recipe A has tag 'vegan' and is published",
+      "when": "I GET /api/v1/recipes?tag=vegan",
+      "then": "Response status is 200 OK and response contains Recipe A with tags array included"
+    },
+    {
+      "scenario": "Public API comprehensive search includes tags",
+      "given": "Recipe A has tag 'healthy'",
+      "when": "I GET /api/v1/recipes?q=healthy",
+      "then": "Response status is 200 OK and response contains Recipe A with tag match in comprehensive search"
+    },
+    {
+      "scenario": "Public API recipe detail includes tags",
+      "given": "Recipe with id 5 exists with tags ['vegan', 'quick']",
+      "when": "I GET /api/v1/recipes/5",
+      "then": "Response status is 200 OK and response body includes tags: ['vegan', 'quick']"
+    },
+    {
+      "scenario": "RecipeTag model validates presence of tag",
+      "given": "I attempt to create RecipeTag with nil tag",
+      "when": "I call RecipeTag.create(recipe_id: 1, tag: nil)",
+      "then": "Validation fails with error 'Tag can't be blank'"
+    },
+    {
+      "scenario": "RecipeTag model validates maximum length",
+      "given": "I attempt to create RecipeTag with 41 character tag",
+      "when": "I call RecipeTag.create(recipe_id: 1, tag: 'a' * 41)",
+      "then": "Validation fails with error 'Tag is too long (maximum is 40 characters)'"
+    },
+    {
+      "scenario": "RecipeTag model normalizes tag on save",
+      "given": "I create RecipeTag with tag '  Vegan  '",
+      "when": "I call RecipeTag.create(recipe_id: 1, tag: '  Vegan  ')",
+      "then": "Tag is saved as 'vegan' with whitespace trimmed and response includes normalized tag"
+    },
+    {
+      "scenario": "RecipeTag model prevents duplicate tags per recipe",
+      "given": "Recipe 1 has tag 'vegan'",
+      "when": "I attempt to create another RecipeTag with recipe_id 1 and tag 'vegan'",
+      "then": "Validation fails with error 'Tag has already been taken for this recipe'"
+    },
+    {
+      "scenario": "RecipeTag model allows duplicate tags across recipes",
+      "given": "Recipe 1 has tag 'vegan'",
+      "when": "I create RecipeTag with recipe_id 2 and tag 'vegan'",
+      "then": "Tag is created successfully and both recipes have 'vegan' tag"
+    },
+    {
+      "scenario": "Recipe model helper method returns tag strings",
+      "given": "Recipe has recipe_tags with tags ['vegan', 'quick']",
+      "when": "I call recipe.tags",
+      "then": "Method returns array ['vegan', 'quick'] with tag strings only"
+    },
+    {
+      "scenario": "RecipeSearchService search_by_tag with similarity threshold",
+      "given": "Recipe A has tag 'vegetarian'",
+      "when": "I call RecipeSearchService.search_by_tag('vegetarin') with similarity_threshold 0.6",
+      "then": "Method returns Recipe A with similarity score >= 0.6 for fuzzy match"
+    },
+    {
+      "scenario": "RecipeSearchService search_by_tag exact match fallback",
+      "given": "Recipe A has tag 'vegan'",
+      "when": "I call RecipeSearchService.search_by_tag('vegan')",
+      "then": "Method returns Recipe A with exact match (no fuzzy matching needed)"
+    },
+    {
+      "scenario": "RecipeSearchService filter_by_tags OR logic",
+      "given": "Recipe A has tag 'vegan', Recipe B has tag 'quick'",
+      "when": "I call RecipeSearchService.filter_by_tags(['vegan', 'quick'])",
+      "then": "Method returns both Recipe A and Recipe B using OR logic"
+    }
+  ],
+  "frontend": [
+    {
+      "scenario": "Display tags input field in recipe form",
+      "given": "I am on admin recipe creation page",
+      "when": "Page loads",
+      "then": "I see 'Tags' input field below 'Aliases' section with placeholder 'Add tags (press Enter)' and hint 'Max 40 characters per tag. Used to enhance search.'"
+    },
+    {
+      "scenario": "Add tag by pressing Enter",
+      "given": "I am on admin recipe creation page with empty tags field",
+      "when": "I type 'vegan' and press Enter",
+      "then": "Tag 'vegan' appears as chip/badge below input field and input field clears for next tag"
+    },
+    {
+      "scenario": "Add multiple tags",
+      "given": "I am on admin recipe creation page",
+      "when": "I add tags 'vegan', 'quick', and 'healthy' by pressing Enter after each",
+      "then": "Three tag chips display below input field showing 'vegan', 'quick', 'healthy'"
+    },
+    {
+      "scenario": "Remove tag by clicking X button",
+      "given": "Recipe form has tags ['vegan', 'quick', 'healthy']",
+      "when": "I click X button on 'quick' tag chip",
+      "then": "Tag 'quick' is removed and only 'vegan' and 'healthy' remain visible"
+    },
+    {
+      "scenario": "Validate tag length exceeds 40 characters",
+      "given": "I am adding a tag",
+      "when": "I type 41 characters and press Enter",
+      "then": "Error message appears below input: 'Tag is too long (maximum is 40 characters)' and tag is not added"
+    },
+    {
+      "scenario": "Display character count while typing",
+      "given": "I am typing a tag",
+      "when": "I type 'vegan'",
+      "then": "Character count displays '5/40 characters' below input field"
+    },
+    {
+      "scenario": "Display character count at limit",
+      "given": "I am typing a tag with 40 characters",
+      "when": "Input reaches 40 characters",
+      "then": "Character count displays '40/40 characters' in warning color and further input is prevented or warned"
+    },
+    {
+      "scenario": "Trim whitespace on tag input",
+      "given": "I am adding a tag",
+      "when": "I type '  vegan  ' with leading/trailing spaces and press Enter",
+      "then": "Tag is added as 'vegan' with whitespace trimmed automatically"
+    },
+    {
+      "scenario": "Prevent duplicate tags in form",
+      "given": "Recipe form already has tag 'vegan'",
+      "when": "I attempt to add 'vegan' again",
+      "then": "Warning message appears 'Tag already exists' and duplicate is not added"
+    },
+    {
+      "scenario": "Display tags when editing existing recipe",
+      "given": "Recipe with id 5 has tags ['vegan', 'quick']",
+      "when": "I navigate to /admin/recipes/5/edit",
+      "then": "Tags section displays existing tags 'vegan' and 'quick' as chips"
+    },
+    {
+      "scenario": "Save recipe with new tags",
+      "given": "I am creating a recipe with tags ['vegan', 'healthy']",
+      "when": "I click Save button",
+      "then": "Recipe is saved with tags and success message 'Recipe created successfully' appears and tags are included in API request as recipe_tags_attributes"
+    },
+    {
+      "scenario": "Update recipe by adding new tag",
+      "given": "I am editing recipe with tags ['vegan']",
+      "when": "I add tag 'healthy' and click Save",
+      "then": "Recipe is updated with tags ['vegan', 'healthy'] and success message appears"
+    },
+    {
+      "scenario": "Update recipe by removing tag",
+      "given": "I am editing recipe with tags ['vegan', 'healthy']",
+      "when": "I remove tag 'healthy' and click Save",
+      "then": "Recipe is updated with tags ['vegan'] only and removed tag is sent with _destroy: true in API request"
+    },
+    {
+      "scenario": "Display tags in recipe detail view",
+      "given": "Recipe with id 5 has tags ['vegan', 'quick', 'healthy']",
+      "when": "I navigate to recipe detail page /admin/recipes/5",
+      "then": "Tags section displays all 3 tags as styled badges with appropriate spacing"
+    },
+    {
+      "scenario": "Search recipes by tag shows hint",
+      "given": "I am on recipe search page",
+      "when": "I focus on search input",
+      "then": "Placeholder or hint text indicates 'Search by name, ingredient, or tag'"
+    },
+    {
+      "scenario": "Search results display matched tags",
+      "given": "I search for 'vegan'",
+      "when": "Search returns Recipe A with tag 'vegan'",
+      "then": "Recipe A displays in results with 'vegan' tag highlighted or emphasized to show why it matched"
+    },
+    {
+      "scenario": "Empty state when no tags added",
+      "given": "I am creating a recipe with no tags",
+      "when": "I view tags section",
+      "then": "Section shows empty state with hint 'No tags added yet. Tags help users find your recipe.' without error styling"
+    },
+    {
+      "scenario": "Tag input focus state",
+      "given": "I am on recipe form",
+      "when": "I click on tags input field",
+      "then": "Input field shows focus state with primary color border and hint text remains visible"
+    },
+    {
+      "scenario": "Tag chips have consistent styling",
+      "given": "Recipe form has multiple tags",
+      "when": "Tags are displayed",
+      "then": "All tag chips use consistent Badge component with secondary variant and medium size"
+    },
+    {
+      "scenario": "Tag input accessible via keyboard",
+      "given": "I am navigating recipe form with keyboard",
+      "when": "I tab to tags input field",
+      "then": "Field receives focus and I can type tag, press Enter to add, and Tab to move to next field"
+    },
+    {
+      "scenario": "Remove tag accessible via keyboard",
+      "given": "Recipe form has tags with focus on first tag",
+      "when": "I press Backspace or Delete key",
+      "then": "Focused tag is removed and focus moves to next tag or input field"
+    },
+    {
+      "scenario": "Display validation error for long tag inline",
+      "given": "I am adding a tag",
+      "when": "I type 41 characters and press Enter",
+      "then": "Error message appears directly below input field in error color without blocking other form interactions"
+    },
+    {
+      "scenario": "Clear validation error on valid input",
+      "given": "Validation error 'Tag is too long' is displayed",
+      "when": "I type a valid tag (≤ 40 chars) and press Enter",
+      "then": "Error message disappears and valid tag is added successfully"
+    },
+    {
+      "scenario": "Tags section shows loading state during save",
+      "given": "I am saving recipe with tags",
+      "when": "Save request is in progress",
+      "then": "Save button shows loading spinner and tags input is disabled to prevent changes during save"
+    },
+    {
+      "scenario": "Display API error when tag save fails",
+      "given": "I am saving recipe with invalid tags",
+      "when": "API returns 422 error with tag validation message",
+      "then": "Error message displays in tags section: 'Failed to save tags: Tag is too long (maximum is 40 characters)'"
+    },
+    {
+      "scenario": "Tags persist when navigating away and back (unsaved)",
+      "given": "I am creating recipe with tags ['vegan', 'quick'] without saving",
+      "when": "I navigate to different section of form and back",
+      "then": "Tags ['vegan', 'quick'] remain in tags input (form state preserved)"
+    },
+    {
+      "scenario": "Confirm dialog when leaving with unsaved tags",
+      "given": "I am editing recipe and added new tag without saving",
+      "when": "I attempt to navigate away from page",
+      "then": "Confirm dialog appears: 'You have unsaved changes. Are you sure you want to leave?'"
+    }
+  ]
+}
