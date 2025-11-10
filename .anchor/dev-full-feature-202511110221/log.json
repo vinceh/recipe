@@ -1,0 +1,30 @@
+[
+  {
+    "step": "step-1a-feature-name",
+    "action": "user-input",
+    "input": {
+      "featureName": "recipes can have tags"
+    },
+    "timestamp": "2025-11-10T18:21:11.506Z"
+  },
+  {
+    "step": "step-1b-feature-file",
+    "action": "user-input",
+    "input": {
+      "featureFilePath": "new_features/feature.md"
+    },
+    "timestamp": "2025-11-10T18:21:16.206Z"
+  },
+  {
+    "step": "step-1c-parse-save",
+    "action": "deterministic",
+    "description": "Parse markdown and save feature artifacts",
+    "timestamp": "2025-11-10T18:21:16.208Z"
+  },
+  {
+    "step": "step-1d-git-branches",
+    "action": "deterministic",
+    "description": "Create git branches (feature, backend, frontend)",
+    "timestamp": "2025-11-10T18:21:16.300Z"
+  }
+]

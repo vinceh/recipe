@@ -1,0 +1,1 @@
+"- each recipe can have tags\n- each tag is just a string of characters\n  - case preserved\n  - 40 chars max\n- each recipe has it's own set of tags, there's no universally shared tags or anything like that, even if there are duplicates\n- whitespace should be trimmed\n- added below aliases in admin create recipe form"

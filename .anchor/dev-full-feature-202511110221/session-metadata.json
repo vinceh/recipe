@@ -1,0 +1,12 @@
+{
+  "originalBranch": "anchor",
+  "originalHead": "2fa163d6700945df54233333693690f6dcda1ac0",
+  "createdBranches": [
+    "feature/recipes-can-have-tags",
+    "feature/recipes-can-have-tags-backend",
+    "feature/recipes-can-have-tags-frontend"
+  ],
+  "commits": [],
+  "sessionFolder": "dev-full-feature-202511110221",
+  "createdAt": "2025-11-10T18:21:16.299Z"
+}
