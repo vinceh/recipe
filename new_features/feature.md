@@ -1,6 +1,7 @@
-- each step in a recipe can optionally have an image attached to it, refer to @file.jpg
-- maximum 1 image per step
-- 25mb maximum file size
-- when display the steps, it should should the step words and then the image @file2.jpg
-  - on mobile the image should span the entire width of the screen
-- use AWS
+- each recipe can have tags
+- each tag is just a string of characters
+  - case preserved
+  - 40 chars max
+- each recipe has it's own set of tags, there's no universally shared tags or anything like that, even if there are duplicates
+- whitespace should be trimmed
+- added below aliases in admin create recipe form
