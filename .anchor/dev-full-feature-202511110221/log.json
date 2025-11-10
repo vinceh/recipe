@@ -26,5 +26,28 @@
     "action": "deterministic",
     "description": "Create git branches (feature, backend, frontend)",
     "timestamp": "2025-11-10T18:21:16.300Z"
+  },
+  {
+    "actor": "User",
+    "action": "feature-complete",
+    "message": "User described feature, saved to feature.json and feature.md [commit #eb67fe0]",
+    "step": "step-1-describe-feature",
+    "files": [
+      "feature.json",
+      "feature.md"
+    ],
+    "commit": "eb67fe05a749db984e7255fa38d1fdb755c8eaf0",
+    "timestamp": "2025-11-10T18:21:16.339Z"
+  },
+  {
+    "step": "step-2-plan-feature",
+    "action": "ai-execution",
+    "agent": "planner",
+    "tokens": {
+      "inputTokens": 58198,
+      "outputTokens": 2642
+    },
+    "output": "tasks.json",
+    "timestamp": "2025-11-10T18:28:32.793Z"
   }
 ]

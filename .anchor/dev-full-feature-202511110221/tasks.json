@@ -1,0 +1,338 @@
+{
+  "backend": [
+    {
+      "desc": "Create RecipeTag model and migration for tags table",
+      "subtasks": [
+        {
+          "desc": "Generate migration for recipe_tags table with columns: id (bigint), recipe_id (bigint), tag (string, limit: 40), created_at, updated_at"
+        },
+        {
+          "desc": "Add foreign key constraint from recipe_tags to recipes with ON DELETE CASCADE"
+        },
+        {
+          "desc": "Add index on recipe_id for efficient lookups"
+        },
+        {
+          "desc": "Add unique index on [recipe_id, tag] to prevent duplicate tags per recipe"
+        },
+        {
+          "desc": "Add GIN index on tag column using pg_trgm for efficient fuzzy searching"
+        },
+        {
+          "desc": "Run migration"
+        },
+        {
+          "desc": "Create RecipeTag model at backend/app/models/recipe_tag.rb"
+        },
+        {
+          "desc": "Add belongs_to :recipe association in RecipeTag model"
+        },
+        {
+          "desc": "Add validations: presence of tag, length maximum 40, format to trim whitespace"
+        },
+        {
+          "desc": "Add before_validation callback to normalize tag (downcase and strip whitespace)"
+        }
+      ]
+    },
+    {
+      "desc": "Update Recipe model to support tags",
+      "subtasks": [
+        {
+          "desc": "Add has_many :recipe_tags, dependent: :destroy association"
+        },
+        {
+          "desc": "Add accepts_nested_attributes_for :recipe_tags with allow_destroy: true and reject_if for blank tags"
+        },
+        {
+          "desc": "Add helper method 'tags' that returns array of tag strings (pluck :tag)"
+        }
+      ]
+    },
+    {
+      "desc": "Extend RecipeSearchService to support fuzzy tag searching",
+      "subtasks": [
+        {
+          "desc": "Add search_by_tag method with fuzzy matching using pg_trgm similarity"
+        },
+        {
+          "desc": "Implement exact match fallback if similarity threshold not met"
+        },
+        {
+          "desc": "Add similarity_threshold parameter (default 0.6 for tags, lower than name search)"
+        },
+        {
+          "desc": "Return recipes ordered by similarity score when using fuzzy match"
+        },
+        {
+          "desc": "Update comprehensive_search method to include tag search after alias search"
+        },
+        {
+          "desc": "Update advanced_search method to support :tag or :tags parameter"
+        },
+        {
+          "desc": "Add filter_by_tags method to filter by multiple tags (OR logic)"
+        }
+      ]
+    },
+    {
+      "desc": "Update Admin Recipes Controller to handle tags",
+      "subtasks": [
+        {
+          "desc": "Add recipe_tags_attributes: [:id, :tag, :_destroy] to recipe_params strong parameters"
+        },
+        {
+          "desc": "Update index action to support :tag query parameter for tag-based search"
+        },
+        {
+          "desc": "Update show action JSON response to include tags array"
+        },
+        {
+          "desc": "Update index action JSON response to include tags array for each recipe"
+        },
+        {
+          "desc": "Update admin_recipe_json method to include tags in serialization"
+        }
+      ]
+    },
+    {
+      "desc": "Update Public API Recipes Controller to support tag search",
+      "subtasks": [
+        {
+          "desc": "Add :tag and :tags parameters to advanced search parameter check"
+        },
+        {
+          "desc": "Update recipe_list_json to include tags array"
+        },
+        {
+          "desc": "Update recipe_detail_json to include tags array"
+        },
+        {
+          "desc": "Ensure eager loading includes :recipe_tags in index and show actions"
+        }
+      ]
+    },
+    {
+      "desc": "Write RSpec tests for RecipeTag model",
+      "subtasks": [
+        {
+          "desc": "Create backend/spec/models/recipe_tag_spec.rb"
+        },
+        {
+          "desc": "Test belongs_to :recipe association"
+        },
+        {
+          "desc": "Test validation: tag presence is required"
+        },
+        {
+          "desc": "Test validation: tag maximum length is 40 characters"
+        },
+        {
+          "desc": "Test before_validation: tag is normalized (downcased and stripped)"
+        },
+        {
+          "desc": "Test uniqueness: duplicate tags within same recipe are prevented"
+        },
+        {
+          "desc": "Test that tags can be duplicated across different recipes"
+        }
+      ]
+    },
+    {
+      "desc": "Write RSpec tests for tag search in RecipeSearchService",
+      "subtasks": [
+        {
+          "desc": "Create backend/spec/services/recipe_search_service_tag_spec.rb"
+        },
+        {
+          "desc": "Test search_by_tag with exact match"
+        },
+        {
+          "desc": "Test search_by_tag with fuzzy match (typos and partial matches)"
+        },
+        {
+          "desc": "Test search_by_tag similarity scoring and ordering"
+        },
+        {
+          "desc": "Test comprehensive_search includes tag results"
+        },
+        {
+          "desc": "Test advanced_search with :tag parameter"
+        },
+        {
+          "desc": "Test filter_by_tags with multiple tags (OR logic)"
+        },
+        {
+          "desc": "Test that tag search is case-insensitive"
+        }
+      ]
+    },
+    {
+      "desc": "Write RSpec request tests for tags in recipes API",
+      "subtasks": [
+        {
+          "desc": "Add tests in backend/spec/requests/api/v1/admin/recipes_spec.rb for creating recipe with tags"
+        },
+        {
+          "desc": "Test that tags are returned in GET /admin/recipes/:id response"
+        },
+        {
+          "desc": "Test that tags are returned in GET /admin/recipes index response"
+        },
+        {
+          "desc": "Test searching recipes by tag via GET /admin/recipes?tag=vegan"
+        },
+        {
+          "desc": "Test updating recipe tags via PATCH /admin/recipes/:id"
+        },
+        {
+          "desc": "Test deleting tags via nested attributes with _destroy: true"
+        },
+        {
+          "desc": "Test validation error when tag exceeds 40 characters"
+        },
+        {
+          "desc": "Test fuzzy tag search with typos"
+        },
+        {
+          "desc": "Add tests in backend/spec/requests/api/v1/recipes_spec.rb for tag search in public API"
+        },
+        {
+          "desc": "Test GET /api/v1/recipes?tag=quick returns recipes with similar tags"
+        },
+        {
+          "desc": "Test GET /api/v1/recipes?q=healthy searches through tags as part of comprehensive search"
+        }
+      ]
+    }
+  ],
+  "frontend": [
+    {
+      "desc": "Add tags input section to RecipeForm component",
+      "subtasks": [
+        {
+          "desc": "Add tags array to formData reactive object in RecipeForm.vue (initialize as empty array)"
+        },
+        {
+          "desc": "Add computed property to convert recipe.recipe_tags array to tags string array on mount/edit"
+        },
+        {
+          "desc": "Add tags input field in 'Tags & Classification' section, below aliases"
+        },
+        {
+          "desc": "Implement Chips component for tag input (PrimeVue Chips with max-length validation)"
+        },
+        {
+          "desc": "Add validation: trim whitespace and convert to lowercase on tag input"
+        },
+        {
+          "desc": "Add validation: reject tags longer than 40 characters"
+        },
+        {
+          "desc": "Display character count hint below input (e.g., '0/40 characters')"
+        },
+        {
+          "desc": "Convert tags array to recipe_tags_attributes format when saving (map to {tag: value} objects)"
+        },
+        {
+          "desc": "Handle tag deletion by adding _destroy: true to recipe_tags_attributes"
+        }
+      ]
+    },
+    {
+      "desc": "Add i18n translations for tags UI",
+      "subtasks": [
+        {
+          "desc": "Add 'tags' label to forms.recipe section in all 7 locale files (en.json, ja.json, ko.json, zh-tw.json, zh-cn.json, es.json, fr.json)"
+        },
+        {
+          "desc": "Add 'tagsPlaceholder' hint text to forms.recipe in all locale files (e.g., 'Add tags (press Enter)')"
+        },
+        {
+          "desc": "Add 'tagsHint' description to forms.recipe in all locale files (e.g., 'Max 40 characters per tag. Used to enhance search.')"
+        },
+        {
+          "desc": "Add validation error message 'tagTooLong' to errors.validation in all locale files"
+        },
+        {
+          "desc": "Verify 100% i18n coverage with npm run check:i18n"
+        }
+      ]
+    },
+    {
+      "desc": "Update recipe display components to show tags",
+      "subtasks": [
+        {
+          "desc": "Add tags display section to recipe detail views (if exists)"
+        },
+        {
+          "desc": "Use Badge or Tag component to render individual tags"
+        },
+        {
+          "desc": "Style tags with appropriate variant and size for consistency"
+        },
+        {
+          "desc": "Ensure tags wrap properly on small screens"
+        },
+        {
+          "desc": "Display tags prominently to indicate they enhance search"
+        }
+      ]
+    },
+    {
+      "desc": "Enhance search UI to support tag-based searching",
+      "subtasks": [
+        {
+          "desc": "Update recipe search/filter components to explain tag search capability"
+        },
+        {
+          "desc": "Add example text or tooltip indicating tags can be searched (e.g., 'Search by name, ingredient, or tag')"
+        },
+        {
+          "desc": "If advanced search form exists, add dedicated tag search field"
+        },
+        {
+          "desc": "Display matched tags in search results to show why recipe matched"
+        }
+      ]
+    },
+    {
+      "desc": "Write Playwright tests for tags functionality",
+      "subtasks": [
+        {
+          "desc": "Create test file frontend/tests/e2e/admin/recipe-tags.spec.ts"
+        },
+        {
+          "desc": "Test adding tags when creating a new recipe"
+        },
+        {
+          "desc": "Test that tags are displayed after recipe creation"
+        },
+        {
+          "desc": "Test editing existing recipe and adding new tags"
+        },
+        {
+          "desc": "Test editing existing recipe and removing tags"
+        },
+        {
+          "desc": "Test validation: tags longer than 40 characters are rejected"
+        },
+        {
+          "desc": "Test that whitespace is trimmed and tags are normalized"
+        },
+        {
+          "desc": "Test that duplicate tags within same recipe are handled gracefully"
+        },
+        {
+          "desc": "Test searching recipes by tag returns correct results"
+        },
+        {
+          "desc": "Test fuzzy tag search with typos (e.g., searching 'vgan' finds 'vegan')"
+        },
+        {
+          "desc": "Test that comprehensive search includes tag matches"
+        }
+      ]
+    }
+  ]
+}
