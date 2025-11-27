@@ -14,6 +14,10 @@ Update this document every time a component is created, modified, or removed. Ea
   - [PageHeader](#pageheader)
   - [Badge](#badge)
   - [LanguageSwitcher](#languageswitcher)
+- [Recipe Components](#recipe-components)
+  - [RecipeCard](#recipecard)
+  - [RecipeGrid](#recipegrid)
+  - [ViewRecipe](#viewrecipe)
 - [Admin Components](#admin-components)
   - [Admin Layout](#admin-layout)
   - [Admin Recipes](#admin-recipes)
@@ -511,6 +515,90 @@ interface Props {
 - Fully accessible with aria-label
 - Mobile responsive (adapts to small screens)
 - Works in both light and dark modes
+
+---
+
+## Recipe Components
+
+### RecipeCard
+
+**Location:** `components/recipe/RecipeCard.vue`
+
+**Purpose:** Display recipe preview card with image, title, metadata, and description. Links to recipe detail page.
+
+**Props:**
+```typescript
+interface Props {
+  recipe: Recipe  // Recipe object with name, timing, cuisines, servings, image_url, etc.
+}
+```
+
+**Emits:** None
+
+**Usage:**
+```vue
+<RecipeCard :recipe="recipe" />
+```
+
+**Features:**
+- Image with placeholder fallback
+- Difficulty badge (easy/medium/hard)
+- Meta line: total time, cuisine, servings
+- Description preview
+- Full card is clickable link to `/recipes/:id`
+
+---
+
+### RecipeGrid
+
+**Location:** `components/recipe/RecipeGrid.vue`
+
+**Purpose:** Responsive grid layout for displaying multiple recipe cards
+
+**Props:**
+```typescript
+interface Props {
+  recipes: Recipe[]  // Array of recipes to display
+}
+```
+
+**Emits:** None
+
+**Usage:**
+```vue
+<RecipeGrid :recipes="recipes" />
+```
+
+**Responsive breakpoints:**
+- Desktop: `minmax(280px, 1fr)` columns
+- Tablet (768px): `minmax(240px, 1fr)` columns
+- Mobile (480px): Single column
+
+---
+
+### ViewRecipe
+
+**Location:** `components/shared/ViewRecipe.vue`
+
+**Purpose:** Read-only recipe display with full details. Used for preview and public viewing.
+
+**Props:**
+```typescript
+interface Props {
+  recipe: Partial<RecipeDetail>  // Recipe with optional fields for preview support
+}
+```
+
+**Emits:** None
+
+**Sections displayed:**
+- Hero image
+- Title, servings, timing, difficulty
+- Aliases and source URL
+- Cuisines and dietary tags
+- Ingredient groups with items
+- Equipment list
+- Steps with instructions
 
 ---
 
@@ -1292,45 +1380,4 @@ interface Props {
 - limitations or limitations
 ```
 
----
-
-## Component Status Tracker
-
-| Component | Status | Documented | Last Updated |
-|-----------|--------|------------|--------------|
-| LoadingSpinner | ✅ Defined | ✅ Yes | 2025-10-08 |
-| ErrorMessage | ✅ Defined | ✅ Yes | 2025-10-08 |
-| ConfirmDialog | ✅ Defined | ✅ Yes | 2025-10-08 |
-| EmptyState | ✅ Defined | ✅ Yes | 2025-10-08 |
-| PageHeader | ✅ Defined | ✅ Yes | 2025-10-08 |
-| Badge | ✅ Defined | ✅ Yes | 2025-10-08 |
-| AdminLayout | 📝 Placeholder | ⏳ Pending | - |
-| AdminNavBar | 📝 Placeholder | ⏳ Pending | - |
-| AdminSidebar | 📝 Placeholder | ⏳ Pending | - |
-| AdminBreadcrumbs | 📝 Placeholder | ⏳ Pending | - |
-| RecipeForm | 📝 Placeholder | ⏳ Pending | - |
-
-**Legend:**
-- Defined - Component spec fully documented
-- Placeholder - Component not yet created
-- Pending - Needs documentation
-- Outdated - Documentation out of sync
-
----
-
-## Maintenance Checklist
-
-Before marking any component work as "complete":
-
-- [ ] Component is fully functional
-- [ ] All props are documented with types and defaults
-- [ ] All emits are documented with payload types
-- [ ] All slots are documented
-- [ ] At least 2 usage examples provided
-- [ ] Related components are listed
-- [ ] Notes section includes limitations and best practices
-- [ ] Component status tracker is updated
-- [ ] `Last Updated` date is current
-
----
 

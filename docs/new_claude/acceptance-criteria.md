@@ -8,19 +8,18 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 
 1. [Smart Scaling System](#smart-scaling-system)
 2. [Step Instruction Variants](#step-instruction-variants)
-3. [Multi-lingual Translation](#multi-lingual-translation)
-4. [Internationalization (i18n)](#internationalization-i18n)
-5. [Nutrition System](#nutrition-system)
-6. [Search & Filtering](#search--filtering)
-7. [User Features](#user-features)
-8. [Admin Authentication](#admin-authentication)
-9. [Admin Recipes List](#admin-recipes-list)
-10. [Admin Recipe Management](#admin-recipe-management)
-11. [Recipe Viewing](#recipe-viewing)
-12. [Recipe Description](#recipe-description)
-13. [Performance & Reliability](#performance--reliability)
-14. [Phase 3: Model Validations](#phase-3-model-validations)
-15. [Phase 5: Auto-Triggered Translation Workflow](#phase-5-auto-triggered-translation-workflow)
+3. [Translation & Internationalization](#translation--internationalization)
+4. [Nutrition System](#nutrition-system)
+5. [Search & Filtering](#search--filtering)
+6. [User Features](#user-features)
+7. [Admin Authentication](#admin-authentication)
+8. [Admin Recipes List](#admin-recipes-list)
+9. [Admin Recipe Management](#admin-recipe-management)
+10. [Recipe Viewing](#recipe-viewing)
+11. [Recipe Description](#recipe-description)
+12. [Performance & Reliability](#performance--reliability)
+13. [Phase 3: Model Validations](#phase-3-model-validations)
+14. [Phase 5: Auto-Triggered Translation Workflow](#phase-5-auto-triggered-translation-workflow)
 
 ---
 
@@ -96,7 +95,7 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 
 ---
 
-## Multi-lingual Translation
+## Translation & Internationalization
 
 ### AC-TRANSLATE-001: Pre-Translation on Save
 **GIVEN** admin creates a recipe in English
@@ -149,10 +148,6 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 **WHEN** translations are in progress
 **THEN** UI should show "Translations in progress..." indicator
 **AND** available languages should be grayed out until complete
-
----
-
-## Internationalization (i18n)
 
 ### AC-I18N-001: Backend Locale Files Structure
 **GIVEN** the application supports multiple languages
@@ -1866,53 +1861,3 @@ Atomic, testable acceptance criteria for all Recipe App MVP features using GIVEN
 **AND** should count only jobs with status "scheduled" or "executing"
 **AND** should not count completed, failed, or discarded jobs
 
----
-
-## Summary Statistics
-
-- **Total Acceptance Criteria:** 205
-- **Smart Scaling:** 12 criteria
-- **Step Variants:** 9 criteria (removed feature)
-- **Multi-lingual:** 9 criteria
-- **Internationalization (i18n):** 18 criteria
-- **Nutrition:** 13 criteria
-- **Search & Filtering:** 16 criteria
-- **User Features:** 13 criteria
-- **Admin Management:** 15 criteria
-- **Recipe Viewing:** 7 criteria
-- **Performance & Reliability:** 12 criteria
-- **Additional Requirements:** 21 criteria (from ongoing analysis)
-- **Phase 3: Model Validations:** 45 criteria
-- **Phase 5: Auto-Triggered Translation Workflow:** 18 criteria
-  - Recipe: 7 criteria
-  - User: 11 criteria
-  - Ingredient: 5 criteria
-  - IngredientAlias: 4 criteria
-  - DataReference: 7 criteria
-  - UserRecipeNote: 3 criteria
-  - UserFavorite: 3 criteria
-  - AiPrompt: 3 criteria
-  - JwtDenylist: 2 criteria
-
----
-
-## Usage Notes
-
-### For Developers
-- Each AC ID maps to technical components in traceability matrix
-- Use AC IDs in test descriptions (e.g., `it 'should scale ingredients proportionally (AC-SCALE-001)'`)
-- Reference ACs in commit messages and PR descriptions
-
-### For Product Owner
-- Use as checklist for MVP completion validation
-- Mark ACs as "Done" when feature passes testing
-- Update ACs if requirements change (version history in Git)
-
-### For QA/Testing
-- Create test cases based on GIVEN-WHEN-THEN scenarios
-- Each AC should have at least one corresponding test
-- Use traceability matrix to track test coverage
-
----
-
-**End of Acceptance Criteria Document**

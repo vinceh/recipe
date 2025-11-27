@@ -1,29 +1,15 @@
 # Project Overview
 
 **Project:** Recipe App (Ember)
-**Developer:** V
-**Timeline:** 8 weeks MVP
 
 ---
 
-## What Is This Project?
+## Core Features
 
-**Ember** is a flexible, intelligent recipe platform designed to make cooking easier through smart technology. Unlike traditional recipe apps that display static instructions, Ember provides dynamic scaling, adaptive instructions, multi-lingual support, and nutrition-first search capabilities.
-
-### Core Concept
-
-Recipes in Ember are structured data (not just text) with built-in intelligence:
 - **Smart Scaling** - Adjust servings or scale by specific ingredients with context-aware precision
 - **Adaptive Instructions** - Each step has 3 pre-generated variants (Original, Easier, No Equipment)
-- **Multi-lingual** - Full support for 7 languages (English, Japanese, Korean, Traditional Chinese, Simplified Chinese, Spanish, French)
-- **Nutrition-First** - Search and filter by dietary needs, not just keywords
-
-### Target Users
-
-1. **Home Cooks** - Anyone who cooks regularly and wants flexibility
-2. **Dietary-Conscious Users** - People with dietary restrictions (vegan, gluten-free, keto, etc.)
-3. **International Users** - Non-English speakers who need recipes in their language
-4. **Recipe Creators** - Content creators and food bloggers who want to publish flexible recipes
+- **Multi-lingual** - 7 languages (en, ja, ko, zh-tw, zh-cn, es, fr)
+- **Nutrition-First Search** - Filter by dietary needs, nutrition values, cuisines
 
 ---
 
@@ -168,119 +154,26 @@ recipe/
 
 ---
 
-## Development Approach
-
-### Test-Driven Development (Backend)
-1. Write Acceptance Criteria (GIVEN-WHEN-THEN format)
-2. Write RSpec tests for each AC
-3. Implement feature to make tests pass
-4. 100% test pass required before commit
-
-### Component-Driven Development (Frontend)
-1. Check for existing components before creating new ones
-2. Document components while building
-3. Use design tokens (CSS variables) for all styling
-4. 100% i18n coverage required before commit
-
-### Documentation-First
-- All API endpoints documented in [api-reference.md](api-reference.md)
-- All components documented in [component-library.md](component-library.md)
-- All ACs documented in [acceptance-criteria.md](acceptance-criteria.md)
-- Documentation updated AS YOU BUILD, not after
-
----
-
 ## Current Status
 
-**Phase 0: Project Setup** ✅ COMPLETE
-- Rails API created
-- Vue.js frontend created
-- PostgreSQL database configured
-- Redis configured
+**Phase 0: Project Setup** - Complete
+- Rails API, Vue.js frontend, PostgreSQL, Redis configured
 - Authentication (Devise + JWT) working
-- Both servers tested and running
 
-**Phase 1: Database & Models** ✅ COMPLETE
-- All 9 migrations created and run
-- All models created with validations
-- Database seeded with reference data:
-  - 40 dietary tags
-  - 99 cuisines
-  - 16 dish types
-  - 74 recipe types
+**Phase 1: Database & Models** - Complete
+- 9 migrations, all models with validations
+- Seeded: 40 dietary tags, 99 cuisines, 16 dish types, 74 recipe types
 
-**Phase 2-5: Feature Development** 🚧 IN PROGRESS
-- See [development-checklist.md](development-checklist.md) for detailed task breakdown
+**Phase 2-5: Feature Development** - In Progress
 
 ---
 
 ## Key Documents
 
-### For AI Context
-- **[00-START-HERE.md](00-START-HERE.md)** - Quick navigation guide
-- **[development-workflow.md](development-workflow.md)** - MANDATORY workflows
+- **[entry.md](entry.md)** - Development workflow
 - **[architecture.md](architecture.md)** - Backend + frontend architecture
-- **[acceptance-criteria.md](acceptance-criteria.md)** - All ACs (127+ criteria)
-- **[api-reference.md](api-reference.md)** - Complete API documentation (50+ endpoints)
-- **[component-library.md](component-library.md)** - Component catalog
-
-### For Planning
-- **[../planning/PRD.md](../planning/PRD.md)** - Product Requirements Document
-- **[../planning/technical-specification.md](../planning/technical-specification.md)** - Detailed tech spec
-- **[../planning/epics.md](../planning/epics.md)** - Epic breakdown
-
-### For Reference
-- **[../reference/data/](../reference/data/)** - Dietary tags, cuisines, dish types, recipe types
-- **[../reference/technical-designs/](../reference/technical-designs/)** - Nutrition strategy, scaling system
-
----
-
-## Design Philosophy
-
-### Backend
-- **JSONB for flexibility** - Recipes as structured data, not rigid schema
-- **Service objects** - Complex logic outside controllers
-- **Background jobs** - AI operations don't block requests
-- **Test-driven** - Every AC has RSpec tests
-
-### Frontend
-- **Component reuse** - Check component-library.md before creating new components
-- **Design tokens** - All colors/spacing/fonts in CSS variables
-- **Mobile-first** - Responsive from the start
-- **i18n-first** - No hardcoded text allowed
-- **Type-safe** - TypeScript for reliability
-
-### User Experience
-- **Pre-compute alternatives** - Instant UX (no waiting for AI during cooking)
-- **AI as safety net** - For edge cases (~10% of users need this)
-- **Separation of concerns** - Base recipe vs user customizations
-- **90%+ coverage** - 2 pre-generated alternatives per step cover most use cases
-
----
-
-## Timeline
-
-- **Week 1-2:** Project setup, database, models ✅
-- **Week 3-4:** Core recipe features (CRUD, scaling, search)
-- **Week 5-6:** User features (favorites, notes), AI integration
-- **Week 7:** Admin features, recipe import
-- **Week 8:** Polish, testing, deployment
-
----
-
-## Notes for AI Development
-
-When starting a new AI session:
-1. Read [00-START-HERE.md](00-START-HERE.md) for quick orientation
-2. Check [development-checklist.md](development-checklist.md) for current tasks
-3. Review [development-workflow.md](development-workflow.md) for MANDATORY processes
-4. Reference [architecture.md](architecture.md) for system understanding
-
-**Remember:**
-- Backend: ACs → Tests → Code
-- Frontend: Check components → Build + i18n → Document
-- No hardcoded text allowed (backend or frontend)
-- 100% test coverage (backend) and 100% i18n coverage (frontend) required
-
----
-
+- **[acceptance-criteria.md](acceptance-criteria.md)** - All ACs
+- **[api-reference.md](api-reference.md)** - API documentation
+- **[component-library.md](component-library.md)** - Vue component catalog
+- **[database-architecture.md](database-architecture.md)** - Database schema
+- **[i18n-workflow.md](i18n-workflow.md)** - Translation workflow

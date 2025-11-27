@@ -1,168 +1,46 @@
-# Quick Start Guide for AI & Developers
+# Recipe App - Quick Start
 
-This folder contains the essential documentation for AI-assisted development of the Recipe App.
+Rails API + Vue 3 SPA with PostgreSQL. 7 languages: en, ja, ko, zh-tw, zh-cn, es, fr.
 
----
+## Golden Rule
+**ACs → Tests → Code → 100% Pass → Docs → Commit**
 
-## MANDATORY Development Workflows
+## Backend Workflow
 
-### Backend Development
+- **Before:** Write ACs (GIVEN-WHEN-THEN format) in acceptance-criteria.md if missing
+- **Before:** Check api-reference.md for existing endpoints
+- **During:** Write RSpec tests for each AC (reference AC IDs in test names)
+- **During:** Implement with I18n.t() for all user-facing text (7 languages)
+- **After:** Run `bundle exec rspec` → must be 100% pass (0 failures, 0 pending)
+- **After:** Update api-reference.md if endpoints changed
+- **After:** Commit with AC IDs in message
 
-**BEFORE starting development:**
-1. **Check [acceptance-criteria.md](acceptance-criteria.md)** for existing ACs covering your feature
-2. **If no ACs exist** → STOP and write comprehensive ACs first (GIVEN-WHEN-THEN format)
-3. **Review [api-reference.md](api-reference.md)** → understand existing endpoints to avoid duplication
+## Frontend Workflow
 
-**AFTER development is complete:**
-1. **Write RSpec tests** for EVERY AC (test-driven development)
-2. **Run `bundle exec rspec`** → 100% pass required (zero failures, zero pending)
-3. **Update [api-reference.md](api-reference.md)** if endpoints were added/modified
-4. **Update other relevant docs** (architecture.md, etc.)
-5. **Mark task complete** in [development-checklist.md](development-checklist.md)
+- **Before:** Write ACs (GIVEN-WHEN-THEN format) in acceptance-criteria.md if missing
+- **Before:** Check component-library.md for existing reusable components
+- **During:** Implement with $t() for all text (add to all 7 locale JSON files)
+- **During:** Use CSS variables from variables.css (never hardcode colors/spacing)
+- **During:** Write Playwright tests for each AC (reference AC IDs in test names)
+- **After:** Run `npm run check:i18n` → must be 100%
+- **After:** Test in browser: switch through all 7 languages, verify no `[missing.key]`
+- **After:** Run `npm run test:e2e` → must be 100% pass (0 failures)
+- **After:** Update component-library.md with props, emits, examples
+- **After:** Commit
 
-**DO NOT commit if:**
-- Any RSpec test fails
-- Any AC is missing tests
-- API docs are out of date
+## Key Documentation
 
----
+- **architecture.md** - Tech stack, database schema, design system, CSS variables
+- **api-reference.md** - All API endpoints with cURL examples
+- **component-library.md** - All Vue components with props and usage
+- **acceptance-criteria.md** - All ACs in GIVEN-WHEN-THEN format
+- **i18n-workflow.md** - Translation workflow and best practices
+- **database-architecture.md** - Complete DB field documentation
 
-### Frontend Development
+## Never
 
-**BEFORE starting development:**
-1. **Check [component-library.md](component-library.md)** for existing components
-2. **Reuse existing components** whenever possible (avoid creating duplicates)
-3. **Review [architecture.md](architecture.md)** → understand design system and folder structure
-
-**AFTER development is complete:**
-1. **Document new components** in [component-library.md](component-library.md)
-   - Props, emits, slots
-   - At least 2 usage examples
-2. **Ensure 100% i18n coverage** (all 7 languages: en, ja, ko, zh-tw, zh-cn, es, fr)
-   - See [i18n-workflow.md](i18n-workflow.md) for details
-3. **Run `npm run check:i18n`** → must pass with 100% coverage
-4. **Test in browser** → switch through all 7 languages, verify no `[missing.key]` brackets
-5. **Update [architecture.md](architecture.md)** if new folders/CSS patterns added
-6. **Mark task complete** in [development-checklist.md](development-checklist.md)
-
-**DO NOT commit if:**
-- i18n coverage < 100%
-- Component not documented
-- Missing translations in any language
-
----
-
-## Quick Navigation
-
-### Core Development Docs
-
-| Document | Purpose | When to Use |
-|----------|---------|-------------|
-| **[development-workflow.md](development-workflow.md)** | Detailed step-by-step workflows | Read this first for comprehensive process |
-| **[development-checklist.md](development-checklist.md)** | Master task tracker | Track progress, mark tasks complete |
-| **[pre-commit-checklist.md](pre-commit-checklist.md)** | Pre-commit verification | Before EVERY commit |
-
-### Backend Docs
-
-| Document | Purpose | When to Use |
-|----------|---------|-------------|
-| **[acceptance-criteria.md](acceptance-criteria.md)** | All ACs in GIVEN-WHEN-THEN format | BEFORE coding, check for ACs; write new ACs if missing |
-| **[api-reference.md](api-reference.md)** | Complete API documentation (50+ endpoints) | Reference when calling APIs; UPDATE when modifying endpoints |
-| **[api-documentation-guide.md](api-documentation-guide.md)** | How to document APIs | When adding/modifying API endpoints |
-| **[architecture.md](architecture.md)** (Backend section) | Database schema, models, API structure | Understand backend architecture |
-| **[../database-architecture.md](../database-architecture.md)** | Complete field-by-field database documentation | Understanding JSONB structures, units, relationships, i18n |
-
-### Frontend Docs
-
-| Document | Purpose | When to Use |
-|----------|---------|-------------|
-| **[component-library.md](component-library.md)** | Component catalog with props & examples | Check BEFORE creating new components; UPDATE after building |
-| **[architecture.md](architecture.md)** (Frontend section) | Design system, folder structure, styling | Understand design tokens, component organization |
-| **[i18n-workflow.md](i18n-workflow.md)** | Complete i18n guide (7 languages) | When adding user-facing text, translations |
-
-### Project Overview
-
-| Document | Purpose | When to Use |
-|----------|---------|-------------|
-| **[project-overview.md](project-overview.md)** | High-level project summary, tech stack | New developers, AI context initialization |
-
----
-
-## Common Tasks
-
-| I need to... | Use this document |
-|-------------|-------------------|
-| Find out what to build next | [development-checklist.md](development-checklist.md) |
-| Write acceptance criteria | [acceptance-criteria.md](acceptance-criteria.md) (see examples) |
-| Find existing API endpoints | [api-reference.md](api-reference.md) |
-| Document a new API endpoint | [api-documentation-guide.md](api-documentation-guide.md) |
-| Find existing components | [component-library.md](component-library.md) |
-| Add translations | [i18n-workflow.md](i18n-workflow.md) |
-| Understand database schema & fields | [../database-architecture.md](../database-architecture.md) |
-| Understand design system (colors, spacing, fonts) | [architecture.md](architecture.md#frontend-architecture) → Design System |
-| Check pre-commit requirements | [pre-commit-checklist.md](pre-commit-checklist.md) |
-
----
-
-## Document Organization
-
-```
-docs/
-├── database-architecture.md      ← Database schema, fields, units, i18n
-└── new_claude/
-    ├── 00-START-HERE.md              ← You are here
-    ├── development-workflow.md       ← Detailed workflows (MANDATORY processes)
-    ├── development-checklist.md      ← Master task list
-    ├── pre-commit-checklist.md       ← Checklist before EVERY commit
-    ├── acceptance-criteria.md        ← All ACs (GIVEN-WHEN-THEN)
-    ├── architecture.md               ← Backend + Frontend architecture
-    ├── api-reference.md              ← Complete API docs
-    ├── api-documentation-guide.md    ← How to document APIs
-    ├── component-library.md          ← Component catalog
-    └── i18n-workflow.md              ← Translation workflow
-```
-
----
-
-## Golden Rules
-
-### Backend
-1. **ACs FIRST** → Write acceptance criteria BEFORE coding
-2. **Tests ALWAYS** → RSpec test for EVERY AC
-3. **100% Pass** → All tests must pass before commit
-4. **Document APIs** → Update api-reference.md when endpoints change
-
-### Frontend
-1. **Reuse Components** → Check component-library.md BEFORE creating new ones
-2. **100% i18n** → All 7 languages required (no exceptions)
-3. **Design Tokens** → Never hardcode colors/spacing (use CSS variables)
-4. **Document While Building** → Update component-library.md as you code
-
----
-
-## Features Implementation Summary
-
-### Recipe Images (Image Upload Feature)
-
-**Backend:** Active Storage integration for PNG/JPG/GIF/WebP images (max 10MB)
-- Image validations in Recipe model
-- Image URL returned in API responses
-- See: `backend/app/models/recipe.rb`, `backend/config/storage.yml`
-
-**Frontend:** Image upload in admin forms + display in recipe views
-- File upload with preview in RecipeForm.vue
-- FormData handling in AdminRecipeNew.vue, AdminRecipeDetail.vue
-- Image display in HomeView, RecipeCard, ViewRecipe
-- See: `frontend/src/components/admin/recipes/RecipeForm.vue`, etc.
-
-**Localization:** Image labels in 7 languages
-- See: `frontend/src/locales/` (en, ja, ko, zh-cn, zh-tw, es, fr)
-
----
-
-## Additional Documentation
-
-Other documentation lives in parent folders:
-
-- **[../reference/](../reference/)** - Reference data (dietary tags, cuisines, technical designs, AI prompts)
-- **[../planning/](../planning/)** - Historical planning docs (PRD, technical spec, epics)
+- Hardcode user-facing text (use I18n.t() or $t())
+- Hardcode CSS values (use var(--spacing-md), var(--color-text), etc.)
+- Code without ACs
+- Commit with failing tests (<100% pass)
+- Skip component or API documentation

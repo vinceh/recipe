@@ -682,4 +682,4 @@ stores/
 - **API Endpoints:** [api-reference.md](api-reference.md)
 - **i18n Workflow:** [i18n-workflow.md](i18n-workflow.md)
 - **Component Library:** [component-library.md](component-library.md)
-- **Development Checklist:** [development-checklist.md](development-checklist.md)
+- **Database Schema:** [database-architecture.md](database-architecture.md)
