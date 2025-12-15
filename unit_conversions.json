@@ -1,0 +1,302 @@
+[
+  {
+    "ingredient_id": 2346,
+    "name": "sakura ebi",
+    "conversions": [
+      {"unit": "tsp", "grams": 2},
+      {"unit": "tbsp", "grams": 6},
+      {"unit": "gram", "grams": 1},
+      {"unit": "ounce", "grams": 28}
+    ]
+  },
+  {
+    "ingredient_id": 2349,
+    "name": "salmon furikake",
+    "conversions": [
+      {"unit": "tsp", "grams": 3},
+      {"unit": "tbsp", "grams": 9},
+      {"unit": "gram", "grams": 1},
+      {"unit": "ounce", "grams": 28}
+    ]
+  },
+  {
+    "ingredient_id": 2351,
+    "name": "salsa",
+    "conversions": [
+      {"unit": "tbsp", "grams": 16},
+      {"unit": "cup", "grams": 255},
+      {"unit": "ml", "grams": 1},
+      {"unit": "ounce", "grams": 28}
+    ]
+  },
+  {
+    "ingredient_id": 2353,
+    "name": "salt",
+    "conversions": [
+      {"unit": "tsp", "grams": 6},
+      {"unit": "tbsp", "grams": 18},
+      {"unit": "gram", "grams": 1},
+      {"unit": "ounce", "grams": 28}
+    ]
+  },
+  {
+    "ingredient_id": 2354,
+    "name": "salt and pepper",
+    "conversions": [
+      {"unit": "tsp", "grams": 5},
+      {"unit": "tbsp", "grams": 15},
+      {"unit": "gram", "grams": 1},
+      {"unit": "ounce", "grams": 28}
+    ]
+  },
+  {
+    "ingredient_id": 2356,
+    "name": "salted butter",
+    "conversions": [
+      {"unit": "tbsp", "grams": 15},
+      {"unit": "stick", "grams": 113},
+      {"unit": "gram", "grams": 1},
+      {"unit": "ounce", "grams": 28}
+    ]
+  },
+  {
+    "ingredient_id": 2358,
+    "name": "salted duck eggs",
+    "conversions": [
+      {"unit": "piece", "grams": 65},
+      {"unit": "whole", "grams": 65},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2366,
+    "name": "sambar powder",
+    "conversions": [
+      {"unit": "tsp", "grams": 4},
+      {"unit": "tbsp", "grams": 12},
+      {"unit": "gram", "grams": 1},
+      {"unit": "ounce", "grams": 28}
+    ]
+  },
+  {
+    "ingredient_id": 2370,
+    "name": "sancho pepper",
+    "conversions": [
+      {"unit": "tsp", "grams": 2},
+      {"unit": "tbsp", "grams": 6},
+      {"unit": "gram", "grams": 1},
+      {"unit": "ounce", "grams": 28}
+    ]
+  },
+  {
+    "ingredient_id": 2371,
+    "name": "sansho pepper",
+    "conversions": [
+      {"unit": "tsp", "grams": 2},
+      {"unit": "tbsp", "grams": 6},
+      {"unit": "gram", "grams": 1},
+      {"unit": "ounce", "grams": 28}
+    ]
+  },
+  {
+    "ingredient_id": 2374,
+    "name": "sarawak white pepper",
+    "conversions": [
+      {"unit": "tsp", "grams": 2},
+      {"unit": "tbsp", "grams": 6},
+      {"unit": "gram", "grams": 1},
+      {"unit": "ounce", "grams": 28}
+    ]
+  },
+  {
+    "ingredient_id": 2378,
+    "name": "satsumaimo",
+    "conversions": [
+      {"unit": "piece", "grams": 150},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "gram", "grams": 1},
+      {"unit": "pound", "grams": 454}
+    ]
+  },
+  {
+    "ingredient_id": 2383,
+    "name": "sawtooth coriander",
+    "conversions": [
+      {"unit": "leaf", "grams": 1},
+      {"unit": "sprig", "grams": 2},
+      {"unit": "bunch", "grams": 30},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2385,
+    "name": "sazon seasoning",
+    "conversions": [
+      {"unit": "tsp", "grams": 3},
+      {"unit": "tbsp", "grams": 9},
+      {"unit": "packet", "grams": 6},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2388,
+    "name": "scallion pancake dough",
+    "conversions": [
+      {"unit": "piece", "grams": 100},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "gram", "grams": 1},
+      {"unit": "pound", "grams": 454}
+    ]
+  },
+  {
+    "ingredient_id": 2394,
+    "name": "scarlet runner beans, dried",
+    "conversions": [
+      {"unit": "cup", "grams": 175},
+      {"unit": "tbsp", "grams": 11},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2398,
+    "name": "scotch bonnet powder",
+    "conversions": [
+      {"unit": "tsp", "grams": 2},
+      {"unit": "tbsp", "grams": 6},
+      {"unit": "gram", "grams": 1},
+      {"unit": "ounce", "grams": 28}
+    ]
+  },
+  {
+    "ingredient_id": 2407,
+    "name": "sea salt",
+    "conversions": [
+      {"unit": "tsp", "grams": 6},
+      {"unit": "tbsp", "grams": 18},
+      {"unit": "gram", "grams": 1},
+      {"unit": "ounce", "grams": 28}
+    ]
+  },
+  {
+    "ingredient_id": 2410,
+    "name": "seasoned bread crumbs",
+    "conversions": [
+      {"unit": "cup", "grams": 100},
+      {"unit": "tbsp", "grams": 6},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2411,
+    "name": "seasoned rice vinegar",
+    "conversions": [
+      {"unit": "tsp", "grams": 5},
+      {"unit": "tbsp", "grams": 15},
+      {"unit": "ml", "grams": 1},
+      {"unit": "cup", "grams": 240}
+    ]
+  },
+  {
+    "ingredient_id": 2413,
+    "name": "sel gris",
+    "conversions": [
+      {"unit": "tsp", "grams": 5},
+      {"unit": "tbsp", "grams": 15},
+      {"unit": "gram", "grams": 1},
+      {"unit": "ounce", "grams": 28}
+    ]
+  },
+  {
+    "ingredient_id": 2414,
+    "name": "self-rising flour",
+    "conversions": [
+      {"unit": "cup", "grams": 125},
+      {"unit": "tbsp", "grams": 8},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2416,
+    "name": "semolina flour",
+    "conversions": [
+      {"unit": "cup", "grams": 150},
+      {"unit": "tbsp", "grams": 10},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2418,
+    "name": "senmaizuke",
+    "conversions": [
+      {"unit": "tbsp", "grams": 20},
+      {"unit": "cup", "grams": 240},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2422,
+    "name": "sesame furikake",
+    "conversions": [
+      {"unit": "tsp", "grams": 3},
+      {"unit": "tbsp", "grams": 9},
+      {"unit": "gram", "grams": 1},
+      {"unit": "ounce", "grams": 28}
+    ]
+  },
+  {
+    "ingredient_id": 2424,
+    "name": "sesame oil, light",
+    "conversions": [
+      {"unit": "tsp", "grams": 5},
+      {"unit": "tbsp", "grams": 15},
+      {"unit": "ml", "grams": 1},
+      {"unit": "cup", "grams": 240}
+    ]
+  },
+  {
+    "ingredient_id": 2425,
+    "name": "sesame oil, toasted",
+    "conversions": [
+      {"unit": "tsp", "grams": 5},
+      {"unit": "tbsp", "grams": 15},
+      {"unit": "ml", "grams": 1},
+      {"unit": "cup", "grams": 240}
+    ]
+  },
+  {
+    "ingredient_id": 2426,
+    "name": "sesame paste, chinese",
+    "conversions": [
+      {"unit": "tbsp", "grams": 15},
+      {"unit": "cup", "grams": 240},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2427,
+    "name": "sesame salt",
+    "conversions": [
+      {"unit": "tsp", "grams": 4},
+      {"unit": "tbsp", "grams": 12},
+      {"unit": "gram", "grams": 1},
+      {"unit": "ounce", "grams": 28}
+    ]
+  },
+  {
+    "ingredient_id": 2428,
+    "name": "sesame seeds",
+    "conversions": [
+      {"unit": "tsp", "grams": 3},
+      {"unit": "tbsp", "grams": 9},
+      {"unit": "cup", "grams": 150},
+      {"unit": "ounce", "grams": 28}
+    ]
+  }
+]

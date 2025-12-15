@@ -49,6 +49,9 @@ gem "redis", "~> 5.0"
 # HTTP client
 gem "faraday", "~> 2.7"
 
+# CSV parsing (required in Ruby 3.4+)
+gem "csv", "~> 3.0"
+
 # HTML parsing and sanitization
 gem "nokogiri", "~> 1.16"
 

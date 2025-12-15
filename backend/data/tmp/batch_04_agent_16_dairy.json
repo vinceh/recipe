@@ -1,0 +1,2528 @@
+{
+  "batch": 4,
+  "agent": 16,
+  "category": "dairy",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "whole milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 61,
+        "protein_g": 3.2,
+        "carbs_g": 4.8,
+        "fat_g": 3.3,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["whole milk", "full cream milk", "full fat milk", "vitamin d milk"],
+        "ja": ["全乳", "ぜんにゅう", "全脂乳", "ホールミルク"],
+        "ko": ["전유", "전지유", "홀밀크"],
+        "zh": ["全脂牛奶", "全脂奶", "全乳"],
+        "es": ["leche entera", "leche completa"],
+        "fr": ["lait entier", "lait complet"]
+      },
+      "common_units": ["cup", "ml", "liter", "gallon", "quart", "pint", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "2% milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 50,
+        "protein_g": 3.3,
+        "carbs_g": 4.8,
+        "fat_g": 2.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["2% milk", "reduced fat milk", "2 percent milk"],
+        "ja": ["低脂肪牛乳", "ていしぼうぎゅうにゅう", "2%ミルク"],
+        "ko": ["저지방우유", "2% 우유"],
+        "zh": ["低脂牛奶", "2%牛奶"],
+        "es": ["leche reducida en grasa", "leche 2%"],
+        "fr": ["lait demi-écrémé", "lait 2%"]
+      },
+      "common_units": ["cup", "ml", "liter", "gallon", "quart", "pint", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "1% milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 42,
+        "protein_g": 3.4,
+        "carbs_g": 5.0,
+        "fat_g": 1.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["1% milk", "low fat milk", "1 percent milk"],
+        "ja": ["低脂肪乳", "1%ミルク"],
+        "ko": ["저지방우유", "1% 우유"],
+        "zh": ["低脂牛奶", "1%牛奶"],
+        "es": ["leche baja en grasa", "leche 1%"],
+        "fr": ["lait écrémé à 1%", "lait 1%"]
+      },
+      "common_units": ["cup", "ml", "liter", "gallon", "quart", "pint", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "skim milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 34,
+        "protein_g": 3.4,
+        "carbs_g": 5.0,
+        "fat_g": 0.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["skim milk", "nonfat milk", "fat free milk", "skimmed milk"],
+        "ja": ["スキムミルク", "無脂肪牛乳", "むしぼうぎゅうにゅう"],
+        "ko": ["무지방우유", "탈지유", "스킴밀크"],
+        "zh": ["脱脂牛奶", "脱脂奶", "无脂牛奶"],
+        "es": ["leche desnatada", "leche descremada", "leche sin grasa"],
+        "fr": ["lait écrémé", "lait sans matière grasse"]
+      },
+      "common_units": ["cup", "ml", "liter", "gallon", "quart", "pint", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "raw milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 64,
+        "protein_g": 3.3,
+        "carbs_g": 4.9,
+        "fat_g": 3.5,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["raw milk", "unpasteurized milk", "farm milk"],
+        "ja": ["生乳", "せいにゅう", "無殺菌牛乳"],
+        "ko": ["생우유", "원유"],
+        "zh": ["生牛奶", "生乳", "未经巴氏消毒牛奶"],
+        "es": ["leche cruda", "leche sin pasteurizar"],
+        "fr": ["lait cru", "lait non pasteurisé"]
+      },
+      "common_units": ["cup", "ml", "liter", "quart", "pint", "tablespoon"]
+    },
+    {
+      "canonical_name": "evaporated milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 135,
+        "protein_g": 6.8,
+        "carbs_g": 10.0,
+        "fat_g": 7.6,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["evaporated milk", "unsweetened condensed milk"],
+        "ja": ["エバミルク", "無糖練乳", "むとうれんにゅう"],
+        "ko": ["에바밀크", "무가당연유", "증발유"],
+        "zh": ["淡奶", "蒸发奶", "无糖炼乳"],
+        "es": ["leche evaporada", "leche condensada sin azúcar"],
+        "fr": ["lait évaporé", "lait concentré non sucré"]
+      },
+      "common_units": ["cup", "ml", "can", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "sweetened condensed milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 321,
+        "protein_g": 7.9,
+        "carbs_g": 54.4,
+        "fat_g": 8.7,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["sweetened condensed milk", "condensed milk", "sweetened concentrated milk"],
+        "ja": ["加糖練乳", "かとうれんにゅう", "コンデンスミルク"],
+        "ko": ["가당연유", "연유", "콘덴스밀크"],
+        "zh": ["炼乳", "加糖炼乳", "甜炼乳"],
+        "es": ["leche condensada azucarada", "leche condensada"],
+        "fr": ["lait concentré sucré", "lait condensé sucré"]
+      },
+      "common_units": ["cup", "ml", "can", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "powdered milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 496,
+        "protein_g": 26.3,
+        "carbs_g": 38.4,
+        "fat_g": 26.7,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["powdered milk", "dry milk", "milk powder", "dried milk"],
+        "ja": ["粉ミルク", "こなミルク", "脱脂粉乳", "粉乳"],
+        "ko": ["분유", "우유가루", "탈지분유"],
+        "zh": ["奶粉", "牛奶粉", "乳粉"],
+        "es": ["leche en polvo", "leche deshidratada"],
+        "fr": ["lait en poudre", "lait déshydraté"]
+      },
+      "common_units": ["cup", "gram", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "oat milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 47,
+        "protein_g": 1.0,
+        "carbs_g": 7.0,
+        "fat_g": 1.5,
+        "fiber_g": 0.8
+      },
+      "aliases": {
+        "en": ["oat milk", "oat drink", "oat beverage"],
+        "ja": ["オーツミルク", "オートミルク", "燕麦乳"],
+        "ko": ["오트밀크", "귀리우유", "오트밀"],
+        "zh": ["燕麦奶", "燕麦饮料", "燕麦乳"],
+        "es": ["leche de avena", "bebida de avena"],
+        "fr": ["lait d'avoine", "boisson à l'avoine"]
+      },
+      "common_units": ["cup", "ml", "liter", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "almond milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 17,
+        "protein_g": 0.4,
+        "carbs_g": 1.5,
+        "fat_g": 1.1,
+        "fiber_g": 0.2
+      },
+      "aliases": {
+        "en": ["almond milk", "almond drink", "almond beverage"],
+        "ja": ["アーモンドミルク", "アーモンド乳"],
+        "ko": ["아몬드밀크", "아몬드우유"],
+        "zh": ["杏仁奶", "杏仁饮料", "杏仁乳"],
+        "es": ["leche de almendra", "bebida de almendra"],
+        "fr": ["lait d'amande", "boisson à l'amande"]
+      },
+      "common_units": ["cup", "ml", "liter", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "soy milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 33,
+        "protein_g": 2.6,
+        "carbs_g": 1.7,
+        "fat_g": 1.6,
+        "fiber_g": 0.2
+      },
+      "aliases": {
+        "en": ["soy milk", "soya milk", "soy drink", "soy beverage"],
+        "ja": ["豆乳", "とうにゅう", "ソイミルク"],
+        "ko": ["두유", "콩우유", "소이밀크"],
+        "zh": ["豆奶", "豆浆", "大豆饮料"],
+        "es": ["leche de soja", "leche de soya", "bebida de soja"],
+        "fr": ["lait de soja", "boisson au soja"]
+      },
+      "common_units": ["cup", "ml", "liter", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "coconut milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 230,
+        "protein_g": 2.3,
+        "carbs_g": 6.0,
+        "fat_g": 24.0,
+        "fiber_g": 2.2
+      },
+      "aliases": {
+        "en": ["coconut milk", "coconut cream beverage"],
+        "ja": ["ココナッツミルク", "椰子乳"],
+        "ko": ["코코넛밀크", "코코넛우유"],
+        "zh": ["椰奶", "椰浆", "椰子奶"],
+        "es": ["leche de coco", "bebida de coco"],
+        "fr": ["lait de coco", "boisson à la noix de coco"]
+      },
+      "common_units": ["cup", "ml", "can", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "light coconut milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 125,
+        "protein_g": 1.1,
+        "carbs_g": 3.4,
+        "fat_g": 12.5,
+        "fiber_g": 1.1
+      },
+      "aliases": {
+        "en": ["light coconut milk", "reduced fat coconut milk", "lite coconut milk"],
+        "ja": ["ライトココナッツミルク", "低脂肪ココナッツミルク"],
+        "ko": ["라이트 코코넛밀크", "저지방 코코넛밀크"],
+        "zh": ["低脂椰奶", "清淡椰奶"],
+        "es": ["leche de coco light", "leche de coco reducida en grasa"],
+        "fr": ["lait de coco allégé", "lait de coco léger"]
+      },
+      "common_units": ["cup", "ml", "can", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "cashew milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 0.4,
+        "carbs_g": 2.0,
+        "fat_g": 1.5,
+        "fiber_g": 0.1
+      },
+      "aliases": {
+        "en": ["cashew milk", "cashew drink", "cashew beverage"],
+        "ja": ["カシューミルク", "カシューナッツミルク"],
+        "ko": ["캐슈밀크", "캐슈너트밀크"],
+        "zh": ["腰果奶", "腰果饮料"],
+        "es": ["leche de anacardo", "bebida de anacardo"],
+        "fr": ["lait de noix de cajou", "boisson aux noix de cajou"]
+      },
+      "common_units": ["cup", "ml", "liter", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "rice milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 47,
+        "protein_g": 0.3,
+        "carbs_g": 9.2,
+        "fat_g": 1.0,
+        "fiber_g": 0.3
+      },
+      "aliases": {
+        "en": ["rice milk", "rice drink", "rice beverage"],
+        "ja": ["ライスミルク", "米乳"],
+        "ko": ["라이스밀크", "쌀우유"],
+        "zh": ["米奶", "大米饮料", "米乳"],
+        "es": ["leche de arroz", "bebida de arroz"],
+        "fr": ["lait de riz", "boisson au riz"]
+      },
+      "common_units": ["cup", "ml", "liter", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "hemp milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 1.0,
+        "carbs_g": 1.3,
+        "fat_g": 3.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["hemp milk", "hemp drink", "hemp beverage"],
+        "ja": ["ヘンプミルク", "麻の実ミルク"],
+        "ko": ["햄프밀크", "햄프우유"],
+        "zh": ["大麻籽奶", "火麻仁奶"],
+        "es": ["leche de cáñamo", "bebida de cáñamo"],
+        "fr": ["lait de chanvre", "boisson au chanvre"]
+      },
+      "common_units": ["cup", "ml", "liter", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "heavy cream",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 345,
+        "protein_g": 2.1,
+        "carbs_g": 2.8,
+        "fat_g": 37.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["heavy cream", "heavy whipping cream", "double cream"],
+        "ja": ["ヘビークリーム", "生クリーム", "なまクリーム"],
+        "ko": ["헤비크림", "생크림", "진한크림"],
+        "zh": ["浓奶油", "重奶油", "鲜奶油"],
+        "es": ["nata para montar", "crema para batir", "crema espesa"],
+        "fr": ["crème épaisse", "crème à fouetter", "crème entière"]
+      },
+      "common_units": ["cup", "ml", "tablespoon", "teaspoon", "pint"]
+    },
+    {
+      "canonical_name": "light cream",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 195,
+        "protein_g": 2.7,
+        "carbs_g": 3.7,
+        "fat_g": 19.3,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["light cream", "coffee cream", "table cream"],
+        "ja": ["ライトクリーム", "コーヒークリーム"],
+        "ko": ["라이트크림", "커피크림"],
+        "zh": ["淡奶油", "咖啡奶油"],
+        "es": ["crema ligera", "crema de café"],
+        "fr": ["crème légère", "crème à café"]
+      },
+      "common_units": ["cup", "ml", "tablespoon", "teaspoon", "pint"]
+    },
+    {
+      "canonical_name": "half and half",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 130,
+        "protein_g": 3.0,
+        "carbs_g": 4.3,
+        "fat_g": 11.5,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["half and half", "half-and-half", "half cream"],
+        "ja": ["ハーフアンドハーフ", "ハーフクリーム"],
+        "ko": ["하프앤하프", "하프크림"],
+        "zh": ["半对半奶油", "半脂奶油"],
+        "es": ["mitad y mitad", "media crema"],
+        "fr": ["moitié-moitié", "demi-crème"]
+      },
+      "common_units": ["cup", "ml", "tablespoon", "teaspoon", "pint"]
+    },
+    {
+      "canonical_name": "whipping cream",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 300,
+        "protein_g": 2.2,
+        "carbs_g": 3.1,
+        "fat_g": 31.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["whipping cream", "light whipping cream"],
+        "ja": ["ホイップクリーム", "ホイッピングクリーム"],
+        "ko": ["휘핑크림", "생크림"],
+        "zh": ["鲜奶油", "打发奶油"],
+        "es": ["crema para batir", "nata para montar"],
+        "fr": ["crème à fouetter", "crème fouettée"]
+      },
+      "common_units": ["cup", "ml", "tablespoon", "teaspoon", "pint"]
+    },
+    {
+      "canonical_name": "clotted cream",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 586,
+        "protein_g": 1.7,
+        "carbs_g": 2.3,
+        "fat_g": 63.5,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["clotted cream", "devonshire cream", "cornish cream"],
+        "ja": ["クロテッドクリーム", "デボンシャークリーム"],
+        "ko": ["클로티드크림", "응고크림"],
+        "zh": ["凝脂奶油", "康沃尔奶油"],
+        "es": ["crema coagulada", "crema clotted"],
+        "fr": ["crème caillée", "crème épaisse anglaise"]
+      },
+      "common_units": ["gram", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "sour cream",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 193,
+        "protein_g": 2.4,
+        "carbs_g": 4.6,
+        "fat_g": 19.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["sour cream", "soured cream"],
+        "ja": ["サワークリーム", "すっぱいクリーム"],
+        "ko": ["사워크림", "신맛크림"],
+        "zh": ["酸奶油", "酸忌廉"],
+        "es": ["crema agria", "nata agria"],
+        "fr": ["crème aigre", "crème sure"]
+      },
+      "common_units": ["cup", "gram", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "reduced fat sour cream",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 135,
+        "protein_g": 3.5,
+        "carbs_g": 7.0,
+        "fat_g": 10.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["reduced fat sour cream", "light sour cream", "low fat sour cream"],
+        "ja": ["低脂肪サワークリーム", "ライトサワークリーム"],
+        "ko": ["저지방 사워크림", "라이트 사워크림"],
+        "zh": ["低脂酸奶油", "清淡酸奶油"],
+        "es": ["crema agria baja en grasa", "crema agria light"],
+        "fr": ["crème aigre allégée", "crème sure légère"]
+      },
+      "common_units": ["cup", "gram", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "crème fraîche",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 292,
+        "protein_g": 2.2,
+        "carbs_g": 3.2,
+        "fat_g": 30.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["crème fraîche", "creme fraiche", "fresh cream"],
+        "ja": ["クレームフレッシュ", "フレッシュクリーム"],
+        "ko": ["크렘프레슈", "프레시크림"],
+        "zh": ["法式酸奶油", "鲜奶油"],
+        "es": ["crema fresca", "nata fresca"],
+        "fr": ["crème fraîche", "crème fraiche"]
+      },
+      "common_units": ["cup", "gram", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "plain yogurt",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 61,
+        "protein_g": 3.5,
+        "carbs_g": 4.7,
+        "fat_g": 3.3,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["plain yogurt", "natural yogurt", "yoghurt"],
+        "ja": ["プレーンヨーグルト", "ナチュラルヨーグルト"],
+        "ko": ["플레인요거트", "플레인요구르트"],
+        "zh": ["原味酸奶", "纯酸奶", "酸乳"],
+        "es": ["yogur natural", "yogurt natural"],
+        "fr": ["yaourt nature", "yogourt nature"]
+      },
+      "common_units": ["cup", "gram", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "greek yogurt",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 59,
+        "protein_g": 10.0,
+        "carbs_g": 3.6,
+        "fat_g": 0.4,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["greek yogurt", "strained yogurt", "greek style yogurt"],
+        "ja": ["ギリシャヨーグルト", "水切りヨーグルト"],
+        "ko": ["그릭요거트", "그릭요구르트", "그리스요거트"],
+        "zh": ["希腊酸奶", "希腊式酸奶"],
+        "es": ["yogur griego", "yogurt griego"],
+        "fr": ["yaourt grec", "yogourt grec"]
+      },
+      "common_units": ["cup", "gram", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "full fat greek yogurt",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 97,
+        "protein_g": 9.0,
+        "carbs_g": 3.9,
+        "fat_g": 5.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["full fat greek yogurt", "whole milk greek yogurt", "full cream greek yogurt"],
+        "ja": ["全脂ギリシャヨーグルト", "全乳ギリシャヨーグルト"],
+        "ko": ["전지방 그릭요거트", "풀크림 그릭요거트"],
+        "zh": ["全脂希腊酸奶", "全脂希腊式酸奶"],
+        "es": ["yogur griego entero", "yogurt griego con grasa"],
+        "fr": ["yaourt grec entier", "yogourt grec au lait entier"]
+      },
+      "common_units": ["cup", "gram", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "skyr",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 63,
+        "protein_g": 11.0,
+        "carbs_g": 4.0,
+        "fat_g": 0.2,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["skyr", "icelandic yogurt", "icelandic skyr"],
+        "ja": ["スキール", "アイスランドヨーグルト"],
+        "ko": ["스키르", "아이슬란드요거트"],
+        "zh": ["冰岛酸奶", "斯基尔"],
+        "es": ["skyr", "yogur islandés"],
+        "fr": ["skyr", "yaourt islandais"]
+      },
+      "common_units": ["cup", "gram", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "kefir",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 41,
+        "protein_g": 3.3,
+        "carbs_g": 4.5,
+        "fat_g": 1.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["kefir", "kephir", "milk kefir"],
+        "ja": ["ケフィア", "ケフィール"],
+        "ko": ["케피어", "케피르"],
+        "zh": ["开菲尔", "克菲尔", "牛奶酒"],
+        "es": ["kéfir", "kefir"],
+        "fr": ["kéfir", "képhir"]
+      },
+      "common_units": ["cup", "ml", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "low fat yogurt",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 63,
+        "protein_g": 5.3,
+        "carbs_g": 7.0,
+        "fat_g": 1.6,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["low fat yogurt", "reduced fat yogurt", "1% yogurt"],
+        "ja": ["低脂肪ヨーグルト", "ていしぼうヨーグルト"],
+        "ko": ["저지방요거트", "저지방요구르트"],
+        "zh": ["低脂酸奶", "低脂酸乳"],
+        "es": ["yogur bajo en grasa", "yogurt reducido en grasa"],
+        "fr": ["yaourt allégé", "yogourt faible en gras"]
+      },
+      "common_units": ["cup", "gram", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "nonfat yogurt",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 56,
+        "protein_g": 5.7,
+        "carbs_g": 7.7,
+        "fat_g": 0.2,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["nonfat yogurt", "fat free yogurt", "skim yogurt"],
+        "ja": ["無脂肪ヨーグルト", "むしぼうヨーグルト"],
+        "ko": ["무지방요거트", "무지방요구르트"],
+        "zh": ["脱脂酸奶", "无脂酸奶"],
+        "es": ["yogur sin grasa", "yogurt desnatado"],
+        "fr": ["yaourt sans matière grasse", "yogourt écrémé"]
+      },
+      "common_units": ["cup", "gram", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "coconut yogurt",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 100,
+        "protein_g": 0.5,
+        "carbs_g": 13.0,
+        "fat_g": 5.0,
+        "fiber_g": 1.0
+      },
+      "aliases": {
+        "en": ["coconut yogurt", "coconut milk yogurt", "dairy free yogurt"],
+        "ja": ["ココナッツヨーグルト", "ココナッツミルクヨーグルト"],
+        "ko": ["코코넛요거트", "코코넛밀크요거트"],
+        "zh": ["椰子酸奶", "椰奶酸奶"],
+        "es": ["yogur de coco", "yogurt de leche de coco"],
+        "fr": ["yaourt à la noix de coco", "yogourt au lait de coco"]
+      },
+      "common_units": ["cup", "gram", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "almond yogurt",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 45,
+        "protein_g": 0.8,
+        "carbs_g": 8.0,
+        "fat_g": 1.5,
+        "fiber_g": 0.5
+      },
+      "aliases": {
+        "en": ["almond yogurt", "almond milk yogurt"],
+        "ja": ["アーモンドヨーグルト", "アーモンドミルクヨーグルト"],
+        "ko": ["아몬드요거트", "아몬드밀크요거트"],
+        "zh": ["杏仁酸奶", "杏仁奶酸奶"],
+        "es": ["yogur de almendra", "yogurt de leche de almendra"],
+        "fr": ["yaourt aux amandes", "yogourt au lait d'amande"]
+      },
+      "common_units": ["cup", "gram", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "soy yogurt",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 50,
+        "protein_g": 3.0,
+        "carbs_g": 6.0,
+        "fat_g": 1.5,
+        "fiber_g": 0.5
+      },
+      "aliases": {
+        "en": ["soy yogurt", "soya yogurt", "soy milk yogurt"],
+        "ja": ["豆乳ヨーグルト", "ソイヨーグルト"],
+        "ko": ["두유요거트", "소이요거트"],
+        "zh": ["豆奶酸奶", "大豆酸奶"],
+        "es": ["yogur de soja", "yogurt de soya"],
+        "fr": ["yaourt au soja", "yogourt de soya"]
+      },
+      "common_units": ["cup", "gram", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "salted butter",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 717,
+        "protein_g": 0.9,
+        "carbs_g": 0.1,
+        "fat_g": 81.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["salted butter", "butter with salt"],
+        "ja": ["有塩バター", "ゆうえんバター", "塩バター"],
+        "ko": ["유염버터", "가염버터", "소금버터"],
+        "zh": ["含盐黄油", "盐黄油", "咸黄油"],
+        "es": ["mantequilla con sal", "mantequilla salada"],
+        "fr": ["beurre salé", "beurre demi-sel"]
+      },
+      "common_units": ["cup", "gram", "tablespoon", "teaspoon", "stick"]
+    },
+    {
+      "canonical_name": "unsalted butter",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 717,
+        "protein_g": 0.9,
+        "carbs_g": 0.1,
+        "fat_g": 81.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["unsalted butter", "sweet butter", "butter without salt"],
+        "ja": ["無塩バター", "むえんバター", "スイートバター"],
+        "ko": ["무염버터", "무염버타", "무가염버터"],
+        "zh": ["无盐黄油", "淡黄油"],
+        "es": ["mantequilla sin sal", "mantequilla dulce"],
+        "fr": ["beurre doux", "beurre sans sel"]
+      },
+      "common_units": ["cup", "gram", "tablespoon", "teaspoon", "stick"]
+    },
+    {
+      "canonical_name": "cultured butter",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 717,
+        "protein_g": 0.9,
+        "carbs_g": 0.6,
+        "fat_g": 81.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["cultured butter", "european butter", "fermented butter"],
+        "ja": ["カルチャードバター", "発酵バター", "ヨーロッパバター"],
+        "ko": ["배양버터", "발효버터", "유럽식버터"],
+        "zh": ["发酵黄油", "培养黄油", "欧式黄油"],
+        "es": ["mantequilla cultivada", "mantequilla europea"],
+        "fr": ["beurre de culture", "beurre fermenté"]
+      },
+      "common_units": ["cup", "gram", "tablespoon", "teaspoon", "stick"]
+    },
+    {
+      "canonical_name": "ghee",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 876,
+        "protein_g": 0.3,
+        "carbs_g": 0,
+        "fat_g": 99.5,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["ghee", "clarified butter", "drawn butter"],
+        "ja": ["ギー", "澄ましバター", "精製バター"],
+        "ko": ["기", "기버터", "정제버터"],
+        "zh": ["酥油", "印度酥油", "澄清黄油"],
+        "es": ["ghee", "mantequilla clarificada"],
+        "fr": ["ghee", "beurre clarifié"]
+      },
+      "common_units": ["cup", "gram", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "european style butter",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 720,
+        "protein_g": 0.8,
+        "carbs_g": 0.7,
+        "fat_g": 82.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["european style butter", "european butter", "high fat butter"],
+        "ja": ["ヨーロッパスタイルバター", "高脂肪バター"],
+        "ko": ["유럽식버터", "고지방버터"],
+        "zh": ["欧式黄油", "高脂黄油"],
+        "es": ["mantequilla estilo europeo", "mantequilla europea"],
+        "fr": ["beurre de style européen", "beurre européen"]
+      },
+      "common_units": ["cup", "gram", "tablespoon", "teaspoon", "stick"]
+    },
+    {
+      "canonical_name": "cheddar cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 403,
+        "protein_g": 24.9,
+        "carbs_g": 1.3,
+        "fat_g": 33.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["cheddar cheese", "cheddar"],
+        "ja": ["チェダーチーズ", "チェダー"],
+        "ko": ["체다치즈", "체다"],
+        "zh": ["切达奶酪", "切达芝士", "车打芝士"],
+        "es": ["queso cheddar", "cheddar"],
+        "fr": ["fromage cheddar", "cheddar"]
+      },
+      "common_units": ["cup", "gram", "ounce", "slice"]
+    },
+    {
+      "canonical_name": "sharp cheddar cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 403,
+        "protein_g": 25.0,
+        "carbs_g": 1.3,
+        "fat_g": 33.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["sharp cheddar cheese", "sharp cheddar", "aged cheddar"],
+        "ja": ["シャープチェダーチーズ", "熟成チェダー"],
+        "ko": ["샤프 체다치즈", "숙성체다"],
+        "zh": ["陈年切达奶酪", "尖锐切达芝士"],
+        "es": ["queso cheddar fuerte", "cheddar maduro"],
+        "fr": ["cheddar fort", "cheddar vieilli"]
+      },
+      "common_units": ["cup", "gram", "ounce", "slice"]
+    },
+    {
+      "canonical_name": "mozzarella cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 280,
+        "protein_g": 22.2,
+        "carbs_g": 2.2,
+        "fat_g": 21.6,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["mozzarella cheese", "mozzarella"],
+        "ja": ["モッツァレラチーズ", "モッツァレラ"],
+        "ko": ["모짜렐라치즈", "모차렐라"],
+        "zh": ["马苏里拉奶酪", "莫萨里拉芝士", "水牛芝士"],
+        "es": ["queso mozzarella", "mozzarella"],
+        "fr": ["fromage mozzarella", "mozzarella"]
+      },
+      "common_units": ["cup", "gram", "ounce", "ball"]
+    },
+    {
+      "canonical_name": "fresh mozzarella",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 280,
+        "protein_g": 18.6,
+        "carbs_g": 3.1,
+        "fat_g": 22.4,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["fresh mozzarella", "mozzarella di bufala", "buffalo mozzarella"],
+        "ja": ["フレッシュモッツァレラ", "水牛モッツァレラ"],
+        "ko": ["신선한모짜렐라", "물소모짜렐라"],
+        "zh": ["新鲜马苏里拉", "水牛奶酪"],
+        "es": ["mozzarella fresca", "mozzarella de búfala"],
+        "fr": ["mozzarella fraîche", "mozzarella di bufala"]
+      },
+      "common_units": ["gram", "ounce", "ball"]
+    },
+    {
+      "canonical_name": "parmesan cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 431,
+        "protein_g": 38.5,
+        "carbs_g": 4.1,
+        "fat_g": 28.6,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["parmesan cheese", "parmigiano reggiano", "parmesan"],
+        "ja": ["パルメザンチーズ", "パルミジャーノレッジャーノ"],
+        "ko": ["파르메산치즈", "파마산치즈"],
+        "zh": ["帕尔马干酪", "帕玛森芝士", "意大利硬芝士"],
+        "es": ["queso parmesano", "parmesano", "parmigiano reggiano"],
+        "fr": ["fromage parmesan", "parmigiano reggiano"]
+      },
+      "common_units": ["cup", "gram", "ounce", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "feta cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 264,
+        "protein_g": 14.2,
+        "carbs_g": 4.1,
+        "fat_g": 21.3,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["feta cheese", "feta"],
+        "ja": ["フェタチーズ", "フェタ"],
+        "ko": ["페타치즈", "페타"],
+        "zh": ["菲达奶酪", "菲达芝士", "羊奶酪"],
+        "es": ["queso feta", "feta"],
+        "fr": ["fromage feta", "féta"]
+      },
+      "common_units": ["cup", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "gouda cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 24.9,
+        "carbs_g": 2.2,
+        "fat_g": 27.4,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["gouda cheese", "gouda"],
+        "ja": ["ゴーダチーズ", "ゴーダ"],
+        "ko": ["고다치즈", "가우다치즈"],
+        "zh": ["高达奶酪", "高达芝士"],
+        "es": ["queso gouda", "gouda"],
+        "fr": ["fromage gouda", "gouda"]
+      },
+      "common_units": ["cup", "gram", "ounce", "slice"]
+    },
+    {
+      "canonical_name": "brie cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 334,
+        "protein_g": 20.8,
+        "carbs_g": 0.5,
+        "fat_g": 27.7,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["brie cheese", "brie"],
+        "ja": ["ブリーチーズ", "ブリー"],
+        "ko": ["브리치즈", "브리"],
+        "zh": ["布里奶酪", "布里芝士", "法国软芝士"],
+        "es": ["queso brie", "brie"],
+        "fr": ["fromage brie", "brie"]
+      },
+      "common_units": ["gram", "ounce", "wedge"]
+    },
+    {
+      "canonical_name": "camembert cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 300,
+        "protein_g": 19.8,
+        "carbs_g": 0.5,
+        "fat_g": 24.3,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["camembert cheese", "camembert"],
+        "ja": ["カマンベールチーズ", "カマンベール"],
+        "ko": ["까망베르치즈", "카망베르"],
+        "zh": ["卡门培尔奶酪", "金门贝芝士"],
+        "es": ["queso camembert", "camembert"],
+        "fr": ["fromage camembert", "camembert"]
+      },
+      "common_units": ["gram", "ounce", "wedge"]
+    },
+    {
+      "canonical_name": "blue cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 353,
+        "protein_g": 21.4,
+        "carbs_g": 2.3,
+        "fat_g": 28.7,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["blue cheese", "bleu cheese", "blue"],
+        "ja": ["ブルーチーズ", "青カビチーズ"],
+        "ko": ["블루치즈", "푸른곰팡이치즈"],
+        "zh": ["蓝纹奶酪", "蓝芝士", "蓝霉芝士"],
+        "es": ["queso azul", "blue cheese"],
+        "fr": ["fromage bleu", "bleu"]
+      },
+      "common_units": ["cup", "gram", "ounce", "tablespoon"]
+    },
+    {
+      "canonical_name": "gorgonzola cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 353,
+        "protein_g": 21.4,
+        "carbs_g": 2.3,
+        "fat_g": 28.7,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["gorgonzola cheese", "gorgonzola"],
+        "ja": ["ゴルゴンゾーラチーズ", "ゴルゴンゾーラ"],
+        "ko": ["고르곤졸라치즈", "고르곤졸라"],
+        "zh": ["戈根左拉奶酪", "蓝纹芝士"],
+        "es": ["queso gorgonzola", "gorgonzola"],
+        "fr": ["fromage gorgonzola", "gorgonzola"]
+      },
+      "common_units": ["cup", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "cream cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 342,
+        "protein_g": 5.9,
+        "carbs_g": 5.5,
+        "fat_g": 34.2,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["cream cheese", "soft cheese"],
+        "ja": ["クリームチーズ", "ソフトチーズ"],
+        "ko": ["크림치즈", "크림치즈"],
+        "zh": ["奶油奶酪", "奶油芝士", "忌廉芝士"],
+        "es": ["queso crema", "queso de untar"],
+        "fr": ["fromage à la crème", "cream cheese"]
+      },
+      "common_units": ["cup", "gram", "ounce", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "reduced fat cream cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 215,
+        "protein_g": 9.0,
+        "carbs_g": 7.5,
+        "fat_g": 16.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["reduced fat cream cheese", "light cream cheese", "low fat cream cheese"],
+        "ja": ["低脂肪クリームチーズ", "ライトクリームチーズ"],
+        "ko": ["저지방크림치즈", "라이트크림치즈"],
+        "zh": ["低脂奶油奶酪", "低脂忌廉芝士"],
+        "es": ["queso crema bajo en grasa", "queso crema light"],
+        "fr": ["fromage à la crème allégé", "cream cheese léger"]
+      },
+      "common_units": ["cup", "gram", "ounce", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "mascarpone cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 429,
+        "protein_g": 4.8,
+        "carbs_g": 4.8,
+        "fat_g": 44.4,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["mascarpone cheese", "mascarpone", "italian cream cheese"],
+        "ja": ["マスカルポーネチーズ", "マスカルポーネ"],
+        "ko": ["마스카르포네치즈", "마스카포네"],
+        "zh": ["马斯卡彭奶酪", "马斯卡彭芝士"],
+        "es": ["queso mascarpone", "mascarpone"],
+        "fr": ["fromage mascarpone", "mascarpone"]
+      },
+      "common_units": ["cup", "gram", "ounce", "tablespoon"]
+    },
+    {
+      "canonical_name": "ricotta cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 174,
+        "protein_g": 11.3,
+        "carbs_g": 3.0,
+        "fat_g": 13.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["ricotta cheese", "ricotta"],
+        "ja": ["リコッタチーズ", "リコッタ"],
+        "ko": ["리코타치즈", "리코타"],
+        "zh": ["里科塔奶酪", "意式软芝士", "乳清干酪"],
+        "es": ["queso ricotta", "ricotta"],
+        "fr": ["fromage ricotta", "ricotta"]
+      },
+      "common_units": ["cup", "gram", "ounce", "tablespoon"]
+    },
+    {
+      "canonical_name": "part skim ricotta cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 138,
+        "protein_g": 11.4,
+        "carbs_g": 5.1,
+        "fat_g": 8.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["part skim ricotta cheese", "low fat ricotta", "light ricotta"],
+        "ja": ["低脂肪リコッタチーズ", "ライトリコッタ"],
+        "ko": ["저지방리코타치즈", "라이트리코타"],
+        "zh": ["低脂里科塔奶酪", "脱脂里科塔"],
+        "es": ["queso ricotta bajo en grasa", "ricotta light"],
+        "fr": ["ricotta allégée", "ricotta faible en gras"]
+      },
+      "common_units": ["cup", "gram", "ounce", "tablespoon"]
+    },
+    {
+      "canonical_name": "cottage cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 98,
+        "protein_g": 11.1,
+        "carbs_g": 3.4,
+        "fat_g": 4.3,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["cottage cheese", "curd cheese"],
+        "ja": ["カッテージチーズ", "カード"],
+        "ko": ["코티지치즈", "커티지치즈"],
+        "zh": ["茅屋奶酪", "白软干酪", "农家奶酪"],
+        "es": ["queso cottage", "requesón"],
+        "fr": ["fromage cottage", "fromage blanc"]
+      },
+      "common_units": ["cup", "gram", "ounce", "tablespoon"]
+    },
+    {
+      "canonical_name": "low fat cottage cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 72,
+        "protein_g": 12.4,
+        "carbs_g": 2.7,
+        "fat_g": 1.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["low fat cottage cheese", "1% cottage cheese", "reduced fat cottage cheese"],
+        "ja": ["低脂肪カッテージチーズ", "ローファットカッテージ"],
+        "ko": ["저지방코티지치즈", "1%코티지치즈"],
+        "zh": ["低脂茅屋奶酪", "低脂白干酪"],
+        "es": ["queso cottage bajo en grasa", "cottage light"],
+        "fr": ["fromage cottage allégé", "cottage faible en gras"]
+      },
+      "common_units": ["cup", "gram", "ounce", "tablespoon"]
+    },
+    {
+      "canonical_name": "paneer",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 265,
+        "protein_g": 18.3,
+        "carbs_g": 1.2,
+        "fat_g": 20.8,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["paneer", "indian cottage cheese", "panir"],
+        "ja": ["パニール", "パニア", "インドカッテージチーズ"],
+        "ko": ["파니르", "파니어", "인도치즈"],
+        "zh": ["印度奶酪", "印度芝士", "帕尼尔"],
+        "es": ["paneer", "queso panir", "queso indio"],
+        "fr": ["paneer", "panir", "fromage indien"]
+      },
+      "common_units": ["cup", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "queso fresco",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 321,
+        "protein_g": 18.1,
+        "carbs_g": 4.1,
+        "fat_g": 25.4,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["queso fresco", "fresh cheese", "mexican fresh cheese"],
+        "ja": ["ケソフレスコ", "フレッシュチーズ", "メキシコフレッシュチーズ"],
+        "ko": ["케소프레스코", "멕시칸신선치즈"],
+        "zh": ["墨西哥鲜奶酪", "新鲜奶酪"],
+        "es": ["queso fresco", "queso blanco fresco"],
+        "fr": ["queso fresco", "fromage frais mexicain"]
+      },
+      "common_units": ["cup", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "halloumi cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 321,
+        "protein_g": 21.2,
+        "carbs_g": 1.8,
+        "fat_g": 25.4,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["halloumi cheese", "halloumi", "haloumi"],
+        "ja": ["ハルーミチーズ", "ハルーミ"],
+        "ko": ["할루미치즈", "할루미"],
+        "zh": ["哈罗米奶酪", "塞浦路斯芝士"],
+        "es": ["queso halloumi", "halloumi"],
+        "fr": ["fromage halloumi", "halloumi"]
+      },
+      "common_units": ["gram", "ounce", "slice"]
+    },
+    {
+      "canonical_name": "gruyère cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 413,
+        "protein_g": 29.8,
+        "carbs_g": 0.4,
+        "fat_g": 32.3,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["gruyère cheese", "gruyere cheese", "gruyère"],
+        "ja": ["グリュイエールチーズ", "グリュイエール"],
+        "ko": ["그뤼에르치즈", "그뤼예르"],
+        "zh": ["格鲁耶尔奶酪", "格鲁耶尔芝士"],
+        "es": ["queso gruyère", "gruyère"],
+        "fr": ["fromage gruyère", "gruyère"]
+      },
+      "common_units": ["cup", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "emmental cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 380,
+        "protein_g": 28.8,
+        "carbs_g": 3.4,
+        "fat_g": 27.5,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["emmental cheese", "emmentaler", "swiss cheese"],
+        "ja": ["エメンタールチーズ", "スイスチーズ"],
+        "ko": ["에멘탈치즈", "스위스치즈"],
+        "zh": ["埃门塔尔奶酪", "瑞士芝士", "艾门塔尔"],
+        "es": ["queso emmental", "queso suizo", "emmentaler"],
+        "fr": ["fromage emmental", "emmentaler"]
+      },
+      "common_units": ["cup", "gram", "ounce", "slice"]
+    },
+    {
+      "canonical_name": "manchego cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 392,
+        "protein_g": 25.4,
+        "carbs_g": 0.5,
+        "fat_g": 32.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["manchego cheese", "manchego"],
+        "ja": ["マンチェゴチーズ", "マンチェゴ"],
+        "ko": ["만체고치즈", "만체고"],
+        "zh": ["曼彻格奶酪", "曼切戈芝士"],
+        "es": ["queso manchego", "manchego"],
+        "fr": ["fromage manchego", "manchego"]
+      },
+      "common_units": ["gram", "ounce"]
+    },
+    {
+      "canonical_name": "pecorino romano cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 31.8,
+        "carbs_g": 3.6,
+        "fat_g": 26.9,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["pecorino romano cheese", "pecorino romano", "pecorino"],
+        "ja": ["ペコリーノロマーノチーズ", "ペコリーノ"],
+        "ko": ["페코리노로마노치즈", "페코리노"],
+        "zh": ["佩科里诺罗马诺奶酪", "羊奶硬芝士"],
+        "es": ["queso pecorino romano", "pecorino"],
+        "fr": ["fromage pecorino romano", "pecorino"]
+      },
+      "common_units": ["cup", "gram", "ounce", "tablespoon"]
+    },
+    {
+      "canonical_name": "monterey jack cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 373,
+        "protein_g": 24.5,
+        "carbs_g": 0.7,
+        "fat_g": 30.3,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["monterey jack cheese", "monterey jack", "jack cheese"],
+        "ja": ["モントレージャックチーズ", "ジャックチーズ"],
+        "ko": ["몬터레이잭치즈", "잭치즈"],
+        "zh": ["蒙特雷杰克奶酪", "杰克芝士"],
+        "es": ["queso monterey jack", "queso jack"],
+        "fr": ["fromage monterey jack", "monterey jack"]
+      },
+      "common_units": ["cup", "gram", "ounce", "slice"]
+    },
+    {
+      "canonical_name": "provolone cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 351,
+        "protein_g": 25.6,
+        "carbs_g": 2.1,
+        "fat_g": 26.6,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["provolone cheese", "provolone"],
+        "ja": ["プロヴォローネチーズ", "プロボローネ"],
+        "ko": ["프로볼로네치즈", "프로볼로네"],
+        "zh": ["波萝伏洛奶酪", "意大利硬芝士"],
+        "es": ["queso provolone", "provolone"],
+        "fr": ["fromage provolone", "provolone"]
+      },
+      "common_units": ["cup", "gram", "ounce", "slice"]
+    },
+    {
+      "canonical_name": "swiss cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 380,
+        "protein_g": 26.9,
+        "carbs_g": 5.4,
+        "fat_g": 27.8,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["swiss cheese", "swiss"],
+        "ja": ["スイスチーズ", "スイス"],
+        "ko": ["스위스치즈", "스위스"],
+        "zh": ["瑞士奶酪", "瑞士芝士"],
+        "es": ["queso suizo", "suizo"],
+        "fr": ["fromage suisse", "suisse"]
+      },
+      "common_units": ["cup", "gram", "ounce", "slice"]
+    },
+    {
+      "canonical_name": "colby cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 394,
+        "protein_g": 23.8,
+        "carbs_g": 2.6,
+        "fat_g": 32.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["colby cheese", "colby"],
+        "ja": ["コルビーチーズ", "コルビー"],
+        "ko": ["콜비치즈", "콜비"],
+        "zh": ["科尔比奶酪", "科尔比芝士"],
+        "es": ["queso colby", "colby"],
+        "fr": ["fromage colby", "colby"]
+      },
+      "common_units": ["cup", "gram", "ounce", "slice"]
+    },
+    {
+      "canonical_name": "muenster cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 368,
+        "protein_g": 23.4,
+        "carbs_g": 1.1,
+        "fat_g": 30.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["muenster cheese", "munster cheese", "muenster"],
+        "ja": ["ミュンスターチーズ", "ミュンスター"],
+        "ko": ["뮌스터치즈", "먼스터치즈"],
+        "zh": ["明斯特奶酪", "芒斯特芝士"],
+        "es": ["queso muenster", "muenster"],
+        "fr": ["fromage munster", "munster"]
+      },
+      "common_units": ["cup", "gram", "ounce", "slice"]
+    },
+    {
+      "canonical_name": "fontina cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 389,
+        "protein_g": 25.6,
+        "carbs_g": 1.6,
+        "fat_g": 31.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["fontina cheese", "fontina"],
+        "ja": ["フォンティーナチーズ", "フォンティーナ"],
+        "ko": ["폰티나치즈", "폰티나"],
+        "zh": ["丰蒂娜奶酪", "丰蒂娜芝士"],
+        "es": ["queso fontina", "fontina"],
+        "fr": ["fromage fontina", "fontina"]
+      },
+      "common_units": ["cup", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "asiago cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 392,
+        "protein_g": 28.0,
+        "carbs_g": 4.1,
+        "fat_g": 29.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["asiago cheese", "asiago"],
+        "ja": ["アジアーゴチーズ", "アジアーゴ"],
+        "ko": ["아시아고치즈", "아시아고"],
+        "zh": ["阿西亚戈奶酪", "意大利硬芝士"],
+        "es": ["queso asiago", "asiago"],
+        "fr": ["fromage asiago", "asiago"]
+      },
+      "common_units": ["cup", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "havarti cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 23.5,
+        "carbs_g": 0,
+        "fat_g": 30.6,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["havarti cheese", "havarti"],
+        "ja": ["ハバティチーズ", "ハバティ"],
+        "ko": ["하바티치즈", "하바티"],
+        "zh": ["哈瓦蒂奶酪", "哈瓦蒂芝士"],
+        "es": ["queso havarti", "havarti"],
+        "fr": ["fromage havarti", "havarti"]
+      },
+      "common_units": ["cup", "gram", "ounce", "slice"]
+    },
+    {
+      "canonical_name": "boursin cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 410,
+        "protein_g": 8.0,
+        "carbs_g": 3.0,
+        "fat_g": 41.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["boursin cheese", "boursin", "garlic herb cheese"],
+        "ja": ["ブルサンチーズ", "ブルサン", "ガーリックハーブチーズ"],
+        "ko": ["부르생치즈", "부르생"],
+        "zh": ["布尔森奶酪", "香草芝士"],
+        "es": ["queso boursin", "boursin"],
+        "fr": ["fromage boursin", "boursin"]
+      },
+      "common_units": ["gram", "ounce", "tablespoon"]
+    },
+    {
+      "canonical_name": "queso blanco",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 310,
+        "protein_g": 17.0,
+        "carbs_g": 4.0,
+        "fat_g": 25.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["queso blanco", "white cheese"],
+        "ja": ["ケソブランコ", "ホワイトチーズ"],
+        "ko": ["케소블랑코", "화이트치즈"],
+        "zh": ["白奶酪", "墨西哥白芝士"],
+        "es": ["queso blanco", "queso fresco blanco"],
+        "fr": ["queso blanco", "fromage blanc"]
+      },
+      "common_units": ["cup", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "mexican blend cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 393,
+        "protein_g": 24.6,
+        "carbs_g": 1.7,
+        "fat_g": 32.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["mexican blend cheese", "taco cheese", "fiesta blend"],
+        "ja": ["メキシカンブレンドチーズ", "タコチーズ"],
+        "ko": ["멕시칸블렌드치즈", "타코치즈"],
+        "zh": ["墨西哥混合奶酪", "墨西哥芝士混合"],
+        "es": ["mezcla de quesos mexicanos", "queso para tacos"],
+        "fr": ["mélange de fromages mexicains", "fromage tex-mex"]
+      },
+      "common_units": ["cup", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "italian blend cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 25.9,
+        "carbs_g": 2.4,
+        "fat_g": 30.5,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["italian blend cheese", "pizza cheese", "italian mix"],
+        "ja": ["イタリアンブレンドチーズ", "ピザチーズ"],
+        "ko": ["이탈리안블렌드치즈", "피자치즈"],
+        "zh": ["意大利混合奶酪", "披萨芝士"],
+        "es": ["mezcla de quesos italianos", "queso para pizza"],
+        "fr": ["mélange de fromages italiens", "fromage à pizza"]
+      },
+      "common_units": ["cup", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "pepper jack cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 24.0,
+        "carbs_g": 1.0,
+        "fat_g": 30.5,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["pepper jack cheese", "pepperjack", "jalapeño jack"],
+        "ja": ["ペッパージャックチーズ", "ハラペーニョジャック"],
+        "ko": ["페퍼잭치즈", "할라피뇨잭"],
+        "zh": ["辣椒杰克奶酪", "辣味芝士"],
+        "es": ["queso pepper jack", "queso jack picante"],
+        "fr": ["fromage pepper jack", "jack au piment"]
+      },
+      "common_units": ["cup", "gram", "ounce", "slice"]
+    },
+    {
+      "canonical_name": "american cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 22.2,
+        "carbs_g": 1.6,
+        "fat_g": 31.3,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["american cheese", "american singles", "processed cheese"],
+        "ja": ["アメリカンチーズ", "プロセスチーズ"],
+        "ko": ["아메리칸치즈", "프로세스치즈"],
+        "zh": ["美式奶酪", "美国芝士", "加工芝士"],
+        "es": ["queso americano", "queso procesado"],
+        "fr": ["fromage américain", "fromage fondu"]
+      },
+      "common_units": ["slice", "ounce", "gram"]
+    },
+    {
+      "canonical_name": "velveeta cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 290,
+        "protein_g": 16.1,
+        "carbs_g": 9.7,
+        "fat_g": 19.4,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["velveeta cheese", "velveeta", "cheese product"],
+        "ja": ["ベルビータチーズ", "ベルビータ"],
+        "ko": ["벨비타치즈", "벨비타"],
+        "zh": ["维尔维塔奶酪", "奶酪产品"],
+        "es": ["queso velveeta", "velveeta"],
+        "fr": ["fromage velveeta", "velveeta"]
+      },
+      "common_units": ["cup", "gram", "ounce", "tablespoon"]
+    },
+    {
+      "canonical_name": "neufchâtel cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 253,
+        "protein_g": 9.1,
+        "carbs_g": 3.2,
+        "fat_g": 23.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["neufchâtel cheese", "neufchatel", "light cream cheese"],
+        "ja": ["ヌフシャテルチーズ", "ヌーシャテル"],
+        "ko": ["뇌샤텔치즈", "뇌샤텔"],
+        "zh": ["纽夏特尔奶酪", "法式软芝士"],
+        "es": ["queso neufchâtel", "neufchatel"],
+        "fr": ["fromage neufchâtel", "neufchâtel"]
+      },
+      "common_units": ["gram", "ounce", "tablespoon"]
+    },
+    {
+      "canonical_name": "limburger cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 327,
+        "protein_g": 20.1,
+        "carbs_g": 0.5,
+        "fat_g": 27.3,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["limburger cheese", "limburger"],
+        "ja": ["リンバーガーチーズ", "リンバーガー"],
+        "ko": ["림버거치즈", "림버거"],
+        "zh": ["林堡奶酪", "林堡芝士"],
+        "es": ["queso limburger", "limburger"],
+        "fr": ["fromage limburger", "limburger"]
+      },
+      "common_units": ["gram", "ounce"]
+    },
+    {
+      "canonical_name": "stilton cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 353,
+        "protein_g": 21.5,
+        "carbs_g": 0.1,
+        "fat_g": 28.7,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["stilton cheese", "stilton", "blue stilton"],
+        "ja": ["スティルトンチーズ", "スティルトン"],
+        "ko": ["스틸턴치즈", "스틸턴"],
+        "zh": ["斯蒂尔顿奶酪", "英国蓝芝士"],
+        "es": ["queso stilton", "stilton"],
+        "fr": ["fromage stilton", "stilton"]
+      },
+      "common_units": ["gram", "ounce"]
+    },
+    {
+      "canonical_name": "roquefort cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 369,
+        "protein_g": 21.5,
+        "carbs_g": 2.0,
+        "fat_g": 30.6,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["roquefort cheese", "roquefort"],
+        "ja": ["ロックフォールチーズ", "ロックフォール"],
+        "ko": ["로크포르치즈", "로크포르"],
+        "zh": ["洛克福奶酪", "法国蓝芝士"],
+        "es": ["queso roquefort", "roquefort"],
+        "fr": ["fromage roquefort", "roquefort"]
+      },
+      "common_units": ["gram", "ounce"]
+    },
+    {
+      "canonical_name": "chevre cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 21.6,
+        "carbs_g": 2.5,
+        "fat_g": 29.8,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["chevre cheese", "chèvre", "goat cheese", "soft goat cheese"],
+        "ja": ["シェーブルチーズ", "山羊チーズ", "ゴートチーズ"],
+        "ko": ["셰브르치즈", "염소치즈", "고트치즈"],
+        "zh": ["山羊奶酪", "羊奶芝士", "法式软羊芝士"],
+        "es": ["queso de cabra", "chevre"],
+        "fr": ["fromage de chèvre", "chèvre"]
+      },
+      "common_units": ["gram", "ounce", "log"]
+    },
+    {
+      "canonical_name": "aged goat cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 452,
+        "protein_g": 30.5,
+        "carbs_g": 2.2,
+        "fat_g": 35.6,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["aged goat cheese", "hard goat cheese", "aged chèvre"],
+        "ja": ["熟成山羊チーズ", "ハードゴートチーズ"],
+        "ko": ["숙성염소치즈", "하드고트치즈"],
+        "zh": ["陈年山羊奶酪", "硬质羊芝士"],
+        "es": ["queso de cabra curado", "chevre maduro"],
+        "fr": ["fromage de chèvre affiné", "chèvre sec"]
+      },
+      "common_units": ["gram", "ounce"]
+    },
+    {
+      "canonical_name": "sheep cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 24.0,
+        "carbs_g": 0.6,
+        "fat_g": 31.8,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["sheep cheese", "sheep milk cheese", "ewe's milk cheese"],
+        "ja": ["羊チーズ", "シープミルクチーズ"],
+        "ko": ["양치즈", "양유치즈"],
+        "zh": ["绵羊奶酪", "羊乳芝士"],
+        "es": ["queso de oveja", "queso de leche de oveja"],
+        "fr": ["fromage de brebis", "fromage au lait de brebis"]
+      },
+      "common_units": ["gram", "ounce"]
+    },
+    {
+      "canonical_name": "burrata cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 300,
+        "protein_g": 17.0,
+        "carbs_g": 3.0,
+        "fat_g": 25.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["burrata cheese", "burrata"],
+        "ja": ["ブッラータチーズ", "ブラータ"],
+        "ko": ["부라타치즈", "부라타"],
+        "zh": ["布拉塔奶酪", "意式软芝士"],
+        "es": ["queso burrata", "burrata"],
+        "fr": ["fromage burrata", "burrata"]
+      },
+      "common_units": ["gram", "ounce", "ball"]
+    },
+    {
+      "canonical_name": "string cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 280,
+        "protein_g": 22.0,
+        "carbs_g": 2.2,
+        "fat_g": 21.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["string cheese", "mozzarella string cheese", "cheese sticks"],
+        "ja": ["ストリングチーズ", "さけるチーズ"],
+        "ko": ["스트링치즈", "치즈스틱"],
+        "zh": ["条状奶酪", "拉丝芝士条"],
+        "es": ["queso en tiras", "queso de hebra"],
+        "fr": ["fromage en bâtonnet", "fromage ficelle"]
+      },
+      "common_units": ["piece", "stick", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "laughing cow cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 267,
+        "protein_g": 12.0,
+        "carbs_g": 8.0,
+        "fat_g": 21.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["laughing cow cheese", "spreadable cheese wedges", "la vache qui rit"],
+        "ja": ["ラフィングカウチーズ", "スプレッドチーズ"],
+        "ko": ["라핑카우치즈", "스프레드치즈"],
+        "zh": ["笑牛奶酪", "涂抹芝士"],
+        "es": ["queso la vache qui rit", "quesito"],
+        "fr": ["fromage la vache qui rit", "portion de fromage"]
+      },
+      "common_units": ["wedge", "piece", "gram"]
+    },
+    {
+      "canonical_name": "babybel cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 321,
+        "protein_g": 22.6,
+        "carbs_g": 0,
+        "fat_g": 25.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["babybel cheese", "mini babybel", "round cheese"],
+        "ja": ["ベビーベルチーズ", "ミニベビーベル"],
+        "ko": ["베이비벨치즈", "미니베이비벨"],
+        "zh": ["贝勒奶酪", "迷你圆形芝士"],
+        "es": ["queso babybel", "mini babybel"],
+        "fr": ["fromage babybel", "mini babybel"]
+      },
+      "common_units": ["piece", "round", "gram"]
+    },
+    {
+      "canonical_name": "vanilla ice cream",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 207,
+        "protein_g": 3.5,
+        "carbs_g": 23.6,
+        "fat_g": 11.0,
+        "fiber_g": 0.7
+      },
+      "aliases": {
+        "en": ["vanilla ice cream", "ice cream"],
+        "ja": ["バニラアイスクリーム", "アイスクリーム"],
+        "ko": ["바닐라아이스크림", "아이스크림"],
+        "zh": ["香草冰淇淋", "冰激凌"],
+        "es": ["helado de vainilla", "helado"],
+        "fr": ["crème glacée à la vanille", "glace"]
+      },
+      "common_units": ["cup", "scoop", "pint", "quart", "gallon", "gram"]
+    },
+    {
+      "canonical_name": "chocolate ice cream",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 216,
+        "protein_g": 3.8,
+        "carbs_g": 28.2,
+        "fat_g": 11.0,
+        "fiber_g": 1.2
+      },
+      "aliases": {
+        "en": ["chocolate ice cream"],
+        "ja": ["チョコレートアイスクリーム", "チョコアイス"],
+        "ko": ["초콜릿아이스크림", "초코아이스크림"],
+        "zh": ["巧克力冰淇淋", "巧克力冰激凌"],
+        "es": ["helado de chocolate"],
+        "fr": ["crème glacée au chocolat", "glace au chocolat"]
+      },
+      "common_units": ["cup", "scoop", "pint", "quart", "gallon", "gram"]
+    },
+    {
+      "canonical_name": "strawberry ice cream",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 192,
+        "protein_g": 3.2,
+        "carbs_g": 27.6,
+        "fat_g": 8.4,
+        "fiber_g": 0.9
+      },
+      "aliases": {
+        "en": ["strawberry ice cream"],
+        "ja": ["ストロベリーアイスクリーム", "イチゴアイス"],
+        "ko": ["딸기아이스크림", "스트로베리아이스크림"],
+        "zh": ["草莓冰淇淋", "草莓冰激凌"],
+        "es": ["helado de fresa"],
+        "fr": ["crème glacée à la fraise", "glace à la fraise"]
+      },
+      "common_units": ["cup", "scoop", "pint", "quart", "gallon", "gram"]
+    },
+    {
+      "canonical_name": "gelato",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 160,
+        "protein_g": 4.0,
+        "carbs_g": 25.0,
+        "fat_g": 5.0,
+        "fiber_g": 0.5
+      },
+      "aliases": {
+        "en": ["gelato", "italian ice cream"],
+        "ja": ["ジェラート", "イタリアンアイス"],
+        "ko": ["젤라또", "젤라토", "이탈리안아이스크림"],
+        "zh": ["意式冰淇淋", "意大利冰激凌"],
+        "es": ["gelato", "helado italiano"],
+        "fr": ["gelato", "glace italienne"]
+      },
+      "common_units": ["cup", "scoop", "gram"]
+    },
+    {
+      "canonical_name": "frozen yogurt",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 127,
+        "protein_g": 3.4,
+        "carbs_g": 21.9,
+        "fat_g": 3.0,
+        "fiber_g": 0.9
+      },
+      "aliases": {
+        "en": ["frozen yogurt", "froyo", "soft serve yogurt"],
+        "ja": ["フローズンヨーグルト", "フロヨ"],
+        "ko": ["프로즌요거트", "프로요"],
+        "zh": ["冻酸奶", "冷冻酸奶"],
+        "es": ["yogur helado", "yogurt congelado"],
+        "fr": ["yaourt glacé", "yogourt glacé"]
+      },
+      "common_units": ["cup", "scoop", "gram"]
+    },
+    {
+      "canonical_name": "whipped cream",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 257,
+        "protein_g": 2.1,
+        "carbs_g": 12.5,
+        "fat_g": 22.2,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["whipped cream", "whipped topping", "chantilly cream"],
+        "ja": ["ホイップクリーム", "生クリームホイップ"],
+        "ko": ["휘핑크림", "생크림휘핑"],
+        "zh": ["打发奶油", "鲜奶油", "奶油霜"],
+        "es": ["crema batida", "nata montada", "chantilly"],
+        "fr": ["crème fouettée", "crème chantilly"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "sweetened condensed coconut milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 290,
+        "protein_g": 2.0,
+        "carbs_g": 52.0,
+        "fat_g": 8.0,
+        "fiber_g": 1.0
+      },
+      "aliases": {
+        "en": ["sweetened condensed coconut milk", "condensed coconut milk"],
+        "ja": ["加糖ココナッツ練乳", "コンデンスココナッツミルク"],
+        "ko": ["가당코코넛연유", "연유코코넛밀크"],
+        "zh": ["加糖椰奶炼乳", "甜椰浆"],
+        "es": ["leche de coco condensada azucarada"],
+        "fr": ["lait de coco concentré sucré"]
+      },
+      "common_units": ["cup", "ml", "can", "tablespoon"]
+    },
+    {
+      "canonical_name": "buttermilk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 3.3,
+        "carbs_g": 4.8,
+        "fat_g": 0.9,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["buttermilk", "cultured buttermilk"],
+        "ja": ["バターミルク", "発酵バターミルク"],
+        "ko": ["버터밀크", "발효버터밀크"],
+        "zh": ["酪乳", "白脱牛奶", "酸奶"],
+        "es": ["suero de leche", "buttermilk"],
+        "fr": ["babeurre", "lait battu"]
+      },
+      "common_units": ["cup", "ml", "tablespoon", "teaspoon"]
+    },
+    {
+      "canonical_name": "chocolate milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 83,
+        "protein_g": 3.2,
+        "carbs_g": 10.3,
+        "fat_g": 3.3,
+        "fiber_g": 0.8
+      },
+      "aliases": {
+        "en": ["chocolate milk", "cocoa milk"],
+        "ja": ["チョコレートミルク", "ココアミルク"],
+        "ko": ["초코우유", "초콜릿우유"],
+        "zh": ["巧克力牛奶", "巧克力奶"],
+        "es": ["leche con chocolate", "leche chocolatada"],
+        "fr": ["lait au chocolat", "lait chocolaté"]
+      },
+      "common_units": ["cup", "ml", "liter", "carton"]
+    },
+    {
+      "canonical_name": "malted milk powder",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 411,
+        "protein_g": 11.6,
+        "carbs_g": 75.0,
+        "fat_g": 8.4,
+        "fiber_g": 2.4
+      },
+      "aliases": {
+        "en": ["malted milk powder", "malt powder", "horlicks"],
+        "ja": ["モルトミルクパウダー", "麦芽ミルク"],
+        "ko": ["맥아유분", "몰트밀크파우더"],
+        "zh": ["麦乳精", "麦芽奶粉"],
+        "es": ["leche malteada en polvo", "malta en polvo"],
+        "fr": ["poudre de lait malté", "lait en poudre malté"]
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram", "cup"]
+    },
+    {
+      "canonical_name": "dulce de leche",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 315,
+        "protein_g": 6.8,
+        "carbs_g": 55.4,
+        "fat_g": 7.4,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["dulce de leche", "caramelized milk", "milk caramel"],
+        "ja": ["ドゥルセデレチェ", "ミルクキャラメル"],
+        "ko": ["둘세데레체", "카라멜우유"],
+        "zh": ["牛奶焦糖", "炼乳焦糖"],
+        "es": ["dulce de leche", "arequipe", "manjar"],
+        "fr": ["confiture de lait", "dulce de leche"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "cajeta",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 320,
+        "protein_g": 6.0,
+        "carbs_g": 58.0,
+        "fat_g": 7.5,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["cajeta", "goat milk caramel", "mexican caramel"],
+        "ja": ["カヘタ", "山羊ミルクキャラメル"],
+        "ko": ["카헤타", "염소우유카라멜"],
+        "zh": ["羊奶焦糖", "墨西哥焦糖"],
+        "es": ["cajeta", "dulce de leche de cabra"],
+        "fr": ["cajeta", "caramel au lait de chèvre"]
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "condensed milk unsweetened",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 135,
+        "protein_g": 6.8,
+        "carbs_g": 10.0,
+        "fat_g": 7.6,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["condensed milk unsweetened", "evaporated milk", "concentrated milk"],
+        "ja": ["無糖練乳", "エバミルク"],
+        "ko": ["무가당연유", "증발유"],
+        "zh": ["无糖炼乳", "淡奶"],
+        "es": ["leche condensada sin azúcar", "leche evaporada"],
+        "fr": ["lait concentré non sucré", "lait évaporé"]
+      },
+      "common_units": ["cup", "ml", "can", "tablespoon"]
+    },
+    {
+      "canonical_name": "coffee creamer liquid",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 133,
+        "protein_g": 0,
+        "carbs_g": 11.7,
+        "fat_g": 10.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["coffee creamer liquid", "liquid creamer", "non-dairy creamer"],
+        "ja": ["コーヒークリーマー液体", "リキッドクリーマー"],
+        "ko": ["커피크리머액상", "리퀴드크리머"],
+        "zh": ["液态咖啡伴侣", "液体奶精"],
+        "es": ["crema para café líquida", "cremora líquida"],
+        "fr": ["crème à café liquide", "crémier liquide"]
+      },
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "coffee creamer powder",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 540,
+        "protein_g": 2.0,
+        "carbs_g": 55.0,
+        "fat_g": 35.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["coffee creamer powder", "powdered creamer", "coffee mate"],
+        "ja": ["コーヒークリーマー粉", "クリープ"],
+        "ko": ["커피크리머가루", "프림"],
+        "zh": ["咖啡伴侣粉", "奶精粉"],
+        "es": ["crema para café en polvo", "cremora en polvo"],
+        "fr": ["crème à café en poudre", "crémier en poudre"]
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "quark",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 67,
+        "protein_g": 12.0,
+        "carbs_g": 4.0,
+        "fat_g": 0.2,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["quark", "quarg", "fresh cheese"],
+        "ja": ["クォーク", "フレッシュチーズ"],
+        "ko": ["쿼크", "쿼크치즈"],
+        "zh": ["夸克奶酪", "鲜奶酪"],
+        "es": ["quark", "requesón fresco"],
+        "fr": ["fromage blanc", "quark"]
+      },
+      "common_units": ["cup", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "labneh",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 113,
+        "protein_g": 8.0,
+        "carbs_g": 7.0,
+        "fat_g": 6.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["labneh", "lebni", "strained yogurt", "yogurt cheese"],
+        "ja": ["ラブネ", "レブニ", "ヨーグルトチーズ"],
+        "ko": ["라브네", "레브니", "요거트치즈"],
+        "zh": ["酸奶酪", "中东酸奶芝士"],
+        "es": ["labneh", "yogur griego espeso"],
+        "fr": ["labneh", "fromage de yaourt"]
+      },
+      "common_units": ["cup", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "clabber",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 59,
+        "protein_g": 3.3,
+        "carbs_g": 4.7,
+        "fat_g": 3.2,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["clabber", "clabbered milk", "soured milk"],
+        "ja": ["クラバー", "発酵乳"],
+        "ko": ["클래버", "발효유"],
+        "zh": ["凝乳", "酸凝乳"],
+        "es": ["leche cuajada", "leche agria"],
+        "fr": ["lait caillé", "lait aigre"]
+      },
+      "common_units": ["cup", "ml", "tablespoon"]
+    },
+    {
+      "canonical_name": "acidophilus milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 61,
+        "protein_g": 3.2,
+        "carbs_g": 4.8,
+        "fat_g": 3.3,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["acidophilus milk", "probiotic milk"],
+        "ja": ["アシドフィルス乳", "プロバイオティクス乳"],
+        "ko": ["아시도필러스우유", "프로바이오틱우유"],
+        "zh": ["嗜酸乳", "益生菌牛奶"],
+        "es": ["leche acidófila", "leche probiótica"],
+        "fr": ["lait acidophile", "lait probiotique"]
+      },
+      "common_units": ["cup", "ml", "liter"]
+    },
+    {
+      "canonical_name": "lactose free milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 50,
+        "protein_g": 3.4,
+        "carbs_g": 5.0,
+        "fat_g": 2.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["lactose free milk", "lactaid milk", "lactose-free"],
+        "ja": ["乳糖不使用牛乳", "ラクトースフリーミルク"],
+        "ko": ["유당분해우유", "락토프리우유"],
+        "zh": ["无乳糖牛奶", "乳糖不耐受奶"],
+        "es": ["leche sin lactosa", "leche deslactosada"],
+        "fr": ["lait sans lactose", "lait délactosé"]
+      },
+      "common_units": ["cup", "ml", "liter", "gallon"]
+    },
+    {
+      "canonical_name": "a2 milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 61,
+        "protein_g": 3.2,
+        "carbs_g": 4.8,
+        "fat_g": 3.3,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["a2 milk", "a2 cow milk", "beta casein a2 milk"],
+        "ja": ["A2ミルク", "A2牛乳"],
+        "ko": ["A2우유", "A2밀크"],
+        "zh": ["A2牛奶", "A2蛋白奶"],
+        "es": ["leche a2", "leche de vaca a2"],
+        "fr": ["lait a2", "lait de vache a2"]
+      },
+      "common_units": ["cup", "ml", "liter", "gallon"]
+    },
+    {
+      "canonical_name": "organic milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 61,
+        "protein_g": 3.2,
+        "carbs_g": 4.8,
+        "fat_g": 3.3,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["organic milk", "organic whole milk"],
+        "ja": ["オーガニックミルク", "有機牛乳"],
+        "ko": ["유기농우유", "오가닉밀크"],
+        "zh": ["有机牛奶", "有机奶"],
+        "es": ["leche orgánica", "leche ecológica"],
+        "fr": ["lait biologique", "lait bio"]
+      },
+      "common_units": ["cup", "ml", "liter", "gallon"]
+    },
+    {
+      "canonical_name": "grass fed milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 61,
+        "protein_g": 3.2,
+        "carbs_g": 4.8,
+        "fat_g": 3.3,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["grass fed milk", "grass-fed whole milk", "pasture raised milk"],
+        "ja": ["グラスフェッドミルク", "牧草飼育牛乳"],
+        "ko": ["그래스페드우유", "목초사육우유"],
+        "zh": ["草饲牛奶", "草喂养奶"],
+        "es": ["leche de vacas alimentadas con pasto"],
+        "fr": ["lait de vaches nourries à l'herbe"]
+      },
+      "common_units": ["cup", "ml", "liter", "gallon"]
+    },
+    {
+      "canonical_name": "ultra filtered milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 60,
+        "protein_g": 6.5,
+        "carbs_g": 3.0,
+        "fat_g": 2.5,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["ultra filtered milk", "fairlife milk", "ultra-filtered"],
+        "ja": ["限外濾過牛乳", "ウルトラフィルターミルク"],
+        "ko": ["한외여과우유", "울트라필터우유"],
+        "zh": ["超滤牛奶", "过滤奶"],
+        "es": ["leche ultra filtrada", "leche fairlife"],
+        "fr": ["lait ultra-filtré", "lait filtré"]
+      },
+      "common_units": ["cup", "ml", "liter"]
+    },
+    {
+      "canonical_name": "shelf stable milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 61,
+        "protein_g": 3.2,
+        "carbs_g": 4.8,
+        "fat_g": 3.3,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["shelf stable milk", "uht milk", "long life milk", "aseptic milk"],
+        "ja": ["常温保存牛乳", "ロングライフミルク", "UHT牛乳"],
+        "ko": ["상온보관우유", "멸균우유", "UHT우유"],
+        "zh": ["常温奶", "超高温灭菌奶", "保久乳"],
+        "es": ["leche de larga vida", "leche uht"],
+        "fr": ["lait de longue conservation", "lait uht"]
+      },
+      "common_units": ["cup", "ml", "liter", "carton"]
+    },
+    {
+      "canonical_name": "goat milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 69,
+        "protein_g": 3.6,
+        "carbs_g": 4.5,
+        "fat_g": 4.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["goat milk", "goat's milk"],
+        "ja": ["山羊乳", "ゴートミルク", "ヤギ乳"],
+        "ko": ["염소우유", "고트밀크", "염소젖"],
+        "zh": ["羊奶", "山羊奶"],
+        "es": ["leche de cabra"],
+        "fr": ["lait de chèvre"]
+      },
+      "common_units": ["cup", "ml", "liter", "tablespoon"]
+    },
+    {
+      "canonical_name": "sheep milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 108,
+        "protein_g": 5.4,
+        "carbs_g": 5.4,
+        "fat_g": 7.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["sheep milk", "ewe's milk", "sheep's milk"],
+        "ja": ["羊乳", "シープミルク", "ヒツジ乳"],
+        "ko": ["양유", "양젖", "양우유"],
+        "zh": ["绵羊奶", "羊乳"],
+        "es": ["leche de oveja"],
+        "fr": ["lait de brebis"]
+      },
+      "common_units": ["cup", "ml", "liter", "tablespoon"]
+    },
+    {
+      "canonical_name": "buffalo milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 97,
+        "protein_g": 3.8,
+        "carbs_g": 5.2,
+        "fat_g": 6.9,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["buffalo milk", "water buffalo milk", "buffalo's milk"],
+        "ja": ["水牛乳", "バッファローミルク"],
+        "ko": ["물소우유", "버팔로밀크"],
+        "zh": ["水牛奶", "水牛乳"],
+        "es": ["leche de búfala", "leche de búfalo"],
+        "fr": ["lait de bufflonne", "lait de buffle"]
+      },
+      "common_units": ["cup", "ml", "liter", "tablespoon"]
+    },
+    {
+      "canonical_name": "pea milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 3.3,
+        "carbs_g": 1.7,
+        "fat_g": 1.9,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["pea milk", "pea protein milk", "ripple milk"],
+        "ja": ["ピーミルク", "エンドウ豆ミルク"],
+        "ko": ["완두콩우유", "피밀크"],
+        "zh": ["豌豆奶", "豌豆蛋白饮料"],
+        "es": ["leche de guisante", "leche de arveja"],
+        "fr": ["lait de pois", "boisson aux pois"]
+      },
+      "common_units": ["cup", "ml", "liter", "tablespoon"]
+    },
+    {
+      "canonical_name": "macadamia milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 21,
+        "protein_g": 0.4,
+        "carbs_g": 1.0,
+        "fat_g": 1.8,
+        "fiber_g": 0.4
+      },
+      "aliases": {
+        "en": ["macadamia milk", "macadamia nut milk"],
+        "ja": ["マカダミアミルク", "マカダミアナッツミルク"],
+        "ko": ["마카다미아밀크", "마카다미아우유"],
+        "zh": ["夏威夷果奶", "澳洲坚果奶"],
+        "es": ["leche de macadamia"],
+        "fr": ["lait de macadamia", "boisson aux noix de macadamia"]
+      },
+      "common_units": ["cup", "ml", "liter", "tablespoon"]
+    },
+    {
+      "canonical_name": "flax milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 17,
+        "protein_g": 0,
+        "carbs_g": 1.7,
+        "fat_g": 1.0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["flax milk", "flaxseed milk"],
+        "ja": ["フラックスミルク", "亜麻仁ミルク"],
+        "ko": ["아마씨우유", "플랙스밀크"],
+        "zh": ["亚麻籽奶", "亚麻仁奶"],
+        "es": ["leche de linaza"],
+        "fr": ["lait de lin", "boisson aux graines de lin"]
+      },
+      "common_units": ["cup", "ml", "liter", "tablespoon"]
+    },
+    {
+      "canonical_name": "hazelnut milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 0.5,
+        "carbs_g": 2.5,
+        "fat_g": 1.5,
+        "fiber_g": 0.3
+      },
+      "aliases": {
+        "en": ["hazelnut milk", "filbert milk"],
+        "ja": ["ヘーゼルナッツミルク"],
+        "ko": ["헤이즐넛밀크", "헤이즐넛우유"],
+        "zh": ["榛子奶", "榛果奶"],
+        "es": ["leche de avellana"],
+        "fr": ["lait de noisette", "boisson aux noisettes"]
+      },
+      "common_units": ["cup", "ml", "liter", "tablespoon"]
+    },
+    {
+      "canonical_name": "pistachio milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 27,
+        "protein_g": 0.6,
+        "carbs_g": 2.0,
+        "fat_g": 1.8,
+        "fiber_g": 0.3
+      },
+      "aliases": {
+        "en": ["pistachio milk"],
+        "ja": ["ピスタチオミルク"],
+        "ko": ["피스타치오밀크", "피스타치오우유"],
+        "zh": ["开心果奶", "阿月浑子奶"],
+        "es": ["leche de pistacho"],
+        "fr": ["lait de pistache", "boisson aux pistaches"]
+      },
+      "common_units": ["cup", "ml", "liter", "tablespoon"]
+    },
+    {
+      "canonical_name": "walnut milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 20,
+        "protein_g": 0.4,
+        "carbs_g": 1.5,
+        "fat_g": 1.3,
+        "fiber_g": 0.2
+      },
+      "aliases": {
+        "en": ["walnut milk"],
+        "ja": ["ウォルナッツミルク", "くるみミルク"],
+        "ko": ["호두우유", "호두밀크"],
+        "zh": ["核桃奶", "胡桃奶"],
+        "es": ["leche de nuez"],
+        "fr": ["lait de noix", "boisson aux noix"]
+      },
+      "common_units": ["cup", "ml", "liter", "tablespoon"]
+    },
+    {
+      "canonical_name": "banana milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 65,
+        "protein_g": 2.5,
+        "carbs_g": 10.0,
+        "fat_g": 1.5,
+        "fiber_g": 0.3
+      },
+      "aliases": {
+        "en": ["banana milk", "banana flavored milk"],
+        "ja": ["バナナミルク", "バナナ牛乳"],
+        "ko": ["바나나우유", "바나나맛우유"],
+        "zh": ["香蕉牛奶", "香蕉味奶"],
+        "es": ["leche con sabor a plátano", "leche de plátano"],
+        "fr": ["lait à la banane", "lait aromatisé banane"]
+      },
+      "common_units": ["cup", "ml", "carton", "bottle"]
+    },
+    {
+      "canonical_name": "strawberry milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 68,
+        "protein_g": 2.8,
+        "carbs_g": 10.5,
+        "fat_g": 1.6,
+        "fiber_g": 0.2
+      },
+      "aliases": {
+        "en": ["strawberry milk", "strawberry flavored milk"],
+        "ja": ["イチゴミルク", "ストロベリーミルク"],
+        "ko": ["딸기우유", "딸기맛우유"],
+        "zh": ["草莓牛奶", "草莓味奶"],
+        "es": ["leche con sabor a fresa", "leche de fresa"],
+        "fr": ["lait à la fraise", "lait aromatisé fraise"]
+      },
+      "common_units": ["cup", "ml", "carton", "bottle"]
+    }
+  ]
+}

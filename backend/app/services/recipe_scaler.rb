@@ -26,7 +26,7 @@ class RecipeScaler
     converted_amount = UnitConverter.convert(
       target_amount,
       target_unit,
-      base_ingredient.unit
+      base_ingredient.unit&.canonical_name
     )
 
     scaling_factor = converted_amount / (base_ingredient.amount || 1).to_f
@@ -54,26 +54,26 @@ class RecipeScaler
 
   def scale_ingredient_copy(ingredient, factor)
     raw_amount = (ingredient.amount || 0).to_f * factor
-    unit = ingredient.unit
+    unit_name = ingredient.unit&.canonical_name
 
     if @context == 'baking'
-      result = preserve_precision(raw_amount, unit)
+      result = preserve_precision(raw_amount, unit_name)
       if result.is_a?(Hash)
         scaled_amount = result[:amount]
-        unit = result[:unit]
+        unit_name = result[:unit]
       else
         scaled_amount = result
       end
     else
       scaled_amount = round_to_friendly_fraction(raw_amount)
-      new_unit = step_down_unit(scaled_amount, unit)
-      unit = new_unit
+      new_unit = step_down_unit(scaled_amount, unit_name)
+      unit_name = new_unit
     end
 
     result_hash = {
       name: ingredient.ingredient_name,
       amount: scaled_amount.to_s,
-      unit: unit,
+      unit: unit_name,
       preparation: ingredient.preparation_notes.presence
     }.compact
 

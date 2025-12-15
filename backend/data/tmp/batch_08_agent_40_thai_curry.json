@@ -1,0 +1,2179 @@
+{
+  "batch": 8,
+  "agent": 40,
+  "category": "thai_curry",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "fish sauce",
+      "category": "sauce",
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 5.0,
+        "carbs_g": 3.5,
+        "fat_g": 0.0,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        {
+          "alias": "nam pla",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "น้ำปลา",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "Thai fish sauce",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "nam pla raa",
+          "language": "th",
+          "type": "variant"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 18
+        },
+        {
+          "unit": "tsp",
+          "grams": 6
+        }
+      ]
+    },
+    {
+      "canonical_name": "premium fish sauce",
+      "category": "sauce",
+      "per_100g": {
+        "calories": 38,
+        "protein_g": 6.0,
+        "carbs_g": 3.0,
+        "fat_g": 0.0,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        {
+          "alias": "nam pla chotburi",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "น้ำปลาชลบุรี",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "first press fish sauce",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "phu quoc fish sauce",
+          "language": "en",
+          "type": "variant"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 18
+        },
+        {
+          "unit": "tsp",
+          "grams": 6
+        }
+      ]
+    },
+    {
+      "canonical_name": "oyster sauce",
+      "category": "sauce",
+      "per_100g": {
+        "calories": 51,
+        "protein_g": 2.1,
+        "carbs_g": 11.0,
+        "fat_g": 0.2,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        {
+          "alias": "nam man hoi",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "น้ำมันหอย",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "Thai oyster sauce",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 18
+        },
+        {
+          "unit": "tsp",
+          "grams": 6
+        }
+      ]
+    },
+    {
+      "canonical_name": "Thai soy sauce, light",
+      "category": "sauce",
+      "per_100g": {
+        "calories": 53,
+        "protein_g": 5.6,
+        "carbs_g": 7.6,
+        "fat_g": 0.0,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        {
+          "alias": "si-iu khao",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "ซีอิ๊วขาว",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "see ew khao",
+          "language": "th",
+          "type": "romanization"
+        },
+        {
+          "alias": "light Thai soy sauce",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 18
+        },
+        {
+          "unit": "tsp",
+          "grams": 6
+        }
+      ]
+    },
+    {
+      "canonical_name": "Thai soy sauce, dark",
+      "category": "sauce",
+      "per_100g": {
+        "calories": 67,
+        "protein_g": 4.0,
+        "carbs_g": 15.0,
+        "fat_g": 0.0,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        {
+          "alias": "si-iu dam",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "ซีอิ๊วดำ",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "see ew dam",
+          "language": "th",
+          "type": "romanization"
+        },
+        {
+          "alias": "dark Thai soy sauce",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "sweet soy sauce",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 18
+        },
+        {
+          "unit": "tsp",
+          "grams": 6
+        }
+      ]
+    },
+    {
+      "canonical_name": "Thai seasoning sauce",
+      "category": "sauce",
+      "per_100g": {
+        "calories": 46,
+        "protein_g": 3.5,
+        "carbs_g": 9.0,
+        "fat_g": 0.0,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        {
+          "alias": "si-iu wan",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "ซีอิ๊วหวาน",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "golden mountain sauce",
+          "language": "en",
+          "type": "brand"
+        },
+        {
+          "alias": "maggi seasoning",
+          "language": "en",
+          "type": "brand"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 18
+        },
+        {
+          "unit": "tsp",
+          "grams": 6
+        }
+      ]
+    },
+    {
+      "canonical_name": "coconut milk, canned",
+      "category": "dairy_alternative",
+      "per_100g": {
+        "calories": 230,
+        "protein_g": 2.3,
+        "carbs_g": 5.5,
+        "fat_g": 23.8,
+        "fiber_g": 2.2
+      },
+      "aliases": [
+        {
+          "alias": "ka-ti",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "กะทิ",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "nam ka-ti",
+          "language": "th",
+          "type": "variant"
+        },
+        {
+          "alias": "coconut milk",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "can",
+          "grams": 400
+        },
+        {
+          "unit": "cup",
+          "grams": 240
+        },
+        {
+          "unit": "tbsp",
+          "grams": 15
+        }
+      ]
+    },
+    {
+      "canonical_name": "coconut cream",
+      "category": "dairy_alternative",
+      "per_100g": {
+        "calories": 330,
+        "protein_g": 3.6,
+        "carbs_g": 6.7,
+        "fat_g": 34.7,
+        "fiber_g": 2.2
+      },
+      "aliases": [
+        {
+          "alias": "hua ka-ti",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "หัวกะทิ",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "thick coconut cream",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "coconut cream top",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "cup",
+          "grams": 240
+        },
+        {
+          "unit": "tbsp",
+          "grams": 15
+        }
+      ]
+    },
+    {
+      "canonical_name": "coconut milk, light",
+      "category": "dairy_alternative",
+      "per_100g": {
+        "calories": 125,
+        "protein_g": 1.3,
+        "carbs_g": 3.0,
+        "fat_g": 12.2,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        {
+          "alias": "hang ka-ti",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "หางกะทิ",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "thin coconut milk",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "lite coconut milk",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "cup",
+          "grams": 240
+        },
+        {
+          "unit": "tbsp",
+          "grams": 15
+        }
+      ]
+    },
+    {
+      "canonical_name": "tamarind paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 239,
+        "protein_g": 2.8,
+        "carbs_g": 62.5,
+        "fat_g": 0.6,
+        "fiber_g": 5.1
+      },
+      "aliases": [
+        {
+          "alias": "nam makham",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "น้ำมะขาม",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "makham piak",
+          "language": "th",
+          "type": "variant"
+        },
+        {
+          "alias": "มะขามเปียก",
+          "language": "th",
+          "type": "native"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 15
+        },
+        {
+          "unit": "tsp",
+          "grams": 5
+        }
+      ]
+    },
+    {
+      "canonical_name": "tamarind pulp",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 239,
+        "protein_g": 2.8,
+        "carbs_g": 62.5,
+        "fat_g": 0.6,
+        "fiber_g": 5.1
+      },
+      "aliases": [
+        {
+          "alias": "makham piak",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "มะขามเปียก",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "wet tamarind",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "block",
+          "grams": 100
+        },
+        {
+          "unit": "tbsp",
+          "grams": 15
+        }
+      ]
+    },
+    {
+      "canonical_name": "tamarind concentrate",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 250,
+        "protein_g": 3.0,
+        "carbs_g": 65.0,
+        "fat_g": 0.5,
+        "fiber_g": 4.0
+      },
+      "aliases": [
+        {
+          "alias": "nam makham khen",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "น้ำมะขามเข้มข้น",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "tamarind sauce",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 18
+        },
+        {
+          "unit": "tsp",
+          "grams": 6
+        }
+      ]
+    },
+    {
+      "canonical_name": "jasmine rice, white",
+      "category": "grain",
+      "per_100g": {
+        "calories": 130,
+        "protein_g": 2.7,
+        "carbs_g": 28.2,
+        "fat_g": 0.3,
+        "fiber_g": 0.4
+      },
+      "aliases": [
+        {
+          "alias": "khao hom mali",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "ข้าวหอมมะลิ",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "Thai jasmine rice",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "hom mali rice",
+          "language": "th",
+          "type": "variant"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "cup",
+          "grams": 185
+        },
+        {
+          "unit": "tbsp",
+          "grams": 12
+        }
+      ]
+    },
+    {
+      "canonical_name": "jasmine rice, brown",
+      "category": "grain",
+      "per_100g": {
+        "calories": 111,
+        "protein_g": 2.6,
+        "carbs_g": 23.0,
+        "fat_g": 0.9,
+        "fiber_g": 1.8
+      },
+      "aliases": [
+        {
+          "alias": "khao hom mali klaung",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "ข้าวหอมมะลิกล้อง",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "brown jasmine rice",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "whole grain jasmine rice",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "cup",
+          "grams": 195
+        },
+        {
+          "unit": "tbsp",
+          "grams": 12
+        }
+      ]
+    },
+    {
+      "canonical_name": "sticky rice, white",
+      "category": "grain",
+      "per_100g": {
+        "calories": 97,
+        "protein_g": 2.0,
+        "carbs_g": 21.1,
+        "fat_g": 0.2,
+        "fiber_g": 1.0
+      },
+      "aliases": [
+        {
+          "alias": "khao niao",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "ข้าวเหนียว",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "glutinous rice",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "sweet rice",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "cup",
+          "grams": 185
+        },
+        {
+          "unit": "tbsp",
+          "grams": 12
+        }
+      ]
+    },
+    {
+      "canonical_name": "black sticky rice",
+      "category": "grain",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 8.9,
+        "carbs_g": 75.6,
+        "fat_g": 3.3,
+        "fiber_g": 4.9
+      },
+      "aliases": [
+        {
+          "alias": "khao niao dam",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "ข้าวเหนียวดำ",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "black glutinous rice",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "forbidden rice",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "cup",
+          "grams": 180
+        },
+        {
+          "unit": "tbsp",
+          "grams": 11
+        }
+      ]
+    },
+    {
+      "canonical_name": "rice noodles, wide",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 109,
+        "protein_g": 1.0,
+        "carbs_g": 25.0,
+        "fat_g": 0.2,
+        "fiber_g": 1.0
+      },
+      "aliases": [
+        {
+          "alias": "sen yai",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "เส้นใหญ่",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "ho fun noodles",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "chow fun noodles",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "cup",
+          "grams": 140
+        },
+        {
+          "unit": "oz",
+          "grams": 28
+        }
+      ]
+    },
+    {
+      "canonical_name": "rice noodles, thin",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 109,
+        "protein_g": 1.0,
+        "carbs_g": 25.0,
+        "fat_g": 0.2,
+        "fiber_g": 1.0
+      },
+      "aliases": [
+        {
+          "alias": "sen lek",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "เส้นเล็ก",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "thin rice stick",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "rice vermicelli",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "cup",
+          "grams": 140
+        },
+        {
+          "unit": "oz",
+          "grams": 28
+        }
+      ]
+    },
+    {
+      "canonical_name": "rice noodles, extra thin",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 109,
+        "protein_g": 1.0,
+        "carbs_g": 25.0,
+        "fat_g": 0.2,
+        "fiber_g": 1.0
+      },
+      "aliases": [
+        {
+          "alias": "sen mee",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "เส้นหมี่",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "angel hair rice noodles",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "vermicelli noodles",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "cup",
+          "grams": 140
+        },
+        {
+          "unit": "oz",
+          "grams": 28
+        }
+      ]
+    },
+    {
+      "canonical_name": "pad thai noodles",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 109,
+        "protein_g": 1.0,
+        "carbs_g": 25.0,
+        "fat_g": 0.2,
+        "fiber_g": 1.0
+      },
+      "aliases": [
+        {
+          "alias": "sen chan",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "เส้นจันทร์",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "medium rice stick noodles",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "jantaboon noodles",
+          "language": "th",
+          "type": "variant"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "cup",
+          "grams": 140
+        },
+        {
+          "unit": "oz",
+          "grams": 28
+        }
+      ]
+    },
+    {
+      "canonical_name": "glass noodles",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 351,
+        "protein_g": 0.2,
+        "carbs_g": 86.0,
+        "fat_g": 0.1,
+        "fiber_g": 0.5
+      },
+      "aliases": [
+        {
+          "alias": "wun sen",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "วุ้นเส้น",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "cellophane noodles",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "mung bean noodles",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "cup",
+          "grams": 140
+        },
+        {
+          "unit": "oz",
+          "grams": 28
+        }
+      ]
+    },
+    {
+      "canonical_name": "peanuts, roasted",
+      "category": "nut",
+      "per_100g": {
+        "calories": 567,
+        "protein_g": 25.8,
+        "carbs_g": 16.1,
+        "fat_g": 49.2,
+        "fiber_g": 8.5
+      },
+      "aliases": [
+        {
+          "alias": "thua lisong",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "ถ่วลิสง",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "roasted groundnuts",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "cup",
+          "grams": 146
+        },
+        {
+          "unit": "tbsp",
+          "grams": 9
+        },
+        {
+          "unit": "oz",
+          "grams": 28
+        }
+      ]
+    },
+    {
+      "canonical_name": "peanuts, crushed",
+      "category": "nut",
+      "per_100g": {
+        "calories": 567,
+        "protein_g": 25.8,
+        "carbs_g": 16.1,
+        "fat_g": 49.2,
+        "fiber_g": 8.5
+      },
+      "aliases": [
+        {
+          "alias": "thua lisong bop",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "ถ่วลิสงบด",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "chopped peanuts",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "ground peanuts",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "cup",
+          "grams": 125
+        },
+        {
+          "unit": "tbsp",
+          "grams": 8
+        }
+      ]
+    },
+    {
+      "canonical_name": "dried shrimp",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 305,
+        "protein_g": 63.0,
+        "carbs_g": 3.0,
+        "fat_g": 3.7,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        {
+          "alias": "kung haeng",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "กุ้งแห้ง",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "dried prawns",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "cup",
+          "grams": 120
+        },
+        {
+          "unit": "tbsp",
+          "grams": 10
+        },
+        {
+          "unit": "oz",
+          "grams": 28
+        }
+      ]
+    },
+    {
+      "canonical_name": "shrimp paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 198,
+        "protein_g": 28.0,
+        "carbs_g": 10.0,
+        "fat_g": 4.0,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        {
+          "alias": "kapi",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "กะปิ",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "Thai shrimp paste",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "belacan",
+          "language": "en",
+          "type": "variant"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tsp",
+          "grams": 5
+        },
+        {
+          "unit": "tbsp",
+          "grams": 15
+        }
+      ]
+    },
+    {
+      "canonical_name": "red curry paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 95,
+        "protein_g": 2.5,
+        "carbs_g": 18.0,
+        "fat_g": 2.0,
+        "fiber_g": 4.0
+      },
+      "aliases": [
+        {
+          "alias": "nam prik gaeng phed",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "น้ำพริกแกงเผ็ด",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "Thai red curry paste",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 16
+        },
+        {
+          "unit": "tsp",
+          "grams": 5
+        }
+      ]
+    },
+    {
+      "canonical_name": "green curry paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 91,
+        "protein_g": 2.3,
+        "carbs_g": 17.0,
+        "fat_g": 2.0,
+        "fiber_g": 4.5
+      },
+      "aliases": [
+        {
+          "alias": "nam prik gaeng khiao wan",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "น้ำพริกแกงเขียวหวาน",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "Thai green curry paste",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 16
+        },
+        {
+          "unit": "tsp",
+          "grams": 5
+        }
+      ]
+    },
+    {
+      "canonical_name": "yellow curry paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 88,
+        "protein_g": 2.0,
+        "carbs_g": 16.0,
+        "fat_g": 2.0,
+        "fiber_g": 3.5
+      },
+      "aliases": [
+        {
+          "alias": "nam prik gaeng garee",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "น้ำพริกแกงกะหรี่",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "Thai yellow curry paste",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 16
+        },
+        {
+          "unit": "tsp",
+          "grams": 5
+        }
+      ]
+    },
+    {
+      "canonical_name": "massaman curry paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 92,
+        "protein_g": 2.2,
+        "carbs_g": 17.5,
+        "fat_g": 2.0,
+        "fiber_g": 3.8
+      },
+      "aliases": [
+        {
+          "alias": "nam prik gaeng massaman",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "น้ำพริกแกงมัสมั่น",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "Thai massaman curry paste",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "matsaman curry paste",
+          "language": "th",
+          "type": "romanization"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 16
+        },
+        {
+          "unit": "tsp",
+          "grams": 5
+        }
+      ]
+    },
+    {
+      "canonical_name": "panang curry paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 94,
+        "protein_g": 2.4,
+        "carbs_g": 17.8,
+        "fat_g": 2.0,
+        "fiber_g": 4.0
+      },
+      "aliases": [
+        {
+          "alias": "nam prik gaeng panang",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "น้ำพริกแกงพะแนง",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "Thai panang curry paste",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "phanaeng curry paste",
+          "language": "th",
+          "type": "romanization"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 16
+        },
+        {
+          "unit": "tsp",
+          "grams": 5
+        }
+      ]
+    },
+    {
+      "canonical_name": "jungle curry paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 87,
+        "protein_g": 2.1,
+        "carbs_g": 16.5,
+        "fat_g": 1.8,
+        "fiber_g": 4.2
+      },
+      "aliases": [
+        {
+          "alias": "nam prik gaeng pa",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "น้ำพริกแกงป่า",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "Thai jungle curry paste",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "forest curry paste",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 16
+        },
+        {
+          "unit": "tsp",
+          "grams": 5
+        }
+      ]
+    },
+    {
+      "canonical_name": "palm sugar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 0.5,
+        "carbs_g": 97.0,
+        "fat_g": 0.0,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        {
+          "alias": "nam tan peep",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "น้ำตาลปึ๊ก",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "coconut sugar",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "jaggery",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 12
+        },
+        {
+          "unit": "tsp",
+          "grams": 4
+        },
+        {
+          "unit": "cup",
+          "grams": 200
+        }
+      ]
+    },
+    {
+      "canonical_name": "Thai basil",
+      "category": "herb",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 3.2,
+        "carbs_g": 2.7,
+        "fat_g": 0.6,
+        "fiber_g": 1.6
+      },
+      "aliases": [
+        {
+          "alias": "bai horapa",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "ใบโหระพา",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "holy basil",
+          "language": "en",
+          "type": "variant"
+        },
+        {
+          "alias": "sweet Thai basil",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "cup",
+          "grams": 21
+        },
+        {
+          "unit": "tbsp",
+          "grams": 2
+        }
+      ]
+    },
+    {
+      "canonical_name": "holy basil",
+      "category": "herb",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 3.2,
+        "carbs_g": 2.7,
+        "fat_g": 0.6,
+        "fiber_g": 1.6
+      },
+      "aliases": [
+        {
+          "alias": "bai gaprao",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "ใบกะเพรา",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "hot basil",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "tulsi",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "cup",
+          "grams": 21
+        },
+        {
+          "unit": "tbsp",
+          "grams": 2
+        }
+      ]
+    },
+    {
+      "canonical_name": "lemon basil",
+      "category": "herb",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 3.2,
+        "carbs_g": 2.7,
+        "fat_g": 0.6,
+        "fiber_g": 1.6
+      },
+      "aliases": [
+        {
+          "alias": "bai maenglak",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "ใบแมงลัก",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "Thai lemon basil",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "cup",
+          "grams": 21
+        },
+        {
+          "unit": "tbsp",
+          "grams": 2
+        }
+      ]
+    },
+    {
+      "canonical_name": "galangal",
+      "category": "spice",
+      "per_100g": {
+        "calories": 71,
+        "protein_g": 1.0,
+        "carbs_g": 15.0,
+        "fat_g": 0.7,
+        "fiber_g": 2.1
+      },
+      "aliases": [
+        {
+          "alias": "kha",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "ข่า",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "Thai galangal",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "blue ginger",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "slice",
+          "grams": 3
+        },
+        {
+          "unit": "tbsp",
+          "grams": 8
+        },
+        {
+          "unit": "oz",
+          "grams": 28
+        }
+      ]
+    },
+    {
+      "canonical_name": "kaffir lime leaves",
+      "category": "herb",
+      "per_100g": {
+        "calories": 65,
+        "protein_g": 1.5,
+        "carbs_g": 15.0,
+        "fat_g": 0.5,
+        "fiber_g": 3.0
+      },
+      "aliases": [
+        {
+          "alias": "bai makrut",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "ใบมะกรูด",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "makrut lime leaves",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "Thai lime leaves",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "leaf",
+          "grams": 0.5
+        },
+        {
+          "unit": "tbsp",
+          "grams": 2
+        }
+      ]
+    },
+    {
+      "canonical_name": "lemongrass",
+      "category": "herb",
+      "per_100g": {
+        "calories": 99,
+        "protein_g": 1.8,
+        "carbs_g": 25.3,
+        "fat_g": 0.5,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        {
+          "alias": "takhrai",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "ตะไคร้",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "Thai lemongrass",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "citronella",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "stalk",
+          "grams": 15
+        },
+        {
+          "unit": "tbsp",
+          "grams": 5
+        }
+      ]
+    },
+    {
+      "canonical_name": "Thai chili, fresh",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 2.0,
+        "carbs_g": 8.8,
+        "fat_g": 0.4,
+        "fiber_g": 1.5
+      },
+      "aliases": [
+        {
+          "alias": "prik khi nu",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "พริกขี้หนู",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "bird's eye chili",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "Thai bird chili",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "chili",
+          "grams": 2
+        },
+        {
+          "unit": "tbsp",
+          "grams": 10
+        }
+      ]
+    },
+    {
+      "canonical_name": "Thai chili, dried",
+      "category": "spice",
+      "per_100g": {
+        "calories": 324,
+        "protein_g": 12.0,
+        "carbs_g": 69.9,
+        "fat_g": 17.3,
+        "fiber_g": 28.7
+      },
+      "aliases": [
+        {
+          "alias": "prik khi nu haeng",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "พริกขี้หนูแห้ง",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "dried bird's eye chili",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "chili",
+          "grams": 1
+        },
+        {
+          "unit": "tbsp",
+          "grams": 8
+        }
+      ]
+    },
+    {
+      "canonical_name": "Thai chili flakes",
+      "category": "spice",
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 11.5,
+        "carbs_g": 68.0,
+        "fat_g": 17.0,
+        "fiber_g": 27.0
+      },
+      "aliases": [
+        {
+          "alias": "prik pon",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "พริกป่น",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "crushed Thai chili",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tsp",
+          "grams": 2
+        },
+        {
+          "unit": "tbsp",
+          "grams": 6
+        }
+      ]
+    },
+    {
+      "canonical_name": "roasted chili paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 165,
+        "protein_g": 3.5,
+        "carbs_g": 28.0,
+        "fat_g": 6.0,
+        "fiber_g": 4.0
+      },
+      "aliases": [
+        {
+          "alias": "nam prik pao",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "น้ำพริกเผา",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "Thai chili jam",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 16
+        },
+        {
+          "unit": "tsp",
+          "grams": 5
+        }
+      ]
+    },
+    {
+      "canonical_name": "cilantro root",
+      "category": "herb",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 2.1,
+        "carbs_g": 3.7,
+        "fat_g": 0.5,
+        "fiber_g": 2.8
+      },
+      "aliases": [
+        {
+          "alias": "rak phak chi",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "รากผักชี",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "coriander root",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "root",
+          "grams": 2
+        },
+        {
+          "unit": "tbsp",
+          "grams": 8
+        }
+      ]
+    },
+    {
+      "canonical_name": "Thai eggplant",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 1.0,
+        "carbs_g": 5.9,
+        "fat_g": 0.2,
+        "fiber_g": 3.0
+      },
+      "aliases": [
+        {
+          "alias": "makhuea",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "มะเขือ",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "round Thai eggplant",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "green Thai eggplant",
+          "language": "en",
+          "type": "variant"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "eggplant",
+          "grams": 30
+        },
+        {
+          "unit": "cup",
+          "grams": 82
+        }
+      ]
+    },
+    {
+      "canonical_name": "pea eggplant",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 1.0,
+        "carbs_g": 5.9,
+        "fat_g": 0.2,
+        "fiber_g": 3.0
+      },
+      "aliases": [
+        {
+          "alias": "makhuea phuang",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "มะเขือพวง",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "Thai pea eggplant",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "cluster eggplant",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 10
+        },
+        {
+          "unit": "cup",
+          "grams": 80
+        }
+      ]
+    },
+    {
+      "canonical_name": "fried garlic",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 488,
+        "protein_g": 8.5,
+        "carbs_g": 45.0,
+        "fat_g": 32.0,
+        "fiber_g": 3.0
+      },
+      "aliases": [
+        {
+          "alias": "kratiem jiaw",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "กระเทียมเจียว",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "crispy fried garlic",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 8
+        },
+        {
+          "unit": "tsp",
+          "grams": 3
+        }
+      ]
+    },
+    {
+      "canonical_name": "fried shallots",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 512,
+        "protein_g": 4.2,
+        "carbs_g": 40.0,
+        "fat_g": 38.0,
+        "fiber_g": 2.5
+      },
+      "aliases": [
+        {
+          "alias": "hom jiaw",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "หอมเจียว",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "crispy fried shallots",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 7
+        },
+        {
+          "unit": "tsp",
+          "grams": 2
+        }
+      ]
+    },
+    {
+      "canonical_name": "sweet chili sauce",
+      "category": "sauce",
+      "per_100g": {
+        "calories": 192,
+        "protein_g": 0.8,
+        "carbs_g": 47.0,
+        "fat_g": 0.2,
+        "fiber_g": 0.5
+      },
+      "aliases": [
+        {
+          "alias": "nam chim kai",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "น้ำจิ้มไก่",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "Thai sweet chili sauce",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "chicken dipping sauce",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 18
+        },
+        {
+          "unit": "tsp",
+          "grams": 6
+        }
+      ]
+    },
+    {
+      "canonical_name": "Thai sriracha sauce",
+      "category": "sauce",
+      "per_100g": {
+        "calories": 93,
+        "protein_g": 2.0,
+        "carbs_g": 18.0,
+        "fat_g": 1.0,
+        "fiber_g": 1.0
+      },
+      "aliases": [
+        {
+          "alias": "nam prik sriracha",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "น้ำพริกศรีราชา",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "sriracha chili sauce",
+          "language": "en",
+          "type": "synonym"
+        },
+        {
+          "alias": "rooster sauce",
+          "language": "en",
+          "type": "colloquial"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 17
+        },
+        {
+          "unit": "tsp",
+          "grams": 5
+        }
+      ]
+    },
+    {
+      "canonical_name": "lime juice, fresh",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 0.4,
+        "carbs_g": 8.4,
+        "fat_g": 0.1,
+        "fiber_g": 0.4
+      },
+      "aliases": [
+        {
+          "alias": "nam manao",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "น้ำมะนาว",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "Thai lime juice",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tbsp",
+          "grams": 15
+        },
+        {
+          "unit": "lime",
+          "grams": 30
+        }
+      ]
+    },
+    {
+      "canonical_name": "white peppercorns",
+      "category": "spice",
+      "per_100g": {
+        "calories": 296,
+        "protein_g": 10.4,
+        "carbs_g": 68.6,
+        "fat_g": 2.1,
+        "fiber_g": 26.2
+      },
+      "aliases": [
+        {
+          "alias": "prik thai khao",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "พริกไทยขาว",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "Thai white pepper",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "tsp",
+          "grams": 2
+        },
+        {
+          "unit": "tbsp",
+          "grams": 6
+        }
+      ]
+    },
+    {
+      "canonical_name": "crispy rice noodles",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 456,
+        "protein_g": 4.2,
+        "carbs_g": 70.0,
+        "fat_g": 18.0,
+        "fiber_g": 2.0
+      },
+      "aliases": [
+        {
+          "alias": "mee krob",
+          "language": "th",
+          "type": "translation"
+        },
+        {
+          "alias": "หมี่กรอบ",
+          "language": "th",
+          "type": "native"
+        },
+        {
+          "alias": "fried rice noodles",
+          "language": "en",
+          "type": "synonym"
+        }
+      ],
+      "common_units": [
+        {
+          "unit": "cup",
+          "grams": 60
+        },
+        {
+          "unit": "oz",
+          "grams": 28
+        }
+      ]
+    }
+  ]
+}

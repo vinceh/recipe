@@ -32,6 +32,7 @@ export interface Auth {
   requireAuth: () => void
   requireAdmin: () => void
   login: (email: string, password: string) => Promise<void>
+  signup: (email: string, password: string) => Promise<void>
   logout: () => Promise<void>
 }
 
@@ -76,6 +77,15 @@ export function useAuth(): Auth {
   }
 
   /**
+   * Signup helper
+   * @param email - User email
+   * @param password - User password
+   */
+  const signup = async (email: string, password: string) => {
+    await userStore.signup({ email, password })
+  }
+
+  /**
    * Logout helper
    */
   const logout = async () => {
@@ -89,6 +99,7 @@ export function useAuth(): Auth {
     requireAuth,
     requireAdmin,
     login,
+    signup,
     logout
   }
 }

@@ -33,6 +33,15 @@ class RecipeSearchService
           .distinct
   end
 
+  # AC-SEARCH-002b: Search by free-form tags (fuzzy match)
+  def self.search_by_tags(query)
+    return Recipe.none if query.blank?
+
+    query_normalized = query.downcase.strip
+
+    Recipe.where("EXISTS (SELECT 1 FROM unnest(tags) AS tag WHERE tag ILIKE ?)", "%#{query_normalized}%")
+  end
+
   # AC-SEARCH-003: Ingredient-based search
   def self.search_by_ingredient(ingredient_name)
     return Recipe.none if ingredient_name.blank?
@@ -44,20 +53,54 @@ class RecipeSearchService
           .distinct
   end
 
-  # Combined search across name, aliases, and ingredients
+  # AC-SEARCH-003b: Instructions/directions search
+  def self.search_by_instructions(query)
+    return Recipe.none if query.blank?
+
+    query_normalized = query.downcase.strip
+
+    Recipe.joins("INNER JOIN recipe_steps ON recipe_steps.recipe_id = recipes.id")
+          .joins("INNER JOIN recipe_step_translations ON recipe_step_translations.recipe_step_id = recipe_steps.id")
+          .where("LOWER(recipe_step_translations.instruction_original) LIKE ?", "%#{query_normalized}%")
+          .distinct
+  end
+
+  # AC-SEARCH-003c: Description search
+  def self.search_by_description(query)
+    return Recipe.none if query.blank?
+
+    query_normalized = query.downcase.strip
+
+    Recipe.joins("INNER JOIN recipe_translations ON recipe_translations.recipe_id = recipes.id")
+          .where("LOWER(recipe_translations.description) LIKE ?", "%#{query_normalized}%")
+          .distinct
+  end
+
+  # Combined search across name, aliases, tags, ingredients, instructions, and description (OR logic)
   def self.comprehensive_search(query)
     return Recipe.none if query.blank?
 
-    # Try fuzzy name search first
-    name_results = fuzzy_search(query, similarity_threshold: 0.85)
-    return name_results if name_results.any?
+    query_normalized = query.downcase.strip
 
-    # Try alias search
-    alias_results = search_by_alias(query)
-    return alias_results if alias_results.any?
+    name_ids = RecipeTranslation.where("LOWER(name) LIKE ?", "%#{query_normalized}%").pluck(:recipe_id)
+    alias_ids = RecipeAlias.where("LOWER(alias_name) LIKE ?", "%#{query_normalized}%").pluck(:recipe_id)
+    tag_ids = Recipe.where("EXISTS (SELECT 1 FROM unnest(tags) AS tag WHERE LOWER(tag) LIKE ?)", "%#{query_normalized}%").pluck(:id)
+    ingredient_ids = Recipe.joins(ingredient_groups: :recipe_ingredients)
+                           .where("LOWER(recipe_ingredients.ingredient_name) LIKE ?", "%#{query_normalized}%")
+                           .pluck(:id)
+    instruction_ids = Recipe.joins("INNER JOIN recipe_steps ON recipe_steps.recipe_id = recipes.id")
+                            .joins("INNER JOIN recipe_step_translations ON recipe_step_translations.recipe_step_id = recipe_steps.id")
+                            .where("LOWER(recipe_step_translations.instruction_original) LIKE ?", "%#{query_normalized}%")
+                            .pluck(:id)
+    description_ids = Recipe.joins("INNER JOIN recipe_translations ON recipe_translations.recipe_id = recipes.id")
+                            .where("LOWER(recipe_translations.description) LIKE ?", "%#{query_normalized}%")
+                            .pluck(:id)
 
-    # Try ingredient search as last resort
-    search_by_ingredient(query)
+    all_ids = (name_ids + alias_ids + tag_ids + ingredient_ids + instruction_ids + description_ids).uniq
+
+    return Recipe.none if all_ids.empty?
+
+    Recipe.where(id: all_ids)
   end
 
   # AC-SEARCH-004: Filter by calorie range

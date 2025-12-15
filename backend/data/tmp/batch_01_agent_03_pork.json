@@ -1,0 +1,1484 @@
+{
+  "batch": 1,
+  "agent": 3,
+  "category": "pork",
+  "generated_at": "2025-12-11T00:00:00Z",
+  "ingredients": [
+    {
+      "canonical_name": "pork belly",
+      "category": "protein",
+      "per_100g": {
+        "calories": 518,
+        "protein_g": 9.3,
+        "carbs_g": 0,
+        "fat_g": 53.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "fresh bacon", "language": "en", "type": "synonym" },
+        { "alias": "豚バラ肉", "language": "ja", "type": "translation" },
+        { "alias": "삼겹살", "language": "ko", "type": "translation" },
+        { "alias": "五花肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "五花肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "panceta de cerdo", "language": "es", "type": "translation" },
+        { "alias": "poitrine de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "slice", "grams": 30 }
+      ]
+    },
+    {
+      "canonical_name": "pork shoulder",
+      "category": "protein",
+      "per_100g": {
+        "calories": 196,
+        "protein_g": 19.9,
+        "carbs_g": 0,
+        "fat_g": 12.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "pork butt", "language": "en", "type": "synonym" },
+        { "alias": "Boston butt", "language": "en", "type": "synonym" },
+        { "alias": "豚肩肉", "language": "ja", "type": "translation" },
+        { "alias": "돼지 어깨살", "language": "ko", "type": "translation" },
+        { "alias": "豬肩肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬肩肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "paleta de cerdo", "language": "es", "type": "translation" },
+        { "alias": "épaule de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork loin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 143,
+        "protein_g": 21.0,
+        "carbs_g": 0,
+        "fat_g": 6.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚ロース", "language": "ja", "type": "translation" },
+        { "alias": "돼지 등심", "language": "ko", "type": "translation" },
+        { "alias": "豬里脊", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬里脊", "language": "zh-tw", "type": "translation" },
+        { "alias": "lomo de cerdo", "language": "es", "type": "translation" },
+        { "alias": "longe de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork tenderloin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 143,
+        "protein_g": 22.8,
+        "carbs_g": 0,
+        "fat_g": 4.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "pork fillet", "language": "en", "type": "synonym" },
+        { "alias": "豚ヒレ肉", "language": "ja", "type": "translation" },
+        { "alias": "돼지 안심", "language": "ko", "type": "translation" },
+        { "alias": "豬里脊肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬里脊肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "solomillo de cerdo", "language": "es", "type": "translation" },
+        { "alias": "filet mignon de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork chop",
+      "category": "protein",
+      "per_100g": {
+        "calories": 231,
+        "protein_g": 23.5,
+        "carbs_g": 0,
+        "fat_g": 14.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚肉チョップ", "language": "ja", "type": "translation" },
+        { "alias": "돼지 갈비", "language": "ko", "type": "translation" },
+        { "alias": "豬排", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬排", "language": "zh-tw", "type": "translation" },
+        { "alias": "chuleta de cerdo", "language": "es", "type": "translation" },
+        { "alias": "côtelette de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "chop", "grams": 200 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork spare ribs",
+      "category": "protein",
+      "per_100g": {
+        "calories": 277,
+        "protein_g": 19.3,
+        "carbs_g": 0,
+        "fat_g": 21.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚スペアリブ", "language": "ja", "type": "translation" },
+        { "alias": "돼지 갈비", "language": "ko", "type": "translation" },
+        { "alias": "豬排骨", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬排骨", "language": "zh-tw", "type": "translation" },
+        { "alias": "costillas de cerdo", "language": "es", "type": "translation" },
+        { "alias": "travers de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "rack", "grams": 900 }
+      ]
+    },
+    {
+      "canonical_name": "baby back ribs",
+      "category": "protein",
+      "per_100g": {
+        "calories": 290,
+        "protein_g": 18.0,
+        "carbs_g": 0,
+        "fat_g": 24.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "back ribs", "language": "en", "type": "synonym" },
+        { "alias": "loin ribs", "language": "en", "type": "synonym" },
+        { "alias": "豚バックリブ", "language": "ja", "type": "translation" },
+        { "alias": "등갈비", "language": "ko", "type": "translation" },
+        { "alias": "豬背排", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬背排", "language": "zh-tw", "type": "translation" },
+        { "alias": "costillas baby back", "language": "es", "type": "translation" },
+        { "alias": "côtes levées", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "rack", "grams": 700 }
+      ]
+    },
+    {
+      "canonical_name": "country-style pork ribs",
+      "category": "protein",
+      "per_100g": {
+        "calories": 252,
+        "protein_g": 20.1,
+        "carbs_g": 0,
+        "fat_g": 18.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "country ribs", "language": "en", "type": "synonym" },
+        { "alias": "豚カントリースタイルリブ", "language": "ja", "type": "translation" },
+        { "alias": "컨트리 스타일 갈비", "language": "ko", "type": "translation" },
+        { "alias": "鄉村式豬排", "language": "zh-cn", "type": "translation" },
+        { "alias": "鄉村式豬排", "language": "zh-tw", "type": "translation" },
+        { "alias": "costillas estilo campestre", "language": "es", "type": "translation" },
+        { "alias": "côtes de porc campagnardes", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "ground pork",
+      "category": "protein",
+      "per_100g": {
+        "calories": 263,
+        "protein_g": 17.2,
+        "carbs_g": 0,
+        "fat_g": 21.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "minced pork", "language": "en", "type": "synonym" },
+        { "alias": "豚ひき肉", "language": "ja", "type": "translation" },
+        { "alias": "다진 돼지고기", "language": "ko", "type": "translation" },
+        { "alias": "豬絞肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬絞肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "carne de cerdo molida", "language": "es", "type": "translation" },
+        { "alias": "porc haché", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "bacon",
+      "category": "protein",
+      "per_100g": {
+        "calories": 541,
+        "protein_g": 37.0,
+        "carbs_g": 1.4,
+        "fat_g": 42.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "ベーコン", "language": "ja", "type": "translation" },
+        { "alias": "베이컨", "language": "ko", "type": "translation" },
+        { "alias": "培根", "language": "zh-cn", "type": "translation" },
+        { "alias": "培根", "language": "zh-tw", "type": "translation" },
+        { "alias": "tocino", "language": "es", "type": "translation" },
+        { "alias": "bacon", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 13 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pancetta",
+      "category": "protein",
+      "per_100g": {
+        "calories": 458,
+        "protein_g": 16.5,
+        "carbs_g": 0,
+        "fat_g": 44.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Italian bacon", "language": "en", "type": "synonym" },
+        { "alias": "パンチェッタ", "language": "ja", "type": "translation" },
+        { "alias": "판체타", "language": "ko", "type": "translation" },
+        { "alias": "意式培根", "language": "zh-cn", "type": "translation" },
+        { "alias": "義式培根", "language": "zh-tw", "type": "translation" },
+        { "alias": "panceta italiana", "language": "es", "type": "translation" },
+        { "alias": "pancetta", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "slice", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "guanciale",
+      "category": "protein",
+      "per_100g": {
+        "calories": 655,
+        "protein_g": 10.6,
+        "carbs_g": 0,
+        "fat_g": 69.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "pork jowl bacon", "language": "en", "type": "synonym" },
+        { "alias": "グアンチャーレ", "language": "ja", "type": "translation" },
+        { "alias": "관차레", "language": "ko", "type": "translation" },
+        { "alias": "豬臉頰肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬臉頰肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "guanciale", "language": "es", "type": "translation" },
+        { "alias": "guanciale", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "slice", "grams": 20 }
+      ]
+    },
+    {
+      "canonical_name": "prosciutto",
+      "category": "protein",
+      "per_100g": {
+        "calories": 237,
+        "protein_g": 25.5,
+        "carbs_g": 0.5,
+        "fat_g": 14.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "parma ham", "language": "en", "type": "synonym" },
+        { "alias": "プロシュート", "language": "ja", "type": "translation" },
+        { "alias": "프로슈토", "language": "ko", "type": "translation" },
+        { "alias": "意大利火腿", "language": "zh-cn", "type": "translation" },
+        { "alias": "義大利火腿", "language": "zh-tw", "type": "translation" },
+        { "alias": "jamón serrano", "language": "es", "type": "translation" },
+        { "alias": "prosciutto", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 10 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "ham",
+      "category": "protein",
+      "per_100g": {
+        "calories": 145,
+        "protein_g": 21.0,
+        "carbs_g": 1.5,
+        "fat_g": 5.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "ハム", "language": "ja", "type": "translation" },
+        { "alias": "햄", "language": "ko", "type": "translation" },
+        { "alias": "火腿", "language": "zh-cn", "type": "translation" },
+        { "alias": "火腿", "language": "zh-tw", "type": "translation" },
+        { "alias": "jamón", "language": "es", "type": "translation" },
+        { "alias": "jambon", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 28 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "smoked ham",
+      "category": "protein",
+      "per_100g": {
+        "calories": 163,
+        "protein_g": 22.0,
+        "carbs_g": 1.0,
+        "fat_g": 7.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "スモークハム", "language": "ja", "type": "translation" },
+        { "alias": "훈제 햄", "language": "ko", "type": "translation" },
+        { "alias": "煙熏火腿", "language": "zh-cn", "type": "translation" },
+        { "alias": "煙燻火腿", "language": "zh-tw", "type": "translation" },
+        { "alias": "jamón ahumado", "language": "es", "type": "translation" },
+        { "alias": "jambon fumé", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 28 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "Canadian bacon",
+      "category": "protein",
+      "per_100g": {
+        "calories": 185,
+        "protein_g": 23.8,
+        "carbs_g": 2.0,
+        "fat_g": 8.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "back bacon", "language": "en", "type": "synonym" },
+        { "alias": "カナディアンベーコン", "language": "ja", "type": "translation" },
+        { "alias": "캐나디안 베이컨", "language": "ko", "type": "translation" },
+        { "alias": "加拿大培根", "language": "zh-cn", "type": "translation" },
+        { "alias": "加拿大培根", "language": "zh-tw", "type": "translation" },
+        { "alias": "tocino canadiense", "language": "es", "type": "translation" },
+        { "alias": "bacon canadien", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 28 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork sausage",
+      "category": "protein",
+      "per_100g": {
+        "calories": 304,
+        "protein_g": 13.0,
+        "carbs_g": 3.0,
+        "fat_g": 27.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚肉ソーセージ", "language": "ja", "type": "translation" },
+        { "alias": "돼지고기 소시지", "language": "ko", "type": "translation" },
+        { "alias": "豬肉香腸", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬肉香腸", "language": "zh-tw", "type": "translation" },
+        { "alias": "salchicha de cerdo", "language": "es", "type": "translation" },
+        { "alias": "saucisse de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "link", "grams": 50 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "Italian sausage",
+      "category": "protein",
+      "per_100g": {
+        "calories": 346,
+        "protein_g": 15.1,
+        "carbs_g": 4.3,
+        "fat_g": 30.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "イタリアンソーセージ", "language": "ja", "type": "translation" },
+        { "alias": "이탈리안 소시지", "language": "ko", "type": "translation" },
+        { "alias": "意大利香腸", "language": "zh-cn", "type": "translation" },
+        { "alias": "義大利香腸", "language": "zh-tw", "type": "translation" },
+        { "alias": "salchicha italiana", "language": "es", "type": "translation" },
+        { "alias": "saucisse italienne", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "link", "grams": 75 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chorizo",
+      "category": "protein",
+      "per_100g": {
+        "calories": 455,
+        "protein_g": 24.1,
+        "carbs_g": 2.0,
+        "fat_g": 38.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "チョリソ", "language": "ja", "type": "translation" },
+        { "alias": "초리조", "language": "ko", "type": "translation" },
+        { "alias": "西班牙香腸", "language": "zh-cn", "type": "translation" },
+        { "alias": "西班牙香腸", "language": "zh-tw", "type": "translation" },
+        { "alias": "chorizo", "language": "es", "type": "translation" },
+        { "alias": "chorizo", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "link", "grams": 60 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "breakfast sausage",
+      "category": "protein",
+      "per_100g": {
+        "calories": 339,
+        "protein_g": 12.0,
+        "carbs_g": 2.2,
+        "fat_g": 32.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "朝食ソーセージ", "language": "ja", "type": "translation" },
+        { "alias": "조식 소시지", "language": "ko", "type": "translation" },
+        { "alias": "早餐香腸", "language": "zh-cn", "type": "translation" },
+        { "alias": "早餐香腸", "language": "zh-tw", "type": "translation" },
+        { "alias": "salchicha de desayuno", "language": "es", "type": "translation" },
+        { "alias": "saucisse petit-déjeuner", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "patty", "grams": 38 },
+        { "unit": "link", "grams": 25 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork liver",
+      "category": "protein",
+      "per_100g": {
+        "calories": 134,
+        "protein_g": 21.4,
+        "carbs_g": 2.5,
+        "fat_g": 3.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚レバー", "language": "ja", "type": "translation" },
+        { "alias": "돼지 간", "language": "ko", "type": "translation" },
+        { "alias": "豬肝", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬肝", "language": "zh-tw", "type": "translation" },
+        { "alias": "hígado de cerdo", "language": "es", "type": "translation" },
+        { "alias": "foie de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork tongue",
+      "category": "protein",
+      "per_100g": {
+        "calories": 225,
+        "protein_g": 16.4,
+        "carbs_g": 0,
+        "fat_g": 17.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚タン", "language": "ja", "type": "translation" },
+        { "alias": "돼지 혀", "language": "ko", "type": "translation" },
+        { "alias": "豬舌", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬舌", "language": "zh-tw", "type": "translation" },
+        { "alias": "lengua de cerdo", "language": "es", "type": "translation" },
+        { "alias": "langue de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork ears",
+      "category": "protein",
+      "per_100g": {
+        "calories": 166,
+        "protein_g": 22.5,
+        "carbs_g": 0.7,
+        "fat_g": 7.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚耳", "language": "ja", "type": "translation" },
+        { "alias": "돼지 귀", "language": "ko", "type": "translation" },
+        { "alias": "豬耳朵", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬耳朵", "language": "zh-tw", "type": "translation" },
+        { "alias": "orejas de cerdo", "language": "es", "type": "translation" },
+        { "alias": "oreilles de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "ear", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork feet",
+      "category": "protein",
+      "per_100g": {
+        "calories": 200,
+        "protein_g": 19.0,
+        "carbs_g": 0,
+        "fat_g": 14.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "pork trotters", "language": "en", "type": "synonym" },
+        { "alias": "豚足", "language": "ja", "type": "translation" },
+        { "alias": "족발", "language": "ko", "type": "translation" },
+        { "alias": "豬腳", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬腳", "language": "zh-tw", "type": "translation" },
+        { "alias": "manitas de cerdo", "language": "es", "type": "translation" },
+        { "alias": "pieds de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "foot", "grams": 400 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "pork intestines",
+      "category": "protein",
+      "per_100g": {
+        "calories": 153,
+        "protein_g": 11.0,
+        "carbs_g": 0,
+        "fat_g": 12.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chitterlings", "language": "en", "type": "synonym" },
+        { "alias": "豚モツ", "language": "ja", "type": "translation" },
+        { "alias": "돼지 곱창", "language": "ko", "type": "translation" },
+        { "alias": "豬腸", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬腸", "language": "zh-tw", "type": "translation" },
+        { "alias": "intestinos de cerdo", "language": "es", "type": "translation" },
+        { "alias": "intestins de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork fatback",
+      "category": "protein",
+      "per_100g": {
+        "calories": 816,
+        "protein_g": 2.9,
+        "carbs_g": 0,
+        "fat_g": 89.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚背脂", "language": "ja", "type": "translation" },
+        { "alias": "돼지 등지방", "language": "ko", "type": "translation" },
+        { "alias": "豬背膘", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬背膘", "language": "zh-tw", "type": "translation" },
+        { "alias": "tocino graso", "language": "es", "type": "translation" },
+        { "alias": "lard gras", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork jowl",
+      "category": "protein",
+      "per_100g": {
+        "calories": 655,
+        "protein_g": 10.6,
+        "carbs_g": 0,
+        "fat_g": 69.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚ほほ肉", "language": "ja", "type": "translation" },
+        { "alias": "돼지 볼살", "language": "ko", "type": "translation" },
+        { "alias": "豬頰肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬頰肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "papada de cerdo", "language": "es", "type": "translation" },
+        { "alias": "joue de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork hock",
+      "category": "protein",
+      "per_100g": {
+        "calories": 256,
+        "protein_g": 22.3,
+        "carbs_g": 0,
+        "fat_g": 18.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "pork knuckle", "language": "en", "type": "synonym" },
+        { "alias": "豚すね肉", "language": "ja", "type": "translation" },
+        { "alias": "돼지 족발", "language": "ko", "type": "translation" },
+        { "alias": "豬蹄膀", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬蹄膀", "language": "zh-tw", "type": "translation" },
+        { "alias": "codillo de cerdo", "language": "es", "type": "translation" },
+        { "alias": "jarret de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "hock", "grams": 600 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "pork sirloin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 157,
+        "protein_g": 21.4,
+        "carbs_g": 0,
+        "fat_g": 7.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚サーロイン", "language": "ja", "type": "translation" },
+        { "alias": "돼지 등심", "language": "ko", "type": "translation" },
+        { "alias": "豬裡脊", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬裡脊", "language": "zh-tw", "type": "translation" },
+        { "alias": "lomo de cerdo", "language": "es", "type": "translation" },
+        { "alias": "aloyau de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "boneless pork chop",
+      "category": "protein",
+      "per_100g": {
+        "calories": 206,
+        "protein_g": 24.3,
+        "carbs_g": 0,
+        "fat_g": 11.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "骨なし豚肉チョップ", "language": "ja", "type": "translation" },
+        { "alias": "뼈 없는 돼지 갈비", "language": "ko", "type": "translation" },
+        { "alias": "無骨豬排", "language": "zh-cn", "type": "translation" },
+        { "alias": "無骨豬排", "language": "zh-tw", "type": "translation" },
+        { "alias": "chuleta de cerdo sin hueso", "language": "es", "type": "translation" },
+        { "alias": "côtelette de porc désossée", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "chop", "grams": 180 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "bone-in pork chop",
+      "category": "protein",
+      "per_100g": {
+        "calories": 231,
+        "protein_g": 23.5,
+        "carbs_g": 0,
+        "fat_g": 14.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "骨付き豚肉チョップ", "language": "ja", "type": "translation" },
+        { "alias": "뼈 있는 돼지 갈비", "language": "ko", "type": "translation" },
+        { "alias": "帶骨豬排", "language": "zh-cn", "type": "translation" },
+        { "alias": "帶骨豬排", "language": "zh-tw", "type": "translation" },
+        { "alias": "chuleta de cerdo con hueso", "language": "es", "type": "translation" },
+        { "alias": "côtelette de porc avec os", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "chop", "grams": 200 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork crown roast",
+      "category": "protein",
+      "per_100g": {
+        "calories": 242,
+        "protein_g": 21.0,
+        "carbs_g": 0,
+        "fat_g": 17.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "クラウンロースト", "language": "ja", "type": "translation" },
+        { "alias": "크라운 로스트", "language": "ko", "type": "translation" },
+        { "alias": "皇冠烤豬", "language": "zh-cn", "type": "translation" },
+        { "alias": "皇冠烤豬", "language": "zh-tw", "type": "translation" },
+        { "alias": "corona de cerdo", "language": "es", "type": "translation" },
+        { "alias": "couronne de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "pork picnic shoulder",
+      "category": "protein",
+      "per_100g": {
+        "calories": 240,
+        "protein_g": 19.2,
+        "carbs_g": 0,
+        "fat_g": 17.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "picnic roast", "language": "en", "type": "synonym" },
+        { "alias": "豚肩ロース", "language": "ja", "type": "translation" },
+        { "alias": "돼지 앞다리", "language": "ko", "type": "translation" },
+        { "alias": "豬前腿", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬前腿", "language": "zh-tw", "type": "translation" },
+        { "alias": "paleta de cerdo", "language": "es", "type": "translation" },
+        { "alias": "épaule picnic", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "pork blade steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 221,
+        "protein_g": 20.5,
+        "carbs_g": 0,
+        "fat_g": 14.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚肩ロースステーキ", "language": "ja", "type": "translation" },
+        { "alias": "돼지 어깨 스테이크", "language": "ko", "type": "translation" },
+        { "alias": "豬肩排", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬肩排", "language": "zh-tw", "type": "translation" },
+        { "alias": "bistec de paleta", "language": "es", "type": "translation" },
+        { "alias": "bifteck d'épaule", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 200 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork cutlet",
+      "category": "protein",
+      "per_100g": {
+        "calories": 206,
+        "protein_g": 24.3,
+        "carbs_g": 0,
+        "fat_g": 11.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "tonkatsu", "language": "en", "type": "synonym" },
+        { "alias": "豚カツ", "language": "ja", "type": "translation" },
+        { "alias": "돈까스", "language": "ko", "type": "translation" },
+        { "alias": "豬排", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬排", "language": "zh-tw", "type": "translation" },
+        { "alias": "escalope de cerdo", "language": "es", "type": "translation" },
+        { "alias": "escalope de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cutlet", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "salt pork",
+      "category": "protein",
+      "per_100g": {
+        "calories": 748,
+        "protein_g": 5.1,
+        "carbs_g": 0,
+        "fat_g": 80.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "塩漬け豚肉", "language": "ja", "type": "translation" },
+        { "alias": "소금 돼지고기", "language": "ko", "type": "translation" },
+        { "alias": "鹹豬肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "鹹豬肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "tocino salado", "language": "es", "type": "translation" },
+        { "alias": "lard salé", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "pork schnitzel",
+      "category": "protein",
+      "per_100g": {
+        "calories": 218,
+        "protein_g": 23.0,
+        "carbs_g": 5.0,
+        "fat_g": 12.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "シュニッツェル", "language": "ja", "type": "translation" },
+        { "alias": "슈니첼", "language": "ko", "type": "translation" },
+        { "alias": "炸豬排", "language": "zh-cn", "type": "translation" },
+        { "alias": "炸豬排", "language": "zh-tw", "type": "translation" },
+        { "alias": "escalope vienesa", "language": "es", "type": "translation" },
+        { "alias": "escalope viennoise", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "schnitzel", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork sausage patty",
+      "category": "protein",
+      "per_100g": {
+        "calories": 339,
+        "protein_g": 12.0,
+        "carbs_g": 2.2,
+        "fat_g": 32.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "ソーセージパティ", "language": "ja", "type": "translation" },
+        { "alias": "소시지 패티", "language": "ko", "type": "translation" },
+        { "alias": "豬肉餅", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬肉餅", "language": "zh-tw", "type": "translation" },
+        { "alias": "hamburguesa de salchicha", "language": "es", "type": "translation" },
+        { "alias": "galette de saucisse", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "patty", "grams": 38 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork rind",
+      "category": "protein",
+      "per_100g": {
+        "calories": 544,
+        "protein_g": 61.3,
+        "carbs_g": 0,
+        "fat_g": 31.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "pork skin", "language": "en", "type": "synonym" },
+        { "alias": "chicharrones", "language": "en", "type": "synonym" },
+        { "alias": "豚皮", "language": "ja", "type": "translation" },
+        { "alias": "돼지껍데기", "language": "ko", "type": "translation" },
+        { "alias": "豬皮", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬皮", "language": "zh-tw", "type": "translation" },
+        { "alias": "chicharrón", "language": "es", "type": "translation" },
+        { "alias": "couenne de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork heart",
+      "category": "protein",
+      "per_100g": {
+        "calories": 118,
+        "protein_g": 17.0,
+        "carbs_g": 0.8,
+        "fat_g": 4.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚ハツ", "language": "ja", "type": "translation" },
+        { "alias": "돼지 염통", "language": "ko", "type": "translation" },
+        { "alias": "豬心", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬心", "language": "zh-tw", "type": "translation" },
+        { "alias": "corazón de cerdo", "language": "es", "type": "translation" },
+        { "alias": "cœur de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "heart", "grams": 300 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork kidney",
+      "category": "protein",
+      "per_100g": {
+        "calories": 100,
+        "protein_g": 16.5,
+        "carbs_g": 0,
+        "fat_g": 3.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚腎臓", "language": "ja", "type": "translation" },
+        { "alias": "돼지 콩팥", "language": "ko", "type": "translation" },
+        { "alias": "豬腰", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬腰", "language": "zh-tw", "type": "translation" },
+        { "alias": "riñón de cerdo", "language": "es", "type": "translation" },
+        { "alias": "rognon de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "kidney", "grams": 100 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork back ribs",
+      "category": "protein",
+      "per_100g": {
+        "calories": 290,
+        "protein_g": 18.0,
+        "carbs_g": 0,
+        "fat_g": 24.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚バックリブ", "language": "ja", "type": "translation" },
+        { "alias": "등갈비", "language": "ko", "type": "translation" },
+        { "alias": "豬背肋排", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬背肋排", "language": "zh-tw", "type": "translation" },
+        { "alias": "costillas de lomo", "language": "es", "type": "translation" },
+        { "alias": "côtes de dos", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "rack", "grams": 700 }
+      ]
+    },
+    {
+      "canonical_name": "pork riblets",
+      "category": "protein",
+      "per_100g": {
+        "calories": 270,
+        "protein_g": 19.0,
+        "carbs_g": 0,
+        "fat_g": 21.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚リブレット", "language": "ja", "type": "translation" },
+        { "alias": "작은 갈비", "language": "ko", "type": "translation" },
+        { "alias": "小排骨", "language": "zh-cn", "type": "translation" },
+        { "alias": "小排骨", "language": "zh-tw", "type": "translation" },
+        { "alias": "costillas pequeñas", "language": "es", "type": "translation" },
+        { "alias": "petites côtes", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork medallion",
+      "category": "protein",
+      "per_100g": {
+        "calories": 143,
+        "protein_g": 22.8,
+        "carbs_g": 0,
+        "fat_g": 4.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚メダリオン", "language": "ja", "type": "translation" },
+        { "alias": "돼지 메달리온", "language": "ko", "type": "translation" },
+        { "alias": "豬肉圓片", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬肉圓片", "language": "zh-tw", "type": "translation" },
+        { "alias": "medallón de cerdo", "language": "es", "type": "translation" },
+        { "alias": "médaillon de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "medallion", "grams": 100 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "smoked pork chop",
+      "category": "protein",
+      "per_100g": {
+        "calories": 250,
+        "protein_g": 22.0,
+        "carbs_g": 0,
+        "fat_g": 17.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "スモークポークチョップ", "language": "ja", "type": "translation" },
+        { "alias": "훈제 돼지 갈비", "language": "ko", "type": "translation" },
+        { "alias": "煙熏豬排", "language": "zh-cn", "type": "translation" },
+        { "alias": "煙燻豬排", "language": "zh-tw", "type": "translation" },
+        { "alias": "chuleta ahumada", "language": "es", "type": "translation" },
+        { "alias": "côtelette fumée", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "chop", "grams": 200 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 221,
+        "protein_g": 20.5,
+        "carbs_g": 0,
+        "fat_g": 14.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚ステーキ", "language": "ja", "type": "translation" },
+        { "alias": "돼지 스테이크", "language": "ko", "type": "translation" },
+        { "alias": "豬扒", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬扒", "language": "zh-tw", "type": "translation" },
+        { "alias": "bistec de cerdo", "language": "es", "type": "translation" },
+        { "alias": "bifteck de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 200 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork roast",
+      "category": "protein",
+      "per_100g": {
+        "calories": 196,
+        "protein_g": 19.9,
+        "carbs_g": 0,
+        "fat_g": 12.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚ロースト", "language": "ja", "type": "translation" },
+        { "alias": "돼지 로스트", "language": "ko", "type": "translation" },
+        { "alias": "烤豬肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "烤豬肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "asado de cerdo", "language": "es", "type": "translation" },
+        { "alias": "rôti de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork leg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 183,
+        "protein_g": 21.5,
+        "carbs_g": 0,
+        "fat_g": 10.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "fresh ham", "language": "en", "type": "synonym" },
+        { "alias": "豚もも肉", "language": "ja", "type": "translation" },
+        { "alias": "돼지 다리", "language": "ko", "type": "translation" },
+        { "alias": "豬腿", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬腿", "language": "zh-tw", "type": "translation" },
+        { "alias": "pierna de cerdo", "language": "es", "type": "translation" },
+        { "alias": "cuisse de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork shoulder blade",
+      "category": "protein",
+      "per_100g": {
+        "calories": 221,
+        "protein_g": 20.5,
+        "carbs_g": 0,
+        "fat_g": 14.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚肩ブレード", "language": "ja", "type": "translation" },
+        { "alias": "돼지 어깨 블레이드", "language": "ko", "type": "translation" },
+        { "alias": "豬肩胛肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬肩胛肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "paleta de cerdo", "language": "es", "type": "translation" },
+        { "alias": "palette de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork neck bones",
+      "category": "protein",
+      "per_100g": {
+        "calories": 185,
+        "protein_g": 17.5,
+        "carbs_g": 0,
+        "fat_g": 12.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚首骨", "language": "ja", "type": "translation" },
+        { "alias": "돼지 목뼈", "language": "ko", "type": "translation" },
+        { "alias": "豬頸骨", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬頸骨", "language": "zh-tw", "type": "translation" },
+        { "alias": "huesos de cuello", "language": "es", "type": "translation" },
+        { "alias": "os de cou de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork tail",
+      "category": "protein",
+      "per_100g": {
+        "calories": 378,
+        "protein_g": 30.3,
+        "carbs_g": 0,
+        "fat_g": 27.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚尾", "language": "ja", "type": "translation" },
+        { "alias": "돼지 꼬리", "language": "ko", "type": "translation" },
+        { "alias": "豬尾", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬尾", "language": "zh-tw", "type": "translation" },
+        { "alias": "cola de cerdo", "language": "es", "type": "translation" },
+        { "alias": "queue de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tail", "grams": 200 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork stomach",
+      "category": "protein",
+      "per_100g": {
+        "calories": 158,
+        "protein_g": 15.8,
+        "carbs_g": 0,
+        "fat_g": 10.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚胃", "language": "ja", "type": "translation" },
+        { "alias": "돼지 위", "language": "ko", "type": "translation" },
+        { "alias": "豬肚", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬肚", "language": "zh-tw", "type": "translation" },
+        { "alias": "estómago de cerdo", "language": "es", "type": "translation" },
+        { "alias": "estomac de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork spleen",
+      "category": "protein",
+      "per_100g": {
+        "calories": 105,
+        "protein_g": 18.3,
+        "carbs_g": 0,
+        "fat_g": 2.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚脾臓", "language": "ja", "type": "translation" },
+        { "alias": "돼지 비장", "language": "ko", "type": "translation" },
+        { "alias": "豬脾", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬脾", "language": "zh-tw", "type": "translation" },
+        { "alias": "bazo de cerdo", "language": "es", "type": "translation" },
+        { "alias": "rate de porc", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "spleen", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lap cheong",
+      "category": "protein",
+      "per_100g": {
+        "calories": 382,
+        "protein_g": 18.0,
+        "carbs_g": 12.0,
+        "fat_g": 29.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Chinese sausage", "language": "en", "type": "synonym" },
+        { "alias": "中華ソーセージ", "language": "ja", "type": "translation" },
+        { "alias": "중국 소시지", "language": "ko", "type": "translation" },
+        { "alias": "腊肠", "language": "zh-cn", "type": "translation" },
+        { "alias": "臘腸", "language": "zh-tw", "type": "translation" },
+        { "alias": "salchicha china", "language": "es", "type": "translation" },
+        { "alias": "saucisse chinoise", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "link", "grams": 40 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "char siu",
+      "category": "protein",
+      "per_100g": {
+        "calories": 280,
+        "protein_g": 20.0,
+        "carbs_g": 15.0,
+        "fat_g": 16.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "BBQ pork", "language": "en", "type": "synonym" },
+        { "alias": "Chinese BBQ pork", "language": "en", "type": "synonym" },
+        { "alias": "チャーシュー", "language": "ja", "type": "translation" },
+        { "alias": "차슈", "language": "ko", "type": "translation" },
+        { "alias": "叉烧", "language": "zh-cn", "type": "translation" },
+        { "alias": "叉燒", "language": "zh-tw", "type": "translation" },
+        { "alias": "cerdo BBQ chino", "language": "es", "type": "translation" },
+        { "alias": "porc BBQ chinois", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "longaniza",
+      "category": "protein",
+      "per_100g": {
+        "calories": 350,
+        "protein_g": 16.0,
+        "carbs_g": 3.0,
+        "fat_g": 31.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "ロンガニーサ", "language": "ja", "type": "translation" },
+        { "alias": "롱가니자", "language": "ko", "type": "translation" },
+        { "alias": "香腸", "language": "zh-cn", "type": "translation" },
+        { "alias": "香腸", "language": "zh-tw", "type": "translation" },
+        { "alias": "longaniza", "language": "es", "type": "translation" },
+        { "alias": "longaniza", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "link", "grams": 60 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "nduja",
+      "category": "protein",
+      "per_100g": {
+        "calories": 420,
+        "protein_g": 18.0,
+        "carbs_g": 2.0,
+        "fat_g": 38.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "ンドゥイヤ", "language": "ja", "type": "translation" },
+        { "alias": "은두야", "language": "ko", "type": "translation" },
+        { "alias": "恩杜亚辣肉酱", "language": "zh-cn", "type": "translation" },
+        { "alias": "恩杜亞辣肉醬", "language": "zh-tw", "type": "translation" },
+        { "alias": "nduja", "language": "es", "type": "translation" },
+        { "alias": "nduja", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "cured pork belly",
+      "category": "protein",
+      "per_100g": {
+        "calories": 458,
+        "protein_g": 16.5,
+        "carbs_g": 0,
+        "fat_g": 44.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "塩漬け豚バラ", "language": "ja", "type": "translation" },
+        { "alias": "염장 삼겹살", "language": "ko", "type": "translation" },
+        { "alias": "腌制五花肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "醃製五花肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "panceta curada", "language": "es", "type": "translation" },
+        { "alias": "poitrine de porc salée", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork loin chop",
+      "category": "protein",
+      "per_100g": {
+        "calories": 206,
+        "protein_g": 24.3,
+        "carbs_g": 0,
+        "fat_g": 11.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚ロースチョップ", "language": "ja", "type": "translation" },
+        { "alias": "돼지 등심 찹", "language": "ko", "type": "translation" },
+        { "alias": "豬里脊排", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬里脊排", "language": "zh-tw", "type": "translation" },
+        { "alias": "chuleta de lomo", "language": "es", "type": "translation" },
+        { "alias": "côtelette de longe", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "chop", "grams": 180 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork center cut chop",
+      "category": "protein",
+      "per_100g": {
+        "calories": 201,
+        "protein_g": 24.8,
+        "carbs_g": 0,
+        "fat_g": 10.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚センターカットチョップ", "language": "ja", "type": "translation" },
+        { "alias": "중심 컷 찹", "language": "ko", "type": "translation" },
+        { "alias": "中切豬排", "language": "zh-cn", "type": "translation" },
+        { "alias": "中切豬排", "language": "zh-tw", "type": "translation" },
+        { "alias": "chuleta de corte central", "language": "es", "type": "translation" },
+        { "alias": "côtelette de milieu", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "chop", "grams": 190 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork rib chop",
+      "category": "protein",
+      "per_100g": {
+        "calories": 242,
+        "protein_g": 22.5,
+        "carbs_g": 0,
+        "fat_g": 16.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚リブチョップ", "language": "ja", "type": "translation" },
+        { "alias": "돼지 갈비 찹", "language": "ko", "type": "translation" },
+        { "alias": "豬肋排", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬肋排", "language": "zh-tw", "type": "translation" },
+        { "alias": "chuleta de costilla", "language": "es", "type": "translation" },
+        { "alias": "côtelette de côte", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "chop", "grams": 200 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork sirloin chop",
+      "category": "protein",
+      "per_100g": {
+        "calories": 181,
+        "protein_g": 23.7,
+        "carbs_g": 0,
+        "fat_g": 8.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚サーロインチョップ", "language": "ja", "type": "translation" },
+        { "alias": "돼지 등심 찹", "language": "ko", "type": "translation" },
+        { "alias": "豬腰脊排", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬腰脊排", "language": "zh-tw", "type": "translation" },
+        { "alias": "chuleta de solomillo", "language": "es", "type": "translation" },
+        { "alias": "côtelette d'aloyau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "chop", "grams": 185 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pork top loin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 165,
+        "protein_g": 22.2,
+        "carbs_g": 0,
+        "fat_g": 7.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "豚トップロイン", "language": "ja", "type": "translation" },
+        { "alias": "돼지 상등심", "language": "ko", "type": "translation" },
+        { "alias": "豬上腰肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "豬上腰肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "lomo superior", "language": "es", "type": "translation" },
+        { "alias": "longe supérieure", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    }
+  ]
+}

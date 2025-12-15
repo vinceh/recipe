@@ -1,0 +1,802 @@
+[
+  {
+    "canonical_name": "black tapioca pearls",
+    "category": "grains",
+    "nutrition_per_100g": {
+      "calories": 358,
+      "protein": 0.3,
+      "carbs": 88.7,
+      "fat": 0.2,
+      "fiber": 0.9
+    },
+    "aliases": {
+      "zh-tw": ["珍珠", "黑珍珠", "粉圓"],
+      "pinyin": ["zhen zhu", "hei zhen zhu", "fen yuan"]
+    },
+    "common_units": ["g", "cup", "tbsp"]
+  },
+  {
+    "canonical_name": "taro powder",
+    "category": "vegetables",
+    "nutrition_per_100g": {
+      "calories": 350,
+      "protein": 1.5,
+      "carbs": 85.0,
+      "fat": 0.3,
+      "fiber": 2.0
+    },
+    "aliases": {
+      "zh-tw": ["芋頭粉", "香芋粉"],
+      "pinyin": ["yu tou fen", "xiang yu fen"]
+    },
+    "common_units": ["g", "tbsp", "cup"]
+  },
+  {
+    "canonical_name": "taiwanese sausage",
+    "category": "meat",
+    "nutrition_per_100g": {
+      "calories": 375,
+      "protein": 14.0,
+      "carbs": 18.0,
+      "fat": 28.0,
+      "fiber": 0.0
+    },
+    "aliases": {
+      "zh-tw": ["台式香腸", "香腸", "台灣香腸"],
+      "pinyin": ["tai shi xiang chang", "xiang chang", "tai wan xiang chang"]
+    },
+    "common_units": ["piece", "g", "link"]
+  },
+  {
+    "canonical_name": "stinky tofu",
+    "category": "tofu",
+    "nutrition_per_100g": {
+      "calories": 76,
+      "protein": 8.1,
+      "carbs": 1.9,
+      "fat": 4.8,
+      "fiber": 0.6
+    },
+    "aliases": {
+      "zh-tw": ["臭豆腐"],
+      "pinyin": ["chou dou fu"]
+    },
+    "common_units": ["piece", "g", "block"]
+  },
+  {
+    "canonical_name": "pork floss",
+    "category": "meat",
+    "nutrition_per_100g": {
+      "calories": 380,
+      "protein": 45.0,
+      "carbs": 12.0,
+      "fat": 16.0,
+      "fiber": 0.0
+    },
+    "aliases": {
+      "zh-tw": ["肉鬆", "豬肉鬆"],
+      "pinyin": ["rou song", "zhu rou song"]
+    },
+    "common_units": ["g", "tbsp", "cup"]
+  },
+  {
+    "canonical_name": "fresh oysters",
+    "category": "seafood",
+    "nutrition_per_100g": {
+      "calories": 68,
+      "protein": 7.1,
+      "carbs": 3.9,
+      "fat": 2.5,
+      "fiber": 0.0
+    },
+    "aliases": {
+      "zh-tw": ["蚵仔", "牡蠣", "鮮蚵"],
+      "pinyin": ["ke zai", "mu li", "xian ke"]
+    },
+    "common_units": ["g", "piece", "dozen"]
+  },
+  {
+    "canonical_name": "sweet potato starch",
+    "category": "grains",
+    "nutrition_per_100g": {
+      "calories": 357,
+      "protein": 0.1,
+      "carbs": 88.2,
+      "fat": 0.1,
+      "fiber": 0.2
+    },
+    "aliases": {
+      "zh-tw": ["地瓜粉", "番薯粉"],
+      "pinyin": ["di gua fen", "fan shu fen"]
+    },
+    "common_units": ["g", "tbsp", "cup"]
+  },
+  {
+    "canonical_name": "garland chrysanthemum",
+    "category": "vegetables",
+    "nutrition_per_100g": {
+      "calories": 23,
+      "protein": 2.3,
+      "carbs": 3.9,
+      "fat": 0.2,
+      "fiber": 2.8
+    },
+    "aliases": {
+      "zh-tw": ["茼蒿", "春菊"],
+      "pinyin": ["tong hao", "chun ju"]
+    },
+    "common_units": ["g", "bunch", "cup"]
+  },
+  {
+    "canonical_name": "taiwanese basil",
+    "category": "herbs",
+    "nutrition_per_100g": {
+      "calories": 23,
+      "protein": 3.2,
+      "carbs": 2.7,
+      "fat": 0.6,
+      "fiber": 1.6
+    },
+    "aliases": {
+      "zh-tw": ["九層塔", "羅勒"],
+      "pinyin": ["jiu ceng ta", "luo le"]
+    },
+    "common_units": ["g", "bunch", "cup"]
+  },
+  {
+    "canonical_name": "duck blood curd",
+    "category": "meat",
+    "nutrition_per_100g": {
+      "calories": 30,
+      "protein": 4.0,
+      "carbs": 0.2,
+      "fat": 1.3,
+      "fiber": 0.0
+    },
+    "aliases": {
+      "zh-tw": ["鴨血", "血豆腐"],
+      "pinyin": ["ya xie", "xie dou fu"]
+    },
+    "common_units": ["g", "piece", "block"]
+  },
+  {
+    "canonical_name": "fish balls",
+    "category": "seafood",
+    "nutrition_per_100g": {
+      "calories": 108,
+      "protein": 12.0,
+      "carbs": 8.5,
+      "fat": 2.3,
+      "fiber": 0.0
+    },
+    "aliases": {
+      "zh-tw": ["魚丸", "貢丸"],
+      "pinyin": ["yu wan", "gong wan"]
+    },
+    "common_units": ["piece", "g", "dozen"]
+  },
+  {
+    "canonical_name": "pork intestines",
+    "category": "meat",
+    "nutrition_per_100g": {
+      "calories": 196,
+      "protein": 12.5,
+      "carbs": 0.0,
+      "fat": 16.2,
+      "fiber": 0.0
+    },
+    "aliases": {
+      "zh-tw": ["豬大腸", "大腸"],
+      "pinyin": ["zhu da chang", "da chang"]
+    },
+    "common_units": ["g", "piece", "section"]
+  },
+  {
+    "canonical_name": "dried tofu",
+    "category": "tofu",
+    "nutrition_per_100g": {
+      "calories": 140,
+      "protein": 15.8,
+      "carbs": 4.9,
+      "fat": 6.4,
+      "fiber": 1.3
+    },
+    "aliases": {
+      "zh-tw": ["豆乾", "豆干"],
+      "pinyin": ["dou gan"]
+    },
+    "common_units": ["piece", "g", "slice"]
+  },
+  {
+    "canonical_name": "kelp knots",
+    "category": "vegetables",
+    "nutrition_per_100g": {
+      "calories": 43,
+      "protein": 1.7,
+      "carbs": 9.6,
+      "fat": 0.6,
+      "fiber": 2.0
+    },
+    "aliases": {
+      "zh-tw": ["海帶結", "昆布結"],
+      "pinyin": ["hai dai jie", "kun bu jie"]
+    },
+    "common_units": ["piece", "g", "knot"]
+  },
+  {
+    "canonical_name": "pig ears",
+    "category": "meat",
+    "nutrition_per_100g": {
+      "calories": 234,
+      "protein": 22.5,
+      "carbs": 0.0,
+      "fat": 15.8,
+      "fiber": 0.0
+    },
+    "aliases": {
+      "zh-tw": ["豬耳朵", "豬耳"],
+      "pinyin": ["zhu er duo", "zhu er"]
+    },
+    "common_units": ["g", "piece", "slice"]
+  },
+  {
+    "canonical_name": "chicken feet",
+    "category": "meat",
+    "nutrition_per_100g": {
+      "calories": 215,
+      "protein": 19.4,
+      "carbs": 0.0,
+      "fat": 14.6,
+      "fiber": 0.0
+    },
+    "aliases": {
+      "zh-tw": ["雞爪", "鳳爪"],
+      "pinyin": ["ji zhao", "feng zhao"]
+    },
+    "common_units": ["piece", "g", "claw"]
+  },
+  {
+    "canonical_name": "braised eggs",
+    "category": "eggs",
+    "nutrition_per_100g": {
+      "calories": 155,
+      "protein": 12.6,
+      "carbs": 1.1,
+      "fat": 10.6,
+      "fiber": 0.0
+    },
+    "aliases": {
+      "zh-tw": ["滷蛋", "茶葉蛋"],
+      "pinyin": ["lu dan", "cha ye dan"]
+    },
+    "common_units": ["piece", "g", "egg"]
+  },
+  {
+    "canonical_name": "bamboo shoots",
+    "category": "vegetables",
+    "nutrition_per_100g": {
+      "calories": 27,
+      "protein": 2.6,
+      "carbs": 5.2,
+      "fat": 0.3,
+      "fiber": 2.2
+    },
+    "aliases": {
+      "zh-tw": ["竹筍", "筍"],
+      "pinyin": ["zhu sun", "sun"]
+    },
+    "common_units": ["g", "cup", "piece"]
+  },
+  {
+    "canonical_name": "rice noodles",
+    "category": "grains",
+    "nutrition_per_100g": {
+      "calories": 109,
+      "protein": 1.8,
+      "carbs": 24.9,
+      "fat": 0.2,
+      "fiber": 1.0
+    },
+    "aliases": {
+      "zh-tw": ["米粉", "炊粉"],
+      "pinyin": ["mi fen", "chui fen"]
+    },
+    "common_units": ["g", "cup", "bundle"]
+  },
+  {
+    "canonical_name": "thick rice noodles",
+    "category": "grains",
+    "nutrition_per_100g": {
+      "calories": 192,
+      "protein": 1.9,
+      "carbs": 44.0,
+      "fat": 0.3,
+      "fiber": 1.2
+    },
+    "aliases": {
+      "zh-tw": ["粗米粉", "粗炊"],
+      "pinyin": ["cu mi fen", "cu chui"]
+    },
+    "common_units": ["g", "cup", "bundle"]
+  },
+  {
+    "canonical_name": "wheat gluten",
+    "category": "tofu",
+    "nutrition_per_100g": {
+      "calories": 370,
+      "protein": 75.0,
+      "carbs": 13.8,
+      "fat": 1.9,
+      "fiber": 0.6
+    },
+    "aliases": {
+      "zh-tw": ["麵筋", "烤麩"],
+      "pinyin": ["mian jin", "kao fu"]
+    },
+    "common_units": ["g", "piece", "cup"]
+  },
+  {
+    "canonical_name": "cuttlefish balls",
+    "category": "seafood",
+    "nutrition_per_100g": {
+      "calories": 95,
+      "protein": 15.8,
+      "carbs": 6.2,
+      "fat": 0.7,
+      "fiber": 0.0
+    },
+    "aliases": {
+      "zh-tw": ["花枝丸", "墨魚丸"],
+      "pinyin": ["hua zhi wan", "mo yu wan"]
+    },
+    "common_units": ["piece", "g", "dozen"]
+  },
+  {
+    "canonical_name": "fried tofu puffs",
+    "category": "tofu",
+    "nutrition_per_100g": {
+      "calories": 271,
+      "protein": 18.8,
+      "carbs": 4.9,
+      "fat": 20.2,
+      "fiber": 1.8
+    },
+    "aliases": {
+      "zh-tw": ["油豆腐", "炸豆腐"],
+      "pinyin": ["you dou fu", "zha dou fu"]
+    },
+    "common_units": ["piece", "g", "puff"]
+  },
+  {
+    "canonical_name": "taiwanese pickled cabbage",
+    "category": "vegetables",
+    "nutrition_per_100g": {
+      "calories": 19,
+      "protein": 1.0,
+      "carbs": 4.2,
+      "fat": 0.1,
+      "fiber": 1.6
+    },
+    "aliases": {
+      "zh-tw": ["酸菜", "台式酸菜"],
+      "pinyin": ["suan cai", "tai shi suan cai"]
+    },
+    "common_units": ["g", "cup", "tbsp"]
+  },
+  {
+    "canonical_name": "glutinous rice",
+    "category": "grains",
+    "nutrition_per_100g": {
+      "calories": 97,
+      "protein": 2.0,
+      "carbs": 21.1,
+      "fat": 0.2,
+      "fiber": 0.6
+    },
+    "aliases": {
+      "zh-tw": ["糯米", "長糯米"],
+      "pinyin": ["nuo mi", "chang nuo mi"]
+    },
+    "common_units": ["cup", "g", "tbsp"]
+  },
+  {
+    "canonical_name": "shiitake mushrooms",
+    "category": "vegetables",
+    "nutrition_per_100g": {
+      "calories": 34,
+      "protein": 2.2,
+      "carbs": 6.8,
+      "fat": 0.5,
+      "fiber": 2.5
+    },
+    "aliases": {
+      "zh-tw": ["香菇", "冬菇"],
+      "pinyin": ["xiang gu", "dong gu"]
+    },
+    "common_units": ["piece", "g", "cup"]
+  },
+  {
+    "canonical_name": "dried shrimp",
+    "category": "seafood",
+    "nutrition_per_100g": {
+      "calories": 303,
+      "protein": 63.7,
+      "carbs": 2.4,
+      "fat": 3.8,
+      "fiber": 0.0
+    },
+    "aliases": {
+      "zh-tw": ["蝦米", "蝦仁乾", "櫻花蝦"],
+      "pinyin": ["xia mi", "xia ren gan", "ying hua xia"]
+    },
+    "common_units": ["g", "tbsp", "cup"]
+  },
+  {
+    "canonical_name": "fried shallots",
+    "category": "vegetables",
+    "nutrition_per_100g": {
+      "calories": 592,
+      "protein": 6.3,
+      "carbs": 44.0,
+      "fat": 44.0,
+      "fiber": 3.2
+    },
+    "aliases": {
+      "zh-tw": ["油葱酥", "紅葱酥"],
+      "pinyin": ["you cong su", "hong cong su"]
+    },
+    "common_units": ["g", "tbsp", "cup"]
+  },
+  {
+    "canonical_name": "peanut powder",
+    "category": "nuts",
+    "nutrition_per_100g": {
+      "calories": 567,
+      "protein": 25.8,
+      "carbs": 16.1,
+      "fat": 49.2,
+      "fiber": 8.5
+    },
+    "aliases": {
+      "zh-tw": ["花生粉", "土豆粉"],
+      "pinyin": ["hua sheng fen", "tu dou fen"]
+    },
+    "common_units": ["g", "tbsp", "cup"]
+  },
+  {
+    "canonical_name": "cilantro",
+    "category": "herbs",
+    "nutrition_per_100g": {
+      "calories": 23,
+      "protein": 2.1,
+      "carbs": 3.7,
+      "fat": 0.5,
+      "fiber": 2.8
+    },
+    "aliases": {
+      "zh-tw": ["香菜", "芫荽"],
+      "pinyin": ["xiang cai", "yan sui"]
+    },
+    "common_units": ["g", "bunch", "cup"]
+  },
+  {
+    "canonical_name": "taiwanese meatballs",
+    "category": "meat",
+    "nutrition_per_100g": {
+      "calories": 165,
+      "protein": 8.5,
+      "carbs": 18.2,
+      "fat": 6.3,
+      "fiber": 0.8
+    },
+    "aliases": {
+      "zh-tw": ["肉圓", "肉丸"],
+      "pinyin": ["rou yuan", "rou wan"]
+    },
+    "common_units": ["piece", "g", "ball"]
+  },
+  {
+    "canonical_name": "water chestnuts",
+    "category": "vegetables",
+    "nutrition_per_100g": {
+      "calories": 97,
+      "protein": 1.4,
+      "carbs": 23.9,
+      "fat": 0.1,
+      "fiber": 3.0
+    },
+    "aliases": {
+      "zh-tw": ["荸薺", "馬蹄"],
+      "pinyin": ["bi qi", "ma ti"]
+    },
+    "common_units": ["piece", "g", "cup"]
+  },
+  {
+    "canonical_name": "coriander stems",
+    "category": "herbs",
+    "nutrition_per_100g": {
+      "calories": 23,
+      "protein": 2.1,
+      "carbs": 3.7,
+      "fat": 0.5,
+      "fiber": 2.8
+    },
+    "aliases": {
+      "zh-tw": ["香菜梗", "芫荽莖"],
+      "pinyin": ["xiang cai geng", "yan sui jing"]
+    },
+    "common_units": ["g", "bunch", "stem"]
+  },
+  {
+    "canonical_name": "fish paste",
+    "category": "seafood",
+    "nutrition_per_100g": {
+      "calories": 113,
+      "protein": 14.5,
+      "carbs": 9.8,
+      "fat": 1.5,
+      "fiber": 0.0
+    },
+    "aliases": {
+      "zh-tw": ["魚漿", "魚肉漿"],
+      "pinyin": ["yu jiang", "yu rou jiang"]
+    },
+    "common_units": ["g", "tbsp", "cup"]
+  },
+  {
+    "canonical_name": "black sesame seeds",
+    "category": "nuts",
+    "nutrition_per_100g": {
+      "calories": 573,
+      "protein": 17.7,
+      "carbs": 23.5,
+      "fat": 49.7,
+      "fiber": 11.8
+    },
+    "aliases": {
+      "zh-tw": ["黑芝麻"],
+      "pinyin": ["hei zhi ma"]
+    },
+    "common_units": ["g", "tbsp", "tsp"]
+  },
+  {
+    "canonical_name": "white sesame seeds",
+    "category": "nuts",
+    "nutrition_per_100g": {
+      "calories": 573,
+      "protein": 17.7,
+      "carbs": 23.5,
+      "fat": 49.7,
+      "fiber": 11.8
+    },
+    "aliases": {
+      "zh-tw": ["白芝麻"],
+      "pinyin": ["bai zhi ma"]
+    },
+    "common_units": ["g", "tbsp", "tsp"]
+  },
+  {
+    "canonical_name": "aiyu jelly",
+    "category": "desserts",
+    "nutrition_per_100g": {
+      "calories": 14,
+      "protein": 0.1,
+      "carbs": 3.5,
+      "fat": 0.0,
+      "fiber": 1.8
+    },
+    "aliases": {
+      "zh-tw": ["愛玉", "愛玉凍"],
+      "pinyin": ["ai yu", "ai yu dong"]
+    },
+    "common_units": ["g", "cup", "piece"]
+  },
+  {
+    "canonical_name": "grass jelly",
+    "category": "desserts",
+    "nutrition_per_100g": {
+      "calories": 37,
+      "protein": 0.3,
+      "carbs": 9.3,
+      "fat": 0.0,
+      "fiber": 2.5
+    },
+    "aliases": {
+      "zh-tw": ["仙草", "仙草凍"],
+      "pinyin": ["xian cao", "xian cao dong"]
+    },
+    "common_units": ["g", "cup", "piece"]
+  },
+  {
+    "canonical_name": "red beans",
+    "category": "legumes",
+    "nutrition_per_100g": {
+      "calories": 127,
+      "protein": 8.7,
+      "carbs": 22.8,
+      "fat": 0.5,
+      "fiber": 7.3
+    },
+    "aliases": {
+      "zh-tw": ["紅豆", "赤豆"],
+      "pinyin": ["hong dou", "chi dou"]
+    },
+    "common_units": ["g", "cup", "tbsp"]
+  },
+  {
+    "canonical_name": "mung beans",
+    "category": "legumes",
+    "nutrition_per_100g": {
+      "calories": 105,
+      "protein": 7.0,
+      "carbs": 19.1,
+      "fat": 0.4,
+      "fiber": 5.1
+    },
+    "aliases": {
+      "zh-tw": ["綠豆"],
+      "pinyin": ["lv dou"]
+    },
+    "common_units": ["g", "cup", "tbsp"]
+  },
+  {
+    "canonical_name": "taro chunks",
+    "category": "vegetables",
+    "nutrition_per_100g": {
+      "calories": 112,
+      "protein": 1.5,
+      "carbs": 26.5,
+      "fat": 0.2,
+      "fiber": 4.1
+    },
+    "aliases": {
+      "zh-tw": ["芋頭塊", "芋角"],
+      "pinyin": ["yu tou kuai", "yu jiao"]
+    },
+    "common_units": ["g", "piece", "cup"]
+  },
+  {
+    "canonical_name": "condensed milk",
+    "category": "dairy",
+    "nutrition_per_100g": {
+      "calories": 321,
+      "protein": 7.9,
+      "carbs": 54.4,
+      "fat": 8.7,
+      "fiber": 0.0
+    },
+    "aliases": {
+      "zh-tw": ["煉乳", "煉奶"],
+      "pinyin": ["lian ru", "lian nai"]
+    },
+    "common_units": ["tbsp", "g", "cup"]
+  },
+  {
+    "canonical_name": "evaporated milk",
+    "category": "dairy",
+    "nutrition_per_100g": {
+      "calories": 134,
+      "protein": 6.8,
+      "carbs": 10.0,
+      "fat": 7.6,
+      "fiber": 0.0
+    },
+    "aliases": {
+      "zh-tw": ["奶水", "淡奶"],
+      "pinyin": ["nai shui", "dan nai"]
+    },
+    "common_units": ["cup", "g", "tbsp"]
+  },
+  {
+    "canonical_name": "brown sugar syrup",
+    "category": "condiments",
+    "nutrition_per_100g": {
+      "calories": 290,
+      "protein": 0.1,
+      "carbs": 75.0,
+      "fat": 0.0,
+      "fiber": 0.0
+    },
+    "aliases": {
+      "zh-tw": ["黑糖糖漿", "黑糖漿"],
+      "pinyin": ["hei tang tang jiang", "hei tang jiang"]
+    },
+    "common_units": ["tbsp", "cup", "g"]
+  },
+  {
+    "canonical_name": "winter melon",
+    "category": "vegetables",
+    "nutrition_per_100g": {
+      "calories": 13,
+      "protein": 0.4,
+      "carbs": 3.0,
+      "fat": 0.2,
+      "fiber": 2.9
+    },
+    "aliases": {
+      "zh-tw": ["冬瓜"],
+      "pinyin": ["dong gua"]
+    },
+    "common_units": ["g", "cup", "piece"]
+  },
+  {
+    "canonical_name": "taiwanese pickled mustard greens",
+    "category": "vegetables",
+    "nutrition_per_100g": {
+      "calories": 22,
+      "protein": 1.5,
+      "carbs": 4.5,
+      "fat": 0.2,
+      "fiber": 2.0
+    },
+    "aliases": {
+      "zh-tw": ["梅乾菜", "酸菜"],
+      "pinyin": ["mei gan cai", "suan cai"]
+    },
+    "common_units": ["g", "cup", "tbsp"]
+  },
+  {
+    "canonical_name": "taiwanese kimchi",
+    "category": "vegetables",
+    "nutrition_per_100g": {
+      "calories": 15,
+      "protein": 1.1,
+      "carbs": 2.4,
+      "fat": 0.5,
+      "fiber": 1.6
+    },
+    "aliases": {
+      "zh-tw": ["台式泡菜", "台灣泡菜"],
+      "pinyin": ["tai shi pao cai", "tai wan pao cai"]
+    },
+    "common_units": ["g", "cup", "tbsp"]
+  },
+  {
+    "canonical_name": "scallion pancake dough",
+    "category": "grains",
+    "nutrition_per_100g": {
+      "calories": 285,
+      "protein": 7.8,
+      "carbs": 49.2,
+      "fat": 6.1,
+      "fiber": 2.1
+    },
+    "aliases": {
+      "zh-tw": ["蔥油餅皮", "蔥抓餅皮"],
+      "pinyin": ["cong you bing pi", "cong zhua bing pi"]
+    },
+    "common_units": ["sheet", "g", "piece"]
+  },
+  {
+    "canonical_name": "taiwanese pepper salt",
+    "category": "spices",
+    "nutrition_per_100g": {
+      "calories": 0,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "fat": 0.0,
+      "fiber": 0.0
+    },
+    "aliases": {
+      "zh-tw": ["胡椒鹽", "椒鹽"],
+      "pinyin": ["hu jiao yan", "jiao yan"]
+    },
+    "common_units": ["tsp", "g", "pinch"]
+  },
+  {
+    "canonical_name": "five spice powder",
+    "category": "spices",
+    "nutrition_per_100g": {
+      "calories": 347,
+      "protein": 11.4,
+      "carbs": 61.3,
+      "fat": 8.2,
+      "fiber": 28.2
+    },
+    "aliases": {
+      "zh-tw": ["五香粉"],
+      "pinyin": ["wu xiang fen"]
+    },
+    "common_units": ["tsp", "g", "tbsp"]
+  }
+]

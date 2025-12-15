@@ -76,11 +76,11 @@ function onSearchInput() {
 }
 
 function viewRecipe(id: string | number) {
-  router.push(`/admin/recipes/${id}`)
+  router.push({ name: 'admin-recipe-detail', params: { id } })
 }
 
 function createRecipe() {
-  router.push('/admin/recipes/new')
+  router.push({ name: 'admin-recipe-new' })
 }
 
 // Debounce language changes to prevent race conditions from rapid switching
@@ -147,7 +147,7 @@ onBeforeUnmount(() => {
           v-if="searchQuery"
           class="clear-search"
           @click="searchQuery = ''; fetchRecipes()"
-          :title="$t('common.buttons.clear')"
+          :aria-label="$t('common.buttons.clear')"
         >
           <i class="pi pi-times"></i>
         </button>
@@ -249,7 +249,7 @@ onBeforeUnmount(() => {
                 <button
                   class="btn-icon"
                   @click.stop="viewRecipe(recipe.id)"
-                  :title="$t('common.buttons.edit')"
+                  :aria-label="$t('common.buttons.edit')"
                 >
                   <i class="pi pi-pencil"></i>
                 </button>
@@ -384,18 +384,18 @@ td {
 }
 
 .difficulty-easy {
-  background: #d4f4dd;
-  color: #1b5e20;
+  background: var(--color-difficulty-easy-bg);
+  color: var(--color-difficulty-easy-text);
 }
 
 .difficulty-medium {
-  background: #fff3cd;
-  color: #856404;
+  background: var(--color-difficulty-medium-bg);
+  color: var(--color-difficulty-medium-text);
 }
 
 .difficulty-hard {
-  background: #f8d7da;
-  color: #721c24;
+  background: var(--color-difficulty-hard-bg);
+  color: var(--color-difficulty-hard-text);
 }
 
 .tags {

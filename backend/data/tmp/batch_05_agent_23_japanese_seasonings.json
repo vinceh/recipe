@@ -1,0 +1,860 @@
+{
+  "batch": 5,
+  "agent": 23,
+  "category": "japanese_seasonings",
+  "generated_at": "2025-12-11T00:00:00Z",
+  "ingredients": [
+    {
+      "canonical_name": "koikuchi soy sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 60,
+        "protein_g": 8.1,
+        "carbs_g": 5.6,
+        "fat_g": 0.1
+      },
+      "aliases": ["濃口醤油", "koikuchi shoyu", "dark soy sauce", "regular soy sauce", "kikkoman soy sauce"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "usukuchi soy sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 54,
+        "protein_g": 6.2,
+        "carbs_g": 7.8,
+        "fat_g": 0.0
+      },
+      "aliases": ["薄口醤油", "usukuchi shoyu", "light soy sauce", "pale soy sauce", "light color soy sauce"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "tamari soy sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 62,
+        "protein_g": 10.5,
+        "carbs_g": 3.9,
+        "fat_g": 0.1
+      },
+      "aliases": ["たまり", "tamari", "tamari shoyu", "wheat-free soy sauce", "gluten-free soy sauce"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "shiro soy sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 70,
+        "protein_g": 5.2,
+        "carbs_g": 10.4,
+        "fat_g": 0.0
+      },
+      "aliases": ["白醤油", "shiro shoyu", "white soy sauce", "pale golden soy sauce"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "saishikomi soy sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 76,
+        "protein_g": 9.8,
+        "carbs_g": 8.2,
+        "fat_g": 0.1
+      },
+      "aliases": ["再仕込み醤油", "saishikomi shoyu", "double-brewed soy sauce", "twice-brewed soy sauce"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "white miso",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 199,
+        "protein_g": 9.7,
+        "carbs_g": 32.3,
+        "fat_g": 3.9
+      },
+      "aliases": ["白味噌", "shiro miso", "sweet miso", "saikyo miso", "light miso"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "red miso",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 186,
+        "protein_g": 13.1,
+        "carbs_g": 21.9,
+        "fat_g": 6.0
+      },
+      "aliases": ["赤味噌", "aka miso", "red soybean paste", "dark miso"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "yellow miso",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 192,
+        "protein_g": 11.5,
+        "carbs_g": 26.5,
+        "fat_g": 4.8
+      },
+      "aliases": ["黄味噌", "shinshu miso", "yellow soybean paste", "medium miso"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "hatcho miso",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 180,
+        "protein_g": 17.2,
+        "carbs_g": 14.5,
+        "fat_g": 6.8
+      },
+      "aliases": ["八丁味噌", "hatcho", "soybean miso", "pure soybean miso", "nagoya miso"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "barley miso",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 198,
+        "protein_g": 10.8,
+        "carbs_g": 28.4,
+        "fat_g": 4.5
+      },
+      "aliases": ["麦味噌", "mugi miso", "barley soybean paste"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "awase miso",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 195,
+        "protein_g": 12.4,
+        "carbs_g": 24.2,
+        "fat_g": 5.1
+      },
+      "aliases": ["合わせ味噌", "awase", "mixed miso", "blended miso", "combination miso"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "mirin",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 241,
+        "protein_g": 0.3,
+        "carbs_g": 43.2,
+        "fat_g": 0.0
+      },
+      "aliases": ["みりん", "sweet rice wine", "hon mirin", "sweet cooking wine"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "cooking sake",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 103,
+        "protein_g": 0.4,
+        "carbs_g": 4.9,
+        "fat_g": 0.0
+      },
+      "aliases": ["料理酒", "ryorishu", "sake", "cooking rice wine", "japanese cooking wine"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "rice vinegar",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 0.0,
+        "carbs_g": 4.0,
+        "fat_g": 0.0
+      },
+      "aliases": ["米酢", "komezu", "rice wine vinegar", "japanese vinegar"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "seasoned rice vinegar",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 75,
+        "protein_g": 0.2,
+        "carbs_g": 18.5,
+        "fat_g": 0.0
+      },
+      "aliases": ["すし酢", "sushi vinegar", "sushi-zu", "seasoned vinegar", "sweetened rice vinegar"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "ponzu sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 3.8,
+        "carbs_g": 6.7,
+        "fat_g": 0.0
+      },
+      "aliases": ["ポン酢", "ponzu", "citrus soy sauce", "yuzu ponzu"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "mentsuyu",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 62,
+        "protein_g": 4.2,
+        "carbs_g": 10.8,
+        "fat_g": 0.1
+      },
+      "aliases": ["めんつゆ", "men tsuyu", "noodle sauce", "noodle dipping sauce", "tsuyu"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "tentsuyu",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 58,
+        "protein_g": 3.9,
+        "carbs_g": 9.5,
+        "fat_g": 0.1
+      },
+      "aliases": ["天つゆ", "ten tsuyu", "tempura dipping sauce", "tempura sauce"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "tonkatsu sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 132,
+        "protein_g": 1.8,
+        "carbs_g": 30.5,
+        "fat_g": 0.2
+      },
+      "aliases": ["とんかつソース", "tonkatsu sosu", "japanese worcestershire sauce", "pork cutlet sauce", "bulldog sauce"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "okonomiyaki sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 140,
+        "protein_g": 2.1,
+        "carbs_g": 32.8,
+        "fat_g": 0.3
+      },
+      "aliases": ["お好み焼きソース", "okonomi sauce", "japanese pancake sauce", "savory pancake sauce"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "yakisoba sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 126,
+        "protein_g": 2.4,
+        "carbs_g": 28.6,
+        "fat_g": 0.2
+      },
+      "aliases": ["焼きそばソース", "yakisoba sosu", "fried noodle sauce", "stir-fry noodle sauce"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "teriyaki sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 154,
+        "protein_g": 4.5,
+        "carbs_g": 30.2,
+        "fat_g": 0.5
+      },
+      "aliases": ["照り焼きソース", "teriyaki", "teriyaki glaze"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "wasabi paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 109,
+        "protein_g": 2.4,
+        "carbs_g": 23.5,
+        "fat_g": 0.6
+      },
+      "aliases": ["わさび", "wasabi", "japanese horseradish", "green horseradish"],
+      "common_units": ["teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "wasabi powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 292,
+        "protein_g": 9.8,
+        "carbs_g": 58.4,
+        "fat_g": 2.1
+      },
+      "aliases": ["粉わさび", "wasabi powder", "dried wasabi", "powdered wasabi"],
+      "common_units": ["teaspoon", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "karashi",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 24.9,
+        "carbs_g": 28.1,
+        "fat_g": 12.2
+      },
+      "aliases": ["からし", "japanese mustard", "hot mustard", "yellow mustard powder"],
+      "common_units": ["teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "shichimi togarashi",
+      "category": "spice",
+      "per_100g": {
+        "calories": 385,
+        "protein_g": 14.2,
+        "carbs_g": 62.8,
+        "fat_g": 8.5
+      },
+      "aliases": ["七味唐辛子", "shichimi", "seven spice", "nanami togarashi", "japanese seven spice"],
+      "common_units": ["teaspoon", "pinch", "gram"]
+    },
+    {
+      "canonical_name": "sansho pepper",
+      "category": "spice",
+      "per_100g": {
+        "calories": 347,
+        "protein_g": 10.8,
+        "carbs_g": 63.2,
+        "fat_g": 6.2
+      },
+      "aliases": ["山椒", "sansho", "japanese pepper", "szechuan pepper", "prickly ash"],
+      "common_units": ["teaspoon", "pinch", "gram"]
+    },
+    {
+      "canonical_name": "yuzu kosho",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 52,
+        "protein_g": 2.1,
+        "carbs_g": 8.8,
+        "fat_g": 0.9
+      },
+      "aliases": ["柚子胡椒", "yuzu pepper paste", "yuzukosho", "citrus pepper paste"],
+      "common_units": ["teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "nori furikake",
+      "category": "spice",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 18.5,
+        "carbs_g": 52.4,
+        "fat_g": 6.8
+      },
+      "aliases": ["のり ふりかけ", "seaweed furikake", "nori seasoning", "rice seasoning"],
+      "common_units": ["teaspoon", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "salmon furikake",
+      "category": "spice",
+      "per_100g": {
+        "calories": 372,
+        "protein_g": 22.4,
+        "carbs_g": 48.2,
+        "fat_g": 8.5
+      },
+      "aliases": ["鮭 ふりかけ", "sake furikake", "fish furikake"],
+      "common_units": ["teaspoon", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "sesame furikake",
+      "category": "spice",
+      "per_100g": {
+        "calories": 412,
+        "protein_g": 16.8,
+        "carbs_g": 42.5,
+        "fat_g": 18.2
+      },
+      "aliases": ["ごま ふりかけ", "goma furikake", "sesame rice seasoning"],
+      "common_units": ["teaspoon", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "yukari furikake",
+      "category": "spice",
+      "per_100g": {
+        "calories": 302,
+        "protein_g": 8.4,
+        "carbs_g": 58.6,
+        "fat_g": 3.2
+      },
+      "aliases": ["ゆかり", "yukari", "red shiso furikake", "perilla furikake"],
+      "common_units": ["teaspoon", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "umeboshi paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 33,
+        "protein_g": 0.9,
+        "carbs_g": 7.1,
+        "fat_g": 0.1
+      },
+      "aliases": ["梅干しペースト", "ume paste", "pickled plum paste", "salted plum paste"],
+      "common_units": ["teaspoon", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "umeboshi vinegar",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 15,
+        "protein_g": 0.4,
+        "carbs_g": 3.2,
+        "fat_g": 0.0
+      },
+      "aliases": ["梅酢", "ume vinegar", "umezu", "plum vinegar"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "rayu",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 828,
+        "protein_g": 2.8,
+        "carbs_g": 8.4,
+        "fat_g": 88.5
+      },
+      "aliases": ["ラー油", "chili oil", "japanese chili oil", "la-yu"],
+      "common_units": ["teaspoon", "tablespoon", "ml"]
+    },
+    {
+      "canonical_name": "eating rayu",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 652,
+        "protein_g": 8.2,
+        "carbs_g": 18.6,
+        "fat_g": 62.4
+      },
+      "aliases": ["食べるラー油", "taberu rayu", "crunchy chili oil", "chili crisp oil"],
+      "common_units": ["teaspoon", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "sesame oil",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0
+      },
+      "aliases": ["ごま油", "goma oil", "toasted sesame oil", "asian sesame oil"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "neri goma",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 595,
+        "protein_g": 19.8,
+        "carbs_g": 18.5,
+        "fat_g": 52.4
+      },
+      "aliases": ["練りごま", "sesame paste", "japanese tahini", "ground sesame"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "white sesame seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 573,
+        "protein_g": 17.7,
+        "carbs_g": 23.5,
+        "fat_g": 49.7
+      },
+      "aliases": ["白ごま", "shiro goma", "white goma", "hulled sesame seeds"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "black sesame seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 567,
+        "protein_g": 20.4,
+        "carbs_g": 21.6,
+        "fat_g": 48.2
+      },
+      "aliases": ["黒ごま", "kuro goma", "black goma", "unhulled sesame seeds"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "toasted sesame seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 565,
+        "protein_g": 16.9,
+        "carbs_g": 25.8,
+        "fat_g": 48.5
+      },
+      "aliases": ["炒りごま", "irigoma", "roasted sesame", "toasted goma"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "kombu dashi powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 238,
+        "protein_g": 12.8,
+        "carbs_g": 46.5,
+        "fat_g": 1.2
+      },
+      "aliases": ["昆布だし", "kombu stock powder", "kelp dashi", "instant dashi"],
+      "common_units": ["teaspoon", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "bonito dashi powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 268,
+        "protein_g": 42.5,
+        "carbs_g": 18.2,
+        "fat_g": 2.8
+      },
+      "aliases": ["かつおだし", "katsuo dashi", "bonito stock powder", "fish dashi"],
+      "common_units": ["teaspoon", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "awase dashi powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 252,
+        "protein_g": 28.4,
+        "carbs_g": 32.6,
+        "fat_g": 2.1
+      },
+      "aliases": ["合わせだし", "mixed dashi", "combined dashi powder"],
+      "common_units": ["teaspoon", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "hondashi",
+      "category": "spice",
+      "per_100g": {
+        "calories": 276,
+        "protein_g": 38.2,
+        "carbs_g": 24.8,
+        "fat_g": 3.1
+      },
+      "aliases": ["ほんだし", "hon dashi", "instant dashi granules", "ajinomoto dashi"],
+      "common_units": ["teaspoon", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "shirodashi",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 68,
+        "protein_g": 5.8,
+        "carbs_g": 9.2,
+        "fat_g": 0.2
+      },
+      "aliases": ["白だし", "shiro dashi", "white soup stock", "concentrated white dashi"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "miso dashi powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 285,
+        "protein_g": 16.8,
+        "carbs_g": 38.5,
+        "fat_g": 6.2
+      },
+      "aliases": ["味噌だし", "instant miso soup", "miso soup powder"],
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "shiso leaves dried",
+      "category": "spice",
+      "per_100g": {
+        "calories": 298,
+        "protein_g": 11.2,
+        "carbs_g": 58.4,
+        "fat_g": 3.8
+      },
+      "aliases": ["乾燥しそ", "dried perilla", "dried beefsteak plant", "ao-jiso"],
+      "common_units": ["teaspoon", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "katsuobushi flakes",
+      "category": "spice",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 77.1,
+        "carbs_g": 0.8,
+        "fat_g": 2.9
+      },
+      "aliases": ["鰹節", "bonito flakes", "dried bonito", "skipjack tuna flakes", "katsuo bushi"],
+      "common_units": ["cup", "gram", "handful"]
+    },
+    {
+      "canonical_name": "aonori",
+      "category": "spice",
+      "per_100g": {
+        "calories": 164,
+        "protein_g": 29.4,
+        "carbs_g": 41.8,
+        "fat_g": 3.7
+      },
+      "aliases": ["青のり", "green laver", "green seaweed powder", "ao nori"],
+      "common_units": ["teaspoon", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "nori sheets",
+      "category": "spice",
+      "per_100g": {
+        "calories": 188,
+        "protein_g": 41.4,
+        "carbs_g": 44.3,
+        "fat_g": 3.7
+      },
+      "aliases": ["海苔", "seaweed sheets", "dried seaweed", "laver", "roasted nori"],
+      "common_units": ["sheet", "gram"]
+    },
+    {
+      "canonical_name": "wakame flakes",
+      "category": "spice",
+      "per_100g": {
+        "calories": 45,
+        "protein_g": 3.0,
+        "carbs_g": 9.1,
+        "fat_g": 0.6
+      },
+      "aliases": ["わかめ", "dried wakame", "seaweed flakes", "sea mustard"],
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "kombu",
+      "category": "spice",
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 1.6,
+        "carbs_g": 9.6,
+        "fat_g": 0.1
+      },
+      "aliases": ["昆布", "kelp", "dried kelp", "konbu"],
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "gari",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 51,
+        "protein_g": 0.4,
+        "carbs_g": 12.4,
+        "fat_g": 0.1
+      },
+      "aliases": ["ガリ", "pickled ginger", "sushi ginger", "pink ginger"],
+      "common_units": ["slice", "gram"]
+    },
+    {
+      "canonical_name": "beni shoga",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 27,
+        "protein_g": 0.6,
+        "carbs_g": 5.8,
+        "fat_g": 0.2
+      },
+      "aliases": ["紅生姜", "red pickled ginger", "red ginger", "beni shouga"],
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "takuan",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 27,
+        "protein_g": 0.9,
+        "carbs_g": 5.3,
+        "fat_g": 0.1
+      },
+      "aliases": ["たくあん", "pickled daikon", "yellow radish pickle", "takuwan"],
+      "common_units": ["slice", "gram"]
+    },
+    {
+      "canonical_name": "fukujinzuke",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 68,
+        "protein_g": 1.2,
+        "carbs_g": 15.8,
+        "fat_g": 0.2
+      },
+      "aliases": ["福神漬け", "seven lucky gods pickle", "curry pickle", "red pickle relish"],
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "natto sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 58,
+        "protein_g": 4.2,
+        "carbs_g": 8.6,
+        "fat_g": 0.3
+      },
+      "aliases": ["納豆のたれ", "natto tare", "fermented soybean sauce"],
+      "common_units": ["packet", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "natto karashi",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 312,
+        "protein_g": 23.8,
+        "carbs_g": 27.4,
+        "fat_g": 11.8
+      },
+      "aliases": ["納豆からし", "natto mustard", "japanese hot mustard"],
+      "common_units": ["packet", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "konnyaku powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 5,
+        "protein_g": 0.1,
+        "carbs_g": 3.0,
+        "fat_g": 0.0
+      },
+      "aliases": ["こんにゃく粉", "konjac powder", "glucomannan powder"],
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "kinako",
+      "category": "spice",
+      "per_100g": {
+        "calories": 437,
+        "protein_g": 35.5,
+        "carbs_g": 28.5,
+        "fat_g": 21.7
+      },
+      "aliases": ["きな粉", "roasted soybean flour", "soybean powder", "kinako powder"],
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "matcha powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 324,
+        "protein_g": 29.6,
+        "carbs_g": 38.5,
+        "fat_g": 5.3
+      },
+      "aliases": ["抹茶", "green tea powder", "powdered green tea", "matcha"],
+      "common_units": ["teaspoon", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "hojicha powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 24.5,
+        "carbs_g": 47.2,
+        "fat_g": 4.8
+      },
+      "aliases": ["ほうじ茶", "roasted green tea powder", "houjicha"],
+      "common_units": ["teaspoon", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "kuromitsu",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 352,
+        "protein_g": 1.8,
+        "carbs_g": 87.2,
+        "fat_g": 0.1
+      },
+      "aliases": ["黒蜜", "black sugar syrup", "brown sugar syrup", "dark syrup"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "mitsuba dried",
+      "category": "spice",
+      "per_100g": {
+        "calories": 284,
+        "protein_g": 12.8,
+        "carbs_g": 54.2,
+        "fat_g": 2.4
+      },
+      "aliases": ["三つ葉", "japanese parsley", "trefoil", "mitsuba"],
+      "common_units": ["teaspoon", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "shiso oil",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0
+      },
+      "aliases": ["しそ油", "perilla oil", "egoma oil"],
+      "common_units": ["tablespoon", "teaspoon", "ml"]
+    },
+    {
+      "canonical_name": "amazake",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 81,
+        "protein_g": 1.7,
+        "carbs_g": 18.3,
+        "fat_g": 0.1
+      },
+      "aliases": ["甘酒", "sweet sake", "fermented rice drink", "sweet rice wine"],
+      "common_units": ["tablespoon", "ml"]
+    },
+    {
+      "canonical_name": "shoyu koji",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 115,
+        "protein_g": 6.8,
+        "carbs_g": 18.4,
+        "fat_g": 1.2
+      },
+      "aliases": ["醤油麹", "soy sauce koji", "fermented soy sauce", "shoyu malted rice"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "shio koji",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 104,
+        "protein_g": 2.1,
+        "carbs_g": 22.8,
+        "fat_g": 0.3
+      },
+      "aliases": ["塩麹", "salt koji", "salted rice malt", "salted malted rice"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "kanzuri",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 68,
+        "protein_g": 2.8,
+        "carbs_g": 12.4,
+        "fat_g": 1.2
+      },
+      "aliases": ["かんずり", "fermented chili paste", "yuzu chili paste"],
+      "common_units": ["teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "yuzusco",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 42,
+        "protein_g": 1.2,
+        "carbs_g": 8.6,
+        "fat_g": 0.4
+      },
+      "aliases": ["ゆずスコ", "yuzu hot sauce", "yuzu tabasco", "citrus hot sauce"],
+      "common_units": ["teaspoon", "ml"]
+    }
+  ]
+}

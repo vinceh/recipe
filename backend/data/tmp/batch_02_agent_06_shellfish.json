@@ -1,0 +1,1906 @@
+{
+  "batch": 2,
+  "agent": 6,
+  "category": "shellfish_cephalopods",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "shrimp, raw small",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 85,
+        "protein_g": 18.0,
+        "carbs_g": 0.9,
+        "fat_g": 1.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["small shrimp", "salad shrimp", "bay shrimp", "tiny shrimp"],
+        "ja": ["小エビ", "サラダエビ"],
+        "ko": ["작은 새우", "샐러드 새우"],
+        "zh": ["小虾", "沙拉虾"],
+        "zh-tw": ["小蝦", "沙拉蝦"],
+        "es": ["camarones pequeños", "gambas pequeñas"],
+        "fr": ["petites crevettes", "crevettes de salade"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 5},
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "shrimp, raw medium",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 85,
+        "protein_g": 18.0,
+        "carbs_g": 0.9,
+        "fat_g": 1.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["medium shrimp", "regular shrimp"],
+        "ja": ["中エビ", "普通のエビ"],
+        "ko": ["중간 새우", "일반 새우"],
+        "zh": ["中虾", "普通虾"],
+        "zh-tw": ["中蝦", "普通蝦"],
+        "es": ["camarones medianos", "gambas medianas"],
+        "fr": ["crevettes moyennes"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 12},
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "shrimp, raw large",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 85,
+        "protein_g": 18.0,
+        "carbs_g": 0.9,
+        "fat_g": 1.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["large shrimp", "big shrimp"],
+        "ja": ["大エビ"],
+        "ko": ["큰 새우"],
+        "zh": ["大虾"],
+        "zh-tw": ["大蝦"],
+        "es": ["camarones grandes", "gambas grandes"],
+        "fr": ["grosses crevettes"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 20},
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "shrimp, raw jumbo",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 85,
+        "protein_g": 18.0,
+        "carbs_g": 0.9,
+        "fat_g": 1.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["jumbo shrimp", "extra large shrimp"],
+        "ja": ["特大エビ", "ジャンボエビ"],
+        "ko": ["점보 새우", "특대 새우"],
+        "zh": ["特大虾", "超大虾"],
+        "zh-tw": ["特大蝦", "超大蝦"],
+        "es": ["camarones jumbo", "gambas jumbo"],
+        "fr": ["crevettes jumbo", "très grosses crevettes"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 30},
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "shrimp, cooked",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 99,
+        "protein_g": 20.9,
+        "carbs_g": 0.2,
+        "fat_g": 1.1,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["cooked shrimp", "boiled shrimp"],
+        "ja": ["茹でエビ", "調理済みエビ"],
+        "ko": ["익힌 새우", "삶은 새우"],
+        "zh": ["熟虾", "煮虾"],
+        "zh-tw": ["熟蝦", "煮蝦"],
+        "es": ["camarones cocidos", "gambas cocidas"],
+        "fr": ["crevettes cuites", "crevettes bouillies"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 15},
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "tiger prawn, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 89,
+        "protein_g": 18.5,
+        "carbs_g": 0.8,
+        "fat_g": 1.2,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["tiger prawns", "tiger shrimp", "black tiger prawn"],
+        "ja": ["ブラックタイガー", "トラエビ"],
+        "ko": ["타이거 새우", "블랙 타이거"],
+        "zh": ["虎虾", "黑虎虾"],
+        "zh-tw": ["虎蝦", "黑虎蝦"],
+        "es": ["langostinos tigre", "gambas tigre"],
+        "fr": ["crevettes tigrées", "gambas tigrées"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 35},
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "white shrimp, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 84,
+        "protein_g": 17.8,
+        "carbs_g": 0.9,
+        "fat_g": 1.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["white shrimp", "pacific white shrimp", "vannamei shrimp"],
+        "ja": ["バナメイエビ", "白エビ"],
+        "ko": ["흰새우", "바나메이 새우"],
+        "zh": ["白虾", "南美白对虾"],
+        "zh-tw": ["白蝦", "南美白對蝦"],
+        "es": ["camarones blancos", "langostinos vannamei"],
+        "fr": ["crevettes blanches", "crevettes vannamei"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 20},
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "rock shrimp, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 88,
+        "protein_g": 18.2,
+        "carbs_g": 0.7,
+        "fat_g": 1.1,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["rock shrimp"],
+        "ja": ["ロックシュリンプ"],
+        "ko": ["락 쉬림프"],
+        "zh": ["岩虾"],
+        "zh-tw": ["岩蝦"],
+        "es": ["camarones de roca"],
+        "fr": ["crevettes de roche"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 10},
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "spot prawn, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 87,
+        "protein_g": 18.1,
+        "carbs_g": 0.9,
+        "fat_g": 1.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["spot prawns", "spot shrimp", "spotted prawn"],
+        "ja": ["ボタンエビ", "スポットプラウン"],
+        "ko": ["스팟 새우", "보탄새우"],
+        "zh": ["斑点虾", "牡丹虾"],
+        "zh-tw": ["斑點蝦", "牡丹蝦"],
+        "es": ["langostinos manchados"],
+        "fr": ["crevettes tachetées"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 40},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "blue crab, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 87,
+        "protein_g": 18.1,
+        "carbs_g": 0.0,
+        "fat_g": 1.1,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["blue crab", "blue swimmer crab"],
+        "ja": ["ブルークラブ", "青蟹"],
+        "ko": ["블루 크랩", "파란 게"],
+        "zh": ["蓝蟹", "青蟹"],
+        "zh-tw": ["藍蟹", "青蟹"],
+        "es": ["cangrejo azul", "jaiba azul"],
+        "fr": ["crabe bleu"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454},
+        {"unit": "whole", "grams": 200}
+      ]
+    },
+    {
+      "canonical_name": "blue crab, cooked",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 102,
+        "protein_g": 20.2,
+        "carbs_g": 0.0,
+        "fat_g": 1.8,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["cooked blue crab", "steamed blue crab"],
+        "ja": ["茹でブルークラブ", "蒸し青蟹"],
+        "ko": ["익힌 블루 크랩", "찐 파란 게"],
+        "zh": ["熟蓝蟹", "蒸青蟹"],
+        "zh-tw": ["熟藍蟹", "蒸青蟹"],
+        "es": ["cangrejo azul cocido"],
+        "fr": ["crabe bleu cuit"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "dungeness crab, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 86,
+        "protein_g": 17.9,
+        "carbs_g": 0.7,
+        "fat_g": 1.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["dungeness crab", "dungie crab"],
+        "ja": ["ダンジネスクラブ"],
+        "ko": ["던저니스 크랩"],
+        "zh": ["邓杰内斯蟹", "珍宝蟹"],
+        "zh-tw": ["鄧傑內斯蟹", "珍寶蟹"],
+        "es": ["cangrejo dungeness"],
+        "fr": ["crabe dormeur", "crabe dungeness"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454},
+        {"unit": "whole", "grams": 900}
+      ]
+    },
+    {
+      "canonical_name": "king crab, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 84,
+        "protein_g": 18.3,
+        "carbs_g": 0.0,
+        "fat_g": 0.6,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["king crab", "alaskan king crab"],
+        "ja": ["キングクラブ", "タラバガニ"],
+        "ko": ["킹 크랩", "알래스카 킹 크랩"],
+        "zh": ["帝王蟹", "阿拉斯加帝王蟹"],
+        "zh-tw": ["帝王蟹", "阿拉斯加帝王蟹"],
+        "es": ["cangrejo real", "centolla"],
+        "fr": ["crabe royal", "crabe d'Alaska"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454},
+        {"unit": "leg", "grams": 200}
+      ]
+    },
+    {
+      "canonical_name": "king crab, cooked",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 97,
+        "protein_g": 19.4,
+        "carbs_g": 0.0,
+        "fat_g": 1.5,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["cooked king crab", "steamed king crab"],
+        "ja": ["茹でタラバガニ", "蒸しキングクラブ"],
+        "ko": ["익힌 킹 크랩", "찐 킹 크랩"],
+        "zh": ["熟帝王蟹", "蒸帝王蟹"],
+        "zh-tw": ["熟帝王蟹", "蒸帝王蟹"],
+        "es": ["cangrejo real cocido"],
+        "fr": ["crabe royal cuit"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "snow crab, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 90,
+        "protein_g": 18.5,
+        "carbs_g": 0.0,
+        "fat_g": 1.2,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["snow crab", "queen crab"],
+        "ja": ["ズワイガニ", "スノークラブ"],
+        "ko": ["대게", "스노우 크랩"],
+        "zh": ["雪蟹", "皇后蟹"],
+        "zh-tw": ["雪蟹", "皇后蟹"],
+        "es": ["cangrejo de las nieves"],
+        "fr": ["crabe des neiges"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454},
+        {"unit": "cluster", "grams": 300}
+      ]
+    },
+    {
+      "canonical_name": "snow crab, cooked",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 95,
+        "protein_g": 19.4,
+        "carbs_g": 0.4,
+        "fat_g": 1.2,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["cooked snow crab", "steamed snow crab"],
+        "ja": ["茹でズワイガニ", "蒸しズワイガニ"],
+        "ko": ["익힌 대게", "찐 대게"],
+        "zh": ["熟雪蟹", "蒸雪蟹"],
+        "zh-tw": ["熟雪蟹", "蒸雪蟹"],
+        "es": ["cangrejo de las nieves cocido"],
+        "fr": ["crabe des neiges cuit"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "soft shell crab",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 87,
+        "protein_g": 18.1,
+        "carbs_g": 0.0,
+        "fat_g": 1.1,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["soft shell crab", "soft-shell crab", "softshell crab"],
+        "ja": ["ソフトシェルクラブ", "脱皮蟹"],
+        "ko": ["소프트쉘 크랩", "연갑 게"],
+        "zh": ["软壳蟹", "脱壳蟹"],
+        "zh-tw": ["軟殼蟹", "脫殼蟹"],
+        "es": ["cangrejo de caparazón blando"],
+        "fr": ["crabe à carapace molle"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 80},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "stone crab claw, cooked",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 98,
+        "protein_g": 19.8,
+        "carbs_g": 0.8,
+        "fat_g": 1.3,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["stone crab claws", "florida stone crab"],
+        "ja": ["ストーンクラブ", "石蟹の爪"],
+        "ko": ["스톤 크랩 집게"],
+        "zh": ["石蟹钳"],
+        "zh-tw": ["石蟹鉗"],
+        "es": ["pinzas de cangrejo de piedra"],
+        "fr": ["pinces de crabe de pierre"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 60},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "lobster tail, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 89,
+        "protein_g": 18.8,
+        "carbs_g": 0.5,
+        "fat_g": 0.9,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["lobster tail", "raw lobster tail"],
+        "ja": ["ロブスターテール", "伊勢海老の尾"],
+        "ko": ["랍스터 꼬리"],
+        "zh": ["龙虾尾"],
+        "zh-tw": ["龍蝦尾"],
+        "es": ["cola de langosta"],
+        "fr": ["queue de homard"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 180},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "lobster tail, cooked",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 98,
+        "protein_g": 20.5,
+        "carbs_g": 0.5,
+        "fat_g": 1.3,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["cooked lobster tail", "steamed lobster tail"],
+        "ja": ["茹でロブスターテール"],
+        "ko": ["익힌 랍스터 꼬리"],
+        "zh": ["熟龙虾尾"],
+        "zh-tw": ["熟龍蝦尾"],
+        "es": ["cola de langosta cocida"],
+        "fr": ["queue de homard cuite"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 150},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "whole lobster, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 89,
+        "protein_g": 18.8,
+        "carbs_g": 0.5,
+        "fat_g": 0.9,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["whole lobster", "maine lobster", "atlantic lobster"],
+        "ja": ["オマール海老", "ロブスター"],
+        "ko": ["통 랍스터", "메인 랍스터"],
+        "zh": ["整只龙虾", "缅因龙虾"],
+        "zh-tw": ["整隻龍蝦", "緬因龍蝦"],
+        "es": ["langosta entera"],
+        "fr": ["homard entier"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 700},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "spiny lobster, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 91,
+        "protein_g": 19.0,
+        "carbs_g": 0.4,
+        "fat_g": 1.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["spiny lobster", "rock lobster", "langouste"],
+        "ja": ["イセエビ", "スパイニーロブスター"],
+        "ko": ["가시 랍스터", "바위 랍스터"],
+        "zh": ["龙虾", "刺龙虾"],
+        "zh-tw": ["龍蝦", "刺龍蝦"],
+        "es": ["langosta espinosa"],
+        "fr": ["langouste"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 600},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "crawfish, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 87,
+        "protein_g": 18.2,
+        "carbs_g": 0.0,
+        "fat_g": 1.1,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["crawfish", "crayfish", "crawdad", "mudbugs"],
+        "ja": ["ザリガニ", "クローフィッシュ"],
+        "ko": ["가재"],
+        "zh": ["小龙虾", "螯虾"],
+        "zh-tw": ["小龍蝦", "螯蝦"],
+        "es": ["cangrejos de río", "langostinos de río"],
+        "fr": ["écrevisses"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 15},
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "crawfish, cooked",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 77,
+        "protein_g": 15.9,
+        "carbs_g": 0.0,
+        "fat_g": 1.1,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["cooked crawfish", "boiled crawfish"],
+        "ja": ["茹でザリガニ"],
+        "ko": ["익힌 가재", "삶은 가재"],
+        "zh": ["熟小龙虾", "煮螯虾"],
+        "zh-tw": ["熟小龍蝦", "煮螯蝦"],
+        "es": ["cangrejos de río cocidos"],
+        "fr": ["écrevisses cuites"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "langoustine, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 86,
+        "protein_g": 17.9,
+        "carbs_g": 0.6,
+        "fat_g": 1.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["langoustine", "norway lobster", "scampi", "dublin bay prawn"],
+        "ja": ["ラングスティーヌ", "手長海老"],
+        "ko": ["랑구스틴", "노르웨이 랍스터"],
+        "zh": ["挪威海螯虾", "海螯虾"],
+        "zh-tw": ["挪威海螯蝦", "海螯蝦"],
+        "es": ["cigala", "langostino noruego"],
+        "fr": ["langoustine"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 25},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "blue mussel, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 86,
+        "protein_g": 11.9,
+        "carbs_g": 3.7,
+        "fat_g": 2.2,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["blue mussels", "mussels", "common mussel"],
+        "ja": ["ムール貝", "イガイ"],
+        "ko": ["홍합", "블루 홍합"],
+        "zh": ["贻贝", "青口"],
+        "zh-tw": ["貽貝", "青口"],
+        "es": ["mejillones", "mejillones azules"],
+        "fr": ["moules", "moules bleues"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 15},
+        {"unit": "cup", "grams": 140},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "blue mussel, cooked",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 172,
+        "protein_g": 23.8,
+        "carbs_g": 7.4,
+        "fat_g": 4.5,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["cooked mussels", "steamed mussels"],
+        "ja": ["茹でムール貝", "蒸しムール貝"],
+        "ko": ["익힌 홍합", "찐 홍합"],
+        "zh": ["熟贻贝", "蒸青口"],
+        "zh-tw": ["熟貽貝", "蒸青口"],
+        "es": ["mejillones cocidos"],
+        "fr": ["moules cuites"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 140},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "green mussel, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 88,
+        "protein_g": 12.1,
+        "carbs_g": 3.8,
+        "fat_g": 2.3,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["green mussels", "green-lipped mussel", "new zealand mussel"],
+        "ja": ["ミドリイガイ", "グリーンマッスル"],
+        "ko": ["초록 홍합", "뉴질랜드 홍합"],
+        "zh": ["绿唇贻贝", "翡翠贻贝"],
+        "zh-tw": ["綠唇貽貝", "翡翠貽貝"],
+        "es": ["mejillones verdes", "mejillones de nueva zelanda"],
+        "fr": ["moules vertes", "moules de nouvelle-zélande"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 20},
+        {"unit": "cup", "grams": 140},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "clam, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 74,
+        "protein_g": 12.8,
+        "carbs_g": 2.6,
+        "fat_g": 1.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["clams", "hard clam", "quahog"],
+        "ja": ["アサリ", "蛤"],
+        "ko": ["조개", "대합"],
+        "zh": ["蛤蜊", "蚌"],
+        "zh-tw": ["蛤蜊", "蚌"],
+        "es": ["almejas"],
+        "fr": ["palourdes"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 12},
+        {"unit": "cup", "grams": 150},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "clam, cooked",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 148,
+        "protein_g": 25.6,
+        "carbs_g": 5.1,
+        "fat_g": 2.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["cooked clams", "steamed clams"],
+        "ja": ["茹でアサリ", "蒸し蛤"],
+        "ko": ["익힌 조개", "찐 조개"],
+        "zh": ["熟蛤蜊", "蒸蚌"],
+        "zh-tw": ["熟蛤蜊", "蒸蚌"],
+        "es": ["almejas cocidas"],
+        "fr": ["palourdes cuites"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 150},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "littleneck clam, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 74,
+        "protein_g": 12.8,
+        "carbs_g": 2.6,
+        "fat_g": 1.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["littleneck clams", "little neck clams"],
+        "ja": ["リトルネッククラム"],
+        "ko": ["리틀넥 조개"],
+        "zh": ["小颈蛤"],
+        "zh-tw": ["小頸蛤"],
+        "es": ["almejas littleneck"],
+        "fr": ["palourdes littleneck"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 10},
+        {"unit": "cup", "grams": 150},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "manila clam, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 76,
+        "protein_g": 13.0,
+        "carbs_g": 2.7,
+        "fat_g": 1.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["manila clams", "japanese littleneck"],
+        "ja": ["アサリ", "マニラ蛤"],
+        "ko": ["마닐라 조개", "아사리"],
+        "zh": ["马尼拉蛤", "菲律宾蛤"],
+        "zh-tw": ["馬尼拉蛤", "菲律賓蛤"],
+        "es": ["almejas de manila"],
+        "fr": ["palourdes de manille"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 8},
+        {"unit": "cup", "grams": 150},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "razor clam, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 82,
+        "protein_g": 13.6,
+        "carbs_g": 3.5,
+        "fat_g": 1.1,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["razor clams", "bamboo clam"],
+        "ja": ["マテ貝", "レーザークラム"],
+        "ko": ["맛조개", "죽합"],
+        "zh": ["竹蛏", "蛏子"],
+        "zh-tw": ["竹蟶", "蟶子"],
+        "es": ["navajas", "almejas navaja"],
+        "fr": ["couteaux", "palourdes couteau"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 25},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "geoduck clam, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 73,
+        "protein_g": 13.4,
+        "carbs_g": 2.2,
+        "fat_g": 0.8,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["geoduck", "elephant trunk clam", "king clam"],
+        "ja": ["ミルガイ", "ジオダック"],
+        "ko": ["코끼리조개", "지오덕"],
+        "zh": ["象拔蚌", "海笋"],
+        "zh-tw": ["象拔蚌", "海筍"],
+        "es": ["almeja geoduck"],
+        "fr": ["palourde géoduck"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 500},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "oyster, raw eastern",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 68,
+        "protein_g": 7.1,
+        "carbs_g": 3.9,
+        "fat_g": 2.5,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["eastern oysters", "atlantic oysters", "bluepoint oysters"],
+        "ja": ["イースタンオイスター", "牡蠣"],
+        "ko": ["동부 굴", "대서양 굴"],
+        "zh": ["东部牡蛎", "大西洋生蚝"],
+        "zh-tw": ["東部牡蠣", "大西洋生蠔"],
+        "es": ["ostras del este", "ostras atlánticas"],
+        "fr": ["huîtres de l'est", "huîtres atlantiques"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 50},
+        {"unit": "cup", "grams": 240},
+        {"unit": "dozen", "grams": 600}
+      ]
+    },
+    {
+      "canonical_name": "oyster, raw pacific",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 81,
+        "protein_g": 9.4,
+        "carbs_g": 5.0,
+        "fat_g": 2.3,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["pacific oysters", "japanese oysters", "miyagi oysters"],
+        "ja": ["太平洋牡蠣", "マガキ"],
+        "ko": ["태평양 굴", "참굴"],
+        "zh": ["太平洋生蚝", "日本牡蛎"],
+        "zh-tw": ["太平洋生蠔", "日本牡蠣"],
+        "es": ["ostras del pacífico", "ostras japonesas"],
+        "fr": ["huîtres du pacifique", "huîtres japonaises"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 60},
+        {"unit": "cup", "grams": 240},
+        {"unit": "dozen", "grams": 720}
+      ]
+    },
+    {
+      "canonical_name": "oyster, cooked",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 79,
+        "protein_g": 9.0,
+        "carbs_g": 4.7,
+        "fat_g": 2.8,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["cooked oysters", "steamed oysters"],
+        "ja": ["茹で牡蠣", "蒸し牡蠣"],
+        "ko": ["익힌 굴", "찐 굴"],
+        "zh": ["熟牡蛎", "蒸生蚝"],
+        "zh-tw": ["熟牡蠣", "蒸生蠔"],
+        "es": ["ostras cocidas"],
+        "fr": ["huîtres cuites"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 240},
+        {"unit": "dozen", "grams": 600}
+      ]
+    },
+    {
+      "canonical_name": "kumamoto oyster, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 73,
+        "protein_g": 8.4,
+        "carbs_g": 4.2,
+        "fat_g": 2.3,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["kumamoto oysters", "kumies", "kumamotos"],
+        "ja": ["熊本牡蠣"],
+        "ko": ["구마모토 굴"],
+        "zh": ["熊本生蚝"],
+        "zh-tw": ["熊本生蠔"],
+        "es": ["ostras kumamoto"],
+        "fr": ["huîtres kumamoto"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 45},
+        {"unit": "dozen", "grams": 540}
+      ]
+    },
+    {
+      "canonical_name": "scallop, raw sea",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 69,
+        "protein_g": 12.1,
+        "carbs_g": 3.2,
+        "fat_g": 0.5,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["sea scallops", "large scallops"],
+        "ja": ["ホタテ", "帆立貝"],
+        "ko": ["관자", "큰 가리비"],
+        "zh": ["海扇贝", "大扇贝"],
+        "zh-tw": ["海扇貝", "大扇貝"],
+        "es": ["vieiras", "escalopes de mar"],
+        "fr": ["pétoncles géants", "coquilles saint-jacques"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 30},
+        {"unit": "cup", "grams": 150},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "scallop, cooked",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 111,
+        "protein_g": 20.5,
+        "carbs_g": 5.4,
+        "fat_g": 1.4,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["cooked scallops", "seared scallops"],
+        "ja": ["調理済みホタテ", "焼き帆立"],
+        "ko": ["익힌 가리비", "구운 관자"],
+        "zh": ["熟扇贝", "煎扇贝"],
+        "zh-tw": ["熟扇貝", "煎扇貝"],
+        "es": ["vieiras cocidas"],
+        "fr": ["pétoncles cuits"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 25},
+        {"unit": "cup", "grams": 150},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "scallop, raw bay",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 69,
+        "protein_g": 12.1,
+        "carbs_g": 3.2,
+        "fat_g": 0.5,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["bay scallops", "small scallops"],
+        "ja": ["ベイホタテ", "小型帆立"],
+        "ko": ["베이 가리비", "작은 가리비"],
+        "zh": ["小扇贝", "湾扇贝"],
+        "zh-tw": ["小扇貝", "灣扇貝"],
+        "es": ["vieiras pequeñas", "escalopes de bahía"],
+        "fr": ["petits pétoncles", "pétoncles de baie"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 8},
+        {"unit": "cup", "grams": 150},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "scallop roe",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 91,
+        "protein_g": 14.2,
+        "carbs_g": 4.8,
+        "fat_g": 1.5,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["scallop roe", "scallop coral"],
+        "ja": ["ホタテの卵", "ホタテの紐"],
+        "ko": ["가리비 알"],
+        "zh": ["扇贝籽", "带子黄"],
+        "zh-tw": ["扇貝籽", "帶子黃"],
+        "es": ["huevas de vieira"],
+        "fr": ["corail de pétoncle"]
+      },
+      "common_units": [
+        {"unit": "tablespoon", "grams": 15},
+        {"unit": "cup", "grams": 150}
+      ]
+    },
+    {
+      "canonical_name": "squid, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 92,
+        "protein_g": 15.6,
+        "carbs_g": 3.1,
+        "fat_g": 1.4,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["squid", "calamari"],
+        "ja": ["イカ", "スルメイカ"],
+        "ko": ["오징어"],
+        "zh": ["鱿鱼", "乌贼"],
+        "zh-tw": ["魷魚", "烏賊"],
+        "es": ["calamar"],
+        "fr": ["calmar", "calamar"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454},
+        {"unit": "whole", "grams": 200}
+      ]
+    },
+    {
+      "canonical_name": "squid, cooked",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 175,
+        "protein_g": 29.8,
+        "carbs_g": 7.5,
+        "fat_g": 2.7,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["cooked squid", "cooked calamari"],
+        "ja": ["茹でイカ", "調理済みイカ"],
+        "ko": ["익힌 오징어", "삶은 오징어"],
+        "zh": ["熟鱿鱼", "煮乌贼"],
+        "zh-tw": ["熟魷魚", "煮烏賊"],
+        "es": ["calamar cocido"],
+        "fr": ["calmar cuit"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "squid ink",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 45,
+        "protein_g": 6.8,
+        "carbs_g": 4.2,
+        "fat_g": 0.6,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["squid ink", "cuttlefish ink", "sepia ink"],
+        "ja": ["イカ墨", "スミ"],
+        "ko": ["오징어 먹물", "먹물"],
+        "zh": ["墨鱼汁", "鱿鱼墨"],
+        "zh-tw": ["墨魚汁", "魷魚墨"],
+        "es": ["tinta de calamar", "tinta de sepia"],
+        "fr": ["encre de calmar", "encre de seiche"]
+      },
+      "common_units": [
+        {"unit": "teaspoon", "grams": 5},
+        {"unit": "tablespoon", "grams": 15},
+        {"unit": "sachet", "grams": 4}
+      ]
+    },
+    {
+      "canonical_name": "octopus, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 82,
+        "protein_g": 14.9,
+        "carbs_g": 2.2,
+        "fat_g": 1.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["octopus"],
+        "ja": ["タコ", "蛸"],
+        "ko": ["문어"],
+        "zh": ["章鱼"],
+        "zh-tw": ["章魚"],
+        "es": ["pulpo"],
+        "fr": ["poulpe", "pieuvre"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 140},
+        {"unit": "pound", "grams": 454},
+        {"unit": "tentacle", "grams": 80}
+      ]
+    },
+    {
+      "canonical_name": "octopus, cooked",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 164,
+        "protein_g": 29.8,
+        "carbs_g": 4.4,
+        "fat_g": 2.1,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["cooked octopus", "boiled octopus"],
+        "ja": ["茹でタコ", "調理済みタコ"],
+        "ko": ["익힌 문어", "삶은 문어"],
+        "zh": ["熟章鱼", "煮章鱼"],
+        "zh-tw": ["熟章魚", "煮章魚"],
+        "es": ["pulpo cocido"],
+        "fr": ["poulpe cuit"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 140},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "baby octopus, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 82,
+        "protein_g": 14.9,
+        "carbs_g": 2.2,
+        "fat_g": 1.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["baby octopus", "small octopus"],
+        "ja": ["小タコ", "ベビーオクトパス"],
+        "ko": ["작은 문어", "베이비 문어"],
+        "zh": ["小章鱼", "幼章鱼"],
+        "zh-tw": ["小章魚", "幼章魚"],
+        "es": ["pulpo bebé", "pulpo pequeño"],
+        "fr": ["bébé poulpe", "petit poulpe"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 30},
+        {"unit": "cup", "grams": 140},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "cuttlefish, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 79,
+        "protein_g": 16.2,
+        "carbs_g": 0.8,
+        "fat_g": 0.7,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["cuttlefish", "sepia"],
+        "ja": ["コウイカ", "甲イカ"],
+        "ko": ["갑오징어"],
+        "zh": ["墨鱼", "乌贼"],
+        "zh-tw": ["墨魚", "烏賊"],
+        "es": ["sepia", "jibia"],
+        "fr": ["seiche"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454},
+        {"unit": "whole", "grams": 180}
+      ]
+    },
+    {
+      "canonical_name": "cuttlefish, cooked",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 158,
+        "protein_g": 32.5,
+        "carbs_g": 1.6,
+        "fat_g": 1.4,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["cooked cuttlefish", "boiled cuttlefish"],
+        "ja": ["茹でコウイカ", "調理済み甲イカ"],
+        "ko": ["익힌 갑오징어", "삶은 갑오징어"],
+        "zh": ["熟墨鱼", "煮乌贼"],
+        "zh-tw": ["熟墨魚", "煮烏賊"],
+        "es": ["sepia cocida"],
+        "fr": ["seiche cuite"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "conch, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 77,
+        "protein_g": 16.2,
+        "carbs_g": 1.1,
+        "fat_g": 0.4,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["conch", "queen conch"],
+        "ja": ["貝", "ホラガイ"],
+        "ko": ["소라"],
+        "zh": ["海螺", "海螺肉"],
+        "zh-tw": ["海螺", "海螺肉"],
+        "es": ["caracol marino", "cambute"],
+        "fr": ["lambi", "conque"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 130},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "sea urchin roe",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 172,
+        "protein_g": 13.0,
+        "carbs_g": 2.5,
+        "fat_g": 4.3,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["sea urchin", "uni", "sea urchin roe"],
+        "ja": ["ウニ", "雲丹"],
+        "ko": ["성게알", "우니"],
+        "zh": ["海胆", "海胆黄"],
+        "zh-tw": ["海膽", "海膽黃"],
+        "es": ["erizo de mar", "uni"],
+        "fr": ["oursin", "uni"]
+      },
+      "common_units": [
+        {"unit": "tablespoon", "grams": 15},
+        {"unit": "piece", "grams": 30},
+        {"unit": "cup", "grams": 150}
+      ]
+    },
+    {
+      "canonical_name": "abalone, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 105,
+        "protein_g": 17.1,
+        "carbs_g": 6.0,
+        "fat_g": 0.8,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["abalone", "ear shell", "sea ear"],
+        "ja": ["アワビ", "鮑"],
+        "ko": ["전복"],
+        "zh": ["鲍鱼"],
+        "zh-tw": ["鮑魚"],
+        "es": ["abulón", "oreja de mar"],
+        "fr": ["ormeau", "abalone"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 80},
+        {"unit": "cup", "grams": 140},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "abalone, canned",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 119,
+        "protein_g": 19.4,
+        "carbs_g": 6.8,
+        "fat_g": 0.9,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["canned abalone", "abalone in brine"],
+        "ja": ["缶詰アワビ", "鮑缶"],
+        "ko": ["전복 통조림"],
+        "zh": ["鲍鱼罐头"],
+        "zh-tw": ["鮑魚罐頭"],
+        "es": ["abulón enlatado"],
+        "fr": ["ormeau en conserve"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 60},
+        {"unit": "cup", "grams": 140},
+        {"unit": "can", "grams": 213}
+      ]
+    },
+    {
+      "canonical_name": "whelk, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 137,
+        "protein_g": 23.8,
+        "carbs_g": 7.8,
+        "fat_g": 0.3,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["whelk", "sea snail"],
+        "ja": ["ツブ貝", "バイ貝"],
+        "ko": ["골뱅이"],
+        "zh": ["海螺", "峨螺"],
+        "zh-tw": ["海螺", "峨螺"],
+        "es": ["buccino", "caracol de mar"],
+        "fr": ["bulot", "buccin"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 20},
+        {"unit": "cup", "grams": 130},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "periwinkle, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 89,
+        "protein_g": 16.5,
+        "carbs_g": 3.1,
+        "fat_g": 1.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["periwinkle", "sea snail", "winkles"],
+        "ja": ["タマキビ", "ニシ"],
+        "ko": ["소라", "고둥"],
+        "zh": ["玉黍螺", "海螺"],
+        "zh-tw": ["玉黍螺", "海螺"],
+        "es": ["bígaro", "caracol de mar"],
+        "fr": ["bigorneau"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 5},
+        {"unit": "cup", "grams": 100},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "cockle, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 79,
+        "protein_g": 13.5,
+        "carbs_g": 4.7,
+        "fat_g": 0.6,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["cockles", "heart clam"],
+        "ja": ["ザルガイ", "トリガイ"],
+        "ko": ["새조개", "꼬막"],
+        "zh": ["鸟蛤", "蚶"],
+        "zh-tw": ["鳥蛤", "蚶"],
+        "es": ["berberechos"],
+        "fr": ["coques"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 8},
+        {"unit": "cup", "grams": 140},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "blood cockle, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 81,
+        "protein_g": 13.8,
+        "carbs_g": 4.9,
+        "fat_g": 0.7,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["blood cockles", "blood clam", "arc shell"],
+        "ja": ["赤貝", "アカガイ"],
+        "ko": ["피조개"],
+        "zh": ["血蚶", "血蛤"],
+        "zh-tw": ["血蚶", "血蛤"],
+        "es": ["berberechos de sangre"],
+        "fr": ["coques de sang", "arches"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 12},
+        {"unit": "cup", "grams": 140},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "surf clam, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 76,
+        "protein_g": 13.2,
+        "carbs_g": 2.8,
+        "fat_g": 1.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["surf clam", "hen clam", "hokkigai"],
+        "ja": ["ホッキガイ", "北寄貝"],
+        "ko": ["북방대합", "북극조개"],
+        "zh": ["北极贝", "北寄贝"],
+        "zh-tw": ["北極貝", "北寄貝"],
+        "es": ["almeja de surf"],
+        "fr": ["palourde de surf", "mactre"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 15},
+        {"unit": "cup", "grams": 150},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "sea snail, cooked",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 90,
+        "protein_g": 16.3,
+        "carbs_g": 2.0,
+        "fat_g": 1.4,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["cooked sea snails", "escargot de mer"],
+        "ja": ["茹で貝", "調理済み巻貝"],
+        "ko": ["익힌 고둥"],
+        "zh": ["熟海螺"],
+        "zh-tw": ["熟海螺"],
+        "es": ["caracoles de mar cocidos"],
+        "fr": ["escargots de mer cuits"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 15},
+        {"unit": "cup", "grams": 130}
+      ]
+    },
+    {
+      "canonical_name": "prawns, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 89,
+        "protein_g": 18.5,
+        "carbs_g": 0.8,
+        "fat_g": 1.2,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["prawns", "large prawns"],
+        "ja": ["エビ", "大正エビ"],
+        "ko": ["대하", "왕새우"],
+        "zh": ["对虾", "大虾"],
+        "zh-tw": ["對蝦", "大蝦"],
+        "es": ["langostinos"],
+        "fr": ["gambas", "grosses crevettes"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 25},
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "mantis shrimp, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 87,
+        "protein_g": 18.3,
+        "carbs_g": 0.6,
+        "fat_g": 1.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["mantis shrimp", "sea locust"],
+        "ja": ["シャコ", "蝦蛄"],
+        "ko": ["갯가재"],
+        "zh": ["虾蛄", "皮皮虾"],
+        "zh-tw": ["蝦蛄", "皮皮蝦"],
+        "es": ["galera", "camarón mantis"],
+        "fr": ["squille", "cigale de mer"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 40},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "barnacle, cooked",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 95,
+        "protein_g": 17.2,
+        "carbs_g": 2.8,
+        "fat_g": 1.5,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["barnacles", "gooseneck barnacles", "percebes"],
+        "ja": ["フジツボ", "カメノテ"],
+        "ko": ["거북손"],
+        "zh": ["藤壶", "龟足"],
+        "zh-tw": ["藤壺", "龜足"],
+        "es": ["percebes"],
+        "fr": ["pousse-pieds", "pouce-pieds"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 8},
+        {"unit": "cup", "grams": 100},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "crab meat, lump",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 98,
+        "protein_g": 19.5,
+        "carbs_g": 0.0,
+        "fat_g": 1.5,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["lump crab meat", "crab lump", "jumbo lump crab"],
+        "ja": ["カニ身", "ほぐし身"],
+        "ko": ["게살", "덩어리 게살"],
+        "zh": ["蟹肉块", "整块蟹肉"],
+        "zh-tw": ["蟹肉塊", "整塊蟹肉"],
+        "es": ["carne de cangrejo en trozos"],
+        "fr": ["chair de crabe en morceaux"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454},
+        {"unit": "can", "grams": 170}
+      ]
+    },
+    {
+      "canonical_name": "crab meat, claw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 102,
+        "protein_g": 20.2,
+        "carbs_g": 0.0,
+        "fat_g": 1.8,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["claw crab meat", "crab claw meat"],
+        "ja": ["カニ爪の身"],
+        "ko": ["게 집게살"],
+        "zh": ["蟹钳肉"],
+        "zh-tw": ["蟹鉗肉"],
+        "es": ["carne de pinzas de cangrejo"],
+        "fr": ["chair de pinces de crabe"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454},
+        {"unit": "can", "grams": 170}
+      ]
+    },
+    {
+      "canonical_name": "imitation crab",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 81,
+        "protein_g": 6.5,
+        "carbs_g": 12.9,
+        "fat_g": 0.4,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["imitation crab", "crab stick", "surimi", "krab"],
+        "ja": ["カニカマ", "カニ風味かまぼこ"],
+        "ko": ["게맛살", "맛살"],
+        "zh": ["蟹棒", "蟹味棒"],
+        "zh-tw": ["蟹棒", "蟹味棒"],
+        "es": ["palitos de cangrejo", "surimi"],
+        "fr": ["bâtonnets de crabe", "surimi"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 15},
+        {"unit": "cup", "grams": 120},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "lobster roe",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 128,
+        "protein_g": 20.5,
+        "carbs_g": 2.4,
+        "fat_g": 3.8,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["lobster roe", "lobster coral", "lobster eggs"],
+        "ja": ["ロブスターの卵", "オマール海老の卵"],
+        "ko": ["랍스터 알"],
+        "zh": ["龙虾籽", "龙虾黄"],
+        "zh-tw": ["龍蝦籽", "龍蝦黃"],
+        "es": ["huevas de langosta"],
+        "fr": ["œufs de homard", "corail de homard"]
+      },
+      "common_units": [
+        {"unit": "tablespoon", "grams": 15},
+        {"unit": "cup", "grams": 120}
+      ]
+    },
+    {
+      "canonical_name": "sea cucumber, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 56,
+        "protein_g": 13.0,
+        "carbs_g": 0.0,
+        "fat_g": 0.4,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["sea cucumber", "trepang", "bêche-de-mer"],
+        "ja": ["ナマコ", "海鼠"],
+        "ko": ["해삼"],
+        "zh": ["海参"],
+        "zh-tw": ["海參"],
+        "es": ["pepino de mar", "cohombro de mar"],
+        "fr": ["concombre de mer", "bêche-de-mer"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 100},
+        {"unit": "cup", "grams": 150},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "sea cucumber, dried",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 270,
+        "protein_g": 63.0,
+        "carbs_g": 0.0,
+        "fat_g": 2.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["dried sea cucumber", "dried trepang"],
+        "ja": ["干しナマコ", "干海参"],
+        "ko": ["건해삼", "마른 해삼"],
+        "zh": ["干海参"],
+        "zh-tw": ["乾海參"],
+        "es": ["pepino de mar seco"],
+        "fr": ["concombre de mer séché"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 20},
+        {"unit": "cup", "grams": 50},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "pen shell, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 68,
+        "protein_g": 12.0,
+        "carbs_g": 3.0,
+        "fat_g": 0.5,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["pen shell", "noble pen shell", "fan mussel"],
+        "ja": ["タイラギ", "平貝"],
+        "ko": ["키조개"],
+        "zh": ["江珧柱", "带子"],
+        "zh-tw": ["江珧柱", "帶子"],
+        "es": ["nácar"],
+        "fr": ["jambonneau", "grande nacre"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 40},
+        {"unit": "cup", "grams": 150},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "cuttlebone",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 5,
+        "protein_g": 0.2,
+        "carbs_g": 0.0,
+        "fat_g": 0.1,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["cuttlebone", "cuttlefish bone", "sepia bone"],
+        "ja": ["甲烏賊の骨", "イカの甲"],
+        "ko": ["갑오징어 뼈"],
+        "zh": ["海螵蛸", "墨鱼骨"],
+        "zh-tw": ["海螵蛸", "墨魚骨"],
+        "es": ["hueso de sepia", "jibia"],
+        "fr": ["os de seiche"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 10},
+        {"unit": "tablespoon", "grams": 8}
+      ]
+    },
+    {
+      "canonical_name": "ark shell, raw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 78,
+        "protein_g": 13.3,
+        "carbs_g": 4.5,
+        "fat_g": 0.6,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["ark shell", "ark clam"],
+        "ja": ["赤貝", "アカガイ"],
+        "ko": ["꼬막", "피조개"],
+        "zh": ["蚶", "血蚶"],
+        "zh-tw": ["蚶", "血蚶"],
+        "es": ["arca"],
+        "fr": ["arche"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 10},
+        {"unit": "cup", "grams": 140},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "shrimp paste",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 127,
+        "protein_g": 18.2,
+        "carbs_g": 8.5,
+        "fat_g": 2.1,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["shrimp paste", "belacan", "terasi", "bagoong"],
+        "ja": ["海老ペースト", "シュリンプペースト"],
+        "ko": ["새우젓", "새우 페이스트"],
+        "zh": ["虾酱", "虾膏"],
+        "zh-tw": ["蝦醬", "蝦膏"],
+        "es": ["pasta de camarones"],
+        "fr": ["pâte de crevettes"]
+      },
+      "common_units": [
+        {"unit": "teaspoon", "grams": 5},
+        {"unit": "tablespoon", "grams": 15},
+        {"unit": "cup", "grams": 220}
+      ]
+    },
+    {
+      "canonical_name": "dried shrimp",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 305,
+        "protein_g": 63.7,
+        "carbs_g": 2.8,
+        "fat_g": 3.8,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["dried shrimp", "dried prawns", "shrimp flakes"],
+        "ja": ["干しエビ", "桜えび"],
+        "ko": ["건새우", "말린 새우"],
+        "zh": ["虾米", "虾干"],
+        "zh-tw": ["蝦米", "蝦乾"],
+        "es": ["camarones secos"],
+        "fr": ["crevettes séchées"]
+      },
+      "common_units": [
+        {"unit": "tablespoon", "grams": 8},
+        {"unit": "cup", "grams": 60},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "dried scallops",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 282,
+        "protein_g": 61.8,
+        "carbs_g": 6.4,
+        "fat_g": 1.2,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["dried scallops", "conpoy", "dried scallop adductor"],
+        "ja": ["干し貝柱", "ほたて乾燥"],
+        "ko": ["건관자", "마른 가리비"],
+        "zh": ["干贝", "瑶柱"],
+        "zh-tw": ["乾貝", "瑤柱"],
+        "es": ["vieiras secas"],
+        "fr": ["pétoncles séchés"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 10},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "cup", "grams": 100}
+      ]
+    },
+    {
+      "canonical_name": "dried squid",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 313,
+        "protein_g": 62.4,
+        "carbs_g": 12.4,
+        "fat_g": 4.6,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["dried squid", "dried cuttlefish", "squid jerky"],
+        "ja": ["スルメ", "干しイカ"],
+        "ko": ["오징어 채", "마른 오징어"],
+        "zh": ["鱿鱼干", "干鱿鱼"],
+        "zh-tw": ["魷魚乾", "乾魷魚"],
+        "es": ["calamar seco"],
+        "fr": ["calmar séché"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 30},
+        {"unit": "cup", "grams": 80},
+        {"unit": "pound", "grams": 454}
+      ]
+    },
+    {
+      "canonical_name": "dried octopus",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 296,
+        "protein_g": 59.6,
+        "carbs_g": 8.8,
+        "fat_g": 4.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["dried octopus"],
+        "ja": ["干しタコ", "乾燥蛸"],
+        "ko": ["마른 문어", "건문어"],
+        "zh": ["章鱼干", "干章鱼"],
+        "zh-tw": ["章魚乾", "乾章魚"],
+        "es": ["pulpo seco"],
+        "fr": ["poulpe séché"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 40},
+        {"unit": "cup", "grams": 70},
+        {"unit": "pound", "grams": 454}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,494 @@
+{
+  "batch": 5,
+  "agent": 21,
+  "category": "japanese_seafood",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "name": "salmon",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["sake", "サーモン", "鮭", "しゃけ"]
+    },
+    {
+      "name": "tuna",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["maguro", "マグロ", "鮪", "まぐろ", "ツナ"]
+    },
+    {
+      "name": "yellowtail",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["hamachi", "buri", "はまち", "ぶり", "ハマチ", "ブリ", "鰤"]
+    },
+    {
+      "name": "sea bream",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["tai", "タイ", "鯛", "たい", "madai", "真鯛"]
+    },
+    {
+      "name": "mackerel",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["saba", "サバ", "鯖", "さば"]
+    },
+    {
+      "name": "horse mackerel",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["aji", "アジ", "鯵", "あじ"]
+    },
+    {
+      "name": "sardine",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["iwashi", "イワシ", "鰯", "いわし"]
+    },
+    {
+      "name": "freshwater eel",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["unagi", "ウナギ", "鰻", "うなぎ"]
+    },
+    {
+      "name": "sea eel",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["anago", "アナゴ", "穴子", "あなご"]
+    },
+    {
+      "name": "flounder",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["hirame", "ヒラメ", "平目", "ひらめ", "鮃"]
+    },
+    {
+      "name": "bonito",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["katsuo", "カツオ", "鰹", "かつお"]
+    },
+    {
+      "name": "skipjack tuna",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["katsuo", "カツオ", "鰹", "かつお", "skipjack"]
+    },
+    {
+      "name": "Pacific saury",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["sanma", "サンマ", "秋刀魚", "さんま"]
+    },
+    {
+      "name": "sea bass",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["suzuki", "スズキ", "鱸", "すずき"]
+    },
+    {
+      "name": "cod",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["tara", "タラ", "鱈", "たら"]
+    },
+    {
+      "name": "salmon trout",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["karafuto masu", "カラフトマス", "樺太鱒", "からふとます", "pink salmon"]
+    },
+    {
+      "name": "amberjack",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["kanpachi", "カンパチ", "間八", "かんぱち"]
+    },
+    {
+      "name": "red snapper",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["kinmedai", "キンメダイ", "金目鯛", "きんめだい"]
+    },
+    {
+      "name": "flathead",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["kochi", "コチ", "鯒", "こち"]
+    },
+    {
+      "name": "turbot",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["karei", "カレイ", "鰈", "かれい"]
+    },
+    {
+      "name": "bluefin tuna",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["honmaguro", "ホンマグロ", "本鮪", "ほんまぐろ", "kuromaguro", "黒鮪"]
+    },
+    {
+      "name": "albacore tuna",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["bincho maguro", "ビンチョウマグロ", "鬢長鮪", "びんちょうまぐろ"]
+    },
+    {
+      "name": "bigfin tuna",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["bachi maguro", "バチマグロ", "鉢鮪", "ばちまぐろ"]
+    },
+    {
+      "name": "conger eel",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["hamo", "ハモ", "鱧", "はも"]
+    },
+    {
+      "name": "rockfish",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["mebaru", "メバル", "眼張", "めばる"]
+    },
+    {
+      "name": "Japanese Spanish mackerel",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["sawara", "サワラ", "鰆", "さわら"]
+    },
+    {
+      "name": "threadfin bream",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["itoyoridai", "イトヨリダイ", "糸撚鯛", "いとよりだい"]
+    },
+    {
+      "name": "greenling",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["ainame", "アイナメ", "鮎魚女", "あいなめ"]
+    },
+    {
+      "name": "gizzard shad",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["kohada", "コハダ", "小鰭", "こはだ", "konoshiro", "鰶"]
+    },
+    {
+      "name": "flying fish",
+      "category": "seafood",
+      "subcategory": "fish",
+      "aliases": ["tobiuo", "トビウオ", "飛魚", "とびうお"]
+    },
+    {
+      "name": "shrimp",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["ebi", "エビ", "海老", "えび", "蝦"]
+    },
+    {
+      "name": "tiger prawn",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["kuruma ebi", "クルマエビ", "車海老", "くるまえび"]
+    },
+    {
+      "name": "sweet shrimp",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["ama ebi", "アマエビ", "甘海老", "あまえび", "botan ebi", "牡丹海老"]
+    },
+    {
+      "name": "lobster",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["ise ebi", "イセエビ", "伊勢海老", "いせえび"]
+    },
+    {
+      "name": "crab",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["kani", "カニ", "蟹", "かに"]
+    },
+    {
+      "name": "snow crab",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["zuwai gani", "ズワイガニ", "楚蟹", "ずわいがに"]
+    },
+    {
+      "name": "horsehair crab",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["kegani", "ケガニ", "毛蟹", "けがに"]
+    },
+    {
+      "name": "king crab",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["tarabagani", "タラバガニ", "鱈場蟹", "たらばがに"]
+    },
+    {
+      "name": "scallop",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["hotate", "ホタテ", "帆立", "ほたて", "帆立貝"]
+    },
+    {
+      "name": "clam",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["hamaguri", "ハマグリ", "蛤", "はまぐり"]
+    },
+    {
+      "name": "littleneck clam",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["asari", "アサリ", "浅蜊", "あさり"]
+    },
+    {
+      "name": "oyster",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["kaki", "カキ", "牡蠣", "かき"]
+    },
+    {
+      "name": "abalone",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["awabi", "アワビ", "鮑", "あわび"]
+    },
+    {
+      "name": "turban shell",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["sazae", "サザエ", "栄螺", "さざえ"]
+    },
+    {
+      "name": "ark shell",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["akagai", "アカガイ", "赤貝", "あかがい"]
+    },
+    {
+      "name": "cockle",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["torigai", "トリガイ", "鳥貝", "とりがい"]
+    },
+    {
+      "name": "razor clam",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["mategai", "マテガイ", "馬刀貝", "まてがい"]
+    },
+    {
+      "name": "whelk",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["tsubugai", "ツブガイ", "螺貝", "つぶがい"]
+    },
+    {
+      "name": "mussel",
+      "category": "seafood",
+      "subcategory": "shellfish",
+      "aliases": ["muurugai", "ムールガイ", "ムール貝", "むーるがい"]
+    },
+    {
+      "name": "squid",
+      "category": "seafood",
+      "subcategory": "cephalopod",
+      "aliases": ["ika", "イカ", "烏賊", "いか"]
+    },
+    {
+      "name": "Japanese flying squid",
+      "category": "seafood",
+      "subcategory": "cephalopod",
+      "aliases": ["surume ika", "スルメイカ", "鯣烏賊", "するめいか"]
+    },
+    {
+      "name": "spear squid",
+      "category": "seafood",
+      "subcategory": "cephalopod",
+      "aliases": ["yari ika", "ヤリイカ", "槍烏賊", "やりいか"]
+    },
+    {
+      "name": "firefly squid",
+      "category": "seafood",
+      "subcategory": "cephalopod",
+      "aliases": ["hotaru ika", "ホタルイカ", "蛍烏賊", "ほたるいか"]
+    },
+    {
+      "name": "cuttlefish",
+      "category": "seafood",
+      "subcategory": "cephalopod",
+      "aliases": ["kouika", "コウイカ", "甲烏賊", "こういか", "mongo ika", "紋甲烏賊"]
+    },
+    {
+      "name": "octopus",
+      "category": "seafood",
+      "subcategory": "cephalopod",
+      "aliases": ["tako", "タコ", "蛸", "たこ"]
+    },
+    {
+      "name": "common octopus",
+      "category": "seafood",
+      "subcategory": "cephalopod",
+      "aliases": ["madako", "マダコ", "真蛸", "まだこ"]
+    },
+    {
+      "name": "giant octopus",
+      "category": "seafood",
+      "subcategory": "cephalopod",
+      "aliases": ["mizudako", "ミズダコ", "水蛸", "みずだこ"]
+    },
+    {
+      "name": "salmon roe",
+      "category": "seafood",
+      "subcategory": "roe",
+      "aliases": ["ikura", "イクラ", "いくら"]
+    },
+    {
+      "name": "flying fish roe",
+      "category": "seafood",
+      "subcategory": "roe",
+      "aliases": ["tobiko", "トビコ", "とびこ", "tobikko", "トビッコ"]
+    },
+    {
+      "name": "sea urchin",
+      "category": "seafood",
+      "subcategory": "roe",
+      "aliases": ["uni", "ウニ", "雲丹", "うに"]
+    },
+    {
+      "name": "spicy cod roe",
+      "category": "seafood",
+      "subcategory": "roe",
+      "aliases": ["mentaiko", "メンタイコ", "明太子", "めんたいこ", "karashi mentaiko", "辛子明太子"]
+    },
+    {
+      "name": "cod roe",
+      "category": "seafood",
+      "subcategory": "roe",
+      "aliases": ["tarako", "タラコ", "鱈子", "たらこ"]
+    },
+    {
+      "name": "herring roe",
+      "category": "seafood",
+      "subcategory": "roe",
+      "aliases": ["kazunoko", "カズノコ", "数の子", "かずのこ"]
+    },
+    {
+      "name": "capelin roe",
+      "category": "seafood",
+      "subcategory": "roe",
+      "aliases": ["masago", "マサゴ", "真砂子", "まさご"]
+    },
+    {
+      "name": "nori seaweed",
+      "category": "seafood",
+      "subcategory": "seaweed",
+      "aliases": ["nori", "ノリ", "海苔", "のり"]
+    },
+    {
+      "name": "wakame seaweed",
+      "category": "seafood",
+      "subcategory": "seaweed",
+      "aliases": ["wakame", "ワカメ", "若布", "わかめ"]
+    },
+    {
+      "name": "kombu kelp",
+      "category": "seafood",
+      "subcategory": "seaweed",
+      "aliases": ["kombu", "コンブ", "昆布", "こんぶ", "konbu"]
+    },
+    {
+      "name": "hijiki seaweed",
+      "category": "seafood",
+      "subcategory": "seaweed",
+      "aliases": ["hijiki", "ヒジキ", "鹿尾菜", "ひじき"]
+    },
+    {
+      "name": "mekabu seaweed",
+      "category": "seafood",
+      "subcategory": "seaweed",
+      "aliases": ["mekabu", "メカブ", "芽株", "めかぶ"]
+    },
+    {
+      "name": "mozuku seaweed",
+      "category": "seafood",
+      "subcategory": "seaweed",
+      "aliases": ["mozuku", "モズク", "水雲", "もずく"]
+    },
+    {
+      "name": "aonori seaweed",
+      "category": "seafood",
+      "subcategory": "seaweed",
+      "aliases": ["aonori", "アオノリ", "青海苔", "あおのり"]
+    },
+    {
+      "name": "tosaka seaweed",
+      "category": "seafood",
+      "subcategory": "seaweed",
+      "aliases": ["tosaka nori", "トサカノリ", "鶏冠海苔", "とさかのり"]
+    },
+    {
+      "name": "bonito flakes",
+      "category": "seafood",
+      "subcategory": "dried",
+      "aliases": ["katsuobushi", "カツオブシ", "鰹節", "かつおぶし"]
+    },
+    {
+      "name": "dried sardines",
+      "category": "seafood",
+      "subcategory": "dried",
+      "aliases": ["niboshi", "ニボシ", "煮干し", "にぼし", "iriko", "いりこ"]
+    },
+    {
+      "name": "dried baby shrimp",
+      "category": "seafood",
+      "subcategory": "dried",
+      "aliases": ["sakura ebi", "サクラエビ", "桜海老", "さくらえび"]
+    },
+    {
+      "name": "dried young sardines",
+      "category": "seafood",
+      "subcategory": "dried",
+      "aliases": ["chirimen jako", "チリメンジャコ", "縮緬雑魚", "ちりめんじゃこ", "jako", "雑魚"]
+    },
+    {
+      "name": "fish paste",
+      "category": "seafood",
+      "subcategory": "processed",
+      "aliases": ["surimi", "スリミ", "擂り身", "すりみ"]
+    },
+    {
+      "name": "fish cake",
+      "category": "seafood",
+      "subcategory": "processed",
+      "aliases": ["kamaboko", "カマボコ", "蒲鉾", "かまぼこ"]
+    },
+    {
+      "name": "tube-shaped fish cake",
+      "category": "seafood",
+      "subcategory": "processed",
+      "aliases": ["chikuwa", "チクワ", "竹輪", "ちくわ"]
+    },
+    {
+      "name": "satsuma-age fish cake",
+      "category": "seafood",
+      "subcategory": "processed",
+      "aliases": ["satsuma-age", "サツマアゲ", "薩摩揚げ", "さつまあげ"]
+    },
+    {
+      "name": "fish sausage",
+      "category": "seafood",
+      "subcategory": "processed",
+      "aliases": ["gyoniku sausage", "ギョニクソーセージ", "魚肉ソーセージ", "ぎょにくそーせーじ"]
+    }
+  ]
+}

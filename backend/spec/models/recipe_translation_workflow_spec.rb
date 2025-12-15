@@ -18,11 +18,17 @@ RSpec.describe 'Recipe Translation Workflow', type: :model do
     recipe.recipe_steps.build(step_number: 1, instruction_original: "Mix ingredients")
     ig = recipe.ingredient_groups.build(name: "Ingredients", position: 1)
     ingredient = Ingredient.find_or_create_by!(canonical_name: "test ingredient") { |i| i.category = "vegetable" }
-    ig.recipe_ingredients.build(ingredient_id: ingredient.id, ingredient_name: "test ingredient", amount: 1, unit: "cup", position: 1)
+    unit = Unit.find_or_create_by!(canonical_name: "cup") { |u| u.category = "unit_volume" }
+    ig.recipe_ingredients.build(ingredient_id: ingredient.id, ingredient_name: "test ingredient", amount: 1, unit: unit, position: 1)
     recipe.recipe_cuisines.build(data_reference: cuisine)
-    recipe.image.attach(
+    recipe.card_image.attach(
       io: File.open(Rails.root.join('spec/fixtures/files/test_image.png')),
-      filename: 'test_image.png',
+      filename: 'test_card_image.png',
+      content_type: 'image/png'
+    )
+    recipe.detail_image.attach(
+      io: File.open(Rails.root.join('spec/fixtures/files/test_image.png')),
+      filename: 'test_detail_image.png',
       content_type: 'image/png'
     )
     recipe

@@ -6,17 +6,167 @@ require 'openssl'
 require 'nokogiri'
 
 class RecipeParserService < AiService
-  # Parse a large text block containing a recipe
-  # Returns structured recipe JSON
+  RECIPE_JSON_SCHEMA = {
+    type: 'object',
+    required: ['name', 'description', 'ingredient_groups', 'steps'],
+    properties: {
+      name: {
+        type: 'string',
+        description: 'Recipe title/name'
+      },
+      description: {
+        type: 'string',
+        description: 'Brief recipe description'
+      },
+      language: {
+        type: 'string',
+        description: 'Source language code (en, ja, ko, zh-tw, zh-cn, es, fr)',
+        enum: ['en', 'ja', 'ko', 'zh-tw', 'zh-cn', 'es', 'fr']
+      },
+      requires_precision: {
+        type: 'boolean',
+        description: 'Whether recipe requires precise measurements'
+      },
+      precision_reason: {
+        type: 'string',
+        enum: ['baking', 'confectionery', 'fermentation', 'molecular'],
+        description: 'Reason for requiring precision if applicable'
+      },
+      difficulty_level: {
+        type: 'string',
+        enum: ['easy', 'medium', 'hard'],
+        description: 'Recipe difficulty level'
+      },
+      servings: {
+        type: 'object',
+        properties: {
+          original: { type: 'integer', description: 'Number of servings' },
+          min: { type: 'integer', description: 'Minimum servings for range' },
+          max: { type: 'integer', description: 'Maximum servings for range' }
+        }
+      },
+      timing: {
+        type: 'object',
+        properties: {
+          prep_minutes: { type: 'integer', description: 'Preparation time in minutes' },
+          cook_minutes: { type: 'integer', description: 'Cooking time in minutes' },
+          total_minutes: { type: 'integer', description: 'Total time in minutes' }
+        }
+      },
+      nutrition: {
+        type: 'object',
+        properties: {
+          per_serving: {
+            type: 'object',
+            properties: {
+              calories: { type: 'integer' },
+              protein_g: { type: 'integer' },
+              carbs_g: { type: 'integer' },
+              fat_g: { type: 'integer' },
+              fiber_g: { type: 'integer' }
+            }
+          }
+        }
+      },
+      aliases: {
+        type: 'array',
+        items: { type: 'string' },
+        description: 'Alternative names for the recipe'
+      },
+      dietary_tags: {
+        type: 'array',
+        items: { type: 'string' },
+        description: 'Dietary tags as lowercase hyphenated keys: vegetarian, vegan, gluten-free, dairy-free, pork-free, halal, kosher, keto-friendly, paleo, low-carb, low-sodium, egg-free, soy-free, tree-nut-free, peanut-free, pescatarian, red-meat-free, wheat-free'
+      },
+      cuisines: {
+        type: 'array',
+        items: { type: 'string' },
+        description: 'Cuisine types as lowercase hyphenated keys: japanese, korean, chinese, cantonese, sichuan, taiwanese, thai, vietnamese, filipino, indonesian, malaysian, singaporean, indian, north-indian, south-indian, italian, french, spanish, greek, mexican, american, southern, cajun, british, german, mediterranean, middle-eastern, turkish, lebanese, moroccan, ethiopian, brazilian, peruvian, caribbean, fusion, asian-fusion'
+      },
+      tags: {
+        type: 'array',
+        items: { type: 'string' },
+        description: 'Recipe categorization tags (3-6 tags): cooking-method (braised, stir-fried, grilled, baked, steamed, deep-fried, slow-cooked, roasted), meal-type (breakfast, lunch, dinner, snack, appetizer, dessert, side-dish), occasion (weeknight, holiday, party, meal-prep, date-night), season (summer, winter, spring, fall), texture/taste (spicy, savory, sweet, crispy, creamy, hearty, light, refreshing), main-ingredient (chicken, beef, pork, seafood, tofu, vegetables, pasta, rice, noodles)'
+      },
+      equipment: {
+        type: 'array',
+        items: { type: 'string' },
+        description: 'Required cooking equipment'
+      },
+      ingredient_groups: {
+        type: 'array',
+        items: {
+          type: 'object',
+          required: ['name', 'items'],
+          properties: {
+            name: { type: 'string', description: 'Group name (e.g., "For the sauce", "Main ingredients")' },
+            items: {
+              type: 'array',
+              items: {
+                type: 'object',
+                required: ['name'],
+                properties: {
+                  name: { type: 'string', description: 'Ingredient name' },
+                  amount: { type: 'string', description: 'Quantity as string (e.g., "2", "1/2")' },
+                  unit: { type: 'string', description: 'Measurement unit (e.g., "cups", "tbsp")' },
+                  preparation: { type: 'string', description: 'Preparation notes (e.g., "diced", "minced")' },
+                  optional: { type: 'boolean', description: 'Whether ingredient is optional' }
+                }
+              }
+            }
+          }
+        }
+      },
+      steps: {
+        type: 'array',
+        items: {
+          type: 'object',
+          required: ['instruction'],
+          properties: {
+            instruction: { type: 'string', description: 'Step instruction text' },
+            section_heading: { type: 'string', description: 'Optional section heading before this step' },
+            duration_minutes: { type: 'integer', description: 'Estimated time for this step' }
+          }
+        }
+      }
+    }
+  }.freeze
+
+  SYSTEM_PROMPT = <<~PROMPT
+    You are a recipe parsing expert. Extract recipe information from the provided content and structure it according to the schema.
+
+    Guidelines:
+    - Extract all ingredients with proper amounts, units, and preparation notes
+    - Group ingredients logically (e.g., "For the sauce", "For the dough") - use "Main Ingredients" if no grouping exists
+    - Extract step-by-step instructions clearly, preserving any section headings
+    - If instructions have section headers (like "Prepare the beef:" or "For the sauce:"), set them as section_heading on the first step of that section
+    - Infer timing, difficulty, and dietary information when possible
+    - IMPORTANT: For dietary_tags, use ONLY lowercase hyphenated keys from the allowed list (e.g., dairy-free, gluten-free, pork-free)
+    - IMPORTANT: For cuisines, use ONLY lowercase hyphenated keys from the allowed list (e.g., taiwanese, chinese, japanese)
+    - For tags, use descriptive categorization tags that help with recipe discovery (cooking method, meal type, main ingredient, occasion)
+    - For units, use abbreviated forms: tbsp, tsp, cup, oz, lb, g, ml, L (not "tablespoons" or "teaspoons")
+    - Detect the source language of the recipe and set the language field accordingly
+    - Be thorough but don't hallucinate information that isn't present
+  PROMPT
+
   def parse_text_block(text_content)
-    parse_with_prompts('recipe_parse_text') do |user_prompt|
-      user_prompt.render(text_content: text_content)
-    end
+    Rails.logger.info("Parsing recipe from text block (#{text_content.length} chars)")
+
+    result = call_claude_structured(
+      system_prompt: SYSTEM_PROMPT,
+      user_prompt: "Parse this recipe:\n\n#{text_content}",
+      tool_name: 'parse_recipe',
+      tool_description: 'Parse and structure recipe information',
+      json_schema: RECIPE_JSON_SCHEMA,
+      max_tokens: 4096
+    )
+
+    result.deep_symbolize_keys
+  rescue StandardError => e
+    Rails.logger.error("Text parse failed: #{e.message}")
+    raise
   end
 
-  # Parse a recipe from a URL
-  # Uses cleaned HTML to optimize token usage before Claude parsing
-  # Returns structured recipe JSON with source_url
   def parse_url(url)
     validate_url(url)
 
@@ -27,41 +177,26 @@ class RecipeParserService < AiService
 
     Rails.logger.info("Cleaned HTML from #{raw_html.length} to #{html_content.length} bytes")
 
-    result = parse_with_prompts('recipe_parse_url', enable_web_search: false) do |user_prompt|
-      user_prompt.render(url: url, html_content: html_content)
-    end
+    result = call_claude_structured(
+      system_prompt: SYSTEM_PROMPT,
+      user_prompt: "Parse this recipe from #{url}:\n\n#{html_content}",
+      tool_name: 'parse_recipe',
+      tool_description: 'Parse and structure recipe information',
+      json_schema: RECIPE_JSON_SCHEMA,
+      max_tokens: 4096
+    )
 
-    if result.is_a?(Hash)
-      Rails.logger.info("Successfully parsed URL content with Claude")
-      result['source_url'] = url
-      return result
-    end
+    parsed = result.deep_symbolize_keys
+    parsed[:source_url] = url
 
-    raise "Failed to parse recipe from URL"
+    Rails.logger.info("Successfully parsed URL content with structured output")
+    parsed
   rescue StandardError => e
     Rails.logger.error("URL parse failed: #{e.message}")
     raise
   end
 
   private
-
-  # Generic prompt-based parsing method
-  # Yields user_prompt for rendering with source-specific variables
-  def parse_with_prompts(prompt_base_key, **claude_options)
-    system_prompt = AiPrompt.active.find_by!(prompt_key: "#{prompt_base_key}_system")
-    user_prompt = AiPrompt.active.find_by!(prompt_key: "#{prompt_base_key}_user")
-
-    rendered_user_prompt = yield(user_prompt)
-
-    response = call_claude(
-      system_prompt: system_prompt.prompt_text,
-      user_prompt: rendered_user_prompt,
-      max_tokens: 4096,
-      **claude_options
-    )
-
-    parse_response(response)
-  end
 
   # Validate URL format
   def validate_url(url)
@@ -106,36 +241,5 @@ class RecipeParserService < AiService
   rescue => e
     Rails.logger.error("Failed to clean HTML: #{e.message}")
     raise "Could not clean HTML: #{e.message}"
-  end
-
-  # Parse Claude's response to extract recipe JSON
-  # Claude returns JSON wrapped in markdown code blocks, extract the JSON object
-  def parse_response(response)
-    return nil unless response.present?
-
-    # Try to extract JSON from markdown code blocks first
-    if response.include?('```json')
-      json_match = response.match(/```json\s*(.*?)\s*```/m)
-      if json_match
-        json_str = json_match[1]
-        return JSON.parse(json_str)
-      end
-    end
-
-    # Try to extract JSON from plain code blocks
-    if response.include?('```')
-      json_match = response.match(/```\s*(.*?)\s*```/m)
-      if json_match
-        json_str = json_match[1]
-        return JSON.parse(json_str)
-      end
-    end
-
-    # Try to parse as plain JSON
-    JSON.parse(response)
-  rescue JSON::ParserError => e
-    Rails.logger.error("Failed to parse Claude response as JSON: #{e.message}")
-    Rails.logger.debug("Response was: #{response}")
-    nil
   end
 end

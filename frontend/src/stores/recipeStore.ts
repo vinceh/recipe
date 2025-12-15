@@ -23,6 +23,7 @@ export const useRecipeStore = defineStore('recipe', () => {
   const filters = ref<RecipeFilters>({
     dietary_tags: [],
     cuisines: [],
+    tags: [],
     difficulty_level: undefined,
     page: 1,
     per_page: 20
@@ -240,6 +241,7 @@ export const useRecipeStore = defineStore('recipe', () => {
     filters.value = {
       dietary_tags: [],
       cuisines: [],
+      tags: [],
       difficulty_level: undefined,
       page: 1,
       per_page: 20

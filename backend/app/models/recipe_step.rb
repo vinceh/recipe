@@ -1,6 +1,6 @@
 class RecipeStep < ApplicationRecord
   extend Mobility
-  translates :instruction_original, backend: :table
+  translates :instruction_original, :section_heading, backend: :table
 
   belongs_to :recipe
 

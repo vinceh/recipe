@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe RecipeScaler, type: :service do
+  def find_or_create_unit(canonical_name, category = "unit_volume")
+    Unit.find_or_create_by!(canonical_name: canonical_name) { |u| u.category = category }
+  end
+
   def make_recipe(overrides = {})
     create(:recipe, {
       servings_original: 4,
@@ -14,7 +18,7 @@ RSpec.describe RecipeScaler, type: :service do
       it 'doubles all ingredients when scaling from 4 to 8 servings (AC-SCALE-001)' do
         recipe = make_recipe
         ingredient_group = create(:ingredient_group, recipe: recipe)
-        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 2, unit: 'cups')
+        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 2, unit: find_or_create_unit('cup'))
 
         scaler = RecipeScaler.new(recipe)
         scaled = scaler.scale_by_servings(8)
@@ -35,7 +39,7 @@ RSpec.describe RecipeScaler, type: :service do
       it 'halves all ingredients when scaling from 4 to 2 servings (AC-SCALE-002)' do
         recipe = make_recipe
         ingredient_group = create(:ingredient_group, recipe: recipe)
-        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 2, unit: 'cups')
+        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 2, unit: find_or_create_unit('cup'))
 
         scaler = RecipeScaler.new(recipe)
         scaled = scaler.scale_by_servings(2)
@@ -62,7 +66,7 @@ RSpec.describe RecipeScaler, type: :service do
       it 'maintains 2 decimal places for baking recipes (AC-SCALE-004)' do
         recipe = make_recipe(requires_precision: true, servings_min: 1)
         ingredient_group = create(:ingredient_group, recipe: recipe)
-        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 250, unit: 'g')
+        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 250, unit: find_or_create_unit('g', 'unit_weight'))
 
         scaler = RecipeScaler.new(recipe)
         scaled = scaler.scale_by_servings(1.5)
@@ -73,7 +77,7 @@ RSpec.describe RecipeScaler, type: :service do
       it 'identifies baking recipe via requires_precision flag (AC-SCALE-004)' do
         recipe = make_recipe(requires_precision: true, servings_min: 1)
         ingredient_group = create(:ingredient_group, recipe: recipe)
-        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 250, unit: 'g')
+        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 250, unit: find_or_create_unit('g', 'unit_weight'))
 
         scaler = RecipeScaler.new(recipe)
         scaled = scaler.scale_by_servings(1)
@@ -87,7 +91,7 @@ RSpec.describe RecipeScaler, type: :service do
       it 'rounds to friendly fractions for cooking recipes (AC-SCALE-005)' do
         recipe = make_recipe
         ingredient_group = create(:ingredient_group, recipe: recipe)
-        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 2, unit: 'cups')
+        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 2, unit: find_or_create_unit('cup'))
 
         scaler = RecipeScaler.new(recipe)
         scaled = scaler.scale_by_servings(1.5)
@@ -98,7 +102,7 @@ RSpec.describe RecipeScaler, type: :service do
       it 'rounds scaled amounts to closest friendly fraction (AC-SCALE-005)' do
         recipe = make_recipe
         ingredient_group = create(:ingredient_group, recipe: recipe)
-        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 0.66, unit: 'cups')
+        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 0.66, unit: find_or_create_unit('cup'))
 
         scaler = RecipeScaler.new(recipe)
         scaled = scaler.scale_by_servings(1)
@@ -111,7 +115,7 @@ RSpec.describe RecipeScaler, type: :service do
       it 'steps down from tbsp to tsp for small amounts (AC-SCALE-006)' do
         recipe = make_recipe
         ingredient_group = create(:ingredient_group, recipe: recipe)
-        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 1, unit: 'tbsp')
+        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 1, unit: find_or_create_unit('tbsp'))
 
         recipe = Recipe.find(recipe.id)
 
@@ -126,7 +130,7 @@ RSpec.describe RecipeScaler, type: :service do
       it 'steps down from cups to tbsp for very small amounts (AC-SCALE-007)' do
         recipe = make_recipe
         ingredient_group = create(:ingredient_group, recipe: recipe)
-        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 1, unit: 'cup')
+        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 1, unit: find_or_create_unit('cup'))
 
         scaler = RecipeScaler.new(recipe)
         scaled = scaler.scale_by_servings(0.125)
@@ -144,9 +148,9 @@ RSpec.describe RecipeScaler, type: :service do
         chicken = create(:recipe_ingredient,
                         ingredient_group: ingredient_group,
                         amount: 500,
-                        unit: 'g',
+                        unit: find_or_create_unit('g', 'unit_weight'),
                         ingredient_name: 'chicken thigh')
-        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 2, unit: 'cups')
+        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 2, unit: find_or_create_unit('cup'))
 
         scaler = RecipeScaler.new(recipe)
         scaled = scaler.scale_by_ingredient(chicken.id, 200, 'g')
@@ -160,9 +164,9 @@ RSpec.describe RecipeScaler, type: :service do
         create(:recipe_ingredient,
                ingredient_group: ingredient_group,
                amount: 1,
-               unit: 'kg',
+               unit: find_or_create_unit('kg', 'unit_weight'),
                ingredient_name: 'flour')
-        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 2, unit: 'cups')
+        create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 2, unit: find_or_create_unit('cup'))
 
         scaler = RecipeScaler.new(recipe)
         scaled = scaler.scale_by_ingredient(recipe.recipe_ingredients.first.id, 500, 'g')
@@ -180,7 +184,7 @@ RSpec.describe RecipeScaler, type: :service do
 
       # Verify baking context affects scaling logic
       ingredient_group = create(:ingredient_group, recipe: recipe)
-      create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 250, unit: 'g')
+      create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 250, unit: find_or_create_unit('g', 'unit_weight'))
 
       scaled = scaler.scale_by_servings(1.5)
       expect(scaled).to be_a(Hash)
@@ -191,7 +195,7 @@ RSpec.describe RecipeScaler, type: :service do
       scaler = RecipeScaler.new(recipe)
 
       ingredient_group = create(:ingredient_group, recipe: recipe)
-      create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 2, unit: 'cups')
+      create(:recipe_ingredient, ingredient_group: ingredient_group, amount: 2, unit: find_or_create_unit('cup'))
 
       scaled = scaler.scale_by_servings(1.5)
       expect(scaled).to be_a(Hash)

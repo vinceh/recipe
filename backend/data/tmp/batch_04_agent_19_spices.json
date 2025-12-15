@@ -1,0 +1,3188 @@
+{
+  "batch": 4,
+  "agent": 19,
+  "category": "spices",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "black pepper ground",
+      "category": "spice",
+      "per_100g": {
+        "calories": 251,
+        "protein": 10.4,
+        "carbs": 63.9,
+        "fat": 3.3,
+        "fiber": 25.3
+      },
+      "aliases": {
+        "en": ["ground black pepper", "black pepper powder", "black peppercorns ground"],
+        "ja": ["黒コショウ", "黒胡椒", "ブラックペッパー"],
+        "ko": ["검은 후추", "흑후추", "블랙페퍼"],
+        "zh": ["黑胡椒粉", "黑胡椒", "黑椒粉"],
+        "es": ["pimienta negra molida", "pimienta negra"],
+        "fr": ["poivre noir moulu", "poivre noir"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "white pepper ground",
+      "category": "spice",
+      "per_100g": {
+        "calories": 296,
+        "protein": 10.4,
+        "carbs": 68.6,
+        "fat": 2.1,
+        "fiber": 20.3
+      },
+      "aliases": {
+        "en": ["ground white pepper", "white pepper powder"],
+        "ja": ["白コショウ", "白胡椒", "ホワイトペッパー"],
+        "ko": ["흰 후추", "백후추", "화이트페퍼"],
+        "zh": ["白胡椒粉", "白胡椒", "白椒粉"],
+        "es": ["pimienta blanca molida", "pimienta blanca"],
+        "fr": ["poivre blanc moulu", "poivre blanc"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "sea salt",
+      "category": "spice",
+      "per_100g": {
+        "calories": 0,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0
+      },
+      "aliases": {
+        "en": ["salt", "table salt", "fine sea salt"],
+        "ja": ["海塩", "塩", "食塩"],
+        "ko": ["천일염", "소금", "바다소금"],
+        "zh": ["海盐", "盐", "食盐"],
+        "es": ["sal marina", "sal", "sal de mesa"],
+        "fr": ["sel de mer", "sel", "sel fin"]
+      },
+      "common_units": ["tsp", "tbsp", "g", "pinch"]
+    },
+    {
+      "canonical_name": "kosher salt",
+      "category": "spice",
+      "per_100g": {
+        "calories": 0,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0
+      },
+      "aliases": {
+        "en": ["coarse salt", "koshering salt"],
+        "ja": ["コーシャーソルト", "粗塩"],
+        "ko": ["코셔 소금", "굵은 소금"],
+        "zh": ["粗盐", "犹太盐"],
+        "es": ["sal kosher", "sal gruesa"],
+        "fr": ["sel casher", "gros sel"]
+      },
+      "common_units": ["tsp", "tbsp", "g", "pinch"]
+    },
+    {
+      "canonical_name": "himalayan pink salt",
+      "category": "spice",
+      "per_100g": {
+        "calories": 0,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0
+      },
+      "aliases": {
+        "en": ["pink himalayan salt", "pink salt"],
+        "ja": ["ヒマラヤピンクソルト", "ピンクソルト"],
+        "ko": ["히말라야 핑크 소금", "핑크 소금"],
+        "zh": ["喜马拉雅粉盐", "粉红盐"],
+        "es": ["sal rosa del Himalaya", "sal rosa"],
+        "fr": ["sel rose de l'Himalaya", "sel rose"]
+      },
+      "common_units": ["tsp", "tbsp", "g", "pinch"]
+    },
+    {
+      "canonical_name": "fleur de sel",
+      "category": "spice",
+      "per_100g": {
+        "calories": 0,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0
+      },
+      "aliases": {
+        "en": ["fleur de sel", "flower of salt"],
+        "ja": ["フルール・ド・セル", "塩の花"],
+        "ko": ["플뢰르 드 셀", "소금꽃"],
+        "zh": ["盐之花", "法国海盐"],
+        "es": ["flor de sal"],
+        "fr": ["fleur de sel"]
+      },
+      "common_units": ["tsp", "tbsp", "g", "pinch"]
+    },
+    {
+      "canonical_name": "smoked paprika",
+      "category": "spice",
+      "per_100g": {
+        "calories": 282,
+        "protein": 14.1,
+        "carbs": 54.0,
+        "fat": 12.9,
+        "fiber": 34.9
+      },
+      "aliases": {
+        "en": ["pimenton", "spanish smoked paprika", "smoked sweet paprika"],
+        "ja": ["スモークパプリカ", "燻製パプリカ"],
+        "ko": ["훈제 파프리카", "스모크 파프리카"],
+        "zh": ["烟熏红椒粉", "烟熏辣椒粉"],
+        "es": ["pimentón ahumado", "pimentón de la Vera"],
+        "fr": ["paprika fumé", "piment doux fumé"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "sweet paprika",
+      "category": "spice",
+      "per_100g": {
+        "calories": 282,
+        "protein": 14.1,
+        "carbs": 54.0,
+        "fat": 12.9,
+        "fiber": 34.9
+      },
+      "aliases": {
+        "en": ["hungarian paprika", "paprika powder"],
+        "ja": ["パプリカパウダー", "甘パプリカ"],
+        "ko": ["파프리카 가루", "단맛 파프리카"],
+        "zh": ["甜红椒粉", "红椒粉"],
+        "es": ["pimentón dulce", "paprika"],
+        "fr": ["paprika doux", "piment doux"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "hot paprika",
+      "category": "spice",
+      "per_100g": {
+        "calories": 282,
+        "protein": 14.1,
+        "carbs": 54.0,
+        "fat": 12.9,
+        "fiber": 34.9
+      },
+      "aliases": {
+        "en": ["spicy paprika", "hot hungarian paprika"],
+        "ja": ["ホットパプリカ", "辛口パプリカ"],
+        "ko": ["매운 파프리카", "핫 파프리카"],
+        "zh": ["辣红椒粉", "辣味红椒粉"],
+        "es": ["pimentón picante", "paprika picante"],
+        "fr": ["paprika fort", "paprika piquant"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "cumin ground",
+      "category": "spice",
+      "per_100g": {
+        "calories": 375,
+        "protein": 17.8,
+        "carbs": 44.2,
+        "fat": 22.3,
+        "fiber": 10.5
+      },
+      "aliases": {
+        "en": ["ground cumin", "cumin powder"],
+        "ja": ["クミンパウダー", "馬芹", "ジーラ"],
+        "ko": ["커민 가루", "쿠민"],
+        "zh": ["孜然粉", "小茴香粉"],
+        "es": ["comino molido", "comino en polvo"],
+        "fr": ["cumin moulu", "cumin en poudre"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "coriander ground",
+      "category": "spice",
+      "per_100g": {
+        "calories": 298,
+        "protein": 12.4,
+        "carbs": 54.2,
+        "fat": 17.8,
+        "fiber": 41.9
+      },
+      "aliases": {
+        "en": ["ground coriander", "coriander powder"],
+        "ja": ["コリアンダーパウダー", "香菜", "コエンドロ"],
+        "ko": ["고수 가루", "코리앤더"],
+        "zh": ["芫荽粉", "香菜籽粉"],
+        "es": ["cilantro molido", "coriandro molido"],
+        "fr": ["coriandre moulue", "coriandre en poudre"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "turmeric ground",
+      "category": "spice",
+      "per_100g": {
+        "calories": 312,
+        "protein": 9.7,
+        "carbs": 67.1,
+        "fat": 3.3,
+        "fiber": 22.7
+      },
+      "aliases": {
+        "en": ["ground turmeric", "turmeric powder", "haldi"],
+        "ja": ["ターメリックパウダー", "ウコン", "鬱金"],
+        "ko": ["강황 가루", "울금", "터메릭"],
+        "zh": ["姜黄粉", "黄姜粉"],
+        "es": ["cúrcuma molida", "cúrcuma en polvo"],
+        "fr": ["curcuma moulu", "curcuma en poudre"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "cinnamon ground",
+      "category": "spice",
+      "per_100g": {
+        "calories": 247,
+        "protein": 4.0,
+        "carbs": 80.6,
+        "fat": 1.2,
+        "fiber": 53.1
+      },
+      "aliases": {
+        "en": ["ground cinnamon", "cinnamon powder"],
+        "ja": ["シナモンパウダー", "肉桂", "桂皮"],
+        "ko": ["계피 가루", "시나몬"],
+        "zh": ["肉桂粉", "桂皮粉"],
+        "es": ["canela molida", "canela en polvo"],
+        "fr": ["cannelle moulue", "cannelle en poudre"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "ceylon cinnamon",
+      "category": "spice",
+      "per_100g": {
+        "calories": 247,
+        "protein": 4.0,
+        "carbs": 80.6,
+        "fat": 1.2,
+        "fiber": 53.1
+      },
+      "aliases": {
+        "en": ["true cinnamon", "sri lankan cinnamon"],
+        "ja": ["セイロンシナモン", "真桂皮"],
+        "ko": ["실론 시나몬", "진짜 계피"],
+        "zh": ["锡兰肉桂", "真肉桂"],
+        "es": ["canela de Ceilán", "canela verdadera"],
+        "fr": ["cannelle de Ceylan", "vraie cannelle"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "cassia cinnamon",
+      "category": "spice",
+      "per_100g": {
+        "calories": 247,
+        "protein": 4.0,
+        "carbs": 80.6,
+        "fat": 1.2,
+        "fiber": 53.1
+      },
+      "aliases": {
+        "en": ["chinese cinnamon", "cassia"],
+        "ja": ["カシアシナモン", "中国肉桂"],
+        "ko": ["카시아 시나몬", "중국 계피"],
+        "zh": ["桂皮", "中国肉桂"],
+        "es": ["canela cassia", "canela china"],
+        "fr": ["cannelle de Chine", "casse"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "nutmeg ground",
+      "category": "spice",
+      "per_100g": {
+        "calories": 525,
+        "protein": 5.8,
+        "carbs": 49.3,
+        "fat": 36.3,
+        "fiber": 20.8
+      },
+      "aliases": {
+        "en": ["ground nutmeg", "nutmeg powder"],
+        "ja": ["ナツメグパウダー", "肉豆蔲"],
+        "ko": ["육두구 가루", "너트메그"],
+        "zh": ["肉豆蔻粉", "豆蔻粉"],
+        "es": ["nuez moscada molida", "nuez moscada"],
+        "fr": ["noix de muscade moulue", "muscade"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "mace ground",
+      "category": "spice",
+      "per_100g": {
+        "calories": 475,
+        "protein": 6.7,
+        "carbs": 50.5,
+        "fat": 32.4,
+        "fiber": 20.2
+      },
+      "aliases": {
+        "en": ["ground mace", "mace powder"],
+        "ja": ["メースパウダー", "肉豆蔲衣"],
+        "ko": ["메이스 가루", "육두구껍질"],
+        "zh": ["肉豆蔻皮粉", "豆蔻衣"],
+        "es": ["macis molida", "flor de nuez moscada"],
+        "fr": ["macis moulu", "fleur de muscade"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "cloves ground",
+      "category": "spice",
+      "per_100g": {
+        "calories": 274,
+        "protein": 6.0,
+        "carbs": 65.5,
+        "fat": 13.0,
+        "fiber": 33.9
+      },
+      "aliases": {
+        "en": ["ground cloves", "clove powder"],
+        "ja": ["クローブパウダー", "丁子", "丁香"],
+        "ko": ["정향 가루", "클로브"],
+        "zh": ["丁香粉", "丁子粉"],
+        "es": ["clavo de olor molido", "clavo molido"],
+        "fr": ["clous de girofle moulus", "girofle moulu"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "cardamom ground",
+      "category": "spice",
+      "per_100g": {
+        "calories": 311,
+        "protein": 10.8,
+        "carbs": 68.5,
+        "fat": 6.7,
+        "fiber": 28.0
+      },
+      "aliases": {
+        "en": ["ground cardamom", "cardamom powder"],
+        "ja": ["カルダモンパウダー", "小豆蔲"],
+        "ko": ["카다멈 가루", "소두구"],
+        "zh": ["小豆蔻粉", "豆蔻粉"],
+        "es": ["cardamomo molido", "cardamomo en polvo"],
+        "fr": ["cardamome moulue", "cardamome en poudre"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "green cardamom",
+      "category": "spice",
+      "per_100g": {
+        "calories": 311,
+        "protein": 10.8,
+        "carbs": 68.5,
+        "fat": 6.7,
+        "fiber": 28.0
+      },
+      "aliases": {
+        "en": ["true cardamom", "green cardamom pods"],
+        "ja": ["グリーンカルダモン", "緑小豆蔲"],
+        "ko": ["그린 카다멈", "녹색 소두구"],
+        "zh": ["绿豆蔻", "小豆蔻"],
+        "es": ["cardamomo verde"],
+        "fr": ["cardamome verte"]
+      },
+      "common_units": ["pods", "tsp", "g"]
+    },
+    {
+      "canonical_name": "black cardamom",
+      "category": "spice",
+      "per_100g": {
+        "calories": 311,
+        "protein": 10.8,
+        "carbs": 68.5,
+        "fat": 6.7,
+        "fiber": 28.0
+      },
+      "aliases": {
+        "en": ["brown cardamom", "black cardamom pods"],
+        "ja": ["ブラックカルダモン", "黒小豆蔲"],
+        "ko": ["블랙 카다멈", "흑소두구"],
+        "zh": ["黑豆蔻", "草果"],
+        "es": ["cardamomo negro"],
+        "fr": ["cardamome noire"]
+      },
+      "common_units": ["pods", "tsp", "g"]
+    },
+    {
+      "canonical_name": "cayenne pepper",
+      "category": "spice",
+      "per_100g": {
+        "calories": 318,
+        "protein": 12.0,
+        "carbs": 56.6,
+        "fat": 17.3,
+        "fiber": 27.2
+      },
+      "aliases": {
+        "en": ["cayenne powder", "red cayenne pepper"],
+        "ja": ["カイエンペッパー", "唐辛子粉"],
+        "ko": ["카이엔 페퍼", "카옌 고추"],
+        "zh": ["卡宴辣椒粉", "红辣椒粉"],
+        "es": ["pimienta de cayena", "cayena"],
+        "fr": ["poivre de cayenne", "piment de cayenne"]
+      },
+      "common_units": ["tsp", "tbsp", "g", "pinch"]
+    },
+    {
+      "canonical_name": "chili powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 282,
+        "protein": 13.5,
+        "carbs": 49.7,
+        "fat": 14.3,
+        "fiber": 28.7
+      },
+      "aliases": {
+        "en": ["chile powder", "ground chili"],
+        "ja": ["チリパウダー", "唐辛子粉"],
+        "ko": ["칠리 파우더", "고추가루"],
+        "zh": ["辣椒粉", "红辣椒粉"],
+        "es": ["chile en polvo", "chili molido"],
+        "fr": ["poudre de chili", "chili en poudre"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "ancho chili powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 281,
+        "protein": 11.0,
+        "carbs": 52.1,
+        "fat": 14.6,
+        "fiber": 30.3
+      },
+      "aliases": {
+        "en": ["ancho powder", "dried poblano powder"],
+        "ja": ["アンチョチリパウダー", "アンチョパウダー"],
+        "ko": ["안초 칠리", "안초 고추"],
+        "zh": ["安乔辣椒粉", "波布拉诺辣椒粉"],
+        "es": ["chile ancho en polvo"],
+        "fr": ["poudre de piment ancho"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "chipotle powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 281,
+        "protein": 11.0,
+        "carbs": 52.1,
+        "fat": 14.6,
+        "fiber": 30.3
+      },
+      "aliases": {
+        "en": ["chipotle chili powder", "smoked jalapeno powder"],
+        "ja": ["チポトレパウダー", "燻製ハラペーニョ"],
+        "ko": ["치폴레 가루", "훈제 할라피뇨"],
+        "zh": ["烟熏墨西哥辣椒粉", "奇波雷辣椒粉"],
+        "es": ["chile chipotle en polvo"],
+        "fr": ["poudre de chipotle"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "gochugaru",
+      "category": "spice",
+      "per_100g": {
+        "calories": 282,
+        "protein": 12.0,
+        "carbs": 56.6,
+        "fat": 17.3,
+        "fiber": 27.2
+      },
+      "aliases": {
+        "en": ["korean red pepper flakes", "korean chili flakes"],
+        "ja": ["コチュカル", "韓国唐辛子"],
+        "ko": ["고춧가루", "고추가루"],
+        "zh": ["韩国辣椒粉", "辣椒碎"],
+        "es": ["gochugaru", "chile coreano"],
+        "fr": ["piment coréen", "gochugaru"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "sichuan peppercorn",
+      "category": "spice",
+      "per_100g": {
+        "calories": 258,
+        "protein": 10.0,
+        "carbs": 56.9,
+        "fat": 3.2,
+        "fiber": 20.0
+      },
+      "aliases": {
+        "en": ["szechuan peppercorn", "chinese prickly ash", "sichuan pepper"],
+        "ja": ["花椒", "山椒", "四川山椒"],
+        "ko": ["사천 후추", "화초", "쓰촨 페퍼"],
+        "zh": ["花椒", "川椒", "四川花椒"],
+        "es": ["pimienta de sichuan", "pimienta china"],
+        "fr": ["poivre du sichuan", "poivre chinois"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "curry powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 325,
+        "protein": 14.3,
+        "carbs": 55.8,
+        "fat": 14.0,
+        "fiber": 33.2
+      },
+      "aliases": {
+        "en": ["mild curry powder", "curry blend"],
+        "ja": ["カレーパウダー", "カレー粉"],
+        "ko": ["카레 가루", "커리 파우더"],
+        "zh": ["咖喱粉", "咖哩粉"],
+        "es": ["curry en polvo", "polvo de curry"],
+        "fr": ["poudre de curry", "curry en poudre"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "madras curry powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 325,
+        "protein": 14.3,
+        "carbs": 55.8,
+        "fat": 14.0,
+        "fiber": 33.2
+      },
+      "aliases": {
+        "en": ["hot curry powder", "madras curry blend"],
+        "ja": ["マドラスカレーパウダー", "辛口カレー粉"],
+        "ko": ["마드라스 카레", "매운 카레"],
+        "zh": ["马德拉斯咖喱粉", "辣咖喱粉"],
+        "es": ["curry madras", "curry picante"],
+        "fr": ["curry madras", "curry fort"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "garam masala",
+      "category": "spice",
+      "per_100g": {
+        "calories": 379,
+        "protein": 14.3,
+        "carbs": 58.2,
+        "fat": 15.0,
+        "fiber": 24.5
+      },
+      "aliases": {
+        "en": ["garam masala powder", "indian spice blend"],
+        "ja": ["ガラムマサラ", "インドミックススパイス"],
+        "ko": ["가람 마살라", "인도 향신료"],
+        "zh": ["印度综合香料", "加兰马萨拉"],
+        "es": ["garam masala", "mezcla de especias indias"],
+        "fr": ["garam masala", "mélange d'épices indiennes"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "chinese five spice",
+      "category": "spice",
+      "per_100g": {
+        "calories": 318,
+        "protein": 10.4,
+        "carbs": 64.5,
+        "fat": 8.2,
+        "fiber": 30.0
+      },
+      "aliases": {
+        "en": ["five spice powder", "5 spice"],
+        "ja": ["五香粉", "中華五香粉", "ウーシャンフェン"],
+        "ko": ["오향분", "오향가루", "중국 오향"],
+        "zh": ["五香粉", "五香料"],
+        "es": ["cinco especias chinas", "polvo de cinco especias"],
+        "fr": ["cinq épices chinois", "cinq parfums"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "za'atar",
+      "category": "spice",
+      "per_100g": {
+        "calories": 264,
+        "protein": 9.8,
+        "carbs": 42.7,
+        "fat": 11.2,
+        "fiber": 18.6
+      },
+      "aliases": {
+        "en": ["zaatar", "middle eastern spice blend"],
+        "ja": ["ザアタル", "中東ミックススパイス"],
+        "ko": ["자타르", "중동 향신료"],
+        "zh": ["扎塔香料", "中东香料"],
+        "es": ["za'atar", "zataar"],
+        "fr": ["zaatar", "za'atar"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "yellow mustard seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 508,
+        "protein": 26.1,
+        "carbs": 28.1,
+        "fat": 36.2,
+        "fiber": 12.2
+      },
+      "aliases": {
+        "en": ["white mustard seeds", "mustard seeds"],
+        "ja": ["イエローマスタードシード", "黄芥子"],
+        "ko": ["노란 겨자씨", "황겨자"],
+        "zh": ["黄芥末籽", "黄芥子"],
+        "es": ["semillas de mostaza amarilla"],
+        "fr": ["graines de moutarde jaune"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "brown mustard seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 508,
+        "protein": 26.1,
+        "carbs": 28.1,
+        "fat": 36.2,
+        "fiber": 12.2
+      },
+      "aliases": {
+        "en": ["indian mustard seeds", "rai"],
+        "ja": ["ブラウンマスタードシード", "褐芥子"],
+        "ko": ["갈색 겨자씨", "인도 겨자"],
+        "zh": ["褐芥末籽", "印度芥末"],
+        "es": ["semillas de mostaza marrón"],
+        "fr": ["graines de moutarde brune"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "black mustard seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 508,
+        "protein": 26.1,
+        "carbs": 28.1,
+        "fat": 36.2,
+        "fiber": 12.2
+      },
+      "aliases": {
+        "en": ["kali sarson", "rai"],
+        "ja": ["ブラックマスタードシード", "黒芥子"],
+        "ko": ["검은 겨자씨", "흑겨자"],
+        "zh": ["黑芥末籽", "黑芥子"],
+        "es": ["semillas de mostaza negra"],
+        "fr": ["graines de moutarde noire"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "mustard powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 508,
+        "protein": 26.1,
+        "carbs": 28.1,
+        "fat": 36.2,
+        "fiber": 12.2
+      },
+      "aliases": {
+        "en": ["ground mustard", "dry mustard"],
+        "ja": ["マスタードパウダー", "洋がらし粉"],
+        "ko": ["겨자 가루", "머스터드 파우더"],
+        "zh": ["芥末粉", "芥子粉"],
+        "es": ["mostaza en polvo", "mostaza seca"],
+        "fr": ["moutarde en poudre", "moutarde sèche"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "fennel seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 345,
+        "protein": 15.8,
+        "carbs": 52.3,
+        "fat": 14.9,
+        "fiber": 39.8
+      },
+      "aliases": {
+        "en": ["fennel seed", "saunf"],
+        "ja": ["フェンネルシード", "茴香", "ウイキョウ"],
+        "ko": ["회향 씨", "펜넬 씨"],
+        "zh": ["茴香籽", "小茴香"],
+        "es": ["semillas de hinojo", "hinojo"],
+        "fr": ["graines de fenouil", "fenouil"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "caraway seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 333,
+        "protein": 19.8,
+        "carbs": 49.9,
+        "fat": 14.6,
+        "fiber": 38.0
+      },
+      "aliases": {
+        "en": ["caraway seed", "meridian fennel"],
+        "ja": ["キャラウェイシード", "姫茴香"],
+        "ko": ["캐러웨이 씨", "개러웨이"],
+        "zh": ["葛缕子", "藏茴香"],
+        "es": ["semillas de alcaravea", "comino de prado"],
+        "fr": ["graines de carvi", "cumin des prés"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "star anise",
+      "category": "spice",
+      "per_100g": {
+        "calories": 337,
+        "protein": 17.6,
+        "carbs": 50.0,
+        "fat": 15.9,
+        "fiber": 14.6
+      },
+      "aliases": {
+        "en": ["whole star anise", "chinese star anise"],
+        "ja": ["八角", "スターアニス", "大茴香"],
+        "ko": ["팔각", "스타 아니스", "대회향"],
+        "zh": ["八角", "大茴香", "八角茴香"],
+        "es": ["anís estrellado", "badiana"],
+        "fr": ["anis étoilé", "badiane"]
+      },
+      "common_units": ["whole", "tsp", "g"]
+    },
+    {
+      "canonical_name": "fenugreek seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 323,
+        "protein": 23.0,
+        "carbs": 58.4,
+        "fat": 6.4,
+        "fiber": 24.6
+      },
+      "aliases": {
+        "en": ["fenugreek seed", "methi seeds"],
+        "ja": ["フェヌグリークシード", "胡蘆巴"],
+        "ko": ["호로파 씨", "페누그릭"],
+        "zh": ["胡芦巴籽", "葫芦巴"],
+        "es": ["semillas de fenogreco", "alholva"],
+        "fr": ["graines de fenugrec", "trigonelle"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "fenugreek leaves dried",
+      "category": "spice",
+      "per_100g": {
+        "calories": 323,
+        "protein": 23.0,
+        "carbs": 58.4,
+        "fat": 6.4,
+        "fiber": 24.6
+      },
+      "aliases": {
+        "en": ["kasuri methi", "dried fenugreek leaves"],
+        "ja": ["カスリメティ", "乾燥フェヌグリーク葉"],
+        "ko": ["말린 호로파 잎", "카수리 메티"],
+        "zh": ["干胡芦巴叶", "香叶"],
+        "es": ["hojas de fenogreco secas"],
+        "fr": ["feuilles de fenugrec séchées"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "asafoetida",
+      "category": "spice",
+      "per_100g": {
+        "calories": 297,
+        "protein": 4.0,
+        "carbs": 67.8,
+        "fat": 1.1,
+        "fiber": 4.1
+      },
+      "aliases": {
+        "en": ["hing", "asafetida", "devil's dung"],
+        "ja": ["アサフェティダ", "阿魏"],
+        "ko": ["아사페티다", "아위"],
+        "zh": ["阿魏", "臭阿魏"],
+        "es": ["asafétida", "asa fétida"],
+        "fr": ["ase fétide", "férule persique"]
+      },
+      "common_units": ["pinch", "tsp", "g"]
+    },
+    {
+      "canonical_name": "sumac",
+      "category": "spice",
+      "per_100g": {
+        "calories": 217,
+        "protein": 4.8,
+        "carbs": 53.9,
+        "fat": 7.9,
+        "fiber": 13.9
+      },
+      "aliases": {
+        "en": ["sumac powder", "ground sumac"],
+        "ja": ["スマック", "漆の実"],
+        "ko": ["수막", "옻나무 열매"],
+        "zh": ["漆树果粉", "苏马克"],
+        "es": ["zumaque", "sumac"],
+        "fr": ["sumac", "somaq"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "saffron",
+      "category": "spice",
+      "per_100g": {
+        "calories": 310,
+        "protein": 11.4,
+        "carbs": 65.4,
+        "fat": 5.9,
+        "fiber": 3.9
+      },
+      "aliases": {
+        "en": ["saffron threads", "kesar"],
+        "ja": ["サフラン", "番紅花"],
+        "ko": ["사프란", "홍화"],
+        "zh": ["藏红花", "番红花"],
+        "es": ["azafrán"],
+        "fr": ["safran"]
+      },
+      "common_units": ["pinch", "threads", "g"]
+    },
+    {
+      "canonical_name": "vanilla extract",
+      "category": "spice",
+      "per_100g": {
+        "calories": 288,
+        "protein": 0.1,
+        "carbs": 12.7,
+        "fat": 0.1,
+        "fiber": 0
+      },
+      "aliases": {
+        "en": ["pure vanilla extract", "vanilla flavoring"],
+        "ja": ["バニラエッセンス", "バニラエキス"],
+        "ko": ["바닐라 추출액", "바닐라 엑기스"],
+        "zh": ["香草精", "香草提取物"],
+        "es": ["extracto de vainilla", "esencia de vainilla"],
+        "fr": ["extrait de vanille", "essence de vanille"]
+      },
+      "common_units": ["tsp", "tbsp", "ml"]
+    },
+    {
+      "canonical_name": "vanilla bean",
+      "category": "spice",
+      "per_100g": {
+        "calories": 288,
+        "protein": 0.1,
+        "carbs": 12.7,
+        "fat": 0.1,
+        "fiber": 0
+      },
+      "aliases": {
+        "en": ["vanilla pod", "whole vanilla bean"],
+        "ja": ["バニラビーンズ", "バニラ莢"],
+        "ko": ["바닐라 빈", "바닐라 꼬투리"],
+        "zh": ["香草豆荚", "香草棒"],
+        "es": ["vaina de vainilla", "vainilla en rama"],
+        "fr": ["gousse de vanille", "vanille en gousse"]
+      },
+      "common_units": ["bean", "pod", "tsp"]
+    },
+    {
+      "canonical_name": "allspice ground",
+      "category": "spice",
+      "per_100g": {
+        "calories": 263,
+        "protein": 6.1,
+        "carbs": 72.1,
+        "fat": 8.7,
+        "fiber": 21.6
+      },
+      "aliases": {
+        "en": ["ground allspice", "pimento powder"],
+        "ja": ["オールスパイスパウダー", "百味胡椒"],
+        "ko": ["올스파이스 가루", "백향"],
+        "zh": ["多香果粉", "牙买加胡椒"],
+        "es": ["pimienta de Jamaica molida", "pimienta dulce"],
+        "fr": ["quatre-épices", "piment de la Jamaïque"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "anise seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 337,
+        "protein": 17.6,
+        "carbs": 50.0,
+        "fat": 15.9,
+        "fiber": 14.6
+      },
+      "aliases": {
+        "en": ["aniseed", "sweet cumin"],
+        "ja": ["アニスシード", "茴芹"],
+        "ko": ["아니스 씨", "회향풀"],
+        "zh": ["八角茴香", "大茴香籽"],
+        "es": ["semillas de anís", "anís"],
+        "fr": ["graines d'anis", "anis vert"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "celery seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 392,
+        "protein": 18.1,
+        "carbs": 41.4,
+        "fat": 25.3,
+        "fiber": 11.8
+      },
+      "aliases": {
+        "en": ["celery seed"],
+        "ja": ["セロリシード", "芹菜籽"],
+        "ko": ["셀러리 씨", "샐러리 씨"],
+        "zh": ["芹菜籽", "旱芹籽"],
+        "es": ["semillas de apio"],
+        "fr": ["graines de céleri"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "celery salt",
+      "category": "spice",
+      "per_100g": {
+        "calories": 196,
+        "protein": 9.1,
+        "carbs": 20.7,
+        "fat": 12.7,
+        "fiber": 5.9
+      },
+      "aliases": {
+        "en": ["celery seasoning salt"],
+        "ja": ["セロリソルト", "芹菜塩"],
+        "ko": ["셀러리 소금", "샐러리 솔트"],
+        "zh": ["芹菜盐", "香芹盐"],
+        "es": ["sal de apio"],
+        "fr": ["sel de céleri"]
+      },
+      "common_units": ["tsp", "tbsp", "g", "pinch"]
+    },
+    {
+      "canonical_name": "garlic powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 331,
+        "protein": 16.6,
+        "carbs": 72.7,
+        "fat": 0.7,
+        "fiber": 9.0
+      },
+      "aliases": {
+        "en": ["dried garlic powder", "dehydrated garlic"],
+        "ja": ["ガーリックパウダー", "にんにく粉"],
+        "ko": ["마늘 가루", "갈릭 파우더"],
+        "zh": ["蒜粉", "大蒜粉"],
+        "es": ["ajo en polvo", "ajo deshidratado"],
+        "fr": ["poudre d'ail", "ail en poudre"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "onion powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 341,
+        "protein": 10.4,
+        "carbs": 79.1,
+        "fat": 1.0,
+        "fiber": 15.2
+      },
+      "aliases": {
+        "en": ["dried onion powder", "dehydrated onion"],
+        "ja": ["オニオンパウダー", "玉ねぎ粉"],
+        "ko": ["양파 가루", "어니언 파우더"],
+        "zh": ["洋葱粉", "葱粉"],
+        "es": ["cebolla en polvo", "cebolla deshidratada"],
+        "fr": ["poudre d'oignon", "oignon en poudre"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "ginger ground",
+      "category": "spice",
+      "per_100g": {
+        "calories": 335,
+        "protein": 9.1,
+        "carbs": 71.6,
+        "fat": 4.2,
+        "fiber": 14.1
+      },
+      "aliases": {
+        "en": ["ground ginger", "ginger powder"],
+        "ja": ["ジンジャーパウダー", "生姜粉"],
+        "ko": ["생강 가루", "진저 파우더"],
+        "zh": ["姜粉", "生姜粉"],
+        "es": ["jengibre molido", "jengibre en polvo"],
+        "fr": ["gingembre moulu", "gingembre en poudre"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "galangal powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 71,
+        "protein": 1.0,
+        "carbs": 15.0,
+        "fat": 0.7,
+        "fiber": 2.1
+      },
+      "aliases": {
+        "en": ["dried galangal", "thai ginger powder"],
+        "ja": ["ガランガルパウダー", "ナンキョウ"],
+        "ko": ["갈랑갈 가루", "태국 생강"],
+        "zh": ["南姜粉", "高良姜粉"],
+        "es": ["galanga en polvo"],
+        "fr": ["galanga en poudre"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "poppy seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 525,
+        "protein": 17.9,
+        "carbs": 28.1,
+        "fat": 41.6,
+        "fiber": 19.5
+      },
+      "aliases": {
+        "en": ["poppy seed", "khus khus"],
+        "ja": ["ポピーシード", "けしの実"],
+        "ko": ["양귀비 씨", "포피 씨드"],
+        "zh": ["罂粟籽", "罂粟种子"],
+        "es": ["semillas de amapola"],
+        "fr": ["graines de pavot"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "sesame seeds white",
+      "category": "spice",
+      "per_100g": {
+        "calories": 573,
+        "protein": 17.7,
+        "carbs": 23.5,
+        "fat": 49.7,
+        "fiber": 11.8
+      },
+      "aliases": {
+        "en": ["white sesame", "hulled sesame seeds"],
+        "ja": ["白ごま", "白胡麻"],
+        "ko": ["흰 참깨", "백참깨"],
+        "zh": ["白芝麻", "白芝麻籽"],
+        "es": ["semillas de sésamo blanco", "ajonjolí blanco"],
+        "fr": ["graines de sésame blanc", "sésame blanc"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "sesame seeds black",
+      "category": "spice",
+      "per_100g": {
+        "calories": 573,
+        "protein": 17.7,
+        "carbs": 23.5,
+        "fat": 49.7,
+        "fiber": 11.8
+      },
+      "aliases": {
+        "en": ["black sesame", "unhulled sesame seeds"],
+        "ja": ["黒ごま", "黒胡麻"],
+        "ko": ["검은 참깨", "흑참깨"],
+        "zh": ["黑芝麻", "黑芝麻籽"],
+        "es": ["semillas de sésamo negro", "ajonjolí negro"],
+        "fr": ["graines de sésame noir", "sésame noir"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "sesame seeds toasted",
+      "category": "spice",
+      "per_100g": {
+        "calories": 565,
+        "protein": 16.9,
+        "carbs": 25.7,
+        "fat": 48.0,
+        "fiber": 16.9
+      },
+      "aliases": {
+        "en": ["toasted sesame", "roasted sesame seeds"],
+        "ja": ["炒りごま", "焙煎胡麻"],
+        "ko": ["볶은 참깨", "볶음 참깨"],
+        "zh": ["炒芝麻", "熟芝麻"],
+        "es": ["semillas de sésamo tostado"],
+        "fr": ["graines de sésame grillées"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "nigella seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 375,
+        "protein": 17.8,
+        "carbs": 44.2,
+        "fat": 22.3,
+        "fiber": 10.5
+      },
+      "aliases": {
+        "en": ["black cumin", "kalonji", "black seed"],
+        "ja": ["ニゲラシード", "ブラッククミン"],
+        "ko": ["니겔라 씨", "블랙 커민"],
+        "zh": ["黑种草籽", "黑孜然"],
+        "es": ["semillas de nigella", "comino negro"],
+        "fr": ["graines de nigelle", "cumin noir"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "ajwain seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 305,
+        "protein": 15.4,
+        "carbs": 43.0,
+        "fat": 21.8,
+        "fiber": 39.0
+      },
+      "aliases": {
+        "en": ["carom seeds", "bishop's weed"],
+        "ja": ["アジョワンシード", "馬芹"],
+        "ko": ["아즈완 씨", "카롬 씨"],
+        "zh": ["藏茴香籽", "印度香菜籽"],
+        "es": ["semillas de ajwain", "carambola"],
+        "fr": ["graines d'ajwain", "ajowan"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "pink peppercorns",
+      "category": "spice",
+      "per_100g": {
+        "calories": 251,
+        "protein": 10.4,
+        "carbs": 63.9,
+        "fat": 3.3,
+        "fiber": 25.3
+      },
+      "aliases": {
+        "en": ["pink pepper", "rose pepper"],
+        "ja": ["ピンクペッパー", "桃色胡椒"],
+        "ko": ["핑크 페퍼", "분홍 후추"],
+        "zh": ["粉红胡椒", "玫瑰胡椒"],
+        "es": ["pimienta rosa", "pimienta rosada"],
+        "fr": ["poivre rose", "baies roses"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "green peppercorns",
+      "category": "spice",
+      "per_100g": {
+        "calories": 251,
+        "protein": 10.4,
+        "carbs": 63.9,
+        "fat": 3.3,
+        "fiber": 25.3
+      },
+      "aliases": {
+        "en": ["green pepper", "unripe peppercorns"],
+        "ja": ["グリーンペッパー", "緑胡椒"],
+        "ko": ["그린 페퍼", "녹색 후추"],
+        "zh": ["绿胡椒", "青胡椒"],
+        "es": ["pimienta verde"],
+        "fr": ["poivre vert"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "long pepper",
+      "category": "spice",
+      "per_100g": {
+        "calories": 251,
+        "protein": 10.4,
+        "carbs": 63.9,
+        "fat": 3.3,
+        "fiber": 25.3
+      },
+      "aliases": {
+        "en": ["pippali", "indian long pepper"],
+        "ja": ["ロングペッパー", "ヒハツ"],
+        "ko": ["롱 페퍼", "긴 후추"],
+        "zh": ["荜拨", "长胡椒"],
+        "es": ["pimienta larga"],
+        "fr": ["poivre long"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "grains of paradise",
+      "category": "spice",
+      "per_100g": {
+        "calories": 311,
+        "protein": 10.8,
+        "carbs": 68.5,
+        "fat": 6.7,
+        "fiber": 28.0
+      },
+      "aliases": {
+        "en": ["alligator pepper", "melegueta pepper"],
+        "ja": ["パラダイスグレイン", "ギニアペッパー"],
+        "ko": ["파라다이스 그레인", "기니 후추"],
+        "zh": ["天堂椒", "几内亚胡椒"],
+        "es": ["granos del paraíso", "pimienta malagueta"],
+        "fr": ["maniguette", "poivre de guinée"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "cumin seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 375,
+        "protein": 17.8,
+        "carbs": 44.2,
+        "fat": 22.3,
+        "fiber": 10.5
+      },
+      "aliases": {
+        "en": ["whole cumin", "jeera"],
+        "ja": ["クミンシード", "馬芹の実"],
+        "ko": ["커민 씨", "쿠민 홀"],
+        "zh": ["孜然籽", "小茴香籽"],
+        "es": ["semillas de comino", "comino entero"],
+        "fr": ["graines de cumin", "cumin entier"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "coriander seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 298,
+        "protein": 12.4,
+        "carbs": 54.2,
+        "fat": 17.8,
+        "fiber": 41.9
+      },
+      "aliases": {
+        "en": ["whole coriander", "dhania seeds"],
+        "ja": ["コリアンダーシード", "香菜の実"],
+        "ko": ["고수 씨", "코리앤더 씨"],
+        "zh": ["芫荽籽", "香菜籽"],
+        "es": ["semillas de cilantro", "cilantro entero"],
+        "fr": ["graines de coriandre", "coriandre entière"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "black peppercorns",
+      "category": "spice",
+      "per_100g": {
+        "calories": 251,
+        "protein": 10.4,
+        "carbs": 63.9,
+        "fat": 3.3,
+        "fiber": 25.3
+      },
+      "aliases": {
+        "en": ["whole black pepper", "black pepper"],
+        "ja": ["黒胡椒粒", "黒コショウ粒"],
+        "ko": ["통후추", "검은 후추 알"],
+        "zh": ["黑胡椒粒", "黑椒粒"],
+        "es": ["granos de pimienta negra"],
+        "fr": ["grains de poivre noir"]
+      },
+      "common_units": ["whole", "tsp", "g"]
+    },
+    {
+      "canonical_name": "white peppercorns",
+      "category": "spice",
+      "per_100g": {
+        "calories": 296,
+        "protein": 10.4,
+        "carbs": 68.6,
+        "fat": 2.1,
+        "fiber": 20.3
+      },
+      "aliases": {
+        "en": ["whole white pepper"],
+        "ja": ["白胡椒粒", "白コショウ粒"],
+        "ko": ["흰 후추 알", "백후추 알"],
+        "zh": ["白胡椒粒", "白椒粒"],
+        "es": ["granos de pimienta blanca"],
+        "fr": ["grains de poivre blanc"]
+      },
+      "common_units": ["whole", "tsp", "g"]
+    },
+    {
+      "canonical_name": "whole cloves",
+      "category": "spice",
+      "per_100g": {
+        "calories": 274,
+        "protein": 6.0,
+        "carbs": 65.5,
+        "fat": 13.0,
+        "fiber": 33.9
+      },
+      "aliases": {
+        "en": ["cloves whole", "laung"],
+        "ja": ["丁子", "クローブホール"],
+        "ko": ["정향 통", "클로브 홀"],
+        "zh": ["丁香", "丁香粒"],
+        "es": ["clavos de olor enteros"],
+        "fr": ["clous de girofle entiers"]
+      },
+      "common_units": ["whole", "tsp", "g"]
+    },
+    {
+      "canonical_name": "cinnamon sticks",
+      "category": "spice",
+      "per_100g": {
+        "calories": 247,
+        "protein": 4.0,
+        "carbs": 80.6,
+        "fat": 1.2,
+        "fiber": 53.1
+      },
+      "aliases": {
+        "en": ["cinnamon bark", "whole cinnamon"],
+        "ja": ["シナモンスティック", "肉桂棒"],
+        "ko": ["계피 스틱", "시나몬 스틱"],
+        "zh": ["肉桂棒", "桂皮条"],
+        "es": ["ramas de canela", "canela en rama"],
+        "fr": ["bâtons de cannelle", "cannelle en bâton"]
+      },
+      "common_units": ["stick", "piece", "g"]
+    },
+    {
+      "canonical_name": "bay leaves",
+      "category": "spice",
+      "per_100g": {
+        "calories": 313,
+        "protein": 7.6,
+        "carbs": 74.9,
+        "fat": 8.4,
+        "fiber": 26.3
+      },
+      "aliases": {
+        "en": ["bay leaf", "laurel leaves", "tej patta"],
+        "ja": ["ローリエ", "月桂樹の葉", "ベイリーフ"],
+        "ko": ["월계수 잎", "베이 리프"],
+        "zh": ["月桂叶", "香叶"],
+        "es": ["hojas de laurel", "laurel"],
+        "fr": ["feuilles de laurier", "laurier"]
+      },
+      "common_units": ["leaf", "leaves", "g"]
+    },
+    {
+      "canonical_name": "curry leaves",
+      "category": "spice",
+      "per_100g": {
+        "calories": 108,
+        "protein": 6.1,
+        "carbs": 18.7,
+        "fat": 1.0,
+        "fiber": 6.4
+      },
+      "aliases": {
+        "en": ["fresh curry leaves", "kadi patta"],
+        "ja": ["カレーリーフ", "カレー葉"],
+        "ko": ["카레 잎", "커리 리프"],
+        "zh": ["咖喱叶", "九层塔"],
+        "es": ["hojas de curry"],
+        "fr": ["feuilles de curry", "caloupilé"]
+      },
+      "common_units": ["leaf", "sprig", "g"]
+    },
+    {
+      "canonical_name": "dried oregano",
+      "category": "spice",
+      "per_100g": {
+        "calories": 265,
+        "protein": 9.0,
+        "carbs": 68.9,
+        "fat": 4.3,
+        "fiber": 42.5
+      },
+      "aliases": {
+        "en": ["oregano dried", "oregano leaves"],
+        "ja": ["オレガノ", "乾燥オレガノ"],
+        "ko": ["오레가노", "말린 오레가노"],
+        "zh": ["牛至", "干牛至"],
+        "es": ["orégano seco"],
+        "fr": ["origan séché"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "dried basil",
+      "category": "spice",
+      "per_100g": {
+        "calories": 233,
+        "protein": 22.9,
+        "carbs": 47.8,
+        "fat": 4.1,
+        "fiber": 37.7
+      },
+      "aliases": {
+        "en": ["basil dried", "basil leaves"],
+        "ja": ["バジル", "乾燥バジル"],
+        "ko": ["바질", "말린 바질"],
+        "zh": ["罗勒", "干罗勒"],
+        "es": ["albahaca seca"],
+        "fr": ["basilic séché"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "dried thyme",
+      "category": "spice",
+      "per_100g": {
+        "calories": 276,
+        "protein": 9.1,
+        "carbs": 63.9,
+        "fat": 7.4,
+        "fiber": 37.0
+      },
+      "aliases": {
+        "en": ["thyme dried", "thyme leaves"],
+        "ja": ["タイム", "乾燥タイム"],
+        "ko": ["타임", "말린 타임"],
+        "zh": ["百里香", "干百里香"],
+        "es": ["tomillo seco"],
+        "fr": ["thym séché"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "dried rosemary",
+      "category": "spice",
+      "per_100g": {
+        "calories": 331,
+        "protein": 4.9,
+        "carbs": 64.1,
+        "fat": 15.2,
+        "fiber": 42.6
+      },
+      "aliases": {
+        "en": ["rosemary dried", "rosemary leaves"],
+        "ja": ["ローズマリー", "乾燥ローズマリー"],
+        "ko": ["로즈마리", "말린 로즈마리"],
+        "zh": ["迷迭香", "干迷迭香"],
+        "es": ["romero seco"],
+        "fr": ["romarin séché"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "dried sage",
+      "category": "spice",
+      "per_100g": {
+        "calories": 315,
+        "protein": 10.6,
+        "carbs": 60.7,
+        "fat": 12.7,
+        "fiber": 40.3
+      },
+      "aliases": {
+        "en": ["sage dried", "sage leaves"],
+        "ja": ["セージ", "乾燥セージ"],
+        "ko": ["세이지", "말린 세이지"],
+        "zh": ["鼠尾草", "干鼠尾草"],
+        "es": ["salvia seca"],
+        "fr": ["sauge séchée"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "dried parsley",
+      "category": "spice",
+      "per_100g": {
+        "calories": 292,
+        "protein": 26.6,
+        "carbs": 50.6,
+        "fat": 5.5,
+        "fiber": 26.7
+      },
+      "aliases": {
+        "en": ["parsley dried", "parsley flakes"],
+        "ja": ["パセリ", "乾燥パセリ"],
+        "ko": ["파슬리", "말린 파슬리"],
+        "zh": ["欧芹", "干欧芹"],
+        "es": ["perejil seco"],
+        "fr": ["persil séché"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "dried dill",
+      "category": "spice",
+      "per_100g": {
+        "calories": 253,
+        "protein": 19.9,
+        "carbs": 55.2,
+        "fat": 4.4,
+        "fiber": 15.5
+      },
+      "aliases": {
+        "en": ["dill weed", "dill dried"],
+        "ja": ["ディル", "乾燥ディル"],
+        "ko": ["딜", "말린 딜"],
+        "zh": ["莳萝", "干莳萝"],
+        "es": ["eneldo seco"],
+        "fr": ["aneth séché"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "dried tarragon",
+      "category": "spice",
+      "per_100g": {
+        "calories": 295,
+        "protein": 22.8,
+        "carbs": 50.2,
+        "fat": 7.2,
+        "fiber": 7.4
+      },
+      "aliases": {
+        "en": ["tarragon dried", "french tarragon"],
+        "ja": ["タラゴン", "乾燥タラゴン"],
+        "ko": ["타라곤", "말린 타라곤"],
+        "zh": ["龙蒿", "干龙蒿"],
+        "es": ["estragón seco"],
+        "fr": ["estragon séché"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "dried marjoram",
+      "category": "spice",
+      "per_100g": {
+        "calories": 271,
+        "protein": 12.7,
+        "carbs": 60.6,
+        "fat": 7.0,
+        "fiber": 40.3
+      },
+      "aliases": {
+        "en": ["marjoram dried", "sweet marjoram"],
+        "ja": ["マジョラム", "乾燥マジョラム"],
+        "ko": ["마조람", "말린 마조람"],
+        "zh": ["马郁兰", "干马郁兰"],
+        "es": ["mejorana seca"],
+        "fr": ["marjolaine séchée"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "herbes de provence",
+      "category": "spice",
+      "per_100g": {
+        "calories": 280,
+        "protein": 9.5,
+        "carbs": 64.0,
+        "fat": 6.5,
+        "fiber": 39.0
+      },
+      "aliases": {
+        "en": ["herbs de provence", "provence herbs"],
+        "ja": ["エルブ・ド・プロヴァンス", "プロヴァンスハーブ"],
+        "ko": ["에르브 드 프로방스", "프로방스 허브"],
+        "zh": ["普罗旺斯香料", "法式香草"],
+        "es": ["hierbas de provenza"],
+        "fr": ["herbes de Provence"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "italian seasoning",
+      "category": "spice",
+      "per_100g": {
+        "calories": 270,
+        "protein": 11.0,
+        "carbs": 62.0,
+        "fat": 5.5,
+        "fiber": 38.0
+      },
+      "aliases": {
+        "en": ["italian herbs", "italian herb blend"],
+        "ja": ["イタリアンシーズニング", "イタリアンハーブ"],
+        "ko": ["이탈리안 시즈닝", "이탈리아 허브"],
+        "zh": ["意大利香料", "意式香草"],
+        "es": ["condimento italiano", "hierbas italianas"],
+        "fr": ["assaisonnement italien", "herbes italiennes"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "poultry seasoning",
+      "category": "spice",
+      "per_100g": {
+        "calories": 285,
+        "protein": 8.5,
+        "carbs": 65.0,
+        "fat": 6.8,
+        "fiber": 35.0
+      },
+      "aliases": {
+        "en": ["poultry spice blend", "chicken seasoning"],
+        "ja": ["ポートリーシーズニング", "鶏肉用スパイス"],
+        "ko": ["가금류 시즈닝", "닭고기 양념"],
+        "zh": ["禽肉调料", "鸡肉香料"],
+        "es": ["condimento para aves"],
+        "fr": ["assaisonnement pour volaille"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "cajun seasoning",
+      "category": "spice",
+      "per_100g": {
+        "calories": 290,
+        "protein": 12.5,
+        "carbs": 58.0,
+        "fat": 8.0,
+        "fiber": 30.0
+      },
+      "aliases": {
+        "en": ["cajun spice", "cajun blend"],
+        "ja": ["ケイジャンシーズニング", "ケイジャンスパイス"],
+        "ko": ["케이준 시즈닝", "케이준 양념"],
+        "zh": ["卡真调料", "路易斯安那香料"],
+        "es": ["condimento cajún", "especias cajún"],
+        "fr": ["assaisonnement cajun", "épices cajun"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "creole seasoning",
+      "category": "spice",
+      "per_100g": {
+        "calories": 290,
+        "protein": 12.5,
+        "carbs": 58.0,
+        "fat": 8.0,
+        "fiber": 30.0
+      },
+      "aliases": {
+        "en": ["creole spice", "creole blend"],
+        "ja": ["クレオールシーズニング", "クレオールスパイス"],
+        "ko": ["크리올 시즈닝", "크리올 양념"],
+        "zh": ["克里奥尔调料", "新奥尔良香料"],
+        "es": ["condimento criollo", "especias criollas"],
+        "fr": ["assaisonnement créole", "épices créoles"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "old bay seasoning",
+      "category": "spice",
+      "per_100g": {
+        "calories": 280,
+        "protein": 11.0,
+        "carbs": 60.0,
+        "fat": 7.0,
+        "fiber": 28.0
+      },
+      "aliases": {
+        "en": ["old bay", "seafood seasoning"],
+        "ja": ["オールドベイシーズニング", "シーフードスパイス"],
+        "ko": ["올드 베이", "해산물 양념"],
+        "zh": ["老湾调料", "海鲜调料"],
+        "es": ["old bay", "condimento para mariscos"],
+        "fr": ["old bay", "assaisonnement fruits de mer"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "tandoori masala",
+      "category": "spice",
+      "per_100g": {
+        "calories": 340,
+        "protein": 13.5,
+        "carbs": 60.0,
+        "fat": 12.0,
+        "fiber": 26.0
+      },
+      "aliases": {
+        "en": ["tandoori spice", "tandoori blend"],
+        "ja": ["タンドリーマサラ", "タンドリースパイス"],
+        "ko": ["탄두리 마살라", "탄두리 양념"],
+        "zh": ["坦都里香料", "印度烤肉香料"],
+        "es": ["tandoori masala", "especias tandoori"],
+        "fr": ["tandoori masala", "épices tandoori"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "chaat masala",
+      "category": "spice",
+      "per_100g": {
+        "calories": 320,
+        "protein": 12.0,
+        "carbs": 62.0,
+        "fat": 10.0,
+        "fiber": 24.0
+      },
+      "aliases": {
+        "en": ["chat masala", "chaat spice"],
+        "ja": ["チャートマサラ", "チャットマサラ"],
+        "ko": ["차트 마살라", "인도 스낵 양념"],
+        "zh": ["恰特马萨拉", "印度小吃香料"],
+        "es": ["chaat masala"],
+        "fr": ["chaat masala"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "sambar powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 335,
+        "protein": 14.0,
+        "carbs": 58.0,
+        "fat": 13.0,
+        "fiber": 28.0
+      },
+      "aliases": {
+        "en": ["sambar masala", "sambhar powder"],
+        "ja": ["サンバルパウダー", "サンバールマサラ"],
+        "ko": ["삼바 가루", "삼바르 마살라"],
+        "zh": ["桑巴粉", "印度咖喱粉"],
+        "es": ["sambar en polvo"],
+        "fr": ["poudre de sambar"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "rasam powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 330,
+        "protein": 13.5,
+        "carbs": 60.0,
+        "fat": 11.5,
+        "fiber": 27.0
+      },
+      "aliases": {
+        "en": ["rasam masala"],
+        "ja": ["ラッサムパウダー", "ラッサムマサラ"],
+        "ko": ["라삼 가루", "라삼 마살라"],
+        "zh": ["拉萨姆粉", "南印度汤料"],
+        "es": ["rasam en polvo"],
+        "fr": ["poudre de rasam"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "berbere",
+      "category": "spice",
+      "per_100g": {
+        "calories": 310,
+        "protein": 13.0,
+        "carbs": 58.0,
+        "fat": 11.0,
+        "fiber": 26.0
+      },
+      "aliases": {
+        "en": ["berbere spice", "ethiopian spice blend"],
+        "ja": ["ベルベレ", "エチオピアスパイス"],
+        "ko": ["베르베레", "에티오피아 향신료"],
+        "zh": ["贝贝雷香料", "埃塞俄比亚香料"],
+        "es": ["berbere", "especias etíopes"],
+        "fr": ["berbéré", "épices éthiopiennes"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "ras el hanout",
+      "category": "spice",
+      "per_100g": {
+        "calories": 325,
+        "protein": 12.5,
+        "carbs": 60.0,
+        "fat": 12.0,
+        "fiber": 25.0
+      },
+      "aliases": {
+        "en": ["ras al hanout", "moroccan spice blend"],
+        "ja": ["ラス・エル・ハヌート", "モロッコスパイス"],
+        "ko": ["라스 엘 하누트", "모로코 향신료"],
+        "zh": ["拉斯哈努特", "摩洛哥香料"],
+        "es": ["ras el hanout", "especias marroquíes"],
+        "fr": ["ras el hanout", "mélange d'épices marocain"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "harissa powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 295,
+        "protein": 12.0,
+        "carbs": 55.0,
+        "fat": 13.0,
+        "fiber": 27.0
+      },
+      "aliases": {
+        "en": ["harissa spice", "north african chili blend"],
+        "ja": ["ハリッサパウダー", "ハリッサスパイス"],
+        "ko": ["하리사 가루", "북아프리카 고추"],
+        "zh": ["哈里萨粉", "北非辣椒"],
+        "es": ["harissa en polvo"],
+        "fr": ["harissa en poudre"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "dukkah",
+      "category": "spice",
+      "per_100g": {
+        "calories": 450,
+        "protein": 18.0,
+        "carbs": 35.0,
+        "fat": 32.0,
+        "fiber": 15.0
+      },
+      "aliases": {
+        "en": ["duqqa", "egyptian spice blend"],
+        "ja": ["ドゥカ", "エジプトスパイス"],
+        "ko": ["두카", "이집트 향신료"],
+        "zh": ["杜卡", "埃及香料"],
+        "es": ["dukkah", "duqqa"],
+        "fr": ["dukkah", "duqqa"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "baharat",
+      "category": "spice",
+      "per_100g": {
+        "calories": 315,
+        "protein": 11.5,
+        "carbs": 62.0,
+        "fat": 10.5,
+        "fiber": 28.0
+      },
+      "aliases": {
+        "en": ["baharat spice", "middle eastern seven spice"],
+        "ja": ["バハラット", "中東七味"],
+        "ko": ["바하라트", "중동 7가지 향신료"],
+        "zh": ["巴哈拉特", "中东七香粉"],
+        "es": ["baharat", "siete especias"],
+        "fr": ["baharat", "sept épices"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "advieh",
+      "category": "spice",
+      "per_100g": {
+        "calories": 320,
+        "protein": 11.0,
+        "carbs": 64.0,
+        "fat": 9.5,
+        "fiber": 30.0
+      },
+      "aliases": {
+        "en": ["advieh spice", "persian spice blend"],
+        "ja": ["アドヴィエ", "ペルシャスパイス"],
+        "ko": ["아드비에", "페르시아 향신료"],
+        "zh": ["波斯综合香料", "阿德维耶"],
+        "es": ["advieh", "especias persas"],
+        "fr": ["advieh", "épices persanes"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "hawaij",
+      "category": "spice",
+      "per_100g": {
+        "calories": 310,
+        "protein": 12.0,
+        "carbs": 61.0,
+        "fat": 10.0,
+        "fiber": 27.0
+      },
+      "aliases": {
+        "en": ["hawaij spice", "yemeni spice blend"],
+        "ja": ["ハワイジ", "イエメンスパイス"],
+        "ko": ["하와이지", "예멘 향신료"],
+        "zh": ["也门香料", "哈瓦伊"],
+        "es": ["hawaij", "especias yemeníes"],
+        "fr": ["hawaij", "épices yéménites"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "shichimi togarashi",
+      "category": "spice",
+      "per_100g": {
+        "calories": 280,
+        "protein": 11.5,
+        "carbs": 54.0,
+        "fat": 14.0,
+        "fiber": 22.0
+      },
+      "aliases": {
+        "en": ["japanese seven spice", "nanami togarashi"],
+        "ja": ["七味唐辛子", "七味"],
+        "ko": ["시치미 도가라시", "일본 칠미"],
+        "zh": ["七味粉", "七味唐辛子"],
+        "es": ["shichimi togarashi", "siete especias japonesas"],
+        "fr": ["shichimi togarashi", "sept épices japonaises"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "furikake",
+      "category": "spice",
+      "per_100g": {
+        "calories": 320,
+        "protein": 28.0,
+        "carbs": 42.0,
+        "fat": 6.5,
+        "fiber": 8.0
+      },
+      "aliases": {
+        "en": ["japanese rice seasoning", "rice sprinkles"],
+        "ja": ["ふりかけ", "振り掛け"],
+        "ko": ["후리카케", "일본 밥 양념"],
+        "zh": ["日式拌饭料", "香松"],
+        "es": ["furikake", "condimento japonés para arroz"],
+        "fr": ["furikake", "assaisonnement japonais pour riz"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "tajin",
+      "category": "spice",
+      "per_100g": {
+        "calories": 180,
+        "protein": 5.0,
+        "carbs": 42.0,
+        "fat": 2.5,
+        "fiber": 18.0
+      },
+      "aliases": {
+        "en": ["tajin seasoning", "mexican chili lime seasoning"],
+        "ja": ["タヒン", "メキシカンチリライム"],
+        "ko": ["타힌", "멕시코 칠리 라임"],
+        "zh": ["墨西哥辣椒柠檬调料", "塔辛"],
+        "es": ["tajín", "condimento mexicano"],
+        "fr": ["tajín", "assaisonnement mexicain"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "adobo seasoning",
+      "category": "spice",
+      "per_100g": {
+        "calories": 270,
+        "protein": 10.0,
+        "carbs": 58.0,
+        "fat": 7.0,
+        "fiber": 25.0
+      },
+      "aliases": {
+        "en": ["adobo", "latin seasoning"],
+        "ja": ["アドボシーズニング", "ラテンスパイス"],
+        "ko": ["아도보 시즈닝", "라틴 양념"],
+        "zh": ["阿斗波调料", "拉丁美洲调料"],
+        "es": ["adobo", "condimento latino"],
+        "fr": ["adobo", "assaisonnement latin"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "sazon seasoning",
+      "category": "spice",
+      "per_100g": {
+        "calories": 260,
+        "protein": 9.5,
+        "carbs": 56.0,
+        "fat": 6.5,
+        "fiber": 24.0
+      },
+      "aliases": {
+        "en": ["sazon", "latin american seasoning"],
+        "ja": ["サゾンシーズニング", "ラテンアメリカンスパイス"],
+        "ko": ["사손 시즈닝", "라틴아메리카 양념"],
+        "zh": ["拉美调料", "萨松"],
+        "es": ["sazón", "condimento latinoamericano"],
+        "fr": ["sazón", "assaisonnement latino-américain"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "pumpkin pie spice",
+      "category": "spice",
+      "per_100g": {
+        "calories": 280,
+        "protein": 5.5,
+        "carbs": 70.0,
+        "fat": 6.0,
+        "fiber": 40.0
+      },
+      "aliases": {
+        "en": ["pumpkin spice", "pie spice"],
+        "ja": ["パンプキンパイスパイス", "かぼちゃパイ用スパイス"],
+        "ko": ["펌킨 파이 스파이스", "호박 파이 양념"],
+        "zh": ["南瓜派香料", "甜点香料"],
+        "es": ["especias para pastel de calabaza"],
+        "fr": ["épices pour tarte à la citrouille"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "apple pie spice",
+      "category": "spice",
+      "per_100g": {
+        "calories": 275,
+        "protein": 5.0,
+        "carbs": 72.0,
+        "fat": 5.5,
+        "fiber": 42.0
+      },
+      "aliases": {
+        "en": ["apple spice", "pie spice blend"],
+        "ja": ["アップルパイスパイス", "りんごパイ用スパイス"],
+        "ko": ["애플 파이 스파이스", "사과 파이 양념"],
+        "zh": ["苹果派香料", "苹果香料"],
+        "es": ["especias para pastel de manzana"],
+        "fr": ["épices pour tarte aux pommes"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "mixed spice",
+      "category": "spice",
+      "per_100g": {
+        "calories": 270,
+        "protein": 5.5,
+        "carbs": 68.0,
+        "fat": 6.5,
+        "fiber": 38.0
+      },
+      "aliases": {
+        "en": ["british mixed spice", "pudding spice"],
+        "ja": ["ミックススパイス", "ブリティッシュスパイス"],
+        "ko": ["믹스드 스파이스", "영국 혼합 향신료"],
+        "zh": ["综合香料", "英式香料"],
+        "es": ["mezcla de especias británica"],
+        "fr": ["mélange d'épices britannique"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "pickling spice",
+      "category": "spice",
+      "per_100g": {
+        "calories": 285,
+        "protein": 10.5,
+        "carbs": 62.0,
+        "fat": 8.5,
+        "fiber": 30.0
+      },
+      "aliases": {
+        "en": ["pickle spice", "pickling blend"],
+        "ja": ["ピクリングスパイス", "漬物用スパイス"],
+        "ko": ["피클링 스파이스", "절임 향신료"],
+        "zh": ["腌渍香料", "泡菜香料"],
+        "es": ["especias para encurtir"],
+        "fr": ["épices à marinades"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "crab boil seasoning",
+      "category": "spice",
+      "per_100g": {
+        "calories": 275,
+        "protein": 11.0,
+        "carbs": 58.0,
+        "fat": 7.5,
+        "fiber": 28.0
+      },
+      "aliases": {
+        "en": ["seafood boil", "shrimp boil seasoning"],
+        "ja": ["クラブボイルシーズニング", "シーフードボイル"],
+        "ko": ["크랩 보일 시즈닝", "해산물 삶기 양념"],
+        "zh": ["海鲜煮料", "蟹煮调料"],
+        "es": ["condimento para hervir mariscos"],
+        "fr": ["assaisonnement pour bouillon de fruits de mer"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "jerk seasoning",
+      "category": "spice",
+      "per_100g": {
+        "calories": 300,
+        "protein": 11.5,
+        "carbs": 60.0,
+        "fat": 9.0,
+        "fiber": 26.0
+      },
+      "aliases": {
+        "en": ["jerk spice", "jamaican jerk"],
+        "ja": ["ジャークシーズニング", "ジャマイカンジャーク"],
+        "ko": ["저크 시즈닝", "자메이카 저크"],
+        "zh": ["牙买加烤肉料", "杰克调料"],
+        "es": ["condimento jerk", "jerk jamaicano"],
+        "fr": ["assaisonnement jerk", "jerk jamaïcain"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "blackening seasoning",
+      "category": "spice",
+      "per_100g": {
+        "calories": 285,
+        "protein": 12.0,
+        "carbs": 56.0,
+        "fat": 8.5,
+        "fiber": 29.0
+      },
+      "aliases": {
+        "en": ["blackened seasoning", "cajun blackening spice"],
+        "ja": ["ブラックニングシーズニング", "ケイジャンブラックニング"],
+        "ko": ["블랙닝 시즈닝", "케이준 블랙닝"],
+        "zh": ["黑化调料", "卡真黑化香料"],
+        "es": ["condimento para ennegrecido"],
+        "fr": ["assaisonnement noircissement"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "lemon pepper",
+      "category": "spice",
+      "per_100g": {
+        "calories": 240,
+        "protein": 8.5,
+        "carbs": 52.0,
+        "fat": 6.0,
+        "fiber": 22.0
+      },
+      "aliases": {
+        "en": ["lemon pepper seasoning"],
+        "ja": ["レモンペッパー", "レモン胡椒"],
+        "ko": ["레몬 페퍼", "레몬 후추"],
+        "zh": ["柠檬胡椒", "柠檬椒盐"],
+        "es": ["pimienta limón"],
+        "fr": ["poivre citron"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "steak seasoning",
+      "category": "spice",
+      "per_100g": {
+        "calories": 265,
+        "protein": 10.0,
+        "carbs": 55.0,
+        "fat": 7.5,
+        "fiber": 24.0
+      },
+      "aliases": {
+        "en": ["montreal steak seasoning", "beef seasoning"],
+        "ja": ["ステーキシーズニング", "牛肉用スパイス"],
+        "ko": ["스테이크 시즈닝", "소고기 양념"],
+        "zh": ["牛排调料", "牛肉香料"],
+        "es": ["condimento para bistec"],
+        "fr": ["assaisonnement pour steak"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "taco seasoning",
+      "category": "spice",
+      "per_100g": {
+        "calories": 280,
+        "protein": 11.0,
+        "carbs": 58.0,
+        "fat": 7.0,
+        "fiber": 26.0
+      },
+      "aliases": {
+        "en": ["taco spice mix", "mexican taco seasoning"],
+        "ja": ["タコスシーズニング", "タコス用スパイス"],
+        "ko": ["타코 시즈닝", "타코 양념"],
+        "zh": ["墨西哥卷饼调料", "塔可调料"],
+        "es": ["condimento para tacos"],
+        "fr": ["assaisonnement pour tacos"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "fajita seasoning",
+      "category": "spice",
+      "per_100g": {
+        "calories": 275,
+        "protein": 10.5,
+        "carbs": 57.0,
+        "fat": 6.5,
+        "fiber": 25.0
+      },
+      "aliases": {
+        "en": ["fajita spice mix"],
+        "ja": ["ファヒータシーズニング", "ファヒータ用スパイス"],
+        "ko": ["파히타 시즈닝", "파히타 양념"],
+        "zh": ["法士达调料", "墨西哥烤肉调料"],
+        "es": ["condimento para fajitas"],
+        "fr": ["assaisonnement pour fajitas"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "chili seasoning",
+      "category": "spice",
+      "per_100g": {
+        "calories": 290,
+        "protein": 12.0,
+        "carbs": 59.0,
+        "fat": 8.0,
+        "fiber": 27.0
+      },
+      "aliases": {
+        "en": ["chili mix", "chili con carne seasoning"],
+        "ja": ["チリシーズニング", "チリ用スパイス"],
+        "ko": ["칠리 시즈닝", "칠리 양념"],
+        "zh": ["辣椒调料", "肉酱调料"],
+        "es": ["condimento para chili"],
+        "fr": ["assaisonnement pour chili"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "ranch seasoning",
+      "category": "spice",
+      "per_100g": {
+        "calories": 260,
+        "protein": 9.0,
+        "carbs": 54.0,
+        "fat": 6.0,
+        "fiber": 20.0
+      },
+      "aliases": {
+        "en": ["ranch mix", "ranch dressing mix"],
+        "ja": ["ランチシーズニング", "ランチドレッシング"],
+        "ko": ["랜치 시즈닝", "랜치 드레싱"],
+        "zh": ["牧场调料", "牧场沙拉酱料"],
+        "es": ["condimento ranch"],
+        "fr": ["assaisonnement ranch"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "everything bagel seasoning",
+      "category": "spice",
+      "per_100g": {
+        "calories": 380,
+        "protein": 14.0,
+        "carbs": 40.0,
+        "fat": 22.0,
+        "fiber": 15.0
+      },
+      "aliases": {
+        "en": ["everything seasoning", "bagel spice"],
+        "ja": ["エブリシングベーグルシーズニング", "ベーグルスパイス"],
+        "ko": ["에브리씽 베이글 시즈닝", "베이글 양념"],
+        "zh": ["百吉饼调料", "全料调味料"],
+        "es": ["condimento everything bagel"],
+        "fr": ["assaisonnement everything bagel"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "chinese chicken powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 240,
+        "protein": 18.0,
+        "carbs": 38.0,
+        "fat": 4.0,
+        "fiber": 2.0
+      },
+      "aliases": {
+        "en": ["chicken bouillon powder", "chicken stock powder"],
+        "ja": ["チキンパウダー", "鶏がらスープの素"],
+        "ko": ["치킨 파우더", "닭육수 가루"],
+        "zh": ["鸡粉", "鸡精"],
+        "es": ["polvo de pollo", "caldo de pollo en polvo"],
+        "fr": ["poudre de poulet", "bouillon de poulet"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "msg",
+      "category": "spice",
+      "per_100g": {
+        "calories": 0,
+        "protein": 12.2,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0
+      },
+      "aliases": {
+        "en": ["monosodium glutamate", "umami seasoning"],
+        "ja": ["味の素", "グルタミン酸ナトリウム", "MSG"],
+        "ko": ["글루탐산나트륨", "MSG", "미원"],
+        "zh": ["味精", "谷氨酸钠", "MSG"],
+        "es": ["glutamato monosódico", "MSG"],
+        "fr": ["glutamate monosodique", "MSG"]
+      },
+      "common_units": ["tsp", "tbsp", "g", "pinch"]
+    },
+    {
+      "canonical_name": "annatto powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 307,
+        "protein": 13.5,
+        "carbs": 49.8,
+        "fat": 16.2,
+        "fiber": 8.5
+      },
+      "aliases": {
+        "en": ["achiote powder", "annatto"],
+        "ja": ["アナトーパウダー", "ベニノキ"],
+        "ko": ["안나토 가루", "아치오테"],
+        "zh": ["胭脂树粉", "红木粉"],
+        "es": ["achiote en polvo", "annatto"],
+        "fr": ["poudre de rocou", "annatto"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "sansho pepper",
+      "category": "spice",
+      "per_100g": {
+        "calories": 258,
+        "protein": 10.0,
+        "carbs": 56.9,
+        "fat": 3.2,
+        "fiber": 20.0
+      },
+      "aliases": {
+        "en": ["japanese pepper", "japanese prickly ash"],
+        "ja": ["山椒", "粉山椒"],
+        "ko": ["산초", "일본 산초"],
+        "zh": ["日本花椒", "山椒"],
+        "es": ["pimienta japonesa", "sansho"],
+        "fr": ["poivre japonais", "sansho"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "file powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 215,
+        "protein": 5.8,
+        "carbs": 47.2,
+        "fat": 4.1,
+        "fiber": 32.0
+      },
+      "aliases": {
+        "en": ["filé powder", "gumbo filé", "sassafras powder"],
+        "ja": ["フィレパウダー", "ガンボフィレ"],
+        "ko": ["필레 가루", "검보 필레"],
+        "zh": ["黄樟粉", "秋葵粉"],
+        "es": ["polvo de filé"],
+        "fr": ["poudre de filé"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "amchur powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 380,
+        "protein": 3.0,
+        "carbs": 85.0,
+        "fat": 2.0,
+        "fiber": 11.0
+      },
+      "aliases": {
+        "en": ["amchoor", "dried mango powder"],
+        "ja": ["アムチュールパウダー", "マンゴーパウダー"],
+        "ko": ["암추르 가루", "망고 가루"],
+        "zh": ["芒果粉", "干芒果粉"],
+        "es": ["amchur", "polvo de mango seco"],
+        "fr": ["amchoor", "poudre de mangue séchée"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "kaffir lime powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 105,
+        "protein": 2.8,
+        "carbs": 25.3,
+        "fat": 0.4,
+        "fiber": 10.6
+      },
+      "aliases": {
+        "en": ["makrut lime powder", "dried kaffir lime"],
+        "ja": ["こぶみかんパウダー", "バイマックルート"],
+        "ko": ["카피르 라임 가루", "마크룻 라임"],
+        "zh": ["泰国青柠粉", "箭叶橙粉"],
+        "es": ["polvo de lima kaffir"],
+        "fr": ["poudre de combava"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "kokum powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 60,
+        "protein": 1.8,
+        "carbs": 14.3,
+        "fat": 0.1,
+        "fiber": 2.3
+      },
+      "aliases": {
+        "en": ["dried kokum", "garcinia"],
+        "ja": ["ココムパウダー", "ガルシニア"],
+        "ko": ["코쿰 가루", "가르시니아"],
+        "zh": ["藤黄果粉", "罗望子粉"],
+        "es": ["kokum en polvo"],
+        "fr": ["poudre de kokum"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "urfa biber",
+      "category": "spice",
+      "per_100g": {
+        "calories": 282,
+        "protein": 12.0,
+        "carbs": 56.6,
+        "fat": 17.3,
+        "fiber": 27.2
+      },
+      "aliases": {
+        "en": ["urfa pepper", "isot pepper"],
+        "ja": ["ウルファビベル", "ウルファペッパー"],
+        "ko": ["우르파 비베르", "우르파 페퍼"],
+        "zh": ["乌尔法辣椒", "土耳其辣椒"],
+        "es": ["pimienta urfa", "urfa biber"],
+        "fr": ["poivre d'urfa", "piment urfa"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "aleppo pepper",
+      "category": "spice",
+      "per_100g": {
+        "calories": 282,
+        "protein": 12.0,
+        "carbs": 56.6,
+        "fat": 17.3,
+        "fiber": 27.2
+      },
+      "aliases": {
+        "en": ["halaby pepper", "pul biber"],
+        "ja": ["アレッポペッパー", "ハラビーペッパー"],
+        "ko": ["알레포 페퍼", "할라비 페퍼"],
+        "zh": ["阿勒颇辣椒", "叙利亚辣椒"],
+        "es": ["pimienta de alepo"],
+        "fr": ["poivre d'alep", "piment d'alep"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "korean red pepper powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 282,
+        "protein": 12.0,
+        "carbs": 56.6,
+        "fat": 17.3,
+        "fiber": 27.2
+      },
+      "aliases": {
+        "en": ["gochugaru fine", "korean chili powder"],
+        "ja": ["韓国唐辛子粉", "コチュカル"],
+        "ko": ["고운 고춧가루", "고춧가루"],
+        "zh": ["韩国辣椒粉", "细辣椒粉"],
+        "es": ["chile coreano en polvo"],
+        "fr": ["piment coréen en poudre"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "kampot pepper",
+      "category": "spice",
+      "per_100g": {
+        "calories": 251,
+        "protein": 10.4,
+        "carbs": 63.9,
+        "fat": 3.3,
+        "fiber": 25.3
+      },
+      "aliases": {
+        "en": ["cambodian pepper", "kampot black pepper"],
+        "ja": ["カンポットペッパー", "カンボジア胡椒"],
+        "ko": ["캄포트 페퍼", "캄보디아 후추"],
+        "zh": ["柬埔寨胡椒", "贡布胡椒"],
+        "es": ["pimienta kampot", "pimienta camboyana"],
+        "fr": ["poivre de kampot"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "tellicherry peppercorns",
+      "category": "spice",
+      "per_100g": {
+        "calories": 251,
+        "protein": 10.4,
+        "carbs": 63.9,
+        "fat": 3.3,
+        "fiber": 25.3
+      },
+      "aliases": {
+        "en": ["tellicherry pepper", "malabar pepper"],
+        "ja": ["テリチェリーペッパー", "マラバール胡椒"],
+        "ko": ["텔리체리 페퍼", "말라바르 후추"],
+        "zh": ["特里切里胡椒", "马拉巴尔胡椒"],
+        "es": ["pimienta tellicherry"],
+        "fr": ["poivre tellicherry"]
+      },
+      "common_units": ["whole", "tsp", "g"]
+    },
+    {
+      "canonical_name": "sarawak white pepper",
+      "category": "spice",
+      "per_100g": {
+        "calories": 296,
+        "protein": 10.4,
+        "carbs": 68.6,
+        "fat": 2.1,
+        "fiber": 20.3
+      },
+      "aliases": {
+        "en": ["malaysian white pepper", "sarawak pepper"],
+        "ja": ["サラワクホワイトペッパー", "マレーシア白胡椒"],
+        "ko": ["사라왁 화이트 페퍼", "말레이시아 백후추"],
+        "zh": ["砂拉越白胡椒", "马来西亚白胡椒"],
+        "es": ["pimienta blanca sarawak"],
+        "fr": ["poivre blanc sarawak"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "dried lime powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 105,
+        "protein": 2.8,
+        "carbs": 25.3,
+        "fat": 0.4,
+        "fiber": 10.6
+      },
+      "aliases": {
+        "en": ["loomi powder", "black lime powder", "omani lime"],
+        "ja": ["ドライライムパウダー", "ブラックライム"],
+        "ko": ["말린 라임 가루", "블랙 라임"],
+        "zh": ["干柠檬粉", "黑柠檬粉"],
+        "es": ["lima seca en polvo", "loomi"],
+        "fr": ["poudre de citron noir", "loomi"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "dried tamarind powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 239,
+        "protein": 2.8,
+        "carbs": 62.5,
+        "fat": 0.6,
+        "fiber": 5.1
+      },
+      "aliases": {
+        "en": ["tamarind powder", "imli powder"],
+        "ja": ["タマリンドパウダー", "乾燥タマリンド"],
+        "ko": ["타마린드 가루", "말린 타마린드"],
+        "zh": ["罗望子粉", "酸角粉"],
+        "es": ["tamarindo en polvo"],
+        "fr": ["poudre de tamarin"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "tonka bean ground",
+      "category": "spice",
+      "per_100g": {
+        "calories": 420,
+        "protein": 8.0,
+        "carbs": 68.0,
+        "fat": 18.0,
+        "fiber": 12.0
+      },
+      "aliases": {
+        "en": ["tonka beans", "cumaru"],
+        "ja": ["トンカ豆", "クマル"],
+        "ko": ["통카 빈", "쿠마루"],
+        "zh": ["零陵香豆", "黑香豆"],
+        "es": ["haba tonka", "cumaru"],
+        "fr": ["fève tonka", "coumarou"]
+      },
+      "common_units": ["bean", "tsp", "g"]
+    },
+    {
+      "canonical_name": "mahlab powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 395,
+        "protein": 7.5,
+        "carbs": 52.0,
+        "fat": 20.0,
+        "fiber": 15.0
+      },
+      "aliases": {
+        "en": ["mahleb", "mahlepi", "cherry kernel powder"],
+        "ja": ["マハレブパウダー", "チェリーカーネル"],
+        "ko": ["마할렙 가루", "체리 커널"],
+        "zh": ["樱桃核粉", "马哈拉比"],
+        "es": ["mahaleb", "mahlab"],
+        "fr": ["mahleb", "mahalepi"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "kala namak",
+      "category": "spice",
+      "per_100g": {
+        "calories": 0,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0
+      },
+      "aliases": {
+        "en": ["black salt", "himalayan black salt", "sanchal"],
+        "ja": ["カラナマック", "ブラックソルト", "岩塩"],
+        "ko": ["칼라 나막", "블랙 솔트", "히말라야 블랙 솔트"],
+        "zh": ["黑盐", "喜马拉雅黑盐"],
+        "es": ["sal negra", "kala namak"],
+        "fr": ["sel noir", "kala namak"]
+      },
+      "common_units": ["tsp", "tbsp", "g", "pinch"]
+    },
+    {
+      "canonical_name": "sel gris",
+      "category": "spice",
+      "per_100g": {
+        "calories": 0,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0
+      },
+      "aliases": {
+        "en": ["grey salt", "celtic sea salt"],
+        "ja": ["セルグリ", "グレーソルト", "セルトの塩"],
+        "ko": ["셀 그리", "회색 소금", "켈트 바다 소금"],
+        "zh": ["灰盐", "凯尔特海盐"],
+        "es": ["sal gris", "sal celta"],
+        "fr": ["sel gris", "sel de Guérande"]
+      },
+      "common_units": ["tsp", "tbsp", "g", "pinch"]
+    },
+    {
+      "canonical_name": "smoked salt",
+      "category": "spice",
+      "per_100g": {
+        "calories": 0,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0
+      },
+      "aliases": {
+        "en": ["hickory smoked salt", "smoked sea salt"],
+        "ja": ["スモークソルト", "燻製塩"],
+        "ko": ["훈제 소금", "스모크 솔트"],
+        "zh": ["烟熏盐", "熏制海盐"],
+        "es": ["sal ahumada"],
+        "fr": ["sel fumé"]
+      },
+      "common_units": ["tsp", "tbsp", "g", "pinch"]
+    },
+    {
+      "canonical_name": "truffle salt",
+      "category": "spice",
+      "per_100g": {
+        "calories": 5,
+        "protein": 0.2,
+        "carbs": 0.5,
+        "fat": 0.1,
+        "fiber": 0
+      },
+      "aliases": {
+        "en": ["black truffle salt", "white truffle salt"],
+        "ja": ["トリュフソルト", "トリュフ塩"],
+        "ko": ["트러플 솔트", "송로버섯 소금"],
+        "zh": ["松露盐", "黑松露盐"],
+        "es": ["sal de trufa"],
+        "fr": ["sel à la truffe"]
+      },
+      "common_units": ["tsp", "tbsp", "g", "pinch"]
+    },
+    {
+      "canonical_name": "red hawaiian salt",
+      "category": "spice",
+      "per_100g": {
+        "calories": 0,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0
+      },
+      "aliases": {
+        "en": ["alaea salt", "hawaiian red salt"],
+        "ja": ["レッドハワイアンソルト", "アラエア塩"],
+        "ko": ["레드 하와이안 솔트", "알라에아 소금"],
+        "zh": ["红色夏威夷盐", "阿拉埃盐"],
+        "es": ["sal roja hawaiana", "alaea"],
+        "fr": ["sel rouge hawaïen", "alaea"]
+      },
+      "common_units": ["tsp", "tbsp", "g", "pinch"]
+    },
+    {
+      "canonical_name": "black hawaiian salt",
+      "category": "spice",
+      "per_100g": {
+        "calories": 0,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0
+      },
+      "aliases": {
+        "en": ["hiwa kai", "lava salt", "activated charcoal salt"],
+        "ja": ["ブラックハワイアンソルト", "ヒヴァカイ"],
+        "ko": ["블랙 하와이안 솔트", "용암 소금"],
+        "zh": ["黑色夏威夷盐", "火山盐"],
+        "es": ["sal negra hawaiana", "hiwa kai"],
+        "fr": ["sel noir hawaïen", "hiwa kai"]
+      },
+      "common_units": ["tsp", "tbsp", "g", "pinch"]
+    },
+    {
+      "canonical_name": "espelette pepper",
+      "category": "spice",
+      "per_100g": {
+        "calories": 282,
+        "protein": 14.1,
+        "carbs": 54.0,
+        "fat": 12.9,
+        "fiber": 34.9
+      },
+      "aliases": {
+        "en": ["piment d'espelette", "basque pepper"],
+        "ja": ["エスペレット唐辛子", "バスク唐辛子"],
+        "ko": ["에스펠레트 페퍼", "바스크 고추"],
+        "zh": ["埃斯佩莱特辣椒", "巴斯克辣椒"],
+        "es": ["pimiento de espelette"],
+        "fr": ["piment d'Espelette"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "kashmiri chili powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 282,
+        "protein": 12.0,
+        "carbs": 56.6,
+        "fat": 17.3,
+        "fiber": 27.2
+      },
+      "aliases": {
+        "en": ["kashmiri mirch", "kashmiri red chili"],
+        "ja": ["カシミール唐辛子", "カシミールチリ"],
+        "ko": ["카슈미르 칠리", "카슈미르 고추"],
+        "zh": ["克什米尔辣椒粉", "克什米尔红椒"],
+        "es": ["chile kashmiri", "pimiento kashmiri"],
+        "fr": ["piment kashmiri", "chili du cachemire"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "deggi mirch",
+      "category": "spice",
+      "per_100g": {
+        "calories": 282,
+        "protein": 12.0,
+        "carbs": 56.6,
+        "fat": 17.3,
+        "fiber": 27.2
+      },
+      "aliases": {
+        "en": ["deggi chili", "byadgi chili"],
+        "ja": ["デギミルチ", "デギチリ"],
+        "ko": ["데기 미르치", "데기 칠리"],
+        "zh": ["德吉辣椒", "德吉米尔奇"],
+        "es": ["deggi mirch", "chile deggi"],
+        "fr": ["deggi mirch", "piment deggi"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "ghost pepper powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 318,
+        "protein": 12.0,
+        "carbs": 56.6,
+        "fat": 17.3,
+        "fiber": 27.2
+      },
+      "aliases": {
+        "en": ["bhut jolokia", "naga pepper", "ghost chili"],
+        "ja": ["ゴーストペッパー", "ブートジョロキア"],
+        "ko": ["고스트 페퍼", "부트 졸로키아"],
+        "zh": ["幽灵椒粉", "断魂椒"],
+        "es": ["chile fantasma", "bhut jolokia"],
+        "fr": ["piment fantôme", "bhut jolokia"]
+      },
+      "common_units": ["pinch", "tsp", "g"]
+    },
+    {
+      "canonical_name": "carolina reaper powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 318,
+        "protein": 12.0,
+        "carbs": 56.6,
+        "fat": 17.3,
+        "fiber": 27.2
+      },
+      "aliases": {
+        "en": ["carolina reaper", "hp22b"],
+        "ja": ["キャロライナリーパー", "カロライナリーパー"],
+        "ko": ["캐롤라이나 리퍼", "카롤리나 리퍼"],
+        "zh": ["卡罗来纳死神椒", "死神椒粉"],
+        "es": ["carolina reaper", "chile reaper"],
+        "fr": ["carolina reaper", "piment reaper"]
+      },
+      "common_units": ["pinch", "tsp", "g"]
+    },
+    {
+      "canonical_name": "scotch bonnet powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 318,
+        "protein": 12.0,
+        "carbs": 56.6,
+        "fat": 17.3,
+        "fiber": 27.2
+      },
+      "aliases": {
+        "en": ["scotch bonnet", "caribbean red pepper"],
+        "ja": ["スコッチボンネット", "カリブ唐辛子"],
+        "ko": ["스카치 보닛", "카리브해 고추"],
+        "zh": ["苏格兰帽椒", "加勒比辣椒"],
+        "es": ["scotch bonnet", "ají caribeño"],
+        "fr": ["scotch bonnet", "piment antillais"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "habanero powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 318,
+        "protein": 12.0,
+        "carbs": 56.6,
+        "fat": 17.3,
+        "fiber": 27.2
+      },
+      "aliases": {
+        "en": ["habanero chili powder", "habanero pepper"],
+        "ja": ["ハバネロパウダー", "ハバネロ唐辛子"],
+        "ko": ["하바네로 가루", "하바네로 고추"],
+        "zh": ["哈瓦那辣椒粉", "黄灯笼椒粉"],
+        "es": ["habanero en polvo", "chile habanero"],
+        "fr": ["piment habanero en poudre"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "guajillo chili powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 281,
+        "protein": 11.0,
+        "carbs": 52.1,
+        "fat": 14.6,
+        "fiber": 30.3
+      },
+      "aliases": {
+        "en": ["guajillo powder", "dried guajillo"],
+        "ja": ["グアヒーヨチリパウダー", "グアヒーヨ"],
+        "ko": ["과히요 칠리", "과히요 고추"],
+        "zh": ["瓜希略辣椒粉", "干辣椒粉"],
+        "es": ["chile guajillo en polvo"],
+        "fr": ["poudre de piment guajillo"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "pasilla chili powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 281,
+        "protein": 11.0,
+        "carbs": 52.1,
+        "fat": 14.6,
+        "fiber": 30.3
+      },
+      "aliases": {
+        "en": ["pasilla powder", "chile negro"],
+        "ja": ["パシージャチリパウダー", "パシージャ"],
+        "ko": ["파실라 칠리", "파실라 고추"],
+        "zh": ["帕西拉辣椒粉", "黑辣椒粉"],
+        "es": ["chile pasilla en polvo"],
+        "fr": ["poudre de piment pasilla"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "new mexico chili powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 281,
+        "protein": 11.0,
+        "carbs": 52.1,
+        "fat": 14.6,
+        "fiber": 30.3
+      },
+      "aliases": {
+        "en": ["hatch chile powder", "new mexican red chile"],
+        "ja": ["ニューメキシコチリパウダー", "ハッチチリ"],
+        "ko": ["뉴멕시코 칠리", "해치 칠리"],
+        "zh": ["新墨西哥辣椒粉", "红辣椒粉"],
+        "es": ["chile de nuevo méxico"],
+        "fr": ["piment du nouveau-mexique"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "piri piri",
+      "category": "spice",
+      "per_100g": {
+        "calories": 318,
+        "protein": 12.0,
+        "carbs": 56.6,
+        "fat": 17.3,
+        "fiber": 27.2
+      },
+      "aliases": {
+        "en": ["peri peri", "african bird's eye chili"],
+        "ja": ["ピリピリ", "アフリカ唐辛子"],
+        "ko": ["피리 피리", "아프리카 고추"],
+        "zh": ["皮里皮里辣椒", "非洲辣椒"],
+        "es": ["piri piri", "peri peri"],
+        "fr": ["piri piri", "piment africain"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "ground white sesame",
+      "category": "spice",
+      "per_100g": {
+        "calories": 565,
+        "protein": 16.9,
+        "carbs": 25.7,
+        "fat": 48.0,
+        "fiber": 16.9
+      },
+      "aliases": {
+        "en": ["white sesame powder", "ground sesame"],
+        "ja": ["白ごま粉", "すりごま"],
+        "ko": ["흰 참깨 가루", "깨가루"],
+        "zh": ["白芝麻粉", "芝麻粉"],
+        "es": ["sésamo blanco molido"],
+        "fr": ["sésame blanc moulu"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "ground black sesame",
+      "category": "spice",
+      "per_100g": {
+        "calories": 565,
+        "protein": 16.9,
+        "carbs": 25.7,
+        "fat": 48.0,
+        "fiber": 16.9
+      },
+      "aliases": {
+        "en": ["black sesame powder", "ground black sesame"],
+        "ja": ["黒ごま粉", "黒すりごま"],
+        "ko": ["검은 참깨 가루", "흑임자 가루"],
+        "zh": ["黑芝麻粉", "黑芝麻糊"],
+        "es": ["sésamo negro molido"],
+        "fr": ["sésame noir moulu"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "zaatar spice blend",
+      "category": "spice",
+      "per_100g": {
+        "calories": 264,
+        "protein": 9.8,
+        "carbs": 42.7,
+        "fat": 11.2,
+        "fiber": 18.6
+      },
+      "aliases": {
+        "en": ["za'atar mix", "levantine spice"],
+        "ja": ["ザアタルミックス", "中東ハーブ"],
+        "ko": ["자타르 믹스", "레반트 향신료"],
+        "zh": ["扎塔混合香料", "黎凡特香料"],
+        "es": ["mezcla de za'atar"],
+        "fr": ["mélange zaatar"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "shiso powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 37,
+        "protein": 3.3,
+        "carbs": 7.7,
+        "fat": 0.1,
+        "fiber": 7.3
+      },
+      "aliases": {
+        "en": ["dried shiso", "perilla powder"],
+        "ja": ["紫蘇粉", "しその粉"],
+        "ko": ["자소 가루", "깻잎 가루"],
+        "zh": ["紫苏粉", "苏叶粉"],
+        "es": ["polvo de shiso"],
+        "fr": ["poudre de shiso"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "bonito flakes powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 356,
+        "protein": 77.1,
+        "carbs": 0.8,
+        "fat": 3.0,
+        "fiber": 0
+      },
+      "aliases": {
+        "en": ["katsuobushi powder", "dried bonito powder"],
+        "ja": ["鰹節粉", "かつお粉"],
+        "ko": ["가다랑어 가루", "가쓰오부시 가루"],
+        "zh": ["鲣鱼粉", "木鱼花粉"],
+        "es": ["polvo de bonito"],
+        "fr": ["poudre de bonite"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "dried yuzu peel powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 53,
+        "protein": 0.5,
+        "carbs": 13.3,
+        "fat": 0.3,
+        "fiber": 1.8
+      },
+      "aliases": {
+        "en": ["yuzu powder", "japanese citrus powder"],
+        "ja": ["柚子粉", "柚子皮粉"],
+        "ko": ["유자 가루", "유자 껍질 가루"],
+        "zh": ["柚子粉", "日本柚子粉"],
+        "es": ["polvo de yuzu"],
+        "fr": ["poudre de yuzu"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    },
+    {
+      "canonical_name": "dried wakame powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 45,
+        "protein": 3.0,
+        "carbs": 9.1,
+        "fat": 0.6,
+        "fiber": 0.5
+      },
+      "aliases": {
+        "en": ["wakame powder", "seaweed powder"],
+        "ja": ["わかめ粉", "海藻粉"],
+        "ko": ["미역 가루", "해초 가루"],
+        "zh": ["裙带菜粉", "海带粉"],
+        "es": ["polvo de wakame"],
+        "fr": ["poudre de wakame"]
+      },
+      "common_units": ["tsp", "tbsp", "g"]
+    }
+  ]
+}

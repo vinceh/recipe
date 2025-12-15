@@ -1,0 +1,1353 @@
+{
+  "batch": 9,
+  "agent": 43,
+  "category": "indonesian",
+  "ingredients": [
+    {
+      "canonical_name": "tempeh",
+      "category": "protein",
+      "per_100g": {
+        "calories": 192,
+        "protein_g": 20.3,
+        "carbs_g": 7.6,
+        "fat_g": 10.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "tempe", "language": "id", "type": "native" },
+        { "alias": "テンペ", "language": "ja", "type": "translation" },
+        { "alias": "tempeh", "language": "en", "type": "standard" }
+      ],
+      "common_units": [
+        { "unit": "block", "grams": 200 },
+        { "unit": "slice", "grams": 30 }
+      ]
+    },
+    {
+      "canonical_name": "kecap manis",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 280,
+        "protein_g": 2.5,
+        "carbs_g": 65,
+        "fat_g": 0.1,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "sweet soy sauce", "language": "en", "type": "translation" },
+        { "alias": "ketjap manis", "language": "nl", "type": "alternative" },
+        { "alias": "甜醬油", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 18 },
+        { "unit": "tsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "kecap asin",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 60,
+        "protein_g": 5.6,
+        "carbs_g": 8.5,
+        "fat_g": 0.1,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "salty soy sauce", "language": "en", "type": "translation" },
+        { "alias": "Indonesian soy sauce", "language": "en", "type": "descriptive" },
+        { "alias": "鹹醬油", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 18 },
+        { "unit": "tsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "sambal oelek",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 45,
+        "protein_g": 1.8,
+        "carbs_g": 9,
+        "fat_g": 0.5,
+        "fiber_g": 2.1
+      },
+      "aliases": [
+        { "alias": "sambal ulek", "language": "id", "type": "alternative" },
+        { "alias": "chili paste", "language": "en", "type": "generic" },
+        { "alias": "サンバルウレック", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "tsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "sambal bajak",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 65,
+        "protein_g": 2.1,
+        "carbs_g": 11,
+        "fat_g": 2.3,
+        "fiber_g": 2.5
+      },
+      "aliases": [
+        { "alias": "sambal badjak", "language": "id", "type": "alternative" },
+        { "alias": "fried sambal", "language": "en", "type": "translation" },
+        { "alias": "サンバルバジャック", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "tsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "sambal terasi",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 58,
+        "protein_g": 3.2,
+        "carbs_g": 10,
+        "fat_g": 1.5,
+        "fiber_g": 2.3
+      },
+      "aliases": [
+        { "alias": "sambal belacan", "language": "ms", "type": "alternative" },
+        { "alias": "shrimp paste sambal", "language": "en", "type": "translation" },
+        { "alias": "サンバルトラシ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "tsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "sambal matah",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 125,
+        "protein_g": 1.8,
+        "carbs_g": 12.5,
+        "fat_g": 8.5,
+        "fiber_g": 2.5
+      },
+      "aliases": [
+        { "alias": "sambal mata", "language": "id", "type": "alternative" },
+        { "alias": "Balinese sambal", "language": "en", "type": "translation" },
+        { "alias": "raw sambal", "language": "en", "type": "descriptive" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "tsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "belacan",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 245,
+        "protein_g": 38,
+        "carbs_g": 8,
+        "fat_g": 7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "terasi", "language": "id", "type": "native" },
+        { "alias": "shrimp paste", "language": "en", "type": "translation" },
+        { "alias": "blachan", "language": "ms", "type": "alternative" },
+        { "alias": "蝦醬", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 5 },
+        { "unit": "block", "grams": 250 }
+      ]
+    },
+    {
+      "canonical_name": "petis",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 180,
+        "protein_g": 12,
+        "carbs_g": 28,
+        "fat_g": 2.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "petis udang", "language": "id", "type": "specific" },
+        { "alias": "black shrimp paste", "language": "en", "type": "translation" },
+        { "alias": "hae ko", "language": "zh", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 18 },
+        { "unit": "tsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "oncom",
+      "category": "protein",
+      "per_100g": {
+        "calories": 187,
+        "protein_g": 13,
+        "carbs_g": 21,
+        "fat_g": 6,
+        "fiber_g": 3.5
+      },
+      "aliases": [
+        { "alias": "ontjom", "language": "id", "type": "alternative" },
+        { "alias": "オンコム", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "block", "grams": 200 },
+        { "unit": "slice", "grams": 30 }
+      ]
+    },
+    {
+      "canonical_name": "tape",
+      "category": "grain",
+      "per_100g": {
+        "calories": 165,
+        "protein_g": 2.8,
+        "carbs_g": 35,
+        "fat_g": 0.8,
+        "fiber_g": 1.2
+      },
+      "aliases": [
+        { "alias": "tapai", "language": "id", "type": "alternative" },
+        { "alias": "fermented cassava", "language": "en", "type": "translation" },
+        { "alias": "peuyeum", "language": "su", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 50 },
+        { "unit": "cup", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "candlenut",
+      "category": "nut",
+      "per_100g": {
+        "calories": 620,
+        "protein_g": 11,
+        "carbs_g": 18,
+        "fat_g": 60,
+        "fiber_g": 5.5
+      },
+      "aliases": [
+        { "alias": "kemiri", "language": "id", "type": "native" },
+        { "alias": "buah keras", "language": "ms", "type": "native" },
+        { "alias": "kukui nut", "language": "en", "type": "alternative" },
+        { "alias": "ククイナッツ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "nut", "grams": 8 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "torch ginger",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 1.2,
+        "carbs_g": 5.5,
+        "fat_g": 0.3,
+        "fiber_g": 1.8
+      },
+      "aliases": [
+        { "alias": "bunga kantan", "language": "ms", "type": "native" },
+        { "alias": "kecombrang", "language": "id", "type": "native" },
+        { "alias": "honje", "language": "su", "type": "native" },
+        { "alias": "wild ginger flower", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "bud", "grams": 25 },
+        { "unit": "slice", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "pandan leaf",
+      "category": "herb",
+      "per_100g": {
+        "calories": 30,
+        "protein_g": 1,
+        "carbs_g": 7,
+        "fat_g": 0.2,
+        "fiber_g": 2.5
+      },
+      "aliases": [
+        { "alias": "daun pandan", "language": "id", "type": "native" },
+        { "alias": "screwpine leaf", "language": "en", "type": "translation" },
+        { "alias": "pandanus", "language": "en", "type": "scientific" },
+        { "alias": "パンダンリーフ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "leaf", "grams": 3 },
+        { "unit": "bundle", "grams": 20 }
+      ]
+    },
+    {
+      "canonical_name": "kaffir lime leaf",
+      "category": "herb",
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 1.5,
+        "carbs_g": 8,
+        "fat_g": 0.3,
+        "fiber_g": 3
+      },
+      "aliases": [
+        { "alias": "daun jeruk purut", "language": "id", "type": "native" },
+        { "alias": "daun limau purut", "language": "ms", "type": "native" },
+        { "alias": "makrut lime leaf", "language": "en", "type": "alternative" },
+        { "alias": "コブミカンの葉", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "leaf", "grams": 1 },
+        { "unit": "bundle", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "coconut milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 230,
+        "protein_g": 2.3,
+        "carbs_g": 5.5,
+        "fat_g": 23.8,
+        "fiber_g": 2.2
+      },
+      "aliases": [
+        { "alias": "santan", "language": "id", "type": "native" },
+        { "alias": "santan kelapa", "language": "ms", "type": "native" },
+        { "alias": "ココナッツミルク", "language": "ja", "type": "translation" },
+        { "alias": "椰奶", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 240 },
+        { "unit": "can", "grams": 400 }
+      ]
+    },
+    {
+      "canonical_name": "grated coconut",
+      "category": "nut",
+      "per_100g": {
+        "calories": 354,
+        "protein_g": 3.3,
+        "carbs_g": 15.2,
+        "fat_g": 33.5,
+        "fiber_g": 9
+      },
+      "aliases": [
+        { "alias": "kelapa parut", "language": "id", "type": "native" },
+        { "alias": "shredded coconut", "language": "en", "type": "alternative" },
+        { "alias": "desiccated coconut", "language": "en", "type": "alternative" },
+        { "alias": "ココナッツフレーク", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 80 },
+        { "unit": "tbsp", "grams": 7 }
+      ]
+    },
+    {
+      "canonical_name": "coconut sugar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 1,
+        "carbs_g": 92,
+        "fat_g": 0.4,
+        "fiber_g": 2
+      },
+      "aliases": [
+        { "alias": "gula kelapa", "language": "id", "type": "native" },
+        { "alias": "gula jawa", "language": "id", "type": "alternative" },
+        { "alias": "gula merah", "language": "id", "type": "alternative" },
+        { "alias": "palm sugar", "language": "en", "type": "generic" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 200 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "palm sugar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 380,
+        "protein_g": 0.8,
+        "carbs_g": 94,
+        "fat_g": 0.2,
+        "fiber_g": 1.5
+      },
+      "aliases": [
+        { "alias": "gula aren", "language": "id", "type": "native" },
+        { "alias": "gula enau", "language": "ms", "type": "native" },
+        { "alias": "jaggery", "language": "en", "type": "alternative" },
+        { "alias": "椰糖", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 200 },
+        { "unit": "disk", "grams": 50 }
+      ]
+    },
+    {
+      "canonical_name": "bumbu kuning",
+      "category": "spice blend",
+      "per_100g": {
+        "calories": 85,
+        "protein_g": 2.5,
+        "carbs_g": 15,
+        "fat_g": 2.8,
+        "fiber_g": 3.5
+      },
+      "aliases": [
+        { "alias": "yellow spice paste", "language": "en", "type": "translation" },
+        { "alias": "kunyit paste", "language": "id", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "tsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "bumbu merah",
+      "category": "spice blend",
+      "per_100g": {
+        "calories": 92,
+        "protein_g": 2.8,
+        "carbs_g": 17,
+        "fat_g": 3.1,
+        "fiber_g": 4
+      },
+      "aliases": [
+        { "alias": "red spice paste", "language": "en", "type": "translation" },
+        { "alias": "基礎スパイスペースト赤", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "tsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "bumbu putih",
+      "category": "spice blend",
+      "per_100g": {
+        "calories": 78,
+        "protein_g": 2.2,
+        "carbs_g": 14,
+        "fat_g": 2.5,
+        "fiber_g": 3.2
+      },
+      "aliases": [
+        { "alias": "white spice paste", "language": "en", "type": "translation" },
+        { "alias": "基礎スパイスペースト白", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "tsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "bumbu rujak",
+      "category": "spice blend",
+      "per_100g": {
+        "calories": 145,
+        "protein_g": 2,
+        "carbs_g": 32,
+        "fat_g": 2.3,
+        "fiber_g": 2.8
+      },
+      "aliases": [
+        { "alias": "rujak sauce", "language": "en", "type": "translation" },
+        { "alias": "sweet and spicy fruit sauce", "language": "en", "type": "descriptive" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 18 },
+        { "unit": "tsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "bumbu gado-gado",
+      "category": "spice blend",
+      "per_100g": {
+        "calories": 425,
+        "protein_g": 18,
+        "carbs_g": 22,
+        "fat_g": 32,
+        "fiber_g": 6
+      },
+      "aliases": [
+        { "alias": "gado-gado sauce", "language": "en", "type": "translation" },
+        { "alias": "peanut sauce", "language": "en", "type": "generic" },
+        { "alias": "ガドガドソース", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 18 },
+        { "unit": "cup", "grams": 240 }
+      ]
+    },
+    {
+      "canonical_name": "bumbu rendang",
+      "category": "spice blend",
+      "per_100g": {
+        "calories": 145,
+        "protein_g": 3.2,
+        "carbs_g": 18.5,
+        "fat_g": 7.5,
+        "fiber_g": 4.2
+      },
+      "aliases": [
+        { "alias": "rendang paste", "language": "en", "type": "translation" },
+        { "alias": "rendang spice paste", "language": "en", "type": "descriptive" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 18 },
+        { "unit": "cup", "grams": 240 }
+      ]
+    },
+    {
+      "canonical_name": "rempah",
+      "category": "spice blend",
+      "per_100g": {
+        "calories": 95,
+        "protein_g": 3,
+        "carbs_g": 16,
+        "fat_g": 3.5,
+        "fiber_g": 4.5
+      },
+      "aliases": [
+        { "alias": "spice paste", "language": "en", "type": "translation" },
+        { "alias": "香料ペースト", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "tsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "cincalok",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 95,
+        "protein_g": 14,
+        "carbs_g": 6,
+        "fat_g": 2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "cencalok", "language": "ms", "type": "alternative" },
+        { "alias": "fermented shrimp", "language": "en", "type": "translation" },
+        { "alias": "發酵蝦醬", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "tsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "budu",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 70,
+        "protein_g": 11,
+        "carbs_g": 5,
+        "fat_g": 1.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "fermented anchovy sauce", "language": "en", "type": "translation" },
+        { "alias": "發酵魚露", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 18 },
+        { "unit": "tsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "asam jawa",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 239,
+        "protein_g": 2.8,
+        "carbs_g": 62.5,
+        "fat_g": 0.6,
+        "fiber_g": 5.1
+      },
+      "aliases": [
+        { "alias": "tamarind", "language": "en", "type": "translation" },
+        { "alias": "asam", "language": "id", "type": "short" },
+        { "alias": "タマリンド", "language": "ja", "type": "translation" },
+        { "alias": "羅望子", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "block", "grams": 100 }
+      ]
+    },
+    {
+      "canonical_name": "lengkuas",
+      "category": "spice",
+      "per_100g": {
+        "calories": 71,
+        "protein_g": 1,
+        "carbs_g": 15,
+        "fat_g": 0.3,
+        "fiber_g": 2
+      },
+      "aliases": [
+        { "alias": "galangal", "language": "en", "type": "translation" },
+        { "alias": "laos", "language": "id", "type": "alternative" },
+        { "alias": "ガランガル", "language": "ja", "type": "translation" },
+        { "alias": "南薑", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 5 },
+        { "unit": "inch", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "kunyit",
+      "category": "spice",
+      "per_100g": {
+        "calories": 354,
+        "protein_g": 7.8,
+        "carbs_g": 64.9,
+        "fat_g": 9.9,
+        "fiber_g": 21
+      },
+      "aliases": [
+        { "alias": "turmeric", "language": "en", "type": "translation" },
+        { "alias": "kunir", "language": "jv", "type": "alternative" },
+        { "alias": "ターメリック", "language": "ja", "type": "translation" },
+        { "alias": "薑黃", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "inch", "grams": 15 },
+        { "unit": "tsp", "grams": 3 }
+      ]
+    },
+    {
+      "canonical_name": "jahe",
+      "category": "spice",
+      "per_100g": {
+        "calories": 80,
+        "protein_g": 1.8,
+        "carbs_g": 17.8,
+        "fat_g": 0.8,
+        "fiber_g": 2
+      },
+      "aliases": [
+        { "alias": "ginger", "language": "en", "type": "translation" },
+        { "alias": "halia", "language": "ms", "type": "native" },
+        { "alias": "生姜", "language": "ja", "type": "translation" },
+        { "alias": "薑", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "inch", "grams": 11 },
+        { "unit": "slice", "grams": 3 }
+      ]
+    },
+    {
+      "canonical_name": "serai",
+      "category": "herb",
+      "per_100g": {
+        "calories": 99,
+        "protein_g": 1.8,
+        "carbs_g": 25.3,
+        "fat_g": 0.5,
+        "fiber_g": 2.8
+      },
+      "aliases": [
+        { "alias": "lemongrass", "language": "en", "type": "translation" },
+        { "alias": "sereh", "language": "id", "type": "alternative" },
+        { "alias": "レモングラス", "language": "ja", "type": "translation" },
+        { "alias": "香茅", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "stalk", "grams": 15 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "bawang merah",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 1.1,
+        "carbs_g": 9.3,
+        "fat_g": 0.1,
+        "fiber_g": 1.7
+      },
+      "aliases": [
+        { "alias": "shallot", "language": "en", "type": "translation" },
+        { "alias": "red onion", "language": "en", "type": "alternative" },
+        { "alias": "エシャロット", "language": "ja", "type": "translation" },
+        { "alias": "紅蔥頭", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "bulb", "grams": 25 },
+        { "unit": "tbsp", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "bawang putih",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 149,
+        "protein_g": 6.4,
+        "carbs_g": 33,
+        "fat_g": 0.5,
+        "fiber_g": 2.1
+      },
+      "aliases": [
+        { "alias": "garlic", "language": "en", "type": "translation" },
+        { "alias": "にんにく", "language": "ja", "type": "translation" },
+        { "alias": "大蒜", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "clove", "grams": 3 },
+        { "unit": "bulb", "grams": 40 }
+      ]
+    },
+    {
+      "canonical_name": "daun salam",
+      "category": "herb",
+      "per_100g": {
+        "calories": 313,
+        "protein_g": 7.6,
+        "carbs_g": 48.7,
+        "fat_g": 8.4,
+        "fiber_g": 26.3
+      },
+      "aliases": [
+        { "alias": "Indonesian bay leaf", "language": "en", "type": "translation" },
+        { "alias": "salam leaf", "language": "en", "type": "alternative" },
+        { "alias": "インドネシア月桂樹", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "leaf", "grams": 1 },
+        { "unit": "bundle", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "daun kemangi",
+      "category": "herb",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 3.2,
+        "carbs_g": 2.7,
+        "fat_g": 0.6,
+        "fiber_g": 1.6
+      },
+      "aliases": [
+        { "alias": "lemon basil", "language": "en", "type": "translation" },
+        { "alias": "Thai basil", "language": "en", "type": "alternative" },
+        { "alias": "selasih", "language": "ms", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "bunch", "grams": 25 },
+        { "unit": "leaf", "grams": 0.5 }
+      ]
+    },
+    {
+      "canonical_name": "daun bawang",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 1.8,
+        "carbs_g": 7.3,
+        "fat_g": 0.2,
+        "fiber_g": 2.6
+      },
+      "aliases": [
+        { "alias": "scallion", "language": "en", "type": "translation" },
+        { "alias": "green onion", "language": "en", "type": "alternative" },
+        { "alias": "spring onion", "language": "en", "type": "alternative" },
+        { "alias": "葱", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "stalk", "grams": 15 },
+        { "unit": "bunch", "grams": 100 }
+      ]
+    },
+    {
+      "canonical_name": "cabe rawit",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 2,
+        "carbs_g": 8.8,
+        "fat_g": 0.4,
+        "fiber_g": 1.5
+      },
+      "aliases": [
+        { "alias": "bird's eye chili", "language": "en", "type": "translation" },
+        { "alias": "Thai chili", "language": "en", "type": "alternative" },
+        { "alias": "cili padi", "language": "ms", "type": "native" },
+        { "alias": "鳥眼辣椒", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "chili", "grams": 2 },
+        { "unit": "tbsp", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "cabe merah",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 1.9,
+        "carbs_g": 8.8,
+        "fat_g": 0.4,
+        "fiber_g": 1.5
+      },
+      "aliases": [
+        { "alias": "red chili", "language": "en", "type": "translation" },
+        { "alias": "red pepper", "language": "en", "type": "alternative" },
+        { "alias": "cili merah", "language": "ms", "type": "native" },
+        { "alias": "赤唐辛子", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "chili", "grams": 15 },
+        { "unit": "tbsp", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "cabe hijau",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 20,
+        "protein_g": 0.9,
+        "carbs_g": 4.6,
+        "fat_g": 0.2,
+        "fiber_g": 1.5
+      },
+      "aliases": [
+        { "alias": "green chili", "language": "en", "type": "translation" },
+        { "alias": "cili hijau", "language": "ms", "type": "native" },
+        { "alias": "青唐辛子", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "chili", "grams": 15 },
+        { "unit": "tbsp", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "kencur",
+      "category": "spice",
+      "per_100g": {
+        "calories": 95,
+        "protein_g": 1.4,
+        "carbs_g": 19,
+        "fat_g": 1.2,
+        "fiber_g": 3
+      },
+      "aliases": [
+        { "alias": "aromatic ginger", "language": "en", "type": "translation" },
+        { "alias": "sand ginger", "language": "en", "type": "alternative" },
+        { "alias": "lesser galangal", "language": "en", "type": "alternative" },
+        { "alias": "沙薑", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "inch", "grams": 12 },
+        { "unit": "slice", "grams": 3 }
+      ]
+    },
+    {
+      "canonical_name": "biji pala",
+      "category": "spice",
+      "per_100g": {
+        "calories": 525,
+        "protein_g": 5.8,
+        "carbs_g": 49.3,
+        "fat_g": 36.3,
+        "fiber_g": 20.8
+      },
+      "aliases": [
+        { "alias": "nutmeg", "language": "en", "type": "translation" },
+        { "alias": "ナツメグ", "language": "ja", "type": "translation" },
+        { "alias": "肉豆蔻", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "nut", "grams": 5 },
+        { "unit": "tsp", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "bunga pala",
+      "category": "spice",
+      "per_100g": {
+        "calories": 475,
+        "protein_g": 6.7,
+        "carbs_g": 50.5,
+        "fat_g": 32.4,
+        "fiber_g": 20.2
+      },
+      "aliases": [
+        { "alias": "mace", "language": "en", "type": "translation" },
+        { "alias": "fuli", "language": "id", "type": "alternative" },
+        { "alias": "メース", "language": "ja", "type": "translation" },
+        { "alias": "肉豆蔻衣", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "blade", "grams": 1 },
+        { "unit": "tsp", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "cengkeh",
+      "category": "spice",
+      "per_100g": {
+        "calories": 274,
+        "protein_g": 6,
+        "carbs_g": 65.5,
+        "fat_g": 13,
+        "fiber_g": 33.9
+      },
+      "aliases": [
+        { "alias": "cloves", "language": "en", "type": "translation" },
+        { "alias": "bunga cengkeh", "language": "id", "type": "alternative" },
+        { "alias": "クローブ", "language": "ja", "type": "translation" },
+        { "alias": "丁香", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "clove", "grams": 0.5 },
+        { "unit": "tsp", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "kayu manis",
+      "category": "spice",
+      "per_100g": {
+        "calories": 247,
+        "protein_g": 4,
+        "carbs_g": 80.6,
+        "fat_g": 1.2,
+        "fiber_g": 53.1
+      },
+      "aliases": [
+        { "alias": "cinnamon", "language": "en", "type": "translation" },
+        { "alias": "cassia", "language": "en", "type": "alternative" },
+        { "alias": "シナモン", "language": "ja", "type": "translation" },
+        { "alias": "肉桂", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "stick", "grams": 5 },
+        { "unit": "tsp", "grams": 3 }
+      ]
+    },
+    {
+      "canonical_name": "jintan",
+      "category": "spice",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 17.8,
+        "carbs_g": 44.2,
+        "fat_g": 22.3,
+        "fiber_g": 10.5
+      },
+      "aliases": [
+        { "alias": "cumin", "language": "en", "type": "translation" },
+        { "alias": "jintan putih", "language": "id", "type": "specific" },
+        { "alias": "クミン", "language": "ja", "type": "translation" },
+        { "alias": "孜然", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "ketumbar",
+      "category": "spice",
+      "per_100g": {
+        "calories": 298,
+        "protein_g": 12.4,
+        "carbs_g": 54.2,
+        "fat_g": 17.8,
+        "fiber_g": 41.9
+      },
+      "aliases": [
+        { "alias": "coriander seeds", "language": "en", "type": "translation" },
+        { "alias": "コリアンダーシード", "language": "ja", "type": "translation" },
+        { "alias": "芫荽籽", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "adas",
+      "category": "spice",
+      "per_100g": {
+        "calories": 345,
+        "protein_g": 15.8,
+        "carbs_g": 52.3,
+        "fat_g": 14.9,
+        "fiber_g": 39.8
+      },
+      "aliases": [
+        { "alias": "fennel seeds", "language": "en", "type": "translation" },
+        { "alias": "adas manis", "language": "id", "type": "alternative" },
+        { "alias": "フェンネルシード", "language": "ja", "type": "translation" },
+        { "alias": "茴香籽", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "merica",
+      "category": "spice",
+      "per_100g": {
+        "calories": 251,
+        "protein_g": 10.4,
+        "carbs_g": 63.9,
+        "fat_g": 3.3,
+        "fiber_g": 25.3
+      },
+      "aliases": [
+        { "alias": "pepper", "language": "en", "type": "translation" },
+        { "alias": "lada", "language": "id", "type": "alternative" },
+        { "alias": "black pepper", "language": "en", "type": "specific" },
+        { "alias": "胡椒", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "kapulaga",
+      "category": "spice",
+      "per_100g": {
+        "calories": 311,
+        "protein_g": 10.8,
+        "carbs_g": 68.5,
+        "fat_g": 6.7,
+        "fiber_g": 28
+      },
+      "aliases": [
+        { "alias": "cardamom", "language": "en", "type": "translation" },
+        { "alias": "pelaga", "language": "ms", "type": "native" },
+        { "alias": "カルダモン", "language": "ja", "type": "translation" },
+        { "alias": "小豆蔻", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "pod", "grams": 0.3 },
+        { "unit": "tsp", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "bunga lawang",
+      "category": "spice",
+      "per_100g": {
+        "calories": 337,
+        "protein_g": 17.6,
+        "carbs_g": 50.0,
+        "fat_g": 15.9,
+        "fiber_g": 14.6
+      },
+      "aliases": [
+        { "alias": "star anise", "language": "en", "type": "translation" },
+        { "alias": "pekak", "language": "ms", "type": "native" },
+        { "alias": "八角", "language": "zh", "type": "translation" },
+        { "alias": "スターアニス", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "star", "grams": 1 },
+        { "unit": "tsp", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "asam gelugur",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 85,
+        "protein_g": 1.2,
+        "carbs_g": 20,
+        "fat_g": 0.5,
+        "fiber_g": 3.5
+      },
+      "aliases": [
+        { "alias": "garcinia", "language": "en", "type": "scientific" },
+        { "alias": "asam keping", "language": "ms", "type": "alternative" },
+        { "alias": "dried garcinia", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 2 },
+        { "unit": "piece", "grams": 3 }
+      ]
+    },
+    {
+      "canonical_name": "belimbing wuluh",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 31,
+        "protein_g": 0.5,
+        "carbs_g": 7.3,
+        "fat_g": 0.3,
+        "fiber_g": 0.6
+      },
+      "aliases": [
+        { "alias": "bilimbi", "language": "en", "type": "translation" },
+        { "alias": "cucumber tree fruit", "language": "en", "type": "alternative" },
+        { "alias": "belimbing asam", "language": "id", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "fruit", "grams": 8 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "daun kunyit",
+      "category": "herb",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 1.5,
+        "carbs_g": 5,
+        "fat_g": 0.3,
+        "fiber_g": 2
+      },
+      "aliases": [
+        { "alias": "turmeric leaf", "language": "en", "type": "translation" },
+        { "alias": "ターメリックリーフ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "leaf", "grams": 2 },
+        { "unit": "bundle", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "daun jeruk",
+      "category": "herb",
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 1.5,
+        "carbs_g": 8,
+        "fat_g": 0.3,
+        "fiber_g": 3
+      },
+      "aliases": [
+        { "alias": "lime leaf", "language": "en", "type": "translation" },
+        { "alias": "citrus leaf", "language": "en", "type": "generic" },
+        { "alias": "柑橘の葉", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "leaf", "grams": 1 },
+        { "unit": "bundle", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "air jeruk nipis",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 0.4,
+        "carbs_g": 8.4,
+        "fat_g": 0.1,
+        "fiber_g": 0.4
+      },
+      "aliases": [
+        { "alias": "lime juice", "language": "en", "type": "translation" },
+        { "alias": "calamansi juice", "language": "en", "type": "alternative" },
+        { "alias": "limau nipis juice", "language": "ms", "type": "native" },
+        { "alias": "ライムジュース", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "lime", "grams": 30 }
+      ]
+    },
+    {
+      "canonical_name": "ebi",
+      "category": "protein",
+      "per_100g": {
+        "calories": 305,
+        "protein_g": 63.2,
+        "carbs_g": 2.8,
+        "fat_g": 4.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "dried shrimp", "language": "en", "type": "translation" },
+        { "alias": "udang kering", "language": "id", "type": "native" },
+        { "alias": "hae bee", "language": "zh", "type": "alternative" },
+        { "alias": "干しエビ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 8 },
+        { "unit": "cup", "grams": 100 }
+      ]
+    },
+    {
+      "canonical_name": "ikan teri",
+      "category": "protein",
+      "per_100g": {
+        "calories": 210,
+        "protein_g": 37.3,
+        "carbs_g": 0,
+        "fat_g": 6.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "dried anchovy", "language": "en", "type": "translation" },
+        { "alias": "ikan bilis", "language": "ms", "type": "native" },
+        { "alias": "煮干し", "language": "ja", "type": "translation" },
+        { "alias": "江魚仔", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 10 },
+        { "unit": "cup", "grams": 100 }
+      ]
+    },
+    {
+      "canonical_name": "bawang goreng",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 490,
+        "protein_g": 6.2,
+        "carbs_g": 52,
+        "fat_g": 30,
+        "fiber_g": 4.5
+      },
+      "aliases": [
+        { "alias": "fried shallots", "language": "en", "type": "translation" },
+        { "alias": "crispy shallots", "language": "en", "type": "alternative" },
+        { "alias": "bawang merah goreng", "language": "id", "type": "full" },
+        { "alias": "フライドシャロット", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 5 },
+        { "unit": "cup", "grams": 50 }
+      ]
+    },
+    {
+      "canonical_name": "kerupuk",
+      "category": "snack",
+      "per_100g": {
+        "calories": 480,
+        "protein_g": 8.5,
+        "carbs_g": 68,
+        "fat_g": 18,
+        "fiber_g": 2
+      },
+      "aliases": [
+        { "alias": "krupuk", "language": "id", "type": "alternative" },
+        { "alias": "Indonesian crackers", "language": "en", "type": "translation" },
+        { "alias": "keropok", "language": "ms", "type": "native" },
+        { "alias": "クルプック", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 5 },
+        { "unit": "cup", "grams": 30 }
+      ]
+    },
+    {
+      "canonical_name": "emping",
+      "category": "snack",
+      "per_100g": {
+        "calories": 505,
+        "protein_g": 9.2,
+        "carbs_g": 55,
+        "fat_g": 28,
+        "fiber_g": 4.5
+      },
+      "aliases": [
+        { "alias": "melinjo crackers", "language": "en", "type": "translation" },
+        { "alias": "belinjo crackers", "language": "en", "type": "alternative" },
+        { "alias": "メリンジョクラッカー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 3 },
+        { "unit": "cup", "grams": 40 }
+      ]
+    },
+    {
+      "canonical_name": "air asam jawa",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 48,
+        "protein_g": 0.6,
+        "carbs_g": 12.5,
+        "fat_g": 0.1,
+        "fiber_g": 1
+      },
+      "aliases": [
+        { "alias": "tamarind water", "language": "en", "type": "translation" },
+        { "alias": "tamarind juice", "language": "en", "type": "alternative" },
+        { "alias": "タマリンドウォーター", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "cup", "grams": 240 }
+      ]
+    },
+    {
+      "canonical_name": "kecap ikan",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 55,
+        "protein_g": 9.5,
+        "carbs_g": 4.2,
+        "fat_g": 0.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "fish sauce", "language": "en", "type": "translation" },
+        { "alias": "nam pla", "language": "th", "type": "alternative" },
+        { "alias": "魚醬", "language": "zh", "type": "translation" },
+        { "alias": "ナンプラー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 18 },
+        { "unit": "tsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "agar-agar",
+      "category": "thickener",
+      "per_100g": {
+        "calories": 26,
+        "protein_g": 0.5,
+        "carbs_g": 6.7,
+        "fat_g": 0,
+        "fiber_g": 0.5
+      },
+      "aliases": [
+        { "alias": "agar", "language": "en", "type": "short" },
+        { "alias": "kanten", "language": "ja", "type": "alternative" },
+        { "alias": "寒天", "language": "ja", "type": "translation" },
+        { "alias": "洋菜", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "strip", "grams": 2 },
+        { "unit": "tsp", "grams": 3 }
+      ]
+    },
+    {
+      "canonical_name": "gula batu",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 0,
+        "carbs_g": 99.8,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "rock sugar", "language": "en", "type": "translation" },
+        { "alias": "crystal sugar", "language": "en", "type": "alternative" },
+        { "alias": "氷砂糖", "language": "ja", "type": "translation" },
+        { "alias": "冰糖", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 10 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    }
+  ]
+}

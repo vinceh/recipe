@@ -16,6 +16,7 @@ export interface RecipeFormData {
   adminNotes: string;
   equipment: string[];
   aliases: string[];
+  tags: string[];
   dietaryTags: string[];
   cuisines: string[];
   dishTypes: string[];
@@ -169,6 +170,19 @@ export class RecipeFormPage {
       const addBtn = fieldParent.getByRole('button', { name: /add/i });
 
       await input.fill(alias);
+      await addBtn.click();
+      await this.page.waitForTimeout(200);
+    }
+  }
+
+  async addTags(tags: string[]) {
+    for (const tag of tags) {
+      const tagLabel = this.page.getByLabel(/^Tags$/i).first();
+      const fieldParent = tagLabel.locator('..');
+      const input = fieldParent.locator('input[type="text"]').first();
+      const addBtn = fieldParent.getByRole('button', { name: /add/i });
+
+      await input.fill(tag);
       await addBtn.click();
       await this.page.waitForTimeout(200);
     }
@@ -353,6 +367,11 @@ export class RecipeFormPage {
     // Add aliases
     if (data.aliases.length > 0) {
       await this.addAliases(data.aliases);
+    }
+
+    // Add tags (free-form)
+    if (data.tags.length > 0) {
+      await this.addTags(data.tags);
     }
 
     // Add ingredient groups

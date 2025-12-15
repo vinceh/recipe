@@ -1,16 +1,16 @@
 <template>
   <div :class="emptyStateClasses">
-    <div v-if="icon" class="empty-state-icon">
+    <div v-if="icon" class="empty-state__icon">
       <i :class="`pi pi-${icon}`"></i>
     </div>
 
-    <h3 v-if="title" class="empty-state-title">{{ title }}</h3>
+    <h3 v-if="title" class="empty-state__title">{{ title }}</h3>
 
-    <p v-if="description" class="empty-state-description">{{ description }}</p>
+    <p v-if="description" class="empty-state__description">{{ description }}</p>
 
     <slot></slot>
 
-    <div v-if="$slots.actions || actionText" class="empty-state-actions">
+    <div v-if="$slots.actions || actionText" class="empty-state__actions">
       <slot name="actions">
         <button v-if="actionText" class="btn btn-primary" @click="handleAction">
           {{ actionText || $t('common.buttons.getStarted') }}
@@ -107,19 +107,19 @@ const handleAction = () => {
   min-height: 200px;
 }
 
-.empty-state-icon {
+.empty-state__icon {
   font-size: var(--font-size-5xl);
   color: var(--color-text-tertiary);
   margin-bottom: var(--spacing-lg);
   line-height: 1;
 }
 
-.empty-state--compact .empty-state-icon {
+.empty-state--compact .empty-state__icon {
   font-size: var(--font-size-4xl);
   margin-bottom: var(--spacing-md);
 }
 
-.empty-state-title {
+.empty-state__title {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text);
@@ -127,11 +127,11 @@ const handleAction = () => {
   max-width: 400px;
 }
 
-.empty-state--compact .empty-state-title {
+.empty-state--compact .empty-state__title {
   font-size: var(--font-size-lg);
 }
 
-.empty-state-description {
+.empty-state__description {
   font-size: var(--font-size-base);
   color: var(--color-text-secondary);
   margin: 0 0 var(--spacing-lg) 0;
@@ -139,12 +139,12 @@ const handleAction = () => {
   line-height: var(--line-height-relaxed);
 }
 
-.empty-state--compact .empty-state-description {
+.empty-state--compact .empty-state__description {
   font-size: var(--font-size-sm);
   margin-bottom: var(--spacing-md);
 }
 
-.empty-state-actions {
+.empty-state__actions {
   display: flex;
   gap: var(--spacing-md);
   flex-wrap: wrap;
@@ -157,15 +157,15 @@ const handleAction = () => {
     padding: var(--spacing-2xl) var(--spacing-md);
   }
 
-  .empty-state-icon {
+  .empty-state__icon {
     font-size: var(--font-size-4xl);
   }
 
-  .empty-state-title {
+  .empty-state__title {
     font-size: var(--font-size-lg);
   }
 
-  .empty-state-description {
+  .empty-state__description {
     font-size: var(--font-size-sm);
   }
 }

@@ -4,12 +4,9 @@
       <div class="login-card">
         <!-- Logo and Branding -->
         <div class="login-header">
-          <div class="login-icon">
-            <i class="pi pi-shield"></i>
-          </div>
-          <h1 class="login-title">{{ $t('auth.adminLogin') }}</h1>
+          <h1 class="login-brand">Provisions</h1>
+          <div class="admin-badge">{{ $t('navigation.admin') }}</div>
           <p class="login-subtitle">{{ $t('auth.adminSignInSubtitle') }}</p>
-          <div class="admin-badge">Admin Access</div>
         </div>
 
         <!-- Login Form -->
@@ -124,7 +121,7 @@ const handleLogin = async () => {
     if (redirect) {
       router.push(redirect)
     } else {
-      router.push('/admin')
+      router.push({ name: 'admin-dashboard' })
     }
   } catch (e: any) {
     error.value = e.response?.data?.error || e.message || t('auth.loginError')
@@ -140,21 +137,19 @@ const handleLogin = async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  background-color: var(--color-provisions-bg);
   padding: var(--spacing-lg);
 }
 
 .login-container {
   width: 100%;
-  max-width: 440px;
+  max-width: 400px;
 }
 
 .login-card {
-  background: var(--color-background);
-  border-radius: var(--border-radius-xl);
-  box-shadow: var(--shadow-xl);
+  background: var(--color-provisions-bg);
+  border: 1px solid var(--color-provisions-border);
   padding: var(--spacing-2xl);
-  border-top: 3px solid var(--color-primary);
 }
 
 .login-header {
@@ -162,44 +157,32 @@ const handleLogin = async () => {
   margin-bottom: var(--spacing-2xl);
 }
 
-.login-icon {
-  font-size: 64px;
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-md);
-  animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-.login-title {
-  font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text);
-  margin: 0 0 var(--spacing-xs) 0;
+.login-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-provisions-border);
+  letter-spacing: -0.5px;
+  margin: 0 0 var(--spacing-sm) 0;
 }
 
 .login-subtitle {
-  font-size: var(--font-size-base);
-  color: var(--color-text-secondary);
-  margin: 0 0 var(--spacing-md) 0;
+  font-family: var(--font-family-heading);
+  font-size: 14px;
+  color: var(--color-provisions-text-muted);
+  margin: var(--spacing-md) 0 0 0;
 }
 
 .admin-badge {
   display: inline-block;
-  background: var(--color-primary);
-  color: white;
-  padding: var(--spacing-xs) var(--spacing-md);
-  border-radius: var(--border-radius-md);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  margin-top: var(--spacing-md);
+  background: var(--color-provisions-border);
+  color: var(--color-provisions-bg);
+  padding: 4px 12px;
+  font-family: var(--font-family-heading);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .login-form {
@@ -215,26 +198,28 @@ const handleLogin = async () => {
 }
 
 .form-label {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text);
+  font-family: var(--font-family-heading);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-provisions-text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .form-input {
   width: 100%;
-  padding: var(--spacing-sm) var(--spacing-md);
-  font-size: var(--font-size-base);
-  border: var(--border-width-thin) solid var(--color-border);
-  border-radius: var(--border-radius-md);
-  background: var(--color-background);
-  color: var(--color-text);
+  padding: 12px 14px;
+  font-family: var(--font-family-heading);
+  font-size: 14px;
+  border: 1px solid var(--color-provisions-border);
+  background: var(--color-provisions-bg);
+  color: var(--color-provisions-text-dark);
   transition: border-color var(--transition-fast);
 }
 
 .form-input:focus {
   outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+  border-color: var(--color-provisions-text-dark);
 }
 
 .form-input:disabled {
@@ -243,18 +228,37 @@ const handleLogin = async () => {
 }
 
 .form-input.is-invalid {
-  border-color: var(--color-danger);
+  border-color: var(--color-error);
 }
 
 .form-error {
-  font-size: var(--font-size-sm);
-  color: var(--color-danger);
+  font-family: var(--font-family-heading);
+  font-size: 12px;
+  color: var(--color-error);
   margin-top: var(--spacing-xs);
 }
 
 .btn-block {
   width: 100%;
   justify-content: center;
+  background-color: var(--color-provisions-border);
+  color: var(--color-provisions-bg);
+  border: none;
+  padding: 12px 20px;
+  font-family: var(--font-family-heading);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.btn-block:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.btn-block:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .login-footer {
@@ -266,14 +270,15 @@ const handleLogin = async () => {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-xs);
-  color: var(--color-text-secondary);
+  color: var(--color-provisions-text-muted);
   text-decoration: none;
-  font-size: var(--font-size-sm);
+  font-family: var(--font-family-heading);
+  font-size: 14px;
   transition: color var(--transition-fast);
 }
 
 .login-link:hover {
-  color: var(--color-primary);
+  color: var(--color-provisions-border);
 }
 
 /* Responsive */
@@ -286,12 +291,8 @@ const handleLogin = async () => {
     padding: var(--spacing-xl);
   }
 
-  .login-icon {
-    font-size: 48px;
-  }
-
-  .login-title {
-    font-size: var(--font-size-2xl);
+  .login-brand {
+    font-size: 28px;
   }
 }
 </style>

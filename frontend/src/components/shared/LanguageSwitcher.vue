@@ -68,7 +68,7 @@ function changeLanguage(languageCode: Language) {
   background-repeat: no-repeat;
   background-position: right 10px center;
   color: var(--color-provisions-border);
-  font-size: 20px;
+  font-size: 14px;
   font-family: var(--font-family-heading) !important;
   font-weight: var(--font-weight-semibold);
   cursor: pointer;

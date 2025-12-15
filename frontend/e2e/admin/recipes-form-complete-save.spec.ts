@@ -47,6 +47,7 @@ test.describe('Complete Recipe Form - Save & Verification', () => {
         'French Chocolate Soufflé',
         'Elegant Chocolate Dessert'
       ],
+      tags: ['dessert', 'baking', 'special-occasion', 'french'],
       dietaryTags: ['vegetarian'],
       cuisines: ['french'],
       dishTypes: ['dessert'],
@@ -142,6 +143,7 @@ test.describe('Complete Recipe Form - Save & Verification', () => {
         'European Bread',
         'Slow Ferment Bread'
       ],
+      tags: ['bread', 'baking', 'fermented', 'weekend-project'],
       dietaryTags: [],
       cuisines: ['european'],
       dishTypes: [],
@@ -200,6 +202,7 @@ test.describe('Complete Recipe Form - Save & Verification', () => {
         'Greek Buddha Bowl',
         'Healthy Mediterranean Bowl'
       ],
+      tags: ['healthy', 'quick', 'lunch', 'meal-prep'],
       dietaryTags: ['vegetarian'],
       cuisines: ['mediterranean', 'greek'],
       dishTypes: ['salad'],
@@ -262,6 +265,7 @@ test.describe('Complete Recipe Form - Save & Verification', () => {
       adminNotes: '',
       equipment: [],
       aliases: [],
+      tags: [],
       dietaryTags: [],
       cuisines: [],
       dishTypes: [],
@@ -305,6 +309,7 @@ test.describe('Complete Recipe Form - Save & Verification', () => {
       adminNotes: 'Classic Italian pasta recipe with fresh herbs.',
       equipment: ['Pot', 'Colander', 'Pan'],
       aliases: ['Italian Pasta', 'Fresh Pasta'],
+      tags: ['pasta', 'quick', 'weeknight', 'italian'],
       dietaryTags: ['vegetarian'],
       cuisines: ['italian'],
       dishTypes: [],

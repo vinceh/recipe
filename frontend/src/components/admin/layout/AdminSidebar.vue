@@ -110,7 +110,7 @@ const sidebarClasses = computed(() => ({
 <style scoped>
 .admin-sidebar {
   position: relative;
-  width: 260px;
+  width: 240px;
   flex-shrink: 0;
   transition: transform var(--transition-base);
 }
@@ -120,9 +120,9 @@ const sidebarClasses = computed(() => ({
 }
 
 .admin-sidebar__content {
-  height: calc(100vh - 64px);
-  background-color: var(--color-background);
-  border-right: var(--border-width-thin) solid var(--color-border);
+  height: calc(100vh - 60px);
+  background-color: var(--color-provisions-bg);
+  border-right: 1px solid var(--color-provisions-border);
   overflow-y: auto;
   padding: var(--spacing-md) 0;
 }
@@ -130,27 +130,29 @@ const sidebarClasses = computed(() => ({
 .admin-sidebar__nav {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs);
-  padding: 0 var(--spacing-md);
+  gap: 0;
+  padding: 0;
 }
 
 .admin-sidebar__link {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
-  padding: var(--spacing-sm) var(--spacing-md);
-  color: var(--color-text);
+  gap: 12px;
+  padding: 12px 20px;
+  color: var(--color-provisions-text-dark);
   text-decoration: none;
-  border-radius: var(--border-radius-md);
+  border-radius: 0;
   transition: all var(--transition-fast);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family-heading);
+  font-size: 14px;
+  font-weight: 500;
   position: relative;
+  border-bottom: 1px solid transparent;
 }
 
 .admin-sidebar__link i {
-  font-size: var(--font-size-lg);
-  color: var(--color-text-secondary);
+  font-size: 16px;
+  color: var(--color-provisions-text-muted);
   transition: color var(--transition-fast);
   width: 20px;
   text-align: center;
@@ -161,35 +163,35 @@ const sidebarClasses = computed(() => ({
 }
 
 .admin-sidebar__link:hover {
-  background-color: var(--color-background-secondary);
-  color: var(--color-primary);
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--color-provisions-border);
 }
 
 .admin-sidebar__link:hover i {
-  color: var(--color-primary);
+  color: var(--color-provisions-border);
 }
 
 .admin-sidebar__link--active {
-  background-color: var(--color-primary-pale);
-  color: var(--color-primary-dark);
-  font-weight: var(--font-weight-semibold);
+  background-color: var(--color-provisions-border);
+  color: var(--color-provisions-bg);
+  font-weight: 600;
 }
 
 .admin-sidebar__link--active i {
-  color: var(--color-primary);
+  color: var(--color-provisions-bg);
 }
 
 .admin-sidebar__divider {
   height: 1px;
-  background-color: var(--color-border);
-  margin: var(--spacing-lg) var(--spacing-md);
+  background-color: var(--color-provisions-border);
+  margin: var(--spacing-md) 0;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .admin-sidebar {
     position: fixed;
-    top: 64px;
+    top: 60px;
     left: 0;
     bottom: 0;
     z-index: var(--z-index-fixed);
@@ -203,7 +205,7 @@ const sidebarClasses = computed(() => ({
   .admin-sidebar__overlay {
     display: block;
     position: fixed;
-    top: 64px;
+    top: 60px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -212,7 +214,7 @@ const sidebarClasses = computed(() => ({
   }
 
   .admin-sidebar__content {
-    box-shadow: var(--shadow-xl);
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
   }
 }
 

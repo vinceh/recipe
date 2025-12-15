@@ -1,0 +1,878 @@
+{
+  "batch": 6,
+  "agent": 27,
+  "category": "korean_fermented",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "Napa Cabbage Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 1.7,
+        "carbs_g": 3.6,
+        "fat_g": 0.5
+      },
+      "aliases": {
+        "ko": "배추김치",
+        "romanization": "Baechu Kimchi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Cubed Radish Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 21,
+        "protein_g": 1.2,
+        "carbs_g": 4.2,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "ko": "깍두기",
+        "romanization": "Kkakdugi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Cucumber Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 1.4,
+        "carbs_g": 3.1,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "ko": "오이소박이",
+        "romanization": "Oi Sobagi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Ponytail Radish Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 20,
+        "protein_g": 1.3,
+        "carbs_g": 3.8,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "ko": "총각김치",
+        "romanization": "Chonggak Kimchi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Water Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 12,
+        "protein_g": 0.8,
+        "carbs_g": 2.3,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "ko": "물김치",
+        "romanization": "Mul Kimchi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "White Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 15,
+        "protein_g": 1.0,
+        "carbs_g": 2.8,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "ko": "백김치",
+        "romanization": "Baek Kimchi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Radish Water Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 11,
+        "protein_g": 0.7,
+        "carbs_g": 2.1,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "ko": "동치미",
+        "romanization": "Dongchimi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Green Onion Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 19,
+        "protein_g": 1.5,
+        "carbs_g": 3.3,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "ko": "파김치",
+        "romanization": "Pa Kimchi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Young Radish Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 17,
+        "protein_g": 1.1,
+        "carbs_g": 3.2,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "ko": "열무김치",
+        "romanization": "Yeolmu Kimchi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Perilla Leaf Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 2.1,
+        "carbs_g": 4.5,
+        "fat_g": 1.2
+      },
+      "aliases": {
+        "ko": "깻잎김치",
+        "romanization": "Kkaennip Kimchi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Mustard Leaf Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 1.6,
+        "carbs_g": 3.7,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "ko": "갓김치",
+        "romanization": "Gat Kimchi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Cabbage Water Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 13,
+        "protein_g": 0.9,
+        "carbs_g": 2.4,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "ko": "배추물김치",
+        "romanization": "Baechu Mul Kimchi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Wrapped Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 26,
+        "protein_g": 1.8,
+        "carbs_g": 4.1,
+        "fat_g": 0.6
+      },
+      "aliases": {
+        "ko": "보쌈김치",
+        "romanization": "Bossam Kimchi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Chonburi Radish Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 19,
+        "protein_g": 1.2,
+        "carbs_g": 3.6,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "ko": "전라도무김치",
+        "romanization": "Jeolla-do Mu Kimchi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Soybean Paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 128,
+        "protein_g": 11.5,
+        "carbs_g": 12.3,
+        "fat_g": 4.2
+      },
+      "aliases": {
+        "ko": "된장",
+        "romanization": "Doenjang"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Red Chili Paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 168,
+        "protein_g": 5.8,
+        "carbs_g": 31.2,
+        "fat_g": 2.4
+      },
+      "aliases": {
+        "ko": "고추장",
+        "romanization": "Gochujang"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Wrapping Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 142,
+        "protein_g": 7.3,
+        "carbs_g": 18.5,
+        "fat_g": 3.8
+      },
+      "aliases": {
+        "ko": "쌈장",
+        "romanization": "Ssamjang"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Fast Fermented Soybean Paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 135,
+        "protein_g": 13.2,
+        "carbs_g": 11.8,
+        "fat_g": 4.8
+      },
+      "aliases": {
+        "ko": "청국장",
+        "romanization": "Cheonggukjang"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Salted Shrimp",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 73,
+        "protein_g": 14.2,
+        "carbs_g": 1.8,
+        "fat_g": 1.2
+      },
+      "aliases": {
+        "ko": "새우젓",
+        "romanization": "Saeujeot"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Salted Anchovy",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 68,
+        "protein_g": 13.8,
+        "carbs_g": 1.2,
+        "fat_g": 1.0
+      },
+      "aliases": {
+        "ko": "멸치젓",
+        "romanization": "Myeolchijeot"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Salted Squid",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 71,
+        "protein_g": 15.3,
+        "carbs_g": 1.5,
+        "fat_g": 0.8
+      },
+      "aliases": {
+        "ko": "오징어젓",
+        "romanization": "Ojingeojeot"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Salted Pollack Roe",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 126,
+        "protein_g": 18.6,
+        "carbs_g": 2.3,
+        "fat_g": 4.8
+      },
+      "aliases": {
+        "ko": "명란젓",
+        "romanization": "Myeongnanjeot"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Salted Oyster",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 62,
+        "protein_g": 9.8,
+        "carbs_g": 3.2,
+        "fat_g": 1.5
+      },
+      "aliases": {
+        "ko": "어리굴젓",
+        "romanization": "Eoriguljeot"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Salted Croaker",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 75,
+        "protein_g": 14.5,
+        "carbs_g": 1.6,
+        "fat_g": 1.3
+      },
+      "aliases": {
+        "ko": "조기젓",
+        "romanization": "Jogijeot"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Salted Clam",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 58,
+        "protein_g": 10.2,
+        "carbs_g": 2.8,
+        "fat_g": 0.9
+      },
+      "aliases": {
+        "ko": "조개젓",
+        "romanization": "Jogaejeot"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Salted Sand Lance",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 66,
+        "protein_g": 12.8,
+        "carbs_g": 1.4,
+        "fat_g": 1.1
+      },
+      "aliases": {
+        "ko": "까나리액젓",
+        "romanization": "Kkanari Aekjeot"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Fish Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 6.8,
+        "carbs_g": 1.5,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "ko": "액젓",
+        "romanization": "Aekjeot"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Salted Yellow Croaker Innards",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 82,
+        "protein_g": 11.5,
+        "carbs_g": 2.8,
+        "fat_g": 3.2
+      },
+      "aliases": {
+        "ko": "창란젓",
+        "romanization": "Changnanjeot"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Pickled Garlic",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 48,
+        "protein_g": 2.1,
+        "carbs_g": 10.2,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "ko": "마늘장아찌",
+        "romanization": "Maneul Jangajji"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Pickled Radish",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 28,
+        "protein_g": 0.9,
+        "carbs_g": 6.2,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "ko": "무장아찌",
+        "romanization": "Mu Jangajji"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Pickled Cucumber",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 0.8,
+        "carbs_g": 5.6,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "ko": "오이장아찌",
+        "romanization": "Oi Jangajji"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Pickled Perilla Leaf",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 38,
+        "protein_g": 2.3,
+        "carbs_g": 6.8,
+        "fat_g": 0.9
+      },
+      "aliases": {
+        "ko": "깻잎장아찌",
+        "romanization": "Kkaennip Jangajji"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Pickled Chili Pepper",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 31,
+        "protein_g": 1.2,
+        "carbs_g": 6.8,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "ko": "고추장아찌",
+        "romanization": "Gochu Jangajji"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Pickled Onion",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 1.0,
+        "carbs_g": 8.1,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "ko": "양파장아찌",
+        "romanization": "Yangpa Jangajji"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Soy Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 53,
+        "protein_g": 8.1,
+        "carbs_g": 4.9,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "ko": "간장",
+        "romanization": "Ganjang"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Aged Soy Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 61,
+        "protein_g": 9.2,
+        "carbs_g": 5.8,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "ko": "진간장",
+        "romanization": "Jin Ganjang"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Light Soy Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 48,
+        "protein_g": 7.3,
+        "carbs_g": 4.2,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "ko": "국간장",
+        "romanization": "Guk Ganjang"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Seasoned Soy Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 78,
+        "protein_g": 6.5,
+        "carbs_g": 12.3,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "ko": "양념간장",
+        "romanization": "Yangnyeom Ganjang"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Malt Syrup",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 2.1,
+        "carbs_g": 78.5,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "ko": "조청",
+        "romanization": "Jocheong"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Rice Syrup",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 325,
+        "protein_g": 1.8,
+        "carbs_g": 80.2,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "ko": "쌀조청",
+        "romanization": "Ssal Jocheong"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Makgeolli Lees Paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 156,
+        "protein_g": 6.8,
+        "carbs_g": 28.5,
+        "fat_g": 1.8
+      },
+      "aliases": {
+        "ko": "막장",
+        "romanization": "Makjang"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Sweet Rice Paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 145,
+        "protein_g": 5.2,
+        "carbs_g": 27.8,
+        "fat_g": 1.5
+      },
+      "aliases": {
+        "ko": "찹쌀장",
+        "romanization": "Chapssal Jang"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Perilla Seed Paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 168,
+        "protein_g": 8.5,
+        "carbs_g": 15.2,
+        "fat_g": 8.9
+      },
+      "aliases": {
+        "ko": "들깨장",
+        "romanization": "Deulkkae Jang"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Seasoned Chili Paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 152,
+        "protein_g": 4.8,
+        "carbs_g": 28.5,
+        "fat_g": 2.8
+      },
+      "aliases": {
+        "ko": "양념고추장",
+        "romanization": "Yangnyeom Gochujang"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Korean Miso Paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 122,
+        "protein_g": 10.8,
+        "carbs_g": 11.5,
+        "fat_g": 3.9
+      },
+      "aliases": {
+        "ko": "한식된장",
+        "romanization": "Hansik Doenjang"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Seasoned Soybean Paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 138,
+        "protein_g": 10.2,
+        "carbs_g": 15.8,
+        "fat_g": 4.5
+      },
+      "aliases": {
+        "ko": "양념된장",
+        "romanization": "Yangnyeom Doenjang"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Chili Powder Paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 175,
+        "protein_g": 5.5,
+        "carbs_g": 33.2,
+        "fat_g": 2.6
+      },
+      "aliases": {
+        "ko": "고춧가루장",
+        "romanization": "Gochutgaru Jang"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Seasoned Perilla Leaf Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 45,
+        "protein_g": 2.8,
+        "carbs_g": 6.2,
+        "fat_g": 1.5
+      },
+      "aliases": {
+        "ko": "양념깻잎김치",
+        "romanization": "Yangnyeom Kkaennip Kimchi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Spicy Radish Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 24,
+        "protein_g": 1.4,
+        "carbs_g": 4.5,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "ko": "무생채",
+        "romanization": "Musaengchae"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Pickled Garlic Scape",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 42,
+        "protein_g": 1.8,
+        "carbs_g": 9.3,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "ko": "마늘쫑장아찌",
+        "romanization": "Maneul Jjong Jangajji"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Young Summer Radish Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 16,
+        "protein_g": 1.0,
+        "carbs_g": 3.0,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "ko": "열무물김치",
+        "romanization": "Yeolmu Mul Kimchi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Spicy Napa Cabbage Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 28,
+        "protein_g": 1.9,
+        "carbs_g": 4.2,
+        "fat_g": 0.7
+      },
+      "aliases": {
+        "ko": "매운배추김치",
+        "romanization": "Maeun Baechu Kimchi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Fermented Soybean Soup Base",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 142,
+        "protein_g": 14.5,
+        "carbs_g": 12.2,
+        "fat_g": 5.1
+      },
+      "aliases": {
+        "ko": "청국장가루",
+        "romanization": "Cheonggukjang Garu"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Kimchi Brine",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 8,
+        "protein_g": 0.4,
+        "carbs_g": 1.5,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "ko": "김치국물",
+        "romanization": "Kimchi Gungmul"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Green Chili Pepper Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 27,
+        "protein_g": 1.6,
+        "carbs_g": 5.2,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "ko": "풋고추김치",
+        "romanization": "Putgochu Kimchi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Korean Radish Kimchi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 1.3,
+        "carbs_g": 4.3,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "ko": "무김치",
+        "romanization": "Mu Kimchi"
+      },
+      "common_units": ["cup", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Seasoned Fish Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 42,
+        "protein_g": 7.2,
+        "carbs_g": 2.8,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "ko": "양념액젓",
+        "romanization": "Yangnyeom Aekjeot"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Pickled Sesame Leaf",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 36,
+        "protein_g": 2.2,
+        "carbs_g": 6.5,
+        "fat_g": 0.9
+      },
+      "aliases": {
+        "ko": "참깻잎장아찌",
+        "romanization": "Chamkkaennip Jangajji"
+      },
+      "common_units": ["tablespoon", "gram"]
+    }
+  ]
+}

@@ -51,7 +51,7 @@ module Api
       end
 
       def wrap_with_locale
-        requested_locale = params[:lang] || extract_locale_from_header
+        requested_locale = (params[:lang] || extract_locale_from_header)&.downcase
         locale = valid_locale?(requested_locale) ? requested_locale : I18n.default_locale
         I18n.with_locale(locale) { yield }
       end

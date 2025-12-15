@@ -1,0 +1,1295 @@
+{
+  "batch": 3,
+  "agent": 13,
+  "category": "flours_noodles",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "all-purpose flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 10.3,
+        "carbs_g": 76.3,
+        "fat_g": 1.0,
+        "fiber_g": 2.7
+      },
+      "aliases": ["AP flour", "plain flour", "white flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "bread flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 361,
+        "protein_g": 12.6,
+        "carbs_g": 72.5,
+        "fat_g": 1.7,
+        "fiber_g": 2.4
+      },
+      "aliases": ["strong flour", "high-gluten flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "cake flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 362,
+        "protein_g": 8.2,
+        "carbs_g": 79.4,
+        "fat_g": 0.9,
+        "fiber_g": 2.3
+      },
+      "aliases": ["soft flour", "low-protein flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "pastry flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 363,
+        "protein_g": 9.4,
+        "carbs_g": 77.8,
+        "fat_g": 1.0,
+        "fiber_g": 2.5
+      },
+      "aliases": ["medium-protein flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "whole wheat flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 340,
+        "protein_g": 13.2,
+        "carbs_g": 72.0,
+        "fat_g": 2.5,
+        "fiber_g": 10.7
+      },
+      "aliases": ["wholemeal flour", "graham flour", "whole grain flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "semolina flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 360,
+        "protein_g": 12.7,
+        "carbs_g": 72.8,
+        "fat_g": 1.1,
+        "fiber_g": 3.9
+      },
+      "aliases": ["durum flour", "semolina"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "00 flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 11.5,
+        "carbs_g": 76.0,
+        "fat_g": 1.0,
+        "fiber_g": 2.5
+      },
+      "aliases": ["doppio zero", "tipo 00", "Italian flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "vital wheat gluten",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 370,
+        "protein_g": 75.2,
+        "carbs_g": 13.8,
+        "fat_g": 1.9,
+        "fiber_g": 0.6
+      },
+      "aliases": ["wheat gluten", "gluten flour"],
+      "common_units": ["tbsp", "g", "oz"]
+    },
+    {
+      "canonical_name": "almond flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 571,
+        "protein_g": 21.2,
+        "carbs_g": 21.6,
+        "fat_g": 50.6,
+        "fiber_g": 10.2
+      },
+      "aliases": ["almond meal", "ground almonds"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "coconut flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 354,
+        "protein_g": 19.3,
+        "carbs_g": 60.7,
+        "fat_g": 8.7,
+        "fiber_g": 38.5
+      },
+      "aliases": ["desiccated coconut flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "rice flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 366,
+        "protein_g": 6.0,
+        "carbs_g": 80.1,
+        "fat_g": 1.4,
+        "fiber_g": 2.4
+      },
+      "aliases": ["white rice flour", "ground rice"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "brown rice flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 363,
+        "protein_g": 7.2,
+        "carbs_g": 76.5,
+        "fat_g": 2.8,
+        "fiber_g": 4.6
+      },
+      "aliases": ["whole grain rice flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "chickpea flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 22.4,
+        "carbs_g": 57.8,
+        "fat_g": 6.7,
+        "fiber_g": 10.8
+      },
+      "aliases": ["besan", "gram flour", "garbanzo flour", "चना आटा"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "oat flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 404,
+        "protein_g": 14.7,
+        "carbs_g": 65.7,
+        "fat_g": 9.1,
+        "fiber_g": 6.5
+      },
+      "aliases": ["ground oats"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "buckwheat flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 335,
+        "protein_g": 12.6,
+        "carbs_g": 70.6,
+        "fat_g": 3.1,
+        "fiber_g": 10.0
+      },
+      "aliases": ["soba flour", "そば粉"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "rye flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 338,
+        "protein_g": 10.3,
+        "carbs_g": 75.9,
+        "fat_g": 1.6,
+        "fiber_g": 15.1
+      },
+      "aliases": ["dark rye flour", "medium rye flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "spelt flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 338,
+        "protein_g": 14.6,
+        "carbs_g": 70.2,
+        "fat_g": 2.4,
+        "fiber_g": 10.7
+      },
+      "aliases": ["dinkel flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "teff flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 367,
+        "protein_g": 13.3,
+        "carbs_g": 73.0,
+        "fat_g": 2.4,
+        "fiber_g": 8.0
+      },
+      "aliases": ["tef flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "cassava flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 357,
+        "protein_g": 1.4,
+        "carbs_g": 84.8,
+        "fat_g": 0.4,
+        "fiber_g": 1.8
+      },
+      "aliases": ["yuca flour", "manioc flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "cornstarch",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 381,
+        "protein_g": 0.3,
+        "carbs_g": 91.3,
+        "fat_g": 0.1,
+        "fiber_g": 0.9
+      },
+      "aliases": ["corn flour", "maize starch", "cornflour"],
+      "common_units": ["tbsp", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "potato starch",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 357,
+        "protein_g": 0.1,
+        "carbs_g": 83.1,
+        "fat_g": 0.1,
+        "fiber_g": 5.9
+      },
+      "aliases": ["potato flour"],
+      "common_units": ["tbsp", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "tapioca starch",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 0.2,
+        "carbs_g": 88.7,
+        "fat_g": 0.0,
+        "fiber_g": 0.9
+      },
+      "aliases": ["tapioca flour", "cassava starch"],
+      "common_units": ["tbsp", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "arrowroot powder",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 357,
+        "protein_g": 0.3,
+        "carbs_g": 88.2,
+        "fat_g": 0.1,
+        "fiber_g": 3.4
+      },
+      "aliases": ["arrowroot starch", "arrowroot flour"],
+      "common_units": ["tbsp", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "kuzu starch",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 336,
+        "protein_g": 0.2,
+        "carbs_g": 83.1,
+        "fat_g": 0.2,
+        "fiber_g": 0.4
+      },
+      "aliases": ["kudzu starch", "葛粉"],
+      "common_units": ["tbsp", "g", "oz"]
+    },
+    {
+      "canonical_name": "sweet rice flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 370,
+        "protein_g": 6.5,
+        "carbs_g": 81.7,
+        "fat_g": 1.0,
+        "fiber_g": 1.6
+      },
+      "aliases": ["glutinous rice flour", "mochiko", "もち粉", "찹쌀가루"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "fresh ramen noodles",
+      "category": "grain",
+      "per_100g": {
+        "calories": 188,
+        "protein_g": 5.8,
+        "carbs_g": 35.4,
+        "fat_g": 1.8,
+        "fiber_g": 1.6
+      },
+      "aliases": ["ramen", "ラーメン", "拉面"],
+      "common_units": ["g", "oz", "package", "serving"]
+    },
+    {
+      "canonical_name": "dried ramen noodles",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 10.4,
+        "carbs_g": 69.7,
+        "fat_g": 2.8,
+        "fiber_g": 2.9
+      },
+      "aliases": ["instant ramen", "ラーメン"],
+      "common_units": ["g", "oz", "package", "serving"]
+    },
+    {
+      "canonical_name": "fresh udon noodles",
+      "category": "grain",
+      "per_100g": {
+        "calories": 130,
+        "protein_g": 3.5,
+        "carbs_g": 27.9,
+        "fat_g": 0.4,
+        "fiber_g": 1.2
+      },
+      "aliases": ["udon", "うどん"],
+      "common_units": ["g", "oz", "package", "serving"]
+    },
+    {
+      "canonical_name": "dried udon noodles",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 348,
+        "protein_g": 9.8,
+        "carbs_g": 73.5,
+        "fat_g": 1.1,
+        "fiber_g": 3.2
+      },
+      "aliases": ["udon", "うどん"],
+      "common_units": ["g", "oz", "package", "serving"]
+    },
+    {
+      "canonical_name": "soba noodles",
+      "category": "grain",
+      "per_100g": {
+        "calories": 336,
+        "protein_g": 14.4,
+        "carbs_g": 70.5,
+        "fat_g": 2.1,
+        "fiber_g": 4.8
+      },
+      "aliases": ["buckwheat noodles", "そば", "荞麦面"],
+      "common_units": ["g", "oz", "bundle", "serving"]
+    },
+    {
+      "canonical_name": "somen noodles",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 9.5,
+        "carbs_g": 74.1,
+        "fat_g": 1.1,
+        "fiber_g": 2.4
+      },
+      "aliases": ["そうめん", "素麺"],
+      "common_units": ["g", "oz", "bundle", "serving"]
+    },
+    {
+      "canonical_name": "rice vermicelli",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 3.4,
+        "carbs_g": 83.2,
+        "fat_g": 0.6,
+        "fiber_g": 1.8
+      },
+      "aliases": ["rice noodles", "bun", "米粉", "ビーフン"],
+      "common_units": ["g", "oz", "package", "serving"]
+    },
+    {
+      "canonical_name": "thin rice stick noodles",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 3.4,
+        "carbs_g": 83.2,
+        "fat_g": 0.6,
+        "fiber_g": 1.8
+      },
+      "aliases": ["rice sticks", "banh pho", "河粉"],
+      "common_units": ["g", "oz", "package", "serving"]
+    },
+    {
+      "canonical_name": "wide rice noodles",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 3.4,
+        "carbs_g": 83.2,
+        "fat_g": 0.6,
+        "fiber_g": 1.8
+      },
+      "aliases": ["pad thai noodles", "sen lek", "河粉"],
+      "common_units": ["g", "oz", "package", "serving"]
+    },
+    {
+      "canonical_name": "fresh rice noodles",
+      "category": "grain",
+      "per_100g": {
+        "calories": 109,
+        "protein_g": 1.6,
+        "carbs_g": 24.9,
+        "fat_g": 0.2,
+        "fiber_g": 0.9
+      },
+      "aliases": ["shahe fen", "ho fun", "河粉", "chee cheong fun"],
+      "common_units": ["g", "oz", "sheet", "serving"]
+    },
+    {
+      "canonical_name": "glass noodles",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 351,
+        "protein_g": 0.2,
+        "carbs_g": 86.0,
+        "fat_g": 0.1,
+        "fiber_g": 0.5
+      },
+      "aliases": ["cellophane noodles", "bean thread noodles", "fensi", "粉丝", "harusame", "春雨"],
+      "common_units": ["g", "oz", "bundle", "serving"]
+    },
+    {
+      "canonical_name": "fresh lo mein noodles",
+      "category": "grain",
+      "per_100g": {
+        "calories": 137,
+        "protein_g": 4.5,
+        "carbs_g": 25.8,
+        "fat_g": 1.3,
+        "fiber_g": 1.4
+      },
+      "aliases": ["lo mein", "捞面"],
+      "common_units": ["g", "oz", "package", "serving"]
+    },
+    {
+      "canonical_name": "dried lo mein noodles",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 350,
+        "protein_g": 11.0,
+        "carbs_g": 71.5,
+        "fat_g": 1.5,
+        "fiber_g": 3.0
+      },
+      "aliases": ["lo mein", "捞面"],
+      "common_units": ["g", "oz", "package", "serving"]
+    },
+    {
+      "canonical_name": "chow mein noodles",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 237,
+        "protein_g": 7.3,
+        "carbs_g": 26.0,
+        "fat_g": 11.0,
+        "fiber_g": 1.8
+      },
+      "aliases": ["crispy noodles", "炒面"],
+      "common_units": ["g", "oz", "package", "serving"]
+    },
+    {
+      "canonical_name": "dangmyeon",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 351,
+        "protein_g": 0.3,
+        "carbs_g": 86.0,
+        "fat_g": 0.2,
+        "fiber_g": 0.7
+      },
+      "aliases": ["Korean glass noodles", "sweet potato noodles", "당면"],
+      "common_units": ["g", "oz", "bundle", "serving"]
+    },
+    {
+      "canonical_name": "naengmyeon noodles",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 336,
+        "protein_g": 8.5,
+        "carbs_g": 72.0,
+        "fat_g": 1.2,
+        "fiber_g": 3.8
+      },
+      "aliases": ["Korean cold noodles", "냉면", "buckwheat noodles"],
+      "common_units": ["g", "oz", "bundle", "serving"]
+    },
+    {
+      "canonical_name": "kalguksu noodles",
+      "category": "grain",
+      "per_100g": {
+        "calories": 137,
+        "protein_g": 4.2,
+        "carbs_g": 27.5,
+        "fat_g": 0.9,
+        "fiber_g": 1.3
+      },
+      "aliases": ["Korean knife-cut noodles", "칼국수"],
+      "common_units": ["g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "pad thai rice noodles",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 3.4,
+        "carbs_g": 83.2,
+        "fat_g": 0.6,
+        "fiber_g": 1.8
+      },
+      "aliases": ["sen chan", "Thai rice noodles"],
+      "common_units": ["g", "oz", "package", "serving"]
+    },
+    {
+      "canonical_name": "laksa noodles",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 3.4,
+        "carbs_g": 83.2,
+        "fat_g": 0.6,
+        "fiber_g": 1.8
+      },
+      "aliases": ["thick rice noodles"],
+      "common_units": ["g", "oz", "package", "serving"]
+    },
+    {
+      "canonical_name": "pho noodles",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 3.4,
+        "carbs_g": 83.2,
+        "fat_g": 0.6,
+        "fiber_g": 1.8
+      },
+      "aliases": ["banh pho", "Vietnamese rice noodles"],
+      "common_units": ["g", "oz", "package", "serving"]
+    },
+    {
+      "canonical_name": "spaghetti",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["pasta", "long pasta"],
+      "common_units": ["g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "linguine",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["pasta"],
+      "common_units": ["g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "fettuccine",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["pasta", "ribbon pasta"],
+      "common_units": ["g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "penne",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["penne rigate", "pasta"],
+      "common_units": ["g", "oz", "cup", "serving"]
+    },
+    {
+      "canonical_name": "rigatoni",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["pasta", "tube pasta"],
+      "common_units": ["g", "oz", "cup", "serving"]
+    },
+    {
+      "canonical_name": "lasagna sheets",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["lasagna noodles", "lasagne"],
+      "common_units": ["sheet", "g", "oz"]
+    },
+    {
+      "canonical_name": "orzo",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["risoni", "rice-shaped pasta"],
+      "common_units": ["cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "angel hair pasta",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["capellini", "thin pasta"],
+      "common_units": ["g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "egg noodles",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 384,
+        "protein_g": 14.2,
+        "carbs_g": 71.3,
+        "fat_g": 4.4,
+        "fiber_g": 3.3
+      },
+      "aliases": ["dried egg noodles"],
+      "common_units": ["cup", "g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "fresh egg noodles",
+      "category": "grain",
+      "per_100g": {
+        "calories": 138,
+        "protein_g": 4.8,
+        "carbs_g": 25.2,
+        "fat_g": 1.6,
+        "fiber_g": 1.2
+      },
+      "aliases": ["egg noodles"],
+      "common_units": ["g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "wonton wrappers",
+      "category": "grain",
+      "per_100g": {
+        "calories": 291,
+        "protein_g": 9.8,
+        "carbs_g": 59.3,
+        "fat_g": 1.2,
+        "fiber_g": 2.1
+      },
+      "aliases": ["wonton skins", "云吞皮", "馄饨皮"],
+      "common_units": ["wrapper", "g", "oz", "package"]
+    },
+    {
+      "canonical_name": "spring roll wrappers",
+      "category": "grain",
+      "per_100g": {
+        "calories": 300,
+        "protein_g": 8.5,
+        "carbs_g": 62.0,
+        "fat_g": 1.0,
+        "fiber_g": 1.8
+      },
+      "aliases": ["spring roll skins", "春卷皮"],
+      "common_units": ["wrapper", "sheet", "g", "oz", "package"]
+    },
+    {
+      "canonical_name": "dumpling wrappers",
+      "category": "grain",
+      "per_100g": {
+        "calories": 275,
+        "protein_g": 9.0,
+        "carbs_g": 57.5,
+        "fat_g": 1.1,
+        "fiber_g": 2.0
+      },
+      "aliases": ["gyoza wrappers", "jiaozi wrappers", "饺子皮", "餃子の皮"],
+      "common_units": ["wrapper", "g", "oz", "package"]
+    },
+    {
+      "canonical_name": "macaroni",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["elbow macaroni", "pasta"],
+      "common_units": ["cup", "g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "farfalle",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["bow tie pasta", "butterfly pasta"],
+      "common_units": ["cup", "g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "rotini",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["fusilli", "spiral pasta", "corkscrew pasta"],
+      "common_units": ["cup", "g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "shells pasta",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["conchiglie", "shell pasta"],
+      "common_units": ["cup", "g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "ziti",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["pasta", "tube pasta"],
+      "common_units": ["cup", "g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "tagliatelle",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["ribbon pasta", "pasta"],
+      "common_units": ["g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "pappardelle",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["wide ribbon pasta"],
+      "common_units": ["g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "whole wheat pasta",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 348,
+        "protein_g": 14.6,
+        "carbs_g": 75.0,
+        "fat_g": 1.4,
+        "fiber_g": 11.0
+      },
+      "aliases": ["whole grain pasta", "wholemeal pasta"],
+      "common_units": ["g", "oz", "cup", "serving"]
+    },
+    {
+      "canonical_name": "vermicelli pasta",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["thin pasta"],
+      "common_units": ["g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "bucatini",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["hollow spaghetti", "perciatelli"],
+      "common_units": ["g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "orecchiette",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["ear-shaped pasta"],
+      "common_units": ["cup", "g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "cavatappi",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["spiral macaroni", "corkscrew pasta"],
+      "common_units": ["cup", "g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "acini di pepe",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["peppercorn pasta", "tiny pasta"],
+      "common_units": ["cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "ditalini",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["small tube pasta"],
+      "common_units": ["cup", "g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "jumbo shells pasta",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["conchiglioni", "stuffing shells"],
+      "common_units": ["shell", "g", "oz"]
+    },
+    {
+      "canonical_name": "cannelloni",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["stuffing pasta", "tube pasta"],
+      "common_units": ["tube", "g", "oz"]
+    },
+    {
+      "canonical_name": "manicotti",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": ["stuffing pasta"],
+      "common_units": ["tube", "g", "oz"]
+    },
+    {
+      "canonical_name": "tortellini",
+      "category": "grain",
+      "per_100g": {
+        "calories": 289,
+        "protein_g": 12.0,
+        "carbs_g": 44.0,
+        "fat_g": 7.0,
+        "fiber_g": 2.0
+      },
+      "aliases": ["filled pasta", "cheese tortellini"],
+      "common_units": ["g", "oz", "piece", "serving"]
+    },
+    {
+      "canonical_name": "ravioli",
+      "category": "grain",
+      "per_100g": {
+        "calories": 187,
+        "protein_g": 7.6,
+        "carbs_g": 31.0,
+        "fat_g": 3.2,
+        "fiber_g": 1.5
+      },
+      "aliases": ["filled pasta", "cheese ravioli"],
+      "common_units": ["piece", "g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "gnocchi",
+      "category": "grain",
+      "per_100g": {
+        "calories": 130,
+        "protein_g": 3.5,
+        "carbs_g": 27.0,
+        "fat_g": 0.9,
+        "fiber_g": 1.8
+      },
+      "aliases": ["potato gnocchi", "Italian dumplings"],
+      "common_units": ["g", "oz", "piece", "serving"]
+    },
+    {
+      "canonical_name": "couscous",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 376,
+        "protein_g": 12.8,
+        "carbs_g": 77.4,
+        "fat_g": 0.6,
+        "fiber_g": 5.0
+      },
+      "aliases": ["semolina couscous"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "israeli couscous",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 12.0,
+        "carbs_g": 75.0,
+        "fat_g": 1.0,
+        "fiber_g": 4.0
+      },
+      "aliases": ["pearl couscous", "ptitim"],
+      "common_units": ["cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "rice paper",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 333,
+        "protein_g": 1.0,
+        "carbs_g": 83.0,
+        "fat_g": 0.3,
+        "fiber_g": 0.8
+      },
+      "aliases": ["spring roll wrappers", "banh trang"],
+      "common_units": ["sheet", "g", "oz"]
+    },
+    {
+      "canonical_name": "potato flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 357,
+        "protein_g": 6.9,
+        "carbs_g": 83.1,
+        "fat_g": 0.3,
+        "fiber_g": 5.9
+      },
+      "aliases": ["dehydrated potato flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "corn flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 361,
+        "protein_g": 6.9,
+        "carbs_g": 76.9,
+        "fat_g": 3.9,
+        "fiber_g": 7.3
+      },
+      "aliases": ["masa harina", "maize flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "self-rising flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 352,
+        "protein_g": 9.4,
+        "carbs_g": 73.7,
+        "fat_g": 1.2,
+        "fiber_g": 2.6
+      },
+      "aliases": ["self-raising flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "soy flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 436,
+        "protein_g": 36.5,
+        "carbs_g": 35.2,
+        "fat_g": 20.7,
+        "fiber_g": 9.6
+      },
+      "aliases": ["soya flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "quinoa flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 368,
+        "protein_g": 13.4,
+        "carbs_g": 69.0,
+        "fat_g": 5.8,
+        "fiber_g": 7.0
+      },
+      "aliases": ["ground quinoa"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "amaranth flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.6,
+        "carbs_g": 65.3,
+        "fat_g": 7.0,
+        "fiber_g": 6.7
+      },
+      "aliases": ["ground amaranth"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "millet flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 382,
+        "protein_g": 11.0,
+        "carbs_g": 72.9,
+        "fat_g": 4.2,
+        "fiber_g": 8.5
+      },
+      "aliases": ["ground millet"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "sorghum flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 361,
+        "protein_g": 10.6,
+        "carbs_g": 74.6,
+        "fat_g": 3.5,
+        "fiber_g": 6.7
+      },
+      "aliases": ["jowar flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "hazelnut flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 628,
+        "protein_g": 14.9,
+        "carbs_g": 16.7,
+        "fat_g": 60.8,
+        "fiber_g": 9.7
+      },
+      "aliases": ["hazelnut meal", "ground hazelnuts"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "chestnut flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 362,
+        "protein_g": 6.1,
+        "carbs_g": 76.2,
+        "fat_g": 3.4,
+        "fiber_g": 14.0
+      },
+      "aliases": ["ground chestnuts"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "tigernut flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 404,
+        "protein_g": 5.2,
+        "carbs_g": 65.0,
+        "fat_g": 15.0,
+        "fiber_g": 33.0
+      },
+      "aliases": ["chufa flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "cricket flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 460,
+        "protein_g": 65.5,
+        "carbs_g": 5.1,
+        "fat_g": 15.4,
+        "fiber_g": 7.7
+      },
+      "aliases": ["insect flour", "cricket powder"],
+      "common_units": ["g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "pumpernickel flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 336,
+        "protein_g": 9.7,
+        "carbs_g": 75.9,
+        "fat_g": 1.3,
+        "fiber_g": 16.4
+      },
+      "aliases": ["coarse rye flour", "whole rye flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "kamut flour",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 337,
+        "protein_g": 14.7,
+        "carbs_g": 70.6,
+        "fat_g": 2.2,
+        "fiber_g": 11.0
+      },
+      "aliases": ["khorasan wheat flour"],
+      "common_units": ["cup", "g", "oz", "tbsp"]
+    },
+    {
+      "canonical_name": "shirataki noodles",
+      "category": "grain",
+      "per_100g": {
+        "calories": 9,
+        "protein_g": 0.0,
+        "carbs_g": 3.0,
+        "fat_g": 0.0,
+        "fiber_g": 3.0
+      },
+      "aliases": ["konjac noodles", "miracle noodles", "糸こんにゃく"],
+      "common_units": ["g", "oz", "package", "serving"]
+    },
+    {
+      "canonical_name": "jjolmyeon noodles",
+      "category": "grain",
+      "per_100g": {
+        "calories": 108,
+        "protein_g": 2.8,
+        "carbs_g": 23.5,
+        "fat_g": 0.4,
+        "fiber_g": 1.2
+      },
+      "aliases": ["Korean chewy noodles", "쫄면"],
+      "common_units": ["g", "oz", "serving"]
+    },
+    {
+      "canonical_name": "somyeon noodles",
+      "category": "pantry",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 9.5,
+        "carbs_g": 74.1,
+        "fat_g": 1.1,
+        "fiber_g": 2.4
+      },
+      "aliases": ["Korean thin noodles", "소면"],
+      "common_units": ["g", "oz", "bundle", "serving"]
+    },
+    {
+      "canonical_name": "yaki soba noodles",
+      "category": "grain",
+      "per_100g": {
+        "calories": 141,
+        "protein_g": 4.8,
+        "carbs_g": 28.5,
+        "fat_g": 1.0,
+        "fiber_g": 1.6
+      },
+      "aliases": ["stir-fry noodles", "焼きそば"],
+      "common_units": ["g", "oz", "package", "serving"]
+    }
+  ]
+}

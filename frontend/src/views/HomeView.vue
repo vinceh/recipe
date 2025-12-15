@@ -1,129 +1,82 @@
 <template>
-  <div class="home">
-    <!-- Top Navigation Bar with Search -->
-    <nav class="navbar navbar--top">
-      <div class="navbar-left">
-        <h1 class="navbar__title">Provisions</h1>
-      </div>
-      <div class="navbar-center">
-        <input
-          v-model="searchQuery"
-          type="text"
-          class="navbar__search"
-          :placeholder="$t('home.searchPlaceholder')"
-          @input="handleSearch"
-        />
-      </div>
-      <div class="navbar-right">
-        <LanguageSwitcher />
-        <router-link to="/about" class="navbar__link">{{ $t('navigation.about') }}</router-link>
-        <router-link to="/contact" class="navbar__link">{{ $t('navigation.contact') }}</router-link>
-      </div>
-    </nav>
+  <PageLayout class="home">
+    <template #navbar>
+      <MainNavBar :show-search="true" @search="handleSearch" ref="navbarRef" />
+    </template>
 
-    <!-- Main Container -->
-    <div class="container main-container">
-      <!-- Left Sidebar -->
-      <div class="sidebar sidebar--left">
-      </div>
-
-      <!-- Center Content Area -->
-      <div class="content center-content">
-        <LoadingSpinner v-if="loading" :center="true" />
-        <ErrorMessage v-else-if="error" :message="error" severity="error" />
-        <div v-else class="featured-section">
-          <h2 class="featured-section__title">{{ $t('navigation.recipes') }}</h2>
-
-          <div class="recipe-grid">
-            <div
-              v-for="(recipe, idx) in recipes.slice(0, 14)"
-              :key="recipe.id"
-              class="recipe-item"
-            >
-              <div class="recipe-item__image">
-                <img
-                  v-if="recipe.image_url"
-                  :src="recipe.image_url"
-                  :alt="recipe.name"
-                  class="recipe-item__image-img"
-                />
-                <div v-else class="recipe-item__image-placeholder">
-                  <i class="pi pi-image"></i>
-                </div>
-              </div>
-              <div class="recipe-item__info">
-                <h3 class="recipe-item__title">{{ recipe.name }}</h3>
-                <p class="recipe-item__meta">
-                  <span v-if="recipe.timing?.total_minutes">{{
-                    formatTime(recipe.timing.total_minutes)
-                  }}</span>
-                  <span v-if="recipe.servings?.original"
-                    >{{ recipe.servings.original }} {{ $t('common.labels.servings') }}</span
-                  >
-                  <span v-if="recipe.difficulty_level">
-                    {{ $t(`forms.recipe.difficultyLevels.${recipe.difficulty_level}`) }}
-                  </span>
-                </p>
-                <template v-if="recipe.cuisines?.length && recipe.dietary_tags?.length">
-                  <p v-if="canFitOneLine(recipe.cuisines, recipe.dietary_tags)" class="recipe-item__meta">
-                    <span>{{ recipe.cuisines.join(', ') }}</span>
-                    <span>{{ recipe.dietary_tags.join(', ') }}</span>
-                  </p>
-                  <template v-else>
-                    <p class="recipe-item__meta">
-                      <span>{{ recipe.cuisines.join(', ') }}</span>
-                    </p>
-                    <p class="recipe-item__meta">
-                      <span>{{ recipe.dietary_tags.join(', ') }}</span>
-                    </p>
-                  </template>
-                </template>
-                <p v-else-if="recipe.cuisines?.length" class="recipe-item__meta">
-                  <span>{{ recipe.cuisines.join(', ') }}</span>
-                </p>
-                <p v-else-if="recipe.dietary_tags?.length" class="recipe-item__meta">
-                  <span>{{ recipe.dietary_tags.join(', ') }}</span>
-                </p>
-                <p class="recipe-item__description">{{ getPreviewText(recipe) }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Sidebar -->
-      <div class="sidebar sidebar--right">
-      </div>
+    <LoadingSpinner v-if="loading" :center="true" />
+    <ErrorMessage v-else-if="error" :message="error" severity="error" />
+    <div v-else-if="recipes.length === 0" class="empty-state">
+      <p class="empty-state__text">{{ $t('home.noRecipes') }}</p>
     </div>
-  </div>
+
+    <div v-else class="featured-section">
+      <div class="featured-section__header">
+        <h2 class="featured-section__title">{{ sectionTitle }}</h2>
+        <router-link v-if="!isSearching && isAuthenticated" to="/favorites" class="favorites-link">
+          <i class="pi pi-heart-fill favorites-link__icon"></i> {{ $t('home.favorites') }}
+        </router-link>
+      </div>
+
+      <RecipeCardGrid
+        :recipes="recipes.slice(0, 14)"
+        @recipe-click="goToRecipe"
+        @update:favorite="handleFavoriteUpdate"
+        @require-login="showLoginModal = true"
+      />
+    </div>
+
+    <LoginModal
+      :show="showLoginModal"
+      :initial-mode="loginModalMode"
+      :reset-token="resetToken"
+      @close="handleLoginModalClose"
+    />
+  </PageLayout>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, watch } from "vue";
+import { ref, computed, onMounted, watch } from 'vue'
 import { useI18n } from "vue-i18n";
+import { useRouter, useRoute } from "vue-router";
 import { recipeApi } from "@/services/recipeApi";
 import type { Recipe } from "@/services/types";
-import LanguageSwitcher from "@/components/shared/LanguageSwitcher.vue";
+import { useAuth } from "@/composables/useAuth";
+import PageLayout from "@/components/layout/PageLayout.vue";
+import MainNavBar from "@/components/shared/MainNavBar.vue";
 import LoadingSpinner from "@/components/shared/LoadingSpinner.vue";
 import ErrorMessage from "@/components/shared/ErrorMessage.vue";
+import LoginModal from "@/components/shared/LoginModal.vue";
+import RecipeCardGrid from "@/components/recipe/RecipeCardGrid.vue";
 
+const router = useRouter();
+const route = useRoute();
 const { t, locale } = useI18n();
+const { isAuthenticated } = useAuth();
 
 const recipes = ref<Recipe[]>([]);
 const loading = ref(true);
 const error = ref<string | null>(null);
-const searchQuery = ref("");
+const navbarRef = ref<InstanceType<typeof MainNavBar> | null>(null);
+const showLoginModal = ref(false);
+const loginModalMode = ref<'login' | 'signup' | 'forgot' | 'resetSent' | 'reset'>('login');
+const resetToken = ref<string | undefined>(undefined);
 
-function getTimeLabel(key: string): string {
-  return t(`admin.recipes.table.${key}`);
-}
+const isSearching = computed(() => !!route.query.q);
+const sectionTitle = computed(() => {
+  if (isSearching.value) {
+    return `${t('home.results')} - ${recipes.value.length} ${t('home.recipesCount')}`;
+  }
+  return t('home.featured');
+});
 
 async function loadRecipes() {
   try {
     loading.value = true;
     error.value = null;
+    const q = (route.query.q as string) || undefined;
     const response = await recipeApi.getRecipes({
-      q: searchQuery.value || undefined,
+      q,
       per_page: 100,
       lang: locale.value as any,
     });
@@ -140,42 +93,50 @@ async function loadRecipes() {
   }
 }
 
-function handleSearch() {
-  loadRecipes();
-}
-
-function formatTime(minutes: number): string {
-  const minLabel = getTimeLabel('minutes');
-  const hourLabel = getTimeLabel('hours');
-
-  if (minutes < 60) {
-    return `${minutes}${minLabel}`;
+function handleSearch(query: string) {
+  const searchParams: Record<string, string> = {};
+  if (query) {
+    searchParams.q = query;
   }
-  const hours = Math.floor(minutes / 60);
-  const mins = minutes % 60;
-  return mins > 0 ? `${hours}${hourLabel} ${mins}${minLabel}` : `${hours}${hourLabel}`;
+  router.replace({ query: searchParams });
 }
 
-function getPreviewText(recipe: Recipe): string {
-  return recipe.description;
+function goToRecipe(recipe: Recipe) {
+  router.push({ name: 'recipe-detail', params: { id: recipe.id } });
 }
 
-function canFitOneLine(cuisines: string[] | undefined, dietaryTags: string[] | undefined): boolean {
-  if (!cuisines?.length || !dietaryTags?.length) {
-    return true;
+function handleFavoriteUpdate(recipe: Recipe, isFavorite: boolean) {
+  recipe.favorite = isFavorite;
+}
+
+function handleLoginModalClose() {
+  showLoginModal.value = false;
+  if (resetToken.value) {
+    resetToken.value = undefined;
+    loginModalMode.value = 'login';
+    router.replace({ query: {} });
   }
-
-  const cuisinesText = cuisines.join(', ');
-  const dietaryTagsText = dietaryTags.join(', ');
-  const combinedText = `${cuisinesText} · ${dietaryTagsText}`;
-
-  // Threshold of 40 characters for fitting on one line
-  return combinedText.length <= 40;
 }
 
 onMounted(() => {
-  loadRecipes();
+  if (navbarRef.value) {
+    navbarRef.value.searchQuery = (route.query.q as string) || '';
+  }
+
+  const token = route.query.reset_password_token as string;
+  if (token) {
+    resetToken.value = token;
+    loginModalMode.value = 'reset';
+    showLoginModal.value = true;
+  }
 });
+
+watch(() => route.query.q, (newQuery) => {
+  if (navbarRef.value) {
+    navbarRef.value.searchQuery = (newQuery as string) || '';
+  }
+  loadRecipes();
+}, { immediate: true });
 
 watch(locale, () => {
   loadRecipes();
@@ -183,166 +144,19 @@ watch(locale, () => {
 </script>
 
 <style scoped>
-
-.center-content {
-  border-left: 1px solid var(--color-provisions-border);
-  border-right: 1px solid var(--color-provisions-border); 
-}
-
-.main-container {
-  padding: 0;
-}
-
-.home {
-  min-height: 100vh;
-  background: var(--color-provisions-bg);
-  display: flex;
-  flex-direction: column;
-}
-
-/* Top Navbar */
-.navbar--top {
-  height: 60px;
-  background: var(--color-provisions-bg);
-  border-bottom: 1px solid var(--color-provisions-border);
+/* Empty State */
+.empty-state {
   display: flex;
   align-items: center;
-  gap: 0;
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  flex-shrink: 0;
+  justify-content: center;
+  padding: 80px 40px;
 }
 
-.navbar-left {
-  flex: 1;
-  padding: 0 var(--spacing-lg);
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.navbar-center {
-  flex: 0 0 600px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: stretch;
-  border-right: 1px solid var(--color-provisions-border);
-  border-left: 1px solid var(--color-provisions-border);
-  height: 100%;
-}
-
-.navbar-right {
-  flex: 1;
-  padding: 0 var(--spacing-lg);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: var(--spacing-lg);
-}
-
-/* Container Layout */
-.container {
-  display: flex;
-  flex: 1;
-  overflow: hidden;
-}
-
-.sidebar {
-  flex: 1;
-  background: var(--color-provisions-bg);
-  display: flex;
-  flex-direction: column;
-}
-
-.content {
-  flex: 0 0 600px;
-  background: var(--color-provisions-bg);
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-/* Navigation Bar */
-.navbar {
-  height: 60px;
-  background: var(--color-provisions-bg);
-  border-bottom: 1px solid var(--color-provisions-border);
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.navbar--left {
-  padding: 0 var(--spacing-lg);
-  justify-content: flex-end;
-}
-
-.navbar--center {
-  padding: 0;
-  justify-content: stretch;
-}
-
-
-.navbar--right {
-  font-size: 20px;
-  padding: 0 var(--spacing-lg);
-  justify-content: flex-start;
-  gap: var(--spacing-lg);
-}
-
-.navbar__title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0;
-  color: var(--color-provisions-border);
-  letter-spacing: -0.5px;
-}
-
-.navbar__search {
-  width: 100%;
-  height: 100%;
-  padding: 0 25px;
-  border: none;
-  background: transparent;
+.empty-state__text {
   font-family: var(--font-family-heading);
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1em;
+  font-size: 18px;
   color: var(--color-provisions-text-muted);
-  outline: none;
-}
-
-.language-select {
-  background: none !important;
-}
-
-.navbar__search:focus {
-  outline: none;
-}
-
-.navbar__search::placeholder {
-  color: var(--color-provisions-placeholder);
-}
-
-.navbar__language {
-  display: flex;
-  align-items: center;
-}
-
-.navbar__link {
-  font-family: var(--font-family-heading);
-  font-weight: 600;
-  color: var(--color-provisions-border);
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 16px;
+  margin: 0;
 }
 
 /* Featured Section */
@@ -352,125 +166,43 @@ watch(locale, () => {
   overflow-y: auto;
 }
 
+.featured-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 25px;
+}
+
 .featured-section__title {
   font-family: var(--font-family-heading);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--color-provisions-border);
-  margin: 25px 0 25px 25px;
+  margin: 0;
   padding: 0;
 }
 
-.recipe-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  border-top: 1px solid var(--color-provisions-border);
-}
-
-/* Recipe Items */
-.recipe-item {
-  display: flex;
-  flex-direction: column;
-  border-right: 1px solid var(--color-provisions-border);
-  border-bottom: 1px solid var(--color-provisions-border);
-}
-
-.recipe-item:nth-child(2n) {
-  border-right: none;
-}
-
-.recipe-item:nth-child(odd):last-of-type {
-  border-right: none;
-}
-
-.recipe-item__image {
-  width: 100%;
-  height: 350px;
-  overflow: hidden;
-  background: var(--color-provisions-card-bg);
-  border-bottom: 1px solid var(--color-provisions-border);
-}
-
-.recipe-item__image-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.recipe-item__image-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
+.favorites-link {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: 48px;
-  color: var(--color-provisions-placeholder);
-}
-
-.recipe-item__info {
-  padding: var(--spacing-lg);
-}
-
-.recipe-item__title {
-  font-family: var(--font-family-heading);
-  font-size: 16px;
-  font-weight: 600;
-  margin: 0 0 3px 0;
-  color: var(--color-provisions-text-dark);
-  line-height: 1.3;
-}
-
-.recipe-item__meta {
-  display: flex;
   gap: 6px;
-  font-size: 13px;
-  color: var(--color-provisions-border);
-  margin: 3px 0 0 0;
-  font-family: var(--font-family-base);
-  font-weight: 300;
-}
-
-.recipe-item__meta + .recipe-item__meta {
-  margin-top: 0;
-}
-
-.recipe-item__meta:last-of-type {
-  margin-bottom: 10px;
-}
-
-.recipe-item__meta span:not(:last-child)::after {
-  content: "  ·  ";
-  margin-left: 0;
-}
-
-.recipe-item__description {
-  font-size: 14px;
-  color: var(--color-provisions-text-dark);
-  margin: 15px 0 15px 0;
-  line-height: 1.4;
   font-family: var(--font-family-heading);
-  font-weight: normal;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-provisions-border);
+  text-decoration: none;
+  border: 1px solid var(--color-provisions-border);
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.15s, color 0.15s;
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
-  .sidebar {
-    display: none;
-  }
+.favorites-link:hover {
+  background: var(--color-provisions-border);
+  color: var(--color-provisions-bg);
+}
 
-  .container {
-    flex-direction: column;
-  }
-
-  .content {
-    flex: 1;
-  }
+.favorites-link__icon {
+  color: var(--color-error);
 }
 </style>

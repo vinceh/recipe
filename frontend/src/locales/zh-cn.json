@@ -36,7 +36,10 @@
       "actions": "操作",
       "yes": "是",
       "no": "否",
+      "serving": "份",
       "servings": "份",
+      "Serving": "份",
+      "Servings": "份",
       "difficulty": "难度"
     },
     "messages": {
@@ -55,6 +58,7 @@
     "home": "首页",
     "recipes": "食谱",
     "favorites": "我的收藏",
+    "menu": "菜单",
     "about": "关于",
     "contact": "联系我们",
     "login": "登录",
@@ -186,7 +190,25 @@
     "subtitle": "探索食谱集合",
     "searchPlaceholder": "搜索食谱...",
     "noRecipes": "找不到食谱",
-    "noRecipesDescription": "调整您的搜索或浏览所有食谱"
+    "noRecipesDescription": "调整您的搜索或浏览所有食谱",
+    "featured": "精选",
+    "results": "搜索结果",
+    "recipesCount": "个食谱",
+    "favorites": "收藏"
+  },
+  "favorites": {
+    "title": "收藏食谱",
+    "searchPlaceholder": "搜索收藏的食谱...",
+    "noSearchResults": "未找到收藏的食谱",
+    "empty": {
+      "title": "还没有收藏的食谱",
+      "description": "当您发现喜欢的食谱时，点击心形图标将其保存到这里。",
+      "browseRecipes": "浏览食谱"
+    }
+  },
+  "profile": {
+    "accountInfo": "账户信息",
+    "comingSoon": "更多个人资料功能即将推出..."
   },
   "recipe": {
     "view": {
@@ -196,9 +218,34 @@
       "cook": "烹饪",
       "total": "总计",
       "ingredients": "食材",
+      "steps": "步骤",
       "equipment": "厨具",
       "instructions": "制作步骤",
-      "nutrition": "营养信息"
+      "nutrition": "营养信息",
+      "optional": "可选",
+      "perServing": "每份",
+      "cals": "卡路里",
+      "carbs": "碳水",
+      "protein": "蛋白质",
+      "fat": "脂肪",
+      "adjustRecipe": "调整食谱",
+      "adjusted": "已调整",
+      "aiImageCaption": "AI 生成的占位图片，可能与实际不符。",
+      "aiAdjustmentDisclaimer": "这是 AI 生成的调整。内容可能不完全准确。",
+      "restoreToOriginal": "恢复原版",
+      "images": "图片",
+      "favorite": "添加到收藏",
+      "unfavorite": "取消收藏"
+    },
+    "adjust": {
+      "title": "调整食谱",
+      "description": "您想如何调整这份食谱？",
+      "submit": "调整食谱",
+      "adjusting": "调整中...",
+      "adjustedFrom": "调整前：",
+      "placeholder": "示例：\n• 用蘑菇替代，做成素食\n• 双倍香料，增加风味\n• 用鸡肉替代牛肉\n• 做成无麸质版本\n• 糖量减半",
+      "error": "调整食谱失败，请重试。",
+      "errorWithMessage": "调整食谱失败：{message}"
     }
   },
   "admin": {

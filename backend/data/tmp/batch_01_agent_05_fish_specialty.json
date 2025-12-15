@@ -1,0 +1,1606 @@
+{
+  "batch": 1,
+  "agent": 5,
+  "category": "fish_specialty",
+  "generated_at": "2025-12-11T00:00:00Z",
+  "ingredients": [
+    {
+      "canonical_name": "yellowtail (hamachi)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 146,
+        "protein_g": 23.0,
+        "carbs_g": 0,
+        "fat_g": 5.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "hamachi", "language": "en", "type": "synonym" },
+        { "alias": "Japanese amberjack", "language": "en", "type": "synonym" },
+        { "alias": "ハマチ", "language": "ja", "type": "translation" },
+        { "alias": "ブリ", "language": "ja", "type": "translation" },
+        { "alias": "방어", "language": "ko", "type": "translation" },
+        { "alias": "鰤魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "鰤魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "sea bream (tai)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 100,
+        "protein_g": 19.4,
+        "carbs_g": 0,
+        "fat_g": 1.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "tai", "language": "en", "type": "synonym" },
+        { "alias": "red sea bream", "language": "en", "type": "synonym" },
+        { "alias": "madai", "language": "en", "type": "synonym" },
+        { "alias": "鯛", "language": "ja", "type": "translation" },
+        { "alias": "真鯛", "language": "ja", "type": "translation" },
+        { "alias": "도미", "language": "ko", "type": "translation" },
+        { "alias": "鯛魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "鯛魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 120 }
+      ]
+    },
+    {
+      "canonical_name": "flounder (hirame)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 91,
+        "protein_g": 18.8,
+        "carbs_g": 0,
+        "fat_g": 1.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "hirame", "language": "en", "type": "synonym" },
+        { "alias": "Japanese flounder", "language": "en", "type": "synonym" },
+        { "alias": "ヒラメ", "language": "ja", "type": "translation" },
+        { "alias": "平目", "language": "ja", "type": "translation" },
+        { "alias": "광어", "language": "ko", "type": "translation" },
+        { "alias": "比目魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "比目魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 }
+      ]
+    },
+    {
+      "canonical_name": "horse mackerel (aji)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 126,
+        "protein_g": 19.7,
+        "carbs_g": 0.1,
+        "fat_g": 4.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "aji", "language": "en", "type": "synonym" },
+        { "alias": "Japanese horse mackerel", "language": "en", "type": "synonym" },
+        { "alias": "アジ", "language": "ja", "type": "translation" },
+        { "alias": "鯵", "language": "ja", "type": "translation" },
+        { "alias": "전갱이", "language": "ko", "type": "translation" },
+        { "alias": "竹筴魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "竹筴魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole fish", "grams": 100 }
+      ]
+    },
+    {
+      "canonical_name": "pacific saury (sanma)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 310,
+        "protein_g": 18.1,
+        "carbs_g": 0.1,
+        "fat_g": 25.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "sanma", "language": "en", "type": "synonym" },
+        { "alias": "mackerel pike", "language": "en", "type": "synonym" },
+        { "alias": "サンマ", "language": "ja", "type": "translation" },
+        { "alias": "秋刀魚", "language": "ja", "type": "translation" },
+        { "alias": "꽁치", "language": "ko", "type": "translation" },
+        { "alias": "秋刀魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "秋刀魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole fish", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "atka mackerel (hokke)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 115,
+        "protein_g": 17.3,
+        "carbs_g": 0,
+        "fat_g": 4.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "hokke", "language": "en", "type": "synonym" },
+        { "alias": "Arabesque greenling", "language": "en", "type": "synonym" },
+        { "alias": "ホッケ", "language": "ja", "type": "translation" },
+        { "alias": "임연수어", "language": "ko", "type": "translation" },
+        { "alias": "花魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "花魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole fish", "grams": 200 }
+      ]
+    },
+    {
+      "canonical_name": "pacific cutlassfish (galchi)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 109,
+        "protein_g": 17.7,
+        "carbs_g": 0,
+        "fat_g": 3.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "galchi", "language": "en", "type": "synonym" },
+        { "alias": "beltfish", "language": "en", "type": "synonym" },
+        { "alias": "ribbonfish", "language": "en", "type": "synonym" },
+        { "alias": "tachiuo", "language": "en", "type": "synonym" },
+        { "alias": "タチウオ", "language": "ja", "type": "translation" },
+        { "alias": "太刀魚", "language": "ja", "type": "translation" },
+        { "alias": "갈치", "language": "ko", "type": "translation" },
+        { "alias": "帶魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "帶魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 100 }
+      ]
+    },
+    {
+      "canonical_name": "mackerel (godeungeo)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 205,
+        "protein_g": 18.6,
+        "carbs_g": 0,
+        "fat_g": 13.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "godeungeo", "language": "en", "type": "synonym" },
+        { "alias": "chub mackerel", "language": "en", "type": "synonym" },
+        { "alias": "saba", "language": "en", "type": "synonym" },
+        { "alias": "サバ", "language": "ja", "type": "translation" },
+        { "alias": "鯖", "language": "ja", "type": "translation" },
+        { "alias": "고등어", "language": "ko", "type": "translation" },
+        { "alias": "鯖魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "鯖魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "maquereau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 120 }
+      ]
+    },
+    {
+      "canonical_name": "yellow croaker (jogi)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 100,
+        "protein_g": 18.2,
+        "carbs_g": 0,
+        "fat_g": 2.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "jogi", "language": "en", "type": "synonym" },
+        { "alias": "yellow corvina", "language": "en", "type": "synonym" },
+        { "alias": "조기", "language": "ko", "type": "translation" },
+        { "alias": "黃魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "黃魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "イシモチ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole fish", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "pomfret",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 96,
+        "protein_g": 18.0,
+        "carbs_g": 0,
+        "fat_g": 2.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "white pomfret", "language": "en", "type": "synonym" },
+        { "alias": "鯧魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "鯧魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "창어", "language": "ko", "type": "translation" },
+        { "alias": "マナガツオ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole fish", "grams": 200 }
+      ]
+    },
+    {
+      "canonical_name": "grass carp",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 112,
+        "protein_g": 17.9,
+        "carbs_g": 0,
+        "fat_g": 4.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "white amur", "language": "en", "type": "synonym" },
+        { "alias": "草魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "草魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "초어", "language": "ko", "type": "translation" },
+        { "alias": "ソウギョ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "silver carp",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 86,
+        "protein_g": 17.5,
+        "carbs_g": 0,
+        "fat_g": 1.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "鰱魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "鰱魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "연어", "language": "ko", "type": "translation" },
+        { "alias": "ハクレン", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "bighead carp",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 90,
+        "protein_g": 16.3,
+        "carbs_g": 0,
+        "fat_g": 2.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "鱅魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "鱅魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "bighead", "language": "en", "type": "synonym" },
+        { "alias": "コクレン", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "crucian carp",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 108,
+        "protein_g": 17.1,
+        "carbs_g": 0,
+        "fat_g": 3.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "鯽魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "鯽魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "붕어", "language": "ko", "type": "translation" },
+        { "alias": "フナ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole fish", "grams": 120 }
+      ]
+    },
+    {
+      "canonical_name": "snakehead fish",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 84,
+        "protein_g": 18.5,
+        "carbs_g": 0,
+        "fat_g": 0.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "黑魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "黑魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "가물치", "language": "ko", "type": "translation" },
+        { "alias": "ライヘッド", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 }
+      ]
+    },
+    {
+      "canonical_name": "mandarin fish",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 117,
+        "protein_g": 18.5,
+        "carbs_g": 0,
+        "fat_g": 4.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Chinese perch", "language": "en", "type": "synonym" },
+        { "alias": "鱖魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "鱖魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "케트라", "language": "ko", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 }
+      ]
+    },
+    {
+      "canonical_name": "branzino",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 97,
+        "protein_g": 18.4,
+        "carbs_g": 0,
+        "fat_g": 2.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "European sea bass", "language": "en", "type": "synonym" },
+        { "alias": "loup de mer", "language": "fr", "type": "translation" },
+        { "alias": "lubina", "language": "es", "type": "translation" },
+        { "alias": "スズキ", "language": "ja", "type": "translation" },
+        { "alias": "농어", "language": "ko", "type": "translation" },
+        { "alias": "鱸魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "鱸魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole fish", "grams": 400 },
+        { "unit": "fillet", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "dorade",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 115,
+        "protein_g": 21.1,
+        "carbs_g": 0,
+        "fat_g": 2.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "gilt-head bream", "language": "en", "type": "synonym" },
+        { "alias": "daurade", "language": "fr", "type": "translation" },
+        { "alias": "dorada", "language": "es", "type": "translation" },
+        { "alias": "orata", "language": "en", "type": "synonym" },
+        { "alias": "鯛", "language": "ja", "type": "translation" },
+        { "alias": "도라다", "language": "ko", "type": "translation" },
+        { "alias": "金頭鯛", "language": "zh-cn", "type": "translation" },
+        { "alias": "金頭鯛", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole fish", "grams": 350 },
+        { "unit": "fillet", "grams": 140 }
+      ]
+    },
+    {
+      "canonical_name": "John Dory",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 75,
+        "protein_g": 18.3,
+        "carbs_g": 0,
+        "fat_g": 0.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "St. Pierre", "language": "fr", "type": "translation" },
+        { "alias": "pez de San Pedro", "language": "es", "type": "translation" },
+        { "alias": "マトウダイ", "language": "ja", "type": "translation" },
+        { "alias": "존 도리", "language": "ko", "type": "translation" },
+        { "alias": "海鯛", "language": "zh-cn", "type": "translation" },
+        { "alias": "海鯛", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "turbot",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 95,
+        "protein_g": 16.1,
+        "carbs_g": 0,
+        "fat_g": 2.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "turbot", "language": "fr", "type": "translation" },
+        { "alias": "rodaballo", "language": "es", "type": "translation" },
+        { "alias": "ヒラメ", "language": "ja", "type": "translation" },
+        { "alias": "터봇", "language": "ko", "type": "translation" },
+        { "alias": "大菱鮃", "language": "zh-cn", "type": "translation" },
+        { "alias": "大菱鮃", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 160 }
+      ]
+    },
+    {
+      "canonical_name": "sole",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 70,
+        "protein_g": 12.4,
+        "carbs_g": 0,
+        "fat_g": 1.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Dover sole", "language": "en", "type": "synonym" },
+        { "alias": "sole", "language": "fr", "type": "translation" },
+        { "alias": "lenguado", "language": "es", "type": "translation" },
+        { "alias": "シタビラメ", "language": "ja", "type": "translation" },
+        { "alias": "가자미", "language": "ko", "type": "translation" },
+        { "alias": "鰈魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "鰈魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 120 }
+      ]
+    },
+    {
+      "canonical_name": "monkfish",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 76,
+        "protein_g": 14.5,
+        "carbs_g": 0,
+        "fat_g": 1.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "anglerfish", "language": "en", "type": "synonym" },
+        { "alias": "lotte", "language": "fr", "type": "translation" },
+        { "alias": "rape", "language": "es", "type": "translation" },
+        { "alias": "アンコウ", "language": "ja", "type": "translation" },
+        { "alias": "아귀", "language": "ko", "type": "translation" },
+        { "alias": "鮟鱇魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "鮟鱇魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tail", "grams": 200 }
+      ]
+    },
+    {
+      "canonical_name": "corvina",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 90,
+        "protein_g": 18.4,
+        "carbs_g": 0,
+        "fat_g": 1.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "corbina", "language": "es", "type": "synonym" },
+        { "alias": "white sea bass", "language": "en", "type": "synonym" },
+        { "alias": "corvina", "language": "es", "type": "translation" },
+        { "alias": "石首魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "石首魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "robalo",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 97,
+        "protein_g": 18.9,
+        "carbs_g": 0,
+        "fat_g": 1.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "snook", "language": "en", "type": "synonym" },
+        { "alias": "róbalo", "language": "es", "type": "translation" },
+        { "alias": "robalo", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 160 }
+      ]
+    },
+    {
+      "canonical_name": "mahi-mahi",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 85,
+        "protein_g": 18.5,
+        "carbs_g": 0,
+        "fat_g": 0.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "dorado", "language": "es", "type": "synonym" },
+        { "alias": "dolphinfish", "language": "en", "type": "synonym" },
+        { "alias": "dorado", "language": "es", "type": "translation" },
+        { "alias": "シイラ", "language": "ja", "type": "translation" },
+        { "alias": "만새기", "language": "ko", "type": "translation" },
+        { "alias": "鬼頭刀", "language": "zh-cn", "type": "translation" },
+        { "alias": "鬼頭刀", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 170 }
+      ]
+    },
+    {
+      "canonical_name": "sea bass (suzuki)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 100,
+        "protein_g": 19.9,
+        "carbs_g": 0.1,
+        "fat_g": 1.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "suzuki", "language": "en", "type": "synonym" },
+        { "alias": "Japanese sea bass", "language": "en", "type": "synonym" },
+        { "alias": "スズキ", "language": "ja", "type": "translation" },
+        { "alias": "鱸", "language": "ja", "type": "translation" },
+        { "alias": "농어", "language": "ko", "type": "translation" },
+        { "alias": "鱸魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "鱸魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "rockfish (mebaru)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 109,
+        "protein_g": 18.0,
+        "carbs_g": 0,
+        "fat_g": 3.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "mebaru", "language": "en", "type": "synonym" },
+        { "alias": "メバル", "language": "ja", "type": "translation" },
+        { "alias": "우럭", "language": "ko", "type": "translation" },
+        { "alias": "石斑魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "石斑魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 130 }
+      ]
+    },
+    {
+      "canonical_name": "threadfin bream",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 92,
+        "protein_g": 19.5,
+        "carbs_g": 0,
+        "fat_g": 1.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "itoyori", "language": "en", "type": "synonym" },
+        { "alias": "イトヨリダイ", "language": "ja", "type": "translation" },
+        { "alias": "황돔", "language": "ko", "type": "translation" },
+        { "alias": "金線魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "金線魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 120 }
+      ]
+    },
+    {
+      "canonical_name": "barracuda",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 122,
+        "protein_g": 20.0,
+        "carbs_g": 0,
+        "fat_g": 4.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "カマス", "language": "ja", "type": "translation" },
+        { "alias": "barracuda", "language": "es", "type": "translation" },
+        { "alias": "梭魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "梭魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "바라쿠다", "language": "ko", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 }
+      ]
+    },
+    {
+      "canonical_name": "amberjack",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 146,
+        "protein_g": 21.0,
+        "carbs_g": 0,
+        "fat_g": 6.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "kanpachi", "language": "en", "type": "synonym" },
+        { "alias": "カンパチ", "language": "ja", "type": "translation" },
+        { "alias": "간파치", "language": "ko", "type": "translation" },
+        { "alias": "杜氏鰤", "language": "zh-cn", "type": "translation" },
+        { "alias": "杜氏鰤", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "black cod",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 195,
+        "protein_g": 13.4,
+        "carbs_g": 0,
+        "fat_g": 15.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "sablefish", "language": "en", "type": "synonym" },
+        { "alias": "gindara", "language": "en", "type": "synonym" },
+        { "alias": "ギンダラ", "language": "ja", "type": "translation" },
+        { "alias": "은대구", "language": "ko", "type": "translation" },
+        { "alias": "銀鱈", "language": "zh-cn", "type": "translation" },
+        { "alias": "銀鱈", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 160 }
+      ]
+    },
+    {
+      "canonical_name": "grunt (isaki)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 127,
+        "protein_g": 19.7,
+        "carbs_g": 0,
+        "fat_g": 4.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "isaki", "language": "en", "type": "synonym" },
+        { "alias": "イサキ", "language": "ja", "type": "translation" },
+        { "alias": "雞魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 130 }
+      ]
+    },
+    {
+      "canonical_name": "halfbeak (sayori)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 95,
+        "protein_g": 19.8,
+        "carbs_g": 0,
+        "fat_g": 1.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "sayori", "language": "en", "type": "synonym" },
+        { "alias": "サヨリ", "language": "ja", "type": "translation" },
+        { "alias": "학공치", "language": "ko", "type": "translation" },
+        { "alias": "鱵魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "鱵魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole fish", "grams": 80 }
+      ]
+    },
+    {
+      "canonical_name": "conger eel (anago)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 161,
+        "protein_g": 17.3,
+        "carbs_g": 0,
+        "fat_g": 9.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "anago", "language": "en", "type": "synonym" },
+        { "alias": "sea eel", "language": "en", "type": "synonym" },
+        { "alias": "アナゴ", "language": "ja", "type": "translation" },
+        { "alias": "穴子", "language": "ja", "type": "translation" },
+        { "alias": "붕장어", "language": "ko", "type": "translation" },
+        { "alias": "星鰻", "language": "zh-cn", "type": "translation" },
+        { "alias": "星鰻", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 100 }
+      ]
+    },
+    {
+      "canonical_name": "freshwater eel (unagi)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 303,
+        "protein_g": 14.5,
+        "carbs_g": 0.3,
+        "fat_g": 27.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "unagi", "language": "en", "type": "synonym" },
+        { "alias": "ウナギ", "language": "ja", "type": "translation" },
+        { "alias": "鰻", "language": "ja", "type": "translation" },
+        { "alias": "민물장어", "language": "ko", "type": "translation" },
+        { "alias": "鰻魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "鰻魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 100 }
+      ]
+    },
+    {
+      "canonical_name": "greenling (ainame)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 113,
+        "protein_g": 17.6,
+        "carbs_g": 0,
+        "fat_g": 4.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "ainame", "language": "en", "type": "synonym" },
+        { "alias": "アイナメ", "language": "ja", "type": "translation" },
+        { "alias": "쥐노래미", "language": "ko", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 120 }
+      ]
+    },
+    {
+      "canonical_name": "pike conger (hamo)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 144,
+        "protein_g": 18.8,
+        "carbs_g": 0,
+        "fat_g": 7.1,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "hamo", "language": "en", "type": "synonym" },
+        { "alias": "daggertooth pike conger", "language": "en", "type": "synonym" },
+        { "alias": "ハモ", "language": "ja", "type": "translation" },
+        { "alias": "鱧", "language": "ja", "type": "translation" },
+        { "alias": "갯장어", "language": "ko", "type": "translation" },
+        { "alias": "海鰻", "language": "zh-cn", "type": "translation" },
+        { "alias": "海鰻", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 100 }
+      ]
+    },
+    {
+      "canonical_name": "sardine (iwashi)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 208,
+        "protein_g": 19.2,
+        "carbs_g": 0,
+        "fat_g": 13.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "iwashi", "language": "en", "type": "synonym" },
+        { "alias": "イワシ", "language": "ja", "type": "translation" },
+        { "alias": "鰯", "language": "ja", "type": "translation" },
+        { "alias": "정어리", "language": "ko", "type": "translation" },
+        { "alias": "沙丁魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "沙丁魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "sardine", "language": "fr", "type": "translation" },
+        { "alias": "sardina", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole fish", "grams": 60 }
+      ]
+    },
+    {
+      "canonical_name": "smelt",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 97,
+        "protein_g": 17.6,
+        "carbs_g": 0,
+        "fat_g": 2.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "shishamo", "language": "en", "type": "synonym" },
+        { "alias": "wakasagi", "language": "en", "type": "synonym" },
+        { "alias": "ワカサギ", "language": "ja", "type": "translation" },
+        { "alias": "シシャモ", "language": "ja", "type": "translation" },
+        { "alias": "빙어", "language": "ko", "type": "translation" },
+        { "alias": "胡瓜魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "胡瓜魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole fish", "grams": 30 }
+      ]
+    },
+    {
+      "canonical_name": "Spanish mackerel (sawara)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 161,
+        "protein_g": 20.1,
+        "carbs_g": 0.1,
+        "fat_g": 8.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "sawara", "language": "en", "type": "synonym" },
+        { "alias": "サワラ", "language": "ja", "type": "translation" },
+        { "alias": "鰆", "language": "ja", "type": "translation" },
+        { "alias": "삼치", "language": "ko", "type": "translation" },
+        { "alias": "馬鮫魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "馬鮫魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 }
+      ]
+    },
+    {
+      "canonical_name": "tilefish (amadai)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 113,
+        "protein_g": 19.2,
+        "carbs_g": 0,
+        "fat_g": 3.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "amadai", "language": "en", "type": "synonym" },
+        { "alias": "アマダイ", "language": "ja", "type": "translation" },
+        { "alias": "甘鯛", "language": "ja", "type": "translation" },
+        { "alias": "옥돔", "language": "ko", "type": "translation" },
+        { "alias": "方頭魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "方頭魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 130 }
+      ]
+    },
+    {
+      "canonical_name": "blackthroat seaperch (nodoguro)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 194,
+        "protein_g": 17.8,
+        "carbs_g": 0.1,
+        "fat_g": 13.1,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "nodoguro", "language": "en", "type": "synonym" },
+        { "alias": "ノドグロ", "language": "ja", "type": "translation" },
+        { "alias": "喉黒", "language": "ja", "type": "translation" },
+        { "alias": "붉은메기", "language": "ko", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole fish", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "red snapper (kinmedai)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 160,
+        "protein_g": 17.8,
+        "carbs_g": 0.1,
+        "fat_g": 9.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "kinmedai", "language": "en", "type": "synonym" },
+        { "alias": "alfonsino", "language": "en", "type": "synonym" },
+        { "alias": "キンメダイ", "language": "ja", "type": "translation" },
+        { "alias": "金目鯛", "language": "ja", "type": "translation" },
+        { "alias": "금눈돔", "language": "ko", "type": "translation" },
+        { "alias": "金目鯛", "language": "zh-cn", "type": "translation" },
+        { "alias": "金目鯛", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 }
+      ]
+    },
+    {
+      "canonical_name": "Pacific cod (madara)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 77,
+        "protein_g": 17.6,
+        "carbs_g": 0,
+        "fat_g": 0.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "madara", "language": "en", "type": "synonym" },
+        { "alias": "マダラ", "language": "ja", "type": "translation" },
+        { "alias": "真鱈", "language": "ja", "type": "translation" },
+        { "alias": "대구", "language": "ko", "type": "translation" },
+        { "alias": "鱈魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "鱈魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "Pacific herring (nishin)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 216,
+        "protein_g": 16.5,
+        "carbs_g": 0.4,
+        "fat_g": 15.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "nishin", "language": "en", "type": "synonym" },
+        { "alias": "ニシン", "language": "ja", "type": "translation" },
+        { "alias": "鰊", "language": "ja", "type": "translation" },
+        { "alias": "청어", "language": "ko", "type": "translation" },
+        { "alias": "鯡魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "鯡魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole fish", "grams": 120 }
+      ]
+    },
+    {
+      "canonical_name": "red gurnard (houbou)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 113,
+        "protein_g": 18.9,
+        "carbs_g": 0,
+        "fat_g": 3.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "houbou", "language": "en", "type": "synonym" },
+        { "alias": "ホウボウ", "language": "ja", "type": "translation" },
+        { "alias": "竹麥魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "竹麥魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 120 }
+      ]
+    },
+    {
+      "canonical_name": "barfin flounder (karei)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 96,
+        "protein_g": 19.6,
+        "carbs_g": 0,
+        "fat_g": 1.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "karei", "language": "en", "type": "synonym" },
+        { "alias": "righteye flounder", "language": "en", "type": "synonym" },
+        { "alias": "カレイ", "language": "ja", "type": "translation" },
+        { "alias": "鰈", "language": "ja", "type": "translation" },
+        { "alias": "가자미", "language": "ko", "type": "translation" },
+        { "alias": "鰈魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "鰈魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 130 }
+      ]
+    },
+    {
+      "canonical_name": "largehead hairtail",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 109,
+        "protein_g": 17.7,
+        "carbs_g": 0,
+        "fat_g": 3.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "cutlassfish", "language": "en", "type": "synonym" },
+        { "alias": "beltfish", "language": "en", "type": "synonym" },
+        { "alias": "帶魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "帶魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "갈치", "language": "ko", "type": "translation" },
+        { "alias": "タチウオ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 100 }
+      ]
+    },
+    {
+      "canonical_name": "dried cod (bacalao)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 290,
+        "protein_g": 62.8,
+        "carbs_g": 0,
+        "fat_g": 2.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "bacalao", "language": "es", "type": "translation" },
+        { "alias": "salt cod", "language": "en", "type": "synonym" },
+        { "alias": "morue", "language": "fr", "type": "translation" },
+        { "alias": "baccalà", "language": "en", "type": "synonym" },
+        { "alias": "乾鱈", "language": "zh-cn", "type": "translation" },
+        { "alias": "乾鱈", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 50 }
+      ]
+    },
+    {
+      "canonical_name": "dried pollock (hwangtae)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 321,
+        "protein_g": 75.0,
+        "carbs_g": 0,
+        "fat_g": 2.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "hwangtae", "language": "en", "type": "synonym" },
+        { "alias": "dried Alaska pollock", "language": "en", "type": "synonym" },
+        { "alias": "황태", "language": "ko", "type": "translation" },
+        { "alias": "乾明太魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "乾明太魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 40 }
+      ]
+    },
+    {
+      "canonical_name": "dried anchovies (myeolchi)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 210,
+        "protein_g": 42.0,
+        "carbs_g": 0,
+        "fat_g": 4.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "myeolchi", "language": "en", "type": "synonym" },
+        { "alias": "niboshi", "language": "en", "type": "synonym" },
+        { "alias": "煮干し", "language": "ja", "type": "translation" },
+        { "alias": "멸치", "language": "ko", "type": "translation" },
+        { "alias": "乾鳀魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "乾鳀魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "handful", "grams": 20 }
+      ]
+    },
+    {
+      "canonical_name": "fish cake (kamaboko)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 95,
+        "protein_g": 12.0,
+        "carbs_g": 9.7,
+        "fat_g": 0.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "kamaboko", "language": "en", "type": "synonym" },
+        { "alias": "蒲鉾", "language": "ja", "type": "translation" },
+        { "alias": "カマボコ", "language": "ja", "type": "translation" },
+        { "alias": "어묵", "language": "ko", "type": "translation" },
+        { "alias": "魚板", "language": "zh-cn", "type": "translation" },
+        { "alias": "魚板", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 15 },
+        { "unit": "piece", "grams": 30 }
+      ]
+    },
+    {
+      "canonical_name": "fish sausage (eomuk)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 110,
+        "protein_g": 10.5,
+        "carbs_g": 12.0,
+        "fat_g": 2.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "eomuk", "language": "en", "type": "synonym" },
+        { "alias": "odeng", "language": "en", "type": "synonym" },
+        { "alias": "어묵", "language": "ko", "type": "translation" },
+        { "alias": "魚糕", "language": "zh-cn", "type": "translation" },
+        { "alias": "魚糕", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 50 }
+      ]
+    },
+    {
+      "canonical_name": "narutomaki",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 80,
+        "protein_g": 11.5,
+        "carbs_g": 6.0,
+        "fat_g": 0.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "naruto", "language": "en", "type": "synonym" },
+        { "alias": "ナルト", "language": "ja", "type": "translation" },
+        { "alias": "鳴門卷", "language": "zh-cn", "type": "translation" },
+        { "alias": "鳴門卷", "language": "zh-tw", "type": "translation" },
+        { "alias": "나루토마키", "language": "ko", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "chikuwa",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 121,
+        "protein_g": 12.2,
+        "carbs_g": 13.5,
+        "fat_g": 2.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "竹輪", "language": "ja", "type": "translation" },
+        { "alias": "チクワ", "language": "ja", "type": "translation" },
+        { "alias": "竹輪", "language": "zh-cn", "type": "translation" },
+        { "alias": "竹輪", "language": "zh-tw", "type": "translation" },
+        { "alias": "치쿠와", "language": "ko", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 30 }
+      ]
+    },
+    {
+      "canonical_name": "cobia",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 134,
+        "protein_g": 21.0,
+        "carbs_g": 0,
+        "fat_g": 5.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "black kingfish", "language": "en", "type": "synonym" },
+        { "alias": "スギ", "language": "ja", "type": "translation" },
+        { "alias": "海鱺", "language": "zh-cn", "type": "translation" },
+        { "alias": "海鱺", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 160 }
+      ]
+    },
+    {
+      "canonical_name": "milkfish (bangus)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 152,
+        "protein_g": 20.0,
+        "carbs_g": 0,
+        "fat_g": 7.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "bangus", "language": "en", "type": "synonym" },
+        { "alias": "虱目魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "虱目魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "サバヒー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 }
+      ]
+    },
+    {
+      "canonical_name": "grouper",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 92,
+        "protein_g": 19.4,
+        "carbs_g": 0,
+        "fat_g": 1.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "mero", "language": "es", "type": "synonym" },
+        { "alias": "石斑魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "石斑魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "ハタ", "language": "ja", "type": "translation" },
+        { "alias": "바리", "language": "ko", "type": "translation" },
+        { "alias": "mérou", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "ray",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 89,
+        "protein_g": 19.7,
+        "carbs_g": 0,
+        "fat_g": 0.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "skate", "language": "en", "type": "synonym" },
+        { "alias": "raie", "language": "fr", "type": "translation" },
+        { "alias": "raya", "language": "es", "type": "translation" },
+        { "alias": "에이", "language": "ko", "type": "translation" },
+        { "alias": "エイ", "language": "ja", "type": "translation" },
+        { "alias": "魟魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "魟魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "wing", "grams": 200 }
+      ]
+    },
+    {
+      "canonical_name": "smoked herring",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 215,
+        "protein_g": 24.6,
+        "carbs_g": 0,
+        "fat_g": 12.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "kipper", "language": "en", "type": "synonym" },
+        { "alias": "hareng fumé", "language": "fr", "type": "translation" },
+        { "alias": "arenque ahumado", "language": "es", "type": "translation" },
+        { "alias": "燻製ニシン", "language": "ja", "type": "translation" },
+        { "alias": "燻鯡魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "燻鯡魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 100 }
+      ]
+    },
+    {
+      "canonical_name": "smoked mackerel",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 305,
+        "protein_g": 18.9,
+        "carbs_g": 0,
+        "fat_g": 25.1,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "maquereau fumé", "language": "fr", "type": "translation" },
+        { "alias": "caballa ahumada", "language": "es", "type": "translation" },
+        { "alias": "燻製サバ", "language": "ja", "type": "translation" },
+        { "alias": "훈제고등어", "language": "ko", "type": "translation" },
+        { "alias": "燻鯖魚", "language": "zh-cn", "type": "translation" },
+        { "alias": "燻鯖魚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 120 }
+      ]
+    },
+    {
+      "canonical_name": "anchovy paste",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 131,
+        "protein_g": 18.0,
+        "carbs_g": 4.0,
+        "fat_g": 4.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "pâte d'anchois", "language": "fr", "type": "translation" },
+        { "alias": "pasta de anchoas", "language": "es", "type": "translation" },
+        { "alias": "アンチョビペースト", "language": "ja", "type": "translation" },
+        { "alias": "멸치페이스트", "language": "ko", "type": "translation" },
+        { "alias": "鯷魚醬", "language": "zh-cn", "type": "translation" },
+        { "alias": "鯷魚醬", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "teaspoon", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "salted pollock roe (myeongnan)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 126,
+        "protein_g": 20.0,
+        "carbs_g": 1.5,
+        "fat_g": 4.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "myeongnan", "language": "en", "type": "synonym" },
+        { "alias": "mentaiko", "language": "en", "type": "synonym" },
+        { "alias": "明太子", "language": "ja", "type": "translation" },
+        { "alias": "メンタイコ", "language": "ja", "type": "translation" },
+        { "alias": "명란", "language": "ko", "type": "translation" },
+        { "alias": "明太魚子", "language": "zh-cn", "type": "translation" },
+        { "alias": "明太魚子", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "sac", "grams": 50 }
+      ]
+    },
+    {
+      "canonical_name": "salted salmon roe (ikura)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 252,
+        "protein_g": 24.6,
+        "carbs_g": 2.9,
+        "fat_g": 15.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "ikura", "language": "en", "type": "synonym" },
+        { "alias": "イクラ", "language": "ja", "type": "translation" },
+        { "alias": "연어알", "language": "ko", "type": "translation" },
+        { "alias": "鮭魚卵", "language": "zh-cn", "type": "translation" },
+        { "alias": "鮭魚卵", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tablespoon", "grams": 16 }
+      ]
+    },
+    {
+      "canonical_name": "flying fish roe (tobiko)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 72,
+        "protein_g": 12.7,
+        "carbs_g": 1.5,
+        "fat_g": 1.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "tobiko", "language": "en", "type": "synonym" },
+        { "alias": "トビコ", "language": "ja", "type": "translation" },
+        { "alias": "飛魚卵", "language": "zh-cn", "type": "translation" },
+        { "alias": "飛魚卵", "language": "zh-tw", "type": "translation" },
+        { "alias": "날치알", "language": "ko", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tablespoon", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "capelin roe (masago)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 6.0,
+        "carbs_g": 1.0,
+        "fat_g": 1.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "masago", "language": "en", "type": "synonym" },
+        { "alias": "マサゴ", "language": "ja", "type": "translation" },
+        { "alias": "까나리알", "language": "ko", "type": "translation" },
+        { "alias": "毛鱗魚卵", "language": "zh-cn", "type": "translation" },
+        { "alias": "毛鱗魚卵", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tablespoon", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "ocean perch",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 79,
+        "protein_g": 15.8,
+        "carbs_g": 0,
+        "fat_g": 1.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "redfish", "language": "en", "type": "synonym" },
+        { "alias": "sebastes", "language": "en", "type": "synonym" },
+        { "alias": "メヌケ", "language": "ja", "type": "translation" },
+        { "alias": "적어", "language": "ko", "type": "translation" },
+        { "alias": "紅鮋", "language": "zh-cn", "type": "translation" },
+        { "alias": "紅鮋", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 }
+      ]
+    },
+    {
+      "canonical_name": "pufferfish (fugu)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 84,
+        "protein_g": 19.3,
+        "carbs_g": 0,
+        "fat_g": 0.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "fugu", "language": "en", "type": "synonym" },
+        { "alias": "blowfish", "language": "en", "type": "synonym" },
+        { "alias": "フグ", "language": "ja", "type": "translation" },
+        { "alias": "河豚", "language": "ja", "type": "translation" },
+        { "alias": "복어", "language": "ko", "type": "translation" },
+        { "alias": "河豚", "language": "zh-cn", "type": "translation" },
+        { "alias": "河豚", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 100 }
+      ]
+    },
+    {
+      "canonical_name": "loach",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 79,
+        "protein_g": 16.4,
+        "carbs_g": 0,
+        "fat_g": 0.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "dojo", "language": "en", "type": "synonym" },
+        { "alias": "ドジョウ", "language": "ja", "type": "translation" },
+        { "alias": "미꾸라지", "language": "ko", "type": "translation" },
+        { "alias": "泥鰍", "language": "zh-cn", "type": "translation" },
+        { "alias": "泥鰍", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole fish", "grams": 30 }
+      ]
+    },
+    {
+      "canonical_name": "herring roe (kazunoko)",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 162,
+        "protein_g": 25.2,
+        "carbs_g": 0.4,
+        "fat_g": 6.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "kazunoko", "language": "en", "type": "synonym" },
+        { "alias": "数の子", "language": "ja", "type": "translation" },
+        { "alias": "カズノコ", "language": "ja", "type": "translation" },
+        { "alias": "청어알", "language": "ko", "type": "translation" },
+        { "alias": "鯡魚子", "language": "zh-cn", "type": "translation" },
+        { "alias": "鯡魚子", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 30 }
+      ]
+    },
+    {
+      "canonical_name": "whiting",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 92,
+        "protein_g": 18.3,
+        "carbs_g": 0,
+        "fat_g": 1.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "merlan", "language": "fr", "type": "translation" },
+        { "alias": "pescadilla", "language": "es", "type": "translation" },
+        { "alias": "キス", "language": "ja", "type": "translation" },
+        { "alias": "보리멸", "language": "ko", "type": "translation" },
+        { "alias": "牙鱈", "language": "zh-cn", "type": "translation" },
+        { "alias": "牙鱈", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 120 }
+      ]
+    },
+    {
+      "canonical_name": "haddock",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 87,
+        "protein_g": 18.9,
+        "carbs_g": 0,
+        "fat_g": 0.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "églefin", "language": "fr", "type": "translation" },
+        { "alias": "eglefino", "language": "es", "type": "translation" },
+        { "alias": "ハドック", "language": "ja", "type": "translation" },
+        { "alias": "해덕", "language": "ko", "type": "translation" },
+        { "alias": "黑線鱈", "language": "zh-cn", "type": "translation" },
+        { "alias": "黑線鱈", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "saithe",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 92,
+        "protein_g": 19.4,
+        "carbs_g": 0,
+        "fat_g": 1.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "pollock", "language": "en", "type": "synonym" },
+        { "alias": "coalfish", "language": "en", "type": "synonym" },
+        { "alias": "lieu noir", "language": "fr", "type": "translation" },
+        { "alias": "abadejo", "language": "es", "type": "translation" },
+        { "alias": "スケトウダラ", "language": "ja", "type": "translation" },
+        { "alias": "명태", "language": "ko", "type": "translation" },
+        { "alias": "青鱈", "language": "zh-cn", "type": "translation" },
+        { "alias": "青鱈", "language": "zh-tw", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 }
+      ]
+    }
+  ]
+}

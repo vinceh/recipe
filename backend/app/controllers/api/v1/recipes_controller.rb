@@ -21,7 +21,7 @@ module Api
         total_pages = (total_count.to_f / per_page).ceil
 
         # Eager load associations for list view
-        recipes = recipes.includes(:ingredient_groups, :recipe_ingredients, :equipment, :dietary_tags, :cuisines, :recipe_steps)
+        recipes = recipes.includes(:ingredient_groups, { recipe_ingredients: :unit }, :equipment, :dietary_tags, :cuisines, :recipe_steps)
 
         paginated_recipes = recipes
           .order(created_at: :desc)
@@ -44,14 +44,14 @@ module Api
       # GET /api/v1/recipes/:id
       # Show single recipe with full details
       def show
-        recipe = Recipe.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :cuisines, :recipe_aliases, :recipe_steps).find(params[:id])
+        recipe = Recipe.includes(:ingredient_groups, { recipe_ingredients: :unit }, :equipment, :recipe_nutrition, :dietary_tags, :cuisines, :recipe_aliases, :recipe_steps, :recipe_step_images, instruction_items: :translations).find(params[:id])
         render_success(data: { recipe: recipe_detail_json(recipe) })
       end
 
       # POST /api/v1/recipes/:id/scale
       # Scale recipe ingredients to new serving size
       def scale
-        recipe = Recipe.includes(:ingredient_groups, :recipe_ingredients).find(params[:id])
+        recipe = Recipe.includes(:ingredient_groups, { recipe_ingredients: :unit }).find(params[:id])
         new_servings = params.require(:servings).to_f
 
         # Validate servings within min/max range
@@ -79,7 +79,7 @@ module Api
               {
                 "name" => item.ingredient_name,
                 "amount" => scaled_amount.to_s,
-                "unit" => item.unit,
+                "unit" => item.unit&.name,
                 "preparation" => item.preparation_notes,
                 "optional" => item.optional
               }
@@ -113,11 +113,10 @@ module Api
 
       # Apply basic search and filter parameters (backwards compatible)
       def apply_basic_search_filters(recipes)
-        # Search query (name only) - find matching recipe IDs from translation table
+        # Search query - comprehensive search across names, tags, ingredients, instructions, descriptions
         if params[:q].present?
-          query = "%#{params[:q]}%"
-          matching_ids = RecipeTranslation.where("name ILIKE ?", query).pluck(:recipe_id)
-          recipes = recipes.where(id: matching_ids)
+          matching_recipes = RecipeSearchService.comprehensive_search(params[:q])
+          recipes = recipes.where(id: matching_recipes.pluck(:id))
         end
 
         # Filter by dietary tags
@@ -154,6 +153,14 @@ module Api
           recipes = recipes.where(difficulty_level: params[:difficulty_level])
         end
 
+        # Filter by tags (free-form tags stored as PostgreSQL array)
+        if params[:tags].present?
+          tag_list = params[:tags].is_a?(Array) ? params[:tags] : params[:tags].split(",").map(&:strip)
+          tag_list.each do |tag|
+            recipes = recipes.where("? = ANY(tags)", tag)
+          end
+        end
+
         recipes
       end
 
@@ -164,7 +171,9 @@ module Api
           name: recipe.name,
           description: recipe.description,
           language: recipe.source_language,
-          image_url: recipe.image.attached? ? rails_blob_url(recipe.image, only_path: false) : nil,
+          image_url: recipe.card_image.attached? ? rails_blob_url(recipe.card_image, only_path: false) : nil,
+          card_image_url: recipe.card_image.attached? ? rails_blob_url(recipe.card_image, only_path: false) : nil,
+          detail_image_url: recipe.detail_image.attached? ? rails_blob_url(recipe.detail_image, only_path: false) : nil,
           servings: {
             original: recipe.servings_original,
             min: recipe.servings_min,
@@ -177,12 +186,14 @@ module Api
           },
           dietary_tags: recipe.dietary_tags.map(&:display_name).compact,
           cuisines: recipe.cuisines.map(&:display_name).compact,
+          tags: recipe.tags,
           source_url: recipe.source_url,
           difficulty_level: recipe.difficulty_level,
           translations_completed: recipe.translations_completed,
           last_translated_at: recipe.last_translated_at,
           created_at: recipe.created_at,
-          updated_at: recipe.updated_at
+          updated_at: recipe.updated_at,
+          favorite: recipe_favorited?(recipe)
         }
       end
 
@@ -193,7 +204,10 @@ module Api
           name: recipe.name,
           description: recipe.description,
           language: recipe.source_language,
-          image_url: recipe.image.attached? ? rails_blob_url(recipe.image, only_path: false) : nil,
+          image_url: recipe.detail_image.attached? ? rails_blob_url(recipe.detail_image, only_path: false) : nil,
+          card_image_url: recipe.card_image.attached? ? rails_blob_url(recipe.card_image, only_path: false) : nil,
+          detail_image_url: recipe.detail_image.attached? ? rails_blob_url(recipe.detail_image, only_path: false) : nil,
+          image_ai_generated: recipe.image_ai_generated,
           servings: {
             original: recipe.servings_original,
             min: recipe.servings_min,
@@ -206,8 +220,11 @@ module Api
           },
           dietary_tags: recipe.dietary_tags.map(&:display_name).compact,
           cuisines: recipe.cuisines.map(&:display_name).compact,
+          tags: recipe.tags,
           ingredient_groups: serialize_ingredient_groups(recipe),
           steps: serialize_recipe_steps(recipe),
+          step_images: serialize_step_images(recipe),
+          instruction_items: serialize_instruction_items(recipe),
           equipment: recipe.equipment.map(&:canonical_name).compact,
           nutrition: recipe.recipe_nutrition ? serialize_nutrition(recipe.recipe_nutrition) : nil,
           requires_precision: recipe.requires_precision,
@@ -217,8 +234,15 @@ module Api
           translations_completed: recipe.translations_completed,
           last_translated_at: recipe.last_translated_at,
           created_at: recipe.created_at,
-          updated_at: recipe.updated_at
+          updated_at: recipe.updated_at,
+          favorite: recipe_favorited?(recipe)
         }
+      end
+
+      def recipe_favorited?(recipe)
+        return false unless current_user
+
+        current_user.user_favorites.exists?(recipe_id: recipe.id)
       end
     end
   end

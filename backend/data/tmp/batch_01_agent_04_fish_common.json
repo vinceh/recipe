@@ -1,0 +1,2079 @@
+{
+  "batch": 1,
+  "agent": 4,
+  "category": "fish_common",
+  "generated_at": "2025-12-11T00:00:00Z",
+  "ingredients": [
+    {
+      "canonical_name": "salmon fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 208,
+        "protein_g": 20.4,
+        "carbs_g": 0,
+        "fat_g": 13.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "salmon", "language": "en", "type": "synonym" },
+        { "alias": "Atlantic salmon", "language": "en", "type": "synonym" },
+        { "alias": "サーモン", "language": "ja", "type": "translation" },
+        { "alias": "鮭", "language": "ja", "type": "translation" },
+        { "alias": "연어", "language": "ko", "type": "translation" },
+        { "alias": "三文鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "三文魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "salmón", "language": "es", "type": "translation" },
+        { "alias": "saumon", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 170 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "smoked salmon",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 117,
+        "protein_g": 18.3,
+        "carbs_g": 0,
+        "fat_g": 4.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "lox", "language": "en", "type": "synonym" },
+        { "alias": "スモークサーモン", "language": "ja", "type": "translation" },
+        { "alias": "훈제 연어", "language": "ko", "type": "translation" },
+        { "alias": "烟熏三文鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "煙燻三文魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "salmón ahumado", "language": "es", "type": "translation" },
+        { "alias": "saumon fumé", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 25 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "tuna fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 144,
+        "protein_g": 23.3,
+        "carbs_g": 0,
+        "fat_g": 4.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "tuna", "language": "en", "type": "synonym" },
+        { "alias": "yellowfin tuna", "language": "en", "type": "synonym" },
+        { "alias": "マグロ", "language": "ja", "type": "translation" },
+        { "alias": "참치", "language": "ko", "type": "translation" },
+        { "alias": "金枪鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "金槍魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "atún", "language": "es", "type": "translation" },
+        { "alias": "thon", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 200 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "canned tuna in water",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 116,
+        "protein_g": 25.5,
+        "carbs_g": 0,
+        "fat_g": 0.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "tuna in water", "language": "en", "type": "synonym" },
+        { "alias": "water-packed tuna", "language": "en", "type": "synonym" },
+        { "alias": "ツナ缶", "language": "ja", "type": "translation" },
+        { "alias": "참치 통조림", "language": "ko", "type": "translation" },
+        { "alias": "金枪鱼罐头", "language": "zh-cn", "type": "translation" },
+        { "alias": "金槍魚罐頭", "language": "zh-tw", "type": "translation" },
+        { "alias": "atún enlatado", "language": "es", "type": "translation" },
+        { "alias": "thon en conserve", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "can", "grams": 142 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "canned tuna in oil",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 198,
+        "protein_g": 29.1,
+        "carbs_g": 0,
+        "fat_g": 8.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "tuna in oil", "language": "en", "type": "synonym" },
+        { "alias": "oil-packed tuna", "language": "en", "type": "synonym" },
+        { "alias": "オイルツナ", "language": "ja", "type": "translation" },
+        { "alias": "기름 참치", "language": "ko", "type": "translation" },
+        { "alias": "油浸金枪鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "油浸金槍魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "atún en aceite", "language": "es", "type": "translation" },
+        { "alias": "thon à l'huile", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "can", "grams": 142 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "cod fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 82,
+        "protein_g": 17.8,
+        "carbs_g": 0,
+        "fat_g": 0.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "cod", "language": "en", "type": "synonym" },
+        { "alias": "Atlantic cod", "language": "en", "type": "synonym" },
+        { "alias": "タラ", "language": "ja", "type": "translation" },
+        { "alias": "대구", "language": "ko", "type": "translation" },
+        { "alias": "鳕鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "鱈魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "bacalao", "language": "es", "type": "translation" },
+        { "alias": "morue", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "tilapia fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 96,
+        "protein_g": 20.1,
+        "carbs_g": 0,
+        "fat_g": 1.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "tilapia", "language": "en", "type": "synonym" },
+        { "alias": "ティラピア", "language": "ja", "type": "translation" },
+        { "alias": "틸라피아", "language": "ko", "type": "translation" },
+        { "alias": "罗非鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "羅非魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "tilapia", "language": "es", "type": "translation" },
+        { "alias": "tilapia", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "sea bass fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 97,
+        "protein_g": 18.4,
+        "carbs_g": 0,
+        "fat_g": 2.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "sea bass", "language": "en", "type": "synonym" },
+        { "alias": "European sea bass", "language": "en", "type": "synonym" },
+        { "alias": "スズキ", "language": "ja", "type": "translation" },
+        { "alias": "농어", "language": "ko", "type": "translation" },
+        { "alias": "鲈鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "鱸魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "lubina", "language": "es", "type": "translation" },
+        { "alias": "bar", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 160 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "trout fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 119,
+        "protein_g": 20.5,
+        "carbs_g": 0,
+        "fat_g": 3.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "trout", "language": "en", "type": "synonym" },
+        { "alias": "rainbow trout", "language": "en", "type": "synonym" },
+        { "alias": "マス", "language": "ja", "type": "translation" },
+        { "alias": "송어", "language": "ko", "type": "translation" },
+        { "alias": "鳟鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "鱒魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "trucha", "language": "es", "type": "translation" },
+        { "alias": "truite", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 },
+        { "unit": "whole", "grams": 300 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "mackerel fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 205,
+        "protein_g": 18.6,
+        "carbs_g": 0,
+        "fat_g": 13.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "mackerel", "language": "en", "type": "synonym" },
+        { "alias": "Atlantic mackerel", "language": "en", "type": "synonym" },
+        { "alias": "サバ", "language": "ja", "type": "translation" },
+        { "alias": "고등어", "language": "ko", "type": "translation" },
+        { "alias": "鲭鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "鯖魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "caballa", "language": "es", "type": "translation" },
+        { "alias": "maquereau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 120 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "sardines",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 208,
+        "protein_g": 24.6,
+        "carbs_g": 0,
+        "fat_g": 11.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "sardine", "language": "en", "type": "synonym" },
+        { "alias": "イワシ", "language": "ja", "type": "translation" },
+        { "alias": "정어리", "language": "ko", "type": "translation" },
+        { "alias": "沙丁鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "沙丁魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "sardina", "language": "es", "type": "translation" },
+        { "alias": "sardine", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole", "grams": 15 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "canned sardines in oil",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 208,
+        "protein_g": 24.6,
+        "carbs_g": 0,
+        "fat_g": 11.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "sardines in oil", "language": "en", "type": "synonym" },
+        { "alias": "オイルサーディン", "language": "ja", "type": "translation" },
+        { "alias": "기름 정어리", "language": "ko", "type": "translation" },
+        { "alias": "油浸沙丁鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "油浸沙丁魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "sardinas en aceite", "language": "es", "type": "translation" },
+        { "alias": "sardines à l'huile", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "can", "grams": 106 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "anchovies",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 131,
+        "protein_g": 20.4,
+        "carbs_g": 0,
+        "fat_g": 4.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "anchovy", "language": "en", "type": "synonym" },
+        { "alias": "アンチョビ", "language": "ja", "type": "translation" },
+        { "alias": "멸치", "language": "ko", "type": "translation" },
+        { "alias": "凤尾鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "鳳尾魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "anchoa", "language": "es", "type": "translation" },
+        { "alias": "anchois", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 4 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "herring fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 158,
+        "protein_g": 17.9,
+        "carbs_g": 0,
+        "fat_g": 9.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "herring", "language": "en", "type": "synonym" },
+        { "alias": "Atlantic herring", "language": "en", "type": "synonym" },
+        { "alias": "ニシン", "language": "ja", "type": "translation" },
+        { "alias": "청어", "language": "ko", "type": "translation" },
+        { "alias": "鲱鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "鯡魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "arenque", "language": "es", "type": "translation" },
+        { "alias": "hareng", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 100 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "halibut fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 111,
+        "protein_g": 22.5,
+        "carbs_g": 0,
+        "fat_g": 2.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "halibut", "language": "en", "type": "synonym" },
+        { "alias": "Pacific halibut", "language": "en", "type": "synonym" },
+        { "alias": "オヒョウ", "language": "ja", "type": "translation" },
+        { "alias": "넙치", "language": "ko", "type": "translation" },
+        { "alias": "比目鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "比目魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "halibut", "language": "es", "type": "translation" },
+        { "alias": "flétan", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 180 },
+        { "unit": "steak", "grams": 200 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "flounder fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 86,
+        "protein_g": 17.9,
+        "carbs_g": 0,
+        "fat_g": 1.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "flounder", "language": "en", "type": "synonym" },
+        { "alias": "カレイ", "language": "ja", "type": "translation" },
+        { "alias": "가자미", "language": "ko", "type": "translation" },
+        { "alias": "比目鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "比目魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "platija", "language": "es", "type": "translation" },
+        { "alias": "flet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 120 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "sole fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 70,
+        "protein_g": 14.9,
+        "carbs_g": 0,
+        "fat_g": 0.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "sole", "language": "en", "type": "synonym" },
+        { "alias": "Dover sole", "language": "en", "type": "synonym" },
+        { "alias": "シタビラメ", "language": "ja", "type": "translation" },
+        { "alias": "참서대", "language": "ko", "type": "translation" },
+        { "alias": "鲽鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "鰈魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "lenguado", "language": "es", "type": "translation" },
+        { "alias": "sole", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 110 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "snapper fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 100,
+        "protein_g": 20.5,
+        "carbs_g": 0,
+        "fat_g": 1.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "red snapper", "language": "en", "type": "synonym" },
+        { "alias": "snapper", "language": "en", "type": "synonym" },
+        { "alias": "鯛", "language": "ja", "type": "translation" },
+        { "alias": "도미", "language": "ko", "type": "translation" },
+        { "alias": "鲷鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "鯛魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "pargo", "language": "es", "type": "translation" },
+        { "alias": "vivaneau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "mahi-mahi fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 85,
+        "protein_g": 18.5,
+        "carbs_g": 0,
+        "fat_g": 0.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "mahi-mahi", "language": "en", "type": "synonym" },
+        { "alias": "dorado", "language": "en", "type": "synonym" },
+        { "alias": "dolphinfish", "language": "en", "type": "synonym" },
+        { "alias": "シイラ", "language": "ja", "type": "translation" },
+        { "alias": "만새기", "language": "ko", "type": "translation" },
+        { "alias": "鲯鳅", "language": "zh-cn", "type": "translation" },
+        { "alias": "鯕鰍", "language": "zh-tw", "type": "translation" },
+        { "alias": "dorado", "language": "es", "type": "translation" },
+        { "alias": "dorade coryphène", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 160 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "swordfish steak",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 121,
+        "protein_g": 19.8,
+        "carbs_g": 0,
+        "fat_g": 4.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "swordfish", "language": "en", "type": "synonym" },
+        { "alias": "メカジキ", "language": "ja", "type": "translation" },
+        { "alias": "황새치", "language": "ko", "type": "translation" },
+        { "alias": "剑鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "劍魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "pez espada", "language": "es", "type": "translation" },
+        { "alias": "espadon", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 200 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "catfish fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 105,
+        "protein_g": 18.5,
+        "carbs_g": 0,
+        "fat_g": 3.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "catfish", "language": "en", "type": "synonym" },
+        { "alias": "ナマズ", "language": "ja", "type": "translation" },
+        { "alias": "메기", "language": "ko", "type": "translation" },
+        { "alias": "鲶鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "鯰魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "bagre", "language": "es", "type": "translation" },
+        { "alias": "poisson-chat", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "haddock fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 87,
+        "protein_g": 18.9,
+        "carbs_g": 0,
+        "fat_g": 0.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "haddock", "language": "en", "type": "synonym" },
+        { "alias": "コダラ", "language": "ja", "type": "translation" },
+        { "alias": "해덕", "language": "ko", "type": "translation" },
+        { "alias": "黑线鳕", "language": "zh-cn", "type": "translation" },
+        { "alias": "黑線鱈", "language": "zh-tw", "type": "translation" },
+        { "alias": "eglefino", "language": "es", "type": "translation" },
+        { "alias": "églefin", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pollock fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 79,
+        "protein_g": 17.0,
+        "carbs_g": 0,
+        "fat_g": 0.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "pollock", "language": "en", "type": "synonym" },
+        { "alias": "Alaska pollock", "language": "en", "type": "synonym" },
+        { "alias": "スケトウダラ", "language": "ja", "type": "translation" },
+        { "alias": "명태", "language": "ko", "type": "translation" },
+        { "alias": "狭鳕", "language": "zh-cn", "type": "translation" },
+        { "alias": "狹鱈", "language": "zh-tw", "type": "translation" },
+        { "alias": "abadejo", "language": "es", "type": "translation" },
+        { "alias": "goberge", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "perch fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 91,
+        "protein_g": 18.6,
+        "carbs_g": 0,
+        "fat_g": 1.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "perch", "language": "en", "type": "synonym" },
+        { "alias": "パーチ", "language": "ja", "type": "translation" },
+        { "alias": "농어", "language": "ko", "type": "translation" },
+        { "alias": "鲈鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "鱸魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "perca", "language": "es", "type": "translation" },
+        { "alias": "perche", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 120 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pike fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 88,
+        "protein_g": 19.3,
+        "carbs_g": 0,
+        "fat_g": 0.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "pike", "language": "en", "type": "synonym" },
+        { "alias": "northern pike", "language": "en", "type": "synonym" },
+        { "alias": "カワカマス", "language": "ja", "type": "translation" },
+        { "alias": "파이크", "language": "ko", "type": "translation" },
+        { "alias": "狗鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "狗魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "lucio", "language": "es", "type": "translation" },
+        { "alias": "brochet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 130 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "barramundi fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 97,
+        "protein_g": 17.6,
+        "carbs_g": 0,
+        "fat_g": 2.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "barramundi", "language": "en", "type": "synonym" },
+        { "alias": "Asian sea bass", "language": "en", "type": "synonym" },
+        { "alias": "バラマンディ", "language": "ja", "type": "translation" },
+        { "alias": "바라문디", "language": "ko", "type": "translation" },
+        { "alias": "盲曹", "language": "zh-cn", "type": "translation" },
+        { "alias": "盲曹", "language": "zh-tw", "type": "translation" },
+        { "alias": "barramundi", "language": "es", "type": "translation" },
+        { "alias": "barramundi", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "grouper fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 92,
+        "protein_g": 19.4,
+        "carbs_g": 0,
+        "fat_g": 1.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "grouper", "language": "en", "type": "synonym" },
+        { "alias": "ハタ", "language": "ja", "type": "translation" },
+        { "alias": "그루퍼", "language": "ko", "type": "translation" },
+        { "alias": "石斑鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "石斑魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "mero", "language": "es", "type": "translation" },
+        { "alias": "mérou", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 160 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "bluefish fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 124,
+        "protein_g": 20.0,
+        "carbs_g": 0,
+        "fat_g": 4.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "bluefish", "language": "en", "type": "synonym" },
+        { "alias": "アミキリ", "language": "ja", "type": "translation" },
+        { "alias": "청어", "language": "ko", "type": "translation" },
+        { "alias": "蓝鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "藍魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "anjova", "language": "es", "type": "translation" },
+        { "alias": "tassergal", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "rockfish fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 94,
+        "protein_g": 18.8,
+        "carbs_g": 0,
+        "fat_g": 1.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "rockfish", "language": "en", "type": "synonym" },
+        { "alias": "Pacific rockfish", "language": "en", "type": "synonym" },
+        { "alias": "メバル", "language": "ja", "type": "translation" },
+        { "alias": "우럭", "language": "ko", "type": "translation" },
+        { "alias": "石鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "石魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "gallineta", "language": "es", "type": "translation" },
+        { "alias": "sébaste", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pompano fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 164,
+        "protein_g": 18.5,
+        "carbs_g": 0,
+        "fat_g": 9.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "pompano", "language": "en", "type": "synonym" },
+        { "alias": "Florida pompano", "language": "en", "type": "synonym" },
+        { "alias": "シマアジ", "language": "ja", "type": "translation" },
+        { "alias": "전갱이", "language": "ko", "type": "translation" },
+        { "alias": "鲳鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "鯧魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "pámpano", "language": "es", "type": "translation" },
+        { "alias": "pompano", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 130 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "bluegill fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 97,
+        "protein_g": 20.9,
+        "carbs_g": 0,
+        "fat_g": 0.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "bluegill", "language": "en", "type": "synonym" },
+        { "alias": "ブルーギル", "language": "ja", "type": "translation" },
+        { "alias": "블루길", "language": "ko", "type": "translation" },
+        { "alias": "蓝鳃太阳鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "藍鰓太陽魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "perca sol", "language": "es", "type": "translation" },
+        { "alias": "crapet arlequin", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 100 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "carp fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 127,
+        "protein_g": 17.8,
+        "carbs_g": 0,
+        "fat_g": 5.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "carp", "language": "en", "type": "synonym" },
+        { "alias": "鯉", "language": "ja", "type": "translation" },
+        { "alias": "잉어", "language": "ko", "type": "translation" },
+        { "alias": "鲤鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "鯉魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "carpa", "language": "es", "type": "translation" },
+        { "alias": "carpe", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "walleye fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 93,
+        "protein_g": 19.1,
+        "carbs_g": 0,
+        "fat_g": 1.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "walleye", "language": "en", "type": "synonym" },
+        { "alias": "yellow pike", "language": "en", "type": "synonym" },
+        { "alias": "ウォールアイ", "language": "ja", "type": "translation" },
+        { "alias": "월아이", "language": "ko", "type": "translation" },
+        { "alias": "大眼梭鲈", "language": "zh-cn", "type": "translation" },
+        { "alias": "大眼梭鱸", "language": "zh-tw", "type": "translation" },
+        { "alias": "lucioperca", "language": "es", "type": "translation" },
+        { "alias": "doré", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 130 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "turbot fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 95,
+        "protein_g": 16.1,
+        "carbs_g": 0,
+        "fat_g": 3.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "turbot", "language": "en", "type": "synonym" },
+        { "alias": "ヒラメ", "language": "ja", "type": "translation" },
+        { "alias": "광어", "language": "ko", "type": "translation" },
+        { "alias": "大菱鲆", "language": "zh-cn", "type": "translation" },
+        { "alias": "大菱鮃", "language": "zh-tw", "type": "translation" },
+        { "alias": "rodaballo", "language": "es", "type": "translation" },
+        { "alias": "turbot", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "monkfish fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 76,
+        "protein_g": 14.5,
+        "carbs_g": 0,
+        "fat_g": 1.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "monkfish", "language": "en", "type": "synonym" },
+        { "alias": "angler fish", "language": "en", "type": "synonym" },
+        { "alias": "アンコウ", "language": "ja", "type": "translation" },
+        { "alias": "아귀", "language": "ko", "type": "translation" },
+        { "alias": "鮟鱇", "language": "zh-cn", "type": "translation" },
+        { "alias": "鮟鱇", "language": "zh-tw", "type": "translation" },
+        { "alias": "rape", "language": "es", "type": "translation" },
+        { "alias": "lotte", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "plaice fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 86,
+        "protein_g": 17.9,
+        "carbs_g": 0,
+        "fat_g": 1.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "plaice", "language": "en", "type": "synonym" },
+        { "alias": "ツノガレイ", "language": "ja", "type": "translation" },
+        { "alias": "플레이스", "language": "ko", "type": "translation" },
+        { "alias": "鲽鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "鰈魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "solla", "language": "es", "type": "translation" },
+        { "alias": "plie", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 120 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "bream fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 96,
+        "protein_g": 17.4,
+        "carbs_g": 0,
+        "fat_g": 2.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "bream", "language": "en", "type": "synonym" },
+        { "alias": "sea bream", "language": "en", "type": "synonym" },
+        { "alias": "タイ", "language": "ja", "type": "translation" },
+        { "alias": "도미", "language": "ko", "type": "translation" },
+        { "alias": "鲷鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "鯛魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "besugo", "language": "es", "type": "translation" },
+        { "alias": "dorade", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "smelt",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 97,
+        "protein_g": 17.6,
+        "carbs_g": 0,
+        "fat_g": 2.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "smelt fish", "language": "en", "type": "synonym" },
+        { "alias": "ワカサギ", "language": "ja", "type": "translation" },
+        { "alias": "빙어", "language": "ko", "type": "translation" },
+        { "alias": "胡瓜鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "胡瓜魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "eperlano", "language": "es", "type": "translation" },
+        { "alias": "éperlan", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole", "grams": 20 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "whiting fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 90,
+        "protein_g": 18.3,
+        "carbs_g": 0,
+        "fat_g": 1.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "whiting", "language": "en", "type": "synonym" },
+        { "alias": "ミナミダラ", "language": "ja", "type": "translation" },
+        { "alias": "휘팅", "language": "ko", "type": "translation" },
+        { "alias": "牙鳕", "language": "zh-cn", "type": "translation" },
+        { "alias": "牙鱈", "language": "zh-tw", "type": "translation" },
+        { "alias": "pescadilla", "language": "es", "type": "translation" },
+        { "alias": "merlan", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 130 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "skate fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 98,
+        "protein_g": 21.5,
+        "carbs_g": 0,
+        "fat_g": 0.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "skate", "language": "en", "type": "synonym" },
+        { "alias": "ray", "language": "en", "type": "synonym" },
+        { "alias": "エイ", "language": "ja", "type": "translation" },
+        { "alias": "가오리", "language": "ko", "type": "translation" },
+        { "alias": "鳐鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "鰩魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "raya", "language": "es", "type": "translation" },
+        { "alias": "raie", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "wing", "grams": 200 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "John Dory fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 79,
+        "protein_g": 18.1,
+        "carbs_g": 0,
+        "fat_g": 0.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "John Dory", "language": "en", "type": "synonym" },
+        { "alias": "St. Pierre fish", "language": "en", "type": "synonym" },
+        { "alias": "マトウダイ", "language": "ja", "type": "translation" },
+        { "alias": "존 도리", "language": "ko", "type": "translation" },
+        { "alias": "海鲂", "language": "zh-cn", "type": "translation" },
+        { "alias": "海魴", "language": "zh-tw", "type": "translation" },
+        { "alias": "pez de San Pedro", "language": "es", "type": "translation" },
+        { "alias": "Saint-Pierre", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 130 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "eel fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 184,
+        "protein_g": 18.4,
+        "carbs_g": 0,
+        "fat_g": 11.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "eel", "language": "en", "type": "synonym" },
+        { "alias": "freshwater eel", "language": "en", "type": "synonym" },
+        { "alias": "ウナギ", "language": "ja", "type": "translation" },
+        { "alias": "장어", "language": "ko", "type": "translation" },
+        { "alias": "鳗鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "鰻魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "anguila", "language": "es", "type": "translation" },
+        { "alias": "anguille", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 120 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "Pacific saury",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 142,
+        "protein_g": 18.1,
+        "carbs_g": 0,
+        "fat_g": 7.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "saury", "language": "en", "type": "synonym" },
+        { "alias": "mackerel pike", "language": "en", "type": "synonym" },
+        { "alias": "サンマ", "language": "ja", "type": "translation" },
+        { "alias": "꽁치", "language": "ko", "type": "translation" },
+        { "alias": "秋刀鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "秋刀魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "paparda", "language": "es", "type": "translation" },
+        { "alias": "balaou", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole", "grams": 100 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "Pacific salmon",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 139,
+        "protein_g": 21.6,
+        "carbs_g": 0,
+        "fat_g": 5.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "wild salmon", "language": "en", "type": "synonym" },
+        { "alias": "sockeye salmon", "language": "en", "type": "synonym" },
+        { "alias": "紅鮭", "language": "ja", "type": "translation" },
+        { "alias": "홍연어", "language": "ko", "type": "translation" },
+        { "alias": "太平洋鲑鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "太平洋鮭魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "salmón del Pacífico", "language": "es", "type": "translation" },
+        { "alias": "saumon du Pacifique", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 170 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "coho salmon",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 146,
+        "protein_g": 21.3,
+        "carbs_g": 0,
+        "fat_g": 6.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "silver salmon", "language": "en", "type": "synonym" },
+        { "alias": "ギンザケ", "language": "ja", "type": "translation" },
+        { "alias": "은연어", "language": "ko", "type": "translation" },
+        { "alias": "银鲑鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "銀鮭魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "salmón coho", "language": "es", "type": "translation" },
+        { "alias": "saumon coho", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 170 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pink salmon",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 116,
+        "protein_g": 19.9,
+        "carbs_g": 0,
+        "fat_g": 3.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "humpback salmon", "language": "en", "type": "synonym" },
+        { "alias": "カラフトマス", "language": "ja", "type": "translation" },
+        { "alias": "곱사연어", "language": "ko", "type": "translation" },
+        { "alias": "粉红鲑鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "粉紅鮭魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "salmón rosado", "language": "es", "type": "translation" },
+        { "alias": "saumon rose", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "chum salmon",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 120,
+        "protein_g": 19.9,
+        "carbs_g": 0,
+        "fat_g": 3.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "keta salmon", "language": "en", "type": "synonym" },
+        { "alias": "dog salmon", "language": "en", "type": "synonym" },
+        { "alias": "シロザケ", "language": "ja", "type": "translation" },
+        { "alias": "연어", "language": "ko", "type": "translation" },
+        { "alias": "大马哈鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "大馬哈魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "salmón keta", "language": "es", "type": "translation" },
+        { "alias": "saumon keta", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 160 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "king salmon",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 179,
+        "protein_g": 19.8,
+        "carbs_g": 0,
+        "fat_g": 10.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chinook salmon", "language": "en", "type": "synonym" },
+        { "alias": "spring salmon", "language": "en", "type": "synonym" },
+        { "alias": "キングサーモン", "language": "ja", "type": "translation" },
+        { "alias": "킹연어", "language": "ko", "type": "translation" },
+        { "alias": "帝王鲑鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "帝王鮭魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "salmón real", "language": "es", "type": "translation" },
+        { "alias": "saumon royal", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 180 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "skipjack tuna",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 103,
+        "protein_g": 22.0,
+        "carbs_g": 0,
+        "fat_g": 1.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "skipjack", "language": "en", "type": "synonym" },
+        { "alias": "カツオ", "language": "ja", "type": "translation" },
+        { "alias": "가다랑어", "language": "ko", "type": "translation" },
+        { "alias": "鲣鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "鰹魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "listado", "language": "es", "type": "translation" },
+        { "alias": "bonite à ventre rayé", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "albacore tuna",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 108,
+        "protein_g": 23.0,
+        "carbs_g": 0,
+        "fat_g": 0.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "albacore", "language": "en", "type": "synonym" },
+        { "alias": "white tuna", "language": "en", "type": "synonym" },
+        { "alias": "ビンナガマグロ", "language": "ja", "type": "translation" },
+        { "alias": "날개다랑어", "language": "ko", "type": "translation" },
+        { "alias": "长鳍金枪鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "長鰭金槍魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "atún blanco", "language": "es", "type": "translation" },
+        { "alias": "germon", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 180 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "bluefin tuna",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 144,
+        "protein_g": 23.3,
+        "carbs_g": 0,
+        "fat_g": 4.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "bluefin", "language": "en", "type": "synonym" },
+        { "alias": "クロマグロ", "language": "ja", "type": "translation" },
+        { "alias": "참다랑어", "language": "ko", "type": "translation" },
+        { "alias": "蓝鳍金枪鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "藍鰭金槍魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "atún de aleta azul", "language": "es", "type": "translation" },
+        { "alias": "thon rouge", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 200 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "bigeye tuna",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 144,
+        "protein_g": 23.4,
+        "carbs_g": 0,
+        "fat_g": 4.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "bigeye", "language": "en", "type": "synonym" },
+        { "alias": "メバチマグロ", "language": "ja", "type": "translation" },
+        { "alias": "눈다랑어", "language": "ko", "type": "translation" },
+        { "alias": "大眼金枪鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "大眼金槍魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "patudo", "language": "es", "type": "translation" },
+        { "alias": "thon obèse", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 190 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "black cod",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 195,
+        "protein_g": 13.4,
+        "carbs_g": 0,
+        "fat_g": 15.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "sablefish", "language": "en", "type": "synonym" },
+        { "alias": "butterfish", "language": "en", "type": "synonym" },
+        { "alias": "ギンダラ", "language": "ja", "type": "translation" },
+        { "alias": "검은대구", "language": "ko", "type": "translation" },
+        { "alias": "裸盖鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "裸蓋魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "bacalao negro", "language": "es", "type": "translation" },
+        { "alias": "morue charbonnière", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 160 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "Chilean sea bass",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 109,
+        "protein_g": 15.5,
+        "carbs_g": 0,
+        "fat_g": 4.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Patagonian toothfish", "language": "en", "type": "synonym" },
+        { "alias": "メロ", "language": "ja", "type": "translation" },
+        { "alias": "메로", "language": "ko", "type": "translation" },
+        { "alias": "智利鲈鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "智利鱸魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "merluza negra", "language": "es", "type": "translation" },
+        { "alias": "légine australe", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 170 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "ocean perch",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 79,
+        "protein_g": 15.3,
+        "carbs_g": 0,
+        "fat_g": 1.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "redfish", "language": "en", "type": "synonym" },
+        { "alias": "Atlantic redfish", "language": "en", "type": "synonym" },
+        { "alias": "アカウオ", "language": "ja", "type": "translation" },
+        { "alias": "붉은메기", "language": "ko", "type": "translation" },
+        { "alias": "红鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "紅魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "gallineta nórdica", "language": "es", "type": "translation" },
+        { "alias": "sébaste atlantique", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 130 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lingcod fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 85,
+        "protein_g": 17.7,
+        "carbs_g": 0,
+        "fat_g": 1.1,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "lingcod", "language": "en", "type": "synonym" },
+        { "alias": "ling cod", "language": "en", "type": "synonym" },
+        { "alias": "リングコッド", "language": "ja", "type": "translation" },
+        { "alias": "링코드", "language": "ko", "type": "translation" },
+        { "alias": "长鳕", "language": "zh-cn", "type": "translation" },
+        { "alias": "長鱈", "language": "zh-tw", "type": "translation" },
+        { "alias": "ling", "language": "es", "type": "translation" },
+        { "alias": "lingue", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "striped bass fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 97,
+        "protein_g": 17.7,
+        "carbs_g": 0,
+        "fat_g": 2.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "striped bass", "language": "en", "type": "synonym" },
+        { "alias": "striper", "language": "en", "type": "synonym" },
+        { "alias": "ストライプドバス", "language": "ja", "type": "translation" },
+        { "alias": "줄무늬농어", "language": "ko", "type": "translation" },
+        { "alias": "条纹鲈鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "條紋鱸魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "lubina rayada", "language": "es", "type": "translation" },
+        { "alias": "bar rayé", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 160 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "largemouth bass fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 114,
+        "protein_g": 18.9,
+        "carbs_g": 0,
+        "fat_g": 3.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "largemouth bass", "language": "en", "type": "synonym" },
+        { "alias": "black bass", "language": "en", "type": "synonym" },
+        { "alias": "オオクチバス", "language": "ja", "type": "translation" },
+        { "alias": "큰입배스", "language": "ko", "type": "translation" },
+        { "alias": "大口黑鲈", "language": "zh-cn", "type": "translation" },
+        { "alias": "大口黑鱸", "language": "zh-tw", "type": "translation" },
+        { "alias": "perca americana", "language": "es", "type": "translation" },
+        { "alias": "achigan à grande bouche", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "smoked haddock",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 116,
+        "protein_g": 25.2,
+        "carbs_g": 0,
+        "fat_g": 0.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "finnan haddie", "language": "en", "type": "synonym" },
+        { "alias": "燻製ハドック", "language": "ja", "type": "translation" },
+        { "alias": "훈제 해덕", "language": "ko", "type": "translation" },
+        { "alias": "烟熏黑线鳕", "language": "zh-cn", "type": "translation" },
+        { "alias": "煙燻黑線鱈", "language": "zh-tw", "type": "translation" },
+        { "alias": "eglefino ahumado", "language": "es", "type": "translation" },
+        { "alias": "églefin fumé", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "smoked trout",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 132,
+        "protein_g": 18.5,
+        "carbs_g": 0,
+        "fat_g": 6.1,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "smoked rainbow trout", "language": "en", "type": "synonym" },
+        { "alias": "燻製マス", "language": "ja", "type": "translation" },
+        { "alias": "훈제 송어", "language": "ko", "type": "translation" },
+        { "alias": "烟熏鳟鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "煙燻鱒魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "trucha ahumada", "language": "es", "type": "translation" },
+        { "alias": "truite fumée", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 120 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "smoked mackerel",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 262,
+        "protein_g": 18.5,
+        "carbs_g": 0,
+        "fat_g": 21.1,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "smoked Atlantic mackerel", "language": "en", "type": "synonym" },
+        { "alias": "燻製サバ", "language": "ja", "type": "translation" },
+        { "alias": "훈제 고등어", "language": "ko", "type": "translation" },
+        { "alias": "烟熏鲭鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "煙燻鯖魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "caballa ahumada", "language": "es", "type": "translation" },
+        { "alias": "maquereau fumé", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 100 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "whole mackerel",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 205,
+        "protein_g": 18.6,
+        "carbs_g": 0,
+        "fat_g": 13.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "whole mackerel fish", "language": "en", "type": "synonym" },
+        { "alias": "サバ一匹", "language": "ja", "type": "translation" },
+        { "alias": "고등어 한마리", "language": "ko", "type": "translation" },
+        { "alias": "整条鲭鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "整條鯖魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "caballa entera", "language": "es", "type": "translation" },
+        { "alias": "maquereau entier", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole", "grams": 300 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "whole trout",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 119,
+        "protein_g": 20.5,
+        "carbs_g": 0,
+        "fat_g": 3.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "whole rainbow trout", "language": "en", "type": "synonym" },
+        { "alias": "マス一匹", "language": "ja", "type": "translation" },
+        { "alias": "송어 한마리", "language": "ko", "type": "translation" },
+        { "alias": "整条鳟鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "整條鱒魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "trucha entera", "language": "es", "type": "translation" },
+        { "alias": "truite entière", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole", "grams": 300 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "whole sardines",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 208,
+        "protein_g": 24.6,
+        "carbs_g": 0,
+        "fat_g": 11.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "fresh sardines", "language": "en", "type": "synonym" },
+        { "alias": "生イワシ", "language": "ja", "type": "translation" },
+        { "alias": "정어리", "language": "ko", "type": "translation" },
+        { "alias": "整条沙丁鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "整條沙丁魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "sardinas enteras", "language": "es", "type": "translation" },
+        { "alias": "sardines entières", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole", "grams": 15 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "butterfish fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 146,
+        "protein_g": 17.3,
+        "carbs_g": 0,
+        "fat_g": 8.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "butterfish", "language": "en", "type": "synonym" },
+        { "alias": "イボダイ", "language": "ja", "type": "translation" },
+        { "alias": "병어", "language": "ko", "type": "translation" },
+        { "alias": "鲳鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "鯧魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "palometa", "language": "es", "type": "translation" },
+        { "alias": "stromatée", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 100 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "mullet fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 117,
+        "protein_g": 19.4,
+        "carbs_g": 0,
+        "fat_g": 3.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "grey mullet", "language": "en", "type": "synonym" },
+        { "alias": "mullet", "language": "en", "type": "synonym" },
+        { "alias": "ボラ", "language": "ja", "type": "translation" },
+        { "alias": "숭어", "language": "ko", "type": "translation" },
+        { "alias": "乌鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "烏魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "mújol", "language": "es", "type": "translation" },
+        { "alias": "mulet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 130 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "croaker fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 104,
+        "protein_g": 17.8,
+        "carbs_g": 0,
+        "fat_g": 3.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "croaker", "language": "en", "type": "synonym" },
+        { "alias": "Atlantic croaker", "language": "en", "type": "synonym" },
+        { "alias": "イシモチ", "language": "ja", "type": "translation" },
+        { "alias": "민어", "language": "ko", "type": "translation" },
+        { "alias": "黄花鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "黃花魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "corvina", "language": "es", "type": "translation" },
+        { "alias": "courbine", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 130 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "drum fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 119,
+        "protein_g": 17.5,
+        "carbs_g": 0,
+        "fat_g": 4.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "red drum", "language": "en", "type": "synonym" },
+        { "alias": "redfish", "language": "en", "type": "synonym" },
+        { "alias": "ニベ", "language": "ja", "type": "translation" },
+        { "alias": "드럼피시", "language": "ko", "type": "translation" },
+        { "alias": "石首鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "石首魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "corvina roja", "language": "es", "type": "translation" },
+        { "alias": "tambour rouge", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "kingfish fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 105,
+        "protein_g": 20.2,
+        "carbs_g": 0,
+        "fat_g": 2.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "kingfish", "language": "en", "type": "synonym" },
+        { "alias": "king mackerel", "language": "en", "type": "synonym" },
+        { "alias": "サワラ", "language": "ja", "type": "translation" },
+        { "alias": "왕고등어", "language": "ko", "type": "translation" },
+        { "alias": "马鲛鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "馬鮫魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "carite", "language": "es", "type": "translation" },
+        { "alias": "thazard", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "Spanish mackerel fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 139,
+        "protein_g": 19.3,
+        "carbs_g": 0,
+        "fat_g": 6.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Spanish mackerel", "language": "en", "type": "synonym" },
+        { "alias": "スパニッシュマッケレル", "language": "ja", "type": "translation" },
+        { "alias": "삼치", "language": "ko", "type": "translation" },
+        { "alias": "西班牙鲭鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "西班牙鯖魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "carita", "language": "es", "type": "translation" },
+        { "alias": "maquereau espagnol", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "wahoo fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 109,
+        "protein_g": 24.0,
+        "carbs_g": 0,
+        "fat_g": 0.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "wahoo", "language": "en", "type": "synonym" },
+        { "alias": "ono", "language": "en", "type": "synonym" },
+        { "alias": "カマスサワラ", "language": "ja", "type": "translation" },
+        { "alias": "와후", "language": "ko", "type": "translation" },
+        { "alias": "刺鲅", "language": "zh-cn", "type": "translation" },
+        { "alias": "刺鮁", "language": "zh-tw", "type": "translation" },
+        { "alias": "peto", "language": "es", "type": "translation" },
+        { "alias": "thazard-bâtard", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 160 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "marlin fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 110,
+        "protein_g": 24.3,
+        "carbs_g": 0,
+        "fat_g": 0.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "marlin", "language": "en", "type": "synonym" },
+        { "alias": "blue marlin", "language": "en", "type": "synonym" },
+        { "alias": "カジキ", "language": "ja", "type": "translation" },
+        { "alias": "청새치", "language": "ko", "type": "translation" },
+        { "alias": "枪鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "槍魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "marlín", "language": "es", "type": "translation" },
+        { "alias": "marlin", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 200 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "amberjack fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 146,
+        "protein_g": 21.3,
+        "carbs_g": 0,
+        "fat_g": 6.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "amberjack", "language": "en", "type": "synonym" },
+        { "alias": "greater amberjack", "language": "en", "type": "synonym" },
+        { "alias": "カンパチ", "language": "ja", "type": "translation" },
+        { "alias": "방어", "language": "ko", "type": "translation" },
+        { "alias": "琥珀鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "琥珀魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "pez limón", "language": "es", "type": "translation" },
+        { "alias": "sériole couronnée", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "yellowtail fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 146,
+        "protein_g": 23.1,
+        "carbs_g": 0,
+        "fat_g": 5.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "yellowtail", "language": "en", "type": "synonym" },
+        { "alias": "Japanese amberjack", "language": "en", "type": "synonym" },
+        { "alias": "ブリ", "language": "ja", "type": "translation" },
+        { "alias": "방어", "language": "ko", "type": "translation" },
+        { "alias": "黄尾鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "黃尾魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "jurel", "language": "es", "type": "translation" },
+        { "alias": "sériole", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "barracuda fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 98,
+        "protein_g": 20.9,
+        "carbs_g": 0,
+        "fat_g": 1.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "barracuda", "language": "en", "type": "synonym" },
+        { "alias": "カマス", "language": "ja", "type": "translation" },
+        { "alias": "바라쿠다", "language": "ko", "type": "translation" },
+        { "alias": "梭鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "梭魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "barracuda", "language": "es", "type": "translation" },
+        { "alias": "barracuda", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "cobia fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 107,
+        "protein_g": 20.7,
+        "carbs_g": 0,
+        "fat_g": 2.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "cobia", "language": "en", "type": "synonym" },
+        { "alias": "black kingfish", "language": "en", "type": "synonym" },
+        { "alias": "スギ", "language": "ja", "type": "translation" },
+        { "alias": "코비아", "language": "ko", "type": "translation" },
+        { "alias": "军曹鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "軍曹魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "cobia", "language": "es", "type": "translation" },
+        { "alias": "mafou", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 160 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "Arctic char fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 127,
+        "protein_g": 20.1,
+        "carbs_g": 0,
+        "fat_g": 4.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Arctic char", "language": "en", "type": "synonym" },
+        { "alias": "Arctic charr", "language": "en", "type": "synonym" },
+        { "alias": "ホッキョクイワナ", "language": "ja", "type": "translation" },
+        { "alias": "북극 곤들매기", "language": "ko", "type": "translation" },
+        { "alias": "北极红点鲑", "language": "zh-cn", "type": "translation" },
+        { "alias": "北極紅點鮭", "language": "zh-tw", "type": "translation" },
+        { "alias": "trucha ártica", "language": "es", "type": "translation" },
+        { "alias": "omble chevalier", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "steelhead trout fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 119,
+        "protein_g": 20.5,
+        "carbs_g": 0,
+        "fat_g": 3.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "steelhead", "language": "en", "type": "synonym" },
+        { "alias": "steelhead salmon", "language": "en", "type": "synonym" },
+        { "alias": "スティールヘッド", "language": "ja", "type": "translation" },
+        { "alias": "스틸헤드", "language": "ko", "type": "translation" },
+        { "alias": "硬头鳟", "language": "zh-cn", "type": "translation" },
+        { "alias": "硬頭鱒", "language": "zh-tw", "type": "translation" },
+        { "alias": "trucha cabeza de acero", "language": "es", "type": "translation" },
+        { "alias": "truite arc-en-ciel", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lake trout fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 168,
+        "protein_g": 18.9,
+        "carbs_g": 0,
+        "fat_g": 9.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "lake trout", "language": "en", "type": "synonym" },
+        { "alias": "レイクトラウト", "language": "ja", "type": "translation" },
+        { "alias": "호수송어", "language": "ko", "type": "translation" },
+        { "alias": "湖鳟", "language": "zh-cn", "type": "translation" },
+        { "alias": "湖鱒", "language": "zh-tw", "type": "translation" },
+        { "alias": "trucha de lago", "language": "es", "type": "translation" },
+        { "alias": "touladi", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "brook trout fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 101,
+        "protein_g": 17.5,
+        "carbs_g": 0,
+        "fat_g": 2.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "brook trout", "language": "en", "type": "synonym" },
+        { "alias": "speckled trout", "language": "en", "type": "synonym" },
+        { "alias": "ブルックトラウト", "language": "ja", "type": "translation" },
+        { "alias": "북극 곤들매기", "language": "ko", "type": "translation" },
+        { "alias": "溪鳟", "language": "zh-cn", "type": "translation" },
+        { "alias": "溪鱒", "language": "zh-tw", "type": "translation" },
+        { "alias": "trucha de arroyo", "language": "es", "type": "translation" },
+        { "alias": "omble de fontaine", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 120 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "brown trout fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 135,
+        "protein_g": 19.2,
+        "carbs_g": 0,
+        "fat_g": 5.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "brown trout", "language": "en", "type": "synonym" },
+        { "alias": "ブラウントラウト", "language": "ja", "type": "translation" },
+        { "alias": "갈색송어", "language": "ko", "type": "translation" },
+        { "alias": "褐鳟", "language": "zh-cn", "type": "translation" },
+        { "alias": "褐鱒", "language": "zh-tw", "type": "translation" },
+        { "alias": "trucha marrón", "language": "es", "type": "translation" },
+        { "alias": "truite brune", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "swai fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 90,
+        "protein_g": 15.0,
+        "carbs_g": 0,
+        "fat_g": 3.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "swai", "language": "en", "type": "synonym" },
+        { "alias": "basa fish", "language": "en", "type": "synonym" },
+        { "alias": "パンガシウス", "language": "ja", "type": "translation" },
+        { "alias": "바사", "language": "ko", "type": "translation" },
+        { "alias": "巴沙鱼", "language": "zh-cn", "type": "translation" },
+        { "alias": "巴沙魚", "language": "zh-tw", "type": "translation" },
+        { "alias": "panga", "language": "es", "type": "translation" },
+        { "alias": "panga", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 130 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "rainbow trout fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 119,
+        "protein_g": 20.5,
+        "carbs_g": 0,
+        "fat_g": 3.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "rainbow trout", "language": "en", "type": "synonym" },
+        { "alias": "ニジマス", "language": "ja", "type": "translation" },
+        { "alias": "무지개송어", "language": "ko", "type": "translation" },
+        { "alias": "虹鳟", "language": "zh-cn", "type": "translation" },
+        { "alias": "虹鱒", "language": "zh-tw", "type": "translation" },
+        { "alias": "trucha arcoiris", "language": "es", "type": "translation" },
+        { "alias": "truite arc-en-ciel", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 140 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "orange roughy fillet",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 69,
+        "protein_g": 14.7,
+        "carbs_g": 0,
+        "fat_g": 0.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "orange roughy", "language": "en", "type": "synonym" },
+        { "alias": "オレンジラフィー", "language": "ja", "type": "translation" },
+        { "alias": "오렌지 러피", "language": "ko", "type": "translation" },
+        { "alias": "橙连鳍鲑", "language": "zh-cn", "type": "translation" },
+        { "alias": "橙連鰭鮭", "language": "zh-tw", "type": "translation" },
+        { "alias": "reloj anaranjado", "language": "es", "type": "translation" },
+        { "alias": "hoplostète orange", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 130 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    }
+  ]
+}

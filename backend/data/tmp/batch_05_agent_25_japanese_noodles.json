@@ -1,0 +1,208 @@
+{
+  "batch": 5,
+  "agent": 25,
+  "category": "japanese_noodles",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "name": "Fresh Ramen Noodles",
+      "aliases": ["生ラーメン", "nama ramen", "fresh ramen", "raw ramen noodles"]
+    },
+    {
+      "name": "Dried Ramen Noodles",
+      "aliases": ["乾燥ラーメン", "kanso ramen", "dried ramen", "ramen noodles"]
+    },
+    {
+      "name": "Instant Ramen Noodles",
+      "aliases": ["インスタントラーメン", "insutanto ramen", "instant ramen", "cup noodles"]
+    },
+    {
+      "name": "Fresh Udon Noodles",
+      "aliases": ["生うどん", "nama udon", "fresh udon", "raw udon"]
+    },
+    {
+      "name": "Dried Udon Noodles",
+      "aliases": ["乾麺うどん", "kanmen udon", "dried udon", "udon noodles"]
+    },
+    {
+      "name": "Frozen Udon Noodles",
+      "aliases": ["冷凍うどん", "reitou udon", "frozen udon", "udon"]
+    },
+    {
+      "name": "Soba Noodles",
+      "aliases": ["そば", "蕎麦", "soba", "buckwheat noodles", "Japanese buckwheat noodles"]
+    },
+    {
+      "name": "Cha-Soba",
+      "aliases": ["茶そば", "茶蕎麦", "cha soba", "green tea soba", "matcha soba"]
+    },
+    {
+      "name": "Somen Noodles",
+      "aliases": ["そうめん", "素麺", "somen", "thin wheat noodles", "Japanese thin noodles"]
+    },
+    {
+      "name": "Shirataki Noodles",
+      "aliases": ["しらたき", "白滝", "shirataki", "konnyaku noodles", "yam noodles"]
+    },
+    {
+      "name": "Harusame",
+      "aliases": ["春雨", "harusame", "glass noodles", "cellophane noodles", "bean thread noodles"]
+    },
+    {
+      "name": "Japanese Short-Grain Rice",
+      "aliases": ["日本米", "nihonmai", "Japanese rice", "short grain rice", "japonica rice"]
+    },
+    {
+      "name": "Sushi Rice",
+      "aliases": ["寿司米", "sushi mai", "sushi rice", "vinegared rice", "shari"]
+    },
+    {
+      "name": "Genmai",
+      "aliases": ["玄米", "genmai", "brown rice", "unpolished rice", "Japanese brown rice"]
+    },
+    {
+      "name": "Mochi Rice",
+      "aliases": ["もち米", "餅米", "mochigome", "glutinous rice", "sweet rice", "sticky rice"]
+    },
+    {
+      "name": "Onigiri Rice",
+      "aliases": ["おにぎり用米", "onigiri you mai", "rice for onigiri", "rice ball rice"]
+    },
+    {
+      "name": "Mochi",
+      "aliases": ["餅", "もち", "mochi", "rice cake", "Japanese rice cake"]
+    },
+    {
+      "name": "Dango",
+      "aliases": ["団子", "だんご", "dango", "rice dumpling", "Japanese dumpling"]
+    },
+    {
+      "name": "Joshinko",
+      "aliases": ["上新粉", "joshinko", "rice flour", "non-glutinous rice flour", "Japanese rice flour"]
+    },
+    {
+      "name": "Shiratamako",
+      "aliases": ["白玉粉", "shiratamako", "glutinous rice flour", "sweet rice flour", "mochi flour"]
+    },
+    {
+      "name": "Mochiko",
+      "aliases": ["もち粉", "餅粉", "mochiko", "sweet rice flour", "glutinous rice flour"]
+    },
+    {
+      "name": "Senbei",
+      "aliases": ["煎餅", "せんべい", "senbei", "rice cracker", "Japanese rice cracker"]
+    },
+    {
+      "name": "Rice Bran",
+      "aliases": ["米糠", "こめぬか", "komenuka", "nuka", "rice bran"]
+    },
+    {
+      "name": "Panko",
+      "aliases": ["パン粉", "panko", "Japanese breadcrumbs", "bread crumbs"]
+    },
+    {
+      "name": "Tempura Flour",
+      "aliases": ["天ぷら粉", "tenpura ko", "tempura batter mix", "tempura mix"]
+    },
+    {
+      "name": "Okonomiyaki Flour",
+      "aliases": ["お好み焼き粉", "okonomiyaki ko", "okonomiyaki mix", "savory pancake flour"]
+    },
+    {
+      "name": "Hiyamugi",
+      "aliases": ["冷麦", "ひやむぎ", "hiyamugi", "thin wheat noodles", "summer noodles"]
+    },
+    {
+      "name": "Yakisoba Noodles",
+      "aliases": ["焼きそば麺", "yakisoba men", "yakisoba noodles", "stir-fry noodles"]
+    },
+    {
+      "name": "Ramen Noodles (Thin)",
+      "aliases": ["細麺", "hosomen", "thin ramen", "thin noodles"]
+    },
+    {
+      "name": "Ramen Noodles (Thick)",
+      "aliases": ["太麺", "futomen", "thick ramen", "thick noodles"]
+    },
+    {
+      "name": "Inaniwa Udon",
+      "aliases": ["稲庭うどん", "inaniwa udon", "Inaniwa-style udon", "thin udon"]
+    },
+    {
+      "name": "Sanuki Udon",
+      "aliases": ["讃岐うどん", "sanuki udon", "Sanuki-style udon", "thick udon"]
+    },
+    {
+      "name": "Zaru Soba",
+      "aliases": ["ざるそば", "zaru soba", "cold soba", "chilled soba"]
+    },
+    {
+      "name": "Nagashi Somen",
+      "aliases": ["流しそうめん", "nagashi somen", "flowing somen", "somen noodles"]
+    },
+    {
+      "name": "Kuzukiri",
+      "aliases": ["葛切り", "くずきり", "kuzukiri", "kudzu noodles", "arrowroot noodles"]
+    },
+    {
+      "name": "White Rice",
+      "aliases": ["白米", "hakumai", "polished rice", "white rice"]
+    },
+    {
+      "name": "Calrose Rice",
+      "aliases": ["カルローズ米", "karurose mai", "medium grain rice", "Calrose"]
+    },
+    {
+      "name": "Koshihikari Rice",
+      "aliases": ["コシヒカリ", "koshihikari", "premium Japanese rice", "Koshihikari rice"]
+    },
+    {
+      "name": "Akitakomachi Rice",
+      "aliases": ["あきたこまち", "秋田小町", "akitakomachi", "Akita rice"]
+    },
+    {
+      "name": "Sekihan",
+      "aliases": ["赤飯", "せきはん", "sekihan", "red bean rice", "festive rice"]
+    },
+    {
+      "name": "Arare",
+      "aliases": ["あられ", "霰", "arare", "small rice crackers", "puffed rice crackers"]
+    },
+    {
+      "name": "Kaki-Mochi",
+      "aliases": ["かきもち", "欠き餅", "kakimochi", "rice crackers", "dried mochi crackers"]
+    },
+    {
+      "name": "Yaki-Mochi",
+      "aliases": ["焼き餅", "yakimochi", "grilled mochi", "toasted rice cake"]
+    },
+    {
+      "name": "Kinako Mochi",
+      "aliases": ["きな粉餅", "kinako mochi", "soybean powder mochi", "roasted soybean mochi"]
+    },
+    {
+      "name": "Mitarashi Dango",
+      "aliases": ["みたらし団子", "mitarashi dango", "sweet soy sauce dumplings", "glazed dango"]
+    },
+    {
+      "name": "Hanami Dango",
+      "aliases": ["花見団子", "hanami dango", "three-colored dango", "cherry blossom dumplings"]
+    },
+    {
+      "name": "Takoyaki Flour",
+      "aliases": ["たこ焼き粉", "takoyaki ko", "takoyaki mix", "octopus ball flour"]
+    },
+    {
+      "name": "Katakuriko",
+      "aliases": ["片栗粉", "katakuriko", "potato starch", "Japanese potato starch"]
+    },
+    {
+      "name": "Komeko",
+      "aliases": ["米粉", "こめこ", "komeko", "rice flour", "ground rice"]
+    },
+    {
+      "name": "Mochigome Flour",
+      "aliases": ["もち米粉", "mochigome ko", "sweet rice flour", "glutinous rice powder"]
+    }
+  ]
+}

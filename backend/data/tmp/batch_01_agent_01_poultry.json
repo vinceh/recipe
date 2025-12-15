@@ -1,0 +1,1864 @@
+{
+  "batch": 1,
+  "agent": 1,
+  "category": "poultry",
+  "generated_at": "2025-12-11T00:00:00Z",
+  "ingredients": [
+    {
+      "canonical_name": "chicken breast, boneless skinless",
+      "category": "protein",
+      "per_100g": {
+        "calories": 165,
+        "protein_g": 31.0,
+        "carbs_g": 0,
+        "fat_g": 3.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chicken breast fillet", "language": "en", "type": "synonym" },
+        { "alias": "skinless chicken breast", "language": "en", "type": "synonym" },
+        { "alias": "鶏胸肉（皮なし）", "language": "ja", "type": "translation" },
+        { "alias": "닭가슴살", "language": "ko", "type": "translation" },
+        { "alias": "鸡胸肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞胸肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "pechuga de pollo sin piel", "language": "es", "type": "translation" },
+        { "alias": "blanc de poulet sans peau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "breast", "grams": 170 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken breast, boneless with skin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 197,
+        "protein_g": 29.8,
+        "carbs_g": 0,
+        "fat_g": 7.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chicken breast with skin", "language": "en", "type": "synonym" },
+        { "alias": "鶏胸肉（皮付き）", "language": "ja", "type": "translation" },
+        { "alias": "껍질있는 닭가슴살", "language": "ko", "type": "translation" },
+        { "alias": "带皮鸡胸肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "帶皮雞胸肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "pechuga de pollo con piel", "language": "es", "type": "translation" },
+        { "alias": "blanc de poulet avec peau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "breast", "grams": 180 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken breast, bone-in with skin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 172,
+        "protein_g": 25.8,
+        "carbs_g": 0,
+        "fat_g": 6.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chicken breast on the bone", "language": "en", "type": "synonym" },
+        { "alias": "骨付き鶏胸肉", "language": "ja", "type": "translation" },
+        { "alias": "뼈있는 닭가슴살", "language": "ko", "type": "translation" },
+        { "alias": "带骨鸡胸肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "帶骨雞胸肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "pechuga de pollo con hueso", "language": "es", "type": "translation" },
+        { "alias": "poitrine de poulet avec os", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "breast", "grams": 250 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken thigh, boneless skinless",
+      "category": "protein",
+      "per_100g": {
+        "calories": 177,
+        "protein_g": 24.4,
+        "carbs_g": 0,
+        "fat_g": 8.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "skinless chicken thigh", "language": "en", "type": "synonym" },
+        { "alias": "鶏もも肉（皮なし）", "language": "ja", "type": "translation" },
+        { "alias": "닭다리살", "language": "ko", "type": "translation" },
+        { "alias": "鸡腿肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞腿肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "muslo de pollo sin piel", "language": "es", "type": "translation" },
+        { "alias": "cuisse de poulet sans peau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "thigh", "grams": 95 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken thigh, boneless with skin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 229,
+        "protein_g": 21.7,
+        "carbs_g": 0,
+        "fat_g": 15.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chicken thigh with skin", "language": "en", "type": "synonym" },
+        { "alias": "鶏もも肉（皮付き）", "language": "ja", "type": "translation" },
+        { "alias": "껍질있는 닭다리살", "language": "ko", "type": "translation" },
+        { "alias": "带皮鸡腿肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "帶皮雞腿肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "muslo de pollo con piel", "language": "es", "type": "translation" },
+        { "alias": "cuisse de poulet avec peau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "thigh", "grams": 110 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken thigh, bone-in with skin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 211,
+        "protein_g": 18.0,
+        "carbs_g": 0,
+        "fat_g": 14.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chicken thigh on the bone", "language": "en", "type": "synonym" },
+        { "alias": "骨付き鶏もも肉", "language": "ja", "type": "translation" },
+        { "alias": "뼈있는 닭다리", "language": "ko", "type": "translation" },
+        { "alias": "带骨鸡腿", "language": "zh-cn", "type": "translation" },
+        { "alias": "帶骨雞腿", "language": "zh-tw", "type": "translation" },
+        { "alias": "muslo de pollo con hueso", "language": "es", "type": "translation" },
+        { "alias": "cuisse de poulet avec os", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "thigh", "grams": 150 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken drumstick, with skin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 216,
+        "protein_g": 18.4,
+        "carbs_g": 0,
+        "fat_g": 15.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chicken leg", "language": "en", "type": "synonym" },
+        { "alias": "鶏手羽元", "language": "ja", "type": "translation" },
+        { "alias": "닭다리", "language": "ko", "type": "translation" },
+        { "alias": "鸡小腿", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞小腿", "language": "zh-tw", "type": "translation" },
+        { "alias": "muslo de pollo", "language": "es", "type": "translation" },
+        { "alias": "pilon de poulet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "drumstick", "grams": 85 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken drumstick, skinless",
+      "category": "protein",
+      "per_100g": {
+        "calories": 149,
+        "protein_g": 21.5,
+        "carbs_g": 0,
+        "fat_g": 6.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "skinless chicken leg", "language": "en", "type": "synonym" },
+        { "alias": "鶏手羽元（皮なし）", "language": "ja", "type": "translation" },
+        { "alias": "껍질없는 닭다리", "language": "ko", "type": "translation" },
+        { "alias": "去皮鸡小腿", "language": "zh-cn", "type": "translation" },
+        { "alias": "去皮雞小腿", "language": "zh-tw", "type": "translation" },
+        { "alias": "muslo de pollo sin piel", "language": "es", "type": "translation" },
+        { "alias": "pilon de poulet sans peau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "drumstick", "grams": 75 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken wing, with skin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 222,
+        "protein_g": 20.5,
+        "carbs_g": 0,
+        "fat_g": 15.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chicken wings", "language": "en", "type": "synonym" },
+        { "alias": "鶏手羽", "language": "ja", "type": "translation" },
+        { "alias": "닭날개", "language": "ko", "type": "translation" },
+        { "alias": "鸡翅", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞翅", "language": "zh-tw", "type": "translation" },
+        { "alias": "ala de pollo", "language": "es", "type": "translation" },
+        { "alias": "aile de poulet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "wing", "grams": 40 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken wing, skinless",
+      "category": "protein",
+      "per_100g": {
+        "calories": 180,
+        "protein_g": 24.2,
+        "carbs_g": 0,
+        "fat_g": 8.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "skinless chicken wings", "language": "en", "type": "synonym" },
+        { "alias": "鶏手羽（皮なし）", "language": "ja", "type": "translation" },
+        { "alias": "껍질없는 닭날개", "language": "ko", "type": "translation" },
+        { "alias": "去皮鸡翅", "language": "zh-cn", "type": "translation" },
+        { "alias": "去皮雞翅", "language": "zh-tw", "type": "translation" },
+        { "alias": "ala de pollo sin piel", "language": "es", "type": "translation" },
+        { "alias": "aile de poulet sans peau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "wing", "grams": 35 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken, whole",
+      "category": "protein",
+      "per_100g": {
+        "calories": 215,
+        "protein_g": 18.6,
+        "carbs_g": 0,
+        "fat_g": 15.1,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "whole chicken", "language": "en", "type": "synonym" },
+        { "alias": "丸鶏", "language": "ja", "type": "translation" },
+        { "alias": "통닭", "language": "ko", "type": "translation" },
+        { "alias": "全鸡", "language": "zh-cn", "type": "translation" },
+        { "alias": "全雞", "language": "zh-tw", "type": "translation" },
+        { "alias": "pollo entero", "language": "es", "type": "translation" },
+        { "alias": "poulet entier", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "chicken", "grams": 1400 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken, ground",
+      "category": "protein",
+      "per_100g": {
+        "calories": 170,
+        "protein_g": 17.4,
+        "carbs_g": 0,
+        "fat_g": 10.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "ground chicken", "language": "en", "type": "synonym" },
+        { "alias": "minced chicken", "language": "en", "type": "synonym" },
+        { "alias": "鶏ひき肉", "language": "ja", "type": "translation" },
+        { "alias": "닭고기 다짐육", "language": "ko", "type": "translation" },
+        { "alias": "鸡肉末", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞肉末", "language": "zh-tw", "type": "translation" },
+        { "alias": "pollo molido", "language": "es", "type": "translation" },
+        { "alias": "poulet haché", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken liver",
+      "category": "protein",
+      "per_100g": {
+        "calories": 172,
+        "protein_g": 24.5,
+        "carbs_g": 0.9,
+        "fat_g": 6.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chicken livers", "language": "en", "type": "synonym" },
+        { "alias": "鶏レバー", "language": "ja", "type": "translation" },
+        { "alias": "닭간", "language": "ko", "type": "translation" },
+        { "alias": "鸡肝", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞肝", "language": "zh-tw", "type": "translation" },
+        { "alias": "hígado de pollo", "language": "es", "type": "translation" },
+        { "alias": "foie de poulet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken heart",
+      "category": "protein",
+      "per_100g": {
+        "calories": 153,
+        "protein_g": 26.4,
+        "carbs_g": 0.7,
+        "fat_g": 4.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chicken hearts", "language": "en", "type": "synonym" },
+        { "alias": "鶏ハツ", "language": "ja", "type": "translation" },
+        { "alias": "닭염통", "language": "ko", "type": "translation" },
+        { "alias": "鸡心", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞心", "language": "zh-tw", "type": "translation" },
+        { "alias": "corazón de pollo", "language": "es", "type": "translation" },
+        { "alias": "cœur de poulet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken gizzard",
+      "category": "protein",
+      "per_100g": {
+        "calories": 154,
+        "protein_g": 30.4,
+        "carbs_g": 0.6,
+        "fat_g": 2.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chicken gizzards", "language": "en", "type": "synonym" },
+        { "alias": "鶏砂肝", "language": "ja", "type": "translation" },
+        { "alias": "닭모래주머니", "language": "ko", "type": "translation" },
+        { "alias": "鸡胗", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞胗", "language": "zh-tw", "type": "translation" },
+        { "alias": "molleja de pollo", "language": "es", "type": "translation" },
+        { "alias": "gésier de poulet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken skin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 440,
+        "protein_g": 11.3,
+        "carbs_g": 0,
+        "fat_g": 43.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "鶏皮", "language": "ja", "type": "translation" },
+        { "alias": "닭껍질", "language": "ko", "type": "translation" },
+        { "alias": "鸡皮", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞皮", "language": "zh-tw", "type": "translation" },
+        { "alias": "piel de pollo", "language": "es", "type": "translation" },
+        { "alias": "peau de poulet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken tenderloin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 109,
+        "protein_g": 24.0,
+        "carbs_g": 0,
+        "fat_g": 0.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chicken tender", "language": "en", "type": "synonym" },
+        { "alias": "chicken tenders", "language": "en", "type": "synonym" },
+        { "alias": "鶏ささみ", "language": "ja", "type": "translation" },
+        { "alias": "닭안심", "language": "ko", "type": "translation" },
+        { "alias": "鸡柳", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞柳", "language": "zh-tw", "type": "translation" },
+        { "alias": "solomillo de pollo", "language": "es", "type": "translation" },
+        { "alias": "filet de poulet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tenderloin", "grams": 45 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "turkey breast, boneless skinless",
+      "category": "protein",
+      "per_100g": {
+        "calories": 135,
+        "protein_g": 30.1,
+        "carbs_g": 0,
+        "fat_g": 1.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "turkey breast fillet", "language": "en", "type": "synonym" },
+        { "alias": "七面鳥胸肉", "language": "ja", "type": "translation" },
+        { "alias": "칠면조 가슴살", "language": "ko", "type": "translation" },
+        { "alias": "火鸡胸肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "火雞胸肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "pechuga de pavo", "language": "es", "type": "translation" },
+        { "alias": "blanc de dinde", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "breast", "grams": 400 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "turkey breast, bone-in with skin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 157,
+        "protein_g": 21.9,
+        "carbs_g": 0,
+        "fat_g": 7.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "turkey breast on the bone", "language": "en", "type": "synonym" },
+        { "alias": "骨付き七面鳥胸肉", "language": "ja", "type": "translation" },
+        { "alias": "뼈있는 칠면조 가슴살", "language": "ko", "type": "translation" },
+        { "alias": "带骨火鸡胸肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "帶骨火雞胸肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "pechuga de pavo con hueso", "language": "es", "type": "translation" },
+        { "alias": "poitrine de dinde avec os", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "breast", "grams": 600 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "turkey thigh, boneless skinless",
+      "category": "protein",
+      "per_100g": {
+        "calories": 144,
+        "protein_g": 27.7,
+        "carbs_g": 0,
+        "fat_g": 3.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "skinless turkey thigh", "language": "en", "type": "synonym" },
+        { "alias": "七面鳥もも肉", "language": "ja", "type": "translation" },
+        { "alias": "칠면조 다리살", "language": "ko", "type": "translation" },
+        { "alias": "火鸡腿肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "火雞腿肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "muslo de pavo", "language": "es", "type": "translation" },
+        { "alias": "cuisse de dinde", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "thigh", "grams": 200 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "turkey thigh, bone-in with skin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 144,
+        "protein_g": 20.4,
+        "carbs_g": 0,
+        "fat_g": 6.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "turkey thigh on the bone", "language": "en", "type": "synonym" },
+        { "alias": "骨付き七面鳥もも肉", "language": "ja", "type": "translation" },
+        { "alias": "뼈있는 칠면조 다리", "language": "ko", "type": "translation" },
+        { "alias": "带骨火鸡腿", "language": "zh-cn", "type": "translation" },
+        { "alias": "帶骨火雞腿", "language": "zh-tw", "type": "translation" },
+        { "alias": "muslo de pavo con hueso", "language": "es", "type": "translation" },
+        { "alias": "cuisse de dinde avec os", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "thigh", "grams": 300 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "turkey drumstick, with skin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 144,
+        "protein_g": 20.4,
+        "carbs_g": 0,
+        "fat_g": 6.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "turkey leg", "language": "en", "type": "synonym" },
+        { "alias": "七面鳥手羽元", "language": "ja", "type": "translation" },
+        { "alias": "칠면조 다리", "language": "ko", "type": "translation" },
+        { "alias": "火鸡小腿", "language": "zh-cn", "type": "translation" },
+        { "alias": "火雞小腿", "language": "zh-tw", "type": "translation" },
+        { "alias": "pierna de pavo", "language": "es", "type": "translation" },
+        { "alias": "pilon de dinde", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "drumstick", "grams": 250 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "turkey wing, with skin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 197,
+        "protein_g": 27.4,
+        "carbs_g": 0,
+        "fat_g": 8.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "turkey wings", "language": "en", "type": "synonym" },
+        { "alias": "七面鳥手羽", "language": "ja", "type": "translation" },
+        { "alias": "칠면조 날개", "language": "ko", "type": "translation" },
+        { "alias": "火鸡翅", "language": "zh-cn", "type": "translation" },
+        { "alias": "火雞翅", "language": "zh-tw", "type": "translation" },
+        { "alias": "ala de pavo", "language": "es", "type": "translation" },
+        { "alias": "aile de dinde", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "wing", "grams": 180 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "turkey, whole",
+      "category": "protein",
+      "per_100g": {
+        "calories": 160,
+        "protein_g": 21.5,
+        "carbs_g": 0,
+        "fat_g": 7.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "whole turkey", "language": "en", "type": "synonym" },
+        { "alias": "丸七面鳥", "language": "ja", "type": "translation" },
+        { "alias": "통칠면조", "language": "ko", "type": "translation" },
+        { "alias": "全火鸡", "language": "zh-cn", "type": "translation" },
+        { "alias": "全火雞", "language": "zh-tw", "type": "translation" },
+        { "alias": "pavo entero", "language": "es", "type": "translation" },
+        { "alias": "dinde entière", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "turkey", "grams": 7000 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "turkey, ground",
+      "category": "protein",
+      "per_100g": {
+        "calories": 203,
+        "protein_g": 20.0,
+        "carbs_g": 0,
+        "fat_g": 13.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "ground turkey", "language": "en", "type": "synonym" },
+        { "alias": "minced turkey", "language": "en", "type": "synonym" },
+        { "alias": "七面鳥ひき肉", "language": "ja", "type": "translation" },
+        { "alias": "칠면조 다짐육", "language": "ko", "type": "translation" },
+        { "alias": "火鸡肉末", "language": "zh-cn", "type": "translation" },
+        { "alias": "火雞肉末", "language": "zh-tw", "type": "translation" },
+        { "alias": "pavo molido", "language": "es", "type": "translation" },
+        { "alias": "dinde hachée", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "turkey, ground lean",
+      "category": "protein",
+      "per_100g": {
+        "calories": 149,
+        "protein_g": 21.8,
+        "carbs_g": 0,
+        "fat_g": 6.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "lean ground turkey", "language": "en", "type": "synonym" },
+        { "alias": "lean minced turkey", "language": "en", "type": "synonym" },
+        { "alias": "赤身七面鳥ひき肉", "language": "ja", "type": "translation" },
+        { "alias": "저지방 칠면조 다짐육", "language": "ko", "type": "translation" },
+        { "alias": "瘦火鸡肉末", "language": "zh-cn", "type": "translation" },
+        { "alias": "瘦火雞肉末", "language": "zh-tw", "type": "translation" },
+        { "alias": "pavo molido magro", "language": "es", "type": "translation" },
+        { "alias": "dinde hachée maigre", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "turkey bacon",
+      "category": "protein",
+      "per_100g": {
+        "calories": 225,
+        "protein_g": 18.9,
+        "carbs_g": 2.6,
+        "fat_g": 15.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "七面鳥ベーコン", "language": "ja", "type": "translation" },
+        { "alias": "칠면조 베이컨", "language": "ko", "type": "translation" },
+        { "alias": "火鸡培根", "language": "zh-cn", "type": "translation" },
+        { "alias": "火雞培根", "language": "zh-tw", "type": "translation" },
+        { "alias": "tocino de pavo", "language": "es", "type": "translation" },
+        { "alias": "bacon de dinde", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 15 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "duck breast, boneless with skin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 337,
+        "protein_g": 18.3,
+        "carbs_g": 0,
+        "fat_g": 28.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "duck breast fillet", "language": "en", "type": "synonym" },
+        { "alias": "magret de canard", "language": "fr", "type": "synonym" },
+        { "alias": "鴨胸肉", "language": "ja", "type": "translation" },
+        { "alias": "오리 가슴살", "language": "ko", "type": "translation" },
+        { "alias": "鸭胸肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "鴨胸肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "pechuga de pato", "language": "es", "type": "translation" },
+        { "alias": "blanc de canard", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "breast", "grams": 250 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "duck breast, boneless skinless",
+      "category": "protein",
+      "per_100g": {
+        "calories": 140,
+        "protein_g": 23.5,
+        "carbs_g": 0,
+        "fat_g": 4.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "skinless duck breast", "language": "en", "type": "synonym" },
+        { "alias": "鴨胸肉（皮なし）", "language": "ja", "type": "translation" },
+        { "alias": "껍질없는 오리 가슴살", "language": "ko", "type": "translation" },
+        { "alias": "去皮鸭胸肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "去皮鴨胸肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "pechuga de pato sin piel", "language": "es", "type": "translation" },
+        { "alias": "blanc de canard sans peau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "breast", "grams": 200 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "duck leg, with skin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 211,
+        "protein_g": 23.5,
+        "carbs_g": 0,
+        "fat_g": 12.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "duck leg confit", "language": "en", "type": "synonym" },
+        { "alias": "鴨もも肉", "language": "ja", "type": "translation" },
+        { "alias": "오리 다리", "language": "ko", "type": "translation" },
+        { "alias": "鸭腿", "language": "zh-cn", "type": "translation" },
+        { "alias": "鴨腿", "language": "zh-tw", "type": "translation" },
+        { "alias": "muslo de pato", "language": "es", "type": "translation" },
+        { "alias": "cuisse de canard", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "leg", "grams": 180 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "duck, whole",
+      "category": "protein",
+      "per_100g": {
+        "calories": 404,
+        "protein_g": 11.5,
+        "carbs_g": 0,
+        "fat_g": 39.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "whole duck", "language": "en", "type": "synonym" },
+        { "alias": "丸鴨", "language": "ja", "type": "translation" },
+        { "alias": "통오리", "language": "ko", "type": "translation" },
+        { "alias": "全鸭", "language": "zh-cn", "type": "translation" },
+        { "alias": "全鴨", "language": "zh-tw", "type": "translation" },
+        { "alias": "pato entero", "language": "es", "type": "translation" },
+        { "alias": "canard entier", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "duck", "grams": 2000 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "duck liver",
+      "category": "protein",
+      "per_100g": {
+        "calories": 136,
+        "protein_g": 18.7,
+        "carbs_g": 3.5,
+        "fat_g": 4.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "foie gras raw", "language": "en", "type": "synonym" },
+        { "alias": "鴨レバー", "language": "ja", "type": "translation" },
+        { "alias": "오리 간", "language": "ko", "type": "translation" },
+        { "alias": "鸭肝", "language": "zh-cn", "type": "translation" },
+        { "alias": "鴨肝", "language": "zh-tw", "type": "translation" },
+        { "alias": "hígado de pato", "language": "es", "type": "translation" },
+        { "alias": "foie de canard", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "duck fat",
+      "category": "fats",
+      "per_100g": {
+        "calories": 900,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "rendered duck fat", "language": "en", "type": "synonym" },
+        { "alias": "鴨脂", "language": "ja", "type": "translation" },
+        { "alias": "오리기름", "language": "ko", "type": "translation" },
+        { "alias": "鸭油", "language": "zh-cn", "type": "translation" },
+        { "alias": "鴨油", "language": "zh-tw", "type": "translation" },
+        { "alias": "grasa de pato", "language": "es", "type": "translation" },
+        { "alias": "graisse de canard", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 13 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "goose breast, boneless with skin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 15.9,
+        "carbs_g": 0,
+        "fat_g": 33.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "goose breast fillet", "language": "en", "type": "synonym" },
+        { "alias": "ガチョウ胸肉", "language": "ja", "type": "translation" },
+        { "alias": "거위 가슴살", "language": "ko", "type": "translation" },
+        { "alias": "鹅胸肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "鵝胸肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "pechuga de ganso", "language": "es", "type": "translation" },
+        { "alias": "blanc d'oie", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "breast", "grams": 300 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "goose leg, with skin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 305,
+        "protein_g": 21.9,
+        "carbs_g": 0,
+        "fat_g": 23.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "ガチョウもも肉", "language": "ja", "type": "translation" },
+        { "alias": "거위 다리", "language": "ko", "type": "translation" },
+        { "alias": "鹅腿", "language": "zh-cn", "type": "translation" },
+        { "alias": "鵝腿", "language": "zh-tw", "type": "translation" },
+        { "alias": "muslo de ganso", "language": "es", "type": "translation" },
+        { "alias": "cuisse d'oie", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "leg", "grams": 350 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "goose, whole",
+      "category": "protein",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 15.9,
+        "carbs_g": 0,
+        "fat_g": 33.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "whole goose", "language": "en", "type": "synonym" },
+        { "alias": "丸ガチョウ", "language": "ja", "type": "translation" },
+        { "alias": "통거위", "language": "ko", "type": "translation" },
+        { "alias": "全鹅", "language": "zh-cn", "type": "translation" },
+        { "alias": "全鵝", "language": "zh-tw", "type": "translation" },
+        { "alias": "ganso entero", "language": "es", "type": "translation" },
+        { "alias": "oie entière", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "goose", "grams": 4500 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "goose liver",
+      "category": "protein",
+      "per_100g": {
+        "calories": 133,
+        "protein_g": 16.4,
+        "carbs_g": 6.3,
+        "fat_g": 4.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "foie gras", "language": "en", "type": "synonym" },
+        { "alias": "ガチョウレバー", "language": "ja", "type": "translation" },
+        { "alias": "거위 간", "language": "ko", "type": "translation" },
+        { "alias": "鹅肝", "language": "zh-cn", "type": "translation" },
+        { "alias": "鵝肝", "language": "zh-tw", "type": "translation" },
+        { "alias": "hígado de ganso", "language": "es", "type": "translation" },
+        { "alias": "foie d'oie", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "goose fat",
+      "category": "fats",
+      "per_100g": {
+        "calories": 900,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "rendered goose fat", "language": "en", "type": "synonym" },
+        { "alias": "ガチョウ脂", "language": "ja", "type": "translation" },
+        { "alias": "거위기름", "language": "ko", "type": "translation" },
+        { "alias": "鹅油", "language": "zh-cn", "type": "translation" },
+        { "alias": "鵝油", "language": "zh-tw", "type": "translation" },
+        { "alias": "grasa de ganso", "language": "es", "type": "translation" },
+        { "alias": "graisse d'oie", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 13 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "quail, whole",
+      "category": "protein",
+      "per_100g": {
+        "calories": 227,
+        "protein_g": 25.1,
+        "carbs_g": 0,
+        "fat_g": 13.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "whole quail", "language": "en", "type": "synonym" },
+        { "alias": "丸ウズラ", "language": "ja", "type": "translation" },
+        { "alias": "통메추리", "language": "ko", "type": "translation" },
+        { "alias": "全鹌鹑", "language": "zh-cn", "type": "translation" },
+        { "alias": "全鵪鶉", "language": "zh-tw", "type": "translation" },
+        { "alias": "codorniz entera", "language": "es", "type": "translation" },
+        { "alias": "caille entière", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "quail", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "quail breast, boneless skinless",
+      "category": "protein",
+      "per_100g": {
+        "calories": 134,
+        "protein_g": 25.8,
+        "carbs_g": 0,
+        "fat_g": 2.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "quail breast fillet", "language": "en", "type": "synonym" },
+        { "alias": "ウズラ胸肉", "language": "ja", "type": "translation" },
+        { "alias": "메추리 가슴살", "language": "ko", "type": "translation" },
+        { "alias": "鹌鹑胸肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "鵪鶉胸肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "pechuga de codorniz", "language": "es", "type": "translation" },
+        { "alias": "blanc de caille", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "breast", "grams": 30 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "quail egg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 158,
+        "protein_g": 13.0,
+        "carbs_g": 0.4,
+        "fat_g": 11.1,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "quail eggs", "language": "en", "type": "synonym" },
+        { "alias": "ウズラの卵", "language": "ja", "type": "translation" },
+        { "alias": "메추리알", "language": "ko", "type": "translation" },
+        { "alias": "鹌鹑蛋", "language": "zh-cn", "type": "translation" },
+        { "alias": "鵪鶉蛋", "language": "zh-tw", "type": "translation" },
+        { "alias": "huevo de codorniz", "language": "es", "type": "translation" },
+        { "alias": "œuf de caille", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "egg", "grams": 9 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pheasant breast, boneless skinless",
+      "category": "protein",
+      "per_100g": {
+        "calories": 133,
+        "protein_g": 24.3,
+        "carbs_g": 0,
+        "fat_g": 3.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "pheasant breast fillet", "language": "en", "type": "synonym" },
+        { "alias": "キジ胸肉", "language": "ja", "type": "translation" },
+        { "alias": "꿩 가슴살", "language": "ko", "type": "translation" },
+        { "alias": "雉鸡胸肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "雉雞胸肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "pechuga de faisán", "language": "es", "type": "translation" },
+        { "alias": "blanc de faisan", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "breast", "grams": 120 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "pheasant, whole",
+      "category": "protein",
+      "per_100g": {
+        "calories": 181,
+        "protein_g": 23.6,
+        "carbs_g": 0,
+        "fat_g": 9.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "whole pheasant", "language": "en", "type": "synonym" },
+        { "alias": "丸キジ", "language": "ja", "type": "translation" },
+        { "alias": "통꿩", "language": "ko", "type": "translation" },
+        { "alias": "全雉鸡", "language": "zh-cn", "type": "translation" },
+        { "alias": "全雉雞", "language": "zh-tw", "type": "translation" },
+        { "alias": "faisán entero", "language": "es", "type": "translation" },
+        { "alias": "faisan entier", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "pheasant", "grams": 900 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "cornish hen, whole",
+      "category": "protein",
+      "per_100g": {
+        "calories": 220,
+        "protein_g": 19.2,
+        "carbs_g": 0,
+        "fat_g": 15.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "cornish game hen", "language": "en", "type": "synonym" },
+        { "alias": "rock cornish hen", "language": "en", "type": "synonym" },
+        { "alias": "コーニッシュヘン", "language": "ja", "type": "translation" },
+        { "alias": "코니시 헨", "language": "ko", "type": "translation" },
+        { "alias": "康沃尔鸡", "language": "zh-cn", "type": "translation" },
+        { "alias": "康沃爾雞", "language": "zh-tw", "type": "translation" },
+        { "alias": "gallina de cornualles", "language": "es", "type": "translation" },
+        { "alias": "poule de cornouailles", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "hen", "grams": 550 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "guinea fowl breast, boneless skinless",
+      "category": "protein",
+      "per_100g": {
+        "calories": 110,
+        "protein_g": 23.4,
+        "carbs_g": 0,
+        "fat_g": 1.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "guinea hen breast", "language": "en", "type": "synonym" },
+        { "alias": "ホロホロ鳥胸肉", "language": "ja", "type": "translation" },
+        { "alias": "기니피그 가슴살", "language": "ko", "type": "translation" },
+        { "alias": "珍珠鸡胸肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "珍珠雞胸肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "pechuga de pintada", "language": "es", "type": "translation" },
+        { "alias": "blanc de pintade", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "breast", "grams": 150 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "guinea fowl, whole",
+      "category": "protein",
+      "per_100g": {
+        "calories": 158,
+        "protein_g": 20.6,
+        "carbs_g": 0,
+        "fat_g": 7.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "whole guinea fowl", "language": "en", "type": "synonym" },
+        { "alias": "whole guinea hen", "language": "en", "type": "synonym" },
+        { "alias": "丸ホロホロ鳥", "language": "ja", "type": "translation" },
+        { "alias": "통기니피그", "language": "ko", "type": "translation" },
+        { "alias": "全珍珠鸡", "language": "zh-cn", "type": "translation" },
+        { "alias": "全珍珠雞", "language": "zh-tw", "type": "translation" },
+        { "alias": "pintada entera", "language": "es", "type": "translation" },
+        { "alias": "pintade entière", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fowl", "grams": 1200 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken sausage, Italian style",
+      "category": "protein",
+      "per_100g": {
+        "calories": 220,
+        "protein_g": 14.0,
+        "carbs_g": 3.0,
+        "fat_g": 17.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Italian chicken sausage", "language": "en", "type": "synonym" },
+        { "alias": "イタリアン鶏ソーセージ", "language": "ja", "type": "translation" },
+        { "alias": "이탈리안 치킨 소시지", "language": "ko", "type": "translation" },
+        { "alias": "意大利鸡肉香肠", "language": "zh-cn", "type": "translation" },
+        { "alias": "意大利雞肉香腸", "language": "zh-tw", "type": "translation" },
+        { "alias": "salchicha de pollo italiana", "language": "es", "type": "translation" },
+        { "alias": "saucisse de poulet italienne", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "link", "grams": 75 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken sausage, breakfast style",
+      "category": "protein",
+      "per_100g": {
+        "calories": 196,
+        "protein_g": 15.0,
+        "carbs_g": 2.5,
+        "fat_g": 14.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "breakfast chicken sausage", "language": "en", "type": "synonym" },
+        { "alias": "朝食用鶏ソーセージ", "language": "ja", "type": "translation" },
+        { "alias": "아침 치킨 소시지", "language": "ko", "type": "translation" },
+        { "alias": "早餐鸡肉香肠", "language": "zh-cn", "type": "translation" },
+        { "alias": "早餐雞肉香腸", "language": "zh-tw", "type": "translation" },
+        { "alias": "salchicha de pollo para desayuno", "language": "es", "type": "translation" },
+        { "alias": "saucisse de poulet petit-déjeuner", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "link", "grams": 45 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "turkey sausage, Italian style",
+      "category": "protein",
+      "per_100g": {
+        "calories": 196,
+        "protein_g": 16.0,
+        "carbs_g": 3.0,
+        "fat_g": 13.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Italian turkey sausage", "language": "en", "type": "synonym" },
+        { "alias": "イタリアン七面鳥ソーセージ", "language": "ja", "type": "translation" },
+        { "alias": "이탈리안 터키 소시지", "language": "ko", "type": "translation" },
+        { "alias": "意大利火鸡香肠", "language": "zh-cn", "type": "translation" },
+        { "alias": "意大利火雞香腸", "language": "zh-tw", "type": "translation" },
+        { "alias": "salchicha de pavo italiana", "language": "es", "type": "translation" },
+        { "alias": "saucisse de dinde italienne", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "link", "grams": 75 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "turkey sausage, breakfast style",
+      "category": "protein",
+      "per_100g": {
+        "calories": 196,
+        "protein_g": 17.3,
+        "carbs_g": 2.4,
+        "fat_g": 12.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "breakfast turkey sausage", "language": "en", "type": "synonym" },
+        { "alias": "朝食用七面鳥ソーセージ", "language": "ja", "type": "translation" },
+        { "alias": "아침 터키 소시지", "language": "ko", "type": "translation" },
+        { "alias": "早餐火鸡香肠", "language": "zh-cn", "type": "translation" },
+        { "alias": "早餐火雞香腸", "language": "zh-tw", "type": "translation" },
+        { "alias": "salchicha de pavo para desayuno", "language": "es", "type": "translation" },
+        { "alias": "saucisse de dinde petit-déjeuner", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "link", "grams": 45 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken hot dog",
+      "category": "protein",
+      "per_100g": {
+        "calories": 230,
+        "protein_g": 12.5,
+        "carbs_g": 3.5,
+        "fat_g": 18.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chicken frankfurter", "language": "en", "type": "synonym" },
+        { "alias": "鶏ホットドッグ", "language": "ja", "type": "translation" },
+        { "alias": "치킨 핫도그", "language": "ko", "type": "translation" },
+        { "alias": "鸡肉热狗", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞肉熱狗", "language": "zh-tw", "type": "translation" },
+        { "alias": "salchicha de pollo", "language": "es", "type": "translation" },
+        { "alias": "hot-dog de poulet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "hot dog", "grams": 45 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "turkey hot dog",
+      "category": "protein",
+      "per_100g": {
+        "calories": 196,
+        "protein_g": 13.5,
+        "carbs_g": 3.2,
+        "fat_g": 14.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "turkey frankfurter", "language": "en", "type": "synonym" },
+        { "alias": "七面鳥ホットドッグ", "language": "ja", "type": "translation" },
+        { "alias": "터키 핫도그", "language": "ko", "type": "translation" },
+        { "alias": "火鸡热狗", "language": "zh-cn", "type": "translation" },
+        { "alias": "火雞熱狗", "language": "zh-tw", "type": "translation" },
+        { "alias": "salchicha de pavo", "language": "es", "type": "translation" },
+        { "alias": "hot-dog de dinde", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "hot dog", "grams": 45 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "rotisserie chicken",
+      "category": "protein",
+      "per_100g": {
+        "calories": 219,
+        "protein_g": 27.3,
+        "carbs_g": 0,
+        "fat_g": 11.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "roasted chicken", "language": "en", "type": "synonym" },
+        { "alias": "ローストチキン", "language": "ja", "type": "translation" },
+        { "alias": "로티세리 치킨", "language": "ko", "type": "translation" },
+        { "alias": "烤鸡", "language": "zh-cn", "type": "translation" },
+        { "alias": "烤雞", "language": "zh-tw", "type": "translation" },
+        { "alias": "pollo asado", "language": "es", "type": "translation" },
+        { "alias": "poulet rôti", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "chicken", "grams": 900 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken nuggets, breaded",
+      "category": "protein",
+      "per_100g": {
+        "calories": 296,
+        "protein_g": 15.5,
+        "carbs_g": 17.8,
+        "fat_g": 18.7,
+        "fiber_g": 1.2
+      },
+      "aliases": [
+        { "alias": "chicken bites", "language": "en", "type": "synonym" },
+        { "alias": "チキンナゲット", "language": "ja", "type": "translation" },
+        { "alias": "치킨너겟", "language": "ko", "type": "translation" },
+        { "alias": "鸡块", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞塊", "language": "zh-tw", "type": "translation" },
+        { "alias": "nuggets de pollo", "language": "es", "type": "translation" },
+        { "alias": "nuggets de poulet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 16 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken strips, breaded",
+      "category": "protein",
+      "per_100g": {
+        "calories": 290,
+        "protein_g": 17.0,
+        "carbs_g": 16.0,
+        "fat_g": 17.5,
+        "fiber_g": 1.0
+      },
+      "aliases": [
+        { "alias": "chicken tenders breaded", "language": "en", "type": "synonym" },
+        { "alias": "chicken fingers", "language": "en", "type": "synonym" },
+        { "alias": "チキンストリップ", "language": "ja", "type": "translation" },
+        { "alias": "치킨스트립", "language": "ko", "type": "translation" },
+        { "alias": "鸡条", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞條", "language": "zh-tw", "type": "translation" },
+        { "alias": "tiras de pollo empanadas", "language": "es", "type": "translation" },
+        { "alias": "bâtonnets de poulet panés", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "strip", "grams": 50 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "turkey pepperoni",
+      "category": "protein",
+      "per_100g": {
+        "calories": 379,
+        "protein_g": 20.4,
+        "carbs_g": 2.8,
+        "fat_g": 31.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "七面鳥ペパロニ", "language": "ja", "type": "translation" },
+        { "alias": "터키 페퍼로니", "language": "ko", "type": "translation" },
+        { "alias": "火鸡意大利辣香肠", "language": "zh-cn", "type": "translation" },
+        { "alias": "火雞意大利辣香腸", "language": "zh-tw", "type": "translation" },
+        { "alias": "pepperoni de pavo", "language": "es", "type": "translation" },
+        { "alias": "pepperoni de dinde", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 5 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken cutlet, breaded",
+      "category": "protein",
+      "per_100g": {
+        "calories": 265,
+        "protein_g": 20.2,
+        "carbs_g": 14.0,
+        "fat_g": 14.0,
+        "fiber_g": 0.8
+      },
+      "aliases": [
+        { "alias": "breaded chicken breast", "language": "en", "type": "synonym" },
+        { "alias": "chicken schnitzel", "language": "en", "type": "synonym" },
+        { "alias": "チキンカツレツ", "language": "ja", "type": "translation" },
+        { "alias": "치킨커틀릿", "language": "ko", "type": "translation" },
+        { "alias": "炸鸡排", "language": "zh-cn", "type": "translation" },
+        { "alias": "炸雞排", "language": "zh-tw", "type": "translation" },
+        { "alias": "chuleta de pollo empanada", "language": "es", "type": "translation" },
+        { "alias": "escalope de poulet panée", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cutlet", "grams": 120 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "turkey cutlet, breaded",
+      "category": "protein",
+      "per_100g": {
+        "calories": 245,
+        "protein_g": 21.5,
+        "carbs_g": 13.5,
+        "fat_g": 11.5,
+        "fiber_g": 0.7
+      },
+      "aliases": [
+        { "alias": "breaded turkey breast", "language": "en", "type": "synonym" },
+        { "alias": "turkey schnitzel", "language": "en", "type": "synonym" },
+        { "alias": "七面鳥カツレツ", "language": "ja", "type": "translation" },
+        { "alias": "터키커틀릿", "language": "ko", "type": "translation" },
+        { "alias": "炸火鸡排", "language": "zh-cn", "type": "translation" },
+        { "alias": "炸火雞排", "language": "zh-tw", "type": "translation" },
+        { "alias": "chuleta de pavo empanada", "language": "es", "type": "translation" },
+        { "alias": "escalope de dinde panée", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cutlet", "grams": 130 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "duck confit",
+      "category": "protein",
+      "per_100g": {
+        "calories": 265,
+        "protein_g": 27.0,
+        "carbs_g": 0,
+        "fat_g": 17.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "confit de canard", "language": "fr", "type": "synonym" },
+        { "alias": "鴨のコンフィ", "language": "ja", "type": "translation" },
+        { "alias": "오리 콩피", "language": "ko", "type": "translation" },
+        { "alias": "油封鸭", "language": "zh-cn", "type": "translation" },
+        { "alias": "油封鴨", "language": "zh-tw", "type": "translation" },
+        { "alias": "pato confitado", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "leg", "grams": 180 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken neck",
+      "category": "protein",
+      "per_100g": {
+        "calories": 203,
+        "protein_g": 14.4,
+        "carbs_g": 0,
+        "fat_g": 16.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "鶏首", "language": "ja", "type": "translation" },
+        { "alias": "닭목", "language": "ko", "type": "translation" },
+        { "alias": "鸡脖子", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞脖子", "language": "zh-tw", "type": "translation" },
+        { "alias": "cuello de pollo", "language": "es", "type": "translation" },
+        { "alias": "cou de poulet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "neck", "grams": 30 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken feet",
+      "category": "protein",
+      "per_100g": {
+        "calories": 215,
+        "protein_g": 19.4,
+        "carbs_g": 0.2,
+        "fat_g": 14.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "鶏足", "language": "ja", "type": "translation" },
+        { "alias": "닭발", "language": "ko", "type": "translation" },
+        { "alias": "鸡爪", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞爪", "language": "zh-tw", "type": "translation" },
+        { "alias": "patas de pollo", "language": "es", "type": "translation" },
+        { "alias": "pattes de poulet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "foot", "grams": 20 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "turkey neck",
+      "category": "protein",
+      "per_100g": {
+        "calories": 188,
+        "protein_g": 15.0,
+        "carbs_g": 0,
+        "fat_g": 14.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "七面鳥首", "language": "ja", "type": "translation" },
+        { "alias": "칠면조 목", "language": "ko", "type": "translation" },
+        { "alias": "火鸡脖子", "language": "zh-cn", "type": "translation" },
+        { "alias": "火雞脖子", "language": "zh-tw", "type": "translation" },
+        { "alias": "cuello de pavo", "language": "es", "type": "translation" },
+        { "alias": "cou de dinde", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "neck", "grams": 100 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "turkey giblets",
+      "category": "protein",
+      "per_100g": {
+        "calories": 157,
+        "protein_g": 23.2,
+        "carbs_g": 1.9,
+        "fat_g": 5.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "七面鳥内臓", "language": "ja", "type": "translation" },
+        { "alias": "칠면조 내장", "language": "ko", "type": "translation" },
+        { "alias": "火鸡内脏", "language": "zh-cn", "type": "translation" },
+        { "alias": "火雞內臟", "language": "zh-tw", "type": "translation" },
+        { "alias": "menudillos de pavo", "language": "es", "type": "translation" },
+        { "alias": "abats de dinde", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken back",
+      "category": "protein",
+      "per_100g": {
+        "calories": 239,
+        "protein_g": 17.0,
+        "carbs_g": 0,
+        "fat_g": 18.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "鶏背", "language": "ja", "type": "translation" },
+        { "alias": "닭등", "language": "ko", "type": "translation" },
+        { "alias": "鸡背", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞背", "language": "zh-tw", "type": "translation" },
+        { "alias": "espalda de pollo", "language": "es", "type": "translation" },
+        { "alias": "dos de poulet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "back", "grams": 200 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken oyster",
+      "category": "protein",
+      "per_100g": {
+        "calories": 189,
+        "protein_g": 23.2,
+        "carbs_g": 0,
+        "fat_g": 10.1,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chicken thigh oyster", "language": "en", "type": "synonym" },
+        { "alias": "鶏オイスター", "language": "ja", "type": "translation" },
+        { "alias": "닭굴살", "language": "ko", "type": "translation" },
+        { "alias": "鸡蚝", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞蠔", "language": "zh-tw", "type": "translation" },
+        { "alias": "ostra de pollo", "language": "es", "type": "translation" },
+        { "alias": "huître de poulet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 15 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "duck sausage",
+      "category": "protein",
+      "per_100g": {
+        "calories": 340,
+        "protein_g": 16.0,
+        "carbs_g": 2.0,
+        "fat_g": 30.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "鴨ソーセージ", "language": "ja", "type": "translation" },
+        { "alias": "오리 소시지", "language": "ko", "type": "translation" },
+        { "alias": "鸭肉香肠", "language": "zh-cn", "type": "translation" },
+        { "alias": "鴨肉香腸", "language": "zh-tw", "type": "translation" },
+        { "alias": "salchicha de pato", "language": "es", "type": "translation" },
+        { "alias": "saucisse de canard", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "link", "grams": 85 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "poussin, whole",
+      "category": "protein",
+      "per_100g": {
+        "calories": 162,
+        "protein_g": 20.2,
+        "carbs_g": 0,
+        "fat_g": 8.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "baby chicken", "language": "en", "type": "synonym" },
+        { "alias": "spring chicken", "language": "en", "type": "synonym" },
+        { "alias": "ひな鶏", "language": "ja", "type": "translation" },
+        { "alias": "병아리 닭", "language": "ko", "type": "translation" },
+        { "alias": "童子鸡", "language": "zh-cn", "type": "translation" },
+        { "alias": "童子雞", "language": "zh-tw", "type": "translation" },
+        { "alias": "pollito", "language": "es", "type": "translation" },
+        { "alias": "poussin", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "bird", "grams": 450 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "capon, whole",
+      "category": "protein",
+      "per_100g": {
+        "calories": 223,
+        "protein_g": 19.4,
+        "carbs_g": 0,
+        "fat_g": 15.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "castrated rooster", "language": "en", "type": "synonym" },
+        { "alias": "カポン", "language": "ja", "type": "translation" },
+        { "alias": "거세 수탉", "language": "ko", "type": "translation" },
+        { "alias": "阉鸡", "language": "zh-cn", "type": "translation" },
+        { "alias": "閹雞", "language": "zh-tw", "type": "translation" },
+        { "alias": "capón", "language": "es", "type": "translation" },
+        { "alias": "chapon", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "bird", "grams": 3000 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "squab, whole",
+      "category": "protein",
+      "per_100g": {
+        "calories": 294,
+        "protein_g": 17.5,
+        "carbs_g": 0,
+        "fat_g": 24.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "young pigeon", "language": "en", "type": "synonym" },
+        { "alias": "鳩肉", "language": "ja", "type": "translation" },
+        { "alias": "어린 비둘기", "language": "ko", "type": "translation" },
+        { "alias": "乳鸽", "language": "zh-cn", "type": "translation" },
+        { "alias": "乳鴿", "language": "zh-tw", "type": "translation" },
+        { "alias": "pichón", "language": "es", "type": "translation" },
+        { "alias": "pigeonneau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "bird", "grams": 350 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "partridge, whole",
+      "category": "protein",
+      "per_100g": {
+        "calories": 230,
+        "protein_g": 25.7,
+        "carbs_g": 0,
+        "fat_g": 13.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "ヤマウズラ", "language": "ja", "type": "translation" },
+        { "alias": "자고새", "language": "ko", "type": "translation" },
+        { "alias": "山鹑", "language": "zh-cn", "type": "translation" },
+        { "alias": "山鶉", "language": "zh-tw", "type": "translation" },
+        { "alias": "perdiz", "language": "es", "type": "translation" },
+        { "alias": "perdrix", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "bird", "grams": 400 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "grouse, whole",
+      "category": "protein",
+      "per_100g": {
+        "calories": 142,
+        "protein_g": 23.8,
+        "carbs_g": 0,
+        "fat_g": 4.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "ライチョウ", "language": "ja", "type": "translation" },
+        { "alias": "뇌조", "language": "ko", "type": "translation" },
+        { "alias": "松鸡", "language": "zh-cn", "type": "translation" },
+        { "alias": "松雞", "language": "zh-tw", "type": "translation" },
+        { "alias": "urogallo", "language": "es", "type": "translation" },
+        { "alias": "tétras", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "bird", "grams": 600 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "ostrich fillet",
+      "category": "protein",
+      "per_100g": {
+        "calories": 123,
+        "protein_g": 22.0,
+        "carbs_g": 0,
+        "fat_g": 3.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "ostrich meat", "language": "en", "type": "synonym" },
+        { "alias": "ダチョウ肉", "language": "ja", "type": "translation" },
+        { "alias": "타조 고기", "language": "ko", "type": "translation" },
+        { "alias": "鸵鸟肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "鴕鳥肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "carne de avestruz", "language": "es", "type": "translation" },
+        { "alias": "viande d'autruche", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "emu fillet",
+      "category": "protein",
+      "per_100g": {
+        "calories": 131,
+        "protein_g": 23.1,
+        "carbs_g": 0,
+        "fat_g": 3.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "emu meat", "language": "en", "type": "synonym" },
+        { "alias": "エミュー肉", "language": "ja", "type": "translation" },
+        { "alias": "에뮤 고기", "language": "ko", "type": "translation" },
+        { "alias": "鸸鹋肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "鴯鶓肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "carne de emú", "language": "es", "type": "translation" },
+        { "alias": "viande d'émeu", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "lb", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "chicken stock",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 10,
+        "protein_g": 1.0,
+        "carbs_g": 1.0,
+        "fat_g": 0.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chicken broth", "language": "en", "type": "synonym" },
+        { "alias": "鶏がらスープ", "language": "ja", "type": "translation" },
+        { "alias": "닭육수", "language": "ko", "type": "translation" },
+        { "alias": "鸡汤", "language": "zh-cn", "type": "translation" },
+        { "alias": "雞湯", "language": "zh-tw", "type": "translation" },
+        { "alias": "caldo de pollo", "language": "es", "type": "translation" },
+        { "alias": "bouillon de poulet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 240 },
+        { "unit": "ml", "grams": 1 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "turkey stock",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 8,
+        "protein_g": 0.8,
+        "carbs_g": 0.9,
+        "fat_g": 0.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "turkey broth", "language": "en", "type": "synonym" },
+        { "alias": "七面鳥がらスープ", "language": "ja", "type": "translation" },
+        { "alias": "칠면조 육수", "language": "ko", "type": "translation" },
+        { "alias": "火鸡汤", "language": "zh-cn", "type": "translation" },
+        { "alias": "火雞湯", "language": "zh-tw", "type": "translation" },
+        { "alias": "caldo de pavo", "language": "es", "type": "translation" },
+        { "alias": "bouillon de dinde", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 240 },
+        { "unit": "ml", "grams": 1 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    }
+  ]
+}

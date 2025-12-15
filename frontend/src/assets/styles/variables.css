@@ -7,6 +7,87 @@
  * To customize the UI, simply edit the values below.
  */
 
+/* Gill Sans Web Font */
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('../fonts/Gill Sans Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  ascent-override: 95%;
+  descent-override: 25%;
+}
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('../fonts/Gill Sans Light Italic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+  ascent-override: 95%;
+  descent-override: 25%;
+}
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('../fonts/Gill Sans.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  ascent-override: 95%;
+  descent-override: 25%;
+}
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('../fonts/Gill Sans Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  ascent-override: 95%;
+  descent-override: 25%;
+}
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('../fonts/Gill Sans Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  ascent-override: 95%;
+  descent-override: 25%;
+}
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('../fonts/Gill Sans Medium Italic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  ascent-override: 95%;
+  descent-override: 25%;
+}
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('../fonts/Gill Sans Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  ascent-override: 95%;
+  descent-override: 25%;
+}
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('../fonts/Gill Sans Bold Italic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  ascent-override: 95%;
+  descent-override: 25%;
+}
+
 :root {
   /* ==================== COLOR PALETTE ==================== */
 
@@ -38,6 +119,18 @@
   --color-info: #6B8CAE;              /* Warm Slate Blue - informational messages */
   --color-info-dark: #536B89;
   --color-info-light: #E1E9F0;
+
+  /* Difficulty Level Badge Colors */
+  --color-difficulty-easy-bg: #d4f4dd;
+  --color-difficulty-easy-text: #1b5e20;
+  --color-difficulty-medium-bg: #fff3cd;
+  --color-difficulty-medium-text: #856404;
+  --color-difficulty-hard-bg: #f8d7da;
+  --color-difficulty-hard-text: #721c24;
+
+  /* Overlay/Modal Colors */
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-overlay-dark: rgba(0, 0, 0, 0.7);
 
   /* Neutral Colors - Soft Sand Palette */
   --color-white: #FFFFFF;
@@ -95,8 +188,8 @@
   /* ==================== TYPOGRAPHY ==================== */
 
   /* Font Families */
-  --font-family-base: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-  --font-family-heading: 'Cormorant Garamond', serif;
+  --font-family-base: 'Gill Sans', 'Gill Sans MT', 'Roboto', 'Trebuchet MS', sans-serif;
+  --font-family-heading: 'Libre Baskerville', serif;
 
   /* Font Sizes */
   --font-size-xs: 0.75rem;      /* 12px */
@@ -232,36 +325,39 @@
 }
 
 /* ==================== LANGUAGE-SPECIFIC FONTS ==================== */
+/* For CJK languages, we put the Noto fonts FIRST so all text (including
+   Latin characters) uses consistent typography. This prevents the jarring
+   mix of Gill Sans for English words within Japanese/Chinese/Korean text. */
 
-/* Japanese - Noto Serif JP & Noto Sans JP */
+/* Japanese - Noto Sans JP for body, Noto Serif JP for headings */
 :root[lang="ja"] {
-  --font-family-heading: 'Noto Serif JP', serif;
-  --font-family-base: 'Noto Sans JP', sans-serif;
+  --font-family-heading: 'Noto Serif JP', 'Libre Baskerville', serif;
+  --font-family-base: 'Noto Sans JP', 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
 
-/* Korean - Noto Serif KR & Noto Sans KR */
+/* Korean - Noto Sans KR for body, Noto Serif KR for headings */
 :root[lang="ko"] {
-  --font-family-heading: 'Noto Serif KR', serif;
-  --font-family-base: 'Noto Sans KR', sans-serif;
+  --font-family-heading: 'Noto Serif KR', 'Libre Baskerville', serif;
+  --font-family-base: 'Noto Sans KR', 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
 
-/* Traditional Chinese - Noto Serif TC & Noto Sans TC */
+/* Traditional Chinese - Noto Sans TC for body, Noto Serif TC for headings */
 :root[lang="zh-tw"] {
-  --font-family-heading: 'Noto Serif TC', serif;
-  --font-family-base: 'Noto Sans TC', sans-serif;
+  --font-family-heading: 'Noto Serif TC', 'Libre Baskerville', serif;
+  --font-family-base: 'Noto Sans TC', 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
 
-/* Simplified Chinese - Noto Serif SC & Noto Sans SC */
+/* Simplified Chinese - Noto Sans SC for body, Noto Serif SC for headings */
 :root[lang="zh-cn"] {
-  --font-family-heading: 'Noto Serif SC', serif;
-  --font-family-base: 'Noto Sans SC', sans-serif;
+  --font-family-heading: 'Noto Serif SC', 'Libre Baskerville', serif;
+  --font-family-base: 'Noto Sans SC', 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
 
-/* Spanish, French - same as English (Garamond + Gill) */
+/* Spanish, French - same as English (Libre Baskerville + Gill) */
 :root[lang="es"],
 :root[lang="fr"] {
-  --font-family-heading: 'Cormorant Garamond', serif;
-  --font-family-base: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  --font-family-heading: 'Libre Baskerville', serif;
+  --font-family-base: 'Gill Sans', 'Gill Sans MT', 'Roboto', 'Trebuchet MS', sans-serif;
 }
 
 /* Manual dark mode toggle (when user explicitly chooses dark mode) */

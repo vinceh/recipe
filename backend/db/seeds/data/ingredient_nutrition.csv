@@ -1,0 +1,2909 @@
+ingredient_canonical_name,calories,protein_g,carbs_g,fat_g,fiber_g,data_source,confidence_score
+bread flour,100.0,2.0,15.0,2.0,1.0,ai,0.7
+"chicken breast, boneless skinless",165.0,31.0,0.0,3.6,0.0,ai,0.8
+"chicken breast, boneless with skin",197.0,29.8,0.0,7.8,0.0,ai,0.8
+"chicken breast, bone-in with skin",172.0,25.8,0.0,6.8,0.0,ai,0.8
+"chicken thigh, boneless skinless",177.0,24.4,0.0,8.2,0.0,ai,0.8
+"chicken thigh, boneless with skin",229.0,21.7,0.0,15.3,0.0,ai,0.8
+"chicken thigh, bone-in with skin",211.0,18.0,0.0,14.7,0.0,ai,0.8
+"chicken drumstick, with skin",216.0,18.4,0.0,15.3,0.0,ai,0.8
+"chicken drumstick, skinless",149.0,21.5,0.0,6.4,0.0,ai,0.8
+"chicken wing, with skin",222.0,20.5,0.0,15.0,0.0,ai,0.8
+"chicken wing, skinless",180.0,24.2,0.0,8.5,0.0,ai,0.8
+"chicken, whole",215.0,18.6,0.0,15.1,0.0,ai,0.8
+"chicken, ground",170.0,17.4,0.0,10.8,0.0,ai,0.8
+chicken liver,172.0,24.5,0.9,6.5,0.0,ai,0.8
+chicken heart,153.0,26.4,0.7,4.3,0.0,ai,0.8
+chicken gizzard,154.0,30.4,0.6,2.7,0.0,ai,0.8
+chicken skin,440.0,11.3,0.0,43.0,0.0,ai,0.8
+chicken tenderloin,109.0,24.0,0.0,0.9,0.0,ai,0.8
+"turkey breast, boneless skinless",135.0,30.1,0.0,1.7,0.0,ai,0.8
+"turkey breast, bone-in with skin",157.0,21.9,0.0,7.0,0.0,ai,0.8
+"turkey thigh, boneless skinless",144.0,27.7,0.0,3.2,0.0,ai,0.8
+"turkey thigh, bone-in with skin",144.0,20.4,0.0,6.4,0.0,ai,0.8
+"turkey drumstick, with skin",144.0,20.4,0.0,6.4,0.0,ai,0.8
+"turkey wing, with skin",197.0,27.4,0.0,8.8,0.0,ai,0.8
+"turkey, whole",160.0,21.5,0.0,7.4,0.0,ai,0.8
+"turkey, ground",203.0,20.0,0.0,13.3,0.0,ai,0.8
+"turkey, ground lean",149.0,21.8,0.0,6.4,0.0,ai,0.8
+turkey bacon,225.0,18.9,2.6,15.0,0.0,ai,0.8
+"duck breast, boneless with skin",337.0,18.3,0.0,28.4,0.0,ai,0.8
+"duck breast, boneless skinless",140.0,23.5,0.0,4.5,0.0,ai,0.8
+"duck leg, with skin",211.0,23.5,0.0,12.2,0.0,ai,0.8
+"duck, whole",404.0,11.5,0.0,39.3,0.0,ai,0.8
+duck liver,136.0,18.7,3.5,4.6,0.0,ai,0.8
+duck fat,900.0,0.0,0.0,100.0,0.0,ai,0.8
+"goose breast, boneless with skin",371.0,15.9,0.0,33.6,0.0,ai,0.8
+"goose leg, with skin",305.0,21.9,0.0,23.5,0.0,ai,0.8
+"goose, whole",371.0,15.9,0.0,33.6,0.0,ai,0.8
+goose liver,133.0,16.4,6.3,4.3,0.0,ai,0.8
+goose fat,900.0,0.0,0.0,100.0,0.0,ai,0.8
+"quail, whole",227.0,25.1,0.0,13.6,0.0,ai,0.8
+"quail breast, boneless skinless",134.0,25.8,0.0,2.7,0.0,ai,0.8
+quail egg,158.0,13.0,0.4,11.1,0.0,ai,0.8
+"pheasant breast, boneless skinless",133.0,24.3,0.0,3.6,0.0,ai,0.8
+"pheasant, whole",181.0,23.6,0.0,9.3,0.0,ai,0.8
+"cornish hen, whole",220.0,19.2,0.0,15.5,0.0,ai,0.8
+"guinea fowl breast, boneless skinless",110.0,23.4,0.0,1.3,0.0,ai,0.8
+"guinea fowl, whole",158.0,20.6,0.0,7.8,0.0,ai,0.8
+"chicken sausage, Italian style",220.0,14.0,3.0,17.0,0.0,ai,0.8
+"chicken sausage, breakfast style",196.0,15.0,2.5,14.0,0.0,ai,0.8
+"turkey sausage, Italian style",196.0,16.0,3.0,13.0,0.0,ai,0.8
+"turkey sausage, breakfast style",196.0,17.3,2.4,12.8,0.0,ai,0.8
+chicken hot dog,230.0,12.5,3.5,18.5,0.0,ai,0.8
+turkey hot dog,196.0,13.5,3.2,14.0,0.0,ai,0.8
+rotisserie chicken,219.0,27.3,0.0,11.2,0.0,ai,0.8
+"chicken nuggets, breaded",296.0,15.5,17.8,18.7,1.2,ai,0.8
+"chicken strips, breaded",290.0,17.0,16.0,17.5,1.0,ai,0.8
+turkey pepperoni,379.0,20.4,2.8,31.0,0.0,ai,0.8
+"chicken cutlet, breaded",265.0,20.2,14.0,14.0,0.8,ai,0.8
+"turkey cutlet, breaded",245.0,21.5,13.5,11.5,0.7,ai,0.8
+duck confit,265.0,27.0,0.0,17.0,0.0,ai,0.8
+chicken neck,203.0,14.4,0.0,16.2,0.0,ai,0.8
+chicken feet,215.0,19.4,0.2,14.6,0.0,ai,0.8
+turkey neck,188.0,15.0,0.0,14.0,0.0,ai,0.8
+turkey giblets,157.0,23.2,1.9,5.5,0.0,ai,0.8
+chicken back,239.0,17.0,0.0,18.6,0.0,ai,0.8
+chicken oyster,189.0,23.2,0.0,10.1,0.0,ai,0.8
+duck sausage,340.0,16.0,2.0,30.0,0.0,ai,0.8
+"poussin, whole",162.0,20.2,0.0,8.6,0.0,ai,0.8
+"capon, whole",223.0,19.4,0.0,15.4,0.0,ai,0.8
+"squab, whole",294.0,17.5,0.0,24.0,0.0,ai,0.8
+"partridge, whole",230.0,25.7,0.0,13.5,0.0,ai,0.8
+"grouse, whole",142.0,23.8,0.0,4.7,0.0,ai,0.8
+ostrich fillet,123.0,22.0,0.0,3.0,0.0,ai,0.8
+emu fillet,131.0,23.1,0.0,3.6,0.0,ai,0.8
+turkey stock,8.0,0.8,0.9,0.2,0.0,ai,0.8
+beef ribeye steak,291.0,24.0,0.0,21.0,0.0,ai,0.8
+beef sirloin steak,183.0,27.0,0.0,7.6,0.0,ai,0.8
+beef tenderloin,227.0,26.0,0.0,13.0,0.0,ai,0.8
+beef chuck roast,211.0,23.0,0.0,13.0,0.0,ai,0.8
+beef brisket,282.0,19.0,0.0,22.0,0.0,ai,0.8
+beef flank steak,192.0,26.0,0.0,9.0,0.0,ai,0.8
+beef skirt steak,213.0,26.0,0.0,11.0,0.0,ai,0.8
+beef short ribs,312.0,18.0,0.0,26.0,0.0,ai,0.8
+beef oxtail,262.0,18.0,0.0,20.0,0.0,ai,0.8
+ground beef 93% lean,152.0,22.0,0.0,7.0,0.0,ai,0.8
+ground beef 85% lean,215.0,21.0,0.0,14.0,0.0,ai,0.8
+ground beef 80% lean,254.0,20.0,0.0,19.0,0.0,ai,0.8
+ground beef 73% lean,288.0,19.0,0.0,23.0,0.0,ai,0.8
+beef stew meat,201.0,24.0,0.0,11.0,0.0,ai,0.8
+beef liver,135.0,20.4,3.9,3.6,0.0,ai,0.8
+beef tongue,224.0,16.0,3.7,16.0,0.0,ai,0.8
+beef bone marrow,786.0,7.0,0.0,84.0,0.0,ai,0.8
+beef t-bone steak,247.0,24.0,0.0,16.0,0.0,ai,0.8
+beef porterhouse steak,258.0,23.0,0.0,18.0,0.0,ai,0.8
+beef new york strip steak,219.0,26.0,0.0,12.0,0.0,ai,0.8
+beef top round roast,175.0,28.0,0.0,6.2,0.0,ai,0.8
+beef bottom round roast,187.0,27.0,0.0,8.0,0.0,ai,0.8
+beef eye of round roast,149.0,27.0,0.0,4.0,0.0,ai,0.8
+beef tri-tip roast,178.0,25.0,0.0,8.0,0.0,ai,0.8
+beef shank,201.0,24.0,0.0,11.0,0.0,ai,0.8
+beef plate ribs,338.0,16.0,0.0,30.0,0.0,ai,0.8
+beef cheek,209.0,23.0,0.0,13.0,0.0,ai,0.8
+beef hanger steak,194.0,25.0,0.0,10.0,0.0,ai,0.8
+beef flat iron steak,202.0,25.0,0.0,11.0,0.0,ai,0.8
+beef picanha,265.0,22.0,0.0,19.0,0.0,ai,0.8
+beef heart,112.0,17.7,0.1,3.9,0.0,ai,0.8
+beef kidney,99.0,17.4,0.0,2.9,0.0,ai,0.8
+beef tripe,85.0,12.0,0.0,3.7,0.0,ai,0.8
+beef sweetbreads,131.0,18.0,0.0,6.0,0.0,ai,0.8
+beef back ribs,286.0,19.0,0.0,23.0,0.0,ai,0.8
+beef cubed steak,181.0,25.0,0.0,8.5,0.0,ai,0.8
+lamb leg,191.0,25.6,0.0,9.0,0.0,ai,0.8
+lamb rack,254.0,21.0,0.0,18.0,0.0,ai,0.8
+lamb loin chops,220.0,24.0,0.0,13.0,0.0,ai,0.8
+lamb shoulder,234.0,23.0,0.0,15.0,0.0,ai,0.8
+lamb shank,206.0,24.0,0.0,12.0,0.0,ai,0.8
+ground lamb,283.0,17.0,0.0,23.0,0.0,ai,0.8
+lamb rib chops,264.0,20.0,0.0,20.0,0.0,ai,0.8
+lamb neck,242.0,22.0,0.0,16.0,0.0,ai,0.8
+lamb shoulder chops,240.0,22.0,0.0,16.0,0.0,ai,0.8
+lamb sirloin chops,225.0,24.0,0.0,14.0,0.0,ai,0.8
+lamb breast,304.0,18.0,0.0,25.0,0.0,ai,0.8
+lamb liver,139.0,20.0,2.2,5.7,0.0,ai,0.8
+lamb kidney,88.0,15.7,0.8,2.5,0.0,ai,0.8
+lamb heart,122.0,16.5,2.2,5.7,0.0,ai,0.8
+lamb tenderloin,189.0,26.0,0.0,9.0,0.0,ai,0.8
+venison loin,149.0,30.2,0.0,2.4,0.0,ai,0.8
+ground venison,157.0,26.5,0.0,5.3,0.0,ai,0.8
+venison stew meat,149.0,30.2,0.0,2.4,0.0,ai,0.8
+bison ribeye steak,146.0,28.4,0.0,2.7,0.0,ai,0.8
+ground bison,146.0,25.5,0.0,4.7,0.0,ai,0.8
+elk steak,146.0,30.2,0.0,1.9,0.0,ai,0.8
+ground elk,155.0,27.0,0.0,5.0,0.0,ai,0.8
+rabbit meat,173.0,33.0,0.0,3.5,0.0,ai,0.8
+wild boar meat,160.0,28.3,0.0,4.4,0.0,ai,0.8
+beef prime rib,291.0,24.0,0.0,21.0,0.0,ai,0.8
+beef rump roast,175.0,28.0,0.0,6.2,0.0,ai,0.8
+beef london broil,192.0,26.0,0.0,9.0,0.0,ai,0.8
+beef coulotte steak,183.0,27.0,0.0,7.6,0.0,ai,0.8
+beef denver steak,202.0,25.0,0.0,11.0,0.0,ai,0.8
+beef chuck eye steak,211.0,23.0,0.0,13.0,0.0,ai,0.8
+beef petite tender,189.0,26.0,0.0,9.0,0.0,ai,0.8
+beef sirloin tip roast,175.0,28.0,0.0,6.2,0.0,ai,0.8
+beef ribeye cap,312.0,22.0,0.0,25.0,0.0,ai,0.8
+beef merlot cut,194.0,25.0,0.0,10.0,0.0,ai,0.8
+beef ranch steak,202.0,25.0,0.0,11.0,0.0,ai,0.8
+beef sierra steak,202.0,25.0,0.0,11.0,0.0,ai,0.8
+lamb crown roast,254.0,21.0,0.0,18.0,0.0,ai,0.8
+lamb leg steak,191.0,25.6,0.0,9.0,0.0,ai,0.8
+lamb bone-in leg,191.0,25.6,0.0,9.0,0.0,ai,0.8
+lamb boneless leg,191.0,25.6,0.0,9.0,0.0,ai,0.8
+lamb saddle,220.0,24.0,0.0,13.0,0.0,ai,0.8
+venison leg,149.0,30.2,0.0,2.4,0.0,ai,0.8
+bison strip loin,146.0,28.4,0.0,2.7,0.0,ai,0.8
+pork shoulder,196.0,19.9,0.0,12.6,0.0,ai,0.8
+pork loin,143.0,21.0,0.0,6.0,0.0,ai,0.8
+pork tenderloin,143.0,22.8,0.0,4.8,0.0,ai,0.8
+pork chop,231.0,23.5,0.0,14.6,0.0,ai,0.8
+pork spare ribs,277.0,19.3,0.0,21.6,0.0,ai,0.8
+baby back ribs,290.0,18.0,0.0,24.0,0.0,ai,0.8
+country-style pork ribs,252.0,20.1,0.0,18.5,0.0,ai,0.8
+ground pork,263.0,17.2,0.0,21.2,0.0,ai,0.8
+bacon,541.0,37.0,1.4,42.0,0.0,ai,0.8
+pancetta,458.0,16.5,0.0,44.0,0.0,ai,0.8
+guanciale,655.0,10.6,0.0,69.0,0.0,ai,0.8
+prosciutto,237.0,25.5,0.5,14.7,0.0,ai,0.8
+ham,145.0,21.0,1.5,5.5,0.0,ai,0.8
+smoked ham,163.0,22.0,1.0,7.7,0.0,ai,0.8
+Canadian bacon,185.0,23.8,2.0,8.7,0.0,ai,0.8
+pork sausage,304.0,13.0,3.0,27.3,0.0,ai,0.8
+Italian sausage,346.0,15.1,4.3,30.0,0.0,ai,0.8
+chorizo,455.0,24.1,2.0,38.3,0.0,ai,0.8
+breakfast sausage,339.0,12.0,2.2,32.0,0.0,ai,0.8
+pork liver,134.0,21.4,2.5,3.6,0.0,ai,0.8
+pork tongue,225.0,16.4,0.0,17.2,0.0,ai,0.8
+pork ears,166.0,22.5,0.7,7.8,0.0,ai,0.8
+pork feet,200.0,19.0,0.0,14.0,0.0,ai,0.8
+pork intestines,153.0,11.0,0.0,12.0,0.0,ai,0.8
+pork fatback,816.0,2.9,0.0,89.0,0.0,ai,0.8
+pork jowl,655.0,10.6,0.0,69.0,0.0,ai,0.8
+pork hock,256.0,22.3,0.0,18.0,0.0,ai,0.8
+pork sirloin,157.0,21.4,0.0,7.4,0.0,ai,0.8
+boneless pork chop,206.0,24.3,0.0,11.6,0.0,ai,0.8
+bone-in pork chop,231.0,23.5,0.0,14.6,0.0,ai,0.8
+pork crown roast,242.0,21.0,0.0,17.0,0.0,ai,0.8
+pork picnic shoulder,240.0,19.2,0.0,17.8,0.0,ai,0.8
+pork blade steak,221.0,20.5,0.0,14.8,0.0,ai,0.8
+pork cutlet,206.0,24.3,0.0,11.6,0.0,ai,0.8
+salt pork,748.0,5.1,0.0,80.5,0.0,ai,0.8
+pork schnitzel,218.0,23.0,5.0,12.0,0.0,ai,0.8
+pork sausage patty,339.0,12.0,2.2,32.0,0.0,ai,0.8
+pork rind,544.0,61.3,0.0,31.3,0.0,ai,0.8
+pork heart,118.0,17.0,0.8,4.7,0.0,ai,0.8
+pork kidney,100.0,16.5,0.0,3.3,0.0,ai,0.8
+pork back ribs,290.0,18.0,0.0,24.0,0.0,ai,0.8
+pork riblets,270.0,19.0,0.0,21.0,0.0,ai,0.8
+pork medallion,143.0,22.8,0.0,4.8,0.0,ai,0.8
+smoked pork chop,250.0,22.0,0.0,17.5,0.0,ai,0.8
+pork steak,221.0,20.5,0.0,14.8,0.0,ai,0.8
+pork roast,196.0,19.9,0.0,12.6,0.0,ai,0.8
+pork leg,183.0,21.5,0.0,10.2,0.0,ai,0.8
+pork shoulder blade,221.0,20.5,0.0,14.8,0.0,ai,0.8
+pork neck bones,185.0,17.5,0.0,12.5,0.0,ai,0.8
+pork tail,378.0,30.3,0.0,27.8,0.0,ai,0.8
+pork stomach,158.0,15.8,0.0,10.2,0.0,ai,0.8
+pork spleen,105.0,18.3,0.0,2.9,0.0,ai,0.8
+lap cheong,382.0,18.0,12.0,29.0,0.0,ai,0.8
+char siu,280.0,20.0,15.0,16.0,0.0,ai,0.8
+longaniza,350.0,16.0,3.0,31.0,0.0,ai,0.8
+nduja,420.0,18.0,2.0,38.0,0.0,ai,0.8
+cured pork belly,458.0,16.5,0.0,44.0,0.0,ai,0.8
+pork loin chop,206.0,24.3,0.0,11.6,0.0,ai,0.8
+pork center cut chop,201.0,24.8,0.0,10.6,0.0,ai,0.8
+pork rib chop,242.0,22.5,0.0,16.2,0.0,ai,0.8
+pork sirloin chop,181.0,23.7,0.0,8.8,0.0,ai,0.8
+pork top loin,165.0,22.2,0.0,7.9,0.0,ai,0.8
+salmon fillet,208.0,20.4,0.0,13.4,0.0,ai,0.8
+smoked salmon,117.0,18.3,0.0,4.3,0.0,ai,0.8
+tuna fillet,144.0,23.3,0.0,4.9,0.0,ai,0.8
+canned tuna in water,116.0,25.5,0.0,0.8,0.0,ai,0.8
+canned tuna in oil,198.0,29.1,0.0,8.2,0.0,ai,0.8
+cod fillet,82.0,17.8,0.0,0.7,0.0,ai,0.8
+tilapia fillet,96.0,20.1,0.0,1.7,0.0,ai,0.8
+sea bass fillet,97.0,18.4,0.0,2.0,0.0,ai,0.8
+trout fillet,119.0,20.5,0.0,3.5,0.0,ai,0.8
+mackerel fillet,205.0,18.6,0.0,13.9,0.0,ai,0.8
+sardines,208.0,24.6,0.0,11.5,0.0,ai,0.8
+canned sardines in oil,208.0,24.6,0.0,11.5,0.0,ai,0.8
+anchovies,131.0,20.4,0.0,4.8,0.0,ai,0.8
+herring fillet,158.0,17.9,0.0,9.0,0.0,ai,0.8
+halibut fillet,111.0,22.5,0.0,2.3,0.0,ai,0.8
+flounder fillet,86.0,17.9,0.0,1.2,0.0,ai,0.8
+sole fillet,70.0,14.9,0.0,0.7,0.0,ai,0.8
+snapper fillet,100.0,20.5,0.0,1.3,0.0,ai,0.8
+mahi-mahi fillet,85.0,18.5,0.0,0.7,0.0,ai,0.8
+swordfish steak,121.0,19.8,0.0,4.0,0.0,ai,0.8
+catfish fillet,105.0,18.5,0.0,3.0,0.0,ai,0.8
+haddock fillet,87.0,18.9,0.0,0.6,0.0,ai,0.8
+pollock fillet,79.0,17.0,0.0,0.8,0.0,ai,0.8
+perch fillet,91.0,18.6,0.0,1.6,0.0,ai,0.8
+pike fillet,88.0,19.3,0.0,0.7,0.0,ai,0.8
+barramundi fillet,97.0,17.6,0.0,2.5,0.0,ai,0.8
+grouper fillet,92.0,19.4,0.0,1.0,0.0,ai,0.8
+bluefish fillet,124.0,20.0,0.0,4.2,0.0,ai,0.8
+rockfish fillet,94.0,18.8,0.0,1.6,0.0,ai,0.8
+pompano fillet,164.0,18.5,0.0,9.5,0.0,ai,0.8
+bluegill fillet,97.0,20.9,0.0,0.9,0.0,ai,0.8
+carp fillet,127.0,17.8,0.0,5.6,0.0,ai,0.8
+walleye fillet,93.0,19.1,0.0,1.2,0.0,ai,0.8
+turbot fillet,95.0,16.1,0.0,3.0,0.0,ai,0.8
+monkfish fillet,76.0,14.5,0.0,1.5,0.0,ai,0.8
+plaice fillet,86.0,17.9,0.0,1.2,0.0,ai,0.8
+bream fillet,96.0,17.4,0.0,2.7,0.0,ai,0.8
+smelt,97.0,17.6,0.0,2.4,0.0,ai,0.8
+whiting fillet,90.0,18.3,0.0,1.3,0.0,ai,0.8
+skate fillet,98.0,21.5,0.0,0.7,0.0,ai,0.8
+John Dory fillet,79.0,18.1,0.0,0.7,0.0,ai,0.8
+eel fillet,184.0,18.4,0.0,11.7,0.0,ai,0.8
+Pacific saury,142.0,18.1,0.0,7.6,0.0,ai,0.8
+Pacific salmon,139.0,21.6,0.0,5.4,0.0,ai,0.8
+coho salmon,146.0,21.3,0.0,6.0,0.0,ai,0.8
+pink salmon,116.0,19.9,0.0,3.5,0.0,ai,0.8
+chum salmon,120.0,19.9,0.0,3.8,0.0,ai,0.8
+king salmon,179.0,19.8,0.0,10.4,0.0,ai,0.8
+skipjack tuna,103.0,22.0,0.0,1.0,0.0,ai,0.8
+albacore tuna,108.0,23.0,0.0,0.8,0.0,ai,0.8
+bluefin tuna,144.0,23.3,0.0,4.9,0.0,ai,0.8
+bigeye tuna,144.0,23.4,0.0,4.9,0.0,ai,0.8
+black cod,195.0,13.4,0.0,15.3,0.0,ai,0.8
+Chilean sea bass,109.0,15.5,0.0,4.9,0.0,ai,0.8
+ocean perch,79.0,15.3,0.0,1.6,0.0,ai,0.8
+lingcod fillet,85.0,17.7,0.0,1.1,0.0,ai,0.8
+striped bass fillet,97.0,17.7,0.0,2.3,0.0,ai,0.8
+largemouth bass fillet,114.0,18.9,0.0,3.7,0.0,ai,0.8
+smoked haddock,116.0,25.2,0.0,0.9,0.0,ai,0.8
+smoked trout,132.0,18.5,0.0,6.1,0.0,ai,0.8
+smoked mackerel,262.0,18.5,0.0,21.1,0.0,ai,0.8
+whole mackerel,205.0,18.6,0.0,13.9,0.0,ai,0.8
+whole trout,119.0,20.5,0.0,3.5,0.0,ai,0.8
+whole sardines,208.0,24.6,0.0,11.5,0.0,ai,0.8
+butterfish fillet,146.0,17.3,0.0,8.0,0.0,ai,0.8
+mullet fillet,117.0,19.4,0.0,3.8,0.0,ai,0.8
+croaker fillet,104.0,17.8,0.0,3.2,0.0,ai,0.8
+drum fillet,119.0,17.5,0.0,4.9,0.0,ai,0.8
+kingfish fillet,105.0,20.2,0.0,2.3,0.0,ai,0.8
+Spanish mackerel fillet,139.0,19.3,0.0,6.3,0.0,ai,0.8
+wahoo fillet,109.0,24.0,0.0,0.8,0.0,ai,0.8
+marlin fillet,110.0,24.3,0.0,0.6,0.0,ai,0.8
+amberjack fillet,146.0,21.3,0.0,6.0,0.0,ai,0.8
+yellowtail fillet,146.0,23.1,0.0,5.2,0.0,ai,0.8
+barracuda fillet,98.0,20.9,0.0,1.2,0.0,ai,0.8
+cobia fillet,107.0,20.7,0.0,2.3,0.0,ai,0.8
+Arctic char fillet,127.0,20.1,0.0,4.6,0.0,ai,0.8
+steelhead trout fillet,119.0,20.5,0.0,3.5,0.0,ai,0.8
+lake trout fillet,168.0,18.9,0.0,9.7,0.0,ai,0.8
+brook trout fillet,101.0,17.5,0.0,2.7,0.0,ai,0.8
+brown trout fillet,135.0,19.2,0.0,5.7,0.0,ai,0.8
+swai fillet,90.0,15.0,0.0,3.0,0.0,ai,0.8
+rainbow trout fillet,119.0,20.5,0.0,3.5,0.0,ai,0.8
+orange roughy fillet,69.0,14.7,0.0,0.7,0.0,ai,0.8
+yellowtail (hamachi),146.0,23.0,0.0,5.0,0.0,ai,0.8
+sea bream (tai),100.0,19.4,0.0,1.8,0.0,ai,0.8
+flounder (hirame),91.0,18.8,0.0,1.2,0.0,ai,0.8
+horse mackerel (aji),126.0,19.7,0.1,4.5,0.0,ai,0.8
+pacific saury (sanma),310.0,18.1,0.1,25.6,0.0,ai,0.8
+atka mackerel (hokke),115.0,17.3,0.0,4.4,0.0,ai,0.8
+pacific cutlassfish (galchi),109.0,17.7,0.0,3.5,0.0,ai,0.8
+mackerel (godeungeo),205.0,18.6,0.0,13.9,0.0,ai,0.8
+yellow croaker (jogi),100.0,18.2,0.0,2.5,0.0,ai,0.8
+pomfret,96.0,18.0,0.0,2.0,0.0,ai,0.8
+grass carp,112.0,17.9,0.0,4.0,0.0,ai,0.8
+silver carp,86.0,17.5,0.0,1.6,0.0,ai,0.8
+bighead carp,90.0,16.3,0.0,2.3,0.0,ai,0.8
+crucian carp,108.0,17.1,0.0,3.8,0.0,ai,0.8
+snakehead fish,84.0,18.5,0.0,0.6,0.0,ai,0.8
+mandarin fish,117.0,18.5,0.0,4.2,0.0,ai,0.8
+branzino,97.0,18.4,0.0,2.0,0.0,ai,0.8
+dorade,115.0,21.1,0.0,2.7,0.0,ai,0.8
+John Dory,75.0,18.3,0.0,0.7,0.0,ai,0.8
+turbot,95.0,16.1,0.0,2.9,0.0,ai,0.8
+sole,70.0,12.4,0.0,1.9,0.0,ai,0.8
+monkfish,76.0,14.5,0.0,1.5,0.0,ai,0.8
+corvina,90.0,18.4,0.0,1.6,0.0,ai,0.8
+robalo,97.0,18.9,0.0,1.9,0.0,ai,0.8
+mahi-mahi,85.0,18.5,0.0,0.7,0.0,ai,0.8
+sea bass (suzuki),100.0,19.9,0.1,1.8,0.0,ai,0.8
+rockfish (mebaru),109.0,18.0,0.0,3.5,0.0,ai,0.8
+threadfin bream,92.0,19.5,0.0,1.2,0.0,ai,0.8
+barracuda,122.0,20.0,0.0,4.4,0.0,ai,0.8
+amberjack,146.0,21.0,0.0,6.2,0.0,ai,0.8
+grunt (isaki),127.0,19.7,0.0,4.7,0.0,ai,0.8
+halfbeak (sayori),95.0,19.8,0.0,1.3,0.0,ai,0.8
+conger eel (anago),161.0,17.3,0.0,9.7,0.0,ai,0.8
+freshwater eel (unagi),303.0,14.5,0.3,27.0,0.0,ai,0.8
+greenling (ainame),113.0,17.6,0.0,4.3,0.0,ai,0.8
+pike conger (hamo),144.0,18.8,0.0,7.1,0.0,ai,0.8
+sardine (iwashi),208.0,19.2,0.0,13.9,0.0,ai,0.8
+Spanish mackerel (sawara),161.0,20.1,0.1,8.3,0.0,ai,0.8
+tilefish (amadai),113.0,19.2,0.0,3.4,0.0,ai,0.8
+blackthroat seaperch (nodoguro),194.0,17.8,0.1,13.1,0.0,ai,0.8
+red snapper (kinmedai),160.0,17.8,0.1,9.0,0.0,ai,0.8
+Pacific cod (madara),77.0,17.6,0.0,0.2,0.0,ai,0.8
+Pacific herring (nishin),216.0,16.5,0.4,15.4,0.0,ai,0.8
+red gurnard (houbou),113.0,18.9,0.0,3.4,0.0,ai,0.8
+barfin flounder (karei),96.0,19.6,0.0,1.3,0.0,ai,0.8
+largehead hairtail,109.0,17.7,0.0,3.5,0.0,ai,0.8
+dried cod (bacalao),290.0,62.8,0.0,2.4,0.0,ai,0.8
+dried pollock (hwangtae),321.0,75.0,0.0,2.5,0.0,ai,0.8
+dried anchovies (myeolchi),210.0,42.0,0.0,4.8,0.0,ai,0.8
+fish cake (kamaboko),95.0,12.0,9.7,0.9,0.0,ai,0.8
+fish sausage (eomuk),110.0,10.5,12.0,2.0,0.0,ai,0.8
+narutomaki,80.0,11.5,6.0,0.6,0.0,ai,0.8
+chikuwa,121.0,12.2,13.5,2.0,0.0,ai,0.8
+cobia,134.0,21.0,0.0,5.0,0.0,ai,0.8
+milkfish (bangus),152.0,20.0,0.0,7.0,0.0,ai,0.8
+grouper,92.0,19.4,0.0,1.0,0.0,ai,0.8
+ray,89.0,19.7,0.0,0.9,0.0,ai,0.8
+smoked herring,215.0,24.6,0.0,12.4,0.0,ai,0.8
+anchovy paste,131.0,18.0,4.0,4.3,0.0,ai,0.8
+salted pollock roe (myeongnan),126.0,20.0,1.5,4.2,0.0,ai,0.8
+salted salmon roe (ikura),252.0,24.6,2.9,15.6,0.0,ai,0.8
+flying fish roe (tobiko),72.0,12.7,1.5,1.8,0.0,ai,0.8
+capelin roe (masago),40.0,6.0,1.0,1.5,0.0,ai,0.8
+pufferfish (fugu),84.0,19.3,0.0,0.4,0.0,ai,0.8
+loach,79.0,16.4,0.0,0.9,0.0,ai,0.8
+herring roe (kazunoko),162.0,25.2,0.4,6.4,0.0,ai,0.8
+whiting,92.0,18.3,0.0,1.3,0.0,ai,0.8
+haddock,87.0,18.9,0.0,0.6,0.0,ai,0.8
+saithe,92.0,19.4,0.0,1.0,0.0,ai,0.8
+"shrimp, raw small",85.0,18.0,0.9,1.0,0.0,ai,0.8
+"shrimp, raw medium",85.0,18.0,0.9,1.0,0.0,ai,0.8
+"shrimp, raw large",85.0,18.0,0.9,1.0,0.0,ai,0.8
+"shrimp, raw jumbo",85.0,18.0,0.9,1.0,0.0,ai,0.8
+"shrimp, cooked",99.0,20.9,0.2,1.1,0.0,ai,0.8
+"tiger prawn, raw",89.0,18.5,0.8,1.2,0.0,ai,0.8
+"white shrimp, raw",84.0,17.8,0.9,1.0,0.0,ai,0.8
+"rock shrimp, raw",88.0,18.2,0.7,1.1,0.0,ai,0.8
+"spot prawn, raw",87.0,18.1,0.9,1.0,0.0,ai,0.8
+"blue crab, raw",87.0,18.1,0.0,1.1,0.0,ai,0.8
+"blue crab, cooked",102.0,20.2,0.0,1.8,0.0,ai,0.8
+"dungeness crab, raw",86.0,17.9,0.7,1.0,0.0,ai,0.8
+"king crab, raw",84.0,18.3,0.0,0.6,0.0,ai,0.8
+"king crab, cooked",97.0,19.4,0.0,1.5,0.0,ai,0.8
+"snow crab, raw",90.0,18.5,0.0,1.2,0.0,ai,0.8
+"snow crab, cooked",95.0,19.4,0.4,1.2,0.0,ai,0.8
+soft shell crab,87.0,18.1,0.0,1.1,0.0,ai,0.8
+"stone crab claw, cooked",98.0,19.8,0.8,1.3,0.0,ai,0.8
+"lobster tail, raw",89.0,18.8,0.5,0.9,0.0,ai,0.8
+"lobster tail, cooked",98.0,20.5,0.5,1.3,0.0,ai,0.8
+"whole lobster, raw",89.0,18.8,0.5,0.9,0.0,ai,0.8
+"spiny lobster, raw",91.0,19.0,0.4,1.0,0.0,ai,0.8
+"crawfish, raw",87.0,18.2,0.0,1.1,0.0,ai,0.8
+"crawfish, cooked",77.0,15.9,0.0,1.1,0.0,ai,0.8
+"langoustine, raw",86.0,17.9,0.6,1.0,0.0,ai,0.8
+"blue mussel, raw",86.0,11.9,3.7,2.2,0.0,ai,0.8
+"blue mussel, cooked",172.0,23.8,7.4,4.5,0.0,ai,0.8
+"green mussel, raw",88.0,12.1,3.8,2.3,0.0,ai,0.8
+"clam, raw",74.0,12.8,2.6,1.0,0.0,ai,0.8
+"clam, cooked",148.0,25.6,5.1,2.0,0.0,ai,0.8
+"littleneck clam, raw",74.0,12.8,2.6,1.0,0.0,ai,0.8
+"manila clam, raw",76.0,13.0,2.7,1.0,0.0,ai,0.8
+"razor clam, raw",82.0,13.6,3.5,1.1,0.0,ai,0.8
+"geoduck clam, raw",73.0,13.4,2.2,0.8,0.0,ai,0.8
+"oyster, raw eastern",68.0,7.1,3.9,2.5,0.0,ai,0.8
+"oyster, raw pacific",81.0,9.4,5.0,2.3,0.0,ai,0.8
+"oyster, cooked",79.0,9.0,4.7,2.8,0.0,ai,0.8
+"kumamoto oyster, raw",73.0,8.4,4.2,2.3,0.0,ai,0.8
+"scallop, raw sea",69.0,12.1,3.2,0.5,0.0,ai,0.8
+"scallop, cooked",111.0,20.5,5.4,1.4,0.0,ai,0.8
+"scallop, raw bay",69.0,12.1,3.2,0.5,0.0,ai,0.8
+scallop roe,91.0,14.2,4.8,1.5,0.0,ai,0.8
+"squid, raw",92.0,15.6,3.1,1.4,0.0,ai,0.8
+"squid, cooked",175.0,29.8,7.5,2.7,0.0,ai,0.8
+squid ink,45.0,6.8,4.2,0.6,0.0,ai,0.8
+"octopus, raw",82.0,14.9,2.2,1.0,0.0,ai,0.8
+"octopus, cooked",164.0,29.8,4.4,2.1,0.0,ai,0.8
+"baby octopus, raw",82.0,14.9,2.2,1.0,0.0,ai,0.8
+"cuttlefish, raw",79.0,16.2,0.8,0.7,0.0,ai,0.8
+"cuttlefish, cooked",158.0,32.5,1.6,1.4,0.0,ai,0.8
+"conch, raw",77.0,16.2,1.1,0.4,0.0,ai,0.8
+sea urchin roe,172.0,13.0,2.5,4.3,0.0,ai,0.8
+"abalone, raw",105.0,17.1,6.0,0.8,0.0,ai,0.8
+"abalone, canned",119.0,19.4,6.8,0.9,0.0,ai,0.8
+"whelk, raw",137.0,23.8,7.8,0.3,0.0,ai,0.8
+"periwinkle, raw",89.0,16.5,3.1,1.0,0.0,ai,0.8
+"cockle, raw",79.0,13.5,4.7,0.6,0.0,ai,0.8
+"blood cockle, raw",81.0,13.8,4.9,0.7,0.0,ai,0.8
+"surf clam, raw",76.0,13.2,2.8,1.0,0.0,ai,0.8
+"sea snail, cooked",90.0,16.3,2.0,1.4,0.0,ai,0.8
+"prawns, raw",89.0,18.5,0.8,1.2,0.0,ai,0.8
+"mantis shrimp, raw",87.0,18.3,0.6,1.0,0.0,ai,0.8
+"barnacle, cooked",95.0,17.2,2.8,1.5,0.0,ai,0.8
+"crab meat, lump",98.0,19.5,0.0,1.5,0.0,ai,0.8
+"crab meat, claw",102.0,20.2,0.0,1.8,0.0,ai,0.8
+imitation crab,81.0,6.5,12.9,0.4,0.0,ai,0.8
+lobster roe,128.0,20.5,2.4,3.8,0.0,ai,0.8
+"sea cucumber, raw",56.0,13.0,0.0,0.4,0.0,ai,0.8
+"sea cucumber, dried",270.0,63.0,0.0,2.0,0.0,ai,0.8
+"pen shell, raw",68.0,12.0,3.0,0.5,0.0,ai,0.8
+cuttlebone,5.0,0.2,0.0,0.1,0.0,ai,0.8
+"ark shell, raw",78.0,13.3,4.5,0.6,0.0,ai,0.8
+shrimp paste,127.0,18.2,8.5,2.1,0.0,ai,0.8
+dried shrimp,305.0,63.7,2.8,3.8,0.0,ai,0.8
+dried scallops,282.0,61.8,6.4,1.2,0.0,ai,0.8
+dried squid,313.0,62.4,12.4,4.6,0.0,ai,0.8
+dried octopus,296.0,59.6,8.8,4.0,0.0,ai,0.8
+chicken egg whole,143.0,12.6,0.7,9.5,0.0,ai,0.8
+chicken egg white,52.0,10.9,0.7,0.2,0.0,ai,0.8
+chicken egg yolk,322.0,15.9,3.6,26.5,0.0,ai,0.8
+duck egg,185.0,12.8,1.5,13.8,0.0,ai,0.8
+goose egg,185.0,13.9,1.4,13.3,0.0,ai,0.8
+century egg,171.0,13.1,4.2,10.7,0.0,ai,0.8
+salted duck egg,195.0,12.4,1.8,14.2,0.0,ai,0.8
+dried egg powder,592.0,47.4,4.9,41.2,0.0,ai,0.8
+liquid egg whites,50.0,10.5,0.8,0.0,0.0,ai,0.8
+hard boiled egg,155.0,12.6,1.1,10.6,0.0,ai,0.8
+soft boiled egg,147.0,12.5,0.8,10.0,0.0,ai,0.8
+poached egg,143.0,12.6,0.7,9.5,0.0,ai,0.8
+fried egg,196.0,13.6,0.8,15.0,0.0,ai,0.8
+scrambled eggs,149.0,9.9,1.6,11.2,0.0,ai,0.8
+omelet,154.0,10.6,1.2,11.7,0.0,ai,0.8
+tamagoyaki,162.0,11.2,4.8,10.5,0.0,ai,0.8
+egg substitute liquid,53.0,10.7,0.4,0.4,0.0,ai,0.8
+mayonnaise,680.0,1.0,0.6,75.0,0.0,ai,0.8
+japanese mayonnaise,703.0,1.5,0.9,78.0,0.0,ai,0.8
+egg white powder,382.0,81.1,7.8,0.0,0.0,ai,0.8
+egg yolk powder,666.0,34.3,2.4,56.4,0.0,ai,0.8
+tea egg,158.0,12.8,1.4,10.8,0.0,ai,0.8
+pickled egg,149.0,11.3,1.8,10.1,0.0,ai,0.8
+deviled egg,202.0,9.8,1.5,17.5,0.1,ai,0.8
+scotch egg,258.0,12.4,10.2,18.5,0.8,ai,0.8
+egg drop soup base,45.0,3.2,2.1,2.8,0.0,ai,0.8
+meringue powder,360.0,4.0,88.0,0.0,0.0,ai,0.8
+balut,188.0,14.0,2.2,13.6,0.0,ai,0.8
+salted egg yolk,375.0,14.8,2.1,33.5,0.0,ai,0.8
+russet potato,79.0,2.1,18.0,0.1,1.3,ai,0.8
+yukon gold potato,77.0,2.0,17.5,0.1,1.5,ai,0.8
+red potato,70.0,1.9,15.9,0.1,1.8,ai,0.8
+fingerling potato,72.0,1.9,16.3,0.1,1.6,ai,0.8
+sweet potato,86.0,1.6,20.1,0.1,3.0,ai,0.8
+purple sweet potato,85.0,1.5,20.0,0.1,3.0,ai,0.8
+japanese sweet potato,82.0,1.4,19.5,0.1,2.8,ai,0.8
+roma tomato,18.0,0.9,3.9,0.2,1.2,ai,0.8
+cherry tomato,18.0,0.9,3.9,0.2,1.2,ai,0.8
+grape tomato,18.0,0.9,3.9,0.2,1.2,ai,0.8
+beefsteak tomato,18.0,0.9,3.9,0.2,1.2,ai,0.8
+san marzano tomato,18.0,0.9,3.9,0.2,1.2,ai,0.8
+sun-dried tomato,258.0,14.1,55.8,3.0,12.3,ai,0.8
+yellow onion,40.0,1.1,9.3,0.1,1.7,ai,0.8
+shallot,72.0,2.5,16.8,0.1,3.2,ai,0.8
+pearl onion,40.0,1.1,9.3,0.1,1.7,ai,0.8
+cipollini onion,40.0,1.1,9.3,0.1,1.7,ai,0.8
+red bell pepper,31.0,1.0,6.0,0.3,2.1,ai,0.8
+green bell pepper,20.0,0.9,4.6,0.2,1.7,ai,0.8
+yellow bell pepper,27.0,1.0,6.3,0.2,0.9,ai,0.8
+orange bell pepper,26.0,0.9,6.0,0.2,1.5,ai,0.8
+jalapeño pepper,29.0,0.9,6.5,0.4,2.8,ai,0.8
+serrano pepper,32.0,1.7,7.0,0.4,3.7,ai,0.8
+poblano pepper,20.0,1.0,4.5,0.2,2.0,ai,0.8
+habanero pepper,40.0,1.9,8.8,0.5,1.5,ai,0.8
+thai chili,40.0,2.0,8.8,0.4,1.5,ai,0.8
+iceberg lettuce,14.0,0.9,3.0,0.1,1.2,ai,0.8
+romaine lettuce,17.0,1.2,3.3,0.3,2.1,ai,0.8
+butter lettuce,13.0,1.4,2.2,0.2,1.1,ai,0.8
+spinach,23.0,2.9,3.6,0.4,2.2,ai,0.8
+curly kale,35.0,2.9,4.4,1.5,4.1,ai,0.8
+lacinato kale,35.0,2.9,4.4,1.5,4.1,ai,0.8
+swiss chard,19.0,1.8,3.7,0.2,1.6,ai,0.8
+arugula,25.0,2.6,3.7,0.7,1.6,ai,0.8
+watercress,11.0,2.3,1.3,0.1,0.5,ai,0.8
+broccoli,34.0,2.8,6.6,0.4,2.6,ai,0.8
+cauliflower,25.0,1.9,5.0,0.3,2.0,ai,0.8
+green cabbage,25.0,1.3,5.8,0.1,2.5,ai,0.8
+red cabbage,31.0,1.4,7.4,0.2,2.1,ai,0.8
+napa cabbage,16.0,1.2,3.2,0.2,1.2,ai,0.8
+brussels sprouts,43.0,3.4,9.0,0.3,3.8,ai,0.8
+bok choy,13.0,1.5,2.2,0.2,1.0,ai,0.8
+baby bok choy,13.0,1.5,2.2,0.2,1.0,ai,0.8
+carrot,41.0,0.9,9.6,0.2,2.8,ai,0.8
+baby carrot,41.0,0.9,9.6,0.2,2.8,ai,0.8
+beet,43.0,1.6,9.6,0.2,2.8,ai,0.8
+golden beet,43.0,1.6,9.6,0.2,2.8,ai,0.8
+turnip,28.0,0.9,6.4,0.1,1.8,ai,0.8
+parsnip,75.0,1.2,18.0,0.3,4.9,ai,0.8
+red radish,16.0,0.7,3.4,0.1,1.6,ai,0.8
+daikon radish,18.0,0.6,4.1,0.1,1.6,ai,0.8
+yellow squash,17.0,1.2,3.1,0.3,1.0,ai,0.8
+butternut squash,45.0,1.0,11.7,0.1,2.0,ai,0.8
+acorn squash,40.0,0.8,10.4,0.1,1.5,ai,0.8
+spaghetti squash,31.0,0.6,7.0,0.6,1.5,ai,0.8
+pumpkin,26.0,1.0,6.5,0.1,0.5,ai,0.8
+kabocha squash,34.0,1.1,8.1,0.1,1.4,ai,0.8
+leek,61.0,1.5,14.2,0.3,1.8,ai,0.8
+scallion,32.0,1.8,7.3,0.2,2.6,ai,0.8
+chive,30.0,3.3,4.4,0.7,2.5,ai,0.8
+celery,16.0,0.7,3.0,0.2,1.6,ai,0.8
+cucumber,15.0,0.7,3.6,0.1,0.5,ai,0.8
+english cucumber,15.0,0.7,3.6,0.1,0.5,ai,0.8
+persian cucumber,15.0,0.7,3.6,0.1,0.5,ai,0.8
+corn,86.0,3.3,18.7,1.4,2.0,ai,0.8
+green peas,81.0,5.4,14.5,0.4,5.7,ai,0.8
+snow peas,42.0,2.8,7.6,0.2,2.6,ai,0.8
+sugar snap peas,42.0,2.8,7.6,0.2,2.6,ai,0.8
+green beans,31.0,1.8,7.0,0.2,2.7,ai,0.8
+french green beans,31.0,1.8,7.0,0.2,2.7,ai,0.8
+asparagus,20.0,2.2,3.9,0.1,2.1,ai,0.8
+artichoke,47.0,3.3,10.5,0.2,5.4,ai,0.8
+japanese eggplant,25.0,1.0,5.9,0.2,3.0,ai,0.8
+white mushroom,22.0,3.1,3.3,0.3,1.0,ai,0.8
+cremini mushroom,22.0,3.1,3.3,0.3,1.0,ai,0.8
+portobello mushroom,22.0,2.1,3.9,0.4,1.3,ai,0.8
+shiitake mushroom,34.0,2.2,6.8,0.5,2.5,ai,0.8
+oyster mushroom,33.0,3.3,6.1,0.4,2.3,ai,0.8
+enoki mushroom,37.0,2.7,7.8,0.3,2.7,ai,0.8
+king oyster mushroom,33.0,3.3,6.1,0.4,2.3,ai,0.8
+maitake mushroom,31.0,1.9,6.9,0.2,2.7,ai,0.8
+straw mushroom,32.0,3.8,4.2,0.7,3.3,ai,0.8
+wood ear mushroom,25.0,0.6,6.7,0.1,6.3,ai,0.8
+fennel bulb,31.0,1.2,7.3,0.2,3.1,ai,0.8
+jicama,38.0,0.7,8.8,0.1,4.9,ai,0.8
+kohlrabi,27.0,1.7,6.2,0.1,3.6,ai,0.8
+okra,33.0,1.9,7.5,0.2,3.2,ai,0.8
+radicchio,23.0,1.4,4.5,0.3,0.9,ai,0.8
+endive,17.0,1.3,3.4,0.2,3.1,ai,0.8
+collard greens,32.0,3.0,5.7,0.6,4.0,ai,0.8
+mustard greens,27.0,2.9,4.7,0.4,3.2,ai,0.8
+turnip greens,32.0,1.5,7.1,0.3,3.2,ai,0.8
+beet greens,22.0,2.2,4.3,0.1,3.7,ai,0.8
+escarole,17.0,1.3,3.4,0.2,3.1,ai,0.8
+frisée,17.0,1.3,3.4,0.2,3.1,ai,0.8
+rapini,22.0,3.2,2.9,0.5,2.7,ai,0.8
+chinese broccoli,19.0,1.1,3.8,0.7,2.0,ai,0.8
+yu choy,15.0,1.5,2.3,0.2,1.0,ai,0.8
+water spinach,19.0,2.6,3.1,0.2,2.1,ai,0.8
+tatsoi,13.0,1.5,2.2,0.2,1.0,ai,0.8
+mizuna,23.0,2.2,4.0,0.3,2.2,ai,0.8
+microgreens,29.0,2.5,4.4,0.5,2.0,ai,0.8
+soybean sprouts,85.0,8.5,9.6,4.5,0.8,ai,0.8
+bamboo shoots,27.0,2.6,5.2,0.3,2.2,ai,0.8
+lotus root,74.0,2.6,17.2,0.1,4.9,ai,0.8
+taro root,112.0,1.5,26.5,0.2,4.1,ai,0.8
+cassava,160.0,1.4,38.1,0.3,1.8,ai,0.8
+yam,118.0,1.5,27.9,0.2,4.1,ai,0.8
+edamame,122.0,11.9,10.0,5.2,5.2,ai,0.8
+hearts of palm,28.0,2.7,4.6,0.6,1.5,ai,0.8
+seaweed,45.0,6.0,9.6,0.6,0.5,ai,0.8
+wakame,45.0,3.0,9.1,0.6,0.5,ai,0.8
+kombu,43.0,1.7,9.6,0.6,1.3,ai,0.8
+bitter melon,17.0,1.0,3.7,0.2,2.8,ai,0.8
+winter melon,13.0,0.4,3.0,0.2,2.9,ai,0.8
+bottle gourd,14.0,0.6,3.4,0.0,0.5,ai,0.8
+luffa,20.0,1.2,4.4,0.2,1.1,ai,0.8
+chayote,19.0,0.8,4.5,0.1,1.7,ai,0.8
+horseradish,48.0,1.2,11.3,0.7,3.3,ai,0.8
+ginger root,80.0,1.8,17.8,0.8,2.0,ai,0.8
+turmeric root,312.0,9.7,67.1,3.3,22.7,ai,0.8
+water chestnut,97.0,1.4,23.9,0.1,3.0,ai,0.8
+shiso,37.0,3.3,7.3,0.6,7.3,ai,0.8
+myoga,12.0,0.9,2.6,0.1,2.1,ai,0.8
+mitsuba,13.0,2.0,1.3,0.4,2.5,ai,0.8
+nira,30.0,1.7,6.3,0.5,2.7,ai,0.8
+gobo,72.0,1.5,17.3,0.1,3.3,ai,0.8
+shishito pepper,27.0,1.9,5.5,0.2,2.3,ai,0.8
+korean perilla leaves,37.0,3.3,7.3,0.6,7.3,ai,0.8
+korean radish,18.0,0.6,4.1,0.1,1.6,ai,0.8
+fernbrake,34.0,4.5,5.5,0.4,3.7,ai,0.8
+bellflower root,40.0,1.4,9.2,0.1,1.8,ai,0.8
+thai eggplant,25.0,1.0,5.9,0.2,3.0,ai,0.8
+banana flower,51.0,1.6,9.9,0.6,5.7,ai,0.8
+wing beans,49.0,5.3,6.7,0.6,0.0,ai,0.8
+nopales,16.0,1.4,3.3,0.1,2.2,ai,0.8
+tomatillo,32.0,1.0,5.8,1.0,1.9,ai,0.8
+yuca,160.0,1.4,38.1,0.3,1.8,ai,0.8
+celeriac,42.0,1.5,9.2,0.3,1.8,ai,0.8
+yard long beans,47.0,2.8,8.4,0.4,3.6,ai,0.8
+amaranth leaves,23.0,2.5,4.0,0.3,2.2,ai,0.8
+pea shoots,35.0,3.5,6.0,0.3,2.6,ai,0.8
+chrysanthemum greens,24.0,2.0,4.3,0.6,2.3,ai,0.8
+taiwanese cabbage,15.0,1.1,3.0,0.2,1.2,ai,0.8
+komatsuna,14.0,1.5,2.4,0.2,1.9,ai,0.8
+chinese celery,16.0,0.7,3.0,0.2,1.6,ai,0.8
+thai basil,23.0,3.2,2.7,0.6,1.6,ai,0.8
+holy basil,23.0,3.2,2.7,0.6,1.6,ai,0.8
+saw leaf herb,23.0,2.1,3.7,0.5,2.8,ai,0.8
+vietnamese coriander,23.0,2.1,3.7,0.5,2.8,ai,0.8
+fuzzy melon,11.0,0.6,2.3,0.2,1.1,ai,0.8
+opo squash,14.0,0.6,3.4,0.0,1.2,ai,0.8
+ridge gourd,20.0,1.2,4.4,0.2,1.1,ai,0.8
+snake gourd,18.0,0.5,4.4,0.3,0.6,ai,0.8
+pointed gourd,17.0,0.8,3.8,0.3,1.2,ai,0.8
+calabaza,26.0,1.0,6.5,0.1,1.1,ai,0.8
+tatume squash,17.0,1.2,3.4,0.3,1.1,ai,0.8
+huauzontle,42.0,4.1,7.2,0.6,3.8,ai,0.8
+verdolagas,20.0,2.0,3.4,0.4,1.5,ai,0.8
+hoja santa,35.0,3.0,6.2,0.5,3.5,ai,0.8
+epazote,32.0,3.8,5.5,0.5,3.8,ai,0.8
+malanga,132.0,2.3,31.6,0.3,4.4,ai,0.8
+yam bean root,38.0,0.7,8.8,0.1,4.9,ai,0.8
+plantain,122.0,1.3,31.9,0.4,2.3,ai,0.8
+salsify,82.0,3.3,18.6,0.2,3.3,ai,0.8
+scorzonera,82.0,3.3,18.6,0.2,3.3,ai,0.8
+romanesco,25.0,2.6,5.0,0.3,2.4,ai,0.8
+purple cauliflower,25.0,1.9,5.0,0.3,2.0,ai,0.8
+puntarelle,17.0,1.3,3.4,0.2,3.1,ai,0.8
+cardoon,17.0,0.7,4.1,0.1,1.6,ai,0.8
+fiddlehead ferns,34.0,4.5,5.5,0.4,3.7,ai,0.8
+ramps,35.0,1.7,7.3,0.3,2.4,ai,0.8
+samphire,30.0,2.6,4.8,0.6,3.2,ai,0.8
+sea kale,25.0,2.5,4.2,0.3,2.8,ai,0.8
+agretti,17.0,1.8,2.2,0.3,2.6,ai,0.8
+borage,21.0,1.8,3.1,0.7,2.8,ai,0.8
+stinging nettle,42.0,4.3,7.5,0.1,6.9,ai,0.8
+sorrel,22.0,2.0,3.2,0.7,2.9,ai,0.8
+mache,21.0,2.0,3.6,0.4,2.3,ai,0.8
+dandelion greens,45.0,2.7,9.2,0.7,3.5,ai,0.8
+okahijiki,20.0,2.0,3.5,0.3,2.7,ai,0.8
+tsukemono radish,18.0,0.6,4.1,0.1,1.6,ai,0.8
+rutabaga,36.0,1.2,8.6,0.2,2.3,ai,0.8
+horseradish root,48.0,1.2,11.3,0.7,3.3,ai,0.8
+wasabi root,109.0,4.8,23.5,0.6,7.8,ai,0.8
+sunchoke,73.0,2.0,17.4,0.0,1.6,ai,0.8
+tindora,18.0,0.6,4.2,0.2,1.8,ai,0.8
+dudi,14.0,0.6,3.4,0.0,1.2,ai,0.8
+arbi leaves,42.0,3.9,6.7,0.7,3.7,ai,0.8
+drumstick vegetable,37.0,2.1,8.5,0.2,3.2,ai,0.8
+cluster beans,49.0,3.2,10.8,0.5,2.8,ai,0.8
+elephant foot yam,79.0,1.4,18.7,0.1,1.3,ai,0.8
+breadfruit,103.0,1.1,27.1,0.2,4.9,ai,0.8
+jackfruit,95.0,1.7,23.2,0.6,1.5,ai,0.8
+green papaya,39.0,0.6,9.8,0.1,1.8,ai,0.8
+christophine,19.0,0.8,4.5,0.1,1.7,ai,0.8
+yardlong bean leaves,26.0,3.5,3.8,0.3,2.8,ai,0.8
+sweet potato leaves,35.0,3.0,6.3,0.4,2.3,ai,0.8
+pumpkin leaves,19.0,2.7,2.3,0.4,2.2,ai,0.8
+cassava leaves,37.0,3.7,6.0,0.6,1.9,ai,0.8
+lemon,29.0,1.1,9.3,0.3,2.8,ai,0.8
+"orange, navel",49.0,0.9,12.5,0.2,2.2,ai,0.8
+"orange, blood",47.0,0.9,11.8,0.1,2.3,ai,0.8
+"orange, mandarin",53.0,0.8,13.3,0.3,1.8,ai,0.8
+"grapefruit, pink",42.0,0.8,10.7,0.1,1.6,ai,0.8
+"grapefruit, white",33.0,0.7,8.4,0.1,1.1,ai,0.8
+pomelo,38.0,0.8,9.6,0.0,1.0,ai,0.8
+yuzu,53.0,0.5,13.3,0.1,1.8,ai,0.8
+calamansi,31.0,0.6,10.8,0.1,2.0,ai,0.8
+strawberry,32.0,0.7,7.7,0.3,2.0,ai,0.8
+blueberry,57.0,0.7,14.5,0.3,2.4,ai,0.8
+raspberry,52.0,1.2,11.9,0.7,6.5,ai,0.8
+blackberry,43.0,1.4,9.6,0.5,5.3,ai,0.8
+cranberry,46.0,0.4,12.2,0.1,4.6,ai,0.8
+gooseberry,44.0,0.9,10.2,0.6,4.3,ai,0.8
+mulberry,43.0,1.4,9.8,0.4,1.7,ai,0.8
+elderberry,73.0,0.7,18.4,0.5,7.0,ai,0.8
+peach,39.0,0.9,9.5,0.3,1.5,ai,0.8
+nectarine,44.0,1.1,10.6,0.3,1.7,ai,0.8
+plum,46.0,0.7,11.4,0.3,1.4,ai,0.8
+apricot,48.0,1.4,11.1,0.4,2.0,ai,0.8
+"cherry, sweet",63.0,1.1,16.0,0.2,2.1,ai,0.8
+"cherry, sour",50.0,1.0,12.2,0.3,1.6,ai,0.8
+mango,60.0,0.8,15.0,0.4,1.6,ai,0.8
+banana,89.0,1.1,22.8,0.3,2.6,ai,0.8
+papaya,43.0,0.5,10.8,0.3,1.7,ai,0.8
+pineapple,50.0,0.5,13.1,0.1,1.4,ai,0.8
+"coconut, fresh",354.0,3.3,15.2,33.5,9.0,ai,0.8
+passion fruit,97.0,2.2,23.4,0.7,10.4,ai,0.8
+guava,68.0,2.6,14.3,1.0,5.4,ai,0.8
+lychee,66.0,0.8,16.5,0.4,1.3,ai,0.8
+rambutan,82.0,0.7,20.9,0.2,0.9,ai,0.8
+"dragon fruit, white flesh",60.0,1.2,13.0,0.4,3.0,ai,0.8
+"dragon fruit, red flesh",60.0,1.2,13.0,0.4,3.0,ai,0.8
+durian,147.0,1.5,27.1,5.3,3.8,ai,0.8
+starfruit,31.0,1.0,6.7,0.3,2.8,ai,0.8
+"apple, fuji",52.0,0.3,13.8,0.2,2.4,ai,0.8
+"apple, granny smith",52.0,0.3,13.8,0.2,2.4,ai,0.8
+"apple, honeycrisp",52.0,0.3,13.8,0.2,2.4,ai,0.8
+"apple, gala",52.0,0.3,13.8,0.2,2.4,ai,0.8
+"pear, asian",42.0,0.5,10.7,0.2,3.6,ai,0.8
+"pear, bartlett",57.0,0.4,15.2,0.1,3.1,ai,0.8
+"pear, bosc",57.0,0.4,15.2,0.1,3.1,ai,0.8
+watermelon,30.0,0.6,7.6,0.2,0.4,ai,0.8
+cantaloupe,34.0,0.8,8.2,0.2,0.9,ai,0.8
+honeydew melon,36.0,0.5,9.1,0.1,0.8,ai,0.8
+"grape, red",69.0,0.7,18.1,0.2,0.9,ai,0.8
+"grape, green",69.0,0.7,18.1,0.2,0.9,ai,0.8
+"grape, black",69.0,0.7,18.1,0.2,0.9,ai,0.8
+"fig, fresh",74.0,0.8,19.2,0.3,2.9,ai,0.8
+"date, medjool",277.0,1.8,75.0,0.2,6.7,ai,0.8
+pomegranate,83.0,1.7,18.7,1.2,4.0,ai,0.8
+"kiwi, green",61.0,1.1,14.7,0.5,3.0,ai,0.8
+"kiwi, gold",61.0,1.0,14.7,0.5,1.4,ai,0.8
+"persimmon, fuyu",70.0,0.6,18.6,0.2,3.6,ai,0.8
+"persimmon, hachiya",70.0,0.6,18.6,0.2,3.6,ai,0.8
+avocado,160.0,2.0,8.5,14.7,6.7,ai,0.8
+acai berry,70.0,2.0,4.0,5.0,2.0,ai,0.8
+tamarind,239.0,2.8,62.5,0.6,5.1,ai,0.8
+longan,60.0,1.3,15.1,0.1,1.1,ai,0.8
+mangosteen,73.0,0.4,17.9,0.6,1.8,ai,0.8
+soursop,66.0,1.0,16.8,0.3,3.3,ai,0.8
+quince,57.0,0.4,15.3,0.1,1.9,ai,0.8
+kumquat,71.0,1.9,15.9,0.9,6.5,ai,0.8
+"currant, black",63.0,1.4,15.4,0.4,4.8,ai,0.8
+"currant, red",56.0,1.4,13.8,0.2,4.3,ai,0.8
+boysenberry,50.0,1.0,11.9,0.3,5.0,ai,0.8
+cloudberry,51.0,2.4,8.6,0.8,6.3,ai,0.8
+huckleberry,37.0,0.7,8.7,0.4,3.0,ai,0.8
+salmonberry,32.0,1.0,7.0,0.3,4.0,ai,0.8
+marionberry,43.0,1.4,9.6,0.5,5.3,ai,0.8
+loganberry,55.0,1.5,12.9,0.3,5.3,ai,0.8
+bilberry,57.0,0.7,14.5,0.3,2.4,ai,0.8
+lingonberry,54.0,0.8,11.3,0.5,3.7,ai,0.8
+bearberry,50.0,0.6,12.0,0.2,4.0,ai,0.8
+jabuticaba,58.0,0.6,15.3,0.1,2.3,ai,0.8
+acerola,32.0,0.4,7.7,0.3,1.1,ai,0.8
+camu camu,17.0,0.4,4.7,0.2,1.1,ai,0.8
+cupuacu,49.0,1.1,11.5,0.3,1.5,ai,0.8
+feijoa,55.0,1.2,13.0,0.6,6.4,ai,0.8
+cherimoya,75.0,1.6,17.7,0.7,3.0,ai,0.8
+atemoya,94.0,2.1,23.6,0.3,2.4,ai,0.8
+sapodilla,83.0,0.4,19.9,1.1,5.3,ai,0.8
+pawpaw,80.0,1.2,18.8,1.2,2.6,ai,0.8
+jujube,79.0,1.2,20.2,0.2,10.0,ai,0.8
+loquat,47.0,0.4,12.1,0.2,1.7,ai,0.8
+medlar,97.0,0.4,24.0,0.2,5.8,ai,0.8
+serviceberry,95.0,0.3,24.0,0.2,2.4,ai,0.8
+crabapple,76.0,0.3,20.0,0.3,2.3,ai,0.8
+cactus pear,41.0,0.7,9.6,0.5,3.6,ai,0.8
+"pear, anjou",57.0,0.4,15.2,0.1,3.1,ai,0.8
+clementine,47.0,0.9,12.0,0.2,1.7,ai,0.8
+tangerine,53.0,0.8,13.3,0.3,1.8,ai,0.8
+satsuma,53.0,0.8,13.3,0.3,1.8,ai,0.8
+ugli fruit,47.0,0.8,11.5,0.1,2.0,ai,0.8
+horned melon,44.0,1.8,7.6,1.3,2.0,ai,0.8
+sugar apple,94.0,2.1,23.6,0.3,4.4,ai,0.8
+miracle fruit,11.0,0.4,2.8,0.0,0.1,ai,0.8
+mamey sapote,124.0,1.5,32.1,0.5,5.4,ai,0.8
+black sapote,134.0,1.9,35.6,0.4,0.0,ai,0.8
+white sapote,92.0,1.7,22.0,0.5,3.0,ai,0.8
+langsat,57.0,1.0,14.0,0.2,2.3,ai,0.8
+santol,71.0,0.5,17.9,0.1,1.5,ai,0.8
+bignay,75.0,0.8,18.5,0.3,1.2,ai,0.8
+salak,82.0,0.4,20.9,0.4,0.3,ai,0.8
+wax apple,25.0,0.6,5.7,0.3,0.8,ai,0.8
+wood apple,134.0,7.1,31.0,3.7,5.0,ai,0.8
+african cherry orange,39.0,0.9,9.6,0.1,2.0,ai,0.8
+marang,90.0,1.5,22.0,0.5,1.5,ai,0.8
+safou,239.0,3.8,11.6,21.4,6.8,ai,0.8
+rollinia,76.0,1.0,18.5,0.3,2.0,ai,0.8
+canistel,139.0,2.5,36.7,0.1,0.0,ai,0.8
+abiu,95.0,1.8,22.3,0.7,2.2,ai,0.8
+lucuma,97.0,1.5,23.3,0.5,2.3,ai,0.8
+pepino melon,22.0,0.6,5.1,0.1,1.1,ai,0.8
+naranjilla,25.0,0.6,5.9,0.1,3.5,ai,0.8
+cocona,27.0,0.9,5.8,0.2,1.5,ai,0.8
+jamelão,60.0,0.7,15.6,0.3,0.9,ai,0.8
+pitanga,33.0,0.8,7.5,0.4,3.0,ai,0.8
+grumichama,58.0,0.9,14.3,0.3,2.0,ai,0.8
+cambuca,45.0,0.8,11.0,0.2,2.5,ai,0.8
+uvaia,51.0,0.9,12.5,0.4,3.2,ai,0.8
+araza,41.0,0.5,10.1,0.2,1.8,ai,0.8
+camu camu berry,17.0,0.4,4.7,0.2,1.1,ai,0.8
+"basil, fresh",23.0,3.15,2.65,0.64,1.6,ai,0.8
+"basil, dried",233.0,14.4,47.8,4.07,37.7,ai,0.8
+"thai basil, fresh",23.0,3.15,2.65,0.64,1.6,ai,0.8
+"holy basil, fresh",23.0,3.15,2.65,0.64,1.6,ai,0.8
+"cilantro, fresh",23.0,2.13,3.67,0.52,2.8,ai,0.8
+"cilantro, dried",279.0,21.93,52.1,4.78,10.4,ai,0.8
+"parsley, fresh, flat-leaf",36.0,2.97,6.33,0.79,3.3,ai,0.8
+"parsley, fresh, curly",36.0,2.97,6.33,0.79,3.3,ai,0.8
+"parsley, dried",292.0,26.63,50.64,5.48,26.7,ai,0.8
+"mint, fresh",70.0,3.75,14.89,0.94,8.0,ai,0.8
+"mint, dried",285.0,19.93,52.04,6.03,29.8,ai,0.8
+"dill, fresh",43.0,3.46,7.02,1.12,2.1,ai,0.8
+"dill, dried",253.0,19.96,42.22,4.36,15.5,ai,0.8
+"rosemary, fresh",131.0,3.31,20.7,5.86,14.1,ai,0.8
+"rosemary, dried",331.0,4.88,64.06,15.22,42.6,ai,0.8
+"thyme, fresh",101.0,5.56,24.45,1.68,14.0,ai,0.8
+"thyme, dried",276.0,9.11,63.94,7.43,37.0,ai,0.8
+"sage, fresh",315.0,10.63,60.73,12.75,40.3,ai,0.8
+"sage, dried",315.0,10.63,60.73,12.75,40.3,ai,0.8
+"oregano, fresh",265.0,9.0,68.92,4.28,42.5,ai,0.8
+"oregano, dried",265.0,9.0,68.92,4.28,42.5,ai,0.8
+"tarragon, fresh",295.0,22.77,50.22,7.24,7.4,ai,0.8
+"tarragon, dried",295.0,22.77,50.22,7.24,7.4,ai,0.8
+"chervil, fresh",237.0,23.2,49.1,3.9,11.3,ai,0.8
+"chervil, dried",237.0,23.2,49.1,3.9,11.3,ai,0.8
+"marjoram, fresh",271.0,12.66,60.56,7.04,40.3,ai,0.8
+"marjoram, dried",271.0,12.66,60.56,7.04,40.3,ai,0.8
+"bay leaf, dried",313.0,7.61,74.97,8.36,26.3,ai,0.8
+"chives, fresh",30.0,3.27,4.35,0.73,2.5,ai,0.8
+"chives, dried",276.0,20.89,58.89,2.81,23.2,ai,0.8
+"lemongrass, fresh",99.0,1.82,25.31,0.49,0.0,ai,0.8
+"lemongrass, dried",99.0,1.82,25.31,0.49,0.0,ai,0.8
+"vietnamese coriander, fresh",23.0,2.13,3.67,0.52,2.8,ai,0.8
+"culantro, fresh",23.0,2.13,3.67,0.52,2.8,ai,0.8
+"perilla, fresh",37.0,3.9,7.3,0.1,7.0,ai,0.8
+"shiso, fresh",37.0,3.9,7.3,0.1,7.0,ai,0.8
+"kaffir lime leaves, fresh",66.0,0.8,16.0,0.2,5.2,ai,0.8
+"kaffir lime leaves, dried",66.0,0.8,16.0,0.2,5.2,ai,0.8
+"epazote, fresh",32.0,0.33,7.44,0.52,3.8,ai,0.8
+"epazote, dried",32.0,0.33,7.44,0.52,3.8,ai,0.8
+"hoja santa, fresh",44.0,2.0,8.5,0.8,3.5,ai,0.8
+"curry leaves, fresh",108.0,6.1,18.7,1.0,6.4,ai,0.8
+"curry leaves, dried",108.0,6.1,18.7,1.0,6.4,ai,0.8
+"pandan leaves, fresh",35.0,0.5,8.0,0.2,2.5,ai,0.8
+herbes de provence,280.0,10.0,60.0,6.0,35.0,ai,0.8
+italian seasoning,270.0,9.5,62.0,5.5,38.0,ai,0.8
+fines herbes,250.0,18.0,50.0,5.0,20.0,ai,0.8
+"lavender, dried",49.0,0.0,11.0,1.0,0.0,ai,0.8
+"savory, fresh",272.0,6.73,68.73,5.91,45.7,ai,0.8
+"savory, dried",272.0,6.73,68.73,5.91,45.7,ai,0.8
+"fennel fronds, fresh",31.0,1.24,7.3,0.2,3.1,ai,0.8
+"lovage, fresh",20.0,3.6,0.0,0.6,0.0,ai,0.8
+"lovage, dried",20.0,3.6,0.0,0.6,0.0,ai,0.8
+"sorrel, fresh",22.0,2.0,3.2,0.7,2.9,ai,0.8
+"borage, fresh",21.0,1.8,3.06,0.7,0.0,ai,0.8
+"lemon balm, fresh",49.0,3.7,8.0,0.4,0.0,ai,0.8
+"lemon balm, dried",49.0,3.7,8.0,0.4,0.0,ai,0.8
+"lemon verbena, fresh",0.0,0.0,0.0,0.0,0.0,ai,0.8
+"lemon verbena, dried",0.0,0.0,0.0,0.0,0.0,ai,0.8
+"chamomile, dried",1.0,0.0,0.2,0.0,0.0,ai,0.8
+"stevia, dried",0.0,0.0,0.0,0.0,0.0,ai,0.8
+"hyssop, fresh",40.0,3.0,8.0,0.5,4.0,ai,0.8
+"hyssop, dried",40.0,3.0,8.0,0.5,4.0,ai,0.8
+"lemon thyme, fresh",101.0,5.56,24.45,1.68,14.0,ai,0.8
+"lemon thyme, dried",276.0,9.11,63.94,7.43,37.0,ai,0.8
+"winter savory, dried",272.0,6.73,68.73,5.91,45.7,ai,0.8
+"summer savory, dried",272.0,6.73,68.73,5.91,45.7,ai,0.8
+"mexican oregano, dried",265.0,9.0,68.92,4.28,42.5,ai,0.8
+"greek oregano, dried",265.0,9.0,68.92,4.28,42.5,ai,0.8
+"zaatar, dried",276.0,9.11,63.94,7.43,37.0,ai,0.8
+"sawtooth coriander, fresh",23.0,2.13,3.67,0.52,2.8,ai,0.8
+"vietnamese mint, fresh",70.0,3.75,14.89,0.94,8.0,ai,0.8
+"lime basil, fresh",23.0,3.15,2.65,0.64,1.6,ai,0.8
+"opal basil, fresh",23.0,3.15,2.65,0.64,1.6,ai,0.8
+"lemon basil, fresh",23.0,3.15,2.65,0.64,1.6,ai,0.8
+"cinnamon basil, fresh",23.0,3.15,2.65,0.64,1.6,ai,0.8
+"banana leaf, fresh",69.0,1.8,16.5,0.4,2.6,ai,0.8
+"watercress, fresh",11.0,2.3,1.29,0.1,0.5,ai,0.8
+"arugula, fresh",25.0,2.58,3.65,0.66,1.6,ai,0.8
+"mustard greens, fresh",27.0,2.86,4.67,0.42,3.2,ai,0.8
+"jasmine rice, white, uncooked",365.0,7.1,79.9,0.7,1.3,ai,0.8
+"basmati rice, white, uncooked",357.0,7.5,78.0,0.6,1.3,ai,0.8
+"sushi rice, uncooked",356.0,6.8,79.2,0.5,1.4,ai,0.8
+"arborio rice, uncooked",358.0,7.0,79.5,0.6,1.5,ai,0.8
+"long-grain white rice, uncooked",365.0,7.1,79.9,0.7,1.3,ai,0.8
+"short-grain white rice, uncooked",356.0,6.5,79.3,0.5,1.4,ai,0.8
+"brown rice, long-grain, uncooked",370.0,7.9,77.2,2.9,3.5,ai,0.8
+"brown rice, short-grain, uncooked",370.0,7.5,77.5,2.7,3.4,ai,0.8
+"wild rice, uncooked",357.0,14.7,74.9,1.1,6.2,ai,0.8
+"black rice, uncooked",356.0,8.9,75.6,3.5,4.9,ai,0.8
+"red rice, uncooked",362.0,7.5,76.2,2.8,3.8,ai,0.8
+"sticky rice, uncooked",348.0,6.6,78.4,0.4,1.2,ai,0.8
+"parboiled rice, uncooked",374.0,8.1,80.9,1.0,2.0,ai,0.8
+broken rice,364.0,7.0,79.7,0.6,1.2,ai,0.8
+bulgur wheat,342.0,12.3,75.9,1.3,12.5,ai,0.8
+"couscous, dry",376.0,12.8,77.4,0.6,5.0,ai,0.8
+freekeh,325.0,14.7,72.5,2.3,13.3,ai,0.8
+"farro, uncooked",340.0,14.6,70.2,2.5,10.7,ai,0.8
+"wheat berries, hard red",330.0,13.7,71.2,2.5,12.2,ai,0.8
+cracked wheat,327.0,12.5,70.5,2.0,11.8,ai,0.8
+"quinoa, white, uncooked",368.0,14.1,64.2,6.1,7.0,ai,0.8
+"quinoa, red, uncooked",370.0,13.8,64.8,6.3,7.2,ai,0.8
+"quinoa, black, uncooked",371.0,14.0,64.5,6.2,7.3,ai,0.8
+"pearl barley, uncooked",352.0,9.9,77.7,1.2,15.6,ai,0.8
+"hulled barley, uncooked",354.0,12.5,73.5,2.3,17.3,ai,0.8
+"rolled oats, old-fashioned",379.0,13.2,67.7,6.5,10.1,ai,0.8
+steel-cut oats,375.0,13.7,66.3,6.9,10.6,ai,0.8
+instant oats,371.0,12.5,68.2,6.2,9.4,ai,0.8
+"millet, whole grain",378.0,11.0,72.8,4.2,8.5,ai,0.8
+"sorghum, whole grain",339.0,10.6,74.6,3.5,6.7,ai,0.8
+buckwheat groats,343.0,13.3,71.5,3.4,10.0,ai,0.8
+amaranth grain,371.0,13.6,65.3,7.0,6.7,ai,0.8
+teff grain,367.0,13.3,73.1,2.4,8.0,ai,0.8
+spelt berries,338.0,14.6,70.2,2.4,10.7,ai,0.8
+kamut grain,337.0,14.7,70.5,2.2,11.0,ai,0.8
+rye berries,338.0,14.8,75.9,2.5,15.1,ai,0.8
+"rice flour, white",366.0,6.0,80.1,1.4,2.4,ai,0.8
+"rice flour, brown",363.0,7.2,76.5,2.8,4.6,ai,0.8
+glutinous rice flour,370.0,6.3,81.7,1.0,2.3,ai,0.8
+"calrose rice, uncooked",358.0,6.9,79.0,0.6,1.3,ai,0.8
+"carnaroli rice, uncooked",359.0,7.1,79.3,0.7,1.6,ai,0.8
+"vialone nano rice, uncooked",357.0,6.8,79.1,0.6,1.5,ai,0.8
+"bomba rice, uncooked",360.0,7.3,78.8,0.7,1.7,ai,0.8
+"wehani rice, uncooked",363.0,7.8,76.5,2.7,3.6,ai,0.8
+"bhutanese red rice, uncooked",364.0,7.7,76.8,2.6,3.9,ai,0.8
+"himalayan red rice, uncooked",365.0,7.9,76.5,2.8,4.1,ai,0.8
+"thai black rice, uncooked",357.0,9.1,75.3,3.6,5.0,ai,0.8
+"chinese black rice, uncooked",355.0,8.7,75.8,3.4,4.7,ai,0.8
+"rosematta rice, uncooked",361.0,7.2,77.1,2.5,3.5,ai,0.8
+"bamboo rice, uncooked",358.0,7.5,77.8,2.1,3.2,ai,0.8
+"kalijira rice, uncooked",355.0,7.6,77.5,0.8,1.4,ai,0.8
+"texmati rice, white, uncooked",356.0,7.4,78.2,0.6,1.3,ai,0.8
+"jasmine brown rice, uncooked",367.0,7.6,77.5,2.7,3.4,ai,0.8
+"basmati brown rice, uncooked",365.0,7.8,77.2,2.8,3.5,ai,0.8
+rice bran,316.0,13.4,49.7,20.9,21.0,ai,0.8
+sweet rice flour,371.0,6.1,81.9,0.9,2.2,ai,0.8
+"couscous, pearl, dry",374.0,12.5,77.8,0.5,4.8,ai,0.8
+"whole wheat couscous, dry",353.0,13.2,72.4,1.8,8.7,ai,0.8
+"tricolor quinoa, uncooked",369.0,14.0,64.4,6.2,7.1,ai,0.8
+quinoa flakes,365.0,13.5,65.8,5.8,6.5,ai,0.8
+quinoa flour,364.0,13.8,65.2,6.0,6.8,ai,0.8
+oat groats,379.0,16.9,66.3,6.9,10.6,ai,0.8
+oat bran,246.0,17.3,66.2,7.0,15.4,ai,0.8
+oat flour,404.0,14.7,65.7,9.1,6.5,ai,0.8
+barley flakes,345.0,10.5,74.5,2.1,14.8,ai,0.8
+barley flour,345.0,10.5,74.5,1.6,10.1,ai,0.8
+wheat germ,360.0,23.2,51.8,9.7,13.2,ai,0.8
+wheat bran,216.0,15.6,64.5,4.3,42.8,ai,0.8
+"semolina, durum wheat",360.0,12.7,72.8,1.1,3.9,ai,0.8
+"polenta, dry",362.0,8.1,79.8,2.7,4.6,ai,0.8
+"corn grits, white",371.0,8.6,79.2,1.8,3.9,ai,0.8
+"hominy, dried",365.0,7.9,78.8,1.5,5.1,ai,0.8
+"cornmeal, yellow",362.0,8.1,76.9,3.6,7.3,ai,0.8
+masa harina,358.0,9.6,73.7,3.8,6.5,ai,0.8
+millet flour,375.0,10.8,72.9,4.0,8.2,ai,0.8
+sorghum flour,339.0,10.6,74.6,3.5,6.7,ai,0.8
+buckwheat flour,335.0,12.6,70.6,3.1,10.0,ai,0.8
+amaranth flour,371.0,13.6,65.3,7.0,6.7,ai,0.8
+teff flour,367.0,13.3,73.1,2.4,8.0,ai,0.8
+spelt flour,338.0,14.6,70.2,2.4,10.7,ai,0.8
+"rye flour, medium",325.0,10.3,75.9,1.6,14.3,ai,0.8
+kamut flour,337.0,14.7,70.5,2.2,11.0,ai,0.8
+"forbidden rice, uncooked",356.0,8.9,75.6,3.5,4.9,ai,0.8
+"egyptian rice, uncooked",358.0,6.7,79.5,0.5,1.2,ai,0.8
+"congee rice, uncooked",365.0,7.1,79.9,0.7,1.3,ai,0.8
+golden rice bran,316.0,13.4,49.7,20.9,21.0,ai,0.8
+"medium-grain white rice, uncooked",358.0,6.9,79.0,0.6,1.3,ai,0.8
+mixed grain blend,355.0,11.5,70.8,3.2,9.5,ai,0.8
+"red quinoa, uncooked",370.0,13.8,64.8,6.3,7.2,ai,0.8
+roasted buckwheat groats,346.0,13.0,71.9,3.3,9.8,ai,0.8
+steel-cut wheat,329.0,13.2,71.2,2.3,12.0,ai,0.8
+cake flour,362.0,8.2,79.4,0.9,2.3,ai,0.8
+pastry flour,363.0,9.4,77.8,1.0,2.5,ai,0.8
+whole wheat flour,340.0,13.2,72.0,2.5,10.7,ai,0.8
+semolina flour,360.0,12.7,72.8,1.1,3.9,ai,0.8
+00 flour,364.0,11.5,76.0,1.0,2.5,ai,0.8
+vital wheat gluten,370.0,75.2,13.8,1.9,0.6,ai,0.8
+almond flour,571.0,21.2,21.6,50.6,10.2,ai,0.8
+coconut flour,354.0,19.3,60.7,8.7,38.5,ai,0.8
+rice flour,366.0,6.0,80.1,1.4,2.4,ai,0.8
+brown rice flour,363.0,7.2,76.5,2.8,4.6,ai,0.8
+chickpea flour,387.0,22.4,57.8,6.7,10.8,ai,0.8
+rye flour,338.0,10.3,75.9,1.6,15.1,ai,0.8
+cassava flour,357.0,1.4,84.8,0.4,1.8,ai,0.8
+cornstarch,381.0,0.3,91.3,0.1,0.9,ai,0.8
+potato starch,357.0,0.1,83.1,0.1,5.9,ai,0.8
+tapioca starch,358.0,0.2,88.7,0.0,0.9,ai,0.8
+arrowroot powder,357.0,0.3,88.2,0.1,3.4,ai,0.8
+kuzu starch,336.0,0.2,83.1,0.2,0.4,ai,0.8
+fresh ramen noodles,188.0,5.8,35.4,1.8,1.6,ai,0.8
+dried ramen noodles,356.0,10.4,69.7,2.8,2.9,ai,0.8
+fresh udon noodles,130.0,3.5,27.9,0.4,1.2,ai,0.8
+dried udon noodles,348.0,9.8,73.5,1.1,3.2,ai,0.8
+soba noodles,336.0,14.4,70.5,2.1,4.8,ai,0.8
+somen noodles,356.0,9.5,74.1,1.1,2.4,ai,0.8
+rice vermicelli,364.0,3.4,83.2,0.6,1.8,ai,0.8
+thin rice stick noodles,364.0,3.4,83.2,0.6,1.8,ai,0.8
+wide rice noodles,364.0,3.4,83.2,0.6,1.8,ai,0.8
+fresh rice noodles,109.0,1.6,24.9,0.2,0.9,ai,0.8
+glass noodles,351.0,0.2,86.0,0.1,0.5,ai,0.8
+fresh lo mein noodles,137.0,4.5,25.8,1.3,1.4,ai,0.8
+dried lo mein noodles,350.0,11.0,71.5,1.5,3.0,ai,0.8
+chow mein noodles,237.0,7.3,26.0,11.0,1.8,ai,0.8
+dangmyeon,351.0,0.3,86.0,0.2,0.7,ai,0.8
+naengmyeon noodles,336.0,8.5,72.0,1.2,3.8,ai,0.8
+kalguksu noodles,137.0,4.2,27.5,0.9,1.3,ai,0.8
+pad thai rice noodles,364.0,3.4,83.2,0.6,1.8,ai,0.8
+laksa noodles,364.0,3.4,83.2,0.6,1.8,ai,0.8
+pho noodles,364.0,3.4,83.2,0.6,1.8,ai,0.8
+linguine,371.0,13.0,74.7,1.5,3.2,ai,0.8
+fettuccine,371.0,13.0,74.7,1.5,3.2,ai,0.8
+penne,371.0,13.0,74.7,1.5,3.2,ai,0.8
+rigatoni,371.0,13.0,74.7,1.5,3.2,ai,0.8
+lasagna sheets,371.0,13.0,74.7,1.5,3.2,ai,0.8
+orzo,371.0,13.0,74.7,1.5,3.2,ai,0.8
+angel hair pasta,371.0,13.0,74.7,1.5,3.2,ai,0.8
+egg noodles,384.0,14.2,71.3,4.4,3.3,ai,0.8
+fresh egg noodles,138.0,4.8,25.2,1.6,1.2,ai,0.8
+wonton wrappers,291.0,9.8,59.3,1.2,2.1,ai,0.8
+spring roll wrappers,300.0,8.5,62.0,1.0,1.8,ai,0.8
+dumpling wrappers,275.0,9.0,57.5,1.1,2.0,ai,0.8
+macaroni,371.0,13.0,74.7,1.5,3.2,ai,0.8
+farfalle,371.0,13.0,74.7,1.5,3.2,ai,0.8
+rotini,371.0,13.0,74.7,1.5,3.2,ai,0.8
+shells pasta,371.0,13.0,74.7,1.5,3.2,ai,0.8
+ziti,371.0,13.0,74.7,1.5,3.2,ai,0.8
+tagliatelle,371.0,13.0,74.7,1.5,3.2,ai,0.8
+pappardelle,371.0,13.0,74.7,1.5,3.2,ai,0.8
+whole wheat pasta,348.0,14.6,75.0,1.4,11.0,ai,0.8
+vermicelli pasta,371.0,13.0,74.7,1.5,3.2,ai,0.8
+bucatini,371.0,13.0,74.7,1.5,3.2,ai,0.8
+orecchiette,371.0,13.0,74.7,1.5,3.2,ai,0.8
+cavatappi,371.0,13.0,74.7,1.5,3.2,ai,0.8
+acini di pepe,371.0,13.0,74.7,1.5,3.2,ai,0.8
+ditalini,371.0,13.0,74.7,1.5,3.2,ai,0.8
+jumbo shells pasta,371.0,13.0,74.7,1.5,3.2,ai,0.8
+cannelloni,371.0,13.0,74.7,1.5,3.2,ai,0.8
+manicotti,371.0,13.0,74.7,1.5,3.2,ai,0.8
+tortellini,289.0,12.0,44.0,7.0,2.0,ai,0.8
+ravioli,187.0,7.6,31.0,3.2,1.5,ai,0.8
+gnocchi,130.0,3.5,27.0,0.9,1.8,ai,0.8
+couscous,376.0,12.8,77.4,0.6,5.0,ai,0.8
+israeli couscous,365.0,12.0,75.0,1.0,4.0,ai,0.8
+rice paper,333.0,1.0,83.0,0.3,0.8,ai,0.8
+potato flour,357.0,6.9,83.1,0.3,5.9,ai,0.8
+corn flour,361.0,6.9,76.9,3.9,7.3,ai,0.8
+self-rising flour,352.0,9.4,73.7,1.2,2.6,ai,0.8
+soy flour,436.0,36.5,35.2,20.7,9.6,ai,0.8
+hazelnut flour,628.0,14.9,16.7,60.8,9.7,ai,0.8
+chestnut flour,362.0,6.1,76.2,3.4,14.0,ai,0.8
+tigernut flour,404.0,5.2,65.0,15.0,33.0,ai,0.8
+cricket flour,460.0,65.5,5.1,15.4,7.7,ai,0.8
+pumpernickel flour,336.0,9.7,75.9,1.3,16.4,ai,0.8
+shirataki noodles,9.0,0.0,3.0,0.0,3.0,ai,0.8
+jjolmyeon noodles,108.0,2.8,23.5,0.4,1.2,ai,0.8
+somyeon noodles,356.0,9.5,74.1,1.1,2.4,ai,0.8
+yaki soba noodles,141.0,4.8,28.5,1.0,1.6,ai,0.8
+"black beans, dried",341.0,21.6,62.4,1.4,15.5,ai,0.8
+"black beans, canned",91.0,6.0,16.0,0.3,5.5,ai,0.8
+"kidney beans, dried",333.0,23.6,60.0,0.8,15.2,ai,0.8
+"kidney beans, canned",84.0,5.7,14.5,0.3,4.5,ai,0.8
+"pinto beans, dried",347.0,21.4,63.0,1.2,15.5,ai,0.8
+"pinto beans, canned",82.0,5.2,15.0,0.4,4.4,ai,0.8
+"navy beans, dried",337.0,22.3,61.0,1.5,15.3,ai,0.8
+"navy beans, canned",94.0,6.0,16.9,0.4,5.0,ai,0.8
+"cannellini beans, dried",333.0,23.4,60.3,0.9,15.2,ai,0.8
+"cannellini beans, canned",85.0,5.9,14.4,0.3,4.8,ai,0.8
+"great northern beans, dried",339.0,21.9,62.4,1.2,14.8,ai,0.8
+"great northern beans, canned",90.0,5.8,16.0,0.4,4.7,ai,0.8
+"lima beans, dried",338.0,21.5,63.4,0.7,19.0,ai,0.8
+"lima beans, canned",79.0,4.9,14.9,0.2,4.2,ai,0.8
+"fava beans, dried",341.0,26.1,58.3,1.5,25.0,ai,0.8
+"fava beans, canned",88.0,6.5,14.7,0.4,5.4,ai,0.8
+"adzuki beans, dried",329.0,19.9,62.9,0.5,12.7,ai,0.8
+"adzuki beans, canned",128.0,7.5,25.0,0.1,5.0,ai,0.8
+"mung beans, dried",347.0,23.9,62.6,1.2,16.3,ai,0.8
+"black-eyed peas, dried",336.0,23.5,60.7,1.3,10.6,ai,0.8
+"black-eyed peas, canned",77.0,5.2,13.6,0.4,3.6,ai,0.8
+"chickpeas, dried",364.0,19.3,60.7,6.0,17.4,ai,0.8
+"chickpeas, canned",119.0,6.7,17.7,2.1,5.4,ai,0.8
+"green lentils, dried",352.0,25.8,60.1,1.1,10.7,ai,0.8
+"brown lentils, dried",353.0,25.8,63.4,1.1,10.7,ai,0.8
+"red lentils, dried",358.0,25.8,63.1,1.3,10.8,ai,0.8
+"black lentils, dried",349.0,25.0,60.0,1.5,11.0,ai,0.8
+"french lentils, dried",352.0,26.0,60.0,1.2,11.5,ai,0.8
+"yellow lentils, dried",357.0,25.5,62.8,1.2,10.5,ai,0.8
+"split peas, green",341.0,24.6,60.4,0.8,25.5,ai,0.8
+"split peas, yellow",341.0,24.5,60.4,0.8,25.5,ai,0.8
+"pigeon peas, dried",343.0,21.7,62.8,1.5,15.0,ai,0.8
+"pigeon peas, canned",85.0,5.4,15.5,0.4,4.3,ai,0.8
+"lupini beans, dried",371.0,36.2,40.4,9.7,18.9,ai,0.8
+red bean paste,244.0,5.5,53.2,0.6,4.2,ai,0.8
+white bean paste,235.0,6.2,50.8,0.7,3.8,ai,0.8
+fermented black beans,180.0,17.5,19.0,1.0,7.0,ai,0.8
+tempeh,193.0,20.3,7.6,10.8,4.8,ai,0.8
+natto,212.0,17.7,12.7,11.0,5.4,ai,0.8
+"soy milk, unsweetened",33.0,2.9,1.6,1.8,0.2,ai,0.8
+"soy milk, sweetened",54.0,3.3,6.3,1.8,0.6,ai,0.8
+textured vegetable protein,315.0,52.0,30.9,1.2,15.0,ai,0.8
+"refried beans, canned",91.0,5.2,15.2,1.4,4.4,ai,0.8
+"baked beans, canned",94.0,4.8,17.5,0.5,3.9,ai,0.8
+chana dal,360.0,20.5,60.9,5.2,11.5,ai,0.8
+urad dal,341.0,25.2,58.9,1.6,18.3,ai,0.8
+moong dal,347.0,24.0,62.6,1.2,16.3,ai,0.8
+masoor dal,358.0,25.8,63.1,1.3,10.8,ai,0.8
+toor dal,343.0,21.7,62.8,1.5,15.0,ai,0.8
+"borlotti beans, dried",335.0,23.0,60.5,1.2,15.7,ai,0.8
+"borlotti beans, canned",86.0,5.5,15.3,0.4,5.0,ai,0.8
+"anasazi beans, dried",340.0,22.0,61.0,1.1,14.5,ai,0.8
+"white beans, dried",337.0,22.3,61.0,1.5,15.3,ai,0.8
+"white beans, canned",94.0,6.0,16.9,0.4,5.0,ai,0.8
+"appaloosa beans, dried",338.0,21.8,61.5,1.3,14.0,ai,0.8
+"flageolet beans, dried",330.0,21.5,59.8,1.0,16.0,ai,0.8
+"flageolet beans, canned",83.0,5.4,14.8,0.3,5.2,ai,0.8
+"scarlet runner beans, dried",339.0,22.5,60.8,1.4,15.0,ai,0.8
+"soy flour, defatted",330.0,47.0,38.4,1.2,17.5,ai,0.8
+"soy flour, full-fat",436.0,34.5,35.2,20.6,9.6,ai,0.8
+lentil flour,353.0,25.8,60.1,1.1,10.7,ai,0.8
+pea protein powder,375.0,85.0,7.0,6.0,6.0,ai,0.8
+soy protein isolate,338.0,88.3,0.0,3.4,0.0,ai,0.8
+mung bean sprouts,30.0,3.0,5.9,0.2,1.8,ai,0.8
+lentil sprouts,106.0,8.8,22.1,0.5,7.8,ai,0.8
+chickpea sprouts,141.0,10.7,23.5,2.1,8.0,ai,0.8
+"black soybeans, dried",371.0,34.5,30.2,17.0,9.3,ai,0.8
+"black soybeans, canned",118.0,11.0,8.9,5.5,5.0,ai,0.8
+"yellow soybeans, dried",446.0,36.5,30.2,19.9,9.3,ai,0.8
+"yellow soybeans, canned",141.0,12.4,10.0,6.4,4.2,ai,0.8
+hummus,166.0,7.9,14.3,9.6,6.0,ai,0.8
+black bean hummus,158.0,7.2,15.8,8.4,6.5,ai,0.8
+soybean oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+"miso paste, white",199.0,12.8,25.4,6.0,5.4,ai,0.8
+"miso paste, red",198.0,13.0,21.9,6.0,5.4,ai,0.8
+"miso paste, yellow",192.0,12.5,23.0,6.0,5.4,ai,0.8
+lupin flour,371.0,40.0,40.0,10.0,37.0,ai,0.8
+"white kidney beans, dried",333.0,23.4,60.3,0.9,15.2,ai,0.8
+"white kidney beans, canned",85.0,5.9,14.4,0.3,4.8,ai,0.8
+"moth beans, dried",343.0,23.6,61.5,1.6,15.5,ai,0.8
+"horse gram, dried",321.0,22.0,57.2,0.5,16.0,ai,0.8
+"adzuki bean paste, sweetened",244.0,5.5,53.2,0.6,4.2,ai,0.8
+"almond, whole raw",579.0,21.2,21.6,49.9,12.5,ai,0.8
+"almond, sliced",579.0,21.2,21.6,49.9,12.5,ai,0.8
+"almond, slivered",579.0,21.2,21.6,49.9,12.5,ai,0.8
+"almond, roasted unsalted",597.0,21.4,20.7,52.5,11.8,ai,0.8
+"almond, roasted salted",607.0,21.2,19.3,53.4,11.8,ai,0.8
+almond butter,614.0,20.3,18.8,55.5,10.3,ai,0.8
+"walnut, raw",654.0,15.2,13.7,65.2,6.7,ai,0.8
+"walnut, roasted",666.0,15.6,13.4,66.6,6.4,ai,0.8
+"walnut, candied",710.0,12.5,28.3,61.2,5.2,ai,0.8
+"pecan, raw",691.0,9.2,13.9,72.0,9.6,ai,0.8
+"pecan, roasted",710.0,9.5,13.4,74.3,9.4,ai,0.8
+"cashew, raw",553.0,18.2,30.2,43.9,3.3,ai,0.8
+"cashew, roasted unsalted",574.0,18.2,32.7,46.4,3.0,ai,0.8
+"cashew, roasted salted",582.0,15.3,30.5,47.8,3.0,ai,0.8
+cashew butter,587.0,17.6,27.6,49.4,2.0,ai,0.8
+"pistachio, raw",562.0,20.6,27.7,45.4,10.3,ai,0.8
+"pistachio, roasted unsalted",572.0,21.1,27.5,45.8,10.6,ai,0.8
+"pistachio, roasted salted",569.0,21.4,27.2,45.4,10.6,ai,0.8
+"hazelnut, raw",628.0,15.0,16.7,60.8,9.7,ai,0.8
+"hazelnut, roasted",646.0,15.0,17.0,62.4,9.4,ai,0.8
+"macadamia nut, raw",718.0,7.9,13.8,75.8,8.6,ai,0.8
+"macadamia nut, roasted unsalted",718.0,7.9,13.4,76.1,8.0,ai,0.8
+"macadamia nut, roasted salted",718.0,7.9,13.4,76.1,8.0,ai,0.8
+"brazil nut, raw",656.0,14.3,12.3,66.4,7.5,ai,0.8
+pine nut,673.0,13.7,13.1,68.4,3.7,ai,0.8
+"chestnut, raw",213.0,2.4,45.5,2.3,8.1,ai,0.8
+"chestnut, roasted",245.0,3.2,52.9,2.2,5.1,ai,0.8
+"peanut, raw",567.0,25.8,16.1,49.2,8.5,ai,0.8
+"peanut, roasted unsalted",587.0,24.4,21.3,49.7,8.0,ai,0.8
+"peanut, roasted salted",599.0,28.0,15.3,52.5,8.4,ai,0.8
+"peanut butter, smooth",588.0,25.1,19.6,50.4,6.0,ai,0.8
+"peanut butter, crunchy",589.0,24.1,21.6,49.9,6.6,ai,0.8
+"sesame seeds, white",573.0,17.7,23.4,49.7,11.8,ai,0.8
+"sesame seeds, black",565.0,18.2,25.7,48.0,14.0,ai,0.8
+"sesame seeds, toasted",565.0,16.9,25.7,48.0,16.9,ai,0.8
+tahini,595.0,17.0,21.2,53.8,9.3,ai,0.8
+"sunflower seeds, raw",584.0,20.8,20.0,51.5,8.6,ai,0.8
+"sunflower seeds, roasted unsalted",582.0,20.8,24.1,49.8,11.1,ai,0.8
+"sunflower seeds, roasted salted",619.0,19.3,19.9,56.8,6.0,ai,0.8
+sunflower seed butter,617.0,20.0,18.3,55.0,6.7,ai,0.8
+"pumpkin seeds, raw",446.0,18.6,53.8,19.4,18.4,ai,0.8
+"pumpkin seeds, roasted unsalted",559.0,30.2,14.7,49.1,6.5,ai,0.8
+"pumpkin seeds, roasted salted",574.0,29.8,13.9,49.1,6.0,ai,0.8
+chia seeds,486.0,16.5,42.1,30.7,34.4,ai,0.8
+"flax seeds, whole",534.0,18.3,28.9,42.2,27.3,ai,0.8
+"flax seeds, ground",534.0,18.3,28.9,42.2,27.3,ai,0.8
+hemp hearts,553.0,31.6,10.9,48.8,4.0,ai,0.8
+poppy seeds,525.0,17.9,28.1,41.6,19.5,ai,0.8
+nigella seeds,345.0,17.8,52.4,14.6,10.5,ai,0.8
+ginkgo nuts,182.0,4.3,37.6,1.7,0.6,ai,0.8
+"lotus seeds, dried",332.0,15.4,64.5,1.9,14.5,ai,0.8
+"coconut, shredded unsweetened",650.0,6.9,23.7,64.5,16.3,ai,0.8
+"coconut, shredded sweetened",501.0,3.0,44.4,35.1,11.1,ai,0.8
+coconut flakes,660.0,6.3,24.2,64.5,16.3,ai,0.8
+"coconut milk, canned",230.0,2.3,5.5,23.8,2.2,ai,0.8
+"coconut cream, canned",330.0,3.6,6.7,34.7,2.2,ai,0.8
+"mixed nuts, raw",607.0,16.7,21.7,54.2,7.2,ai,0.8
+"mixed nuts, roasted unsalted",615.0,18.0,23.7,53.7,7.5,ai,0.8
+"mixed nuts, roasted salted",615.0,17.3,22.0,54.5,7.0,ai,0.8
+trail mix,462.0,13.8,44.9,29.4,5.9,ai,0.8
+pecan pieces,691.0,9.2,13.9,72.0,9.6,ai,0.8
+walnut pieces,654.0,15.2,13.7,65.2,6.7,ai,0.8
+"peanuts, honey roasted",569.0,22.6,27.5,44.4,7.7,ai,0.8
+"almonds, honey roasted",595.0,19.8,28.4,49.9,10.9,ai,0.8
+"cashews, honey roasted",570.0,17.2,36.7,42.2,3.3,ai,0.8
+"watermelon seeds, dried",557.0,28.3,15.3,47.4,0.0,ai,0.8
+"sesame paste, chinese",618.0,18.1,18.5,58.0,9.3,ai,0.8
+"pistachio, shelled",562.0,20.6,27.7,45.4,10.3,ai,0.8
+"almond, blanched",590.0,21.4,18.7,52.5,9.9,ai,0.8
+"hazelnut, blanched",628.0,15.0,16.7,60.8,9.7,ai,0.8
+pumpkin seed oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+walnut oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+hazelnut oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+almond oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+peanut oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+"sesame oil, toasted",884.0,0.0,0.0,100.0,0.0,ai,0.8
+"sesame oil, light",884.0,0.0,0.0,100.0,0.0,ai,0.8
+whole milk,61.0,3.2,4.8,3.3,0.0,ai,0.8
+2% milk,50.0,3.3,4.8,2.0,0.0,ai,0.8
+1% milk,42.0,3.4,5.0,1.0,0.0,ai,0.8
+skim milk,34.0,3.4,5.0,0.1,0.0,ai,0.8
+raw milk,64.0,3.3,4.9,3.5,0.0,ai,0.8
+evaporated milk,135.0,6.8,10.0,7.6,0.0,ai,0.8
+sweetened condensed milk,321.0,7.9,54.4,8.7,0.0,ai,0.8
+powdered milk,496.0,26.3,38.4,26.7,0.0,ai,0.8
+oat milk,47.0,1.0,7.0,1.5,0.8,ai,0.8
+almond milk,17.0,0.4,1.5,1.1,0.2,ai,0.8
+soy milk,33.0,2.6,1.7,1.6,0.2,ai,0.8
+coconut milk,230.0,2.3,6.0,24.0,2.2,ai,0.8
+light coconut milk,125.0,1.1,3.4,12.5,1.1,ai,0.8
+cashew milk,25.0,0.4,2.0,1.5,0.1,ai,0.8
+rice milk,47.0,0.3,9.2,1.0,0.3,ai,0.8
+hemp milk,35.0,1.0,1.3,3.0,0.0,ai,0.8
+heavy cream,345.0,2.1,2.8,37.0,0.0,ai,0.8
+light cream,195.0,2.7,3.7,19.3,0.0,ai,0.8
+half and half,130.0,3.0,4.3,11.5,0.0,ai,0.8
+whipping cream,300.0,2.2,3.1,31.0,0.0,ai,0.8
+clotted cream,586.0,1.7,2.3,63.5,0.0,ai,0.8
+reduced fat sour cream,135.0,3.5,7.0,10.0,0.0,ai,0.8
+crème fraîche,292.0,2.2,3.2,30.0,0.0,ai,0.8
+plain yogurt,61.0,3.5,4.7,3.3,0.0,ai,0.8
+greek yogurt,59.0,10.0,3.6,0.4,0.0,ai,0.8
+full fat greek yogurt,97.0,9.0,3.9,5.0,0.0,ai,0.8
+skyr,63.0,11.0,4.0,0.2,0.0,ai,0.8
+kefir,41.0,3.3,4.5,1.0,0.0,ai,0.8
+low fat yogurt,63.0,5.3,7.0,1.6,0.0,ai,0.8
+nonfat yogurt,56.0,5.7,7.7,0.2,0.0,ai,0.8
+coconut yogurt,100.0,0.5,13.0,5.0,1.0,ai,0.8
+almond yogurt,45.0,0.8,8.0,1.5,0.5,ai,0.8
+soy yogurt,50.0,3.0,6.0,1.5,0.5,ai,0.8
+salted butter,717.0,0.9,0.1,81.1,0.0,ai,0.8
+unsalted butter,717.0,0.9,0.1,81.1,0.0,ai,0.8
+cultured butter,717.0,0.9,0.6,81.1,0.0,ai,0.8
+ghee,876.0,0.3,0.0,99.5,0.0,ai,0.8
+european style butter,720.0,0.8,0.7,82.0,0.0,ai,0.8
+sharp cheddar cheese,403.0,25.0,1.3,33.1,0.0,ai,0.8
+mozzarella cheese,280.0,22.2,2.2,21.6,0.0,ai,0.8
+parmesan cheese,431.0,38.5,4.1,28.6,0.0,ai,0.8
+gouda cheese,356.0,24.9,2.2,27.4,0.0,ai,0.8
+brie cheese,334.0,20.8,0.5,27.7,0.0,ai,0.8
+camembert cheese,300.0,19.8,0.5,24.3,0.0,ai,0.8
+blue cheese,353.0,21.4,2.3,28.7,0.0,ai,0.8
+gorgonzola cheese,353.0,21.4,2.3,28.7,0.0,ai,0.8
+cream cheese,342.0,5.9,5.5,34.2,0.0,ai,0.8
+reduced fat cream cheese,215.0,9.0,7.5,16.0,0.0,ai,0.8
+mascarpone cheese,429.0,4.8,4.8,44.4,0.0,ai,0.8
+ricotta cheese,174.0,11.3,3.0,13.0,0.0,ai,0.8
+part skim ricotta cheese,138.0,11.4,5.1,8.0,0.0,ai,0.8
+cottage cheese,98.0,11.1,3.4,4.3,0.0,ai,0.8
+low fat cottage cheese,72.0,12.4,2.7,1.0,0.0,ai,0.8
+paneer,265.0,18.3,1.2,20.8,0.0,ai,0.8
+queso fresco,321.0,18.1,4.1,25.4,0.0,ai,0.8
+halloumi cheese,321.0,21.2,1.8,25.4,0.0,ai,0.8
+emmental cheese,380.0,28.8,3.4,27.5,0.0,ai,0.8
+manchego cheese,392.0,25.4,0.5,32.0,0.0,ai,0.8
+pecorino romano cheese,387.0,31.8,3.6,26.9,0.0,ai,0.8
+monterey jack cheese,373.0,24.5,0.7,30.3,0.0,ai,0.8
+provolone cheese,351.0,25.6,2.1,26.6,0.0,ai,0.8
+swiss cheese,380.0,26.9,5.4,27.8,0.0,ai,0.8
+colby cheese,394.0,23.8,2.6,32.1,0.0,ai,0.8
+muenster cheese,368.0,23.4,1.1,30.0,0.0,ai,0.8
+fontina cheese,389.0,25.6,1.6,31.1,0.0,ai,0.8
+asiago cheese,392.0,28.0,4.1,29.0,0.0,ai,0.8
+havarti cheese,371.0,23.5,0.0,30.6,0.0,ai,0.8
+boursin cheese,410.0,8.0,3.0,41.0,0.0,ai,0.8
+queso blanco,310.0,17.0,4.0,25.0,0.0,ai,0.8
+mexican blend cheese,393.0,24.6,1.7,32.1,0.0,ai,0.8
+italian blend cheese,387.0,25.9,2.4,30.5,0.0,ai,0.8
+pepper jack cheese,375.0,24.0,1.0,30.5,0.0,ai,0.8
+american cheese,375.0,22.2,1.6,31.3,0.0,ai,0.8
+velveeta cheese,290.0,16.1,9.7,19.4,0.0,ai,0.8
+neufchâtel cheese,253.0,9.1,3.2,23.0,0.0,ai,0.8
+limburger cheese,327.0,20.1,0.5,27.3,0.0,ai,0.8
+stilton cheese,353.0,21.5,0.1,28.7,0.0,ai,0.8
+roquefort cheese,369.0,21.5,2.0,30.6,0.0,ai,0.8
+chevre cheese,364.0,21.6,2.5,29.8,0.0,ai,0.8
+aged goat cheese,452.0,30.5,2.2,35.6,0.0,ai,0.8
+sheep cheese,387.0,24.0,0.6,31.8,0.0,ai,0.8
+burrata cheese,300.0,17.0,3.0,25.0,0.0,ai,0.8
+string cheese,280.0,22.0,2.2,21.0,0.0,ai,0.8
+laughing cow cheese,267.0,12.0,8.0,21.0,0.0,ai,0.8
+babybel cheese,321.0,22.6,0.0,25.0,0.0,ai,0.8
+vanilla ice cream,207.0,3.5,23.6,11.0,0.7,ai,0.8
+chocolate ice cream,216.0,3.8,28.2,11.0,1.2,ai,0.8
+strawberry ice cream,192.0,3.2,27.6,8.4,0.9,ai,0.8
+gelato,160.0,4.0,25.0,5.0,0.5,ai,0.8
+frozen yogurt,127.0,3.4,21.9,3.0,0.9,ai,0.8
+whipped cream,257.0,2.1,12.5,22.2,0.0,ai,0.8
+sweetened condensed coconut milk,290.0,2.0,52.0,8.0,1.0,ai,0.8
+buttermilk,40.0,3.3,4.8,0.9,0.0,ai,0.8
+chocolate milk,83.0,3.2,10.3,3.3,0.8,ai,0.8
+malted milk powder,411.0,11.6,75.0,8.4,2.4,ai,0.8
+dulce de leche,315.0,6.8,55.4,7.4,0.0,ai,0.8
+cajeta,320.0,6.0,58.0,7.5,0.0,ai,0.8
+condensed milk unsweetened,135.0,6.8,10.0,7.6,0.0,ai,0.8
+coffee creamer liquid,133.0,0.0,11.7,10.0,0.0,ai,0.8
+coffee creamer powder,540.0,2.0,55.0,35.0,0.0,ai,0.8
+quark,67.0,12.0,4.0,0.2,0.0,ai,0.8
+labneh,113.0,8.0,7.0,6.0,0.0,ai,0.8
+clabber,59.0,3.3,4.7,3.2,0.0,ai,0.8
+acidophilus milk,61.0,3.2,4.8,3.3,0.0,ai,0.8
+lactose free milk,50.0,3.4,5.0,2.0,0.0,ai,0.8
+a2 milk,61.0,3.2,4.8,3.3,0.0,ai,0.8
+organic milk,61.0,3.2,4.8,3.3,0.0,ai,0.8
+grass fed milk,61.0,3.2,4.8,3.3,0.0,ai,0.8
+ultra filtered milk,60.0,6.5,3.0,2.5,0.0,ai,0.8
+shelf stable milk,61.0,3.2,4.8,3.3,0.0,ai,0.8
+goat milk,69.0,3.6,4.5,4.1,0.0,ai,0.8
+sheep milk,108.0,5.4,5.4,7.0,0.0,ai,0.8
+buffalo milk,97.0,3.8,5.2,6.9,0.0,ai,0.8
+pea milk,35.0,3.3,1.7,1.9,0.0,ai,0.8
+macadamia milk,21.0,0.4,1.0,1.8,0.4,ai,0.8
+flax milk,17.0,0.0,1.7,1.0,0.0,ai,0.8
+hazelnut milk,25.0,0.5,2.5,1.5,0.3,ai,0.8
+pistachio milk,27.0,0.6,2.0,1.8,0.3,ai,0.8
+walnut milk,20.0,0.4,1.5,1.3,0.2,ai,0.8
+banana milk,65.0,2.5,10.0,1.5,0.3,ai,0.8
+strawberry milk,68.0,2.8,10.5,1.6,0.2,ai,0.8
+"olive oil, extra virgin",884.0,0.0,0.0,100.0,0.0,ai,0.8
+"olive oil, virgin",884.0,0.0,0.0,100.0,0.0,ai,0.8
+"olive oil, light",884.0,0.0,0.0,100.0,0.0,ai,0.8
+canola oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+avocado oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+"coconut oil, virgin",862.0,0.0,0.0,100.0,0.0,ai,0.8
+"coconut oil, refined",862.0,0.0,0.0,100.0,0.0,ai,0.8
+sesame oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+sunflower oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+safflower oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+grapeseed oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+corn oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+flaxseed oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+mct oil,855.0,0.0,0.0,100.0,0.0,ai,0.8
+truffle oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+chili oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+lard,902.0,0.0,0.0,100.0,0.0,ai,0.8
+bacon fat,898.0,0.0,0.0,100.0,0.0,ai,0.8
+beef tallow,902.0,0.0,0.0,100.0,0.0,ai,0.8
+schmaltz,900.0,0.0,0.0,100.0,0.0,ai,0.8
+vegetable shortening,884.0,0.0,0.0,100.0,0.0,ai,0.8
+margarine,717.0,0.9,0.9,80.7,0.0,ai,0.8
+"butter, unsalted",717.0,0.9,0.1,81.1,0.0,ai,0.8
+"butter, salted",717.0,0.9,0.1,81.1,0.0,ai,0.8
+"butter, clarified",876.0,0.3,0.0,99.5,0.0,ai,0.8
+perilla oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+rice bran oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+macadamia oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+palm oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+cottonseed oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+pistachio oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+mustard oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+hemp seed oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+chia seed oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+argan oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+black seed oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+camellia oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+garlic oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+scallion oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+shallot oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+sichuan pepper oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+lamb fat,902.0,0.0,0.0,100.0,0.0,ai,0.8
+suet,854.0,1.5,0.0,94.0,0.0,ai,0.8
+spray oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+evening primrose oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+borage oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+butter flavored shortening,884.0,0.0,0.0,100.0,0.0,ai,0.8
+compound butter,717.0,0.9,0.1,81.1,0.0,ai,0.8
+brown butter,717.0,0.9,0.1,81.1,0.0,ai,0.8
+white sugar,387.0,0.0,100.0,0.0,0.0,ai,0.8
+light brown sugar,380.0,0.1,98.0,0.0,0.0,ai,0.8
+dark brown sugar,377.0,0.1,97.3,0.0,0.0,ai,0.8
+powdered sugar,389.0,0.0,100.0,0.0,0.0,ai,0.8
+turbinado sugar,387.0,0.0,99.8,0.0,0.0,ai,0.8
+demerara sugar,383.0,0.1,99.0,0.0,0.0,ai,0.8
+muscovado sugar,380.0,0.3,95.0,0.1,0.0,ai,0.8
+coconut sugar,375.0,1.1,92.0,0.4,2.0,ai,0.8
+honey,304.0,0.3,82.4,0.0,0.2,ai,0.8
+maple syrup,260.0,0.0,67.0,0.2,0.0,ai,0.8
+agave nectar,310.0,0.1,76.0,0.5,0.2,ai,0.8
+molasses,290.0,0.0,74.7,0.1,0.0,ai,0.8
+dark molasses,235.0,0.0,60.0,0.0,0.0,ai,0.8
+blackstrap molasses,235.0,0.0,55.0,0.1,0.0,ai,0.8
+light corn syrup,286.0,0.0,76.0,0.0,0.0,ai,0.8
+dark corn syrup,286.0,0.0,76.0,0.0,0.0,ai,0.8
+golden syrup,310.0,0.2,79.0,0.0,0.0,ai,0.8
+rice syrup,316.0,0.0,78.0,0.0,0.0,ai,0.8
+barley malt syrup,318.0,6.0,71.0,0.0,0.0,ai,0.8
+rock sugar,387.0,0.0,100.0,0.0,0.0,ai,0.8
+maltose,318.0,0.0,78.0,0.0,0.0,ai,0.8
+kurozato,354.0,1.7,89.7,0.3,0.0,ai,0.8
+korean rice syrup,318.0,0.4,78.0,0.1,0.0,ai,0.8
+stevia,0.0,0.0,0.0,0.0,0.0,ai,0.8
+monk fruit sweetener,0.0,0.0,0.0,0.0,0.0,ai,0.8
+erythritol,0.0,0.0,100.0,0.0,0.0,ai,0.8
+xylitol,240.0,0.0,100.0,0.0,0.0,ai,0.8
+aspartame,4.0,0.0,0.0,0.0,0.0,ai,0.8
+sucralose,0.0,0.0,0.0,0.0,0.0,ai,0.8
+date syrup,287.0,1.8,75.0,0.4,3.5,ai,0.8
+pomegranate molasses,250.0,0.3,65.0,0.3,0.1,ai,0.8
+sorghum syrup,290.0,0.0,73.0,0.0,0.0,ai,0.8
+jam,250.0,0.4,65.0,0.1,1.1,ai,0.8
+caster sugar,387.0,0.0,100.0,0.0,0.0,ai,0.8
+pearl sugar,387.0,0.0,100.0,0.0,0.0,ai,0.8
+vanilla sugar,387.0,0.0,100.0,0.0,0.0,ai,0.8
+glucose syrup,316.0,0.0,78.0,0.0,0.0,ai,0.8
+invert sugar,320.0,0.0,80.0,0.0,0.0,ai,0.8
+treacle,298.0,0.7,79.0,0.0,0.0,ai,0.8
+yacon syrup,133.0,0.0,65.0,0.0,33.0,ai,0.8
+allulose,0.0,0.0,0.0,0.0,0.0,ai,0.8
+saccharin,0.0,0.0,0.0,0.0,0.0,ai,0.8
+fruit sugar,368.0,0.0,95.0,0.0,0.0,ai,0.8
+dextrose,365.0,0.0,91.2,0.0,0.0,ai,0.8
+panela,312.0,0.7,78.0,0.1,0.0,ai,0.8
+sucanat,378.0,0.1,97.0,0.0,0.0,ai,0.8
+cane syrup,269.0,0.0,68.0,0.0,0.0,ai,0.8
+birch syrup,254.0,0.0,64.0,0.0,0.0,ai,0.8
+black pepper ground,251.0,10.4,63.9,3.3,25.3,ai,0.7
+white pepper ground,296.0,10.4,69.8,3.3,25.2,ai,0.7
+sea salt,0.0,0.0,0.0,0.0,0.0,ai,0.7
+kosher salt,0.0,0.0,0.0,0.0,0.0,ai,0.7
+himalayan pink salt,0.0,0.0,0.0,0.0,0.0,ai,0.7
+fleur de sel,0.0,0.0,0.0,0.0,0.0,ai,0.7
+smoked paprika,282.0,14.3,53.3,12.9,27.1,ai,0.7
+sweet paprika,282.0,14.3,53.3,12.9,27.1,ai,0.7
+hot paprika,282.0,14.3,53.3,12.9,27.1,ai,0.7
+cumin ground,375.0,17.5,44.2,14.8,10.5,ai,0.7
+coriander ground,298.0,11.9,52.5,17.8,21.0,ai,0.7
+turmeric ground,312.0,7.8,67.1,3.1,22.7,ai,0.7
+cinnamon ground,247.0,3.6,80.6,1.2,53.1,ai,0.7
+ceylon cinnamon,247.0,3.6,80.6,1.2,53.1,ai,0.7
+cassia cinnamon,247.0,3.6,80.6,1.2,53.1,ai,0.7
+nutmeg ground,525.0,5.8,49.3,36.3,20.8,ai,0.7
+mace ground,475.0,6.7,49.5,32.4,20.6,ai,0.7
+cloves ground,274.0,3.3,61.4,20.1,33.5,ai,0.7
+cardamom ground,311.0,10.8,68.5,6.7,28.0,ai,0.7
+green cardamom,311.0,10.8,68.5,6.7,28.0,ai,0.7
+black cardamom,311.0,10.8,68.5,6.7,28.0,ai,0.7
+cayenne pepper,318.0,12.3,56.6,17.3,27.2,ai,0.7
+ancho chili powder,281.0,13.5,49.3,15.9,27.3,ai,0.7
+chipotle powder,281.0,13.5,49.3,15.9,27.3,ai,0.7
+sichuan peppercorn,258.0,10.2,65.5,5.3,25.7,ai,0.7
+curry powder,325.0,12.7,55.1,13.7,22.3,ai,0.7
+madras curry powder,325.0,12.7,55.1,13.7,22.3,ai,0.7
+garam masala,379.0,12.5,60.8,14.8,20.8,ai,0.7
+chinese five spice,318.0,10.3,64.2,7.3,25.5,ai,0.7
+za'atar,264.0,9.1,43.6,15.7,18.2,ai,0.7
+yellow mustard seeds,508.0,26.1,28.1,36.2,9.2,ai,0.7
+brown mustard seeds,508.0,26.1,28.1,36.2,9.2,ai,0.7
+black mustard seeds,508.0,26.1,28.1,36.2,9.2,ai,0.7
+mustard powder,508.0,26.1,28.1,36.2,9.2,ai,0.7
+fennel seeds,345.0,15.8,52.3,14.9,39.8,ai,0.7
+caraway seeds,333.0,19.8,49.9,14.6,38.0,ai,0.7
+star anise,337.0,17.6,50.1,15.9,14.6,ai,0.7
+fenugreek seeds,323.0,23.2,58.4,6.4,24.6,ai,0.7
+fenugreek leaves dried,323.0,23.2,58.4,6.4,24.6,ai,0.7
+asafoetida,297.0,4.4,66.5,1.1,21.6,ai,0.7
+sumac,217.0,5.1,49.5,1.5,17.3,ai,0.7
+saffron,310.0,11.4,61.5,5.9,10.8,ai,0.7
+vanilla bean,288.0,5.5,77.3,0.6,20.9,ai,0.7
+allspice ground,263.0,6.1,71.8,8.7,21.6,ai,0.7
+anise seeds,337.0,17.6,50.1,15.9,14.6,ai,0.7
+celery seeds,392.0,11.5,42.5,25.3,11.3,ai,0.7
+celery salt,196.0,5.8,21.3,12.7,5.7,ai,0.7
+ginger ground,335.0,8.6,71.6,4.7,14.1,ai,0.7
+galangal powder,71.0,2.3,15.8,0.7,2.7,ai,0.7
+sesame seeds white,573.0,17.7,26.7,50.0,11.8,ai,0.7
+sesame seeds black,573.0,17.7,23.5,50.0,11.8,ai,0.7
+sesame seeds toasted,565.0,17.7,21.8,50.4,11.8,ai,0.7
+ajwain seeds,305.0,16.0,42.0,9.0,41.0,ai,0.7
+pink peppercorns,251.0,10.4,64.8,3.3,25.3,ai,0.7
+green peppercorns,251.0,10.4,64.8,3.3,25.3,ai,0.7
+long pepper,251.0,10.4,64.8,3.3,25.3,ai,0.7
+grains of paradise,311.0,10.0,65.0,2.0,28.0,ai,0.7
+cumin seeds,375.0,17.8,44.3,14.8,10.5,ai,0.7
+coriander seeds,298.0,12.0,55.0,17.8,41.9,ai,0.7
+black peppercorns,251.0,10.4,64.8,3.3,25.3,ai,0.7
+white peppercorns,296.0,10.0,65.0,3.3,25.0,ai,0.7
+whole cloves,274.0,5.97,72.84,13.1,33.9,ai,0.7
+cinnamon sticks,247.0,4.0,80.6,1.2,53.1,ai,0.7
+bay leaves,313.0,7.6,74.9,8.4,26.3,ai,0.7
+curry leaves,108.0,2.7,18.7,0.3,0.0,ai,0.7
+dried oregano,265.0,9.0,69.0,4.0,42.8,ai,0.7
+dried basil,233.0,9.1,63.0,4.1,37.7,ai,0.7
+dried thyme,276.0,9.1,63.9,7.4,37.0,ai,0.7
+dried rosemary,331.0,4.9,64.1,15.2,42.3,ai,0.7
+dried sage,315.0,10.6,60.5,12.8,40.3,ai,0.7
+dried parsley,292.0,25.0,51.0,4.3,3.3,ai,0.7
+dried dill,253.0,19.9,56.6,4.4,27.8,ai,0.7
+dried tarragon,295.0,22.7,50.2,7.2,7.6,ai,0.7
+dried marjoram,271.0,12.7,60.5,7.0,40.3,ai,0.7
+poultry seasoning,285.0,9.0,58.0,5.0,30.0,ai,0.7
+cajun seasoning,290.0,8.5,60.0,5.5,32.0,ai,0.7
+creole seasoning,290.0,8.5,60.0,5.5,32.0,ai,0.7
+old bay seasoning,280.0,9.0,58.0,6.0,31.0,ai,0.7
+tandoori masala,340.0,12.0,50.0,12.0,28.0,ai,0.7
+chaat masala,320.0,11.0,55.0,8.0,25.0,ai,0.7
+sambar powder,335.0,13.0,48.0,12.0,30.0,ai,0.7
+rasam powder,330.0,12.0,50.0,10.0,28.0,ai,0.7
+berbere,310.0,10.0,60.0,6.0,32.0,ai,0.7
+ras el hanout,325.0,11.0,55.0,10.0,28.0,ai,0.7
+harissa powder,295.0,9.0,65.0,5.0,33.0,ai,0.7
+dukkah,450.0,18.0,25.0,40.0,8.0,ai,0.7
+baharat,315.0,11.0,56.0,9.0,28.0,ai,0.7
+advieh,320.0,11.0,55.0,10.0,28.0,ai,0.7
+hawaij,310.0,10.0,60.0,6.0,32.0,ai,0.7
+shichimi togarashi,280.0,10.0,65.0,5.0,35.0,ai,0.7
+furikake,320.0,18.0,48.0,12.0,15.0,ai,0.7
+tajin,180.0,3.5,38.0,2.0,6.0,ai,0.7
+adobo seasoning,270.0,8.0,62.0,5.0,30.0,ai,0.7
+sazon seasoning,260.0,8.0,65.0,4.0,32.0,ai,0.7
+pumpkin pie spice,280.0,7.0,65.0,4.0,35.0,ai,0.7
+apple pie spice,275.0,7.0,67.0,3.5,34.0,ai,0.7
+mixed spice,270.0,8.0,63.0,4.0,32.0,ai,0.7
+pickling spice,285.0,9.0,60.0,5.0,30.0,ai,0.7
+crab boil seasoning,275.0,8.5,62.0,5.5,31.0,ai,0.7
+jerk seasoning,300.0,10.0,55.0,8.0,28.0,ai,0.7
+blackening seasoning,285.0,8.5,48.0,5.2,7.5,ai,0.7
+lemon pepper,240.0,9.0,42.0,3.5,8.0,ai,0.7
+steak seasoning,265.0,8.0,45.0,4.5,7.0,ai,0.7
+taco seasoning,280.0,9.5,48.0,4.0,8.5,ai,0.7
+fajita seasoning,275.0,8.5,46.0,4.0,8.0,ai,0.7
+chili seasoning,290.0,9.0,50.0,4.5,8.5,ai,0.7
+ranch seasoning,260.0,8.0,42.0,4.0,6.5,ai,0.7
+everything bagel seasoning,380.0,12.0,52.0,12.5,9.0,ai,0.7
+chinese chicken powder,240.0,12.0,35.0,3.0,2.5,ai,0.7
+msg,0.0,0.0,0.0,0.0,0.0,ai,0.7
+annatto powder,307.0,12.0,52.0,5.5,8.0,ai,0.7
+sansho pepper,258.0,10.0,43.0,5.0,6.5,ai,0.7
+file powder,215.0,7.0,38.0,3.0,7.5,ai,0.7
+amchur powder,380.0,2.5,84.0,0.5,4.0,ai,0.7
+kaffir lime powder,105.0,1.5,24.0,0.3,2.5,ai,0.7
+kokum powder,60.0,0.5,14.0,0.2,1.5,ai,0.7
+urfa biber,282.0,12.0,48.0,5.5,7.5,ai,0.7
+aleppo pepper,282.0,10.0,50.0,5.0,7.0,ai,0.7
+korean red pepper powder,282.0,12.0,50.0,5.0,8.5,ai,0.7
+kampot pepper,251.0,10.0,42.0,3.5,6.5,ai,0.7
+tellicherry peppercorns,251.0,10.0,42.0,3.5,6.5,ai,0.7
+sarawak white pepper,296.0,10.5,48.0,4.0,7.0,ai,0.7
+dried lime powder,105.0,1.5,24.0,0.3,2.5,ai,0.7
+dried tamarind powder,239.0,2.8,56.0,0.5,5.0,ai,0.7
+tonka bean ground,420.0,8.0,55.0,18.0,6.0,ai,0.7
+mahlab powder,395.0,10.0,50.0,15.0,6.5,ai,0.7
+kala namak,0.0,0.0,0.0,0.0,0.0,ai,0.7
+sel gris,0.0,0.0,0.0,0.0,0.0,ai,0.7
+smoked salt,0.0,0.0,0.0,0.0,0.0,ai,0.7
+truffle salt,5.0,0.0,1.0,0.0,0.0,ai,0.7
+red hawaiian salt,0.0,0.0,0.0,0.0,0.0,ai,0.7
+black hawaiian salt,0.0,0.0,0.0,0.0,0.0,ai,0.7
+espelette pepper,282.0,10.0,50.0,5.0,7.0,ai,0.7
+kashmiri chili powder,282.0,12.0,48.0,5.0,8.0,ai,0.7
+deggi mirch,282.0,11.0,50.0,5.0,7.5,ai,0.7
+ghost pepper powder,318.0,12.0,54.0,5.5,8.5,ai,0.7
+carolina reaper powder,318.0,12.0,54.0,5.5,8.5,ai,0.7
+scotch bonnet powder,318.0,12.0,54.0,5.5,8.5,ai,0.7
+habanero powder,318.0,12.0,54.0,5.5,8.5,ai,0.7
+guajillo chili powder,281.0,11.0,50.0,4.5,7.5,ai,0.7
+pasilla chili powder,281.0,10.5,51.0,4.5,7.5,ai,0.7
+new mexico chili powder,281.0,10.5,50.0,4.5,7.5,ai,0.7
+piri piri,318.0,12.0,54.0,5.5,8.5,ai,0.7
+ground white sesame,565.0,18.0,23.0,50.0,11.5,ai,0.7
+ground black sesame,565.0,18.0,23.0,50.0,11.5,ai,0.7
+zaatar spice blend,264.0,9.0,44.0,6.0,8.0,ai,0.7
+shiso powder,37.0,2.0,7.0,0.5,1.5,ai,0.7
+bonito flakes powder,356.0,78.0,0.0,5.0,0.0,ai,0.7
+dried yuzu peel powder,53.0,1.0,12.0,0.2,2.0,ai,0.7
+dried wakame powder,45.0,3.0,8.0,0.6,1.5,ai,0.7
+koikuchi soy sauce,60.0,8.1,5.6,0.1,,ai,0.8
+usukuchi soy sauce,54.0,6.2,7.8,0.0,,ai,0.8
+tamari soy sauce,62.0,10.5,3.9,0.1,,ai,0.8
+shiro soy sauce,70.0,5.2,10.4,0.0,,ai,0.8
+saishikomi soy sauce,76.0,9.8,8.2,0.1,,ai,0.8
+white miso,199.0,9.7,32.3,3.9,,ai,0.8
+red miso,186.0,13.1,21.9,6.0,,ai,0.8
+yellow miso,192.0,11.5,26.5,4.8,,ai,0.8
+hatcho miso,180.0,17.2,14.5,6.8,,ai,0.8
+barley miso,198.0,10.8,28.4,4.5,,ai,0.8
+awase miso,195.0,12.4,24.2,5.1,,ai,0.8
+cooking sake,103.0,0.4,4.9,0.0,,ai,0.8
+seasoned rice vinegar,75.0,0.2,18.5,0.0,,ai,0.8
+ponzu sauce,43.0,3.8,6.7,0.0,,ai,0.8
+mentsuyu,62.0,4.2,10.8,0.1,,ai,0.8
+tentsuyu,58.0,3.9,9.5,0.1,,ai,0.8
+tonkatsu sauce,132.0,1.8,30.5,0.2,,ai,0.8
+okonomiyaki sauce,140.0,2.1,32.8,0.3,,ai,0.8
+yakisoba sauce,126.0,2.4,28.6,0.2,,ai,0.8
+teriyaki sauce,154.0,4.5,30.2,0.5,,ai,0.8
+wasabi paste,109.0,2.4,23.5,0.6,,ai,0.8
+wasabi powder,292.0,9.8,58.4,2.1,,ai,0.8
+karashi,318.0,24.9,28.1,12.2,,ai,0.8
+yuzu kosho,52.0,2.1,8.8,0.9,,ai,0.8
+nori furikake,358.0,18.5,52.4,6.8,,ai,0.8
+salmon furikake,372.0,22.4,48.2,8.5,,ai,0.8
+sesame furikake,412.0,16.8,42.5,18.2,,ai,0.8
+yukari furikake,302.0,8.4,58.6,3.2,,ai,0.8
+umeboshi paste,33.0,0.9,7.1,0.1,,ai,0.8
+umeboshi vinegar,15.0,0.4,3.2,0.0,,ai,0.8
+rayu,828.0,2.8,8.4,88.5,,ai,0.8
+eating rayu,652.0,8.2,18.6,62.4,,ai,0.8
+neri goma,595.0,19.8,18.5,52.4,,ai,0.8
+white sesame seeds,573.0,17.7,23.5,49.7,,ai,0.8
+black sesame seeds,567.0,20.4,21.6,48.2,,ai,0.8
+toasted sesame seeds,565.0,16.9,25.8,48.5,,ai,0.8
+kombu dashi powder,238.0,12.8,46.5,1.2,,ai,0.8
+bonito dashi powder,268.0,42.5,18.2,2.8,,ai,0.8
+awase dashi powder,252.0,28.4,32.6,2.1,,ai,0.8
+hondashi,276.0,38.2,24.8,3.1,,ai,0.8
+shirodashi,68.0,5.8,9.2,0.2,,ai,0.8
+miso dashi powder,285.0,16.8,38.5,6.2,,ai,0.8
+shiso leaves dried,298.0,11.2,58.4,3.8,,ai,0.8
+katsuobushi flakes,356.0,77.1,0.8,2.9,,ai,0.8
+aonori,164.0,29.4,41.8,3.7,,ai,0.8
+nori sheets,188.0,41.4,44.3,3.7,,ai,0.8
+wakame flakes,45.0,3.0,9.1,0.6,,ai,0.8
+gari,51.0,0.4,12.4,0.1,,ai,0.8
+beni shoga,27.0,0.6,5.8,0.2,,ai,0.8
+takuan,27.0,0.9,5.3,0.1,,ai,0.8
+fukujinzuke,68.0,1.2,15.8,0.2,,ai,0.8
+natto sauce,58.0,4.2,8.6,0.3,,ai,0.8
+natto karashi,312.0,23.8,27.4,11.8,,ai,0.8
+konnyaku powder,5.0,0.1,3.0,0.0,,ai,0.8
+kinako,437.0,35.5,28.5,21.7,,ai,0.8
+matcha powder,324.0,29.6,38.5,5.3,,ai,0.8
+hojicha powder,318.0,24.5,47.2,4.8,,ai,0.8
+kuromitsu,352.0,1.8,87.2,0.1,,ai,0.8
+mitsuba dried,284.0,12.8,54.2,2.4,,ai,0.8
+shiso oil,884.0,0.0,0.0,100.0,,ai,0.8
+amazake,81.0,1.7,18.3,0.1,,ai,0.8
+shoyu koji,115.0,6.8,18.4,1.2,,ai,0.8
+shio koji,104.0,2.1,22.8,0.3,,ai,0.8
+kanzuri,68.0,2.8,12.4,1.2,,ai,0.8
+yuzusco,42.0,1.2,8.6,0.4,,ai,0.8
+kabu,28.0,0.9,6.4,0.1,,ai,0.8
+renkon,74.0,1.6,17.2,0.1,,ai,0.8
+satsumaimo,86.0,1.6,20.1,0.1,,ai,0.8
+shiso leaf,37.0,3.9,7.5,0.1,,ai,0.8
+negi,28.0,1.9,6.5,0.1,,ai,0.8
+tokyo negi,34.0,1.5,7.8,0.2,,ai,0.8
+umeboshi,33.0,0.9,7.9,0.5,,ai,0.8
+takenoko,27.0,2.6,5.2,0.3,,ai,0.8
+shimeji mushroom,18.0,2.3,3.7,0.4,,ai,0.8
+dried shiitake mushroom,296.0,9.6,75.4,1.0,,ai,0.8
+nameko mushroom,15.0,1.7,3.3,0.2,,ai,0.8
+matsutake mushroom,23.0,2.0,4.9,0.4,,ai,0.8
+kyuri,15.0,0.7,3.6,0.1,,ai,0.8
+yamaimo,65.0,2.2,14.6,0.3,,ai,0.8
+nagaimo,65.0,2.2,14.6,0.3,,ai,0.8
+horenso,23.0,2.9,3.6,0.4,,ai,0.8
+moyashi,30.0,3.0,5.9,0.2,,ai,0.8
+ninnjin,41.0,0.9,9.6,0.2,,ai,0.8
+tamanegi,40.0,1.1,9.3,0.1,,ai,0.8
+hakusai no tsukemono,16.0,1.2,3.5,0.1,,ai,0.8
+shibazuke,25.0,1.0,5.8,0.2,,ai,0.8
+asazuke,18.0,0.8,4.2,0.1,,ai,0.8
+nukazuke,22.0,1.0,5.1,0.2,,ai,0.8
+shiozuke,19.0,0.9,4.4,0.1,,ai,0.8
+menma,32.0,2.1,6.9,0.4,,ai,0.8
+nozawana,19.0,1.6,3.8,0.2,,ai,0.8
+pickled nozawana,24.0,1.5,5.2,0.2,,ai,0.8
+senmaizuke,21.0,0.7,4.9,0.1,,ai,0.8
+shungiku,22.0,2.3,3.9,0.3,,ai,0.8
+kinoko moriawase,25.0,2.1,5.2,0.3,,ai,0.8
+warabi,21.0,0.4,5.5,0.1,,ai,0.8
+zenmai,29.0,0.5,7.2,0.2,,ai,0.8
+fuki,11.0,0.3,2.9,0.1,,ai,0.8
+tsukushi,38.0,4.5,7.0,0.3,,ai,0.8
+udo,18.0,0.7,4.3,0.1,,ai,0.8
+rakkyou,118.0,1.4,28.8,0.2,,ai,0.8
+pickled rakkyou,115.0,1.2,28.1,0.2,,ai,0.8
+kyurizuke,16.0,0.8,3.8,0.1,,ai,0.8
+iburigakko,30.0,0.7,7.0,0.1,,ai,0.8
+awase dashi,5.0,0.8,0.5,0.1,,ai,0.8
+katsuo dashi,3.0,0.6,0.2,0.1,,ai,0.8
+kombu dashi,4.0,0.3,0.8,0.1,,ai,0.8
+iriko dashi,6.0,1.2,0.3,0.2,,ai,0.8
+shiitake dashi,7.0,0.5,1.2,0.1,,ai,0.8
+dashi packet,280.0,35.0,15.0,3.0,,ai,0.8
+dashi granules,310.0,25.0,40.0,2.5,,ai,0.8
+hon dashi,320.0,28.0,38.0,2.0,,ai,0.8
+liquid dashi concentrate,45.0,4.0,6.0,0.5,,ai,0.8
+hanakatsuo,356.0,77.1,0.8,2.9,,ai,0.8
+katsuobushi,356.0,77.1,0.8,2.9,,ai,0.8
+kezuribushi,356.0,77.1,0.8,2.9,,ai,0.8
+thick katsuobushi shavings,356.0,77.1,0.8,2.9,,ai,0.8
+ma-kombu,145.0,8.2,61.5,1.2,,ai,0.8
+rausu kombu,145.0,8.2,61.5,1.2,,ai,0.8
+hidaka kombu,145.0,8.2,61.5,1.2,,ai,0.8
+rishiri kombu,145.0,8.2,61.5,1.2,,ai,0.8
+naga kombu,145.0,8.2,61.5,1.2,,ai,0.8
+donko shiitake,296.0,19.3,63.4,3.7,,ai,0.8
+koshin shiitake,296.0,19.3,63.4,3.7,,ai,0.8
+niboshi,332.0,64.5,0.3,6.2,,ai,0.8
+iriko,332.0,64.5,0.3,6.2,,ai,0.8
+ago dashi,8.0,1.5,0.2,0.3,,ai,0.8
+dried flying fish,340.0,68.0,0.5,7.5,,ai,0.8
+sakura ebi,312.0,64.9,0.1,3.9,,ai,0.8
+dried whitebait,372.0,73.2,0.5,6.9,,ai,0.8
+shirasuboshi,206.0,40.5,0.2,3.5,,ai,0.8
+dried scallop,321.0,65.7,5.0,2.2,,ai,0.8
+chicken stock powder,280.0,20.0,35.0,5.0,,ai,0.8
+chinese chicken stock powder,285.0,18.0,38.0,6.0,,ai,0.8
+consomme powder,275.0,22.0,32.0,4.5,,ai,0.8
+consomme cube,275.0,22.0,32.0,4.5,,ai,0.8
+kelp tea,295.0,8.5,65.0,1.0,,ai,0.8
+vegetable bouillon,220.0,8.0,42.0,2.0,,ai,0.8
+shio kombu,117.0,6.5,48.0,0.9,,ai,0.8
+tororo kombu,117.0,6.8,50.2,1.0,,ai,0.8
+oboro kombu,117.0,6.8,50.2,1.0,,ai,0.8
+kizami kombu,145.0,8.2,61.5,1.2,,ai,0.8
+mekabu,11.0,0.9,3.4,0.6,,ai,0.8
+dried wakame,117.0,13.6,41.8,1.6,,ai,0.8
+cut wakame,117.0,13.6,41.8,1.6,,ai,0.8
+hijiki,149.0,9.2,58.4,1.3,,ai,0.8
+arame,140.0,8.5,56.0,1.5,,ai,0.8
+mozuku,6.0,0.2,2.0,0.1,,ai,0.8
+ao nori powder,164.0,29.4,41.0,3.7,,ai,0.8
+nori flakes,188.0,41.4,44.3,3.7,,ai,0.8
+katsuo furikake,385.0,28.0,45.0,8.5,,ai,0.8
+ume kombu tea,290.0,7.5,64.0,0.8,,ai,0.8
+Napa Cabbage Kimchi,23.0,1.7,3.6,0.5,,ai,0.8
+Cubed Radish Kimchi,21.0,1.2,4.2,0.3,,ai,0.8
+Cucumber Kimchi,18.0,1.4,3.1,0.4,,ai,0.8
+Ponytail Radish Kimchi,20.0,1.3,3.8,0.3,,ai,0.8
+Water Kimchi,12.0,0.8,2.3,0.2,,ai,0.8
+White Kimchi,15.0,1.0,2.8,0.2,,ai,0.8
+Radish Water Kimchi,11.0,0.7,2.1,0.1,,ai,0.8
+Green Onion Kimchi,19.0,1.5,3.3,0.3,,ai,0.8
+Young Radish Kimchi,17.0,1.1,3.2,0.2,,ai,0.8
+Perilla Leaf Kimchi,32.0,2.1,4.5,1.2,,ai,0.8
+Mustard Leaf Kimchi,22.0,1.6,3.7,0.4,,ai,0.8
+Cabbage Water Kimchi,13.0,0.9,2.4,0.2,,ai,0.8
+Wrapped Kimchi,26.0,1.8,4.1,0.6,,ai,0.8
+Chonburi Radish Kimchi,19.0,1.2,3.6,0.3,,ai,0.8
+Soybean Paste,128.0,11.5,12.3,4.2,,ai,0.8
+Red Chili Paste,168.0,5.8,31.2,2.4,,ai,0.8
+Wrapping Sauce,142.0,7.3,18.5,3.8,,ai,0.8
+Fast Fermented Soybean Paste,135.0,13.2,11.8,4.8,,ai,0.8
+Salted Shrimp,73.0,14.2,1.8,1.2,,ai,0.8
+Salted Anchovy,68.0,13.8,1.2,1.0,,ai,0.8
+Salted Squid,71.0,15.3,1.5,0.8,,ai,0.8
+Salted Pollack Roe,126.0,18.6,2.3,4.8,,ai,0.8
+Salted Oyster,62.0,9.8,3.2,1.5,,ai,0.8
+Salted Croaker,75.0,14.5,1.6,1.3,,ai,0.8
+Salted Clam,58.0,10.2,2.8,0.9,,ai,0.8
+Salted Sand Lance,66.0,12.8,1.4,1.1,,ai,0.8
+Salted Yellow Croaker Innards,82.0,11.5,2.8,3.2,,ai,0.8
+Pickled Garlic,48.0,2.1,10.2,0.3,,ai,0.8
+Pickled Radish,28.0,0.9,6.2,0.2,,ai,0.8
+Pickled Cucumber,25.0,0.8,5.6,0.2,,ai,0.8
+Pickled Perilla Leaf,38.0,2.3,6.8,0.9,,ai,0.8
+Pickled Chili Pepper,31.0,1.2,6.8,0.3,,ai,0.8
+Pickled Onion,35.0,1.0,8.1,0.2,,ai,0.8
+Aged Soy Sauce,61.0,9.2,5.8,0.2,,ai,0.8
+Light Soy Sauce,48.0,7.3,4.2,0.1,,ai,0.8
+Seasoned Soy Sauce,78.0,6.5,12.3,0.4,,ai,0.8
+Malt Syrup,318.0,2.1,78.5,0.2,,ai,0.8
+Makgeolli Lees Paste,156.0,6.8,28.5,1.8,,ai,0.8
+Sweet Rice Paste,145.0,5.2,27.8,1.5,,ai,0.8
+Perilla Seed Paste,168.0,8.5,15.2,8.9,,ai,0.8
+Seasoned Chili Paste,152.0,4.8,28.5,2.8,,ai,0.8
+Korean Miso Paste,122.0,10.8,11.5,3.9,,ai,0.8
+Seasoned Soybean Paste,138.0,10.2,15.8,4.5,,ai,0.8
+Chili Powder Paste,175.0,5.5,33.2,2.6,,ai,0.8
+Seasoned Perilla Leaf Kimchi,45.0,2.8,6.2,1.5,,ai,0.8
+Spicy Radish Kimchi,24.0,1.4,4.5,0.4,,ai,0.8
+Pickled Garlic Scape,42.0,1.8,9.3,0.3,,ai,0.8
+Young Summer Radish Kimchi,16.0,1.0,3.0,0.2,,ai,0.8
+Spicy Napa Cabbage Kimchi,28.0,1.9,4.2,0.7,,ai,0.8
+Fermented Soybean Soup Base,142.0,14.5,12.2,5.1,,ai,0.8
+Kimchi Brine,8.0,0.4,1.5,0.1,,ai,0.8
+Green Chili Pepper Kimchi,27.0,1.6,5.2,0.4,,ai,0.8
+Korean Radish Kimchi,22.0,1.3,4.3,0.3,,ai,0.8
+Seasoned Fish Sauce,42.0,7.2,2.8,0.4,,ai,0.8
+Pickled Sesame Leaf,36.0,2.2,6.5,0.9,,ai,0.8
+gochugaru coarse,282.0,12.0,57.0,5.0,,ai,0.8
+gochugaru fine,282.0,12.0,57.0,5.0,,ai,0.8
+korean soup soy sauce,53.0,5.6,4.9,0.0,,ai,0.8
+korean dark soy sauce,60.0,6.0,5.6,0.1,,ai,0.8
+persimmon vinegar,22.0,0.1,0.9,0.0,,ai,0.8
+plum extract,250.0,0.3,62.0,0.1,,ai,0.8
+beef dashida,180.0,8.0,35.0,2.0,,ai,0.8
+anchovy dashida,175.0,10.0,32.0,1.5,,ai,0.8
+perilla seeds,537.0,19.0,14.0,45.0,,ai,0.8
+roasted sesame seeds,573.0,17.7,23.5,49.7,,ai,0.8
+korean mustard,60.0,4.0,6.0,3.0,,ai,0.8
+doenjang,130.0,12.0,12.0,4.0,,ai,0.8
+gochujang,240.0,5.8,47.0,2.4,,ai,0.8
+ssamjang,165.0,7.5,23.0,4.5,,ai,0.8
+chunjang,195.0,6.5,35.0,3.5,,ai,0.8
+korean fish sauce,35.0,5.0,2.5,0.0,,ai,0.8
+anchovy fish sauce,37.0,5.5,2.8,0.1,,ai,0.8
+korean garlic powder,331.0,16.6,72.7,0.7,,ai,0.8
+korean ginger powder,335.0,9.1,71.6,4.2,,ai,0.8
+korean black pepper,251.0,10.4,64.8,3.3,,ai,0.8
+korean cooking wine,65.0,0.5,3.5,0.0,,ai,0.8
+perilla seed powder,537.0,19.0,14.0,45.0,,ai,0.8
+korean sea salt,0.0,0.0,0.0,0.0,,ai,0.8
+refined salt,0.0,0.0,0.0,0.0,,ai,0.8
+korean curry powder,325.0,14.3,55.8,13.8,,ai,0.8
+sesame salt,458.0,14.2,18.8,39.8,,ai,0.8
+korean chili threads,282.0,12.0,57.0,5.0,,ai,0.8
+dried kelp powder,43.0,1.7,9.6,0.6,,ai,0.8
+dried anchovy powder,278.0,60.0,0.0,4.5,,ai,0.8
+dried shrimp powder,295.0,63.0,1.2,3.7,,ai,0.8
+korean chicken stock powder,185.0,9.0,33.0,2.5,,ai,0.8
+sancho pepper,258.0,10.0,65.0,3.5,,ai,0.8
+korean wasabi,109.0,4.8,23.5,0.6,,ai,0.8
+fermented shrimp paste,68.0,11.0,3.5,1.2,,ai,0.8
+fermented anchovy paste,65.0,10.5,3.8,1.0,,ai,0.8
+oligodang,270.0,0.0,67.5,0.0,,ai,0.8
+yeot,320.0,0.8,78.5,0.3,,ai,0.8
+korean oyster sauce,51.0,2.1,11.0,0.2,,ai,0.8
+cheongyang chili powder,318.0,12.0,56.0,17.3,,ai,0.8
+korean mayo,680.0,1.2,4.8,72.0,,ai,0.8
+korean ketchup,112.0,1.2,27.0,0.1,,ai,0.8
+Korean Zucchini,17.0,1.2,3.1,0.3,,ai,0.8
+Perilla Leaves,37.0,3.9,5.2,1.1,,ai,0.8
+Crown Daisy,24.0,2.3,4.3,0.4,,ai,0.8
+Korean Spinach,23.0,2.9,3.6,0.4,,ai,0.8
+Water Parsley,19.0,1.8,3.5,0.2,,ai,0.8
+Korean Cucumber,15.0,0.7,3.6,0.1,,ai,0.8
+Korean Green Onion,32.0,1.8,7.3,0.2,,ai,0.8
+Korean Chives,27.0,2.6,4.3,0.5,,ai,0.8
+Korean Watercress,11.0,2.3,1.3,0.1,,ai,0.8
+Korean Leek,61.0,1.5,14.2,0.3,,ai,0.8
+Korean Eggplant,25.0,1.0,5.9,0.2,,ai,0.8
+Korean Sweet Potato,86.0,1.6,20.1,0.1,,ai,0.8
+Korean Potato,77.0,2.0,17.5,0.1,,ai,0.8
+Korean Pumpkin,26.0,1.0,6.5,0.1,,ai,0.8
+Korean Lettuce,15.0,1.4,2.9,0.2,,ai,0.8
+Korean Carrot,41.0,0.9,9.6,0.2,,ai,0.8
+Korean Mushroom,22.0,3.1,3.3,0.3,,ai,0.8
+Korean Garlic,149.0,6.4,33.1,0.5,,ai,0.8
+Korean Ginger,80.0,1.8,17.8,0.8,,ai,0.8
+Korean Onion,40.0,1.1,9.3,0.1,,ai,0.8
+Korean Lotus Root,74.0,2.6,17.2,0.1,,ai,0.8
+Korean Burdock Root,72.0,1.5,17.3,0.2,,ai,0.8
+Korean Kelp,43.0,1.7,9.6,0.6,,ai,0.8
+Korean Seaweed,35.0,5.8,5.1,0.3,,ai,0.8
+Wakame Seaweed,45.0,3.0,9.1,0.6,,ai,0.8
+Korean Radish Greens,25.0,2.2,4.6,0.3,,ai,0.8
+Korean Taro,112.0,1.5,26.5,0.2,,ai,0.8
+Korean Taro Stem,18.0,0.8,4.0,0.1,,ai,0.8
+Dried Fernbrake,290.0,28.0,42.0,2.5,,ai,0.8
+Dried Radish,278.0,9.7,62.9,0.6,,ai,0.8
+Dried Shiitake,296.0,9.6,63.9,1.0,,ai,0.8
+Korean Chili Pepper,40.0,2.0,8.8,0.4,,ai,0.8
+Korean Green Chili,40.0,1.9,9.5,0.2,,ai,0.8
+Korean Sweet Pepper,31.0,1.0,7.2,0.3,,ai,0.8
+Korean Cabbage Kimchi Base,16.0,1.2,3.2,0.2,,ai,0.8
+Acorn Starch,367.0,4.4,84.0,1.2,,ai,0.8
+Mung Bean Starch,351.0,0.2,87.5,0.2,,ai,0.8
+Korean Bean Curd,76.0,8.1,1.9,4.8,,ai,0.8
+Korean Glass Noodles Vegetable Base,351.0,0.2,87.5,0.2,,ai,0.8
+Tteokbokki Rice Cake,147.0,2.1,33.5,0.3,,ai,0.8
+Garae-tteok (Long Rice Cake),145.0,2.0,33.2,0.2,,ai,0.8
+Songpyeon (Half-Moon Rice Cake),165.0,2.5,35.8,1.2,,ai,0.8
+Injeolmi (Soybean Powder Rice Cake),210.0,5.5,38.5,4.2,,ai,0.8
+Baekseolgi (White Rice Cake),152.0,2.3,34.5,0.4,,ai,0.8
+Sirutteok (Steamed Rice Cake),158.0,2.8,35.2,0.6,,ai,0.8
+Chapssaltteok (Sweet Rice Cake),172.0,2.6,38.5,0.8,,ai,0.8
+Yaksik Rice Cake,235.0,3.5,45.2,4.8,,ai,0.8
+Dangmyeon (Sweet Potato Glass Noodles),331.0,0.2,82.7,0.1,,ai,0.8
+Naengmyeon Noodles (Buckwheat Cold Noodles),343.0,12.5,70.8,1.8,,ai,0.8
+Kalguksu Noodles (Wheat Knife-Cut Noodles),352.0,11.2,73.5,1.5,,ai,0.8
+Somyeon (Thin Wheat Noodles),348.0,10.8,72.8,1.4,,ai,0.8
+Guksu (Korean Wheat Noodles),350.0,11.0,73.2,1.5,,ai,0.8
+Jjolmyeon Noodles (Chewy Wheat Noodles),356.0,10.5,75.8,1.2,,ai,0.8
+Memil Guksu (Buckwheat Noodles),340.0,13.2,68.5,2.1,,ai,0.8
+Instant Ramyun Noodles,448.0,9.5,62.8,17.2,,ai,0.8
+Shin Ramyun Noodles,452.0,9.8,63.5,17.5,,ai,0.8
+Chapagetti Noodles,455.0,10.2,64.2,17.8,,ai,0.8
+Neoguri Ramyun Noodles,450.0,9.6,63.8,17.4,,ai,0.8
+Samyang Buldak Noodles,470.0,10.5,66.5,18.5,,ai,0.8
+Korean Short Grain White Rice (Raw),360.0,6.8,79.2,0.6,,ai,0.8
+Korean Short Grain White Rice (Cooked),130.0,2.4,28.7,0.2,,ai,0.8
+"Korean Sweet Rice (Glutinous Rice, Raw)",358.0,6.5,79.8,0.5,,ai,0.8
+"Korean Sweet Rice (Glutinous Rice, Cooked)",135.0,2.5,30.2,0.3,,ai,0.8
+Korean Brown Rice (Raw),362.0,7.5,76.8,2.3,,ai,0.8
+Korean Brown Rice (Cooked),112.0,2.6,23.5,0.9,,ai,0.8
+Korean Black Rice (Raw),356.0,8.2,75.5,2.8,,ai,0.8
+Korean Barley (Raw),354.0,12.5,73.5,2.3,,ai,0.8
+Korean Barley (Cooked),123.0,4.2,25.8,0.8,,ai,0.8
+"Ogokbap Mix (Five Grain Mix, Raw)",358.0,10.5,74.8,2.5,,ai,0.8
+Korean Millet (Raw),363.0,11.2,72.8,4.2,,ai,0.8
+Sujebi Dough (Hand-Torn Noodle Dough),265.0,8.5,52.8,2.2,,ai,0.8
+Mandu Wrappers (Dumpling Wrappers),288.0,9.2,58.5,2.5,,ai,0.8
+Buchimgae Mix (Korean Pancake Flour),355.0,10.5,75.2,1.5,,ai,0.8
+Korean Rice Flour,366.0,6.0,80.2,1.4,,ai,0.8
+Korean Sweet Rice Flour,364.0,5.8,80.8,1.2,,ai,0.8
+Korean Wheat Flour,364.0,10.3,76.3,1.0,,ai,0.8
+Kongguksu Noodles (Soy Milk Noodles),345.0,11.5,71.2,1.8,,ai,0.8
+Janchi Guksu Noodles (Banquet Noodles),348.0,10.8,72.8,1.4,,ai,0.8
+Bibim Naengmyeon Noodles,340.0,12.2,69.5,1.9,,ai,0.8
+Mul Naengmyeon Noodles,342.0,12.4,70.2,1.8,,ai,0.8
+Korean Potato Starch Noodles,328.0,0.3,82.0,0.1,,ai,0.8
+Acorn Noodles,312.0,4.5,68.5,2.8,,ai,0.8
+Kimchi Ramyun Noodles,453.0,9.7,64.0,17.6,,ai,0.8
+Ansong Tang Myeon (Ansong Instant Noodles),449.0,9.4,62.5,17.3,,ai,0.8
+Jin Ramyun Noodles,454.0,10.0,63.8,17.7,,ai,0.8
+Yeol Ramyun Noodles (Spicy Instant Noodles),456.0,9.9,64.5,17.9,,ai,0.8
+Tteok (General Rice Cake),150.0,2.2,34.0,0.4,,ai,0.8
+Nurungji (Scorched Rice),385.0,7.2,82.5,2.8,,ai,0.8
+Korean Job's Tears (Raw),361.0,14.1,71.2,3.3,,ai,0.8
+Har Gow Wrapper,280.0,3.2,65.8,0.4,,ai,0.8
+Siu Mai Wrapper,290.0,8.5,58.2,1.2,,ai,0.8
+Chinese Sausage,382.0,18.6,12.5,29.3,,ai,0.8
+Liver Sausage,365.0,16.8,10.2,28.5,,ai,0.8
+Chinese Bacon,458.0,15.2,3.8,42.5,,ai,0.8
+Preserved Duck,372.0,18.4,2.5,31.8,,ai,0.8
+Choy Sum,20.0,2.6,3.3,0.3,,ai,0.8
+Dried Oyster,258.0,48.5,12.3,3.2,,ai,0.8
+Salted Fish,185.0,38.2,0.5,3.8,,ai,0.8
+Dried Fish Maw,165.0,36.8,0.3,1.2,,ai,0.8
+Dried Sea Cucumber,68.0,15.2,0.8,0.5,,ai,0.8
+Dried Abalone,245.0,52.3,3.8,2.5,,ai,0.8
+Hoisin Sauce,220.0,4.2,45.8,3.2,,ai,0.8
+Oyster Sauce,90.0,2.8,18.5,0.6,,ai,0.8
+XO Sauce,285.0,12.5,8.2,22.8,,ai,0.8
+Chu Hou Paste,156.0,8.2,22.5,3.8,,ai,0.8
+Sha Cha Sauce,358.0,6.5,18.2,28.5,,ai,0.8
+Plum Sauce,175.0,0.8,43.2,0.3,,ai,0.8
+Preserved Black Beans,198.0,18.5,28.2,3.2,,ai,0.8
+Wonton Wrapper,285.0,9.2,57.5,1.5,,ai,0.8
+Spring Roll Wrapper,275.0,7.8,55.2,1.8,,ai,0.8
+Dumpling Wrapper,288.0,8.8,58.8,1.3,,ai,0.8
+Rice Noodle Roll,108.0,1.8,25.2,0.3,,ai,0.8
+Rice Noodle Sheet,112.0,2.2,26.5,0.4,,ai,0.8
+Dried Tangerine Peel,252.0,3.8,64.2,1.5,,ai,0.8
+Five Spice Powder,285.0,8.5,52.8,6.2,,ai,0.8
+White Pepper Powder,296.0,10.4,68.2,2.1,,ai,0.8
+Salted Egg,168.0,12.8,1.2,12.5,,ai,0.8
+Salted Duck Egg Yolk,348.0,16.2,1.8,30.5,,ai,0.8
+Lotus Leaf,48.0,2.5,9.8,0.5,,ai,0.8
+Bamboo Leaf,35.0,1.8,7.2,0.3,,ai,0.8
+Sticky Rice,348.0,6.5,77.8,0.6,,ai,0.8
+Snow Fungus,28.0,1.4,6.8,0.2,,ai,0.8
+Dried Lily Bulb,343.0,4.8,77.2,0.5,,ai,0.8
+Dried Longan,283.0,4.9,73.8,0.4,,ai,0.8
+Red Date,282.0,3.7,73.9,0.4,,ai,0.8
+Wolfberry,349.0,13.9,77.1,0.4,,ai,0.8
+Dried Tangerine Peel Powder,248.0,3.5,63.8,1.4,,ai,0.8
+Taro,112.0,1.5,27.5,0.2,,ai,0.8
+Lotus Seed,332.0,15.4,64.5,1.9,,ai,0.8
+Old Ginger,80.0,1.8,17.8,0.8,,ai,0.8
+Yellow Chives,25.0,2.1,4.3,0.4,,ai,0.8
+Chinese Flowering Cabbage,22.0,2.7,3.7,0.3,,ai,0.8
+Fermented Bean Curd,135.0,10.5,5.8,8.2,,ai,0.8
+Red Fermented Bean Curd,142.0,11.2,6.5,8.8,,ai,0.8
+Shaoxing Wine,134.0,1.2,5.8,0.0,,ai,0.8
+Chinese Rose Wine,128.0,0.8,4.5,0.0,,ai,0.8
+Fried Shallot,485.0,4.2,38.5,33.8,,ai,0.8
+Shanghai Bok Choy,13.0,1.5,2.2,0.2,,ai,0.8
+Hairy Crab Roe,182.0,15.8,1.2,12.5,,ai,0.8
+Hairy Crab Meat,103.0,18.1,0.0,3.1,,ai,0.8
+Xiaolongbao Wrapper,290.0,9.2,58.5,1.8,,ai,0.8
+Dark Soy Sauce,71.0,8.8,9.2,0.2,,ai,0.8
+Winter Bamboo Shoots,27.0,2.6,5.2,0.3,,ai,0.8
+Spring Bamboo Shoots,27.0,2.6,5.2,0.3,,ai,0.8
+Dried Bamboo Shoots,196.0,18.8,37.5,2.1,,ai,0.8
+Fresh Water Snail,82.0,16.5,2.1,0.8,,ai,0.8
+Yellow Croaker,97.0,18.6,0.0,2.3,,ai,0.8
+Black Carp,108.0,18.2,0.0,3.6,,ai,0.8
+Shanghai Thick Noodles,138.0,4.6,27.8,0.9,,ai,0.8
+Shanghai Fine Noodles,138.0,4.6,27.8,0.9,,ai,0.8
+Sweet Fermented Rice,98.0,1.6,21.5,0.3,,ai,0.8
+Dried Tofu Skin,392.0,44.6,18.8,17.4,,ai,0.8
+Pressed Tofu,140.0,16.2,4.8,6.2,,ai,0.8
+Smoked Tofu,145.0,16.8,5.2,6.5,,ai,0.8
+Fried Tofu Puff,386.0,17.8,12.4,30.8,,ai,0.8
+Vegetarian Goose,215.0,22.5,8.5,10.8,,ai,0.8
+Dried Black Mushroom,307.0,23.8,54.2,2.4,,ai,0.8
+Jiangsu Pickled Vegetables,18.0,1.2,3.8,0.2,,ai,0.8
+Salted Mustard Greens,22.0,1.8,4.2,0.3,,ai,0.8
+Pickled Cabbage,19.0,1.3,3.9,0.2,,ai,0.8
+Shepherd's Purse,27.0,3.2,4.7,0.4,,ai,0.8
+Chinese Leek,27.0,2.1,4.2,0.5,,ai,0.8
+Yellow Chive,25.0,1.9,4.0,0.4,,ai,0.8
+Garlic Shoots,61.0,2.1,13.6,0.4,,ai,0.8
+Garlic Scapes,59.0,2.0,13.2,0.4,,ai,0.8
+Chinese Chive Flower,28.0,2.2,4.5,0.5,,ai,0.8
+Shanghai Rice Cake,154.0,3.2,34.8,0.5,,ai,0.8
+Glutinous Rice Ball,278.0,4.8,58.5,3.2,,ai,0.8
+Black Sesame Paste,598.0,19.2,23.5,50.4,,ai,0.8
+Osmanthus Syrup,284.0,0.2,70.8,0.1,,ai,0.8
+Mushroom Soy Sauce,65.0,7.8,6.5,0.1,,ai,0.8
+Sweet Soy Sauce,120.0,5.2,25.0,0.2,,ai,0.8
+Chinkiang Black Vinegar,20.0,0.5,4.2,0.0,,ai,0.8
+White Rice Vinegar,15.0,0.2,3.5,0.0,,ai,0.8
+Aged Black Vinegar,22.0,0.6,4.5,0.0,,ai,0.8
+Fermented Bean Paste,165.0,12.0,20.0,4.5,,ai,0.8
+Pixian Doubanjiang,170.0,11.5,21.0,5.0,,ai,0.8
+Sweet Bean Sauce,200.0,8.0,38.0,3.0,,ai,0.8
+Yellow Bean Sauce,140.0,10.5,16.0,4.0,,ai,0.8
+Red Fermented Tofu,110.0,8.5,7.0,5.5,,ai,0.8
+White Fermented Tofu,100.0,8.0,5.0,5.0,,ai,0.8
+Preserved Mustard Greens,25.0,2.0,3.5,0.5,,ai,0.8
+Mei Cai,30.0,2.5,4.0,0.8,,ai,0.8
+Pickled Mustard Tuber,28.0,2.2,4.2,0.6,,ai,0.8
+Sichuan Chili Oil,870.0,1.0,3.0,98.0,,ai,0.8
+Chili Crisp,650.0,3.5,12.0,68.0,,ai,0.8
+Lao Gan Ma Chili Sauce,620.0,4.0,15.0,64.0,,ai,0.8
+Chinese Chili Sauce,100.0,2.0,18.0,2.5,,ai,0.8
+Garlic Chili Sauce,95.0,2.5,16.0,2.8,,ai,0.8
+Chinese Sesame Paste,595.0,17.0,23.0,53.0,,ai,0.8
+Toasted Sesame Oil,884.0,0.0,0.0,100.0,,ai,0.8
+Sichuan Peppercorn Powder,305.0,10.5,65.0,3.5,,ai,0.8
+Chicken Powder,320.0,15.0,50.0,5.0,,ai,0.8
+Huadiao Wine,138.0,1.6,8.2,0.0,,ai,0.8
+Rice Cooking Wine,120.0,1.2,6.5,0.0,,ai,0.8
+Char Siu Sauce,210.0,2.5,48.0,2.0,,ai,0.8
+Sichuan Peppercorn Oil,884.0,0.0,0.5,100.0,,ai,0.8
+Black Vinegar with Ginger,25.0,0.6,5.0,0.1,,ai,0.8
+Red Oil Wonton Sauce,420.0,2.0,8.0,42.0,,ai,0.8
+Cumin Powder,375.0,17.8,44.2,22.3,,ai,0.8
+Star Anise Powder,337.0,17.6,50.0,15.9,,ai,0.8
+Fermented Rice Wine Lees,95.0,3.2,18.0,0.8,,ai,0.8
+Red Yeast Rice,340.0,7.5,72.0,2.5,,ai,0.8
+Chinese Maltose Syrup,320.0,0.0,80.0,0.0,,ai,0.8
+Salted Egg Yolk Sauce,320.0,12.0,8.0,28.0,,ai,0.8
+Dried Shrimp Roe,340.0,58.0,2.0,10.0,,ai,0.8
+Sichuan Ya Cai,32.0,2.8,4.5,0.7,,ai,0.8
+Tianjin Preserved Vegetable,27.0,2.3,3.8,0.6,,ai,0.8
+Pickled Ginger,40.0,0.8,9.0,0.2,,ai,0.8
+Sweet Pickled Garlic,75.0,2.0,16.0,0.3,,ai,0.8
+Sesame Chili Oil,884.0,0.3,1.5,100.0,,ai,0.8
+Fragrant Spicy Oil,875.0,0.5,2.5,98.5,,ai,0.8
+Ginger Scallion Sauce,450.0,1.0,8.0,47.0,,ai,0.8
+Soy Sauce Paste,155.0,9.0,25.0,2.5,,ai,0.8
+Shacha Sauce,380.0,8.5,28.0,26.0,,ai,0.8
+Chili Bean Sauce,160.0,10.0,22.0,4.8,,ai,0.8
+Black Bean Garlic Sauce,145.0,11.0,18.0,4.2,,ai,0.8
+Spicy Fermented Bean Curd,115.0,8.8,7.5,6.0,,ai,0.8
+Rose Fermented Bean Curd,105.0,8.2,6.5,5.2,,ai,0.8
+Thirteen Spice Powder,295.0,13.0,55.0,9.0,,ai,0.8
+Cinnamon Powder,247.0,3.9,80.6,1.2,,ai,0.8
+Green Sichuan Peppercorn,265.0,10.5,65.0,3.5,,ai,0.8
+Doubanjiang,60.0,4.5,8.0,1.5,,ai,0.8
+Facing Heaven Chili,282.0,12.0,50.0,14.0,,ai,0.8
+Lao Gan Ma Chili Crisp,520.0,4.0,15.0,50.0,,ai,0.8
+Zhacai,29.0,2.0,4.5,0.5,,ai,0.8
+Sichuan Pickled Vegetables,22.0,1.5,3.8,0.3,,ai,0.8
+Suancai,19.0,1.2,3.5,0.2,,ai,0.8
+Ya Cai,32.0,2.5,5.0,0.4,,ai,0.8
+Sichuan Black Vinegar,20.0,0.5,4.2,0.0,,ai,0.8
+Dried Red Sichuan Chili,324.0,12.0,69.0,17.0,,ai,0.8
+Sichuan Preserved Vegetable,28.0,2.0,4.0,0.5,,ai,0.8
+Sichuan Chili Flakes,318.0,12.0,56.0,17.0,,ai,0.8
+Chili Bean Paste,58.0,4.0,7.5,1.5,,ai,0.8
+Sichuan Chili Paste,45.0,2.0,6.0,1.2,,ai,0.8
+Erjingtiao Chili,280.0,11.5,52.0,13.5,,ai,0.8
+Sichuan Sweet Bean Sauce,120.0,6.0,20.0,1.0,,ai,0.8
+Red Oil,884.0,0.0,0.0,100.0,,ai,0.8
+Sichuan Sesame Paste,595.0,18.0,23.0,50.0,,ai,0.8
+Pickled Chili,18.0,1.0,3.5,0.2,,ai,0.8
+Sichuan Pickled Ginger,35.0,0.8,7.5,0.3,,ai,0.8
+Dried Sichuan Chili Threads,315.0,11.8,67.0,16.5,,ai,0.8
+Sichuan Chili Powder,282.0,12.0,50.0,14.0,,ai,0.8
+Cassia Bark,247.0,4.0,81.0,1.2,,ai,0.8
+Cooking Wine,48.0,1.2,3.5,0.0,,ai,0.8
+Sichuan Yibin Ya Cai,35.0,2.8,5.5,0.5,,ai,0.8
+Sichuan Pepper Salt,135.0,5.0,32.0,1.5,,ai,0.8
+White Pepper,296.0,10.4,68.0,2.1,,ai,0.8
+Black Pepper,251.0,10.4,64.0,3.3,,ai,0.8
+Sichuan Broad Bean Paste,62.0,5.0,8.5,1.6,,ai,0.8
+Ginger Paste,80.0,1.8,18.0,0.8,,ai,0.8
+Garlic Paste,149.0,6.4,33.0,0.5,,ai,0.8
+Sweet Potato Starch,357.0,0.1,86.0,0.2,,ai,0.8
+Sichuan Spicy Hot Pot Base,450.0,5.0,25.0,38.0,,ai,0.8
+Mala Sauce,380.0,4.5,18.0,32.0,,ai,0.8
+Sichuan Vinegar,18.0,0.3,4.0,0.0,,ai,0.8
+Sichuan Preserved Radish,26.0,1.8,4.2,0.4,,ai,0.8
+Dried Chili Pepper Whole,318.0,12.0,69.0,17.3,,ai,0.8
+Mantou,233.0,7.2,48.5,1.1,,ai,0.8
+Baozi wrapper,275.0,8.1,55.2,2.3,,ai,0.8
+Jiaozi wrapper,280.0,9.4,58.6,1.2,,ai,0.8
+Mutton leg,234.0,20.8,0.0,16.5,,ai,0.8
+Sweet bean paste,180.0,7.8,32.4,2.1,,ai,0.8
+Sesame paste,595.0,17.7,21.2,53.8,,ai,0.8
+Duck breast,337.0,18.3,0.0,28.4,,ai,0.8
+Duck skin,523.0,6.2,0.0,55.8,,ai,0.8
+Maltose syrup,318.0,0.0,79.5,0.0,,ai,0.8
+Garlic bolt,61.0,2.1,13.6,0.1,,ai,0.8
+Yellow bean sprouts,31.0,3.2,5.3,0.4,,ai,0.8
+"Carrot, Chinese",41.0,0.9,9.6,0.2,,ai,0.8
+"Potato, stir-fry cut",77.0,2.0,17.5,0.1,,ai,0.8
+"Eggplant, Chinese",25.0,1.0,5.9,0.2,,ai,0.8
+"Spinach, water",23.0,2.9,3.6,0.4,,ai,0.8
+Green onion pancake dough,290.0,7.8,52.3,5.4,,ai,0.8
+Wheat starch,351.0,0.3,86.8,0.6,,ai,0.8
+Millet,378.0,11.0,73.0,4.2,,ai,0.8
+Fermented tofu,151.0,12.3,5.2,8.9,,ai,0.8
+Soy paste,165.0,13.5,15.8,6.2,,ai,0.8
+"Black vinegar, Shanxi",19.0,0.4,3.8,0.0,,ai,0.8
+Zhenjiang vinegar,22.0,0.5,4.3,0.0,,ai,0.8
+"Bay leaf, Chinese",313.0,7.6,74.9,8.4,,ai,0.8
+Cumin seed,375.0,17.8,44.2,22.3,,ai,0.8
+Fennel seed,345.0,15.8,52.3,14.9,,ai,0.8
+Dried lily flower,314.0,13.6,62.6,1.4,,ai,0.8
+Lamb ribs,315.0,17.2,0.0,27.1,,ai,0.8
+"Pork belly, skin-on",518.0,9.3,0.0,53.0,,ai,0.8
+Dried Wood Ear Mushroom,265.0,10.6,65.9,0.2,,ai,0.8
+Dried Snow Fungus,250.0,8.5,65.0,0.5,,ai,0.8
+Dried Porcini Mushroom,280.0,11.2,70.0,0.8,,ai,0.8
+Dried King Oyster Mushroom,275.0,10.0,68.0,0.6,,ai,0.8
+Dried Enoki Mushroom,270.0,9.8,67.0,0.5,,ai,0.8
+Dried Morel Mushroom,290.0,12.0,72.0,1.2,,ai,0.8
+Dried Straw Mushroom,260.0,8.5,64.0,0.4,,ai,0.8
+Dried Tea Tree Mushroom,285.0,10.5,69.0,0.7,,ai,0.8
+Dried Maitake Mushroom,272.0,9.2,66.0,0.6,,ai,0.8
+Dried Lily Buds,318.0,14.2,62.6,1.4,,ai,0.8
+Dried Lotus Seeds,332.0,15.4,64.5,1.9,,ai,0.8
+Dried Lotus Root,325.0,9.6,73.8,0.8,,ai,0.8
+Goji Berries,349.0,14.3,77.1,0.4,,ai,0.8
+Red Dates,277.0,3.7,73.5,0.4,,ai,0.8
+Dried Astragalus Root,245.0,7.5,58.0,0.5,,ai,0.8
+Dried Codonopsis Root,240.0,8.2,56.0,0.6,,ai,0.8
+Dried Angelica Root,235.0,7.8,54.0,0.8,,ai,0.8
+Dried Ginseng Root,260.0,9.5,60.0,1.2,,ai,0.8
+Dried American Ginseng,255.0,9.0,59.0,1.0,,ai,0.8
+Dried Goji Root Bark,230.0,6.5,52.0,0.4,,ai,0.8
+Dried Rehmannia Root,248.0,8.0,57.0,0.7,,ai,0.8
+Dried Cordyceps,285.0,25.0,45.0,8.0,,ai,0.8
+Dried Goji Leaf,220.0,12.0,48.0,0.5,,ai,0.8
+Dried Solomon's Seal,238.0,7.2,55.0,0.6,,ai,0.8
+Dried Peony Root,232.0,6.8,53.0,0.5,,ai,0.8
+Dried Licorice Root,240.0,7.0,56.0,0.7,,ai,0.8
+Bird's Nest,295.0,62.0,27.0,0.3,,ai,0.8
+Dried Cuttlefish,328.0,64.0,16.0,4.2,,ai,0.8
+Dried Fish Roe,380.0,68.0,8.0,12.0,,ai,0.8
+Dried Sea Jellyfish,180.0,38.0,12.0,0.5,,ai,0.8
+Dried Kelp,315.0,12.0,62.0,1.5,,ai,0.8
+Dried Nori,295.0,41.0,44.0,1.8,,ai,0.8
+Dried Beancurd Sticks,380.0,45.0,21.0,17.0,,ai,0.8
+Dried Beancurd Sheets,365.0,42.0,24.0,16.0,,ai,0.8
+Dried Chinese Yam,328.0,9.5,74.0,1.2,,ai,0.8
+Dried Water Chestnut,335.0,8.0,77.0,0.8,,ai,0.8
+Dried Chrysanthemum,210.0,8.0,50.0,0.5,,ai,0.8
+Dried Hawthorn Berry,242.0,5.5,60.0,0.6,,ai,0.8
+Dried Schisandra Berry,252.0,6.0,62.0,1.0,,ai,0.8
+Dried Ginger,335.0,9.0,71.6,4.2,,ai,0.8
+Dried Fox Nut,347.0,9.7,76.9,0.1,,ai,0.8
+Dried Barley,352.0,10.0,77.7,1.2,,ai,0.8
+Dried Rose Petals,195.0,6.5,48.0,0.4,,ai,0.8
+Dried Osmanthus Flower,185.0,5.5,46.0,0.3,,ai,0.8
+tamarind pulp,239.0,2.8,62.5,0.6,5.1,ai,0.8
+black vinegar,22.0,0.4,0.9,0.0,0.0,ai,0.7
+dragon fruit,60.0,1.2,13.0,0.4,2.5,ai,0.7
+rice wine,130.0,0.1,0.0,0.0,0.0,ai,0.7
+dried shrimp paste,240.0,41.0,5.0,3.0,0.0,ai,0.7
+taiwanese sausage seasoning,280.0,12.0,35.0,10.0,4.0,ai,0.7
+taiwanese preserved radish,45.0,1.5,7.0,0.5,1.5,ai,0.7
+taiwanese fried shallots,560.0,8.0,42.0,38.0,3.0,ai,0.7
+taiwanese soy sauce paste,140.0,10.0,8.0,4.0,1.0,ai,0.7
+sugar cane,58.0,0.2,13.5,0.2,0.5,ai,0.7
+star fruit,31.0,0.6,6.7,0.3,2.8,ai,0.7
+taiwanese rice koji,320.0,14.0,55.0,1.0,2.0,ai,0.7
+taiwanese fermented tofu,120.0,12.0,2.0,6.0,0.0,ai,0.7
+oolong tea leaves,1.0,0.1,0.2,0.0,0.1,ai,0.7
+taiwanese garlic chili sauce,85.0,2.5,12.0,3.0,1.0,ai,0.7
+taiwanese peanut powder,580.0,25.0,20.0,47.0,6.0,ai,0.7
+taiwanese garlic sauce,145.0,3.0,18.0,6.0,1.0,ai,0.7
+taiwanese sweet chili sauce,160.0,1.0,38.0,0.5,0.5,ai,0.7
+taiwanese sesame paste,595.0,18.0,20.0,50.0,6.0,ai,0.7
+taiwanese hoisin sauce,220.0,3.0,40.0,3.0,1.0,ai,0.7
+taiwanese chili flakes,318.0,12.0,64.0,12.0,25.0,ai,0.7
+persimmon,70.0,0.6,18.0,0.2,3.6,ai,0.7
+taiwanese plum sauce,180.0,1.0,42.0,0.5,1.0,ai,0.7
+taiwanese scallion oil,820.0,1.0,5.0,91.0,0.0,ai,0.7
+taiwanese star anise,337.0,17.6,50.0,15.9,14.6,ai,0.7
+taiwanese cilantro,23.0,2.1,3.7,0.5,2.8,ai,0.7
+taiwanese sichuan peppercorn,258.0,10.0,45.0,9.0,22.0,ai,0.7
+taiwanese rice syrup,320.0,0.5,78.0,0.5,0.0,ai,0.7
+taiwanese ginger paste,80.0,1.5,15.0,0.5,1.5,ai,0.7
+taiwanese curry powder,325.0,10.0,50.0,12.0,18.0,ai,0.7
+taiwanese chili bean paste,135.0,8.0,12.0,4.0,2.0,ai,0.7
+taiwanese dried tangerine peel,250.0,3.0,58.0,2.0,15.0,ai,0.7
+bumbu merah,92.0,2.8,17.0,3.1,4.0,ai,0.8
+bumbu putih,78.0,2.2,14.0,2.5,3.2,ai,0.8
+rempah,95.0,3.0,16.0,3.5,4.5,ai,0.8
+daun kunyit,25.0,1.5,5.0,0.3,2.0,ai,0.8
+banana ketchup,104.0,0.8,24.0,0.3,1.0,ai,0.7
+sukang iloco,18.0,0.3,0.5,0.0,0.0,ai,0.7
+sukang tuba,20.0,0.3,0.8,0.0,0.0,ai,0.7
+coconut vinegar,20.0,0.0,2.0,0.0,0.0,ai,0.7
+patis,35.0,7.0,0.0,0.2,0.0,ai,0.7
+bagoong alamang,73.0,12.0,2.0,1.5,0.0,ai,0.7
+bagoong isda,68.0,11.0,1.0,1.5,0.0,ai,0.7
+ube,140.0,1.5,32.0,0.3,3.0,ai,0.7
+malunggay,64.0,6.7,8.3,1.7,4.0,ai,0.7
+kangkong,19.0,2.2,3.1,0.2,2.1,ai,0.7
+sitaw,47.0,3.2,8.0,0.3,2.4,ai,0.7
+squash,26.0,1.0,5.0,0.2,1.1,ai,0.7
+taro leaves,42.0,4.2,6.5,0.5,2.0,ai,0.7
+miso paste,199.0,12.0,14.0,6.0,3.0,ai,0.7
+miki noodles,138.0,4.5,28.0,0.8,0.5,ai,0.7
+lechon sauce,165.0,1.5,35.0,2.0,0.5,ai,0.7
+salted duck eggs,195.0,13.5,2.0,15.0,0.0,ai,0.7
+quail eggs,158.0,13.0,0.4,11.0,0.0,ai,0.7
+liver spread,221.0,22.0,4.0,12.0,0.0,ai,0.7
+macapuno,174.0,1.9,8.5,15.8,3.2,ai,0.7
+biryani masala,365.0,14.0,57.5,14.5,26.0,ai,0.8
+pav bhaji masala,335.0,12.0,54.0,12.5,22.0,ai,0.8
+dal masala,335.0,13.0,54.5,12.5,24.0,ai,0.8
+nihari masala,355.0,14.0,56.5,14.0,25.0,ai,0.8
+basmati rice,356.0,7.5,78.3,0.6,1.3,ai,0.8
+piloncillo,380.0,0.1,98.0,0.0,0.0,ai,0.8
+pepitoria,446.0,18.6,53.8,15.4,6.2,ai,0.8
+achiote paste,312.0,5.8,42.5,13.2,8.4,ai,0.8
+ogiri,420.0,38.5,22.3,19.2,8.5,ai,0.8
+ogbono seeds,697.0,8.5,15.7,67.5,5.2,ai,0.8
+pilau masala,328.0,11.2,53.5,7.8,19.3,ai,0.8
+suya spice,452.0,18.5,38.2,24.8,12.5,ai,0.8
+biltong spice,285.0,9.5,48.2,5.8,14.2,ai,0.8
+chakalaka,85.0,2.5,14.8,2.2,3.8,ai,0.8
+garri,357.0,1.5,85.6,0.5,3.2,ai,0.8
+fonio,364.0,7.3,76.1,1.9,3.7,ai,0.8
+tiger nut flour,496.0,4.7,65.8,23.7,33.0,ai,0.8
+african nutmeg,525.0,5.8,49.3,36.3,20.8,ai,0.8
+grains of selim,310.0,8.5,52.4,8.2,18.5,ai,0.8
+ogbono powder,697.0,8.5,15.7,67.5,5.2,ai,0.8
+african pepper,251.0,10.4,58.2,3.3,26.5,ai,0.8
+uda,298.0,7.8,51.2,7.5,16.8,ai,0.8
+uziza leaves,45.0,3.8,7.2,0.8,4.5,ai,0.8
+uziza seeds,335.0,9.2,54.8,8.9,18.2,ai,0.8
+african basil,23.0,3.2,2.7,0.6,1.6,ai,0.8
+bitter leaf,36.0,5.8,6.1,0.4,2.8,ai,0.8
+waterleaf,24.0,2.1,4.5,0.2,1.9,ai,0.8
+jollof rice seasoning,295.0,8.5,48.2,7.8,12.5,ai,0.8
+african locust bean,385.0,35.2,18.4,17.8,7.2,ai,0.8
+cinnamon,247.0,3.9,80.6,1.2,53.1,ai,0.8
+budu,70.0,11.0,5.0,1.5,0.0,ai,0.8
+bawang putih,149.0,6.4,33.0,0.5,2.1,ai,0.8
+biji pala,525.0,5.8,49.3,36.3,20.8,ai,0.8
+ketumbar,298.0,12.4,54.2,17.8,41.9,ai,0.8
+coconut oil,862.0,0.0,0.0,99.9,0.0,ai,0.8
+jaggery,383.0,0.4,98.0,0.1,0.0,ai,0.8
+idli rice,345.0,6.8,76.5,0.6,1.3,ai,0.8
+sona masoori rice,349.0,7.1,77.6,0.5,1.2,ai,0.8
+khoya,357.0,12.5,25.2,23.4,0.0,ai,0.8
+kasuri methi,323.0,25.8,58.4,6.4,24.6,ai,0.8
+posto,525.0,17.9,28.1,41.6,19.5,ai,0.8
+kokum,60.0,0.5,14.3,0.1,2.8,ai,0.8
+amchur,360.0,3.5,82.5,0.6,11.2,ai,0.8
+ajwain,305.0,15.4,42.6,9.1,38.6,ai,0.8
+kala masala,315.0,11.8,50.6,9.2,21.5,ai,0.8
+dry coconut,660.0,6.9,23.7,64.5,16.3,ai,0.8
+sol kadhi paste,85.0,1.2,18.5,0.8,3.2,ai,0.8
+dried prawns,305.0,63.2,3.8,3.4,0.0,ai,0.8
+fish curry powder,320.0,13.5,48.2,10.3,20.8,ai,0.8
+hing,297.0,4.0,67.8,1.1,4.1,ai,0.8
+atta flour,340.0,12.1,71.2,1.7,11.2,ai,0.8
+maida flour,364.0,10.3,76.3,0.9,2.7,ai,0.8
+rawa,360.0,12.7,72.8,0.5,3.9,ai,0.8
+dhania powder,298.0,12.4,54.2,4.8,41.9,ai,0.8
+jeera powder,375.0,17.8,44.2,22.3,10.5,ai,0.8
+haldi powder,312.0,9.7,67.1,3.3,22.7,ai,0.8
+lal mirch powder,318.0,12.0,56.6,17.3,34.8,ai,0.8
+sambhar powder,328.0,13.2,51.8,9.5,21.3,ai,0.8
+ginger garlic paste,125.0,4.2,26.8,0.8,3.5,ai,0.8
+green chutney,45.0,2.8,8.5,0.6,3.2,ai,0.8
+tamarind chutney,180.0,1.5,45.2,0.4,3.8,ai,0.8
+cardamom pods,311.0,10.8,68.5,6.7,28.0,ai,0.8
+cashew nuts,553.0,18.2,30.2,43.8,3.3,ai,0.8
+almonds,579.0,21.2,21.6,49.9,12.5,ai,0.8
+pistachios,560.0,20.2,27.2,45.3,10.6,ai,0.8
+rose water,0.0,0.0,0.0,0.0,0.0,ai,0.8
+kewra water,0.0,0.0,0.0,0.0,0.0,ai,0.8
+rock salt,0.0,0.0,0.0,0.0,0.0,ai,0.8
+coriander leaves,23.0,2.1,3.7,0.5,2.8,ai,0.8
+mint leaves,44.0,3.3,8.4,0.7,6.8,ai,0.8
+yogurt,61.0,3.5,4.7,3.3,0.0,ai,0.8
+fresh coconut,354.0,3.3,15.2,33.5,9.0,ai,0.8
+San Marzano tomatoes,32.0,1.4,6.7,0.3,2.0,ai,0.8
+mascarpone,429.0,4.8,4.0,44.0,0.0,ai,0.8
+bottarga,373.0,39.0,0.0,24.0,0.0,ai,0.8
+Marcona almonds,607.0,21.2,19.7,52.8,12.2,ai,0.8
+Spanish chorizo,455.0,24.1,2.0,38.3,0.0,ai,0.8
+Iberico pork,208.0,19.5,0.0,14.2,0.0,ai,0.8
+Greek oregano,265.0,9.0,68.9,4.3,42.5,ai,0.8
+fresh dill,43.0,3.5,7.0,1.1,2.1,ai,0.8
+prepared horseradish,48.0,1.2,11.3,0.7,3.3,ai,0.8
+beet kvass,15.0,0.5,3.2,0.1,0.5,ai,0.8
+malt vinegar,22.0,0.0,0.4,0.0,0.0,ai,0.8
+black pudding,297.0,12.9,15.0,21.5,0.5,ai,0.8
+sauerkraut,19.0,0.9,4.3,0.1,2.9,ai,0.8
+speck,300.0,28.3,0.5,20.5,0.0,ai,0.8
+pumpernickel bread,250.0,8.7,47.5,3.1,6.5,ai,0.8
+Parmigiano-Reggiano,431.0,38.5,3.2,28.6,0.0,ai,0.8
+Comté cheese,409.0,28.5,0.5,32.5,0.0,ai,0.8
+prosciutto di Parma,237.0,25.5,0.0,15.0,0.0,ai,0.8
+pecorino Romano,387.0,31.8,3.6,26.9,0.0,ai,0.8
+burrata,330.0,17.0,3.0,28.0,0.0,ai,0.8
+ricotta salata,271.0,21.7,5.1,19.0,0.0,ai,0.8
+arborio rice,358.0,7.5,79.3,0.6,1.4,ai,0.8
+polenta,362.0,8.1,79.0,2.0,4.6,ai,0.8
+porcini mushrooms,26.0,3.1,3.0,0.3,1.3,ai,0.8
+Serrano ham,241.0,30.5,0.0,13.0,0.0,ai,0.8
+kefalotyri cheese,385.0,28.6,1.5,29.5,0.0,ai,0.8
+lardo,812.0,2.9,0.0,88.7,0.0,ai,0.8
+taleggio cheese,315.0,19.0,0.2,26.2,0.0,ai,0.8
+boquerones,131.0,20.4,0.0,4.8,0.0,ai,0.8
+berbere spice blend,324.0,12.3,54.8,6.7,22.1,ai,0.8
+mitmita,318.0,11.5,55.2,6.9,20.8,ai,0.8
+niter kibbeh,876.0,0.2,0.8,99.5,0.0,ai,0.8
+injera,175.0,4.2,36.5,0.8,2.1,ai,0.8
+egusi seeds,564.0,28.3,15.2,45.8,6.5,ai,0.8
+dawadawa,385.0,35.2,18.4,17.8,7.2,ai,0.8
+shea butter,884.0,0.0,0.0,100.0,0.0,ai,0.8
+crayfish powder,312.0,62.8,2.4,4.2,0.0,ai,0.8
+stockfish,290.0,62.5,0.0,2.8,0.0,ai,0.8
+peri peri sauce,65.0,1.8,10.2,2.4,2.1,ai,0.8
+fufu flour,267.0,1.4,65.9,0.3,2.8,ai,0.8
+plantain flour,346.0,3.8,81.2,1.1,5.8,ai,0.8
+baobab powder,250.0,2.3,76.8,0.3,44.5,ai,0.8
+hibiscus flowers,37.0,0.4,7.4,0.6,0.0,ai,0.8
+moringa powder,205.0,27.1,38.2,2.3,19.2,ai,0.8
+yam flour,358.0,3.9,83.7,0.5,4.1,ai,0.8
+groundnut paste,588.0,25.8,16.1,49.2,8.5,ai,0.8
+kola nut powder,150.0,1.6,35.2,0.8,2.4,ai,0.8
+dried fish,298.0,64.5,0.0,3.2,0.0,ai,0.8
+beniseed,573.0,17.7,23.4,49.7,11.8,ai,0.8
+scotch bonnet pepper,40.0,2.0,9.5,0.2,1.5,ai,0.8
+african yam,118.0,1.5,27.9,0.2,4.1,ai,0.8
+crayfish,312.0,62.8,2.4,4.2,0.0,ai,0.8
+bouillon powder,235.0,15.8,24.5,9.2,1.2,ai,0.8
+ginger powder,335.0,9.0,71.6,4.2,14.1,ai,0.8
+premium fish sauce,38.0,6.0,3.0,0.0,0.0,ai,0.8
+"Thai soy sauce, light",53.0,5.6,7.6,0.0,0.0,ai,0.8
+"Thai soy sauce, dark",67.0,4.0,15.0,0.0,0.0,ai,0.8
+Thai seasoning sauce,46.0,3.5,9.0,0.0,0.0,ai,0.8
+"coconut milk, light",125.0,1.3,3.0,12.2,0.0,ai,0.8
+tamarind concentrate,250.0,3.0,65.0,0.5,4.0,ai,0.8
+"jasmine rice, white",130.0,2.7,28.2,0.3,0.4,ai,0.8
+"jasmine rice, brown",111.0,2.6,23.0,0.9,1.8,ai,0.8
+"sticky rice, white",97.0,2.0,21.1,0.2,1.0,ai,0.8
+black sticky rice,356.0,8.9,75.6,3.3,4.9,ai,0.8
+"rice noodles, wide",109.0,1.0,25.0,0.2,1.0,ai,0.8
+"rice noodles, thin",109.0,1.0,25.0,0.2,1.0,ai,0.8
+"rice noodles, extra thin",109.0,1.0,25.0,0.2,1.0,ai,0.8
+pad thai noodles,109.0,1.0,25.0,0.2,1.0,ai,0.8
+"peanuts, roasted",567.0,25.8,16.1,49.2,8.5,ai,0.8
+"peanuts, crushed",567.0,25.8,16.1,49.2,8.5,ai,0.8
+red curry paste,95.0,2.5,18.0,2.0,4.0,ai,0.8
+green curry paste,91.0,2.3,17.0,2.0,4.5,ai,0.8
+yellow curry paste,88.0,2.0,16.0,2.0,3.5,ai,0.8
+massaman curry paste,92.0,2.2,17.5,2.0,3.8,ai,0.8
+panang curry paste,94.0,2.4,17.8,2.0,4.0,ai,0.8
+jungle curry paste,87.0,2.1,16.5,1.8,4.2,ai,0.8
+lemon basil,23.0,3.2,2.7,0.6,1.6,ai,0.8
+"Thai chili, fresh",40.0,2.0,8.8,0.4,1.5,ai,0.8
+"Thai chili, dried",324.0,12.0,69.9,17.3,28.7,ai,0.8
+Thai chili flakes,318.0,11.5,68.0,17.0,27.0,ai,0.8
+roasted chili paste,165.0,3.5,28.0,6.0,4.0,ai,0.8
+cilantro root,23.0,2.1,3.7,0.5,2.8,ai,0.8
+pea eggplant,25.0,1.0,5.9,0.2,3.0,ai,0.8
+fried garlic,488.0,8.5,45.0,32.0,3.0,ai,0.8
+fried shallots,512.0,4.2,40.0,38.0,2.5,ai,0.8
+sweet chili sauce,192.0,0.8,47.0,0.2,0.5,ai,0.8
+Thai sriracha sauce,93.0,2.0,18.0,1.0,1.0,ai,0.8
+"lime juice, fresh",25.0,0.4,8.4,0.1,0.4,ai,0.8
+crispy rice noodles,456.0,4.2,70.0,18.0,2.0,ai,0.8
+rice vermicelli (bun),364.0,3.4,83.2,0.6,1.6,ai,0.8
+pho noodles (fresh),135.0,2.0,30.5,0.3,0.8,ai,0.8
+pho noodles (dried),360.0,3.5,82.0,0.5,1.5,ai,0.8
+banh canh noodles,140.0,2.2,31.0,0.4,1.0,ai,0.8
+hu tieu noodles (dried),358.0,3.2,82.5,0.5,1.4,ai,0.8
+hu tieu noodles (fresh),138.0,2.1,30.8,0.4,0.9,ai,0.8
+mi quang noodles,145.0,3.8,30.0,0.7,1.2,ai,0.8
+rice paper (spring roll),333.0,0.6,83.1,0.3,2.8,ai,0.8
+"rice paper (thick, for grilling)",340.0,0.8,84.0,0.4,3.0,ai,0.8
+rice paper (sesame),365.0,2.5,80.0,2.8,3.5,ai,0.8
+"rice paper (fresh, soft)",135.0,0.4,33.0,0.2,1.0,ai,0.8
+banh cuon (steamed rice rolls),130.0,2.0,29.0,0.5,0.8,ai,0.8
+banh uot (wet rice paper),132.0,1.8,29.5,0.4,0.7,ai,0.8
+banh bot loc (tapioca dumplings),155.0,3.5,32.0,1.2,1.0,ai,0.8
+mi vang (yellow egg noodles),368.0,11.0,72.0,2.5,2.8,ai,0.8
+"mi trung (egg noodles, fresh)",158.0,5.0,30.0,1.5,1.5,ai,0.8
+tapioca pearls (small),358.0,0.2,88.7,0.0,0.9,ai,0.8
+cellophane noodles (mung bean),351.0,0.2,86.0,0.1,0.5,ai,0.8
+rice stick noodles (thin),362.0,3.3,83.5,0.5,1.5,ai,0.8
+rice stick noodles (medium),361.0,3.4,83.0,0.6,1.6,ai,0.8
+rice stick noodles (wide),360.0,3.5,82.8,0.5,1.5,ai,0.8
+banh da (pandan rice paper),142.0,2.3,31.0,0.6,1.2,ai,0.8
+banh hoi (woven rice vermicelli),138.0,2.0,31.0,0.4,0.9,ai,0.8
+instant pho noodles,380.0,8.5,76.0,3.5,2.0,ai,0.8
+banh pho ga (chicken pho noodles),138.0,2.2,30.5,0.4,0.8,ai,0.8
+mi goi (instant egg noodles),436.0,10.0,64.0,14.5,2.5,ai,0.8
+mi chay (vegetarian noodles),365.0,11.5,71.0,2.2,3.0,ai,0.8
+banh trang phoi suong (dew rice paper),335.0,0.7,83.5,0.3,2.5,ai,0.8
+banh trang tron (mixed rice paper),338.0,1.0,83.0,0.5,2.8,ai,0.8
+banh trang cuon (rolling rice paper),332.0,0.6,83.0,0.3,2.7,ai,0.8
+bun tuoi (fresh rice vermicelli),140.0,1.8,32.0,0.3,0.8,ai,0.8
+bun kho (dried rice vermicelli),364.0,3.4,83.2,0.6,1.6,ai,0.8
+bun gao (rice noodles),363.0,3.5,83.0,0.5,1.5,ai,0.8
+banh canh bot loc (tapioca thick noodles),143.0,2.0,32.5,0.3,1.1,ai,0.8
+banh canh cua (crab thick noodles),141.0,2.1,31.5,0.4,1.0,ai,0.8
+tapioca flour (refined),360.0,0.2,89.0,0.0,1.0,ai,0.8
+rice flour (regular),366.0,5.9,80.1,1.4,2.4,ai,0.8
+banh pho tuoi dai (wide fresh pho noodles),136.0,2.0,30.8,0.3,0.8,ai,0.8
+banh pho tuoi nho (thin fresh pho noodles),134.0,2.0,30.3,0.3,0.7,ai,0.8
+"mi udon (udon noodles, vietnamese style)",148.0,4.5,30.0,0.8,1.8,ai,0.8
+"mi soba (soba noodles, vietnamese style)",352.0,13.5,70.0,2.5,4.5,ai,0.8
+banh trang nem (spring roll wrappers),334.0,0.7,83.2,0.3,2.8,ai,0.8
+banh trang goi cuon (summer roll wrappers),331.0,0.6,82.8,0.3,2.7,ai,0.8
+banh trang rice paper round 22cm,333.0,0.6,83.0,0.3,2.8,ai,0.8
+banh trang rice paper round 16cm,332.0,0.6,82.9,0.3,2.8,ai,0.8
+bot san day den (black tapioca pearls),360.0,0.3,89.0,0.1,1.0,ai,0.8
+mi ramen (ramen noodles),371.0,10.5,73.0,2.8,2.5,ai,0.8
+"mi spaghetti (spaghetti, vietnamese style)",371.0,13.0,74.7,1.5,3.2,ai,0.8
+kecap manis,280.0,2.5,65.0,0.1,0.0,ai,0.8
+kecap asin,60.0,5.6,8.5,0.1,0.0,ai,0.8
+sambal oelek,45.0,1.8,9.0,0.5,2.1,ai,0.8
+sambal bajak,65.0,2.1,11.0,2.3,2.5,ai,0.8
+sambal terasi,58.0,3.2,10.0,1.5,2.3,ai,0.8
+sambal matah,125.0,1.8,12.5,8.5,2.5,ai,0.8
+belacan,245.0,38.0,8.0,7.0,0.0,ai,0.8
+petis,180.0,12.0,28.0,2.5,0.0,ai,0.8
+oncom,187.0,13.0,21.0,6.0,3.5,ai,0.8
+tape,165.0,2.8,35.0,0.8,1.2,ai,0.8
+candlenut,620.0,11.0,18.0,60.0,5.5,ai,0.8
+torch ginger,25.0,1.2,5.5,0.3,1.8,ai,0.8
+kaffir lime leaf,35.0,1.5,8.0,0.3,3.0,ai,0.8
+grated coconut,354.0,3.3,15.2,33.5,9.0,ai,0.8
+bumbu kuning,85.0,2.5,15.0,2.8,3.5,ai,0.8
+bumbu rujak,145.0,2.0,32.0,2.3,2.8,ai,0.8
+bumbu gado-gado,425.0,18.0,22.0,32.0,6.0,ai,0.8
+bumbu rendang,145.0,3.2,18.5,7.5,4.2,ai,0.8
+cincalok,95.0,14.0,6.0,2.0,0.0,ai,0.8
+asam jawa,239.0,2.8,62.5,0.6,5.1,ai,0.8
+lengkuas,71.0,1.0,15.0,0.3,2.0,ai,0.8
+kunyit,354.0,7.8,64.9,9.9,21.0,ai,0.8
+jahe,80.0,1.8,17.8,0.8,2.0,ai,0.8
+serai,99.0,1.8,25.3,0.5,2.8,ai,0.8
+bawang merah,40.0,1.1,9.3,0.1,1.7,ai,0.8
+daun salam,313.0,7.6,48.7,8.4,26.3,ai,0.8
+daun kemangi,23.0,3.2,2.7,0.6,1.6,ai,0.8
+daun bawang,32.0,1.8,7.3,0.2,2.6,ai,0.8
+cabe rawit,40.0,2.0,8.8,0.4,1.5,ai,0.8
+cabe merah,40.0,1.9,8.8,0.4,1.5,ai,0.8
+cabe hijau,20.0,0.9,4.6,0.2,1.5,ai,0.8
+kencur,95.0,1.4,19.0,1.2,3.0,ai,0.8
+bunga pala,475.0,6.7,50.5,32.4,20.2,ai,0.8
+cengkeh,274.0,6.0,65.5,13.0,33.9,ai,0.8
+kayu manis,247.0,4.0,80.6,1.2,53.1,ai,0.8
+jintan,375.0,17.8,44.2,22.3,10.5,ai,0.8
+adas,345.0,15.8,52.3,14.9,39.8,ai,0.8
+merica,251.0,10.4,63.9,3.3,25.3,ai,0.8
+kapulaga,311.0,10.8,68.5,6.7,28.0,ai,0.8
+bunga lawang,337.0,17.6,50.0,15.9,14.6,ai,0.8
+asam gelugur,85.0,1.2,20.0,0.5,3.5,ai,0.8
+belimbing wuluh,31.0,0.5,7.3,0.3,0.6,ai,0.8
+daun jeruk,35.0,1.5,8.0,0.3,3.0,ai,0.8
+air jeruk nipis,25.0,0.4,8.4,0.1,0.4,ai,0.8
+ebi,305.0,63.2,2.8,4.3,0.0,ai,0.8
+ikan teri,210.0,37.3,0.0,6.8,0.0,ai,0.8
+bawang goreng,490.0,6.2,52.0,30.0,4.5,ai,0.8
+kerupuk,480.0,8.5,68.0,18.0,2.0,ai,0.8
+emping,505.0,9.2,55.0,28.0,4.5,ai,0.8
+air asam jawa,48.0,0.6,12.5,0.1,1.0,ai,0.8
+kecap ikan,55.0,9.5,4.2,0.8,0.0,ai,0.8
+agar-agar,26.0,0.5,6.7,0.0,0.5,ai,0.8
+gula batu,387.0,0.0,99.8,0.0,0.0,ai,0.8
+mustard seeds,508.0,26.1,28.1,36.2,12.2,ai,0.8
+cloves,274.0,5.97,65.5,13.0,33.9,ai,0.8
+Malabar black pepper,255.0,10.9,64.8,3.3,26.5,ai,0.8
+carom seeds,305.0,15.4,43.0,21.8,21.2,ai,0.8
+turmeric powder,312.0,9.7,67.1,3.3,22.7,ai,0.8
+red chili powder,282.0,13.5,53.9,14.3,27.2,ai,0.8
+Kashmiri red chili powder,280.0,13.2,54.2,14.0,27.0,ai,0.8
+Guntur red chili powder,285.0,13.8,54.5,14.5,28.0,ai,0.8
+coriander powder,298.0,12.4,54.2,17.8,41.9,ai,0.8
+dried mango powder,375.0,1.0,93.0,0.5,4.0,ai,0.8
+dried pomegranate seeds,328.0,3.3,78.2,2.0,6.5,ai,0.8
+black salt,0.0,0.0,0.0,0.0,0.0,ai,0.8
+dried kokum,60.0,1.5,14.3,0.3,2.0,ai,0.8
+panch phoron,345.0,16.5,48.0,18.2,28.0,ai,0.8
+whole moong beans,347.0,24.0,62.6,1.2,16.3,ai,0.8
+whole urad beans,341.0,25.0,59.0,1.6,18.3,ai,0.8
+kabuli chana,364.0,19.3,60.7,6.0,17.4,ai,0.8
+rajma,333.0,22.5,60.0,1.1,15.2,ai,0.8
+moth beans,343.0,22.9,61.5,1.6,4.7,ai,0.8
+horse gram,321.0,22.0,57.2,0.6,5.3,ai,0.8
+black-eyed peas,336.0,23.5,60.0,1.3,10.6,ai,0.8
+green lentils,352.0,24.3,63.4,1.1,11.0,ai,0.8
+mace,475.0,6.7,50.5,32.4,20.2,ai,0.8
+nutmeg,525.0,5.8,49.3,36.3,20.8,ai,0.8
+dried fenugreek leaves,323.0,23.0,58.4,6.4,24.6,ai,0.8
+dried red chilies,324.0,12.0,69.9,17.3,28.7,ai,0.8
+peppercorns,251.0,10.4,63.9,3.3,25.3,ai,0.8
+white poppy seeds,525.0,18.0,28.1,41.6,19.5,ai,0.8
+melon seeds,555.0,28.5,15.3,47.4,4.0,ai,0.8
+dried ginger powder,335.0,9.0,71.6,4.2,14.1,ai,0.8
+dry mint leaves,285.0,19.9,52.0,6.0,28.9,ai,0.8
+cardamom powder,311.0,10.8,68.5,6.7,28.0,ai,0.8
+clove powder,274.0,5.97,65.5,13.0,33.9,ai,0.8
+black pepper powder,251.0,10.4,63.9,3.3,25.3,ai,0.8
+green chili powder,280.0,13.0,53.5,14.0,27.0,ai,0.8
+chole masala,340.0,12.5,55.5,13.0,23.5,ai,0.8
+kitchen king masala,355.0,13.5,56.5,13.8,24.0,ai,0.8
+meat masala,360.0,14.2,57.0,14.2,25.5,ai,0.8
+chicken masala,345.0,13.0,55.0,13.5,23.0,ai,0.8
+fish masala,330.0,12.8,54.5,12.0,22.5,ai,0.8
+sabji masala,338.0,12.5,55.2,12.8,23.5,ai,0.8
+shahi paneer masala,350.0,12.0,56.0,13.5,22.5,ai,0.8
+korma masala,365.0,13.5,57.0,14.5,24.5,ai,0.8
+pani puri masala,310.0,11.5,53.0,11.0,21.0,ai,0.8
+jaljeera powder,315.0,12.0,53.5,11.5,22.0,ai,0.8
+kashmiri garam masala,385.0,14.5,58.5,15.5,25.0,ai,0.8
+goda masala,370.0,13.8,57.5,15.0,26.0,ai,0.8
+bottle gourd seeds,560.0,30.0,14.5,48.0,3.5,ai,0.8
+pumpkin seeds,559.0,30.2,10.7,49.0,6.0,ai,0.8
+watermelon seeds,557.0,28.3,15.3,47.4,3.5,ai,0.8
+stone flower,250.0,4.5,60.0,2.5,15.0,ai,0.8
+black cumin,370.0,17.5,44.0,22.0,10.0,ai,0.8
+ajowan,305.0,15.4,43.0,21.8,21.2,ai,0.8
+besan,387.0,22.4,57.8,6.7,10.8,ai,0.8
+makki ka atta,361.0,8.1,76.9,3.9,7.3,ai,0.8
+atta,340.0,12.6,69.4,1.7,11.2,ai,0.8
+sooji,360.0,12.7,72.8,1.1,3.9,ai,0.8
+poha,346.0,6.6,76.9,1.2,3.0,ai,0.8
+za'atar spice blend,276.0,9.1,42.3,7.4,12.8,ai,0.8
+baharat spice blend,325.0,11.2,54.8,8.6,18.3,ai,0.8
+maftoul,365.0,11.4,76.2,1.2,6.8,ai,0.8
+fava beans,341.0,26.1,58.3,1.5,25.0,ai,0.8
+red lentils,358.0,24.6,63.4,1.1,10.7,ai,0.8
+dried chickpeas,364.0,19.3,60.7,6.0,17.4,ai,0.8
+preserved lemons,42.0,1.2,8.4,0.4,3.1,ai,0.8
+kashkaval cheese,385.0,24.8,2.4,31.2,0.0,ai,0.8
+halva,469.0,10.2,60.4,21.8,3.7,ai,0.8
+carob molasses,274.0,1.4,68.2,0.3,2.1,ai,0.8
+mastic,0.0,0.0,0.0,0.0,0.0,ai,0.8
+mahlab,458.0,21.2,38.4,27.6,8.7,ai,0.8
+orange blossom water,2.0,0.0,0.5,0.0,0.0,ai,0.8
+urfa pepper,288.0,13.2,52.8,15.4,26.8,ai,0.8
+maras pepper,285.0,13.0,53.6,15.1,27.0,ai,0.8
+dried mint,285.0,19.9,52.8,6.0,29.8,ai,0.8
+barberries,316.0,3.6,73.8,3.2,8.4,ai,0.8
+dried dates,282.0,2.5,75.0,0.4,8.0,ai,0.8
+dried apricots,241.0,3.4,62.6,0.5,7.3,ai,0.8
+pomegranate seeds,83.0,1.7,18.7,1.2,4.0,ai,0.8
+pine nuts,673.0,13.7,13.1,68.4,3.7,ai,0.8
+grape leaves,93.0,5.6,17.3,1.2,11.0,ai,0.8
+semolina,360.0,12.7,72.8,1.1,3.9,ai,0.8
+vermicelli,371.0,12.9,74.7,1.5,3.2,ai,0.8
+filo dough,299.0,8.7,51.3,6.8,1.9,ai,0.8
+arak,263.0,0.0,0.0,0.0,0.0,ai,0.8
+ful medames,110.0,7.6,19.7,0.4,6.4,ai,0.8
+harissa paste,143.0,3.8,18.4,6.7,5.2,ai,0.8
+toum,684.0,1.8,8.4,75.2,0.6,ai,0.8
+zhug,87.0,2.4,12.6,3.8,4.1,ai,0.8
+amba,156.0,1.2,28.4,4.8,3.6,ai,0.8
+dibs ruman,268.0,0.8,66.4,0.3,0.4,ai,0.8
+makdous,342.0,3.6,18.4,29.7,6.8,ai,0.8
+shanklish,268.0,22.4,3.8,18.6,0.0,ai,0.8
+akkawi cheese,292.0,18.6,2.4,23.8,0.0,ai,0.8
+nabulsi cheese,278.0,19.2,2.1,22.4,0.0,ai,0.8
+majdoul dates,277.0,1.8,75.0,0.2,6.7,ai,0.8
+aleppo pepper flakes,282.0,12.8,54.2,14.8,27.2,ai,0.8
+ground cardamom,311.0,10.8,68.5,6.7,28.0,ai,0.8
+saffron threads,310.0,11.4,65.4,5.9,3.9,ai,0.8
+allspice berries,263.0,6.1,72.1,8.7,21.6,ai,0.8
+dried ancho chile,281.0,11.9,51.4,8.2,28.7,ai,0.8
+dried guajillo chile,280.0,12.0,50.8,8.5,27.9,ai,0.8
+dried pasilla chile,283.0,11.5,52.1,8.0,29.3,ai,0.8
+chipotle chile in adobo,108.0,3.2,18.5,3.1,5.2,ai,0.8
+dried chile de arbol,318.0,11.8,56.6,7.8,30.2,ai,0.8
+dried mulato chile,279.0,11.7,51.2,8.1,28.5,ai,0.8
+dried morita chile,282.0,12.3,50.4,8.6,28.1,ai,0.8
+fresh epazote,32.0,3.8,4.7,0.6,3.8,ai,0.8
+fresh hoja santa,28.0,2.9,5.1,0.5,3.2,ai,0.8
+achiote seeds,385.0,9.1,51.2,14.6,15.8,ai,0.8
+fresh loroco buds,36.0,3.2,6.8,0.4,2.9,ai,0.8
+fresh scotch bonnet pepper,40.0,2.0,8.8,0.2,1.5,ai,0.8
+whole allspice berries,263.0,6.1,72.1,8.7,21.6,ai,0.8
+sofrito base,68.0,1.8,9.2,3.1,2.4,ai,0.8
+fresh aji amarillo,36.0,1.9,7.8,0.3,1.8,ai,0.8
+aji amarillo paste,112.0,2.4,18.5,4.2,3.1,ai,0.8
+fresh rocoto pepper,38.0,2.1,8.2,0.3,1.9,ai,0.8
+fresh huacatay,34.0,3.5,5.2,0.7,3.4,ai,0.8
+quinoa white,368.0,14.1,64.2,6.1,7.0,ai,0.8
+quinoa red,370.0,14.3,64.8,6.2,7.2,ai,0.8
+quinoa black,371.0,14.5,65.0,6.3,7.4,ai,0.8
+dende oil,884.0,0.0,0.0,100.0,0.0,ai,0.8
+fresh cassava root,160.0,1.4,38.1,0.3,1.8,ai,0.8
+tucupi sauce,45.0,0.8,10.2,0.2,0.5,ai,0.8
+fresh jambu leaves,28.0,2.8,5.3,0.4,3.1,ai,0.8
+purple corn,365.0,8.9,74.3,4.7,7.3,ai,0.8
+cancha corn,387.0,9.5,76.8,5.2,8.1,ai,0.8
+kiwicha,371.0,13.6,65.3,7.0,6.7,ai,0.8
+dried hibiscus flowers,49.0,0.9,11.8,0.6,12.0,ai,0.8
+fresh culantro,23.0,2.3,3.7,0.5,2.8,ai,0.8
+fresh aji panca,34.0,1.8,7.4,0.3,1.7,ai,0.8
+aji panca paste,108.0,2.2,17.8,3.9,2.8,ai,0.8
+fresh aji limo,40.0,2.0,8.9,0.4,1.5,ai,0.8
+fresh mexican oregano,265.0,9.0,68.9,4.3,42.5,ai,0.8
+fresh calabaza squash,26.0,1.0,6.5,0.1,0.5,ai,0.8
+fresh chayote,19.0,0.8,4.5,0.1,1.7,ai,0.8
+fresh tomatillos,32.0,1.0,5.8,1.0,1.9,ai,0.8
+fresh nopales,16.0,1.4,3.3,0.1,2.2,ai,0.8
+fresh jicama,38.0,0.7,8.8,0.1,4.9,ai,0.8
+mexican crema,228.0,2.9,3.8,22.8,0.0,ai,0.8
+queso cotija,387.0,28.4,3.1,30.0,0.0,ai,0.8
+queso oaxaca,318.0,22.6,2.8,24.5,0.0,ai,0.8
+fresh plantains,122.0,1.3,31.9,0.4,2.3,ai,0.8
+fresh yuca leaves,54.0,7.6,7.2,0.5,3.7,ai,0.8
+fresh malanga,98.0,1.9,22.3,0.2,3.2,ai,0.8
+fresh yuca bitter,159.0,1.4,38.0,0.3,1.8,ai,0.8
+fresh hearts of palm,28.0,2.5,4.6,0.6,1.5,ai,0.8
+fresh tamarind pulp,239.0,2.8,62.5,0.6,5.1,ai,0.8
+fresh sacha inchi seeds,553.0,27.0,8.4,48.6,5.2,ai,0.8
+fresh maca root,325.0,10.2,71.4,1.0,8.5,ai,0.8
+fresh lucuma fruit,99.0,1.5,25.0,0.2,2.3,ai,0.8
+lucuma powder,329.0,4.0,83.2,0.7,7.6,ai,0.8
+fresh cherimoya,75.0,1.6,17.7,0.7,3.0,ai,0.8
+fresh guanabana,66.0,1.0,16.8,0.3,3.3,ai,0.8
+fresh guava,68.0,2.6,14.3,1.0,5.4,ai,0.8
+guava paste,278.0,0.5,72.3,0.2,4.8,ai,0.8
+fresh passion fruit,97.0,2.2,23.4,0.7,10.4,ai,0.8
+fresh papaya,43.0,0.5,11.0,0.3,1.7,ai,0.8
+dried papaya seeds,457.0,22.5,38.1,24.3,19.2,ai,0.8
+fresh mamey sapote,124.0,1.5,32.1,0.5,5.4,ai,0.8
+fresh cacao nibs,567.0,12.9,37.7,43.1,26.2,ai,0.8
+fresh oca tubers,61.0,1.1,13.6,0.2,1.9,ai,0.8
+fresh ulluco tubers,65.0,1.5,14.2,0.3,2.1,ai,0.8
+fresh achira root,155.0,1.0,37.8,0.2,2.5,ai,0.8
+fresh pacay fruit,96.0,1.8,23.4,0.4,4.2,ai,0.8
+fresh camu camu,17.0,0.5,4.7,0.2,1.1,ai,0.8
+camu camu powder,57.0,1.7,15.6,0.7,3.7,ai,0.8
+fresh aguaymanto,53.0,1.9,11.2,0.7,3.0,ai,0.8
+fresh yacon root,54.0,0.4,13.2,0.1,1.0,ai,0.8
+fresh cochayuyo seaweed,43.0,4.2,9.6,0.6,8.2,ai,0.8
+fresh merkén spice,292.0,12.5,48.7,9.3,27.8,ai,0.8
+fresh arracacha root,96.0,0.8,23.2,0.2,1.4,ai,0.8
+water,0.0,0.0,0.0,0.0,0.0,ai,0.1
+salt,0.0,0.0,0.0,0.0,0.0,ai,0.1
+instant yeast,325.0,40.4,41.2,7.6,26.9,ai,0.1
+olive oil,884.0,0.0,0.0,100.0,0.0,ai,0.1
+tomato sauce,32.0,1.3,7.2,0.2,1.5,ai,0.1
+fresh mozzarella,280.0,22.2,2.2,17.1,0.0,ai,0.1
+fresh basil,23.0,3.2,2.7,0.6,1.6,ai,0.1
+dried rice noodles,360.0,3.4,83.2,0.6,1.6,ai,0.1
+tamarind paste,239.0,2.8,62.5,0.6,5.1,ai,0.1
+fish sauce,35.0,5.1,3.6,0.0,0.0,ai,0.1
+palm sugar,375.0,0.4,93.2,0.1,0.0,ai,0.1
+shrimp,85.0,20.1,0.0,0.5,0.0,ai,0.1
+eggs,143.0,12.6,0.7,9.5,0.0,ai,0.1
+garlic,149.0,6.4,33.1,0.5,2.1,ai,0.1
+bean sprouts,31.0,3.0,5.9,0.2,1.8,ai,0.1
+scallions,32.0,1.8,7.3,0.2,2.6,ai,0.1
+crushed peanuts,567.0,25.8,16.1,49.2,8.5,ai,0.1
+lime,30.0,0.7,10.5,0.2,2.8,ai,0.1
+vegetable oil,884.0,0.0,0.0,100.0,0.0,ai,0.1
+onion,40.0,1.1,9.3,0.1,1.7,ai,0.1
+canned tomatoes,20.0,0.9,4.2,0.1,1.0,ai,0.1
+cumin,375.0,17.8,44.2,22.3,10.5,ai,0.1
+paprika,282.0,14.1,53.9,13.0,34.9,ai,0.1
+salt and pepper,0.0,0.0,0.0,0.0,0.0,ai,0.1
+fresh cilantro,23.0,2.1,3.7,0.5,2.8,ai,0.1
+pita bread,275.0,9.1,55.7,1.2,2.2,ai,0.1
+chicken stock,9.0,0.6,0.4,0.2,0.0,ai,0.1
+lemongrass,99.0,1.8,25.3,0.5,0.0,ai,0.1
+galangal,71.0,1.0,15.1,1.0,2.0,ai,0.1
+kaffir lime leaves,30.0,0.8,10.5,0.2,2.8,ai,0.1
+mushrooms,22.0,3.1,3.3,0.3,1.0,ai,0.1
+cherry tomatoes,18.0,0.9,3.9,0.2,1.2,ai,0.1
+lime juice,25.0,0.4,8.4,0.1,0.4,ai,0.1
+thai chili paste,228.0,2.0,42.0,5.0,3.0,ai,0.1
+spaghetti,158.0,5.8,30.9,0.9,1.8,ai,0.1
+extra virgin olive oil,884.0,0.0,0.0,100.0,0.0,ai,0.1
+red pepper flakes,318.0,12.0,56.6,17.3,27.2,ai,0.1
+chicken thigh,177.0,24.7,0.0,8.0,0.0,ai,0.1
+dashi stock,5.0,0.6,0.4,0.1,0.0,ai,0.1
+soy sauce,53.0,5.6,4.9,0.1,0.8,ai,0.1
+mirin,241.0,0.1,44.3,0.0,0.0,ai,0.1
+sake,134.0,0.5,5.0,0.0,0.0,ai,0.1
+cooked rice,130.0,2.7,28.2,0.3,0.4,ai,0.1
+tomatoes,18.0,0.9,3.9,0.2,1.2,ai,0.1
+cucumbers,15.0,0.7,3.6,0.1,0.5,ai,0.1
+red onion,40.0,1.1,9.3,0.1,1.7,ai,0.1
+kalamata olives,115.0,0.8,6.0,10.7,3.2,ai,0.1
+feta cheese,264.0,14.2,4.1,21.3,0.0,ai,0.1
+red wine vinegar,19.0,0.0,0.3,0.0,0.0,ai,0.1
+oregano,265.0,9.0,68.9,4.3,42.5,ai,0.1
+sourdough starter,95.0,3.5,19.5,0.4,0.8,ai,0.1
+ground beef,254.0,17.2,0.0,20.0,0.0,ai,0.1
+chili powder,282.0,12.3,49.7,14.3,34.8,ai,0.1
+garlic powder,331.0,16.6,72.7,0.7,9.0,ai,0.1
+onion powder,341.0,10.4,79.1,1.0,15.2,ai,0.1
+corn tortillas,218.0,5.7,44.6,2.9,5.2,ai,0.1
+lettuce,15.0,1.4,2.9,0.2,1.3,ai,0.1
+cheddar cheese,403.0,24.9,1.3,33.1,0.0,ai,0.1
+sour cream,193.0,2.4,4.6,19.4,0.0,ai,0.1
+salsa,36.0,1.5,7.0,0.3,2.0,ai,0.1
+pork belly,518.0,9.3,0.0,53.0,0.0,ai,0.1
+kimchi,15.0,1.1,2.4,0.5,1.6,ai,0.1
+tofu,76.0,8.0,1.9,4.8,0.3,ai,0.1
+anchovy stock,10.0,1.2,0.3,0.2,0.0,ai,0.1
+gochugaru,282.0,12.3,49.7,14.3,34.8,ai,0.1
+sesame seeds,573.0,17.7,23.5,49.7,11.8,ai,0.1
+yellow onions,40.0,1.1,9.3,0.1,1.7,ai,0.1
+butter,717.0,0.9,0.1,81.1,0.0,ai,0.1
+beef stock,8.0,1.0,0.4,0.1,0.0,ai,0.1
+dry white wine,82.0,0.1,2.6,0.0,0.0,ai,0.1
+bay leaf,313.0,7.6,75.0,8.4,26.3,ai,0.1
+thyme,101.0,5.6,24.5,1.7,14.0,ai,0.1
+crusty bread,266.0,8.2,51.9,3.1,2.4,ai,0.1
+gruyère cheese,413.0,29.8,0.4,32.3,0.0,ai,0.1
+all-purpose flour,364.0,10.3,76.3,1.0,2.7,ai,0.1
+baking soda,0.0,0.0,0.0,0.0,0.0,ai,0.1
+granulated sugar,387.0,0.0,100.0,0.0,0.0,ai,0.1
+brown sugar,380.0,0.0,98.1,0.0,0.0,ai,0.1
+vanilla extract,288.0,0.1,12.7,0.0,0.0,ai,0.1
+chocolate chips,502.0,4.5,60.5,29.2,5.9,ai,0.1
+avocados,160.0,2.0,8.5,14.7,6.7,ai,0.1
+white onion,40.0,1.1,9.3,0.1,1.7,ai,0.1
+cilantro,23.0,2.1,3.7,0.5,2.8,ai,0.1
+jalapeño,29.0,0.9,6.5,0.4,2.8,ai,0.1
+tomato,18.0,0.9,3.9,0.2,1.2,ai,0.1
+eggplant,25.0,1.0,6.0,0.2,3.0,ai,0.1
+zucchini,17.0,1.2,3.1,0.3,1.0,ai,0.1
+bell pepper,31.0,1.0,6.0,0.3,2.1,ai,0.1
+basil,23.0,3.2,2.7,0.6,1.6,ai,0.1
+chicken thighs,177.0,24.7,0.0,8.0,0.0,ai,0.1
+sugar,387.0,0.0,100.0,0.0,0.0,ai,0.1
+ginger,80.0,1.8,17.8,0.8,2.0,ai,0.1
+baking powder,0.0,0.0,0.0,0.0,0.0,ai,0.1
+active dry yeast,0.0,0.0,0.0,0.0,0.0,ai,0.1
+fresh yeast,0.0,0.0,0.0,0.0,0.0,ai,0.1
+cream of tartar,0.0,0.0,0.0,0.0,0.0,ai,0.1
+unflavored gelatin,0.0,0.0,0.0,0.0,0.0,ai,0.1
+pectin,0.0,0.0,0.0,0.0,0.0,ai,0.1
+agar agar,0.0,0.0,0.0,0.0,0.0,ai,0.1
+unsweetened cocoa powder,0.0,0.0,0.0,0.0,0.0,ai,0.1
+dark chocolate chips,0.0,0.0,0.0,0.0,0.0,ai,0.1
+milk chocolate chips,0.0,0.0,0.0,0.0,0.0,ai,0.1
+white chocolate chips,0.0,0.0,0.0,0.0,0.0,ai,0.1
+unsweetened baking chocolate,0.0,0.0,0.0,0.0,0.0,ai,0.1
+almond extract,0.0,0.0,0.0,0.0,0.0,ai,0.1
+peppermint extract,0.0,0.0,0.0,0.0,0.0,ai,0.1
+lemon extract,0.0,0.0,0.0,0.0,0.0,ai,0.1
+orange extract,0.0,0.0,0.0,0.0,0.0,ai,0.1
+white vinegar,0.0,0.0,0.0,0.0,0.0,ai,0.1
+apple cider vinegar,0.0,0.0,0.0,0.0,0.0,ai,0.1
+white wine vinegar,0.0,0.0,0.0,0.0,0.0,ai,0.1
+balsamic vinegar,0.0,0.0,0.0,0.0,0.0,ai,0.1
+rice vinegar,0.0,0.0,0.0,0.0,0.0,ai,0.1
+ketchup,0.0,0.0,0.0,0.0,0.0,ai,0.1
+yellow mustard,0.0,0.0,0.0,0.0,0.0,ai,0.1
+dijon mustard,0.0,0.0,0.0,0.0,0.0,ai,0.1
+whole grain mustard,0.0,0.0,0.0,0.0,0.0,ai,0.1
+worcestershire sauce,0.0,0.0,0.0,0.0,0.0,ai,0.1
+hot sauce,0.0,0.0,0.0,0.0,0.0,ai,0.1
+tabasco sauce,0.0,0.0,0.0,0.0,0.0,ai,0.1
+sriracha,0.0,0.0,0.0,0.0,0.0,ai,0.1
+chicken broth,0.0,0.0,0.0,0.0,0.0,ai,0.1
+beef broth,0.0,0.0,0.0,0.0,0.0,ai,0.1
+vegetable broth,0.0,0.0,0.0,0.0,0.0,ai,0.1
+fish stock,0.0,0.0,0.0,0.0,0.0,ai,0.1
+plain bread crumbs,0.0,0.0,0.0,0.0,0.0,ai,0.1
+panko bread crumbs,0.0,0.0,0.0,0.0,0.0,ai,0.1
+seasoned bread crumbs,0.0,0.0,0.0,0.0,0.0,ai,0.1
+nutritional yeast,0.0,0.0,0.0,0.0,0.0,ai,0.1
+monosodium glutamate,0.0,0.0,0.0,0.0,0.0,ai,0.1
+capers,0.0,0.0,0.0,0.0,0.0,ai,0.1
+green olives,0.0,0.0,0.0,0.0,0.0,ai,0.1
+black olives,0.0,0.0,0.0,0.0,0.0,ai,0.1
+dill pickles,0.0,0.0,0.0,0.0,0.0,ai,0.1
+sweet pickles,0.0,0.0,0.0,0.0,0.0,ai,0.1
+pickle relish,0.0,0.0,0.0,0.0,0.0,ai,0.1
+cornmeal,0.0,0.0,0.0,0.0,0.0,ai,0.1
+corn syrup,0.0,0.0,0.0,0.0,0.0,ai,0.1
+condensed milk,0.0,0.0,0.0,0.0,0.0,ai,0.1
+coconut cream,0.0,0.0,0.0,0.0,0.0,ai,0.1
+shredded coconut,0.0,0.0,0.0,0.0,0.0,ai,0.1
+sweetened shredded coconut,0.0,0.0,0.0,0.0,0.0,ai,0.1
+plain greek yogurt,0.0,0.0,0.0,0.0,0.0,ai,0.1
+peanut butter,0.0,0.0,0.0,0.0,0.0,ai,0.1
+tomato paste,0.0,0.0,0.0,0.0,0.0,ai,0.1
+crushed tomatoes,0.0,0.0,0.0,0.0,0.0,ai,0.1
+diced tomatoes,0.0,0.0,0.0,0.0,0.0,ai,0.1
+marinara sauce,0.0,0.0,0.0,0.0,0.0,ai,0.1
+sun-dried tomatoes,0.0,0.0,0.0,0.0,0.0,ai,0.1
+roasted red peppers,0.0,0.0,0.0,0.0,0.0,ai,0.1
+black tapioca pearls,0.0,0.0,0.0,0.0,0.0,ai,0.1
+taro powder,0.0,0.0,0.0,0.0,0.0,ai,0.1
+taiwanese sausage,0.0,0.0,0.0,0.0,0.0,ai,0.1
+stinky tofu,0.0,0.0,0.0,0.0,0.0,ai,0.1
+pork floss,0.0,0.0,0.0,0.0,0.0,ai,0.1
+fresh oysters,0.0,0.0,0.0,0.0,0.0,ai,0.1
+garland chrysanthemum,0.0,0.0,0.0,0.0,0.0,ai,0.1
+taiwanese basil,0.0,0.0,0.0,0.0,0.0,ai,0.1
+duck blood curd,0.0,0.0,0.0,0.0,0.0,ai,0.1
+fish balls,0.0,0.0,0.0,0.0,0.0,ai,0.1
+dried tofu,0.0,0.0,0.0,0.0,0.0,ai,0.1
+kelp knots,0.0,0.0,0.0,0.0,0.0,ai,0.1
+pig ears,0.0,0.0,0.0,0.0,0.0,ai,0.1
+braised eggs,0.0,0.0,0.0,0.0,0.0,ai,0.1
+rice noodles,0.0,0.0,0.0,0.0,0.0,ai,0.1
+thick rice noodles,0.0,0.0,0.0,0.0,0.0,ai,0.1
+wheat gluten,0.0,0.0,0.0,0.0,0.0,ai,0.1
+cuttlefish balls,0.0,0.0,0.0,0.0,0.0,ai,0.1
+fried tofu puffs,0.0,0.0,0.0,0.0,0.0,ai,0.1
+taiwanese pickled cabbage,0.0,0.0,0.0,0.0,0.0,ai,0.1
+glutinous rice,0.0,0.0,0.0,0.0,0.0,ai,0.1
+shiitake mushrooms,0.0,0.0,0.0,0.0,0.0,ai,0.1
+peanut powder,0.0,0.0,0.0,0.0,0.0,ai,0.1
+taiwanese meatballs,0.0,0.0,0.0,0.0,0.0,ai,0.1
+water chestnuts,0.0,0.0,0.0,0.0,0.0,ai,0.1
+coriander stems,0.0,0.0,0.0,0.0,0.0,ai,0.1
+fish paste,0.0,0.0,0.0,0.0,0.0,ai,0.1
+aiyu jelly,0.0,0.0,0.0,0.0,0.0,ai,0.1
+grass jelly,0.0,0.0,0.0,0.0,0.0,ai,0.1
+red beans,0.0,0.0,0.0,0.0,0.0,ai,0.1
+mung beans,0.0,0.0,0.0,0.0,0.0,ai,0.1
+taro chunks,0.0,0.0,0.0,0.0,0.0,ai,0.1
+brown sugar syrup,0.0,0.0,0.0,0.0,0.0,ai,0.1
+taiwanese pickled mustard greens,0.0,0.0,0.0,0.0,0.0,ai,0.1
+taiwanese kimchi,0.0,0.0,0.0,0.0,0.0,ai,0.1
+scallion pancake dough,0.0,0.0,0.0,0.0,0.0,ai,0.1
+taiwanese pepper salt,0.0,0.0,0.0,0.0,0.0,ai,0.1
+kaffir lime,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Thai bird's eye chili,0.0,0.0,0.0,0.0,0.0,ai,0.1
+large Thai chili,0.0,0.0,0.0,0.0,0.0,ai,0.1
+coriander root,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Thai coriander,0.0,0.0,0.0,0.0,0.0,ai,0.1
+sawtooth coriander,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Thai ginger,0.0,0.0,0.0,0.0,0.0,ai,0.1
+fingerroot,0.0,0.0,0.0,0.0,0.0,ai,0.1
+turmeric,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Thai shallot,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Thai garlic,0.0,0.0,0.0,0.0,0.0,ai,0.1
+white peppercorn,0.0,0.0,0.0,0.0,0.0,ai,0.1
+black peppercorn,0.0,0.0,0.0,0.0,0.0,ai,0.1
+pandan leaf,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Thai lime,0.0,0.0,0.0,0.0,0.0,ai,0.1
+coriander seed,0.0,0.0,0.0,0.0,0.0,ai,0.1
+cardamom,0.0,0.0,0.0,0.0,0.0,ai,0.1
+cinnamon stick,0.0,0.0,0.0,0.0,0.0,ai,0.1
+clove,0.0,0.0,0.0,0.0,0.0,ai,0.1
+dried chili,0.0,0.0,0.0,0.0,0.0,ai,0.1
+dried chili flakes,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Thai chili paste in oil,0.0,0.0,0.0,0.0,0.0,ai,0.1
+sour curry paste,0.0,0.0,0.0,0.0,0.0,ai,0.1
+roasted rice powder,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Thai sweet chili sauce,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Thai golden mountain sauce,0.0,0.0,0.0,0.0,0.0,ai,0.1
+mint,0.0,0.0,0.0,0.0,0.0,ai,0.1
+dill,0.0,0.0,0.0,0.0,0.0,ai,0.1
+long eggplant,0.0,0.0,0.0,0.0,0.0,ai,0.1
+wing bean,0.0,0.0,0.0,0.0,0.0,ai,0.1
+yard long bean,0.0,0.0,0.0,0.0,0.0,ai,0.1
+morning glory,0.0,0.0,0.0,0.0,0.0,ai,0.1
+banana blossom,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Thai sweet basil seed,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Thai chili jam,0.0,0.0,0.0,0.0,0.0,ai,0.1
+fermented soybean paste,0.0,0.0,0.0,0.0,0.0,ai,0.1
+preserved radish,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Thai dried shrimp,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Thai basil flower,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Asian pennywort,0.0,0.0,0.0,0.0,0.0,ai,0.1
+betel leaf,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Perilla,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Vietnamese Mint,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Rice Paddy Herb,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Vietnamese Coriander Leaves,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Vietnamese Balm,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Vietnamese Scallion,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Lime Leaves,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Vietnamese Cinnamon,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Annatto Seeds,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Chili Garlic Sauce,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Sriracha Sauce,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Vietnamese Chili Sauce,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Pandan Leaves,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Vietnamese Cilantro,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Fish Mint,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Pennywort,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Betel Leaves,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Garlic Chives,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Chili Pepper,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Coconut Water,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Annatto Oil,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Roasted Peanuts,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Pickled Mustard Greens,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Pickled Carrots and Daikon,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Fermented Fish Sauce,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Sate Sauce,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Banana Leaves,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Lotus Seeds,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Wood Ear Mushrooms,0.0,0.0,0.0,0.0,0.0,ai,0.1
+Straw Mushrooms,0.0,0.0,0.0,0.0,0.0,ai,0.1

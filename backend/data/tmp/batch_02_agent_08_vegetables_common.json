@@ -1,0 +1,3114 @@
+{
+  "batch": 2,
+  "agent": 8,
+  "category": "vegetables_common",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "russet potato",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 79,
+        "protein_g": 2.1,
+        "carbs_g": 18.0,
+        "fat_g": 0.1,
+        "fiber_g": 1.3
+      },
+      "aliases": {
+        "en": ["russet", "idaho potato", "baking potato"],
+        "ja": ["ラセットポテト", "アイダホポテト"],
+        "ko": ["러셋 감자", "아이다호 감자"],
+        "zh": ["褐皮土豆", "爱达荷土豆"],
+        "zh-tw": ["褐皮馬鈴薯", "愛達荷馬鈴薯"],
+        "es": ["papa russet", "papa de Idaho"],
+        "fr": ["pomme de terre russet", "pomme de terre Idaho"]
+      },
+      "common_units": [
+        {"unit": "medium potato", "grams": 175},
+        {"unit": "large potato", "grams": 300},
+        {"unit": "cup diced", "grams": 150}
+      ]
+    },
+    {
+      "canonical_name": "yukon gold potato",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 77,
+        "protein_g": 2.0,
+        "carbs_g": 17.5,
+        "fat_g": 0.1,
+        "fiber_g": 1.5
+      },
+      "aliases": {
+        "en": ["yukon gold", "yellow potato"],
+        "ja": ["ユーコンゴールドポテト", "黄色いじゃがいも"],
+        "ko": ["유콘 골드 감자", "노란 감자"],
+        "zh": ["育空金土豆", "黄色土豆"],
+        "zh-tw": ["育空金馬鈴薯", "黃色馬鈴薯"],
+        "es": ["papa yukon gold", "papa amarilla"],
+        "fr": ["pomme de terre yukon gold", "pomme de terre jaune"]
+      },
+      "common_units": [
+        {"unit": "medium potato", "grams": 150},
+        {"unit": "cup diced", "grams": 150}
+      ]
+    },
+    {
+      "canonical_name": "red potato",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 70,
+        "protein_g": 1.9,
+        "carbs_g": 15.9,
+        "fat_g": 0.1,
+        "fiber_g": 1.8
+      },
+      "aliases": {
+        "en": ["red skin potato", "new potato"],
+        "ja": ["赤じゃがいも", "レッドポテト"],
+        "ko": ["빨간 감자", "레드 포테이토"],
+        "zh": ["红皮土豆", "红土豆"],
+        "zh-tw": ["紅皮馬鈴薯", "紅馬鈴薯"],
+        "es": ["papa roja", "papa de piel roja"],
+        "fr": ["pomme de terre rouge", "pomme de terre à peau rouge"]
+      },
+      "common_units": [
+        {"unit": "medium potato", "grams": 150},
+        {"unit": "small potato", "grams": 80},
+        {"unit": "cup diced", "grams": 150}
+      ]
+    },
+    {
+      "canonical_name": "fingerling potato",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 72,
+        "protein_g": 1.9,
+        "carbs_g": 16.3,
+        "fat_g": 0.1,
+        "fiber_g": 1.6
+      },
+      "aliases": {
+        "en": ["fingerling", "baby potato"],
+        "ja": ["フィンガーリングポテト", "指型じゃがいも"],
+        "ko": ["핑거링 감자", "손가락 감자"],
+        "zh": ["手指土豆", "小土豆"],
+        "zh-tw": ["手指馬鈴薯", "小馬鈴薯"],
+        "es": ["papa fingerling", "papa de dedo"],
+        "fr": ["pomme de terre fingerling", "pomme de terre doigt"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 40},
+        {"unit": "cup", "grams": 150}
+      ]
+    },
+    {
+      "canonical_name": "sweet potato",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 86,
+        "protein_g": 1.6,
+        "carbs_g": 20.1,
+        "fat_g": 0.1,
+        "fiber_g": 3.0
+      },
+      "aliases": {
+        "en": ["orange sweet potato", "yam"],
+        "ja": ["さつまいも", "サツマイモ"],
+        "ko": ["고구마", "단고구마"],
+        "zh": ["红薯", "甘薯", "地瓜"],
+        "zh-tw": ["番薯", "甘薯", "地瓜"],
+        "es": ["batata", "camote", "boniato"],
+        "fr": ["patate douce"]
+      },
+      "common_units": [
+        {"unit": "medium", "grams": 150},
+        {"unit": "large", "grams": 200},
+        {"unit": "cup cubed", "grams": 140}
+      ]
+    },
+    {
+      "canonical_name": "purple sweet potato",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 85,
+        "protein_g": 1.5,
+        "carbs_g": 20.0,
+        "fat_g": 0.1,
+        "fiber_g": 3.0
+      },
+      "aliases": {
+        "en": ["purple yam", "ube"],
+        "ja": ["紫芋", "紫さつまいも"],
+        "ko": ["자색 고구마", "보라 고구마"],
+        "zh": ["紫薯", "紫甘薯"],
+        "zh-tw": ["紫薯", "紫甘薯"],
+        "es": ["batata morada", "camote morado"],
+        "fr": ["patate douce violette"]
+      },
+      "common_units": [
+        {"unit": "medium", "grams": 150},
+        {"unit": "cup cubed", "grams": 140}
+      ]
+    },
+    {
+      "canonical_name": "japanese sweet potato",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 82,
+        "protein_g": 1.4,
+        "carbs_g": 19.5,
+        "fat_g": 0.1,
+        "fiber_g": 2.8
+      },
+      "aliases": {
+        "en": ["satsumaimo", "white sweet potato"],
+        "ja": ["さつまいも", "安納芋"],
+        "ko": ["일본 고구마", "사츠마이모"],
+        "zh": ["日本红薯", "白心红薯"],
+        "zh-tw": ["日本番薯", "白心番薯"],
+        "es": ["batata japonesa"],
+        "fr": ["patate douce japonaise"]
+      },
+      "common_units": [
+        {"unit": "medium", "grams": 150},
+        {"unit": "cup cubed", "grams": 140}
+      ]
+    },
+    {
+      "canonical_name": "roma tomato",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 0.9,
+        "carbs_g": 3.9,
+        "fat_g": 0.2,
+        "fiber_g": 1.2
+      },
+      "aliases": {
+        "en": ["plum tomato", "paste tomato"],
+        "ja": ["ローマトマト", "調理用トマト"],
+        "ko": ["로마 토마토", "플럼 토마토"],
+        "zh": ["罗马番茄", "李子番茄"],
+        "zh-tw": ["羅馬番茄", "李子番茄"],
+        "es": ["tomate roma", "tomate pera"],
+        "fr": ["tomate roma", "tomate italienne"]
+      },
+      "common_units": [
+        {"unit": "medium tomato", "grams": 85},
+        {"unit": "cup chopped", "grams": 180}
+      ]
+    },
+    {
+      "canonical_name": "cherry tomato",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 0.9,
+        "carbs_g": 3.9,
+        "fat_g": 0.2,
+        "fiber_g": 1.2
+      },
+      "aliases": {
+        "en": ["cherry tomatoes"],
+        "ja": ["チェリートマト", "ミニトマト"],
+        "ko": ["방울토마토", "체리 토마토"],
+        "zh": ["樱桃番茄", "小番茄"],
+        "zh-tw": ["櫻桃番茄", "小番茄"],
+        "es": ["tomate cherry", "tomate cereza"],
+        "fr": ["tomate cerise"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 17},
+        {"unit": "cup", "grams": 150}
+      ]
+    },
+    {
+      "canonical_name": "grape tomato",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 0.9,
+        "carbs_g": 3.9,
+        "fat_g": 0.2,
+        "fiber_g": 1.2
+      },
+      "aliases": {
+        "en": ["grape tomatoes"],
+        "ja": ["グレープトマト"],
+        "ko": ["포도 토마토", "그레이프 토마토"],
+        "zh": ["葡萄番茄"],
+        "zh-tw": ["葡萄番茄"],
+        "es": ["tomate uva"],
+        "fr": ["tomate raisin"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 10},
+        {"unit": "cup", "grams": 150}
+      ]
+    },
+    {
+      "canonical_name": "beefsteak tomato",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 0.9,
+        "carbs_g": 3.9,
+        "fat_g": 0.2,
+        "fiber_g": 1.2
+      },
+      "aliases": {
+        "en": ["beef tomato", "slicing tomato"],
+        "ja": ["ビーフステーキトマト", "大玉トマト"],
+        "ko": ["비프스테이크 토마토", "큰 토마토"],
+        "zh": ["牛排番茄", "大番茄"],
+        "zh-tw": ["牛排番茄", "大番茄"],
+        "es": ["tomate bola", "tomate grande"],
+        "fr": ["tomate beefsteak", "grosse tomate"]
+      },
+      "common_units": [
+        {"unit": "large tomato", "grams": 200},
+        {"unit": "slice", "grams": 25}
+      ]
+    },
+    {
+      "canonical_name": "san marzano tomato",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 0.9,
+        "carbs_g": 3.9,
+        "fat_g": 0.2,
+        "fiber_g": 1.2
+      },
+      "aliases": {
+        "en": ["san marzano"],
+        "ja": ["サンマルツァーノトマト"],
+        "ko": ["산 마르자노 토마토"],
+        "zh": ["圣马扎诺番茄"],
+        "zh-tw": ["聖馬扎諾番茄"],
+        "es": ["tomate san marzano"],
+        "fr": ["tomate san marzano"]
+      },
+      "common_units": [
+        {"unit": "medium tomato", "grams": 80},
+        {"unit": "can", "grams": 400}
+      ]
+    },
+    {
+      "canonical_name": "sun-dried tomato",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 258,
+        "protein_g": 14.1,
+        "carbs_g": 55.8,
+        "fat_g": 3.0,
+        "fiber_g": 12.3
+      },
+      "aliases": {
+        "en": ["sundried tomato", "dried tomato"],
+        "ja": ["ドライトマト", "天日干しトマト"],
+        "ko": ["선드라이 토마토", "건조 토마토"],
+        "zh": ["晒干番茄", "日晒番茄"],
+        "zh-tw": ["曬乾番茄", "日曬番茄"],
+        "es": ["tomate seco", "tomate deshidratado"],
+        "fr": ["tomate séchée"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 3},
+        {"unit": "cup", "grams": 55}
+      ]
+    },
+    {
+      "canonical_name": "yellow onion",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 1.1,
+        "carbs_g": 9.3,
+        "fat_g": 0.1,
+        "fiber_g": 1.7
+      },
+      "aliases": {
+        "en": ["brown onion", "cooking onion"],
+        "ja": ["黄玉ねぎ", "玉ねぎ"],
+        "ko": ["노란 양파", "황양파"],
+        "zh": ["黄洋葱", "洋葱"],
+        "zh-tw": ["黃洋蔥", "洋蔥"],
+        "es": ["cebolla amarilla", "cebolla común"],
+        "fr": ["oignon jaune"]
+      },
+      "common_units": [
+        {"unit": "medium onion", "grams": 150},
+        {"unit": "large onion", "grams": 225},
+        {"unit": "cup chopped", "grams": 160}
+      ]
+    },
+    {
+      "canonical_name": "white onion",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 1.1,
+        "carbs_g": 9.3,
+        "fat_g": 0.1,
+        "fiber_g": 1.7
+      },
+      "aliases": {
+        "en": ["white onion"],
+        "ja": ["白玉ねぎ"],
+        "ko": ["흰 양파", "백양파"],
+        "zh": ["白洋葱"],
+        "zh-tw": ["白洋蔥"],
+        "es": ["cebolla blanca"],
+        "fr": ["oignon blanc"]
+      },
+      "common_units": [
+        {"unit": "medium onion", "grams": 150},
+        {"unit": "cup chopped", "grams": 160}
+      ]
+    },
+    {
+      "canonical_name": "red onion",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 1.1,
+        "carbs_g": 9.3,
+        "fat_g": 0.1,
+        "fiber_g": 1.7
+      },
+      "aliases": {
+        "en": ["purple onion", "red onion"],
+        "ja": ["赤玉ねぎ", "紫玉ねぎ"],
+        "ko": ["적양파", "자주양파"],
+        "zh": ["红洋葱", "紫洋葱"],
+        "zh-tw": ["紅洋蔥", "紫洋蔥"],
+        "es": ["cebolla morada", "cebolla roja"],
+        "fr": ["oignon rouge"]
+      },
+      "common_units": [
+        {"unit": "medium onion", "grams": 150},
+        {"unit": "cup chopped", "grams": 160}
+      ]
+    },
+    {
+      "canonical_name": "shallot",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 72,
+        "protein_g": 2.5,
+        "carbs_g": 16.8,
+        "fat_g": 0.1,
+        "fiber_g": 3.2
+      },
+      "aliases": {
+        "en": ["shallots", "eschalot"],
+        "ja": ["エシャロット", "シャロット"],
+        "ko": ["샬롯", "쪽파"],
+        "zh": ["葱头", "火葱"],
+        "zh-tw": ["紅蔥頭", "火蔥"],
+        "es": ["chalote", "echalote"],
+        "fr": ["échalote"]
+      },
+      "common_units": [
+        {"unit": "medium shallot", "grams": 30},
+        {"unit": "tablespoon minced", "grams": 10}
+      ]
+    },
+    {
+      "canonical_name": "pearl onion",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 1.1,
+        "carbs_g": 9.3,
+        "fat_g": 0.1,
+        "fiber_g": 1.7
+      },
+      "aliases": {
+        "en": ["baby onion", "button onion"],
+        "ja": ["ペコロス", "小玉ねぎ"],
+        "ko": ["진주 양파", "작은 양파"],
+        "zh": ["珍珠洋葱", "小洋葱"],
+        "zh-tw": ["珍珠洋蔥", "小洋蔥"],
+        "es": ["cebolla perla", "cebollita"],
+        "fr": ["oignon grelot"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 15},
+        {"unit": "cup", "grams": 100}
+      ]
+    },
+    {
+      "canonical_name": "cipollini onion",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 1.1,
+        "carbs_g": 9.3,
+        "fat_g": 0.1,
+        "fiber_g": 1.7
+      },
+      "aliases": {
+        "en": ["cipollini"],
+        "ja": ["チポリーニ"],
+        "ko": ["치폴리니 양파"],
+        "zh": ["意大利小洋葱"],
+        "zh-tw": ["意大利小洋蔥"],
+        "es": ["cebolla cipollini"],
+        "fr": ["oignon cipollini"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 25},
+        {"unit": "cup", "grams": 120}
+      ]
+    },
+    {
+      "canonical_name": "red bell pepper",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 31,
+        "protein_g": 1.0,
+        "carbs_g": 6.0,
+        "fat_g": 0.3,
+        "fiber_g": 2.1
+      },
+      "aliases": {
+        "en": ["red pepper", "sweet red pepper"],
+        "ja": ["赤パプリカ", "赤ピーマン"],
+        "ko": ["빨간 파프리카", "홍피망"],
+        "zh": ["红甜椒", "红柿子椒"],
+        "zh-tw": ["紅甜椒", "紅柿子椒"],
+        "es": ["pimiento rojo", "morrón rojo"],
+        "fr": ["poivron rouge"]
+      },
+      "common_units": [
+        {"unit": "medium pepper", "grams": 120},
+        {"unit": "cup chopped", "grams": 150}
+      ]
+    },
+    {
+      "canonical_name": "green bell pepper",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 20,
+        "protein_g": 0.9,
+        "carbs_g": 4.6,
+        "fat_g": 0.2,
+        "fiber_g": 1.7
+      },
+      "aliases": {
+        "en": ["green pepper", "sweet pepper"],
+        "ja": ["ピーマン", "緑ピーマン"],
+        "ko": ["청피망", "풋피망"],
+        "zh": ["青椒", "绿甜椒"],
+        "zh-tw": ["青椒", "綠甜椒"],
+        "es": ["pimiento verde", "morrón verde"],
+        "fr": ["poivron vert"]
+      },
+      "common_units": [
+        {"unit": "medium pepper", "grams": 120},
+        {"unit": "cup chopped", "grams": 150}
+      ]
+    },
+    {
+      "canonical_name": "yellow bell pepper",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 27,
+        "protein_g": 1.0,
+        "carbs_g": 6.3,
+        "fat_g": 0.2,
+        "fiber_g": 0.9
+      },
+      "aliases": {
+        "en": ["yellow pepper", "sweet yellow pepper"],
+        "ja": ["黄パプリカ", "黄ピーマン"],
+        "ko": ["노란 파프리카", "황피망"],
+        "zh": ["黄甜椒"],
+        "zh-tw": ["黃甜椒"],
+        "es": ["pimiento amarillo", "morrón amarillo"],
+        "fr": ["poivron jaune"]
+      },
+      "common_units": [
+        {"unit": "medium pepper", "grams": 120},
+        {"unit": "cup chopped", "grams": 150}
+      ]
+    },
+    {
+      "canonical_name": "orange bell pepper",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 26,
+        "protein_g": 0.9,
+        "carbs_g": 6.0,
+        "fat_g": 0.2,
+        "fiber_g": 1.5
+      },
+      "aliases": {
+        "en": ["orange pepper", "sweet orange pepper"],
+        "ja": ["オレンジパプリカ"],
+        "ko": ["주황 파프리카"],
+        "zh": ["橙甜椒"],
+        "zh-tw": ["橙甜椒"],
+        "es": ["pimiento naranja", "morrón naranja"],
+        "fr": ["poivron orange"]
+      },
+      "common_units": [
+        {"unit": "medium pepper", "grams": 120},
+        {"unit": "cup chopped", "grams": 150}
+      ]
+    },
+    {
+      "canonical_name": "jalapeño pepper",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 29,
+        "protein_g": 0.9,
+        "carbs_g": 6.5,
+        "fat_g": 0.4,
+        "fiber_g": 2.8
+      },
+      "aliases": {
+        "en": ["jalapeño", "jalapeno"],
+        "ja": ["ハラペーニョ"],
+        "ko": ["할라피뇨"],
+        "zh": ["墨西哥辣椒", "哈拉佩尼奥"],
+        "zh-tw": ["墨西哥辣椒", "哈拉佩尼奧"],
+        "es": ["chile jalapeño"],
+        "fr": ["piment jalapeño"]
+      },
+      "common_units": [
+        {"unit": "medium pepper", "grams": 14},
+        {"unit": "cup sliced", "grams": 90}
+      ]
+    },
+    {
+      "canonical_name": "serrano pepper",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 1.7,
+        "carbs_g": 7.0,
+        "fat_g": 0.4,
+        "fiber_g": 3.7
+      },
+      "aliases": {
+        "en": ["serrano", "serrano chili"],
+        "ja": ["セラーノ"],
+        "ko": ["세라노 고추"],
+        "zh": ["墨西哥青椒"],
+        "zh-tw": ["墨西哥青椒"],
+        "es": ["chile serrano"],
+        "fr": ["piment serrano"]
+      },
+      "common_units": [
+        {"unit": "medium pepper", "grams": 10},
+        {"unit": "cup chopped", "grams": 90}
+      ]
+    },
+    {
+      "canonical_name": "poblano pepper",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 20,
+        "protein_g": 1.0,
+        "carbs_g": 4.5,
+        "fat_g": 0.2,
+        "fiber_g": 2.0
+      },
+      "aliases": {
+        "en": ["poblano", "ancho pepper"],
+        "ja": ["ポブラノ"],
+        "ko": ["포블라노 고추"],
+        "zh": ["波布拉诺辣椒"],
+        "zh-tw": ["波布拉諾辣椒"],
+        "es": ["chile poblano"],
+        "fr": ["piment poblano"]
+      },
+      "common_units": [
+        {"unit": "medium pepper", "grams": 85},
+        {"unit": "cup chopped", "grams": 130}
+      ]
+    },
+    {
+      "canonical_name": "habanero pepper",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 1.9,
+        "carbs_g": 8.8,
+        "fat_g": 0.5,
+        "fiber_g": 1.5
+      },
+      "aliases": {
+        "en": ["habanero", "scotch bonnet"],
+        "ja": ["ハバネロ"],
+        "ko": ["하바네로"],
+        "zh": ["哈瓦那辣椒"],
+        "zh-tw": ["哈瓦那辣椒"],
+        "es": ["chile habanero"],
+        "fr": ["piment habanero"]
+      },
+      "common_units": [
+        {"unit": "pepper", "grams": 8},
+        {"unit": "tablespoon minced", "grams": 10}
+      ]
+    },
+    {
+      "canonical_name": "thai chili",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 2.0,
+        "carbs_g": 8.8,
+        "fat_g": 0.4,
+        "fiber_g": 1.5
+      },
+      "aliases": {
+        "en": ["bird's eye chili", "thai bird chili"],
+        "ja": ["タイ唐辛子", "鷹の爪"],
+        "ko": ["태국 고추", "버즈아이 칠리"],
+        "zh": ["泰国辣椒", "小米椒"],
+        "zh-tw": ["泰國辣椒", "小米椒"],
+        "es": ["chile tailandés", "chile ojo de pájaro"],
+        "fr": ["piment thaï", "piment oiseau"]
+      },
+      "common_units": [
+        {"unit": "pepper", "grams": 3},
+        {"unit": "tablespoon chopped", "grams": 10}
+      ]
+    },
+    {
+      "canonical_name": "iceberg lettuce",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 14,
+        "protein_g": 0.9,
+        "carbs_g": 3.0,
+        "fat_g": 0.1,
+        "fiber_g": 1.2
+      },
+      "aliases": {
+        "en": ["iceberg", "crisphead lettuce"],
+        "ja": ["アイスバーグレタス", "玉レタス"],
+        "ko": ["양상추", "아이스버그"],
+        "zh": ["球生菜", "冰山生菜"],
+        "zh-tw": ["球生菜", "冰山生菜"],
+        "es": ["lechuga iceberg", "lechuga repollada"],
+        "fr": ["laitue iceberg"]
+      },
+      "common_units": [
+        {"unit": "medium head", "grams": 540},
+        {"unit": "cup shredded", "grams": 55}
+      ]
+    },
+    {
+      "canonical_name": "romaine lettuce",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 17,
+        "protein_g": 1.2,
+        "carbs_g": 3.3,
+        "fat_g": 0.3,
+        "fiber_g": 2.1
+      },
+      "aliases": {
+        "en": ["romaine", "cos lettuce"],
+        "ja": ["ロメインレタス", "コスレタス"],
+        "ko": ["로메인 상추"],
+        "zh": ["罗马生菜", "长叶生菜"],
+        "zh-tw": ["羅馬生菜", "長葉生菜"],
+        "es": ["lechuga romana"],
+        "fr": ["laitue romaine"]
+      },
+      "common_units": [
+        {"unit": "cup chopped", "grams": 47},
+        {"unit": "leaf", "grams": 20}
+      ]
+    },
+    {
+      "canonical_name": "butter lettuce",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 13,
+        "protein_g": 1.4,
+        "carbs_g": 2.2,
+        "fat_g": 0.2,
+        "fiber_g": 1.1
+      },
+      "aliases": {
+        "en": ["butterhead", "bibb lettuce", "boston lettuce"],
+        "ja": ["サラダ菜", "バターレタス"],
+        "ko": ["버터 상추"],
+        "zh": ["奶油生菜", "波士顿生菜"],
+        "zh-tw": ["奶油生菜", "波士頓生菜"],
+        "es": ["lechuga mantequilla"],
+        "fr": ["laitue beurre"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 55},
+        {"unit": "leaf", "grams": 8}
+      ]
+    },
+    {
+      "canonical_name": "spinach",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 2.9,
+        "carbs_g": 3.6,
+        "fat_g": 0.4,
+        "fiber_g": 2.2
+      },
+      "aliases": {
+        "en": ["baby spinach", "spinach leaves"],
+        "ja": ["ほうれん草", "ホウレンソウ"],
+        "ko": ["시금치"],
+        "zh": ["菠菜"],
+        "zh-tw": ["菠菜"],
+        "es": ["espinaca"],
+        "fr": ["épinard"]
+      },
+      "common_units": [
+        {"unit": "cup raw", "grams": 30},
+        {"unit": "cup cooked", "grams": 180},
+        {"unit": "bunch", "grams": 340}
+      ]
+    },
+    {
+      "canonical_name": "curly kale",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 2.9,
+        "carbs_g": 4.4,
+        "fat_g": 1.5,
+        "fiber_g": 4.1
+      },
+      "aliases": {
+        "en": ["kale", "curly leaf kale"],
+        "ja": ["ケール", "カーリーケール"],
+        "ko": ["케일", "곱슬 케일"],
+        "zh": ["羽衣甘蓝", "卷叶甘蓝"],
+        "zh-tw": ["羽衣甘藍", "捲葉甘藍"],
+        "es": ["col rizada"],
+        "fr": ["chou frisé"]
+      },
+      "common_units": [
+        {"unit": "cup chopped", "grams": 67},
+        {"unit": "bunch", "grams": 250}
+      ]
+    },
+    {
+      "canonical_name": "lacinato kale",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 2.9,
+        "carbs_g": 4.4,
+        "fat_g": 1.5,
+        "fiber_g": 4.1
+      },
+      "aliases": {
+        "en": ["dinosaur kale", "tuscan kale", "black kale"],
+        "ja": ["ラチナート ケール", "恐竜ケール"],
+        "ko": ["라치나토 케일", "공룡 케일"],
+        "zh": ["托斯卡纳羽衣甘蓝", "恐龙羽衣甘蓝"],
+        "zh-tw": ["托斯卡納羽衣甘藍", "恐龍羽衣甘藍"],
+        "es": ["col lacinato", "col dinosaurio"],
+        "fr": ["chou lacinato", "chou toscan"]
+      },
+      "common_units": [
+        {"unit": "cup chopped", "grams": 67},
+        {"unit": "bunch", "grams": 250}
+      ]
+    },
+    {
+      "canonical_name": "swiss chard",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 19,
+        "protein_g": 1.8,
+        "carbs_g": 3.7,
+        "fat_g": 0.2,
+        "fiber_g": 1.6
+      },
+      "aliases": {
+        "en": ["chard", "rainbow chard", "silverbeet"],
+        "ja": ["スイスチャード", "フダンソウ"],
+        "ko": ["근대", "스위스 차드"],
+        "zh": ["瑞士甜菜", "彩虹甜菜"],
+        "zh-tw": ["瑞士甜菜", "彩虹甜菜"],
+        "es": ["acelga"],
+        "fr": ["bette à carde"]
+      },
+      "common_units": [
+        {"unit": "cup chopped", "grams": 36},
+        {"unit": "bunch", "grams": 300}
+      ]
+    },
+    {
+      "canonical_name": "arugula",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 2.6,
+        "carbs_g": 3.7,
+        "fat_g": 0.7,
+        "fiber_g": 1.6
+      },
+      "aliases": {
+        "en": ["rocket", "rucola"],
+        "ja": ["ルッコラ", "ロケット"],
+        "ko": ["루꼴라", "아루굴라"],
+        "zh": ["芝麻菜", "火箭菜"],
+        "zh-tw": ["芝麻菜", "火箭菜"],
+        "es": ["rúcula"],
+        "fr": ["roquette"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 20},
+        {"unit": "bunch", "grams": 100}
+      ]
+    },
+    {
+      "canonical_name": "watercress",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 11,
+        "protein_g": 2.3,
+        "carbs_g": 1.3,
+        "fat_g": 0.1,
+        "fiber_g": 0.5
+      },
+      "aliases": {
+        "en": ["watercress"],
+        "ja": ["クレソン"],
+        "ko": ["물냉이"],
+        "zh": ["西洋菜", "豆瓣菜"],
+        "zh-tw": ["西洋菜", "豆瓣菜"],
+        "es": ["berro"],
+        "fr": ["cresson"]
+      },
+      "common_units": [
+        {"unit": "cup chopped", "grams": 34},
+        {"unit": "bunch", "grams": 100}
+      ]
+    },
+    {
+      "canonical_name": "broccoli",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 34,
+        "protein_g": 2.8,
+        "carbs_g": 6.6,
+        "fat_g": 0.4,
+        "fiber_g": 2.6
+      },
+      "aliases": {
+        "en": ["broccoli florets"],
+        "ja": ["ブロッコリー"],
+        "ko": ["브로콜리"],
+        "zh": ["西兰花"],
+        "zh-tw": ["青花菜"],
+        "es": ["brócoli"],
+        "fr": ["brocoli"]
+      },
+      "common_units": [
+        {"unit": "cup chopped", "grams": 91},
+        {"unit": "medium stalk", "grams": 150},
+        {"unit": "floret", "grams": 20}
+      ]
+    },
+    {
+      "canonical_name": "cauliflower",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 1.9,
+        "carbs_g": 5.0,
+        "fat_g": 0.3,
+        "fiber_g": 2.0
+      },
+      "aliases": {
+        "en": ["cauliflower florets"],
+        "ja": ["カリフラワー"],
+        "ko": ["콜리플라워"],
+        "zh": ["花椰菜"],
+        "zh-tw": ["白花椰菜"],
+        "es": ["coliflor"],
+        "fr": ["chou-fleur"]
+      },
+      "common_units": [
+        {"unit": "cup chopped", "grams": 100},
+        {"unit": "medium head", "grams": 575},
+        {"unit": "floret", "grams": 15}
+      ]
+    },
+    {
+      "canonical_name": "green cabbage",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 1.3,
+        "carbs_g": 5.8,
+        "fat_g": 0.1,
+        "fiber_g": 2.5
+      },
+      "aliases": {
+        "en": ["cabbage", "white cabbage"],
+        "ja": ["キャベツ", "緑キャベツ"],
+        "ko": ["양배추"],
+        "zh": ["绿卷心菜", "甘蓝"],
+        "zh-tw": ["綠捲心菜", "甘藍"],
+        "es": ["repollo verde", "col verde"],
+        "fr": ["chou vert"]
+      },
+      "common_units": [
+        {"unit": "cup shredded", "grams": 89},
+        {"unit": "medium head", "grams": 900}
+      ]
+    },
+    {
+      "canonical_name": "red cabbage",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 31,
+        "protein_g": 1.4,
+        "carbs_g": 7.4,
+        "fat_g": 0.2,
+        "fiber_g": 2.1
+      },
+      "aliases": {
+        "en": ["purple cabbage"],
+        "ja": ["紫キャベツ", "赤キャベツ"],
+        "ko": ["적양배추", "자주양배추"],
+        "zh": ["紫甘蓝", "红卷心菜"],
+        "zh-tw": ["紫甘藍", "紅捲心菜"],
+        "es": ["repollo morado", "col morada"],
+        "fr": ["chou rouge"]
+      },
+      "common_units": [
+        {"unit": "cup shredded", "grams": 89},
+        {"unit": "medium head", "grams": 900}
+      ]
+    },
+    {
+      "canonical_name": "napa cabbage",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 16,
+        "protein_g": 1.2,
+        "carbs_g": 3.2,
+        "fat_g": 0.2,
+        "fiber_g": 1.2
+      },
+      "aliases": {
+        "en": ["chinese cabbage", "pe-tsai", "won bok"],
+        "ja": ["白菜", "ハクサイ"],
+        "ko": ["배추"],
+        "zh": ["大白菜"],
+        "zh-tw": ["大白菜"],
+        "es": ["col china", "repollo chino"],
+        "fr": ["chou chinois"]
+      },
+      "common_units": [
+        {"unit": "cup shredded", "grams": 70},
+        {"unit": "medium head", "grams": 1200}
+      ]
+    },
+    {
+      "canonical_name": "brussels sprouts",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 3.4,
+        "carbs_g": 9.0,
+        "fat_g": 0.3,
+        "fiber_g": 3.8
+      },
+      "aliases": {
+        "en": ["brussels sprout"],
+        "ja": ["芽キャベツ", "ブリュッセルスプラウト"],
+        "ko": ["방울양배추"],
+        "zh": ["抱子甘蓝", "小洋白菜"],
+        "zh-tw": ["抱子甘藍", "小洋白菜"],
+        "es": ["col de bruselas", "repollito de bruselas"],
+        "fr": ["chou de Bruxelles"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 88},
+        {"unit": "piece", "grams": 19}
+      ]
+    },
+    {
+      "canonical_name": "bok choy",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 13,
+        "protein_g": 1.5,
+        "carbs_g": 2.2,
+        "fat_g": 0.2,
+        "fiber_g": 1.0
+      },
+      "aliases": {
+        "en": ["pak choi", "chinese cabbage"],
+        "ja": ["チンゲン菜", "青梗菜"],
+        "ko": ["청경채"],
+        "zh": ["青菜", "小白菜"],
+        "zh-tw": ["青江菜", "小白菜"],
+        "es": ["bok choy", "col china"],
+        "fr": ["bok choy", "chou chinois"]
+      },
+      "common_units": [
+        {"unit": "cup shredded", "grams": 70},
+        {"unit": "medium head", "grams": 200}
+      ]
+    },
+    {
+      "canonical_name": "baby bok choy",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 13,
+        "protein_g": 1.5,
+        "carbs_g": 2.2,
+        "fat_g": 0.2,
+        "fiber_g": 1.0
+      },
+      "aliases": {
+        "en": ["baby pak choi", "shanghai bok choy"],
+        "ja": ["ベビーチンゲン菜"],
+        "ko": ["베이비 청경채"],
+        "zh": ["小青菜"],
+        "zh-tw": ["小青江菜"],
+        "es": ["bok choy bebé"],
+        "fr": ["bébé bok choy"]
+      },
+      "common_units": [
+        {"unit": "head", "grams": 70},
+        {"unit": "cup chopped", "grams": 70}
+      ]
+    },
+    {
+      "canonical_name": "carrot",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 41,
+        "protein_g": 0.9,
+        "carbs_g": 9.6,
+        "fat_g": 0.2,
+        "fiber_g": 2.8
+      },
+      "aliases": {
+        "en": ["carrots"],
+        "ja": ["人参", "にんじん"],
+        "ko": ["당근"],
+        "zh": ["胡萝卜"],
+        "zh-tw": ["紅蘿蔔"],
+        "es": ["zanahoria"],
+        "fr": ["carotte"]
+      },
+      "common_units": [
+        {"unit": "medium carrot", "grams": 61},
+        {"unit": "large carrot", "grams": 72},
+        {"unit": "cup chopped", "grams": 128}
+      ]
+    },
+    {
+      "canonical_name": "baby carrot",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 41,
+        "protein_g": 0.9,
+        "carbs_g": 9.6,
+        "fat_g": 0.2,
+        "fiber_g": 2.8
+      },
+      "aliases": {
+        "en": ["baby carrots"],
+        "ja": ["ベビーキャロット"],
+        "ko": ["베이비 당근"],
+        "zh": ["小胡萝卜"],
+        "zh-tw": ["小紅蘿蔔"],
+        "es": ["zanahoria bebé"],
+        "fr": ["carotte bébé"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 10},
+        {"unit": "cup", "grams": 100}
+      ]
+    },
+    {
+      "canonical_name": "beet",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 1.6,
+        "carbs_g": 9.6,
+        "fat_g": 0.2,
+        "fiber_g": 2.8
+      },
+      "aliases": {
+        "en": ["beetroot", "red beet"],
+        "ja": ["ビーツ", "赤かぶ"],
+        "ko": ["비트"],
+        "zh": ["甜菜根"],
+        "zh-tw": ["甜菜根"],
+        "es": ["remolacha", "betabel"],
+        "fr": ["betterave"]
+      },
+      "common_units": [
+        {"unit": "medium beet", "grams": 82},
+        {"unit": "cup cubed", "grams": 136}
+      ]
+    },
+    {
+      "canonical_name": "golden beet",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 1.6,
+        "carbs_g": 9.6,
+        "fat_g": 0.2,
+        "fiber_g": 2.8
+      },
+      "aliases": {
+        "en": ["yellow beet", "golden beetroot"],
+        "ja": ["ゴールデンビーツ", "黄色ビーツ"],
+        "ko": ["황금 비트"],
+        "zh": ["金色甜菜"],
+        "zh-tw": ["金色甜菜"],
+        "es": ["remolacha dorada"],
+        "fr": ["betterave dorée"]
+      },
+      "common_units": [
+        {"unit": "medium beet", "grams": 82},
+        {"unit": "cup cubed", "grams": 136}
+      ]
+    },
+    {
+      "canonical_name": "turnip",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 28,
+        "protein_g": 0.9,
+        "carbs_g": 6.4,
+        "fat_g": 0.1,
+        "fiber_g": 1.8
+      },
+      "aliases": {
+        "en": ["turnips"],
+        "ja": ["かぶ", "カブ"],
+        "ko": ["순무"],
+        "zh": ["芜菁", "白萝卜"],
+        "zh-tw": ["蕪菁", "白蘿蔔"],
+        "es": ["nabo"],
+        "fr": ["navet"]
+      },
+      "common_units": [
+        {"unit": "medium turnip", "grams": 122},
+        {"unit": "cup cubed", "grams": 130}
+      ]
+    },
+    {
+      "canonical_name": "parsnip",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 75,
+        "protein_g": 1.2,
+        "carbs_g": 18.0,
+        "fat_g": 0.3,
+        "fiber_g": 4.9
+      },
+      "aliases": {
+        "en": ["parsnips"],
+        "ja": ["パースニップ", "砂糖人参"],
+        "ko": ["파스닙"],
+        "zh": ["欧防风", "欧洲萝卜"],
+        "zh-tw": ["歐防風", "歐洲蘿蔔"],
+        "es": ["chirivía"],
+        "fr": ["panais"]
+      },
+      "common_units": [
+        {"unit": "medium parsnip", "grams": 120},
+        {"unit": "cup sliced", "grams": 133}
+      ]
+    },
+    {
+      "canonical_name": "red radish",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 16,
+        "protein_g": 0.7,
+        "carbs_g": 3.4,
+        "fat_g": 0.1,
+        "fiber_g": 1.6
+      },
+      "aliases": {
+        "en": ["radish", "garden radish"],
+        "ja": ["ラディッシュ", "二十日大根"],
+        "ko": ["래디시", "빨간 무"],
+        "zh": ["樱桃萝卜", "小萝卜"],
+        "zh-tw": ["櫻桃蘿蔔", "小蘿蔔"],
+        "es": ["rábano"],
+        "fr": ["radis"]
+      },
+      "common_units": [
+        {"unit": "medium radish", "grams": 12},
+        {"unit": "cup sliced", "grams": 116}
+      ]
+    },
+    {
+      "canonical_name": "daikon radish",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 0.6,
+        "carbs_g": 4.1,
+        "fat_g": 0.1,
+        "fiber_g": 1.6
+      },
+      "aliases": {
+        "en": ["daikon", "white radish", "japanese radish"],
+        "ja": ["大根", "ダイコン"],
+        "ko": ["무"],
+        "zh": ["白萝卜", "萝卜"],
+        "zh-tw": ["白蘿蔔", "蘿蔔"],
+        "es": ["rábano daikon", "rábano blanco"],
+        "fr": ["radis daikon"]
+      },
+      "common_units": [
+        {"unit": "cup cubed", "grams": 116},
+        {"unit": "medium radish", "grams": 338}
+      ]
+    },
+    {
+      "canonical_name": "zucchini",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 17,
+        "protein_g": 1.2,
+        "carbs_g": 3.1,
+        "fat_g": 0.3,
+        "fiber_g": 1.0
+      },
+      "aliases": {
+        "en": ["courgette", "green zucchini"],
+        "ja": ["ズッキーニ"],
+        "ko": ["주키니 호박"],
+        "zh": ["西葫芦", "绿南瓜"],
+        "zh-tw": ["櫛瓜", "綠南瓜"],
+        "es": ["calabacín", "zapallito italiano"],
+        "fr": ["courgette"]
+      },
+      "common_units": [
+        {"unit": "medium zucchini", "grams": 196},
+        {"unit": "cup sliced", "grams": 124}
+      ]
+    },
+    {
+      "canonical_name": "yellow squash",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 17,
+        "protein_g": 1.2,
+        "carbs_g": 3.1,
+        "fat_g": 0.3,
+        "fiber_g": 1.0
+      },
+      "aliases": {
+        "en": ["summer squash", "yellow zucchini"],
+        "ja": ["イエロースカッシュ", "黄色いズッキーニ"],
+        "ko": ["노란 호박"],
+        "zh": ["黄南瓜", "黄西葫芦"],
+        "zh-tw": ["黃南瓜", "黃櫛瓜"],
+        "es": ["calabacín amarillo"],
+        "fr": ["courge jaune"]
+      },
+      "common_units": [
+        {"unit": "medium squash", "grams": 196},
+        {"unit": "cup sliced", "grams": 124}
+      ]
+    },
+    {
+      "canonical_name": "butternut squash",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 45,
+        "protein_g": 1.0,
+        "carbs_g": 11.7,
+        "fat_g": 0.1,
+        "fiber_g": 2.0
+      },
+      "aliases": {
+        "en": ["butternut"],
+        "ja": ["バターナッツスカッシュ"],
+        "ko": ["버터넛 스쿼시"],
+        "zh": ["奶油南瓜"],
+        "zh-tw": ["奶油南瓜"],
+        "es": ["calabaza butternut"],
+        "fr": ["courge butternut"]
+      },
+      "common_units": [
+        {"unit": "cup cubed", "grams": 140},
+        {"unit": "medium squash", "grams": 1200}
+      ]
+    },
+    {
+      "canonical_name": "acorn squash",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 0.8,
+        "carbs_g": 10.4,
+        "fat_g": 0.1,
+        "fiber_g": 1.5
+      },
+      "aliases": {
+        "en": ["acorn"],
+        "ja": ["エーコンスカッシュ", "どんぐりカボチャ"],
+        "ko": ["에이콘 스쿼시"],
+        "zh": ["橡子南瓜"],
+        "zh-tw": ["橡子南瓜"],
+        "es": ["calabaza acorn"],
+        "fr": ["courge poivrée"]
+      },
+      "common_units": [
+        {"unit": "cup cubed", "grams": 140},
+        {"unit": "medium squash", "grams": 450}
+      ]
+    },
+    {
+      "canonical_name": "spaghetti squash",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 31,
+        "protein_g": 0.6,
+        "carbs_g": 7.0,
+        "fat_g": 0.6,
+        "fiber_g": 1.5
+      },
+      "aliases": {
+        "en": ["spaghetti squash"],
+        "ja": ["スパゲッティスカッシュ"],
+        "ko": ["스파게티 스쿼시"],
+        "zh": ["意面南瓜"],
+        "zh-tw": ["意麵南瓜"],
+        "es": ["calabaza espagueti"],
+        "fr": ["courge spaghetti"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 155},
+        {"unit": "medium squash", "grams": 1800}
+      ]
+    },
+    {
+      "canonical_name": "pumpkin",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 26,
+        "protein_g": 1.0,
+        "carbs_g": 6.5,
+        "fat_g": 0.1,
+        "fiber_g": 0.5
+      },
+      "aliases": {
+        "en": ["pumpkin"],
+        "ja": ["かぼちゃ", "カボチャ"],
+        "ko": ["호박"],
+        "zh": ["南瓜"],
+        "zh-tw": ["南瓜"],
+        "es": ["calabaza"],
+        "fr": ["citrouille"]
+      },
+      "common_units": [
+        {"unit": "cup cubed", "grams": 116},
+        {"unit": "cup canned", "grams": 245}
+      ]
+    },
+    {
+      "canonical_name": "kabocha squash",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 34,
+        "protein_g": 1.1,
+        "carbs_g": 8.1,
+        "fat_g": 0.1,
+        "fiber_g": 1.4
+      },
+      "aliases": {
+        "en": ["japanese pumpkin", "kabocha"],
+        "ja": ["かぼちゃ", "西洋カボチャ"],
+        "ko": ["단호박"],
+        "zh": ["日本南瓜"],
+        "zh-tw": ["日本南瓜"],
+        "es": ["calabaza kabocha"],
+        "fr": ["courge kabocha"]
+      },
+      "common_units": [
+        {"unit": "cup cubed", "grams": 116},
+        {"unit": "medium squash", "grams": 1200}
+      ]
+    },
+    {
+      "canonical_name": "garlic",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 149,
+        "protein_g": 6.4,
+        "carbs_g": 33.1,
+        "fat_g": 0.5,
+        "fiber_g": 2.1
+      },
+      "aliases": {
+        "en": ["garlic clove"],
+        "ja": ["ニンニク", "大蒜"],
+        "ko": ["마늘"],
+        "zh": ["大蒜", "蒜"],
+        "zh-tw": ["大蒜", "蒜"],
+        "es": ["ajo"],
+        "fr": ["ail"]
+      },
+      "common_units": [
+        {"unit": "clove", "grams": 3},
+        {"unit": "teaspoon minced", "grams": 3},
+        {"unit": "head", "grams": 40}
+      ]
+    },
+    {
+      "canonical_name": "leek",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 61,
+        "protein_g": 1.5,
+        "carbs_g": 14.2,
+        "fat_g": 0.3,
+        "fiber_g": 1.8
+      },
+      "aliases": {
+        "en": ["leeks"],
+        "ja": ["リーキ", "西洋ねぎ"],
+        "ko": ["리크", "대파"],
+        "zh": ["韭葱"],
+        "zh-tw": ["韭蔥"],
+        "es": ["puerro"],
+        "fr": ["poireau"]
+      },
+      "common_units": [
+        {"unit": "medium leek", "grams": 89},
+        {"unit": "cup chopped", "grams": 89}
+      ]
+    },
+    {
+      "canonical_name": "scallion",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 1.8,
+        "carbs_g": 7.3,
+        "fat_g": 0.2,
+        "fiber_g": 2.6
+      },
+      "aliases": {
+        "en": ["green onion", "spring onion"],
+        "ja": ["ネギ", "万能ねぎ"],
+        "ko": ["파", "쪽파"],
+        "zh": ["葱", "小葱"],
+        "zh-tw": ["蔥", "青蔥"],
+        "es": ["cebolleta", "cebolla de verdeo"],
+        "fr": ["oignon vert", "ciboule"]
+      },
+      "common_units": [
+        {"unit": "medium", "grams": 15},
+        {"unit": "cup chopped", "grams": 100}
+      ]
+    },
+    {
+      "canonical_name": "chive",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 30,
+        "protein_g": 3.3,
+        "carbs_g": 4.4,
+        "fat_g": 0.7,
+        "fiber_g": 2.5
+      },
+      "aliases": {
+        "en": ["chives"],
+        "ja": ["チャイブ", "西洋あさつき"],
+        "ko": ["차이브"],
+        "zh": ["细香葱"],
+        "zh-tw": ["細香葱"],
+        "es": ["cebollino"],
+        "fr": ["ciboulette"]
+      },
+      "common_units": [
+        {"unit": "tablespoon chopped", "grams": 3},
+        {"unit": "cup chopped", "grams": 48}
+      ]
+    },
+    {
+      "canonical_name": "celery",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 16,
+        "protein_g": 0.7,
+        "carbs_g": 3.0,
+        "fat_g": 0.2,
+        "fiber_g": 1.6
+      },
+      "aliases": {
+        "en": ["celery stalk"],
+        "ja": ["セロリ"],
+        "ko": ["셀러리"],
+        "zh": ["芹菜"],
+        "zh-tw": ["芹菜"],
+        "es": ["apio"],
+        "fr": ["céleri"]
+      },
+      "common_units": [
+        {"unit": "medium stalk", "grams": 40},
+        {"unit": "cup chopped", "grams": 101}
+      ]
+    },
+    {
+      "canonical_name": "cucumber",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 15,
+        "protein_g": 0.7,
+        "carbs_g": 3.6,
+        "fat_g": 0.1,
+        "fiber_g": 0.5
+      },
+      "aliases": {
+        "en": ["cucumbers", "slicing cucumber"],
+        "ja": ["きゅうり", "キュウリ"],
+        "ko": ["오이"],
+        "zh": ["黄瓜"],
+        "zh-tw": ["黃瓜"],
+        "es": ["pepino"],
+        "fr": ["concombre"]
+      },
+      "common_units": [
+        {"unit": "medium cucumber", "grams": 300},
+        {"unit": "cup sliced", "grams": 119}
+      ]
+    },
+    {
+      "canonical_name": "english cucumber",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 15,
+        "protein_g": 0.7,
+        "carbs_g": 3.6,
+        "fat_g": 0.1,
+        "fiber_g": 0.5
+      },
+      "aliases": {
+        "en": ["seedless cucumber", "hothouse cucumber"],
+        "ja": ["イングリッシュキュウリ"],
+        "ko": ["영국 오이"],
+        "zh": ["英国黄瓜", "无籽黄瓜"],
+        "zh-tw": ["英國黃瓜", "無籽黃瓜"],
+        "es": ["pepino inglés"],
+        "fr": ["concombre anglais"]
+      },
+      "common_units": [
+        {"unit": "medium cucumber", "grams": 400},
+        {"unit": "cup sliced", "grams": 119}
+      ]
+    },
+    {
+      "canonical_name": "persian cucumber",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 15,
+        "protein_g": 0.7,
+        "carbs_g": 3.6,
+        "fat_g": 0.1,
+        "fiber_g": 0.5
+      },
+      "aliases": {
+        "en": ["mini cucumber"],
+        "ja": ["ペルシャキュウリ"],
+        "ko": ["페르시안 오이"],
+        "zh": ["波斯黄瓜"],
+        "zh-tw": ["波斯黃瓜"],
+        "es": ["pepino persa"],
+        "fr": ["concombre persan"]
+      },
+      "common_units": [
+        {"unit": "cucumber", "grams": 100},
+        {"unit": "cup sliced", "grams": 119}
+      ]
+    },
+    {
+      "canonical_name": "corn",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 86,
+        "protein_g": 3.3,
+        "carbs_g": 18.7,
+        "fat_g": 1.4,
+        "fiber_g": 2.0
+      },
+      "aliases": {
+        "en": ["sweet corn", "corn on the cob"],
+        "ja": ["とうもろこし", "スイートコーン"],
+        "ko": ["옥수수"],
+        "zh": ["玉米", "甜玉米"],
+        "zh-tw": ["玉米", "甜玉米"],
+        "es": ["maíz", "elote"],
+        "fr": ["maïs"]
+      },
+      "common_units": [
+        {"unit": "medium ear", "grams": 103},
+        {"unit": "cup kernels", "grams": 145}
+      ]
+    },
+    {
+      "canonical_name": "green peas",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 81,
+        "protein_g": 5.4,
+        "carbs_g": 14.5,
+        "fat_g": 0.4,
+        "fiber_g": 5.7
+      },
+      "aliases": {
+        "en": ["peas", "garden peas"],
+        "ja": ["グリーンピース", "エンドウ豆"],
+        "ko": ["완두콩"],
+        "zh": ["豌豆", "青豆"],
+        "zh-tw": ["豌豆", "青豆"],
+        "es": ["guisantes", "arvejas"],
+        "fr": ["petits pois"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 145},
+        {"unit": "cup frozen", "grams": 134}
+      ]
+    },
+    {
+      "canonical_name": "snow peas",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 42,
+        "protein_g": 2.8,
+        "carbs_g": 7.6,
+        "fat_g": 0.2,
+        "fiber_g": 2.6
+      },
+      "aliases": {
+        "en": ["sugar snap peas", "mangetout"],
+        "ja": ["さやえんどう", "スナップエンドウ"],
+        "ko": ["스냅완두", "설탕완두"],
+        "zh": ["荷兰豆", "甜豆"],
+        "zh-tw": ["荷蘭豆", "甜豆"],
+        "es": ["tirabeque", "arveja china"],
+        "fr": ["pois mange-tout"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 63},
+        {"unit": "handful", "grams": 30}
+      ]
+    },
+    {
+      "canonical_name": "sugar snap peas",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 42,
+        "protein_g": 2.8,
+        "carbs_g": 7.6,
+        "fat_g": 0.2,
+        "fiber_g": 2.6
+      },
+      "aliases": {
+        "en": ["snap peas"],
+        "ja": ["スナップエンドウ"],
+        "ko": ["스냅완두"],
+        "zh": ["甜豌豆"],
+        "zh-tw": ["甜豌豆"],
+        "es": ["guisante dulce"],
+        "fr": ["pois sugar snap"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 63},
+        {"unit": "handful", "grams": 30}
+      ]
+    },
+    {
+      "canonical_name": "green beans",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 31,
+        "protein_g": 1.8,
+        "carbs_g": 7.0,
+        "fat_g": 0.2,
+        "fiber_g": 2.7
+      },
+      "aliases": {
+        "en": ["string beans", "snap beans"],
+        "ja": ["さやいんげん", "インゲン豆"],
+        "ko": ["녹두", "강낭콩"],
+        "zh": ["四季豆", "青豆"],
+        "zh-tw": ["四季豆", "青豆"],
+        "es": ["judías verdes", "ejotes"],
+        "fr": ["haricots verts"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 100},
+        {"unit": "handful", "grams": 40}
+      ]
+    },
+    {
+      "canonical_name": "french green beans",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 31,
+        "protein_g": 1.8,
+        "carbs_g": 7.0,
+        "fat_g": 0.2,
+        "fiber_g": 2.7
+      },
+      "aliases": {
+        "en": ["haricots verts", "french beans"],
+        "ja": ["フレンチビーンズ"],
+        "ko": ["프렌치 그린빈"],
+        "zh": ["法国青豆"],
+        "zh-tw": ["法國青豆"],
+        "es": ["judías verdes francesas"],
+        "fr": ["haricots verts fins"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 100},
+        {"unit": "handful", "grams": 40}
+      ]
+    },
+    {
+      "canonical_name": "asparagus",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 20,
+        "protein_g": 2.2,
+        "carbs_g": 3.9,
+        "fat_g": 0.1,
+        "fiber_g": 2.1
+      },
+      "aliases": {
+        "en": ["asparagus spears"],
+        "ja": ["アスパラガス"],
+        "ko": ["아스파라거스"],
+        "zh": ["芦笋"],
+        "zh-tw": ["蘆筍"],
+        "es": ["espárrago"],
+        "fr": ["asperge"]
+      },
+      "common_units": [
+        {"unit": "medium spear", "grams": 16},
+        {"unit": "cup", "grams": 134}
+      ]
+    },
+    {
+      "canonical_name": "artichoke",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 47,
+        "protein_g": 3.3,
+        "carbs_g": 10.5,
+        "fat_g": 0.2,
+        "fiber_g": 5.4
+      },
+      "aliases": {
+        "en": ["globe artichoke"],
+        "ja": ["アーティチョーク"],
+        "ko": ["아티초크"],
+        "zh": ["洋蓟"],
+        "zh-tw": ["洋薊"],
+        "es": ["alcachofa"],
+        "fr": ["artichaut"]
+      },
+      "common_units": [
+        {"unit": "medium artichoke", "grams": 128},
+        {"unit": "cup hearts", "grams": 120}
+      ]
+    },
+    {
+      "canonical_name": "eggplant",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 1.0,
+        "carbs_g": 5.9,
+        "fat_g": 0.2,
+        "fiber_g": 3.0
+      },
+      "aliases": {
+        "en": ["aubergine", "purple eggplant"],
+        "ja": ["茄子", "ナス"],
+        "ko": ["가지"],
+        "zh": ["茄子"],
+        "zh-tw": ["茄子"],
+        "es": ["berenjena"],
+        "fr": ["aubergine"]
+      },
+      "common_units": [
+        {"unit": "medium eggplant", "grams": 550},
+        {"unit": "cup cubed", "grams": 82}
+      ]
+    },
+    {
+      "canonical_name": "japanese eggplant",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 1.0,
+        "carbs_g": 5.9,
+        "fat_g": 0.2,
+        "fiber_g": 3.0
+      },
+      "aliases": {
+        "en": ["asian eggplant", "chinese eggplant"],
+        "ja": ["日本茄子", "長茄子"],
+        "ko": ["일본 가지"],
+        "zh": ["日本茄子", "长茄子"],
+        "zh-tw": ["日本茄子", "長茄子"],
+        "es": ["berenjena japonesa"],
+        "fr": ["aubergine japonaise"]
+      },
+      "common_units": [
+        {"unit": "medium eggplant", "grams": 200},
+        {"unit": "cup cubed", "grams": 82}
+      ]
+    },
+    {
+      "canonical_name": "white mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 3.1,
+        "carbs_g": 3.3,
+        "fat_g": 0.3,
+        "fiber_g": 1.0
+      },
+      "aliases": {
+        "en": ["button mushroom", "white button mushroom"],
+        "ja": ["ホワイトマッシュルーム"],
+        "ko": ["양송이버섯"],
+        "zh": ["白蘑菇", "双孢菇"],
+        "zh-tw": ["白蘑菇", "雙孢菇"],
+        "es": ["champiñón blanco"],
+        "fr": ["champignon de Paris"]
+      },
+      "common_units": [
+        {"unit": "medium mushroom", "grams": 18},
+        {"unit": "cup sliced", "grams": 70}
+      ]
+    },
+    {
+      "canonical_name": "cremini mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 3.1,
+        "carbs_g": 3.3,
+        "fat_g": 0.3,
+        "fiber_g": 1.0
+      },
+      "aliases": {
+        "en": ["baby bella mushroom", "brown mushroom"],
+        "ja": ["クレミニマッシュルーム"],
+        "ko": ["크레미니 버섯"],
+        "zh": ["棕蘑菇"],
+        "zh-tw": ["棕蘑菇"],
+        "es": ["champiñón cremini"],
+        "fr": ["champignon cremini"]
+      },
+      "common_units": [
+        {"unit": "medium mushroom", "grams": 18},
+        {"unit": "cup sliced", "grams": 70}
+      ]
+    },
+    {
+      "canonical_name": "portobello mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 2.1,
+        "carbs_g": 3.9,
+        "fat_g": 0.4,
+        "fiber_g": 1.3
+      },
+      "aliases": {
+        "en": ["portabella mushroom"],
+        "ja": ["ポートベロマッシュルーム"],
+        "ko": ["포토벨로 버섯"],
+        "zh": ["大褐菇"],
+        "zh-tw": ["大褐菇"],
+        "es": ["champiñón portobello"],
+        "fr": ["champignon portobello"]
+      },
+      "common_units": [
+        {"unit": "large cap", "grams": 84},
+        {"unit": "cup diced", "grams": 86}
+      ]
+    },
+    {
+      "canonical_name": "shiitake mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 34,
+        "protein_g": 2.2,
+        "carbs_g": 6.8,
+        "fat_g": 0.5,
+        "fiber_g": 2.5
+      },
+      "aliases": {
+        "en": ["shiitake"],
+        "ja": ["椎茸", "シイタケ"],
+        "ko": ["표고버섯"],
+        "zh": ["香菇"],
+        "zh-tw": ["香菇"],
+        "es": ["shiitake"],
+        "fr": ["shiitake"]
+      },
+      "common_units": [
+        {"unit": "medium mushroom", "grams": 15},
+        {"unit": "cup sliced", "grams": 73}
+      ]
+    },
+    {
+      "canonical_name": "oyster mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 33,
+        "protein_g": 3.3,
+        "carbs_g": 6.1,
+        "fat_g": 0.4,
+        "fiber_g": 2.3
+      },
+      "aliases": {
+        "en": ["oyster mushrooms"],
+        "ja": ["ヒラタケ", "平茸"],
+        "ko": ["느타리버섯"],
+        "zh": ["平菇", "蚝菇"],
+        "zh-tw": ["平菇", "蠔菇"],
+        "es": ["seta ostra"],
+        "fr": ["pleurote"]
+      },
+      "common_units": [
+        {"unit": "large mushroom", "grams": 28},
+        {"unit": "cup sliced", "grams": 86}
+      ]
+    },
+    {
+      "canonical_name": "enoki mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 37,
+        "protein_g": 2.7,
+        "carbs_g": 7.8,
+        "fat_g": 0.3,
+        "fiber_g": 2.7
+      },
+      "aliases": {
+        "en": ["enoki", "golden needle mushroom"],
+        "ja": ["えのき茸", "エノキタケ"],
+        "ko": ["팽이버섯"],
+        "zh": ["金针菇"],
+        "zh-tw": ["金針菇"],
+        "es": ["enoki"],
+        "fr": ["enoki"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 65},
+        {"unit": "package", "grams": 200}
+      ]
+    },
+    {
+      "canonical_name": "king oyster mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 33,
+        "protein_g": 3.3,
+        "carbs_g": 6.1,
+        "fat_g": 0.4,
+        "fiber_g": 2.3
+      },
+      "aliases": {
+        "en": ["king trumpet mushroom", "eryngii"],
+        "ja": ["エリンギ"],
+        "ko": ["새송이버섯"],
+        "zh": ["杏鲍菇"],
+        "zh-tw": ["杏鮑菇"],
+        "es": ["seta eryngii"],
+        "fr": ["pleurote du panicaut"]
+      },
+      "common_units": [
+        {"unit": "large mushroom", "grams": 50},
+        {"unit": "cup sliced", "grams": 86}
+      ]
+    },
+    {
+      "canonical_name": "maitake mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 31,
+        "protein_g": 1.9,
+        "carbs_g": 6.9,
+        "fat_g": 0.2,
+        "fiber_g": 2.7
+      },
+      "aliases": {
+        "en": ["hen of the woods"],
+        "ja": ["舞茸", "マイタケ"],
+        "ko": ["잎새버섯"],
+        "zh": ["舞茸"],
+        "zh-tw": ["舞茸"],
+        "es": ["maitake"],
+        "fr": ["maitake"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 70},
+        {"unit": "package", "grams": 100}
+      ]
+    },
+    {
+      "canonical_name": "straw mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 3.8,
+        "carbs_g": 4.2,
+        "fat_g": 0.7,
+        "fiber_g": 3.3
+      },
+      "aliases": {
+        "en": ["paddy straw mushroom"],
+        "ja": ["フクロタケ"],
+        "ko": ["짚버섯"],
+        "zh": ["草菇"],
+        "zh-tw": ["草菇"],
+        "es": ["champiñón de paja"],
+        "fr": ["volvaire"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 130},
+        {"unit": "can", "grams": 425}
+      ]
+    },
+    {
+      "canonical_name": "wood ear mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 0.6,
+        "carbs_g": 6.7,
+        "fat_g": 0.1,
+        "fiber_g": 6.3
+      },
+      "aliases": {
+        "en": ["black fungus", "cloud ear mushroom"],
+        "ja": ["キクラゲ", "木耳"],
+        "ko": ["목이버섯"],
+        "zh": ["木耳", "黑木耳"],
+        "zh-tw": ["木耳", "黑木耳"],
+        "es": ["oreja de Judas"],
+        "fr": ["oreille de Judas"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 8},
+        {"unit": "piece dried", "grams": 0.5}
+      ]
+    },
+    {
+      "canonical_name": "fennel bulb",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 31,
+        "protein_g": 1.2,
+        "carbs_g": 7.3,
+        "fat_g": 0.2,
+        "fiber_g": 3.1
+      },
+      "aliases": {
+        "en": ["fennel", "anise"],
+        "ja": ["フェンネル", "ウイキョウ"],
+        "ko": ["펜넬", "회향"],
+        "zh": ["茴香"],
+        "zh-tw": ["茴香"],
+        "es": ["hinojo"],
+        "fr": ["fenouil"]
+      },
+      "common_units": [
+        {"unit": "medium bulb", "grams": 234},
+        {"unit": "cup sliced", "grams": 87}
+      ]
+    },
+    {
+      "canonical_name": "jicama",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 38,
+        "protein_g": 0.7,
+        "carbs_g": 8.8,
+        "fat_g": 0.1,
+        "fiber_g": 4.9
+      },
+      "aliases": {
+        "en": ["mexican turnip", "yam bean"],
+        "ja": ["ヒカマ"],
+        "ko": ["히카마"],
+        "zh": ["凉薯", "沙葛"],
+        "zh-tw": ["涼薯", "沙葛"],
+        "es": ["jícama"],
+        "fr": ["jicama"]
+      },
+      "common_units": [
+        {"unit": "cup sliced", "grams": 120},
+        {"unit": "medium", "grams": 450}
+      ]
+    },
+    {
+      "canonical_name": "kohlrabi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 27,
+        "protein_g": 1.7,
+        "carbs_g": 6.2,
+        "fat_g": 0.1,
+        "fiber_g": 3.6
+      },
+      "aliases": {
+        "en": ["german turnip"],
+        "ja": ["コールラビ"],
+        "ko": ["콜라비"],
+        "zh": ["球茎甘蓝"],
+        "zh-tw": ["球莖甘藍"],
+        "es": ["colinabo"],
+        "fr": ["chou-rave"]
+      },
+      "common_units": [
+        {"unit": "cup cubed", "grams": 135},
+        {"unit": "medium", "grams": 140}
+      ]
+    },
+    {
+      "canonical_name": "okra",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 33,
+        "protein_g": 1.9,
+        "carbs_g": 7.5,
+        "fat_g": 0.2,
+        "fiber_g": 3.2
+      },
+      "aliases": {
+        "en": ["lady's finger", "gumbo"],
+        "ja": ["オクラ"],
+        "ko": ["오크라"],
+        "zh": ["秋葵"],
+        "zh-tw": ["秋葵"],
+        "es": ["okra", "quimbombó"],
+        "fr": ["gombo"]
+      },
+      "common_units": [
+        {"unit": "cup sliced", "grams": 100},
+        {"unit": "pod", "grams": 12}
+      ]
+    },
+    {
+      "canonical_name": "radicchio",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 1.4,
+        "carbs_g": 4.5,
+        "fat_g": 0.3,
+        "fiber_g": 0.9
+      },
+      "aliases": {
+        "en": ["italian chicory"],
+        "ja": ["ラディッキオ"],
+        "ko": ["라디치오"],
+        "zh": ["红菊苣"],
+        "zh-tw": ["紅菊苣"],
+        "es": ["radicchio"],
+        "fr": ["radicchio"]
+      },
+      "common_units": [
+        {"unit": "cup shredded", "grams": 40},
+        {"unit": "medium head", "grams": 200}
+      ]
+    },
+    {
+      "canonical_name": "endive",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 17,
+        "protein_g": 1.3,
+        "carbs_g": 3.4,
+        "fat_g": 0.2,
+        "fiber_g": 3.1
+      },
+      "aliases": {
+        "en": ["belgian endive", "witloof"],
+        "ja": ["エンダイブ"],
+        "ko": ["엔다이브"],
+        "zh": ["菊苣"],
+        "zh-tw": ["菊苣"],
+        "es": ["endibia"],
+        "fr": ["endive"]
+      },
+      "common_units": [
+        {"unit": "cup chopped", "grams": 50},
+        {"unit": "medium head", "grams": 60}
+      ]
+    },
+    {
+      "canonical_name": "collard greens",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 3.0,
+        "carbs_g": 5.7,
+        "fat_g": 0.6,
+        "fiber_g": 4.0
+      },
+      "aliases": {
+        "en": ["collards"],
+        "ja": ["コラードグリーン"],
+        "ko": ["콜라드 그린"],
+        "zh": ["羽衣甘蓝叶"],
+        "zh-tw": ["羽衣甘藍葉"],
+        "es": ["col forrajera", "berza"],
+        "fr": ["chou cavalier"]
+      },
+      "common_units": [
+        {"unit": "cup chopped", "grams": 36},
+        {"unit": "bunch", "grams": 400}
+      ]
+    },
+    {
+      "canonical_name": "mustard greens",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 27,
+        "protein_g": 2.9,
+        "carbs_g": 4.7,
+        "fat_g": 0.4,
+        "fiber_g": 3.2
+      },
+      "aliases": {
+        "en": ["mustard leaves"],
+        "ja": ["からし菜", "マスタードグリーン"],
+        "ko": ["겨자잎"],
+        "zh": ["芥菜"],
+        "zh-tw": ["芥菜"],
+        "es": ["hojas de mostaza"],
+        "fr": ["feuilles de moutarde"]
+      },
+      "common_units": [
+        {"unit": "cup chopped", "grams": 56},
+        {"unit": "bunch", "grams": 200}
+      ]
+    },
+    {
+      "canonical_name": "turnip greens",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 1.5,
+        "carbs_g": 7.1,
+        "fat_g": 0.3,
+        "fiber_g": 3.2
+      },
+      "aliases": {
+        "en": ["turnip tops"],
+        "ja": ["かぶの葉"],
+        "ko": ["순무잎"],
+        "zh": ["芜菁叶"],
+        "zh-tw": ["蕪菁葉"],
+        "es": ["hojas de nabo", "grelos"],
+        "fr": ["fanes de navet"]
+      },
+      "common_units": [
+        {"unit": "cup chopped", "grams": 55},
+        {"unit": "bunch", "grams": 150}
+      ]
+    },
+    {
+      "canonical_name": "beet greens",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 2.2,
+        "carbs_g": 4.3,
+        "fat_g": 0.1,
+        "fiber_g": 3.7
+      },
+      "aliases": {
+        "en": ["beet tops", "beetroot greens"],
+        "ja": ["ビーツの葉"],
+        "ko": ["비트잎"],
+        "zh": ["甜菜叶"],
+        "zh-tw": ["甜菜葉"],
+        "es": ["hojas de remolacha"],
+        "fr": ["fanes de betterave"]
+      },
+      "common_units": [
+        {"unit": "cup chopped", "grams": 38},
+        {"unit": "bunch", "grams": 150}
+      ]
+    },
+    {
+      "canonical_name": "escarole",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 17,
+        "protein_g": 1.3,
+        "carbs_g": 3.4,
+        "fat_g": 0.2,
+        "fiber_g": 3.1
+      },
+      "aliases": {
+        "en": ["broad-leaved endive"],
+        "ja": ["エスカロール"],
+        "ko": ["에스카롤"],
+        "zh": ["莴苣"],
+        "zh-tw": ["萵苣"],
+        "es": ["escarola"],
+        "fr": ["scarole"]
+      },
+      "common_units": [
+        {"unit": "cup chopped", "grams": 50},
+        {"unit": "medium head", "grams": 350}
+      ]
+    },
+    {
+      "canonical_name": "frisée",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 17,
+        "protein_g": 1.3,
+        "carbs_g": 3.4,
+        "fat_g": 0.2,
+        "fiber_g": 3.1
+      },
+      "aliases": {
+        "en": ["curly endive"],
+        "ja": ["フリゼ"],
+        "ko": ["프리제"],
+        "zh": ["卷叶菊苣"],
+        "zh-tw": ["捲葉菊苣"],
+        "es": ["achicoria rizada"],
+        "fr": ["frisée"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 50},
+        {"unit": "bunch", "grams": 200}
+      ]
+    },
+    {
+      "canonical_name": "rapini",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 3.2,
+        "carbs_g": 2.9,
+        "fat_g": 0.5,
+        "fiber_g": 2.7
+      },
+      "aliases": {
+        "en": ["broccoli rabe", "broccolini"],
+        "ja": ["ラピーニ", "菜の花"],
+        "ko": ["라피니"],
+        "zh": ["芥蓝"],
+        "zh-tw": ["芥藍"],
+        "es": ["rapini", "grelos"],
+        "fr": ["rapini"]
+      },
+      "common_units": [
+        {"unit": "cup chopped", "grams": 40},
+        {"unit": "bunch", "grams": 200}
+      ]
+    },
+    {
+      "canonical_name": "chinese broccoli",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 19,
+        "protein_g": 1.1,
+        "carbs_g": 3.8,
+        "fat_g": 0.7,
+        "fiber_g": 2.0
+      },
+      "aliases": {
+        "en": ["gai lan", "kai lan"],
+        "ja": ["カイラン", "芥藍"],
+        "ko": ["가이란", "개란"],
+        "zh": ["芥蓝"],
+        "zh-tw": ["芥藍"],
+        "es": ["brócoli chino"],
+        "fr": ["brocoli chinois"]
+      },
+      "common_units": [
+        {"unit": "cup chopped", "grams": 90},
+        {"unit": "bunch", "grams": 250}
+      ]
+    },
+    {
+      "canonical_name": "yu choy",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 15,
+        "protein_g": 1.5,
+        "carbs_g": 2.3,
+        "fat_g": 0.2,
+        "fiber_g": 1.0
+      },
+      "aliases": {
+        "en": ["choy sum", "chinese flowering cabbage"],
+        "ja": ["チョイサム", "油菜"],
+        "ko": ["유채"],
+        "zh": ["油菜", "菜心"],
+        "zh-tw": ["油菜", "菜心"],
+        "es": ["yu choy"],
+        "fr": ["yu choy"]
+      },
+      "common_units": [
+        {"unit": "cup chopped", "grams": 70},
+        {"unit": "bunch", "grams": 200}
+      ]
+    },
+    {
+      "canonical_name": "water spinach",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 19,
+        "protein_g": 2.6,
+        "carbs_g": 3.1,
+        "fat_g": 0.2,
+        "fiber_g": 2.1
+      },
+      "aliases": {
+        "en": ["kangkong", "ong choy", "morning glory"],
+        "ja": ["空芯菜", "クウシンサイ"],
+        "ko": ["공심채"],
+        "zh": ["空心菜", "蕹菜"],
+        "zh-tw": ["空心菜", "蕹菜"],
+        "es": ["espinaca de agua"],
+        "fr": ["liseron d'eau"]
+      },
+      "common_units": [
+        {"unit": "cup chopped", "grams": 56},
+        {"unit": "bunch", "grams": 200}
+      ]
+    },
+    {
+      "canonical_name": "tatsoi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 13,
+        "protein_g": 1.5,
+        "carbs_g": 2.2,
+        "fat_g": 0.2,
+        "fiber_g": 1.0
+      },
+      "aliases": {
+        "en": ["spoon mustard", "rosette bok choy"],
+        "ja": ["タツォイ"],
+        "ko": ["타쏘이"],
+        "zh": ["塌菜"],
+        "zh-tw": ["塌菜"],
+        "es": ["tatsoi"],
+        "fr": ["tatsoi"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 70},
+        {"unit": "bunch", "grams": 150}
+      ]
+    },
+    {
+      "canonical_name": "mizuna",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 2.2,
+        "carbs_g": 4.0,
+        "fat_g": 0.3,
+        "fiber_g": 2.2
+      },
+      "aliases": {
+        "en": ["japanese mustard greens", "spider mustard"],
+        "ja": ["水菜", "ミズナ"],
+        "ko": ["미즈나"],
+        "zh": ["水菜"],
+        "zh-tw": ["水菜"],
+        "es": ["mizuna"],
+        "fr": ["mizuna"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 56},
+        {"unit": "bunch", "grams": 100}
+      ]
+    },
+    {
+      "canonical_name": "microgreens",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 29,
+        "protein_g": 2.5,
+        "carbs_g": 4.4,
+        "fat_g": 0.5,
+        "fiber_g": 2.0
+      },
+      "aliases": {
+        "en": ["micro greens"],
+        "ja": ["マイクログリーン"],
+        "ko": ["마이크로그린"],
+        "zh": ["微型蔬菜"],
+        "zh-tw": ["微型蔬菜"],
+        "es": ["microvegetales"],
+        "fr": ["micropousses"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 25},
+        {"unit": "handful", "grams": 10}
+      ]
+    },
+    {
+      "canonical_name": "bean sprouts",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 30,
+        "protein_g": 3.0,
+        "carbs_g": 5.9,
+        "fat_g": 0.2,
+        "fiber_g": 1.8
+      },
+      "aliases": {
+        "en": ["mung bean sprouts"],
+        "ja": ["もやし", "緑豆もやし"],
+        "ko": ["숙주"],
+        "zh": ["豆芽", "绿豆芽"],
+        "zh-tw": ["豆芽", "綠豆芽"],
+        "es": ["brotes de soja"],
+        "fr": ["germes de haricot mungo"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 104},
+        {"unit": "handful", "grams": 30}
+      ]
+    },
+    {
+      "canonical_name": "soybean sprouts",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 85,
+        "protein_g": 8.5,
+        "carbs_g": 9.6,
+        "fat_g": 4.5,
+        "fiber_g": 0.8
+      },
+      "aliases": {
+        "en": ["soy sprouts"],
+        "ja": ["大豆もやし"],
+        "ko": ["콩나물"],
+        "zh": ["黄豆芽"],
+        "zh-tw": ["黃豆芽"],
+        "es": ["brotes de soja"],
+        "fr": ["germes de soja"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 70},
+        {"unit": "handful", "grams": 30}
+      ]
+    },
+    {
+      "canonical_name": "bamboo shoots",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 27,
+        "protein_g": 2.6,
+        "carbs_g": 5.2,
+        "fat_g": 0.3,
+        "fiber_g": 2.2
+      },
+      "aliases": {
+        "en": ["bamboo"],
+        "ja": ["竹の子", "たけのこ"],
+        "ko": ["죽순"],
+        "zh": ["竹笋"],
+        "zh-tw": ["竹筍"],
+        "es": ["brotes de bambú"],
+        "fr": ["pousses de bambou"]
+      },
+      "common_units": [
+        {"unit": "cup sliced", "grams": 151},
+        {"unit": "can", "grams": 227}
+      ]
+    },
+    {
+      "canonical_name": "lotus root",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 74,
+        "protein_g": 2.6,
+        "carbs_g": 17.2,
+        "fat_g": 0.1,
+        "fiber_g": 4.9
+      },
+      "aliases": {
+        "en": ["renkon", "lotus stem"],
+        "ja": ["蓮根", "れんこん"],
+        "ko": ["연근"],
+        "zh": ["莲藕"],
+        "zh-tw": ["蓮藕"],
+        "es": ["raíz de loto"],
+        "fr": ["racine de lotus"]
+      },
+      "common_units": [
+        {"unit": "cup sliced", "grams": 120},
+        {"unit": "medium section", "grams": 80}
+      ]
+    },
+    {
+      "canonical_name": "taro root",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 112,
+        "protein_g": 1.5,
+        "carbs_g": 26.5,
+        "fat_g": 0.2,
+        "fiber_g": 4.1
+      },
+      "aliases": {
+        "en": ["taro", "dasheen"],
+        "ja": ["里芋", "サトイモ"],
+        "ko": ["토란"],
+        "zh": ["芋头"],
+        "zh-tw": ["芋頭"],
+        "es": ["taro"],
+        "fr": ["taro"]
+      },
+      "common_units": [
+        {"unit": "cup cubed", "grams": 132},
+        {"unit": "medium", "grams": 145}
+      ]
+    },
+    {
+      "canonical_name": "cassava",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 160,
+        "protein_g": 1.4,
+        "carbs_g": 38.1,
+        "fat_g": 0.3,
+        "fiber_g": 1.8
+      },
+      "aliases": {
+        "en": ["yuca", "manioc"],
+        "ja": ["キャッサバ", "タピオカ"],
+        "ko": ["카사바"],
+        "zh": ["木薯"],
+        "zh-tw": ["木薯"],
+        "es": ["yuca", "mandioca"],
+        "fr": ["manioc"]
+      },
+      "common_units": [
+        {"unit": "cup cubed", "grams": 103},
+        {"unit": "medium root", "grams": 400}
+      ]
+    },
+    {
+      "canonical_name": "yam",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 118,
+        "protein_g": 1.5,
+        "carbs_g": 27.9,
+        "fat_g": 0.2,
+        "fiber_g": 4.1
+      },
+      "aliases": {
+        "en": ["true yam"],
+        "ja": ["ヤム芋", "山芋"],
+        "ko": ["참마"],
+        "zh": ["山药"],
+        "zh-tw": ["山藥"],
+        "es": ["ñame"],
+        "fr": ["igname"]
+      },
+      "common_units": [
+        {"unit": "cup cubed", "grams": 136},
+        {"unit": "medium", "grams": 200}
+      ]
+    },
+    {
+      "canonical_name": "edamame",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 122,
+        "protein_g": 11.9,
+        "carbs_g": 10.0,
+        "fat_g": 5.2,
+        "fiber_g": 5.2
+      },
+      "aliases": {
+        "en": ["soybeans", "green soybeans"],
+        "ja": ["枝豆", "エダマメ"],
+        "ko": ["에다마메", "풋콩"],
+        "zh": ["毛豆"],
+        "zh-tw": ["毛豆"],
+        "es": ["edamame"],
+        "fr": ["edamame"]
+      },
+      "common_units": [
+        {"unit": "cup shelled", "grams": 155},
+        {"unit": "cup in pods", "grams": 125}
+      ]
+    },
+    {
+      "canonical_name": "hearts of palm",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 28,
+        "protein_g": 2.7,
+        "carbs_g": 4.6,
+        "fat_g": 0.6,
+        "fiber_g": 1.5
+      },
+      "aliases": {
+        "en": ["palm hearts"],
+        "ja": ["ハーツオブパーム", "ヤシの芯"],
+        "ko": ["하트 오브 팜"],
+        "zh": ["棕榈心"],
+        "zh-tw": ["棕櫚心"],
+        "es": ["palmito"],
+        "fr": ["cœur de palmier"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 33},
+        {"unit": "cup sliced", "grams": 146}
+      ]
+    },
+    {
+      "canonical_name": "seaweed",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 45,
+        "protein_g": 6.0,
+        "carbs_g": 9.6,
+        "fat_g": 0.6,
+        "fiber_g": 0.5
+      },
+      "aliases": {
+        "en": ["nori", "sea vegetable"],
+        "ja": ["海苔", "のり"],
+        "ko": ["김", "해초"],
+        "zh": ["海苔", "紫菜"],
+        "zh-tw": ["海苔", "紫菜"],
+        "es": ["alga marina"],
+        "fr": ["algue"]
+      },
+      "common_units": [
+        {"unit": "sheet", "grams": 2},
+        {"unit": "cup", "grams": 80}
+      ]
+    },
+    {
+      "canonical_name": "wakame",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 45,
+        "protein_g": 3.0,
+        "carbs_g": 9.1,
+        "fat_g": 0.6,
+        "fiber_g": 0.5
+      },
+      "aliases": {
+        "en": ["sea mustard"],
+        "ja": ["わかめ", "ワカメ"],
+        "ko": ["미역"],
+        "zh": ["裙带菜"],
+        "zh-tw": ["裙帶菜"],
+        "es": ["wakame"],
+        "fr": ["wakame"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 80},
+        {"unit": "tablespoon dried", "grams": 2}
+      ]
+    },
+    {
+      "canonical_name": "kombu",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 1.7,
+        "carbs_g": 9.6,
+        "fat_g": 0.6,
+        "fiber_g": 1.3
+      },
+      "aliases": {
+        "en": ["kelp"],
+        "ja": ["昆布", "コンブ"],
+        "ko": ["다시마"],
+        "zh": ["海带", "昆布"],
+        "zh-tw": ["海帶", "昆布"],
+        "es": ["kombu", "kelp"],
+        "fr": ["kombu"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 8},
+        {"unit": "cup", "grams": 80}
+      ]
+    },
+    {
+      "canonical_name": "bitter melon",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 17,
+        "protein_g": 1.0,
+        "carbs_g": 3.7,
+        "fat_g": 0.2,
+        "fiber_g": 2.8
+      },
+      "aliases": {
+        "en": ["bitter gourd", "karela"],
+        "ja": ["ゴーヤ", "苦瓜"],
+        "ko": ["여주"],
+        "zh": ["苦瓜"],
+        "zh-tw": ["苦瓜"],
+        "es": ["melón amargo"],
+        "fr": ["margose"]
+      },
+      "common_units": [
+        {"unit": "cup sliced", "grams": 93},
+        {"unit": "medium", "grams": 120}
+      ]
+    },
+    {
+      "canonical_name": "winter melon",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 13,
+        "protein_g": 0.4,
+        "carbs_g": 3.0,
+        "fat_g": 0.2,
+        "fiber_g": 2.9
+      },
+      "aliases": {
+        "en": ["ash gourd", "wax gourd"],
+        "ja": ["冬瓜", "トウガン"],
+        "ko": ["동아"],
+        "zh": ["冬瓜"],
+        "zh-tw": ["冬瓜"],
+        "es": ["calabaza de cera"],
+        "fr": ["melon d'hiver"]
+      },
+      "common_units": [
+        {"unit": "cup cubed", "grams": 150},
+        {"unit": "slice", "grams": 100}
+      ]
+    },
+    {
+      "canonical_name": "bottle gourd",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 14,
+        "protein_g": 0.6,
+        "carbs_g": 3.4,
+        "fat_g": 0.0,
+        "fiber_g": 0.5
+      },
+      "aliases": {
+        "en": ["calabash", "opo squash"],
+        "ja": ["ひょうたん"],
+        "ko": ["박"],
+        "zh": ["葫芦"],
+        "zh-tw": ["葫蘆"],
+        "es": ["calabaza botella"],
+        "fr": ["calebasse"]
+      },
+      "common_units": [
+        {"unit": "cup cubed", "grams": 116},
+        {"unit": "medium", "grams": 400}
+      ]
+    },
+    {
+      "canonical_name": "luffa",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 20,
+        "protein_g": 1.2,
+        "carbs_g": 4.4,
+        "fat_g": 0.2,
+        "fiber_g": 1.1
+      },
+      "aliases": {
+        "en": ["chinese okra", "loofah", "sponge gourd"],
+        "ja": ["へちま"],
+        "ko": ["수세미"],
+        "zh": ["丝瓜"],
+        "zh-tw": ["絲瓜"],
+        "es": ["luffa", "estropajo"],
+        "fr": ["luffa"]
+      },
+      "common_units": [
+        {"unit": "cup sliced", "grams": 100},
+        {"unit": "medium", "grams": 200}
+      ]
+    },
+    {
+      "canonical_name": "chayote",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 19,
+        "protein_g": 0.8,
+        "carbs_g": 4.5,
+        "fat_g": 0.1,
+        "fiber_g": 1.7
+      },
+      "aliases": {
+        "en": ["christophine", "mirliton"],
+        "ja": ["ハヤトウリ"],
+        "ko": ["차요테"],
+        "zh": ["佛手瓜"],
+        "zh-tw": ["佛手瓜"],
+        "es": ["chayote"],
+        "fr": ["chayote"]
+      },
+      "common_units": [
+        {"unit": "cup cubed", "grams": 132},
+        {"unit": "medium", "grams": 200}
+      ]
+    },
+    {
+      "canonical_name": "horseradish",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 48,
+        "protein_g": 1.2,
+        "carbs_g": 11.3,
+        "fat_g": 0.7,
+        "fiber_g": 3.3
+      },
+      "aliases": {
+        "en": ["horseradish root"],
+        "ja": ["西洋わさび", "ホースラディッシュ"],
+        "ko": ["양고추냉이"],
+        "zh": ["辣根"],
+        "zh-tw": ["辣根"],
+        "es": ["rábano picante"],
+        "fr": ["raifort"]
+      },
+      "common_units": [
+        {"unit": "tablespoon prepared", "grams": 15},
+        {"unit": "teaspoon prepared", "grams": 5}
+      ]
+    },
+    {
+      "canonical_name": "ginger root",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 80,
+        "protein_g": 1.8,
+        "carbs_g": 17.8,
+        "fat_g": 0.8,
+        "fiber_g": 2.0
+      },
+      "aliases": {
+        "en": ["ginger", "fresh ginger"],
+        "ja": ["生姜", "しょうが"],
+        "ko": ["생강"],
+        "zh": ["姜", "生姜"],
+        "zh-tw": ["薑", "生薑"],
+        "es": ["jengibre"],
+        "fr": ["gingembre"]
+      },
+      "common_units": [
+        {"unit": "tablespoon minced", "grams": 6},
+        {"unit": "teaspoon minced", "grams": 2},
+        {"unit": "inch piece", "grams": 11}
+      ]
+    },
+    {
+      "canonical_name": "galangal",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 71,
+        "protein_g": 1.0,
+        "carbs_g": 15.0,
+        "fat_g": 1.0,
+        "fiber_g": 2.1
+      },
+      "aliases": {
+        "en": ["thai ginger", "blue ginger"],
+        "ja": ["ガランガル"],
+        "ko": ["갈랑갈"],
+        "zh": ["高良姜"],
+        "zh-tw": ["高良薑"],
+        "es": ["galanga"],
+        "fr": ["galanga"]
+      },
+      "common_units": [
+        {"unit": "slice", "grams": 3},
+        {"unit": "tablespoon sliced", "grams": 8}
+      ]
+    },
+    {
+      "canonical_name": "turmeric root",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 312,
+        "protein_g": 9.7,
+        "carbs_g": 67.1,
+        "fat_g": 3.3,
+        "fiber_g": 22.7
+      },
+      "aliases": {
+        "en": ["fresh turmeric", "turmeric"],
+        "ja": ["ターメリック", "ウコン"],
+        "ko": ["강황"],
+        "zh": ["姜黄"],
+        "zh-tw": ["薑黃"],
+        "es": ["cúrcuma"],
+        "fr": ["curcuma"]
+      },
+      "common_units": [
+        {"unit": "inch piece", "grams": 12},
+        {"unit": "tablespoon minced", "grams": 8}
+      ]
+    },
+    {
+      "canonical_name": "lemongrass",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 99,
+        "protein_g": 1.8,
+        "carbs_g": 25.3,
+        "fat_g": 0.5,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["lemon grass"],
+        "ja": ["レモングラス"],
+        "ko": ["레몬그라스"],
+        "zh": ["香茅"],
+        "zh-tw": ["香茅"],
+        "es": ["hierba limón", "citronela"],
+        "fr": ["citronnelle"]
+      },
+      "common_units": [
+        {"unit": "stalk", "grams": 15},
+        {"unit": "tablespoon sliced", "grams": 6}
+      ]
+    }
+  ]
+}

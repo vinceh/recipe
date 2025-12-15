@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
+import type { ComputedRef } from 'vue'
 import { adminApi } from '@/services/adminApi'
 import type {
   RecipeDetail,
@@ -35,8 +36,19 @@ export const useAdminStore = defineStore('admin', () => {
     total_pages: 0
   })
 
-  const loading = ref(false)
+  const loadingOperations = ref<Set<string>>(new Set())
+  const loading = computed(() => loadingOperations.value.size > 0)
   const error = ref<string | null>(null)
+
+  function startLoading(operation: string) {
+    loadingOperations.value = new Set([...loadingOperations.value, operation])
+  }
+
+  function stopLoading(operation: string) {
+    const newSet = new Set(loadingOperations.value)
+    newSet.delete(operation)
+    loadingOperations.value = newSet
+  }
 
   // Getters
   const activePrompts = computed(() => aiPrompts.value.filter(p => p.active))
@@ -53,7 +65,7 @@ export const useAdminStore = defineStore('admin', () => {
 
   // Recipe Actions
   async function fetchRecipes(params: any = {}) {
-    loading.value = true
+    startLoading('fetchRecipes')
     error.value = null
 
     try {
@@ -69,12 +81,12 @@ export const useAdminStore = defineStore('admin', () => {
       error.value = err.response?.data?.message || err.message || 'Failed to fetch recipes'
       console.error('Error fetching recipes:', err)
     } finally {
-      loading.value = false
+      stopLoading('fetchRecipes')
     }
   }
 
   async function fetchRecipe(id: number) {
-    loading.value = true
+    startLoading('fetchRecipe')
     error.value = null
 
     try {
@@ -89,12 +101,12 @@ export const useAdminStore = defineStore('admin', () => {
       error.value = err.response?.data?.message || err.message || 'Failed to fetch recipe'
       console.error('Error fetching recipe:', err)
     } finally {
-      loading.value = false
+      stopLoading('fetchRecipe')
     }
   }
 
   async function createRecipe(recipe: Partial<RecipeDetail>) {
-    loading.value = true
+    startLoading('createRecipe')
     error.value = null
 
     try {
@@ -111,12 +123,12 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error creating recipe:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('createRecipe')
     }
   }
 
   async function updateRecipe(id: number, recipe: Partial<RecipeDetail>) {
-    loading.value = true
+    startLoading('updateRecipe')
     error.value = null
 
     try {
@@ -139,12 +151,12 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error updating recipe:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('updateRecipe')
     }
   }
 
   async function deleteRecipe(id: number) {
-    loading.value = true
+    startLoading('deleteRecipe')
     error.value = null
 
     try {
@@ -163,12 +175,12 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error deleting recipe:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('deleteRecipe')
     }
   }
 
   async function bulkDeleteRecipes(ids: number[]) {
-    loading.value = true
+    startLoading('bulkDeleteRecipes')
     error.value = null
 
     try {
@@ -185,12 +197,12 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error deleting recipes:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('bulkDeleteRecipes')
     }
   }
 
   async function parseText(payload: ParseTextPayload) {
-    loading.value = true
+    startLoading('parseText')
     error.value = null
 
     try {
@@ -206,12 +218,12 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error parsing text:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('parseText')
     }
   }
 
   async function parseUrl(payload: ParseUrlPayload) {
-    loading.value = true
+    startLoading('parseUrl')
     error.value = null
 
     try {
@@ -227,12 +239,12 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error parsing URL:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('parseUrl')
     }
   }
 
   async function parseImage(formData: FormData) {
-    loading.value = true
+    startLoading('parseImage')
     error.value = null
 
     try {
@@ -248,12 +260,12 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error parsing image:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('parseImage')
     }
   }
 
   async function checkDuplicates(payload: CheckDuplicatesPayload) {
-    loading.value = true
+    startLoading('checkDuplicates')
     error.value = null
 
     try {
@@ -270,12 +282,12 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error checking duplicates:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('checkDuplicates')
     }
   }
 
   async function regenerateVariants(id: number) {
-    loading.value = true
+    startLoading('regenerateVariants')
     error.value = null
 
     try {
@@ -294,12 +306,12 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error regenerating variants:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('regenerateVariants')
     }
   }
 
   async function regenerateTranslations(id: number) {
-    loading.value = true
+    startLoading('regenerateTranslations')
     error.value = null
 
     try {
@@ -318,13 +330,13 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error regenerating translations:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('regenerateTranslations')
     }
   }
 
   // Data Reference Actions
   async function fetchDataReferences(params: any = {}) {
-    loading.value = true
+    startLoading('fetchDataReferences')
     error.value = null
 
     try {
@@ -339,12 +351,12 @@ export const useAdminStore = defineStore('admin', () => {
       error.value = err.response?.data?.message || err.message || 'Failed to fetch data references'
       console.error('Error fetching data references:', err)
     } finally {
-      loading.value = false
+      stopLoading('fetchDataReferences')
     }
   }
 
   async function createDataReference(dataRef: Partial<DataReference>) {
-    loading.value = true
+    startLoading('createDataReference')
     error.value = null
 
     try {
@@ -361,12 +373,12 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error creating data reference:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('createDataReference')
     }
   }
 
   async function updateDataReference(id: number, dataRef: Partial<DataReference>) {
-    loading.value = true
+    startLoading('updateDataReference')
     error.value = null
 
     try {
@@ -386,12 +398,12 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error updating data reference:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('updateDataReference')
     }
   }
 
   async function deleteDataReference(id: number) {
-    loading.value = true
+    startLoading('deleteDataReference')
     error.value = null
 
     try {
@@ -407,12 +419,12 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error deleting data reference:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('deleteDataReference')
     }
   }
 
   async function toggleDataReferenceActive(id: number, active: boolean) {
-    loading.value = true
+    startLoading('toggleDataReferenceActive')
     error.value = null
 
     try {
@@ -434,13 +446,13 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error toggling data reference:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('toggleDataReferenceActive')
     }
   }
 
   // AI Prompt Actions
   async function fetchAiPrompts(params: any = {}) {
-    loading.value = true
+    startLoading('fetchAiPrompts')
     error.value = null
 
     try {
@@ -455,12 +467,12 @@ export const useAdminStore = defineStore('admin', () => {
       error.value = err.response?.data?.message || err.message || 'Failed to fetch AI prompts'
       console.error('Error fetching AI prompts:', err)
     } finally {
-      loading.value = false
+      stopLoading('fetchAiPrompts')
     }
   }
 
   async function createAiPrompt(prompt: Partial<AiPrompt>) {
-    loading.value = true
+    startLoading('createAiPrompt')
     error.value = null
 
     try {
@@ -477,12 +489,12 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error creating AI prompt:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('createAiPrompt')
     }
   }
 
   async function updateAiPrompt(id: number, prompt: Partial<AiPrompt>) {
-    loading.value = true
+    startLoading('updateAiPrompt')
     error.value = null
 
     try {
@@ -502,12 +514,12 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error updating AI prompt:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('updateAiPrompt')
     }
   }
 
   async function deleteAiPrompt(id: number) {
-    loading.value = true
+    startLoading('deleteAiPrompt')
     error.value = null
 
     try {
@@ -523,19 +535,18 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error deleting AI prompt:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('deleteAiPrompt')
     }
   }
 
   async function activateAiPrompt(id: number) {
-    loading.value = true
+    startLoading('activateAiPrompt')
     error.value = null
 
     try {
       const response = await adminApi.activateAiPrompt(id)
 
       if (response.success && response.data) {
-        // Deactivate all prompts of the same type
         const prompt = aiPrompts.value.find(p => p.id === id)
         if (prompt) {
           aiPrompts.value.forEach(p => {
@@ -545,7 +556,6 @@ export const useAdminStore = defineStore('admin', () => {
           })
         }
 
-        // Activate the selected prompt
         const index = aiPrompts.value.findIndex(p => p.id === id)
         if (index !== -1) {
           aiPrompts.value[index] = response.data.ai_prompt
@@ -560,12 +570,12 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error activating AI prompt:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('activateAiPrompt')
     }
   }
 
   async function testAiPrompt(id: number, testVariables: Record<string, any>) {
-    loading.value = true
+    startLoading('testAiPrompt')
     error.value = null
 
     try {
@@ -581,13 +591,13 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error testing AI prompt:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('testAiPrompt')
     }
   }
 
   // Ingredient Actions
   async function fetchIngredients(params: any = {}) {
-    loading.value = true
+    startLoading('fetchIngredients')
     error.value = null
 
     try {
@@ -603,12 +613,12 @@ export const useAdminStore = defineStore('admin', () => {
       error.value = err.response?.data?.message || err.message || 'Failed to fetch ingredients'
       console.error('Error fetching ingredients:', err)
     } finally {
-      loading.value = false
+      stopLoading('fetchIngredients')
     }
   }
 
   async function createIngredient(ingredient: Partial<Ingredient>) {
-    loading.value = true
+    startLoading('createIngredient')
     error.value = null
 
     try {
@@ -625,12 +635,12 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error creating ingredient:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('createIngredient')
     }
   }
 
   async function updateIngredient(id: number, ingredient: Partial<Ingredient>) {
-    loading.value = true
+    startLoading('updateIngredient')
     error.value = null
 
     try {
@@ -650,12 +660,12 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error updating ingredient:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('updateIngredient')
     }
   }
 
   async function deleteIngredient(id: number) {
-    loading.value = true
+    startLoading('deleteIngredient')
     error.value = null
 
     try {
@@ -671,12 +681,12 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error deleting ingredient:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('deleteIngredient')
     }
   }
 
   async function refreshNutrition(id: number) {
-    loading.value = true
+    startLoading('refreshNutrition')
     error.value = null
 
     try {
@@ -696,7 +706,7 @@ export const useAdminStore = defineStore('admin', () => {
       console.error('Error refreshing nutrition:', err)
       throw err
     } finally {
-      loading.value = false
+      stopLoading('refreshNutrition')
     }
   }
 

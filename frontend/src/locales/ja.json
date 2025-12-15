@@ -36,7 +36,10 @@
       "actions": "操作",
       "yes": "はい",
       "no": "いいえ",
+      "serving": "人分",
       "servings": "人分",
+      "Serving": "人分",
+      "Servings": "人分",
       "difficulty": "難易度"
     },
     "messages": {
@@ -55,6 +58,7 @@
     "home": "ホーム",
     "recipes": "レシピ",
     "favorites": "お気に入り",
+    "menu": "メニュー",
     "about": "概要",
     "contact": "お問い合わせ",
     "login": "ログイン",
@@ -186,7 +190,25 @@
     "subtitle": "レシピコレクションを探索",
     "searchPlaceholder": "レシピを検索...",
     "noRecipes": "レシピが見つかりません",
-    "noRecipesDescription": "検索を調整するか、すべてのレシピを参照してください"
+    "noRecipesDescription": "検索を調整するか、すべてのレシピを参照してください",
+    "featured": "おすすめ",
+    "results": "検索結果",
+    "recipesCount": "件",
+    "favorites": "お気に入り"
+  },
+  "favorites": {
+    "title": "お気に入りレシピ",
+    "searchPlaceholder": "お気に入りのレシピを検索...",
+    "noSearchResults": "お気に入りレシピが見つかりません",
+    "empty": {
+      "title": "お気に入りのレシピはまだありません",
+      "description": "お気に入りのレシピを見つけたら、ハートアイコンをクリックしてここに保存しましょう。",
+      "browseRecipes": "レシピを探す"
+    }
+  },
+  "profile": {
+    "accountInfo": "アカウント情報",
+    "comingSoon": "その他のプロフィール機能は近日公開予定..."
   },
   "recipe": {
     "view": {
@@ -196,9 +218,34 @@
       "cook": "調理",
       "total": "合計",
       "ingredients": "材料",
+      "steps": "手順",
       "equipment": "調理器具",
       "instructions": "手順",
-      "nutrition": "栄養情報"
+      "nutrition": "栄養情報",
+      "optional": "任意",
+      "perServing": "1人分あたり",
+      "cals": "カロリー",
+      "carbs": "炭水化物",
+      "protein": "タンパク質",
+      "fat": "脂質",
+      "adjustRecipe": "レシピを調整",
+      "adjusted": "調整済み",
+      "aiImageCaption": "AI生成のプレースホルダー画像です。実際と異なる場合があります。",
+      "aiAdjustmentDisclaimer": "これはAI生成による調整です。内容が正確でない場合があります。",
+      "restoreToOriginal": "元に戻す",
+      "images": "画像",
+      "favorite": "お気に入りに追加",
+      "unfavorite": "お気に入りから削除"
+    },
+    "adjust": {
+      "title": "レシピを調整",
+      "description": "このレシピをどのように調整しますか？",
+      "submit": "レシピを調整",
+      "adjusting": "調整中...",
+      "adjustedFrom": "調整前：",
+      "placeholder": "例：\n• きのこを使ってベジタリアン向けに\n• スパイスを2倍にして風味を増す\n• 牛肉を鶏肉に置き換える\n• グルテンフリーにする\n• 砂糖を半分に減らす",
+      "error": "レシピの調整に失敗しました。もう一度お試しください。",
+      "errorWithMessage": "レシピの調整に失敗しました：{message}"
     }
   },
   "admin": {

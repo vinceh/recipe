@@ -1,0 +1,718 @@
+{
+  "batch": 2,
+  "agent": 7,
+  "category": "eggs",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "chicken egg whole",
+      "category": "protein",
+      "per_100g": {
+        "calories": 143,
+        "protein_g": 12.6,
+        "carbs_g": 0.7,
+        "fat_g": 9.5,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["whole egg", "chicken egg", "egg", "fresh egg", "raw egg"],
+        "ja": ["全卵", "鶏卵", "卵", "生卵"],
+        "ko": ["전란", "계란", "달걀", "생란"],
+        "zh": ["全蛋", "鸡蛋", "鲜蛋"],
+        "zh-tw": ["全蛋", "雞蛋", "鮮蛋"],
+        "es": ["huevo entero", "huevo de gallina", "huevo fresco"],
+        "fr": ["œuf entier", "œuf de poule", "œuf frais"]
+      },
+      "common_units": [
+        {"unit": "large egg", "grams": 50},
+        {"unit": "medium egg", "grams": 44},
+        {"unit": "extra large egg", "grams": 56},
+        {"unit": "egg", "grams": 50}
+      ]
+    },
+    {
+      "canonical_name": "chicken egg white",
+      "category": "protein",
+      "per_100g": {
+        "calories": 52,
+        "protein_g": 10.9,
+        "carbs_g": 0.7,
+        "fat_g": 0.2,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["egg white", "egg albumen", "whites only"],
+        "ja": ["卵白", "白身"],
+        "ko": ["계란 흰자", "난백", "흰자"],
+        "zh": ["蛋白", "蛋清"],
+        "zh-tw": ["蛋白", "蛋清"],
+        "es": ["clara de huevo", "clara"],
+        "fr": ["blanc d'œuf", "blanc"]
+      },
+      "common_units": [
+        {"unit": "large egg white", "grams": 33},
+        {"unit": "egg white", "grams": 33}
+      ]
+    },
+    {
+      "canonical_name": "chicken egg yolk",
+      "category": "protein",
+      "per_100g": {
+        "calories": 322,
+        "protein_g": 15.9,
+        "carbs_g": 3.6,
+        "fat_g": 26.5,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["egg yolk", "yolk", "yolks only"],
+        "ja": ["卵黄", "黄身"],
+        "ko": ["계란 노른자", "난황", "노른자"],
+        "zh": ["蛋黄", "蛋黃"],
+        "zh-tw": ["蛋黃", "黃"],
+        "es": ["yema de huevo", "yema"],
+        "fr": ["jaune d'œuf", "jaune"]
+      },
+      "common_units": [
+        {"unit": "large egg yolk", "grams": 17},
+        {"unit": "egg yolk", "grams": 17}
+      ]
+    },
+    {
+      "canonical_name": "duck egg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 185,
+        "protein_g": 12.8,
+        "carbs_g": 1.5,
+        "fat_g": 13.8,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["duck egg", "fresh duck egg"],
+        "ja": ["アヒルの卵", "鴨卵"],
+        "ko": ["오리알", "오리 계란"],
+        "zh": ["鸭蛋", "鲜鸭蛋"],
+        "zh-tw": ["鴨蛋", "鮮鴨蛋"],
+        "es": ["huevo de pato"],
+        "fr": ["œuf de canard"]
+      },
+      "common_units": [
+        {"unit": "duck egg", "grams": 70}
+      ]
+    },
+    {
+      "canonical_name": "quail egg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 158,
+        "protein_g": 13.1,
+        "carbs_g": 0.4,
+        "fat_g": 11.1,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["quail egg", "fresh quail egg"],
+        "ja": ["うずらの卵", "鶉卵"],
+        "ko": ["메추라기알", "메추리알"],
+        "zh": ["鹌鹑蛋", "鹌鹑卵"],
+        "zh-tw": ["鵪鶉蛋", "鵪鶉卵"],
+        "es": ["huevo de codorniz"],
+        "fr": ["œuf de caille"]
+      },
+      "common_units": [
+        {"unit": "quail egg", "grams": 9}
+      ]
+    },
+    {
+      "canonical_name": "goose egg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 185,
+        "protein_g": 13.9,
+        "carbs_g": 1.4,
+        "fat_g": 13.3,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["goose egg", "fresh goose egg"],
+        "ja": ["ガチョウの卵", "鵞鳥卵"],
+        "ko": ["거위알", "거위 계란"],
+        "zh": ["鹅蛋", "鹅卵"],
+        "zh-tw": ["鵝蛋", "鵝卵"],
+        "es": ["huevo de ganso"],
+        "fr": ["œuf d'oie"]
+      },
+      "common_units": [
+        {"unit": "goose egg", "grams": 144}
+      ]
+    },
+    {
+      "canonical_name": "century egg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 171,
+        "protein_g": 13.1,
+        "carbs_g": 4.2,
+        "fat_g": 10.7,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["century egg", "preserved egg", "hundred-year egg", "thousand-year egg", "pidan"],
+        "ja": ["ピータン", "皮蛋"],
+        "ko": ["피단", "삭힌 계란"],
+        "zh": ["皮蛋", "松花蛋", "变蛋"],
+        "zh-tw": ["皮蛋", "松花蛋", "變蛋"],
+        "es": ["huevo centenario", "huevo milenario"],
+        "fr": ["œuf de cent ans", "pidan"]
+      },
+      "common_units": [
+        {"unit": "century egg", "grams": 60}
+      ]
+    },
+    {
+      "canonical_name": "salted duck egg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 195,
+        "protein_g": 12.4,
+        "carbs_g": 1.8,
+        "fat_g": 14.2,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["salted duck egg", "salted egg", "brined duck egg"],
+        "ja": ["塩漬けアヒル卵", "咸鴨蛋"],
+        "ko": ["소금에 절인 오리알", "함단"],
+        "zh": ["咸鸭蛋", "盐蛋"],
+        "zh-tw": ["鹹鴨蛋", "鹽蛋"],
+        "es": ["huevo de pato salado"],
+        "fr": ["œuf de canard salé"]
+      },
+      "common_units": [
+        {"unit": "salted duck egg", "grams": 70}
+      ]
+    },
+    {
+      "canonical_name": "dried egg powder",
+      "category": "protein",
+      "per_100g": {
+        "calories": 592,
+        "protein_g": 47.4,
+        "carbs_g": 4.9,
+        "fat_g": 41.2,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["egg powder", "powdered egg", "dried whole egg", "dehydrated egg"],
+        "ja": ["卵粉末", "粉末卵", "乾燥卵"],
+        "ko": ["계란 가루", "분말 계란"],
+        "zh": ["蛋粉", "全蛋粉"],
+        "zh-tw": ["蛋粉", "全蛋粉"],
+        "es": ["huevo en polvo", "huevo deshidratado"],
+        "fr": ["œuf en poudre", "œuf déshydraté"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 8},
+        {"unit": "cup", "grams": 85}
+      ]
+    },
+    {
+      "canonical_name": "liquid egg whites",
+      "category": "protein",
+      "per_100g": {
+        "calories": 50,
+        "protein_g": 10.5,
+        "carbs_g": 0.8,
+        "fat_g": 0.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["liquid egg white", "carton egg whites", "pasteurized egg whites"],
+        "ja": ["液体卵白", "パック卵白"],
+        "ko": ["액상 계란 흰자", "팩 흰자"],
+        "zh": ["液体蛋白", "盒装蛋白"],
+        "zh-tw": ["液體蛋白", "盒裝蛋白"],
+        "es": ["claras de huevo líquidas", "claras pasteurizadas"],
+        "fr": ["blancs d'œuf liquides", "blancs pasteurisés"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 240},
+        {"unit": "tbsp", "grams": 15}
+      ]
+    },
+    {
+      "canonical_name": "hard boiled egg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 155,
+        "protein_g": 12.6,
+        "carbs_g": 1.1,
+        "fat_g": 10.6,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["hard boiled egg", "hard-cooked egg", "boiled egg"],
+        "ja": ["ゆで卵", "固ゆで卵"],
+        "ko": ["삶은 계란", "완숙 계란"],
+        "zh": ["煮鸡蛋", "水煮蛋"],
+        "zh-tw": ["煮雞蛋", "水煮蛋"],
+        "es": ["huevo duro", "huevo cocido"],
+        "fr": ["œuf dur", "œuf cuit"]
+      },
+      "common_units": [
+        {"unit": "large egg", "grams": 50},
+        {"unit": "egg", "grams": 50}
+      ]
+    },
+    {
+      "canonical_name": "soft boiled egg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 147,
+        "protein_g": 12.5,
+        "carbs_g": 0.8,
+        "fat_g": 10.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["soft boiled egg", "soft-cooked egg", "jammy egg"],
+        "ja": ["半熟卵", "温泉卵"],
+        "ko": ["반숙 계란", "반숙란"],
+        "zh": ["溏心蛋", "半熟蛋"],
+        "zh-tw": ["溏心蛋", "半熟蛋"],
+        "es": ["huevo pasado por agua", "huevo blando"],
+        "fr": ["œuf mollet", "œuf à la coque"]
+      },
+      "common_units": [
+        {"unit": "large egg", "grams": 50},
+        {"unit": "egg", "grams": 50}
+      ]
+    },
+    {
+      "canonical_name": "poached egg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 143,
+        "protein_g": 12.6,
+        "carbs_g": 0.7,
+        "fat_g": 9.5,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["poached egg", "egg poached"],
+        "ja": ["ポーチドエッグ", "落とし卵"],
+        "ko": ["수란", "포치드 에그"],
+        "zh": ["水波蛋", "荷包蛋"],
+        "zh-tw": ["水波蛋", "荷包蛋"],
+        "es": ["huevo escalfado", "huevo pochado"],
+        "fr": ["œuf poché"]
+      },
+      "common_units": [
+        {"unit": "large egg", "grams": 50},
+        {"unit": "egg", "grams": 50}
+      ]
+    },
+    {
+      "canonical_name": "fried egg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 196,
+        "protein_g": 13.6,
+        "carbs_g": 0.8,
+        "fat_g": 15.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["fried egg", "egg fried", "sunny side up"],
+        "ja": ["目玉焼き", "フライドエッグ"],
+        "ko": ["계란 후라이", "달걀 프라이"],
+        "zh": ["煎蛋", "荷包蛋"],
+        "zh-tw": ["煎蛋", "荷包蛋"],
+        "es": ["huevo frito", "huevo estrellado"],
+        "fr": ["œuf au plat", "œuf frit"]
+      },
+      "common_units": [
+        {"unit": "large egg", "grams": 46},
+        {"unit": "egg", "grams": 46}
+      ]
+    },
+    {
+      "canonical_name": "scrambled eggs",
+      "category": "protein",
+      "per_100g": {
+        "calories": 149,
+        "protein_g": 9.9,
+        "carbs_g": 1.6,
+        "fat_g": 11.2,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["scrambled egg", "scrambled eggs", "eggs scrambled"],
+        "ja": ["スクランブルエッグ", "炒り卵"],
+        "ko": ["스크램블 에그", "볶은 계란"],
+        "zh": ["炒蛋", "炒鸡蛋"],
+        "zh-tw": ["炒蛋", "炒雞蛋"],
+        "es": ["huevos revueltos", "huevo revuelto"],
+        "fr": ["œufs brouillés", "œuf brouillé"]
+      },
+      "common_units": [
+        {"unit": "large egg", "grams": 61},
+        {"unit": "cup", "grams": 220}
+      ]
+    },
+    {
+      "canonical_name": "omelet",
+      "category": "protein",
+      "per_100g": {
+        "calories": 154,
+        "protein_g": 10.6,
+        "carbs_g": 1.2,
+        "fat_g": 11.7,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["omelet", "omelette", "egg omelet"],
+        "ja": ["オムレツ"],
+        "ko": ["오믈렛", "계란말이"],
+        "zh": ["煎蛋卷", "蛋饼"],
+        "zh-tw": ["煎蛋卷", "蛋餅"],
+        "es": ["tortilla", "omelet"],
+        "fr": ["omelette"]
+      },
+      "common_units": [
+        {"unit": "medium omelet", "grams": 90},
+        {"unit": "large omelet", "grams": 120}
+      ]
+    },
+    {
+      "canonical_name": "tamagoyaki",
+      "category": "protein",
+      "per_100g": {
+        "calories": 162,
+        "protein_g": 11.2,
+        "carbs_g": 4.8,
+        "fat_g": 10.5,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["tamagoyaki", "japanese rolled omelet", "rolled egg"],
+        "ja": ["卵焼き", "玉子焼き", "だし巻き卵"],
+        "ko": ["계란말이", "다마고야키"],
+        "zh": ["日式蛋卷", "玉子烧"],
+        "zh-tw": ["日式蛋卷", "玉子燒"],
+        "es": ["tamagoyaki", "tortilla japonesa enrollada"],
+        "fr": ["tamagoyaki", "omelette japonaise roulée"]
+      },
+      "common_units": [
+        {"unit": "slice", "grams": 30},
+        {"unit": "roll", "grams": 120}
+      ]
+    },
+    {
+      "canonical_name": "egg substitute liquid",
+      "category": "protein",
+      "per_100g": {
+        "calories": 53,
+        "protein_g": 10.7,
+        "carbs_g": 0.4,
+        "fat_g": 0.4,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["egg substitute", "egg replacer liquid", "liquid egg substitute"],
+        "ja": ["液体卵代替品", "エッグサブスティチュート"],
+        "ko": ["액상 계란 대체품", "에그 서브스티튜트"],
+        "zh": ["液体蛋替代品", "代蛋液"],
+        "zh-tw": ["液體蛋替代品", "代蛋液"],
+        "es": ["sustituto de huevo líquido"],
+        "fr": ["substitut d'œuf liquide"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 240},
+        {"unit": "tbsp", "grams": 15}
+      ]
+    },
+    {
+      "canonical_name": "mayonnaise",
+      "category": "protein",
+      "per_100g": {
+        "calories": 680,
+        "protein_g": 1.0,
+        "carbs_g": 0.6,
+        "fat_g": 75.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["mayonnaise", "mayo", "real mayonnaise"],
+        "ja": ["マヨネーズ"],
+        "ko": ["마요네즈"],
+        "zh": ["蛋黄酱", "美乃滋"],
+        "zh-tw": ["蛋黃醬", "美乃滋"],
+        "es": ["mayonesa"],
+        "fr": ["mayonnaise"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 14},
+        {"unit": "cup", "grams": 220}
+      ]
+    },
+    {
+      "canonical_name": "japanese mayonnaise",
+      "category": "protein",
+      "per_100g": {
+        "calories": 703,
+        "protein_g": 1.5,
+        "carbs_g": 0.9,
+        "fat_g": 78.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["japanese mayo", "kewpie mayo", "kewpie mayonnaise"],
+        "ja": ["キューピーマヨネーズ", "日本のマヨネーズ"],
+        "ko": ["일본 마요네즈", "규피 마요네즈"],
+        "zh": ["日式蛋黄酱", "丘比沙拉酱"],
+        "zh-tw": ["日式蛋黃醬", "丘比沙拉醬"],
+        "es": ["mayonesa japonesa", "mayonesa kewpie"],
+        "fr": ["mayonnaise japonaise", "mayonnaise kewpie"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 15},
+        {"unit": "cup", "grams": 225}
+      ]
+    },
+    {
+      "canonical_name": "egg white powder",
+      "category": "protein",
+      "per_100g": {
+        "calories": 382,
+        "protein_g": 81.1,
+        "carbs_g": 7.8,
+        "fat_g": 0.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["powdered egg white", "dried egg white", "egg white powder"],
+        "ja": ["卵白粉末", "粉末卵白"],
+        "ko": ["계란 흰자 가루", "난백 분말"],
+        "zh": ["蛋白粉", "干燥蛋白"],
+        "zh-tw": ["蛋白粉", "乾燥蛋白"],
+        "es": ["clara de huevo en polvo"],
+        "fr": ["blanc d'œuf en poudre"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 6},
+        {"unit": "cup", "grams": 88}
+      ]
+    },
+    {
+      "canonical_name": "egg yolk powder",
+      "category": "protein",
+      "per_100g": {
+        "calories": 666,
+        "protein_g": 34.3,
+        "carbs_g": 2.4,
+        "fat_g": 56.4,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["powdered egg yolk", "dried egg yolk", "egg yolk powder"],
+        "ja": ["卵黄粉末", "粉末卵黄"],
+        "ko": ["계란 노른자 가루", "난황 분말"],
+        "zh": ["蛋黄粉", "干燥蛋黄"],
+        "zh-tw": ["蛋黃粉", "乾燥蛋黃"],
+        "es": ["yema de huevo en polvo"],
+        "fr": ["jaune d'œuf en poudre"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 8},
+        {"unit": "cup", "grams": 100}
+      ]
+    },
+    {
+      "canonical_name": "tea egg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 158,
+        "protein_g": 12.8,
+        "carbs_g": 1.4,
+        "fat_g": 10.8,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["tea egg", "tea-stained egg", "marbled egg"],
+        "ja": ["茶葉蛋", "お茶卵"],
+        "ko": ["차예단", "차 계란"],
+        "zh": ["茶叶蛋", "茶蛋"],
+        "zh-tw": ["茶葉蛋", "茶蛋"],
+        "es": ["huevo de té", "huevo marmolado"],
+        "fr": ["œuf au thé", "œuf marbré"]
+      },
+      "common_units": [
+        {"unit": "egg", "grams": 50}
+      ]
+    },
+    {
+      "canonical_name": "pickled egg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 149,
+        "protein_g": 11.3,
+        "carbs_g": 1.8,
+        "fat_g": 10.1,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["pickled egg", "pickled hard boiled egg"],
+        "ja": ["酢漬け卵", "ピクルス卵"],
+        "ko": ["피클 계란", "절인 계란"],
+        "zh": ["腌蛋", "醋蛋"],
+        "zh-tw": ["醃蛋", "醋蛋"],
+        "es": ["huevo en vinagre", "huevo encurtido"],
+        "fr": ["œuf au vinaigre", "œuf mariné"]
+      },
+      "common_units": [
+        {"unit": "egg", "grams": 50}
+      ]
+    },
+    {
+      "canonical_name": "deviled egg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 202,
+        "protein_g": 9.8,
+        "carbs_g": 1.5,
+        "fat_g": 17.5,
+        "fiber_g": 0.1
+      },
+      "aliases": {
+        "en": ["deviled egg", "stuffed egg", "dressed egg"],
+        "ja": ["デビルドエッグ", "詰め物卵"],
+        "ko": ["데빌드 에그", "속을 채운 계란"],
+        "zh": ["魔鬼蛋", "酿蛋"],
+        "zh-tw": ["魔鬼蛋", "釀蛋"],
+        "es": ["huevo relleno", "huevo endiablado"],
+        "fr": ["œuf mimosa", "œuf farci"]
+      },
+      "common_units": [
+        {"unit": "half egg", "grams": 28}
+      ]
+    },
+    {
+      "canonical_name": "scotch egg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 258,
+        "protein_g": 12.4,
+        "carbs_g": 10.2,
+        "fat_g": 18.5,
+        "fiber_g": 0.8
+      },
+      "aliases": {
+        "en": ["scotch egg", "breaded sausage egg"],
+        "ja": ["スコッチエッグ"],
+        "ko": ["스카치 에그", "소시지 계란"],
+        "zh": ["苏格兰蛋", "炸肉蛋"],
+        "zh-tw": ["蘇格蘭蛋", "炸肉蛋"],
+        "es": ["huevo escocés"],
+        "fr": ["œuf écossais"]
+      },
+      "common_units": [
+        {"unit": "scotch egg", "grams": 115}
+      ]
+    },
+    {
+      "canonical_name": "egg drop soup base",
+      "category": "protein",
+      "per_100g": {
+        "calories": 45,
+        "protein_g": 3.2,
+        "carbs_g": 2.1,
+        "fat_g": 2.8,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["egg drop", "egg flower soup", "egg ribbon soup"],
+        "ja": ["かきたま汁", "卵スープ"],
+        "ko": ["계란국", "계란 수프"],
+        "zh": ["蛋花汤", "蛋花"],
+        "zh-tw": ["蛋花湯", "蛋花"],
+        "es": ["sopa de huevo"],
+        "fr": ["soupe à l'œuf"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 240}
+      ]
+    },
+    {
+      "canonical_name": "meringue powder",
+      "category": "protein",
+      "per_100g": {
+        "calories": 360,
+        "protein_g": 4.0,
+        "carbs_g": 88.0,
+        "fat_g": 0.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["meringue powder", "dried meringue", "powdered meringue"],
+        "ja": ["メレンゲパウダー", "粉末メレンゲ"],
+        "ko": ["머랭 파우더", "머랭 가루"],
+        "zh": ["蛋白霜粉", "蛋白糖粉"],
+        "zh-tw": ["蛋白霜粉", "蛋白糖粉"],
+        "es": ["polvo de merengue"],
+        "fr": ["poudre de meringue"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 8},
+        {"unit": "cup", "grams": 120}
+      ]
+    },
+    {
+      "canonical_name": "balut",
+      "category": "protein",
+      "per_100g": {
+        "calories": 188,
+        "protein_g": 14.0,
+        "carbs_g": 2.2,
+        "fat_g": 13.6,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["balut", "fertilized duck egg", "developing duck embryo"],
+        "ja": ["バロット", "孵化卵"],
+        "ko": ["발룻", "부화 오리알"],
+        "zh": ["毛蛋", "鸭仔蛋"],
+        "zh-tw": ["毛蛋", "鴨仔蛋"],
+        "es": ["balut", "huevo de pato fertilizado"],
+        "fr": ["balut", "œuf de canard fertilisé"]
+      },
+      "common_units": [
+        {"unit": "balut", "grams": 70}
+      ]
+    },
+    {
+      "canonical_name": "salted egg yolk",
+      "category": "protein",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 14.8,
+        "carbs_g": 2.1,
+        "fat_g": 33.5,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["salted egg yolk", "salted yolk", "cured egg yolk"],
+        "ja": ["塩漬け卵黄", "咸蛋黄"],
+        "ko": ["소금 절인 노른자", "함단황"],
+        "zh": ["咸蛋黄", "盐蛋黄"],
+        "zh-tw": ["鹹蛋黃", "鹽蛋黃"],
+        "es": ["yema de huevo salada"],
+        "fr": ["jaune d'œuf salé"]
+      },
+      "common_units": [
+        {"unit": "yolk", "grams": 18}
+      ]
+    }
+  ]
+}

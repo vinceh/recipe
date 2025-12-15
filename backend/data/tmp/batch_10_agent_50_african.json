@@ -1,0 +1,1484 @@
+{
+  "batch": 10,
+  "agent": 50,
+  "category": "african",
+  "ingredients": [
+    {
+      "canonical_name": "berbere spice blend",
+      "category": "spice",
+      "per_100g": {
+        "calories": 324,
+        "protein_g": 12.3,
+        "carbs_g": 54.8,
+        "fat_g": 6.7,
+        "fiber_g": 22.1
+      },
+      "aliases": [
+        { "alias": "Ethiopian spice mix", "language": "en", "type": "synonym" },
+        { "alias": "ベルベレ", "language": "ja", "type": "translation" },
+        { "alias": "베르베레", "language": "ko", "type": "translation" },
+        { "alias": "柏柏尔香料", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.3 },
+        { "unit": "tbsp", "grams": 7 }
+      ]
+    },
+    {
+      "canonical_name": "harissa paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 145,
+        "protein_g": 3.2,
+        "carbs_g": 15.6,
+        "fat_g": 8.4,
+        "fiber_g": 4.2
+      },
+      "aliases": [
+        { "alias": "harissa", "language": "en", "type": "synonym" },
+        { "alias": "North African chili paste", "language": "en", "type": "synonym" },
+        { "alias": "ハリッサ", "language": "ja", "type": "translation" },
+        { "alias": "哈里萨辣酱", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 5 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "ras el hanout",
+      "category": "spice",
+      "per_100g": {
+        "calories": 315,
+        "protein_g": 10.8,
+        "carbs_g": 52.3,
+        "fat_g": 7.2,
+        "fiber_g": 18.5
+      },
+      "aliases": [
+        { "alias": "ras al hanout", "language": "en", "type": "synonym" },
+        { "alias": "Moroccan spice blend", "language": "en", "type": "synonym" },
+        { "alias": "ラス・エル・ハヌート", "language": "ja", "type": "translation" },
+        { "alias": "拉斯汉奴特", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "preserved lemons",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 0.8,
+        "carbs_g": 8.2,
+        "fat_g": 0.3,
+        "fiber_g": 2.1
+      },
+      "aliases": [
+        { "alias": "preserved lemon", "language": "en", "type": "synonym" },
+        { "alias": "Moroccan preserved lemons", "language": "en", "type": "synonym" },
+        { "alias": "塩漬けレモン", "language": "ja", "type": "translation" },
+        { "alias": "腌柠檬", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 30 },
+        { "unit": "wedge", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "argan oil",
+      "category": "oil",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        { "alias": "Moroccan argan oil", "language": "en", "type": "synonym" },
+        { "alias": "アルガンオイル", "language": "ja", "type": "translation" },
+        { "alias": "摩洛哥坚果油", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 4.5 },
+        { "unit": "tbsp", "grams": 13.5 },
+        { "unit": "cup", "grams": 216 }
+      ]
+    },
+    {
+      "canonical_name": "couscous",
+      "category": "grain",
+      "per_100g": {
+        "calories": 112,
+        "protein_g": 3.8,
+        "carbs_g": 23.2,
+        "fat_g": 0.2,
+        "fiber_g": 1.4
+      },
+      "aliases": [
+        { "alias": "Moroccan couscous", "language": "en", "type": "synonym" },
+        { "alias": "クスクス", "language": "ja", "type": "translation" },
+        { "alias": "쿠스쿠스", "language": "ko", "type": "translation" },
+        { "alias": "古斯米", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 157 },
+        { "unit": "tbsp", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "mitmita",
+      "category": "spice",
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 11.5,
+        "carbs_g": 55.2,
+        "fat_g": 6.9,
+        "fiber_g": 20.8
+      },
+      "aliases": [
+        { "alias": "Ethiopian chili powder", "language": "en", "type": "synonym" },
+        { "alias": "ミトミタ", "language": "ja", "type": "translation" },
+        { "alias": "米特米塔", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.2 },
+        { "unit": "tbsp", "grams": 6.6 }
+      ]
+    },
+    {
+      "canonical_name": "niter kibbeh",
+      "category": "fat",
+      "per_100g": {
+        "calories": 876,
+        "protein_g": 0.2,
+        "carbs_g": 0.8,
+        "fat_g": 99.5,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        { "alias": "Ethiopian spiced butter", "language": "en", "type": "synonym" },
+        { "alias": "niter qibe", "language": "en", "type": "synonym" },
+        { "alias": "ニテル・キベ", "language": "ja", "type": "translation" },
+        { "alias": "埃塞俄比亚香料黄油", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 4.7 },
+        { "unit": "tbsp", "grams": 14 },
+        { "unit": "cup", "grams": 224 }
+      ]
+    },
+    {
+      "canonical_name": "teff flour",
+      "category": "flour",
+      "per_100g": {
+        "calories": 367,
+        "protein_g": 13.3,
+        "carbs_g": 65.8,
+        "fat_g": 2.4,
+        "fiber_g": 8.0
+      },
+      "aliases": [
+        { "alias": "tef flour", "language": "en", "type": "synonym" },
+        { "alias": "Ethiopian teff", "language": "en", "type": "synonym" },
+        { "alias": "テフ粉", "language": "ja", "type": "translation" },
+        { "alias": "苔麸粉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 120 },
+        { "unit": "tbsp", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "injera",
+      "category": "bread",
+      "per_100g": {
+        "calories": 175,
+        "protein_g": 4.2,
+        "carbs_g": 36.5,
+        "fat_g": 0.8,
+        "fiber_g": 2.1
+      },
+      "aliases": [
+        { "alias": "Ethiopian flatbread", "language": "en", "type": "synonym" },
+        { "alias": "インジェラ", "language": "ja", "type": "translation" },
+        { "alias": "英吉拉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 85 },
+        { "unit": "sheet", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "palm oil",
+      "category": "oil",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        { "alias": "red palm oil", "language": "en", "type": "synonym" },
+        { "alias": "African palm oil", "language": "en", "type": "synonym" },
+        { "alias": "パーム油", "language": "ja", "type": "translation" },
+        { "alias": "棕榈油", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 4.5 },
+        { "unit": "tbsp", "grams": 13.5 },
+        { "unit": "cup", "grams": 216 }
+      ]
+    },
+    {
+      "canonical_name": "egusi seeds",
+      "category": "seed",
+      "per_100g": {
+        "calories": 564,
+        "protein_g": 28.3,
+        "carbs_g": 15.2,
+        "fat_g": 45.8,
+        "fiber_g": 6.5
+      },
+      "aliases": [
+        { "alias": "egusi", "language": "en", "type": "synonym" },
+        { "alias": "melon seeds", "language": "en", "type": "synonym" },
+        { "alias": "エグシ", "language": "ja", "type": "translation" },
+        { "alias": "埃古西籽", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 135 },
+        { "unit": "tbsp", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "dawadawa",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 385,
+        "protein_g": 35.2,
+        "carbs_g": 18.4,
+        "fat_g": 17.8,
+        "fiber_g": 7.2
+      },
+      "aliases": [
+        { "alias": "locust beans", "language": "en", "type": "synonym" },
+        { "alias": "iru", "language": "en", "type": "synonym" },
+        { "alias": "African locust bean", "language": "en", "type": "synonym" },
+        { "alias": "ダワダワ", "language": "ja", "type": "translation" },
+        { "alias": "达瓦达瓦", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3 },
+        { "unit": "tbsp", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "ogiri",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 420,
+        "protein_g": 38.5,
+        "carbs_g": 22.3,
+        "fat_g": 19.2,
+        "fiber_g": 8.5
+      },
+      "aliases": [
+        { "alias": "fermented sesame seeds", "language": "en", "type": "synonym" },
+        { "alias": "ogiri igbo", "language": "en", "type": "synonym" },
+        { "alias": "オギリ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 4 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "shea butter",
+      "category": "fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        { "alias": "African shea butter", "language": "en", "type": "synonym" },
+        { "alias": "シアバター", "language": "ja", "type": "translation" },
+        { "alias": "乳木果油", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 4.3 },
+        { "unit": "tbsp", "grams": 13 },
+        { "unit": "cup", "grams": 208 }
+      ]
+    },
+    {
+      "canonical_name": "ogbono seeds",
+      "category": "seed",
+      "per_100g": {
+        "calories": 697,
+        "protein_g": 8.5,
+        "carbs_g": 15.7,
+        "fat_g": 67.5,
+        "fiber_g": 5.2
+      },
+      "aliases": [
+        { "alias": "African mango seeds", "language": "en", "type": "synonym" },
+        { "alias": "ogbono", "language": "en", "type": "synonym" },
+        { "alias": "wild mango seeds", "language": "en", "type": "synonym" },
+        { "alias": "オグボノ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 120 },
+        { "unit": "tbsp", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "crayfish powder",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 312,
+        "protein_g": 62.8,
+        "carbs_g": 2.4,
+        "fat_g": 4.2,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        { "alias": "ground crayfish", "language": "en", "type": "synonym" },
+        { "alias": "dried crayfish powder", "language": "en", "type": "synonym" },
+        { "alias": "ザリガニパウダー", "language": "ja", "type": "translation" },
+        { "alias": "小龙虾粉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "stockfish",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 290,
+        "protein_g": 62.5,
+        "carbs_g": 0.0,
+        "fat_g": 2.8,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        { "alias": "dried cod", "language": "en", "type": "synonym" },
+        { "alias": "okporoko", "language": "en", "type": "synonym" },
+        { "alias": "干しタラ", "language": "ja", "type": "translation" },
+        { "alias": "干鳕鱼", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 50 },
+        { "unit": "cup", "grams": 85 }
+      ]
+    },
+    {
+      "canonical_name": "pilau masala",
+      "category": "spice",
+      "per_100g": {
+        "calories": 328,
+        "protein_g": 11.2,
+        "carbs_g": 53.5,
+        "fat_g": 7.8,
+        "fiber_g": 19.3
+      },
+      "aliases": [
+        { "alias": "pilau spice mix", "language": "en", "type": "synonym" },
+        { "alias": "East African pilau spice", "language": "en", "type": "synonym" },
+        { "alias": "ピラウマサラ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.4 },
+        { "unit": "tbsp", "grams": 7.2 }
+      ]
+    },
+    {
+      "canonical_name": "suya spice",
+      "category": "spice",
+      "per_100g": {
+        "calories": 452,
+        "protein_g": 18.5,
+        "carbs_g": 38.2,
+        "fat_g": 24.8,
+        "fiber_g": 12.5
+      },
+      "aliases": [
+        { "alias": "suya pepper", "language": "en", "type": "synonym" },
+        { "alias": "yaji", "language": "en", "type": "synonym" },
+        { "alias": "スーヤスパイス", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.8 },
+        { "unit": "tbsp", "grams": 8.5 }
+      ]
+    },
+    {
+      "canonical_name": "peri peri sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 65,
+        "protein_g": 1.8,
+        "carbs_g": 10.2,
+        "fat_g": 2.4,
+        "fiber_g": 2.1
+      },
+      "aliases": [
+        { "alias": "piri piri sauce", "language": "en", "type": "synonym" },
+        { "alias": "African bird's eye chili sauce", "language": "en", "type": "synonym" },
+        { "alias": "ペリペリソース", "language": "ja", "type": "translation" },
+        { "alias": "辣椒酱", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 5 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "biltong spice",
+      "category": "spice",
+      "per_100g": {
+        "calories": 285,
+        "protein_g": 9.5,
+        "carbs_g": 48.2,
+        "fat_g": 5.8,
+        "fiber_g": 14.2
+      },
+      "aliases": [
+        { "alias": "South African biltong spice", "language": "en", "type": "synonym" },
+        { "alias": "ビルトンスパイス", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "chakalaka",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 85,
+        "protein_g": 2.5,
+        "carbs_g": 14.8,
+        "fat_g": 2.2,
+        "fiber_g": 3.8
+      },
+      "aliases": [
+        { "alias": "South African vegetable relish", "language": "en", "type": "synonym" },
+        { "alias": "チャカラカ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 240 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "fufu flour",
+      "category": "flour",
+      "per_100g": {
+        "calories": 267,
+        "protein_g": 1.4,
+        "carbs_g": 65.9,
+        "fat_g": 0.3,
+        "fiber_g": 2.8
+      },
+      "aliases": [
+        { "alias": "fufu", "language": "en", "type": "synonym" },
+        { "alias": "cassava fufu", "language": "en", "type": "synonym" },
+        { "alias": "フフ粉", "language": "ja", "type": "translation" },
+        { "alias": "富富粉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 125 },
+        { "unit": "tbsp", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "garri",
+      "category": "flour",
+      "per_100g": {
+        "calories": 357,
+        "protein_g": 1.5,
+        "carbs_g": 85.6,
+        "fat_g": 0.5,
+        "fiber_g": 3.2
+      },
+      "aliases": [
+        { "alias": "gari", "language": "en", "type": "synonym" },
+        { "alias": "cassava flakes", "language": "en", "type": "synonym" },
+        { "alias": "ガリ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 100 },
+        { "unit": "tbsp", "grams": 7 }
+      ]
+    },
+    {
+      "canonical_name": "plantain flour",
+      "category": "flour",
+      "per_100g": {
+        "calories": 346,
+        "protein_g": 3.8,
+        "carbs_g": 81.2,
+        "fat_g": 1.1,
+        "fiber_g": 5.8
+      },
+      "aliases": [
+        { "alias": "elubo", "language": "en", "type": "synonym" },
+        { "alias": "amala flour", "language": "en", "type": "synonym" },
+        { "alias": "プランテーン粉", "language": "ja", "type": "translation" },
+        { "alias": "大蕉粉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 115 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "sorghum flour",
+      "category": "flour",
+      "per_100g": {
+        "calories": 339,
+        "protein_g": 10.6,
+        "carbs_g": 72.1,
+        "fat_g": 3.5,
+        "fiber_g": 6.7
+      },
+      "aliases": [
+        { "alias": "sorghum", "language": "en", "type": "synonym" },
+        { "alias": "millet flour", "language": "en", "type": "synonym" },
+        { "alias": "ソルガム粉", "language": "ja", "type": "translation" },
+        { "alias": "高粱粉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 121 },
+        { "unit": "tbsp", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "millet",
+      "category": "grain",
+      "per_100g": {
+        "calories": 378,
+        "protein_g": 11.0,
+        "carbs_g": 73.0,
+        "fat_g": 4.2,
+        "fiber_g": 8.5
+      },
+      "aliases": [
+        { "alias": "pearl millet", "language": "en", "type": "synonym" },
+        { "alias": "finger millet", "language": "en", "type": "synonym" },
+        { "alias": "キビ", "language": "ja", "type": "translation" },
+        { "alias": "小米", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 200 },
+        { "unit": "tbsp", "grams": 12.5 }
+      ]
+    },
+    {
+      "canonical_name": "baobab powder",
+      "category": "powder",
+      "per_100g": {
+        "calories": 250,
+        "protein_g": 2.3,
+        "carbs_g": 76.8,
+        "fat_g": 0.3,
+        "fiber_g": 44.5
+      },
+      "aliases": [
+        { "alias": "baobab fruit powder", "language": "en", "type": "synonym" },
+        { "alias": "バオバブパウダー", "language": "ja", "type": "translation" },
+        { "alias": "猴面包树粉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "tamarind paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 239,
+        "protein_g": 2.8,
+        "carbs_g": 62.5,
+        "fat_g": 0.6,
+        "fiber_g": 5.1
+      },
+      "aliases": [
+        { "alias": "tamarind", "language": "en", "type": "synonym" },
+        { "alias": "タマリンドペースト", "language": "ja", "type": "translation" },
+        { "alias": "罗望子酱", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 6 },
+        { "unit": "tbsp", "grams": 18 }
+      ]
+    },
+    {
+      "canonical_name": "hibiscus flowers",
+      "category": "herb",
+      "per_100g": {
+        "calories": 37,
+        "protein_g": 0.4,
+        "carbs_g": 7.4,
+        "fat_g": 0.6,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        { "alias": "dried hibiscus", "language": "en", "type": "synonym" },
+        { "alias": "bissap", "language": "en", "type": "synonym" },
+        { "alias": "zobo", "language": "en", "type": "synonym" },
+        { "alias": "ハイビスカス", "language": "ja", "type": "translation" },
+        { "alias": "洛神花", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 15 },
+        { "unit": "tbsp", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "moringa powder",
+      "category": "powder",
+      "per_100g": {
+        "calories": 205,
+        "protein_g": 27.1,
+        "carbs_g": 38.2,
+        "fat_g": 2.3,
+        "fiber_g": 19.2
+      },
+      "aliases": [
+        { "alias": "moringa leaf powder", "language": "en", "type": "synonym" },
+        { "alias": "モリンガパウダー", "language": "ja", "type": "translation" },
+        { "alias": "辣木粉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "yam flour",
+      "category": "flour",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 3.9,
+        "carbs_g": 83.7,
+        "fat_g": 0.5,
+        "fiber_g": 4.1
+      },
+      "aliases": [
+        { "alias": "pounded yam flour", "language": "en", "type": "synonym" },
+        { "alias": "elubo isu", "language": "en", "type": "synonym" },
+        { "alias": "ヤム芋粉", "language": "ja", "type": "translation" },
+        { "alias": "山药粉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 128 },
+        { "unit": "tbsp", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "fonio",
+      "category": "grain",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 7.3,
+        "carbs_g": 76.1,
+        "fat_g": 1.9,
+        "fiber_g": 3.7
+      },
+      "aliases": [
+        { "alias": "fonio grain", "language": "en", "type": "synonym" },
+        { "alias": "acha", "language": "en", "type": "synonym" },
+        { "alias": "フォニオ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 170 },
+        { "unit": "tbsp", "grams": 11 }
+      ]
+    },
+    {
+      "canonical_name": "tiger nut flour",
+      "category": "flour",
+      "per_100g": {
+        "calories": 496,
+        "protein_g": 4.7,
+        "carbs_g": 65.8,
+        "fat_g": 23.7,
+        "fiber_g": 33.0
+      },
+      "aliases": [
+        { "alias": "tiger nuts", "language": "en", "type": "synonym" },
+        { "alias": "chufa flour", "language": "en", "type": "synonym" },
+        { "alias": "aya flour", "language": "en", "type": "synonym" },
+        { "alias": "タイガーナッツ粉", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 110 },
+        { "unit": "tbsp", "grams": 7 }
+      ]
+    },
+    {
+      "canonical_name": "cassava leaves",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 91,
+        "protein_g": 6.8,
+        "carbs_g": 14.0,
+        "fat_g": 0.6,
+        "fiber_g": 3.7
+      },
+      "aliases": [
+        { "alias": "cassava leaf", "language": "en", "type": "synonym" },
+        { "alias": "manioc leaves", "language": "en", "type": "synonym" },
+        { "alias": "キャッサバの葉", "language": "ja", "type": "translation" },
+        { "alias": "木薯叶", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 70 },
+        { "unit": "bunch", "grams": 200 }
+      ]
+    },
+    {
+      "canonical_name": "okra",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 33,
+        "protein_g": 1.9,
+        "carbs_g": 7.5,
+        "fat_g": 0.2,
+        "fiber_g": 3.2
+      },
+      "aliases": [
+        { "alias": "lady fingers", "language": "en", "type": "synonym" },
+        { "alias": "オクラ", "language": "ja", "type": "translation" },
+        { "alias": "秋葵", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 100 },
+        { "unit": "piece", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "african nutmeg",
+      "category": "spice",
+      "per_100g": {
+        "calories": 525,
+        "protein_g": 5.8,
+        "carbs_g": 49.3,
+        "fat_g": 36.3,
+        "fiber_g": 20.8
+      },
+      "aliases": [
+        { "alias": "calabash nutmeg", "language": "en", "type": "synonym" },
+        { "alias": "ehuru", "language": "en", "type": "synonym" },
+        { "alias": "ariwo", "language": "en", "type": "synonym" },
+        { "alias": "アフリカンナツメグ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.2 },
+        { "unit": "piece", "grams": 3 }
+      ]
+    },
+    {
+      "canonical_name": "grains of selim",
+      "category": "spice",
+      "per_100g": {
+        "calories": 310,
+        "protein_g": 8.5,
+        "carbs_g": 52.4,
+        "fat_g": 8.2,
+        "fiber_g": 18.5
+      },
+      "aliases": [
+        { "alias": "kimba pepper", "language": "en", "type": "synonym" },
+        { "alias": "senegal pepper", "language": "en", "type": "synonym" },
+        { "alias": "セリムの種", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "groundnut paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 588,
+        "protein_g": 25.8,
+        "carbs_g": 16.1,
+        "fat_g": 49.2,
+        "fiber_g": 8.5
+      },
+      "aliases": [
+        { "alias": "peanut paste", "language": "en", "type": "synonym" },
+        { "alias": "African peanut butter", "language": "en", "type": "synonym" },
+        { "alias": "ピーナッツペースト", "language": "ja", "type": "translation" },
+        { "alias": "花生酱", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 16 },
+        { "unit": "cup", "grams": 258 }
+      ]
+    },
+    {
+      "canonical_name": "ogbono powder",
+      "category": "powder",
+      "per_100g": {
+        "calories": 697,
+        "protein_g": 8.5,
+        "carbs_g": 15.7,
+        "fat_g": 67.5,
+        "fiber_g": 5.2
+      },
+      "aliases": [
+        { "alias": "ground ogbono", "language": "en", "type": "synonym" },
+        { "alias": "ogbono flour", "language": "en", "type": "synonym" },
+        { "alias": "オグボノパウダー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3 },
+        { "unit": "tbsp", "grams": 9 },
+        { "unit": "cup", "grams": 120 }
+      ]
+    },
+    {
+      "canonical_name": "kola nut powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 150,
+        "protein_g": 1.6,
+        "carbs_g": 35.2,
+        "fat_g": 0.8,
+        "fiber_g": 2.4
+      },
+      "aliases": [
+        { "alias": "cola nut", "language": "en", "type": "synonym" },
+        { "alias": "コーラナッツ", "language": "ja", "type": "translation" },
+        { "alias": "可乐果", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "smoked paprika",
+      "category": "spice",
+      "per_100g": {
+        "calories": 282,
+        "protein_g": 14.1,
+        "carbs_g": 53.9,
+        "fat_g": 12.9,
+        "fiber_g": 34.9
+      },
+      "aliases": [
+        { "alias": "pimenton", "language": "en", "type": "synonym" },
+        { "alias": "燻製パプリカ", "language": "ja", "type": "translation" },
+        { "alias": "烟熏红椒粉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.3 },
+        { "unit": "tbsp", "grams": 6.9 }
+      ]
+    },
+    {
+      "canonical_name": "dried shrimp",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 307,
+        "protein_g": 63.4,
+        "carbs_g": 0.9,
+        "fat_g": 3.7,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        { "alias": "dried prawns", "language": "en", "type": "synonym" },
+        { "alias": "干しエビ", "language": "ja", "type": "translation" },
+        { "alias": "虾米", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 60 },
+        { "unit": "tbsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "african pepper",
+      "category": "spice",
+      "per_100g": {
+        "calories": 251,
+        "protein_g": 10.4,
+        "carbs_g": 58.2,
+        "fat_g": 3.3,
+        "fiber_g": 26.5
+      },
+      "aliases": [
+        { "alias": "grains of paradise", "language": "en", "type": "synonym" },
+        { "alias": "alligator pepper", "language": "en", "type": "synonym" },
+        { "alias": "melegueta pepper", "language": "en", "type": "synonym" },
+        { "alias": "アフリカンペッパー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.1 },
+        { "unit": "tbsp", "grams": 6.3 }
+      ]
+    },
+    {
+      "canonical_name": "dried fish",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 298,
+        "protein_g": 64.5,
+        "carbs_g": 0.0,
+        "fat_g": 3.2,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        { "alias": "smoked fish", "language": "en", "type": "synonym" },
+        { "alias": "干し魚", "language": "ja", "type": "translation" },
+        { "alias": "干鱼", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 40 },
+        { "unit": "cup", "grams": 80 }
+      ]
+    },
+    {
+      "canonical_name": "beniseed",
+      "category": "seed",
+      "per_100g": {
+        "calories": 573,
+        "protein_g": 17.7,
+        "carbs_g": 23.4,
+        "fat_g": 49.7,
+        "fiber_g": 11.8
+      },
+      "aliases": [
+        { "alias": "sesame seeds", "language": "en", "type": "synonym" },
+        { "alias": "African sesame", "language": "en", "type": "synonym" },
+        { "alias": "ゴマ", "language": "ja", "type": "translation" },
+        { "alias": "芝麻", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 144 },
+        { "unit": "tbsp", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "uda",
+      "category": "spice",
+      "per_100g": {
+        "calories": 298,
+        "protein_g": 7.8,
+        "carbs_g": 51.2,
+        "fat_g": 7.5,
+        "fiber_g": 16.8
+      },
+      "aliases": [
+        { "alias": "negro pepper", "language": "en", "type": "synonym" },
+        { "alias": "ウダ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "uziza leaves",
+      "category": "herb",
+      "per_100g": {
+        "calories": 45,
+        "protein_g": 3.8,
+        "carbs_g": 7.2,
+        "fat_g": 0.8,
+        "fiber_g": 4.5
+      },
+      "aliases": [
+        { "alias": "uziza", "language": "en", "type": "synonym" },
+        { "alias": "West African black pepper leaves", "language": "en", "type": "synonym" },
+        { "alias": "ウジザの葉", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 30 },
+        { "unit": "bunch", "grams": 100 }
+      ]
+    },
+    {
+      "canonical_name": "uziza seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 335,
+        "protein_g": 9.2,
+        "carbs_g": 54.8,
+        "fat_g": 8.9,
+        "fiber_g": 18.2
+      },
+      "aliases": [
+        { "alias": "cubeb pepper", "language": "en", "type": "synonym" },
+        { "alias": "ウジザの種", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.2 },
+        { "unit": "tbsp", "grams": 6.6 }
+      ]
+    },
+    {
+      "canonical_name": "african basil",
+      "category": "herb",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 3.2,
+        "carbs_g": 2.7,
+        "fat_g": 0.6,
+        "fiber_g": 1.6
+      },
+      "aliases": [
+        { "alias": "scent leaf", "language": "en", "type": "synonym" },
+        { "alias": "nchanwu", "language": "en", "type": "synonym" },
+        { "alias": "アフリカンバジル", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 25 },
+        { "unit": "tbsp", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "bitter leaf",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 36,
+        "protein_g": 5.8,
+        "carbs_g": 6.1,
+        "fat_g": 0.4,
+        "fiber_g": 2.8
+      },
+      "aliases": [
+        { "alias": "bitter leaves", "language": "en", "type": "synonym" },
+        { "alias": "onugbu", "language": "en", "type": "synonym" },
+        { "alias": "ビターリーフ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 60 },
+        { "unit": "bunch", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "waterleaf",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 24,
+        "protein_g": 2.1,
+        "carbs_g": 4.5,
+        "fat_g": 0.2,
+        "fiber_g": 1.9
+      },
+      "aliases": [
+        { "alias": "water leaf", "language": "en", "type": "synonym" },
+        { "alias": "gbure", "language": "en", "type": "synonym" },
+        { "alias": "ウォーターリーフ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 50 },
+        { "unit": "bunch", "grams": 120 }
+      ]
+    },
+    {
+      "canonical_name": "pumpkin leaves",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 19,
+        "protein_g": 3.0,
+        "carbs_g": 2.9,
+        "fat_g": 0.2,
+        "fiber_g": 2.2
+      },
+      "aliases": [
+        { "alias": "ugu", "language": "en", "type": "synonym" },
+        { "alias": "fluted pumpkin leaves", "language": "en", "type": "synonym" },
+        { "alias": "カボチャの葉", "language": "ja", "type": "translation" },
+        { "alias": "南瓜叶", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 65 },
+        { "unit": "bunch", "grams": 180 }
+      ]
+    },
+    {
+      "canonical_name": "jollof rice seasoning",
+      "category": "spice",
+      "per_100g": {
+        "calories": 295,
+        "protein_g": 8.5,
+        "carbs_g": 48.2,
+        "fat_g": 7.8,
+        "fiber_g": 12.5
+      },
+      "aliases": [
+        { "alias": "jollof spice", "language": "en", "type": "synonym" },
+        { "alias": "ジョロフライス調味料", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "scotch bonnet pepper",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 2.0,
+        "carbs_g": 9.5,
+        "fat_g": 0.2,
+        "fiber_g": 1.5
+      },
+      "aliases": [
+        { "alias": "scotch bonnet", "language": "en", "type": "synonym" },
+        { "alias": "Caribbean red pepper", "language": "en", "type": "synonym" },
+        { "alias": "スコッチボンネット", "language": "ja", "type": "translation" },
+        { "alias": "苏格兰帽椒", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 15 },
+        { "unit": "cup", "grams": 90 }
+      ]
+    },
+    {
+      "canonical_name": "african yam",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 118,
+        "protein_g": 1.5,
+        "carbs_g": 27.9,
+        "fat_g": 0.2,
+        "fiber_g": 4.1
+      },
+      "aliases": [
+        { "alias": "white yam", "language": "en", "type": "synonym" },
+        { "alias": "puna yam", "language": "en", "type": "synonym" },
+        { "alias": "ヤム芋", "language": "ja", "type": "translation" },
+        { "alias": "非洲薯蓣", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 136 },
+        { "unit": "piece", "grams": 200 }
+      ]
+    },
+    {
+      "canonical_name": "plantain",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 122,
+        "protein_g": 1.3,
+        "carbs_g": 31.9,
+        "fat_g": 0.4,
+        "fiber_g": 2.3
+      },
+      "aliases": [
+        { "alias": "cooking banana", "language": "en", "type": "synonym" },
+        { "alias": "プランテーン", "language": "ja", "type": "translation" },
+        { "alias": "大蕉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 179 },
+        { "unit": "cup", "grams": 148 }
+      ]
+    },
+    {
+      "canonical_name": "melon seeds",
+      "category": "seed",
+      "per_100g": {
+        "calories": 557,
+        "protein_g": 28.8,
+        "carbs_g": 15.3,
+        "fat_g": 45.5,
+        "fiber_g": 6.4
+      },
+      "aliases": [
+        { "alias": "egusi", "language": "en", "type": "synonym" },
+        { "alias": "melon seed", "language": "en", "type": "synonym" },
+        { "alias": "メロンシード", "language": "ja", "type": "translation" },
+        { "alias": "瓜子", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 135 },
+        { "unit": "tbsp", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "crayfish",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 312,
+        "protein_g": 62.8,
+        "carbs_g": 2.4,
+        "fat_g": 4.2,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        { "alias": "dried crayfish", "language": "en", "type": "synonym" },
+        { "alias": "ground crayfish", "language": "en", "type": "synonym" },
+        { "alias": "ザリガニ", "language": "ja", "type": "translation" },
+        { "alias": "小龙虾", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 },
+        { "unit": "cup", "grams": 80 }
+      ]
+    },
+    {
+      "canonical_name": "bouillon powder",
+      "category": "seasoning",
+      "per_100g": {
+        "calories": 235,
+        "protein_g": 15.8,
+        "carbs_g": 24.5,
+        "fat_g": 9.2,
+        "fiber_g": 1.2
+      },
+      "aliases": [
+        { "alias": "African bouillon", "language": "en", "type": "synonym" },
+        { "alias": "Maggi seasoning", "language": "en", "type": "synonym" },
+        { "alias": "ブイヨンパウダー", "language": "ja", "type": "translation" },
+        { "alias": "肉汤粉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 4 },
+        { "unit": "tbsp", "grams": 12 },
+        { "unit": "cube", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "african locust bean",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 385,
+        "protein_g": 35.2,
+        "carbs_g": 18.4,
+        "fat_g": 17.8,
+        "fiber_g": 7.2
+      },
+      "aliases": [
+        { "alias": "iru", "language": "en", "type": "synonym" },
+        { "alias": "dawadawa", "language": "en", "type": "synonym" },
+        { "alias": "fermented locust beans", "language": "en", "type": "synonym" },
+        { "alias": "アフリカンローカストビーン", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3 },
+        { "unit": "tbsp", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "cumin",
+      "category": "spice",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 17.8,
+        "carbs_g": 44.2,
+        "fat_g": 22.3,
+        "fiber_g": 10.5
+      },
+      "aliases": [
+        { "alias": "cumin seeds", "language": "en", "type": "synonym" },
+        { "alias": "クミン", "language": "ja", "type": "translation" },
+        { "alias": "孜然", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.1 },
+        { "unit": "tbsp", "grams": 6.3 }
+      ]
+    },
+    {
+      "canonical_name": "coriander seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 298,
+        "protein_g": 12.4,
+        "carbs_g": 54.2,
+        "fat_g": 17.8,
+        "fiber_g": 41.9
+      },
+      "aliases": [
+        { "alias": "coriander", "language": "en", "type": "synonym" },
+        { "alias": "コリアンダーシード", "language": "ja", "type": "translation" },
+        { "alias": "香菜籽", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 1.8 },
+        { "unit": "tbsp", "grams": 5.4 }
+      ]
+    },
+    {
+      "canonical_name": "ginger powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 335,
+        "protein_g": 9.0,
+        "carbs_g": 71.6,
+        "fat_g": 4.2,
+        "fiber_g": 14.1
+      },
+      "aliases": [
+        { "alias": "ground ginger", "language": "en", "type": "synonym" },
+        { "alias": "ジンジャーパウダー", "language": "ja", "type": "translation" },
+        { "alias": "姜粉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 1.8 },
+        { "unit": "tbsp", "grams": 5.4 }
+      ]
+    },
+    {
+      "canonical_name": "curry powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 325,
+        "protein_g": 14.3,
+        "carbs_g": 55.8,
+        "fat_g": 14.0,
+        "fiber_g": 53.2
+      },
+      "aliases": [
+        { "alias": "curry", "language": "en", "type": "synonym" },
+        { "alias": "カレーパウダー", "language": "ja", "type": "translation" },
+        { "alias": "咖喱粉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.0 },
+        { "unit": "tbsp", "grams": 6.3 }
+      ]
+    },
+    {
+      "canonical_name": "thyme",
+      "category": "herb",
+      "per_100g": {
+        "calories": 276,
+        "protein_g": 9.1,
+        "carbs_g": 63.9,
+        "fat_g": 7.4,
+        "fiber_g": 37.0
+      },
+      "aliases": [
+        { "alias": "dried thyme", "language": "en", "type": "synonym" },
+        { "alias": "タイム", "language": "ja", "type": "translation" },
+        { "alias": "百里香", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 1.4 },
+        { "unit": "tbsp", "grams": 4.3 }
+      ]
+    },
+    {
+      "canonical_name": "bay leaves",
+      "category": "herb",
+      "per_100g": {
+        "calories": 313,
+        "protein_g": 7.6,
+        "carbs_g": 74.9,
+        "fat_g": 8.4,
+        "fiber_g": 26.3
+      },
+      "aliases": [
+        { "alias": "bay leaf", "language": "en", "type": "synonym" },
+        { "alias": "ローリエ", "language": "ja", "type": "translation" },
+        { "alias": "月桂叶", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 0.5 },
+        { "unit": "tbsp", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "nutmeg",
+      "category": "spice",
+      "per_100g": {
+        "calories": 525,
+        "protein_g": 5.8,
+        "carbs_g": 49.3,
+        "fat_g": 36.3,
+        "fiber_g": 20.8
+      },
+      "aliases": [
+        { "alias": "ground nutmeg", "language": "en", "type": "synonym" },
+        { "alias": "ナツメグ", "language": "ja", "type": "translation" },
+        { "alias": "肉豆蔻", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.2 },
+        { "unit": "piece", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "cloves",
+      "category": "spice",
+      "per_100g": {
+        "calories": 274,
+        "protein_g": 5.9,
+        "carbs_g": 65.5,
+        "fat_g": 13.0,
+        "fiber_g": 33.9
+      },
+      "aliases": [
+        { "alias": "whole cloves", "language": "en", "type": "synonym" },
+        { "alias": "クローブ", "language": "ja", "type": "translation" },
+        { "alias": "丁香", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.1 },
+        { "unit": "piece", "grams": 0.5 }
+      ]
+    },
+    {
+      "canonical_name": "cardamom",
+      "category": "spice",
+      "per_100g": {
+        "calories": 311,
+        "protein_g": 10.8,
+        "carbs_g": 68.5,
+        "fat_g": 6.7,
+        "fiber_g": 28.0
+      },
+      "aliases": [
+        { "alias": "cardamom pods", "language": "en", "type": "synonym" },
+        { "alias": "カルダモン", "language": "ja", "type": "translation" },
+        { "alias": "小豆蔻", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.0 },
+        { "unit": "pod", "grams": 0.3 }
+      ]
+    },
+    {
+      "canonical_name": "cinnamon",
+      "category": "spice",
+      "per_100g": {
+        "calories": 247,
+        "protein_g": 3.9,
+        "carbs_g": 80.6,
+        "fat_g": 1.2,
+        "fiber_g": 53.1
+      },
+      "aliases": [
+        { "alias": "ground cinnamon", "language": "en", "type": "synonym" },
+        { "alias": "シナモン", "language": "ja", "type": "translation" },
+        { "alias": "肉桂", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.6 },
+        { "unit": "stick", "grams": 2.5 }
+      ]
+    }
+  ]
+}

@@ -3,7 +3,8 @@ import { ref, computed, watch, onMounted, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useDataReferenceStore } from '@/stores/dataReferenceStore'
 import { useUiStore } from '@/stores/uiStore'
-import type { Recipe, RecipeIngredientGroup, RecipeIngredientItem, RecipeStep } from '@/services/types'
+import { useUnitStore } from '@/stores/unitStore'
+import type { Recipe, RecipeIngredientGroup, RecipeIngredientItem, RecipeStep, RecipeStepImage, Unit, InstructionItem } from '@/services/types'
 import InputText from 'primevue/inputtext'
 import InputNumber from 'primevue/inputnumber'
 import Textarea from 'primevue/textarea'
@@ -11,16 +12,21 @@ import Select from 'primevue/select'
 import MultiSelect from 'primevue/multiselect'
 import Button from 'primevue/button'
 import Checkbox from 'primevue/checkbox'
+import AutoComplete from 'primevue/autocomplete'
+import ReorderableItemActions from '@/components/shared/ReorderableItemActions.vue'
+import NewUnitModal from './NewUnitModal.vue'
 
 // Props & Emits
 interface Props {
   modelValue?: Partial<Recipe> | null
   loading?: boolean
+  hideImport?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
   modelValue: null,
-  loading: false
+  loading: false,
+  hideImport: false
 })
 
 const emit = defineEmits<{
@@ -31,10 +37,86 @@ const emit = defineEmits<{
   'import-url': []
 }>()
 
+// Local type for step images in form (extends API type with file handling)
+interface LocalStepImage {
+  id?: number
+  position: number
+  caption: string
+  ai_generated: boolean
+  url: string | null
+  file?: File
+  previewUrl?: string
+}
+
 // Composables
 const { t, locale } = useI18n()
 const dataStore = useDataReferenceStore()
 const uiStore = useUiStore()
+const unitStore = useUnitStore()
+
+// Unit autocomplete state
+interface UnitSuggestion extends Unit {
+  name: string
+}
+const unitSuggestions = ref<UnitSuggestion[]>([])
+const showNewUnitModal = ref(false)
+const newUnitData = ref<{ name: string; groupIndex: number; itemIndex: number } | null>(null)
+
+function searchUnits(event: { query: string }) {
+  const units = unitStore.searchUnits(event.query)
+  unitSuggestions.value = units.map(u => ({
+    ...u,
+    name: unitStore.getTranslatedName(u) || u.canonical_name
+  }))
+}
+
+function onUnitSelect(event: { value: Unit | string }, groupIndex: number, itemIndex: number) {
+  const groups = formData.value.ingredient_groups
+  if (!groups || !groups[groupIndex]) return
+  const item = groups[groupIndex].items[itemIndex]
+  if (!item) return
+
+  if (typeof event.value === 'object' && event.value.canonical_name) {
+    item.unit = event.value.canonical_name
+  } else if (typeof event.value === 'string') {
+    item.unit = event.value
+  }
+}
+
+function handleUnitBlur(groupIndex: number, itemIndex: number) {
+  const groups = formData.value.ingredient_groups
+  if (!groups || !groups[groupIndex]) return
+  const item = groups[groupIndex].items[itemIndex]
+  if (!item || !item.unit) return
+
+  const existingUnit = unitStore.findByName(item.unit)
+  if (!existingUnit && item.unit.trim()) {
+    newUnitData.value = { name: item.unit.trim(), groupIndex, itemIndex }
+    showNewUnitModal.value = true
+  }
+}
+
+function handleUnitCreated(canonicalName: string) {
+  if (newUnitData.value) {
+    const { groupIndex, itemIndex } = newUnitData.value
+    const groups = formData.value.ingredient_groups
+    if (groups && groups[groupIndex]?.items[itemIndex]) {
+      groups[groupIndex].items[itemIndex].unit = canonicalName
+    }
+  }
+  newUnitData.value = null
+}
+
+function handleUnitModalCancel() {
+  if (newUnitData.value) {
+    const { groupIndex, itemIndex } = newUnitData.value
+    const groups = formData.value.ingredient_groups
+    if (groups && groups[groupIndex]?.items[itemIndex]) {
+      groups[groupIndex].items[itemIndex].unit = ''
+    }
+  }
+  newUnitData.value = null
+}
 
 // Form state - matches backend Recipe model exactly
 const formData = ref<Partial<Recipe>>({
@@ -58,6 +140,7 @@ const formData = ref<Partial<Recipe>>({
   aliases: [],
   dietary_tags: [],
   cuisines: [],
+  tags: [],
   ingredient_groups: [
     {
       name: '',
@@ -65,9 +148,13 @@ const formData = ref<Partial<Recipe>>({
     }
   ],
   steps: [],
+  instruction_items: [],
   equipment: [],
   admin_notes: ''
 })
+
+// Separate ref for step images (handled differently due to file uploads)
+const stepImages = ref<LocalStepImage[]>([])
 
 // Ingredient group helpers
 function addIngredientGroup() {
@@ -115,6 +202,28 @@ function removeIngredient(groupIndex: number, ingredientIndex: number) {
   }
 }
 
+function moveIngredientUp(groupIndex: number, ingredientIndex: number) {
+  const groups = formData.value.ingredient_groups
+  if (groups && groups[groupIndex] && ingredientIndex > 0) {
+    const items = groups[groupIndex].items
+    const temp = items[ingredientIndex]
+    items[ingredientIndex] = items[ingredientIndex - 1]
+    items[ingredientIndex - 1] = temp
+  }
+}
+
+function moveIngredientDown(groupIndex: number, ingredientIndex: number) {
+  const groups = formData.value.ingredient_groups
+  if (groups && groups[groupIndex]) {
+    const items = groups[groupIndex].items
+    if (ingredientIndex < items.length - 1) {
+      const temp = items[ingredientIndex]
+      items[ingredientIndex] = items[ingredientIndex + 1]
+      items[ingredientIndex + 1] = temp
+    }
+  }
+}
+
 // Step helpers
 let nextStepId = 1
 function addStep() {
@@ -146,6 +255,209 @@ function moveStepDown(index: number) {
     steps[index] = steps[index + 1]!
     steps[index + 1] = temp!
   }
+}
+
+// Step image helpers
+let nextStepImageId = 1
+
+function addStepImageAfter(stepIndex: number) {
+  const position = stepIndex + 1.5
+  stepImages.value.push({
+    position,
+    caption: '',
+    ai_generated: false,
+    url: null,
+    file: undefined,
+    previewUrl: undefined
+  })
+  stepImages.value.sort((a, b) => a.position - b.position)
+}
+
+function removeStepImage(index: number) {
+  const img = stepImages.value[index]
+  if (img?.previewUrl) {
+    URL.revokeObjectURL(img.previewUrl)
+  }
+  stepImages.value.splice(index, 1)
+}
+
+function handleStepImageSelect(event: Event, imageIndex: number) {
+  const input = event.target as HTMLInputElement
+  const file = input.files?.[0]
+
+  if (file) {
+    const validTypes = ['image/png', 'image/jpeg', 'image/gif', 'image/webp']
+    const maxSize = 10 * 1024 * 1024
+
+    if (!validTypes.includes(file.type)) {
+      alert('Please select a valid image file (PNG, JPG, GIF, or WebP)')
+      return
+    }
+
+    if (file.size > maxSize) {
+      alert('Image size must be less than 10MB')
+      return
+    }
+
+    const img = stepImages.value[imageIndex]
+    if (img) {
+      if (img.previewUrl) {
+        URL.revokeObjectURL(img.previewUrl)
+      }
+      img.file = file
+      img.previewUrl = URL.createObjectURL(file)
+    }
+  }
+}
+
+function getStepImagesAfterStep(stepIndex: number): { image: LocalStepImage; index: number }[] {
+  const stepOrder = stepIndex + 1
+  return stepImages.value
+    .map((img, idx) => ({ image: img, index: idx }))
+    .filter(({ image }) => image.position > stepOrder && image.position < stepOrder + 1)
+}
+
+function moveStepImageUp(imageIndex: number) {
+  const img = stepImages.value[imageIndex]
+  if (!img) return
+
+  const currentPos = img.position
+  const stepBefore = Math.floor(currentPos)
+
+  if (stepBefore > 1) {
+    img.position = stepBefore - 0.5
+  } else if (stepBefore === 1) {
+    img.position = 0.5
+  }
+  stepImages.value.sort((a, b) => a.position - b.position)
+}
+
+function moveStepImageDown(imageIndex: number) {
+  const img = stepImages.value[imageIndex]
+  if (!img) return
+
+  const currentPos = img.position
+  const stepBefore = Math.floor(currentPos)
+  const totalSteps = formData.value.steps?.length || 0
+
+  if (stepBefore < totalSteps) {
+    img.position = stepBefore + 1.5
+  }
+  stepImages.value.sort((a, b) => a.position - b.position)
+}
+
+// Instruction item helpers
+let nextInstructionItemId = 1
+
+function getNextPosition(): number {
+  const items = formData.value.instruction_items || []
+  if (items.length === 0) return 1
+  return Math.max(...items.map(i => i.position)) + 1
+}
+
+function addInstructionHeading() {
+  if (!formData.value.instruction_items) formData.value.instruction_items = []
+  formData.value.instruction_items.push({
+    id: nextInstructionItemId++,
+    item_type: 'heading',
+    position: getNextPosition(),
+    content: ''
+  })
+}
+
+function addInstructionText() {
+  if (!formData.value.instruction_items) formData.value.instruction_items = []
+  formData.value.instruction_items.push({
+    id: nextInstructionItemId++,
+    item_type: 'text',
+    position: getNextPosition(),
+    content: ''
+  })
+}
+
+function addInstructionImage() {
+  if (!formData.value.instruction_items) formData.value.instruction_items = []
+  formData.value.instruction_items.push({
+    id: nextInstructionItemId++,
+    item_type: 'image',
+    position: getNextPosition(),
+    content: ''
+  })
+}
+
+function removeInstructionItem(index: number) {
+  formData.value.instruction_items?.splice(index, 1)
+  reorderInstructionItems()
+}
+
+function moveInstructionItemUp(index: number) {
+  const items = formData.value.instruction_items
+  if (!items || index <= 0) return
+  const temp = items[index - 1]!
+  items[index - 1] = items[index]!
+  items[index] = temp
+  reorderInstructionItems()
+}
+
+function moveInstructionItemDown(index: number) {
+  const items = formData.value.instruction_items
+  if (!items || index >= items.length - 1) return
+  const temp = items[index]!
+  items[index] = items[index + 1]!
+  items[index + 1] = temp
+  reorderInstructionItems()
+}
+
+function reorderInstructionItems() {
+  formData.value.instruction_items?.forEach((item, index) => {
+    item.position = index + 1
+  })
+}
+
+// Instruction item image file handling
+const instructionImageFiles = ref<Map<number, File>>(new Map())
+const instructionImagePreviews = ref<Map<number, string>>(new Map())
+
+function handleInstructionImageSelect(event: Event, itemId: number) {
+  const input = event.target as HTMLInputElement
+  const file = input.files?.[0]
+
+  if (file) {
+    const validTypes = ['image/png', 'image/jpeg', 'image/gif', 'image/webp']
+    const maxSize = 10 * 1024 * 1024
+
+    if (!validTypes.includes(file.type)) {
+      alert('Please select a valid image file (PNG, JPG, GIF, or WebP)')
+      return
+    }
+
+    if (file.size > maxSize) {
+      alert('Image size must be less than 10MB')
+      return
+    }
+
+    // Clear any existing preview
+    const existingPreview = instructionImagePreviews.value.get(itemId)
+    if (existingPreview) {
+      URL.revokeObjectURL(existingPreview)
+    }
+
+    instructionImageFiles.value.set(itemId, file)
+    instructionImagePreviews.value.set(itemId, URL.createObjectURL(file))
+
+    // Update the item to mark it has a file
+    const item = formData.value.instruction_items?.find(i => i.id === itemId)
+    if (item) {
+      item.image_file = file
+    }
+  }
+}
+
+function getInstructionImagePreview(item: InstructionItem): string | null {
+  if (item.id && instructionImagePreviews.value.has(item.id)) {
+    return instructionImagePreviews.value.get(item.id) || null
+  }
+  return item.image_url || null
 }
 
 // Image upload handling
@@ -212,6 +524,22 @@ function addAlias() {
 
 function removeAlias(index: number) {
   formData.value.aliases?.splice(index, 1)
+}
+
+// Tags (free-form)
+const tagInput = ref('')
+function addTag() {
+  if (tagInput.value.trim() && formData.value.tags) {
+    const tag = tagInput.value.trim().toLowerCase()
+    if (!formData.value.tags.includes(tag)) {
+      formData.value.tags.push(tag)
+    }
+    tagInput.value = ''
+  }
+}
+
+function removeTag(index: number) {
+  formData.value.tags?.splice(index, 1)
 }
 
 // Dropdown options
@@ -298,18 +626,26 @@ const isValid = computed(() => {
     }
   }
 
-  // Required: At least one step with instructions
-  if (!formData.value.steps || formData.value.steps.length === 0) {
-    validationErrors.value.push('At least one step is required')
+  // Required: At least one instruction item (text type)
+  const textItems = formData.value.instruction_items?.filter(i => i.item_type === 'text') || []
+  if (textItems.length === 0) {
+    validationErrors.value.push('At least one step text is required')
   } else {
-    // Each step must have instructions
-    for (let i = 0; i < formData.value.steps.length; i++) {
-      const step = formData.value.steps[i]
-      if (!step || !step.instruction || step.instruction.trim().length === 0) {
-        validationErrors.value.push(`Step ${i + 1} must have instructions`)
+    // Each text instruction must have content
+    textItems.forEach((item, i) => {
+      if (!item.content || item.content.trim().length === 0) {
+        validationErrors.value.push(`Step text ${i + 1} must have instructions`)
       }
-    }
+    })
   }
+
+  // Heading items must have content if present
+  const headingItems = formData.value.instruction_items?.filter(i => i.item_type === 'heading') || []
+  headingItems.forEach((item, i) => {
+    if (!item.content || item.content.trim().length === 0) {
+      validationErrors.value.push(`Section heading ${i + 1} must have text`)
+    }
+  })
 
   // Required: Timing fields must be provided and non-negative
   if (formData.value.timing?.prep_minutes == null) {
@@ -371,11 +707,28 @@ watch(() => props.modelValue, (newValue) => {
       }]
     }
     if (!formData.value.steps) formData.value.steps = []
+    if (!formData.value.instruction_items) formData.value.instruction_items = []
     if (!formData.value.equipment) formData.value.equipment = []
     if (!formData.value.aliases) formData.value.aliases = []
     if (!formData.value.dietary_tags) formData.value.dietary_tags = []
     if (!formData.value.cuisines) formData.value.cuisines = []
+    if (!formData.value.tags) formData.value.tags = []
     if (!formData.value.difficulty_level) formData.value.difficulty_level = undefined
+
+    // Load existing step images from recipe
+    if (newValue.step_images && newValue.step_images.length > 0) {
+      stepImages.value = newValue.step_images.map(img => ({
+        id: img.id,
+        position: img.position,
+        caption: img.caption || '',
+        ai_generated: img.ai_generated,
+        url: img.url,
+        file: undefined,
+        previewUrl: undefined
+      }))
+    } else {
+      stepImages.value = []
+    }
 
     // Reset flag on next tick to allow subsequent user changes to emit
     nextTick(() => {
@@ -428,7 +781,9 @@ defineExpose({
   validateForm,
   isValid,
   setPrecisionReason,
-  selectedImageFile
+  selectedImageFile,
+  stepImages,
+  instructionImageFiles
 })
 
 // Lifecycle
@@ -439,15 +794,18 @@ onMounted(async () => {
     await dataStore.fetchAll()
   }
 
-  // Initialize with at least one ingredient and one step if empty
+  // Fetch units for autocomplete
+  await unitStore.fetchUnits()
+
+  // Initialize with at least one ingredient and one instruction text if empty
   if (formData.value.ingredient_groups && formData.value.ingredient_groups.length > 0) {
     const firstGroup = formData.value.ingredient_groups[0]
     if (firstGroup && firstGroup.items.length === 0) {
       addIngredient(0)
     }
   }
-  if (formData.value.steps && formData.value.steps.length === 0) {
-    addStep()
+  if (!formData.value.instruction_items || formData.value.instruction_items.length === 0) {
+    addInstructionText()
   }
 })
 
@@ -473,7 +831,7 @@ watch(() => uiStore.language, async () => {
       </div>
 
       <!-- Import Buttons -->
-      <div class="recipe-form__import-buttons">
+      <div v-if="!hideImport" class="recipe-form__import-buttons">
         <Button
           type="button"
           :label="$t('admin.recipes.importDialog.button')"
@@ -494,7 +852,7 @@ watch(() => uiStore.language, async () => {
         />
       </div>
 
-      <hr />
+      <hr v-if="!hideImport" />
 
       <!-- Basic Information -->
       <section class="recipe-form__section">
@@ -544,6 +902,20 @@ watch(() => uiStore.language, async () => {
             {{ alias }}
             <button type="button" @click="removeAlias(index)">×</button>
           </span>
+        </div>
+
+        <div class="recipe-form__field recipe-form__field--wide">
+          <label for="description" class="recipe-form__label">
+            {{ $t('common.labels.description') }}
+          </label>
+          <Textarea
+            id="description"
+            v-model="formData.description"
+            :placeholder="$t('common.labels.description')"
+            class="recipe-form__input"
+            rows="3"
+            autoResize
+          />
         </div>
 
         <div class="recipe-form__field">
@@ -622,8 +994,6 @@ watch(() => uiStore.language, async () => {
         </div>
       </section>
 
-      <hr/>
-
       <!-- Recipe Image -->
       <section class="recipe-form__section">
         <h2 class="recipe-form__section-title">{{ $t('forms.recipe.sections.image') }}</h2>
@@ -662,8 +1032,6 @@ watch(() => uiStore.language, async () => {
         </div>
       </section>
 
-      <hr/>
-
       <!-- Tags & Classification -->
       <section class="recipe-form__section">
         <h2 class="recipe-form__section-title">{{ $t('forms.recipe.sections.classification') }}</h2>
@@ -701,9 +1069,40 @@ watch(() => uiStore.language, async () => {
             filter
           />
         </div>
-      </section>
 
-      <hr/>
+        <div class="recipe-form__field">
+          <label for="tags" class="recipe-form__label">
+            {{ $t('forms.recipe.tags') }}
+          </label>
+          <div class="recipe-form__input-with-button">
+            <InputText
+              id="tags"
+              v-model="tagInput"
+              :placeholder="$t('forms.recipe.tagsPlaceholder')"
+              class="recipe-form__input"
+              @keydown.enter.prevent="addTag"
+            />
+            <Button
+              type="button"
+              :label="$t('common.buttons.add')"
+              severity="success"
+              @click="addTag"
+            />
+          </div>
+          <small class="recipe-form__help-text">{{ $t('forms.recipe.tagsHint') }}</small>
+        </div>
+
+        <div v-if="formData.tags && formData.tags.length > 0" class="recipe-form__tags">
+          <span
+            v-for="(tag, index) in formData.tags"
+            :key="index"
+            class="recipe-form__tag"
+          >
+            {{ tag }}
+            <button type="button" @click="removeTag(index)">×</button>
+          </span>
+        </div>
+      </section>
 
       <!-- Servings & Timing -->
       <section class="recipe-form__section">
@@ -777,8 +1176,6 @@ watch(() => uiStore.language, async () => {
         </div>
       </section>
 
-      <hr/>
-
       <!-- Equipment -->
       <section class="recipe-form__section">
         <h2 class="recipe-form__section-title">{{ $t('forms.recipe.sections.equipment') }}</h2>
@@ -815,8 +1212,6 @@ watch(() => uiStore.language, async () => {
           </span>
         </div>
       </section>
-
-      <hr/>
 
       <!-- Ingredients -->
       <h2 class="recipe-form__major-section-title">{{ $t('forms.recipe.sections.ingredients') }}</h2>
@@ -861,6 +1256,20 @@ watch(() => uiStore.language, async () => {
             :key="itemIndex"
             class="recipe-form__ingredient"
           >
+            <div class="recipe-form__ingredient-header">
+              <span class="recipe-form__ingredient-label">
+                <i class="pi pi-shopping-cart"></i>
+                Ingredient {{ itemIndex + 1 }}
+              </span>
+              <ReorderableItemActions
+                :can-move-up="itemIndex > 0"
+                :can-move-down="itemIndex < (group.items?.length || 0) - 1"
+                @move-up="moveIngredientUp(groupIndex, itemIndex)"
+                @move-down="moveIngredientDown(groupIndex, itemIndex)"
+                @delete="removeIngredient(groupIndex, itemIndex)"
+              />
+            </div>
+
             <div class="recipe-form__ingredient-row recipe-form__ingredient-row--main">
               <div class="recipe-form__field">
                 <label :for="'ingredient-name-' + groupIndex + '-' + itemIndex" class="recipe-form__label required">
@@ -891,11 +1300,18 @@ watch(() => uiStore.language, async () => {
                 <label :for="'ingredient-unit-' + groupIndex + '-' + itemIndex" class="recipe-form__label">
                   {{ $t('forms.recipe.ingredientUnit') }}
                 </label>
-                <InputText
+                <AutoComplete
                   :id="'ingredient-unit-' + groupIndex + '-' + itemIndex"
                   v-model="item.unit"
+                  :suggestions="unitSuggestions"
+                  optionLabel="name"
                   :placeholder="$t('forms.recipe.ingredientUnitPlaceholder')"
-                  class="recipe-form__input"
+                  class="recipe-form__input recipe-form__unit-autocomplete"
+                  dropdown
+                  forceSelection
+                  @complete="searchUnits"
+                  @item-select="(e) => onUnitSelect(e, groupIndex, itemIndex)"
+                  @blur="() => handleUnitBlur(groupIndex, itemIndex)"
                 />
               </div>
             </div>
@@ -912,9 +1328,7 @@ watch(() => uiStore.language, async () => {
                   class="recipe-form__input"
                 />
               </div>
-            </div>
 
-            <div class="recipe-form__ingredient-row recipe-form__ingredient-row--footer">
               <label
                 :for="'ingredient-optional-' + groupIndex + '-' + itemIndex"
                 class="recipe-form__optional-box"
@@ -929,16 +1343,6 @@ watch(() => uiStore.language, async () => {
                   {{ $t('forms.recipe.ingredientOptional') }}
                 </span>
               </label>
-
-              <Button
-                v-if="group.items?.length > 1"
-                type="button"
-                icon="pi pi-trash"
-                severity="danger"
-                size="small"
-                text
-                @click="removeIngredient(groupIndex, itemIndex)"
-              />
             </div>
           </div>
         </div>
@@ -962,69 +1366,126 @@ watch(() => uiStore.language, async () => {
         />
       </div>
 
-          <hr/>
-
-      <!-- Steps -->
+      <!-- Instructions -->
       <section class="recipe-form__section">
         <h2 class="recipe-form__section-title">{{ $t('forms.recipe.sections.steps') }}</h2>
 
-        <div
-          v-for="(step, index) in formData.steps"
-          :key="step.id"
-          class="recipe-form__step"
-        >
-          <div class="recipe-form__step-header">
-            <span class="recipe-form__step-number">{{ $t('forms.recipe.step') }} {{ index + 1 }}</span>
-            <div class="recipe-form__step-actions">
-              <Button
-                type="button"
-                icon="pi pi-arrow-up"
-                severity="secondary"
-                size="small"
-                text
-                :disabled="index === 0"
-                @click="moveStepUp(index)"
+        <div class="recipe-form__instruction-items">
+          <div
+            v-for="(item, index) in formData.instruction_items"
+            :key="item.id || index"
+            class="recipe-form__instruction-item"
+            :class="`recipe-form__instruction-item--${item.item_type}`"
+          >
+            <!-- Heading Item -->
+            <template v-if="item.item_type === 'heading'">
+              <div class="recipe-form__instruction-item-header">
+                <span class="recipe-form__instruction-item-label">
+                  <i class="pi pi-bookmark"></i>
+                  Section Heading
+                </span>
+                <ReorderableItemActions
+                  :can-move-up="index > 0"
+                  :can-move-down="index < (formData.instruction_items?.length ?? 0) - 1"
+                  :can-delete="true"
+                  @move-up="moveInstructionItemUp(index)"
+                  @move-down="moveInstructionItemDown(index)"
+                  @delete="removeInstructionItem(index)"
+                />
+              </div>
+              <InputText
+                v-model="item.content"
+                placeholder="e.g., Make the Sauce, Prepare the Dough"
+                class="recipe-form__input recipe-form__heading-input"
               />
-              <Button
-                type="button"
-                icon="pi pi-arrow-down"
-                severity="secondary"
-                size="small"
-                text
-                :disabled="index === formData.steps!.length - 1"
-                @click="moveStepDown(index)"
+            </template>
+
+            <!-- Text Item -->
+            <template v-else-if="item.item_type === 'text'">
+              <div class="recipe-form__instruction-item-header">
+                <span class="recipe-form__instruction-item-label">
+                  <i class="pi pi-align-left"></i>
+                  Step Text
+                </span>
+                <ReorderableItemActions
+                  :can-move-up="index > 0"
+                  :can-move-down="index < (formData.instruction_items?.length ?? 0) - 1"
+                  :can-delete="(formData.instruction_items?.filter(i => i.item_type === 'text')?.length ?? 0) > 1"
+                  @move-up="moveInstructionItemUp(index)"
+                  @move-down="moveInstructionItemDown(index)"
+                  @delete="removeInstructionItem(index)"
+                />
+              </div>
+              <Textarea
+                v-model="item.content"
+                :placeholder="$t('forms.recipe.stepInstruction')"
+                rows="3"
+                class="recipe-form__input"
               />
-              <Button
-                v-if="(formData.steps?.length ?? 0) > 1"
-                type="button"
-                icon="pi pi-trash"
-                severity="danger"
-                size="small"
-                text
-                @click="removeStep(index)"
-              />
-            </div>
+            </template>
+
+            <!-- Image Item -->
+            <template v-else-if="item.item_type === 'image'">
+              <div class="recipe-form__instruction-item-header">
+                <span class="recipe-form__instruction-item-label">
+                  <i class="pi pi-image"></i>
+                  Image
+                </span>
+                <ReorderableItemActions
+                  :can-move-up="index > 0"
+                  :can-move-down="index < (formData.instruction_items?.length ?? 0) - 1"
+                  :can-delete="true"
+                  @move-up="moveInstructionItemUp(index)"
+                  @move-down="moveInstructionItemDown(index)"
+                  @delete="removeInstructionItem(index)"
+                />
+              </div>
+
+              <div v-if="getInstructionImagePreview(item)" class="recipe-form__instruction-image-preview">
+                <img :src="getInstructionImagePreview(item)!" alt="Instruction image" />
+              </div>
+
+              <div v-else class="recipe-form__instruction-image-upload">
+                <input
+                  :id="`instruction-image-${item.id}`"
+                  type="file"
+                  accept="image/png,image/jpeg,image/gif,image/webp"
+                  class="recipe-form__file-input"
+                  @change="handleInstructionImageSelect($event, item.id!)"
+                />
+                <label :for="`instruction-image-${item.id}`" class="recipe-form__file-label recipe-form__file-label--small">
+                  <i class="pi pi-cloud-upload"></i>
+                  <span>Upload image</span>
+                </label>
+              </div>
+            </template>
           </div>
-          <Textarea
-            v-model="step.instruction"
-            :placeholder="$t('forms.recipe.stepInstruction')"
-            rows="3"
-            class="recipe-form__step-instruction"
-            required
-          />
         </div>
 
-        <Button
-          type="button"
-          :label="$t('forms.recipe.addStep')"
-          icon="pi pi-plus"
-          severity="success"
-          class="recipe-form__add-step-button"
-          @click="addStep"
-        />
+        <div class="recipe-form__add-instruction-buttons">
+          <Button
+            type="button"
+            label="Add Section Heading"
+            icon="pi pi-bookmark"
+            severity="success"
+            @click="addInstructionHeading"
+          />
+          <Button
+            type="button"
+            label="Add Step Text"
+            icon="pi pi-align-left"
+            severity="success"
+            @click="addInstructionText"
+          />
+          <Button
+            type="button"
+            label="Add Image"
+            icon="pi pi-image"
+            severity="success"
+            @click="addInstructionImage"
+          />
+        </div>
       </section>
-
-      <hr/>
 
       <!-- Admin Notes -->
       <section class="recipe-form__section">
@@ -1045,6 +1506,14 @@ watch(() => uiStore.language, async () => {
         </div>
       </section>
     </form>
+
+    <!-- New Unit Modal -->
+    <NewUnitModal
+      v-model:visible="showNewUnitModal"
+      :unit-name="newUnitData?.name || ''"
+      @unit-created="handleUnitCreated"
+      @cancel="handleUnitModalCancel"
+    />
   </div>
 </template>
 
@@ -1131,8 +1600,8 @@ hr {
   background: var(--color-background);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-lg);
-  padding: var(--spacing-xl);
-  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
 }
 
 .recipe-form__section-title {
@@ -1161,8 +1630,12 @@ hr {
   margin-bottom: var(--spacing-md);
 }
 
+.recipe-form__section {
+  margin-bottom: 30px;
+}
+
 .recipe-form__field {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 15px;
 }
 
 .recipe-form__field--medium {
@@ -1270,7 +1743,7 @@ hr {
 
 .recipe-form__ingredient {
   background-color: var(--color-gray-100);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-sm);
   border-radius: var(--border-radius-md);
 }
 
@@ -1284,21 +1757,30 @@ hr {
   margin-bottom: var(--spacing-sm);
 }
 
+.recipe-form__ingredient-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.recipe-form__ingredient-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
 .recipe-form__ingredient-row--main {
   grid-template-columns: 2fr 1fr 1fr;
-  align-items: flex-end;
 }
 
 .recipe-form__ingredient-row--notes {
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr auto;
   margin-bottom: 0;
-}
-
-.recipe-form__ingredient-row--footer {
-  margin-top: var(--spacing-md);
-  grid-template-columns: 1fr 2fr;
-  margin-bottom: 0;
-  align-items: center;
+  align-items: end;
 }
 
 .recipe-form__checkbox-label {
@@ -1367,8 +1849,6 @@ hr {
 
 .recipe-form__step {
   padding: 0;
-  background: var(--color-background);
-  border-radius: var(--border-radius-md);
   margin-bottom: var(--spacing-md);
 }
 
@@ -1382,11 +1862,6 @@ hr {
 .recipe-form__step-number {
   font-weight: var(--font-weight-semibold);
   color: var(--color-text);
-}
-
-.recipe-form__step-actions {
-  display: flex;
-  gap: var(--spacing-xs);
 }
 
 .recipe-form__step-instruction {
@@ -1440,6 +1915,14 @@ hr {
   font-size: 32px;
 }
 
+.recipe-form__file-label--small {
+  padding: var(--spacing-lg);
+}
+
+.recipe-form__file-label--small i {
+  font-size: 24px;
+}
+
 .recipe-form__image-preview {
   margin-top: var(--spacing-lg);
   position: relative;
@@ -1462,6 +1945,76 @@ hr {
   right: var(--spacing-sm);
 }
 
+/* Step container */
+.recipe-form__step-container {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Step image styles */
+.recipe-form__step-image {
+  background: var(--color-gray-50);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-md) 0;
+  margin-left: var(--spacing-xl);
+}
+
+.recipe-form__step-image-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.recipe-form__step-image-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+
+.recipe-form__step-image-preview {
+  position: relative;
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.recipe-form__step-image-preview img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius-md);
+}
+
+.recipe-form__ai-badge {
+  position: absolute;
+  bottom: var(--spacing-sm);
+  left: var(--spacing-sm);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+}
+
+.recipe-form__step-image-upload {
+  margin-bottom: var(--spacing-md);
+}
+
+.recipe-form__step-image-caption {
+  margin-bottom: 0;
+}
+
+.recipe-form__add-image-row {
+  margin: var(--spacing-sm) 0;
+  margin-left: var(--spacing-xl);
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
   .recipe-form__row {
@@ -1479,5 +2032,100 @@ hr {
   .recipe-form__image-preview {
     max-width: 100%;
   }
+
+  .recipe-form__step-image {
+    margin-left: 0;
+  }
+
+  .recipe-form__add-image-row {
+    margin-left: 0;
+  }
+}
+
+/* Unit autocomplete styles */
+.recipe-form__unit-autocomplete :deep(.p-autocomplete-input) {
+  width: 100%;
+}
+
+.recipe-form__unit-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--spacing-xs) 0;
+}
+
+.recipe-form__unit-name {
+  font-weight: var(--font-weight-medium);
+}
+
+.recipe-form__unit-category {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-transform: capitalize;
+  background: var(--color-gray-100);
+  padding: 2px 8px;
+  border-radius: var(--border-radius-sm);
+}
+
+/* Instruction items styles */
+.recipe-form__instruction-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.recipe-form__instruction-item {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+}
+
+
+.recipe-form__instruction-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.recipe-form__instruction-item-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+
+.recipe-form__heading-input :deep(.p-inputtext) {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-lg);
+}
+
+.recipe-form__instruction-image-preview {
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.recipe-form__instruction-image-preview img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius-md);
+}
+
+.recipe-form__instruction-image-upload {
+  margin-bottom: var(--spacing-md);
+}
+
+.recipe-form__add-instruction-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
 }
 </style>

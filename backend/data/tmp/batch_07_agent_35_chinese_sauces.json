@@ -1,0 +1,848 @@
+{
+  "batch": 7,
+  "agent": 35,
+  "category": "chinese_sauces",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "Light Soy Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 60,
+        "protein_g": 8.1,
+        "carbs_g": 5.6,
+        "fat_g": 0.1
+      },
+      "aliases": ["生抽", "sheng chou", "thin soy sauce"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Dark Soy Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 70,
+        "protein_g": 7.5,
+        "carbs_g": 8.2,
+        "fat_g": 0.1
+      },
+      "aliases": ["老抽", "lao chou", "thick soy sauce"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Mushroom Soy Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 65,
+        "protein_g": 7.8,
+        "carbs_g": 6.5,
+        "fat_g": 0.1
+      },
+      "aliases": ["草菇老抽", "cao gu lao chou", "mushroom dark soy"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sweet Soy Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 120,
+        "protein_g": 5.2,
+        "carbs_g": 25.0,
+        "fat_g": 0.2
+      },
+      "aliases": ["甜酱油", "tian jiang you", "kecap manis"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Tamari Soy Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 55,
+        "protein_g": 8.5,
+        "carbs_g": 4.8,
+        "fat_g": 0.1
+      },
+      "aliases": ["溜酱油", "liu jiang you", "gluten-free soy sauce"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Chinkiang Black Vinegar",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 20,
+        "protein_g": 0.5,
+        "carbs_g": 4.2,
+        "fat_g": 0.0
+      },
+      "aliases": ["镇江香醋", "zhen jiang xiang cu", "black rice vinegar"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Rice Vinegar",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 0.3,
+        "carbs_g": 4.0,
+        "fat_g": 0.0
+      },
+      "aliases": ["米醋", "mi cu", "rice wine vinegar"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "White Rice Vinegar",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 15,
+        "protein_g": 0.2,
+        "carbs_g": 3.5,
+        "fat_g": 0.0
+      },
+      "aliases": ["白醋", "bai cu", "clear vinegar"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Aged Black Vinegar",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 0.6,
+        "carbs_g": 4.5,
+        "fat_g": 0.0
+      },
+      "aliases": ["陈醋", "chen cu", "mature vinegar"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Fermented Black Beans",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 180,
+        "protein_g": 15.5,
+        "carbs_g": 18.0,
+        "fat_g": 6.0
+      },
+      "aliases": ["豆豉", "dou chi", "salted black beans"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Fermented Bean Paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 165,
+        "protein_g": 12.0,
+        "carbs_g": 20.0,
+        "fat_g": 4.5
+      },
+      "aliases": ["豆瓣酱", "dou ban jiang", "broad bean paste"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Pixian Doubanjiang",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 170,
+        "protein_g": 11.5,
+        "carbs_g": 21.0,
+        "fat_g": 5.0
+      },
+      "aliases": ["郫县豆瓣酱", "pi xian dou ban jiang", "Sichuan chili bean paste"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sweet Bean Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 200,
+        "protein_g": 8.0,
+        "carbs_g": 38.0,
+        "fat_g": 3.0
+      },
+      "aliases": ["甜面酱", "tian mian jiang", "sweet flour sauce"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Yellow Bean Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 140,
+        "protein_g": 10.5,
+        "carbs_g": 16.0,
+        "fat_g": 4.0
+      },
+      "aliases": ["黄豆酱", "huang dou jiang", "soybean paste"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Red Fermented Tofu",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 110,
+        "protein_g": 8.5,
+        "carbs_g": 7.0,
+        "fat_g": 5.5
+      },
+      "aliases": ["红腐乳", "hong fu ru", "red bean curd"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "White Fermented Tofu",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 100,
+        "protein_g": 8.0,
+        "carbs_g": 5.0,
+        "fat_g": 5.0
+      },
+      "aliases": ["白腐乳", "bai fu ru", "white bean curd"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Preserved Mustard Greens",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 2.0,
+        "carbs_g": 3.5,
+        "fat_g": 0.5
+      },
+      "aliases": ["榨菜", "zha cai", "Sichuan preserved vegetable"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Mei Cai",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 30,
+        "protein_g": 2.5,
+        "carbs_g": 4.0,
+        "fat_g": 0.8
+      },
+      "aliases": ["梅菜", "mei cai", "preserved mustard cabbage"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Pickled Mustard Tuber",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 28,
+        "protein_g": 2.2,
+        "carbs_g": 4.2,
+        "fat_g": 0.6
+      },
+      "aliases": ["冬菜", "dong cai", "winter vegetable"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Chili Oil",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.5,
+        "carbs_g": 2.0,
+        "fat_g": 100.0
+      },
+      "aliases": ["辣椒油", "la jiao you", "hot chili oil"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Chili Oil",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 870,
+        "protein_g": 1.0,
+        "carbs_g": 3.0,
+        "fat_g": 98.0
+      },
+      "aliases": ["川味红油", "chuan wei hong you", "Sichuan red oil"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Chili Crisp",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 650,
+        "protein_g": 3.5,
+        "carbs_g": 12.0,
+        "fat_g": 68.0
+      },
+      "aliases": ["油辣子", "you la zi", "crispy chili oil"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Lao Gan Ma Chili Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 620,
+        "protein_g": 4.0,
+        "carbs_g": 15.0,
+        "fat_g": 64.0
+      },
+      "aliases": ["老干妈", "lao gan ma", "spicy chili crisp"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Chinese Chili Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 100,
+        "protein_g": 2.0,
+        "carbs_g": 18.0,
+        "fat_g": 2.5
+      },
+      "aliases": ["辣酱", "la jiang", "hot sauce"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Garlic Chili Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 95,
+        "protein_g": 2.5,
+        "carbs_g": 16.0,
+        "fat_g": 2.8
+      },
+      "aliases": ["蒜蓉辣酱", "suan rong la jiang", "garlic hot sauce"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Chinese Sesame Paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 595,
+        "protein_g": 17.0,
+        "carbs_g": 23.0,
+        "fat_g": 53.0
+      },
+      "aliases": ["芝麻酱", "zhi ma jiang", "sesame butter"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Toasted Sesame Oil",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0
+      },
+      "aliases": ["香油", "xiang you", "sesame oil"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Five Spice Powder",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 280,
+        "protein_g": 12.0,
+        "carbs_g": 52.0,
+        "fat_g": 8.0
+      },
+      "aliases": ["五香粉", "wu xiang fen", "five spice"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "White Pepper Powder",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 296,
+        "protein_g": 10.4,
+        "carbs_g": 68.5,
+        "fat_g": 2.1
+      },
+      "aliases": ["白胡椒粉", "bai hu jiao fen", "white pepper"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Peppercorn Powder",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 305,
+        "protein_g": 10.5,
+        "carbs_g": 65.0,
+        "fat_g": 3.5
+      },
+      "aliases": ["花椒粉", "hua jiao fen", "Sichuan pepper powder"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "MSG",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 0.0
+      },
+      "aliases": ["味精", "wei jing", "monosodium glutamate"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Chicken Powder",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 320,
+        "protein_g": 15.0,
+        "carbs_g": 50.0,
+        "fat_g": 5.0
+      },
+      "aliases": ["鸡精", "ji jing", "chicken bouillon powder"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Shaoxing Wine",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 134,
+        "protein_g": 1.5,
+        "carbs_g": 7.8,
+        "fat_g": 0.0
+      },
+      "aliases": ["绍兴酒", "shao xing jiu", "Chinese cooking wine"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Huadiao Wine",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 138,
+        "protein_g": 1.6,
+        "carbs_g": 8.2,
+        "fat_g": 0.0
+      },
+      "aliases": ["花雕酒", "hua diao jiu", "carved flower wine"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Rice Cooking Wine",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 120,
+        "protein_g": 1.2,
+        "carbs_g": 6.5,
+        "fat_g": 0.0
+      },
+      "aliases": ["料酒", "liao jiu", "cooking rice wine"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Oyster Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 85,
+        "protein_g": 2.8,
+        "carbs_g": 18.0,
+        "fat_g": 0.5
+      },
+      "aliases": ["蚝油", "hao you", "oyster extract"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Hoisin Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 220,
+        "protein_g": 3.5,
+        "carbs_g": 45.0,
+        "fat_g": 4.0
+      },
+      "aliases": ["海鲜酱", "hai xian jiang", "Chinese barbecue sauce"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Plum Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 185,
+        "protein_g": 0.8,
+        "carbs_g": 45.0,
+        "fat_g": 0.2
+      },
+      "aliases": ["酸梅酱", "suan mei jiang", "duck sauce"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "XO Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 280,
+        "protein_g": 12.0,
+        "carbs_g": 15.0,
+        "fat_g": 20.0
+      },
+      "aliases": ["XO酱", "XO jiang", "premium seafood sauce"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Char Siu Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 210,
+        "protein_g": 2.5,
+        "carbs_g": 48.0,
+        "fat_g": 2.0
+      },
+      "aliases": ["叉烧酱", "cha shao jiang", "Chinese BBQ sauce"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Peppercorn Oil",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.5,
+        "fat_g": 100.0
+      },
+      "aliases": ["花椒油", "hua jiao you", "prickly ash oil"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Scallion Oil",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 880,
+        "protein_g": 0.2,
+        "carbs_g": 1.0,
+        "fat_g": 99.5
+      },
+      "aliases": ["葱油", "cong you", "spring onion oil"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Black Vinegar with Ginger",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 0.6,
+        "carbs_g": 5.0,
+        "fat_g": 0.1
+      },
+      "aliases": ["姜醋", "jiang cu", "ginger vinegar"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Red Oil Wonton Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 420,
+        "protein_g": 2.0,
+        "carbs_g": 8.0,
+        "fat_g": 42.0
+      },
+      "aliases": ["红油抄手", "hong you chao shou", "spicy wonton sauce"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Cumin Powder",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 17.8,
+        "carbs_g": 44.2,
+        "fat_g": 22.3
+      },
+      "aliases": ["孜然粉", "zi ran fen", "ground cumin"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Star Anise Powder",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 337,
+        "protein_g": 17.6,
+        "carbs_g": 50.0,
+        "fat_g": 15.9
+      },
+      "aliases": ["八角粉", "ba jiao fen", "ground star anise"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Fermented Rice Wine Lees",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 95,
+        "protein_g": 3.2,
+        "carbs_g": 18.0,
+        "fat_g": 0.8
+      },
+      "aliases": ["酒糟", "jiu zao", "wine sediment"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Red Yeast Rice",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 340,
+        "protein_g": 7.5,
+        "carbs_g": 72.0,
+        "fat_g": 2.5
+      },
+      "aliases": ["红曲米", "hong qu mi", "red fermented rice"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Chinese Maltose Syrup",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 320,
+        "protein_g": 0.0,
+        "carbs_g": 80.0,
+        "fat_g": 0.0
+      },
+      "aliases": ["麦芽糖", "mai ya tang", "malt sugar"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Rock Sugar",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 0.0,
+        "carbs_g": 99.9,
+        "fat_g": 0.0
+      },
+      "aliases": ["冰糖", "bing tang", "crystal sugar"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Salted Egg Yolk Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 320,
+        "protein_g": 12.0,
+        "carbs_g": 8.0,
+        "fat_g": 28.0
+      },
+      "aliases": ["咸蛋黄酱", "xian dan huang jiang", "salted duck egg sauce"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Shrimp Paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 135,
+        "protein_g": 18.0,
+        "carbs_g": 5.0,
+        "fat_g": 4.5
+      },
+      "aliases": ["虾酱", "xia jiang", "prawn paste"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Dried Shrimp Roe",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 340,
+        "protein_g": 58.0,
+        "carbs_g": 2.0,
+        "fat_g": 10.0
+      },
+      "aliases": ["虾子", "xia zi", "shrimp eggs"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Fish Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 5.0,
+        "carbs_g": 3.5,
+        "fat_g": 0.5
+      },
+      "aliases": ["鱼露", "yu lu", "fish extract"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Ya Cai",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 2.8,
+        "carbs_g": 4.5,
+        "fat_g": 0.7
+      },
+      "aliases": ["芽菜", "ya cai", "preserved mustard stem"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Tianjin Preserved Vegetable",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 27,
+        "protein_g": 2.3,
+        "carbs_g": 3.8,
+        "fat_g": 0.6
+      },
+      "aliases": ["天津冬菜", "tian jin dong cai", "Tianjin cabbage"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Pickled Ginger",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 0.8,
+        "carbs_g": 9.0,
+        "fat_g": 0.2
+      },
+      "aliases": ["泡姜", "pao jiang", "preserved ginger"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Pickled Radish",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 0.6,
+        "carbs_g": 4.8,
+        "fat_g": 0.1
+      },
+      "aliases": ["泡萝卜", "pao luo bo", "preserved daikon"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sweet Pickled Garlic",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 75,
+        "protein_g": 2.0,
+        "carbs_g": 16.0,
+        "fat_g": 0.3
+      },
+      "aliases": ["糖蒜", "tang suan", "sweet garlic"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sesame Chili Oil",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.3,
+        "carbs_g": 1.5,
+        "fat_g": 100.0
+      },
+      "aliases": ["麻辣油", "ma la you", "numbing spicy oil"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Fragrant Spicy Oil",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 875,
+        "protein_g": 0.5,
+        "carbs_g": 2.5,
+        "fat_g": 98.5
+      },
+      "aliases": ["香辣油", "xiang la you", "aromatic chili oil"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Ginger Scallion Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 450,
+        "protein_g": 1.0,
+        "carbs_g": 8.0,
+        "fat_g": 47.0
+      },
+      "aliases": ["姜葱酱", "jiang cong jiang", "ginger spring onion sauce"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Soy Sauce Paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 155,
+        "protein_g": 9.0,
+        "carbs_g": 25.0,
+        "fat_g": 2.5
+      },
+      "aliases": ["酱油膏", "jiang you gao", "thick soy paste"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Shacha Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 380,
+        "protein_g": 8.5,
+        "carbs_g": 28.0,
+        "fat_g": 26.0
+      },
+      "aliases": ["沙茶酱", "sha cha jiang", "Chinese barbecue sauce"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Chili Bean Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 160,
+        "protein_g": 10.0,
+        "carbs_g": 22.0,
+        "fat_g": 4.8
+      },
+      "aliases": ["辣豆瓣酱", "la dou ban jiang", "spicy bean paste"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Black Bean Garlic Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 145,
+        "protein_g": 11.0,
+        "carbs_g": 18.0,
+        "fat_g": 4.2
+      },
+      "aliases": ["豆豉蒜蓉酱", "dou chi suan rong jiang", "black bean sauce"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Spicy Fermented Bean Curd",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 115,
+        "protein_g": 8.8,
+        "carbs_g": 7.5,
+        "fat_g": 6.0
+      },
+      "aliases": ["辣腐乳", "la fu ru", "spicy preserved tofu"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Rose Fermented Bean Curd",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 105,
+        "protein_g": 8.2,
+        "carbs_g": 6.5,
+        "fat_g": 5.2
+      },
+      "aliases": ["玫瑰腐乳", "mei gui fu ru", "rose bean curd"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Thirteen Spice Powder",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 295,
+        "protein_g": 13.0,
+        "carbs_g": 55.0,
+        "fat_g": 9.0
+      },
+      "aliases": ["十三香", "shi san xiang", "13 spice mix"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Cinnamon Powder",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 247,
+        "protein_g": 3.9,
+        "carbs_g": 80.6,
+        "fat_g": 1.2
+      },
+      "aliases": ["桂皮粉", "gui pi fen", "ground cinnamon"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    }
+  ]
+}

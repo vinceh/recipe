@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="`/recipes/${recipe.id}`" class="recipe-card">
+  <router-link :to="{ name: 'recipe-detail', params: { id: recipe.id } }" class="recipe-card">
     <div class="recipe-card__image-container">
       <img
         v-if="recipe.image_url"
@@ -34,29 +34,29 @@
       <p v-if="recipe.ingredient_groups?.[0]?.items" class="recipe-card__description">
         {{ getPreviewText() }}
       </p>
+
+      <div v-if="recipe.tags?.length" class="recipe-card__tags">
+        <span v-for="tag in recipe.tags.slice(0, 3)" :key="tag" class="recipe-card__tag">
+          {{ tag }}
+        </span>
+        <span v-if="recipe.tags.length > 3" class="recipe-card__tag recipe-card__tag--more">
+          +{{ recipe.tags.length - 3 }}
+        </span>
+      </div>
     </div>
   </router-link>
 </template>
 
 <script setup lang="ts">
 import type { Recipe } from '@/services/types'
-import { useI18n } from 'vue-i18n'
+import { useTimeFormatter } from '@/composables/useTimeFormatter'
 
 interface Props {
   recipe: Recipe
 }
 
 const props = defineProps<Props>()
-const { t } = useI18n()
-
-function formatTime(minutes: number): string {
-  if (minutes < 60) {
-    return `${minutes}min`
-  }
-  const hours = Math.floor(minutes / 60)
-  const mins = minutes % 60
-  return mins > 0 ? `${hours}h ${mins}min` : `${hours}h`
-}
+const { formatTime } = useTimeFormatter()
 
 function getPreviewText(): string {
   return props.recipe.description
@@ -95,7 +95,7 @@ function getPreviewText(): string {
   align-items: center;
   justify-content: center;
   font-size: 48px;
-  color: #b3b1ac;
+  color: var(--color-provisions-placeholder);
 }
 
 .recipe-card__content {
@@ -114,10 +114,10 @@ function getPreviewText(): string {
 
 .recipe-card__title {
   font-family: var(--font-family-heading);
-  font-size: 16px;
-  font-weight: 600;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
   margin: 0;
-  color: #383630;
+  color: var(--color-provisions-border);
   line-height: 1.3;
   flex: 1;
 }
@@ -134,43 +134,40 @@ function getPreviewText(): string {
 }
 
 .recipe-card__difficulty.difficulty-easy {
-  background: #d4f4dd;
-  color: #1b5e20;
+  background: var(--color-difficulty-easy-bg);
+  color: var(--color-difficulty-easy-text);
 }
 
 .recipe-card__difficulty.difficulty-medium {
-  background: #fff3cd;
-  color: #856404;
+  background: var(--color-difficulty-medium-bg);
+  color: var(--color-difficulty-medium-text);
 }
 
 .recipe-card__difficulty.difficulty-hard {
-  background: #f8d7da;
-  color: #721c24;
+  background: var(--color-difficulty-hard-bg);
+  color: var(--color-difficulty-hard-text);
 }
 
 .recipe-card__meta {
-  display: flex;
-  gap: 6px;
-  font-size: 13px;
-  color: #383630;
+  font-size: var(--font-size-sm);
+  color: var(--color-provisions-border);
   margin: 0;
   font-family: var(--font-family-base);
-  font-weight: 300;
-}
-
-.recipe-card__meta-item {
-  display: inline;
+  font-weight: var(--font-weight-normal);
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .recipe-card__meta-item:not(:last-child)::after {
-  content: '  ·  ';
-  margin-left: 0;
+  content: ' · ';
 }
 
 .recipe-card__description {
-  font-size: 14px;
-  color: #383630;
-  margin: 0 0 15px 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-provisions-border);
+  margin: 0 0 var(--spacing-md) 0;
   line-height: 1.4;
   font-family: var(--font-family-heading);
   display: -webkit-box;
@@ -178,5 +175,27 @@ function getPreviewText(): string {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.recipe-card__tags {
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.recipe-card__tag {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  background: var(--color-gray-100);
+  color: var(--color-text-secondary);
+}
+
+.recipe-card__tag--more {
+  background: transparent;
+  color: var(--color-text-tertiary);
 }
 </style>

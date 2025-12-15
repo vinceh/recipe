@@ -3,7 +3,7 @@ FactoryBot.define do
     ingredient_group
     ingredient_name { "Ingredient #{SecureRandom.hex(4)}" }
     amount { 1.0 }
-    unit { "cup" }
+    unit { Unit.find_or_create_by!(canonical_name: "cup") { |u| u.category = "unit_volume" } }
     position { 1 }
     optional { false }
   end

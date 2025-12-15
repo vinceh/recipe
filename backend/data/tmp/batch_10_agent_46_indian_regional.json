@@ -1,0 +1,1479 @@
+{
+  "batch": 10,
+  "agent": 46,
+  "category": "indian_regional",
+  "ingredients": [
+    {
+      "canonical_name": "paneer",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 265,
+        "protein_g": 18.3,
+        "carbs_g": 1.2,
+        "fat_g": 20.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Indian cottage cheese", "language": "en", "type": "synonym" },
+        { "alias": "पनीर", "language": "hi", "type": "translation" },
+        { "alias": "パニール", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cube", "grams": 25 },
+        { "unit": "block", "grams": 200 }
+      ]
+    },
+    {
+      "canonical_name": "ghee",
+      "category": "fats",
+      "per_100g": {
+        "calories": 876,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 99.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "clarified butter", "language": "en", "type": "synonym" },
+        { "alias": "घी", "language": "hi", "type": "translation" },
+        { "alias": "ギー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 14 },
+        { "unit": "tsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "curry leaves",
+      "category": "herbs",
+      "per_100g": {
+        "calories": 108,
+        "protein_g": 6.1,
+        "carbs_g": 18.7,
+        "fat_g": 1,
+        "fiber_g": 6.4
+      },
+      "aliases": [
+        { "alias": "kadi patta", "language": "en", "type": "synonym" },
+        { "alias": "करी पत्ता", "language": "hi", "type": "translation" },
+        { "alias": "カレーリーフ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "sprig", "grams": 2 },
+        { "unit": "handful", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "coconut oil",
+      "category": "fats",
+      "per_100g": {
+        "calories": 862,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 99.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "नारियल का तेल", "language": "hi", "type": "translation" },
+        { "alias": "ココナッツオイル", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 14 },
+        { "unit": "tsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "tamarind paste",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 239,
+        "protein_g": 2.8,
+        "carbs_g": 62.5,
+        "fat_g": 0.6,
+        "fiber_g": 5.1
+      },
+      "aliases": [
+        { "alias": "imli paste", "language": "en", "type": "synonym" },
+        { "alias": "इमली", "language": "hi", "type": "translation" },
+        { "alias": "タマリンドペースト", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 18 },
+        { "unit": "tsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "jaggery",
+      "category": "sweeteners",
+      "per_100g": {
+        "calories": 383,
+        "protein_g": 0.4,
+        "carbs_g": 98.0,
+        "fat_g": 0.1,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "gur", "language": "en", "type": "synonym" },
+        { "alias": "गुड़", "language": "hi", "type": "translation" },
+        { "alias": "ジャガリー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "block", "grams": 500 }
+      ]
+    },
+    {
+      "canonical_name": "idli rice",
+      "category": "grains",
+      "per_100g": {
+        "calories": 345,
+        "protein_g": 6.8,
+        "carbs_g": 76.5,
+        "fat_g": 0.6,
+        "fiber_g": 1.3
+      },
+      "aliases": [
+        { "alias": "parboiled rice", "language": "en", "type": "synonym" },
+        { "alias": "इडली चावल", "language": "hi", "type": "translation" },
+        { "alias": "イドリ米", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 195 }
+      ]
+    },
+    {
+      "canonical_name": "sona masoori rice",
+      "category": "grains",
+      "per_100g": {
+        "calories": 349,
+        "protein_g": 7.1,
+        "carbs_g": 77.6,
+        "fat_g": 0.5,
+        "fiber_g": 1.2
+      },
+      "aliases": [
+        { "alias": "sona masuri", "language": "en", "type": "synonym" },
+        { "alias": "सोना मसूरी चावल", "language": "hi", "type": "translation" },
+        { "alias": "ソナマスーリ米", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 195 }
+      ]
+    },
+    {
+      "canonical_name": "khoya",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 357,
+        "protein_g": 12.5,
+        "carbs_g": 25.2,
+        "fat_g": 23.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "mawa", "language": "en", "type": "synonym" },
+        { "alias": "khoa", "language": "en", "type": "synonym" },
+        { "alias": "खोया", "language": "hi", "type": "translation" },
+        { "alias": "コーヤ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 120 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "besan",
+      "category": "flours",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 22.4,
+        "carbs_g": 57.8,
+        "fat_g": 6.7,
+        "fiber_g": 10.8
+      },
+      "aliases": [
+        { "alias": "chickpea flour", "language": "en", "type": "synonym" },
+        { "alias": "gram flour", "language": "en", "type": "synonym" },
+        { "alias": "बेसन", "language": "hi", "type": "translation" },
+        { "alias": "ベサン", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 92 },
+        { "unit": "tbsp", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "kasuri methi",
+      "category": "herbs",
+      "per_100g": {
+        "calories": 323,
+        "protein_g": 25.8,
+        "carbs_g": 58.4,
+        "fat_g": 6.4,
+        "fiber_g": 24.6
+      },
+      "aliases": [
+        { "alias": "dried fenugreek leaves", "language": "en", "type": "synonym" },
+        { "alias": "कसूरी मेथी", "language": "hi", "type": "translation" },
+        { "alias": "カスリメティ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 3 },
+        { "unit": "tsp", "grams": 1 }
+      ]
+    },
+    {
+      "canonical_name": "mustard oil",
+      "category": "fats",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "sarson ka tel", "language": "en", "type": "synonym" },
+        { "alias": "सरसों का तेल", "language": "hi", "type": "translation" },
+        { "alias": "マスタードオイル", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 14 },
+        { "unit": "tsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "panch phoron",
+      "category": "spices",
+      "per_100g": {
+        "calories": 345,
+        "protein_g": 14.2,
+        "carbs_g": 48.5,
+        "fat_g": 12.3,
+        "fiber_g": 18.5
+      },
+      "aliases": [
+        { "alias": "five spice blend", "language": "en", "type": "synonym" },
+        { "alias": "panch puran", "language": "en", "type": "synonym" },
+        { "alias": "पंच फोरन", "language": "hi", "type": "translation" },
+        { "alias": "パンチフォロン", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3 },
+        { "unit": "tbsp", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "posto",
+      "category": "seeds",
+      "per_100g": {
+        "calories": 525,
+        "protein_g": 17.9,
+        "carbs_g": 28.1,
+        "fat_g": 41.6,
+        "fiber_g": 19.5
+      },
+      "aliases": [
+        { "alias": "poppy seeds", "language": "en", "type": "synonym" },
+        { "alias": "khus khus", "language": "en", "type": "synonym" },
+        { "alias": "पोस्तो", "language": "hi", "type": "translation" },
+        { "alias": "ポピーシード", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 9 },
+        { "unit": "tsp", "grams": 3 }
+      ]
+    },
+    {
+      "canonical_name": "nigella seeds",
+      "category": "spices",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 17.8,
+        "carbs_g": 44.2,
+        "fat_g": 14.6,
+        "fiber_g": 10.5
+      },
+      "aliases": [
+        { "alias": "kalonji", "language": "en", "type": "synonym" },
+        { "alias": "black cumin", "language": "en", "type": "synonym" },
+        { "alias": "कलौंजी", "language": "hi", "type": "translation" },
+        { "alias": "ニゲラシード", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3 },
+        { "unit": "tbsp", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "kokum",
+      "category": "fruits",
+      "per_100g": {
+        "calories": 60,
+        "protein_g": 0.5,
+        "carbs_g": 14.3,
+        "fat_g": 0.1,
+        "fiber_g": 2.8
+      },
+      "aliases": [
+        { "alias": "garcinia indica", "language": "en", "type": "synonym" },
+        { "alias": "kokam", "language": "en", "type": "synonym" },
+        { "alias": "कोकम", "language": "hi", "type": "translation" },
+        { "alias": "コクム", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 3 }
+      ]
+    },
+    {
+      "canonical_name": "amchur",
+      "category": "spices",
+      "per_100g": {
+        "calories": 360,
+        "protein_g": 3.5,
+        "carbs_g": 82.5,
+        "fat_g": 0.6,
+        "fiber_g": 11.2
+      },
+      "aliases": [
+        { "alias": "dry mango powder", "language": "en", "type": "synonym" },
+        { "alias": "dried mango powder", "language": "en", "type": "synonym" },
+        { "alias": "आमचूर", "language": "hi", "type": "translation" },
+        { "alias": "アムチュール", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3 },
+        { "unit": "tbsp", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "ajwain",
+      "category": "spices",
+      "per_100g": {
+        "calories": 305,
+        "protein_g": 15.4,
+        "carbs_g": 42.6,
+        "fat_g": 9.1,
+        "fiber_g": 38.6
+      },
+      "aliases": [
+        { "alias": "carom seeds", "language": "en", "type": "synonym" },
+        { "alias": "bishop's weed", "language": "en", "type": "synonym" },
+        { "alias": "अजवाइन", "language": "hi", "type": "translation" },
+        { "alias": "アジョワン", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3 },
+        { "unit": "tbsp", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "goda masala",
+      "category": "spices",
+      "per_100g": {
+        "calories": 325,
+        "protein_g": 12.5,
+        "carbs_g": 52.3,
+        "fat_g": 8.7,
+        "fiber_g": 22.4
+      },
+      "aliases": [
+        { "alias": "Maharashtrian garam masala", "language": "en", "type": "synonym" },
+        { "alias": "गोडा मसाला", "language": "hi", "type": "translation" },
+        { "alias": "ゴダマサラ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3 },
+        { "unit": "tbsp", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "kala masala",
+      "category": "spices",
+      "per_100g": {
+        "calories": 315,
+        "protein_g": 11.8,
+        "carbs_g": 50.6,
+        "fat_g": 9.2,
+        "fiber_g": 21.5
+      },
+      "aliases": [
+        { "alias": "black masala", "language": "en", "type": "synonym" },
+        { "alias": "काला मसाला", "language": "hi", "type": "translation" },
+        { "alias": "カラマサラ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3 },
+        { "unit": "tbsp", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "dry coconut",
+      "category": "nuts",
+      "per_100g": {
+        "calories": 660,
+        "protein_g": 6.9,
+        "carbs_g": 23.7,
+        "fat_g": 64.5,
+        "fiber_g": 16.3
+      },
+      "aliases": [
+        { "alias": "copra", "language": "en", "type": "synonym" },
+        { "alias": "desiccated coconut", "language": "en", "type": "synonym" },
+        { "alias": "सूखा नारियल", "language": "hi", "type": "translation" },
+        { "alias": "乾燥ココナッツ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 80 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "sol kadhi paste",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 85,
+        "protein_g": 1.2,
+        "carbs_g": 18.5,
+        "fat_g": 0.8,
+        "fiber_g": 3.2
+      },
+      "aliases": [
+        { "alias": "kokum coconut paste", "language": "en", "type": "synonym" },
+        { "alias": "सोल कढी", "language": "hi", "type": "translation" },
+        { "alias": "ソルカディペースト", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "dried prawns",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 305,
+        "protein_g": 63.2,
+        "carbs_g": 3.8,
+        "fat_g": 3.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "dried shrimp", "language": "en", "type": "synonym" },
+        { "alias": "सूखी झींगे", "language": "hi", "type": "translation" },
+        { "alias": "干しエビ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 8 },
+        { "unit": "handful", "grams": 20 }
+      ]
+    },
+    {
+      "canonical_name": "fish curry powder",
+      "category": "spices",
+      "per_100g": {
+        "calories": 320,
+        "protein_g": 13.5,
+        "carbs_g": 48.2,
+        "fat_g": 10.3,
+        "fiber_g": 20.8
+      },
+      "aliases": [
+        { "alias": "seafood masala", "language": "en", "type": "synonym" },
+        { "alias": "मछली करी पाउडर", "language": "hi", "type": "translation" },
+        { "alias": "フィッシュカレーパウダー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3 },
+        { "unit": "tbsp", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "urad dal",
+      "category": "legumes",
+      "per_100g": {
+        "calories": 341,
+        "protein_g": 25.2,
+        "carbs_g": 59.6,
+        "fat_g": 1.6,
+        "fiber_g": 18.3
+      },
+      "aliases": [
+        { "alias": "black gram", "language": "en", "type": "synonym" },
+        { "alias": "black lentils", "language": "en", "type": "synonym" },
+        { "alias": "उड़द दाल", "language": "hi", "type": "translation" },
+        { "alias": "ウラドダール", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 200 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "chana dal",
+      "category": "legumes",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 22.5,
+        "carbs_g": 60.9,
+        "fat_g": 5.3,
+        "fiber_g": 11.5
+      },
+      "aliases": [
+        { "alias": "split chickpeas", "language": "en", "type": "synonym" },
+        { "alias": "Bengal gram", "language": "en", "type": "synonym" },
+        { "alias": "चना दाल", "language": "hi", "type": "translation" },
+        { "alias": "チャナダール", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 196 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "toor dal",
+      "category": "legumes",
+      "per_100g": {
+        "calories": 343,
+        "protein_g": 22.3,
+        "carbs_g": 62.8,
+        "fat_g": 1.5,
+        "fiber_g": 15.5
+      },
+      "aliases": [
+        { "alias": "arhar dal", "language": "en", "type": "synonym" },
+        { "alias": "pigeon peas", "language": "en", "type": "synonym" },
+        { "alias": "तूर दाल", "language": "hi", "type": "translation" },
+        { "alias": "トゥールダール", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 200 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "moong dal",
+      "category": "legumes",
+      "per_100g": {
+        "calories": 347,
+        "protein_g": 24.0,
+        "carbs_g": 63.0,
+        "fat_g": 1.2,
+        "fiber_g": 16.3
+      },
+      "aliases": [
+        { "alias": "mung dal", "language": "en", "type": "synonym" },
+        { "alias": "split mung beans", "language": "en", "type": "synonym" },
+        { "alias": "मूंग दाल", "language": "hi", "type": "translation" },
+        { "alias": "ムングダール", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 200 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "masoor dal",
+      "category": "legumes",
+      "per_100g": {
+        "calories": 352,
+        "protein_g": 25.8,
+        "carbs_g": 63.4,
+        "fat_g": 1.1,
+        "fiber_g": 10.7
+      },
+      "aliases": [
+        { "alias": "red lentils", "language": "en", "type": "synonym" },
+        { "alias": "pink lentils", "language": "en", "type": "synonym" },
+        { "alias": "मसूर दाल", "language": "hi", "type": "translation" },
+        { "alias": "マスールダール", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 192 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "hing",
+      "category": "spices",
+      "per_100g": {
+        "calories": 297,
+        "protein_g": 4.0,
+        "carbs_g": 67.8,
+        "fat_g": 1.1,
+        "fiber_g": 4.1
+      },
+      "aliases": [
+        { "alias": "asafoetida", "language": "en", "type": "synonym" },
+        { "alias": "हींग", "language": "hi", "type": "translation" },
+        { "alias": "アサフェティダ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "pinch", "grams": 0.5 },
+        { "unit": "tsp", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "atta flour",
+      "category": "flours",
+      "per_100g": {
+        "calories": 340,
+        "protein_g": 12.1,
+        "carbs_g": 71.2,
+        "fat_g": 1.7,
+        "fiber_g": 11.2
+      },
+      "aliases": [
+        { "alias": "whole wheat flour", "language": "en", "type": "synonym" },
+        { "alias": "chapati flour", "language": "en", "type": "synonym" },
+        { "alias": "आटा", "language": "hi", "type": "translation" },
+        { "alias": "アタ粉", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 120 },
+        { "unit": "tbsp", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "maida flour",
+      "category": "flours",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 10.3,
+        "carbs_g": 76.3,
+        "fat_g": 0.9,
+        "fiber_g": 2.7
+      },
+      "aliases": [
+        { "alias": "refined wheat flour", "language": "en", "type": "synonym" },
+        { "alias": "all-purpose flour", "language": "en", "type": "synonym" },
+        { "alias": "मैदा", "language": "hi", "type": "translation" },
+        { "alias": "マイダ粉", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 125 },
+        { "unit": "tbsp", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "rawa",
+      "category": "grains",
+      "per_100g": {
+        "calories": 360,
+        "protein_g": 12.7,
+        "carbs_g": 72.8,
+        "fat_g": 0.5,
+        "fiber_g": 3.9
+      },
+      "aliases": [
+        { "alias": "semolina", "language": "en", "type": "synonym" },
+        { "alias": "sooji", "language": "en", "type": "synonym" },
+        { "alias": "रवा", "language": "hi", "type": "translation" },
+        { "alias": "ラヴァ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 167 },
+        { "unit": "tbsp", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "basmati rice",
+      "category": "grains",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 7.5,
+        "carbs_g": 78.2,
+        "fat_g": 0.6,
+        "fiber_g": 1.3
+      },
+      "aliases": [
+        { "alias": "बासमती चावल", "language": "hi", "type": "translation" },
+        { "alias": "バスマティ米", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 195 }
+      ]
+    },
+    {
+      "canonical_name": "poha",
+      "category": "grains",
+      "per_100g": {
+        "calories": 330,
+        "protein_g": 6.6,
+        "carbs_g": 76.9,
+        "fat_g": 0.4,
+        "fiber_g": 3.2
+      },
+      "aliases": [
+        { "alias": "flattened rice", "language": "en", "type": "synonym" },
+        { "alias": "beaten rice", "language": "en", "type": "synonym" },
+        { "alias": "पोहा", "language": "hi", "type": "translation" },
+        { "alias": "ポハ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 50 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "dhania powder",
+      "category": "spices",
+      "per_100g": {
+        "calories": 298,
+        "protein_g": 12.4,
+        "carbs_g": 54.2,
+        "fat_g": 4.8,
+        "fiber_g": 41.9
+      },
+      "aliases": [
+        { "alias": "coriander powder", "language": "en", "type": "synonym" },
+        { "alias": "धनिया पाउडर", "language": "hi", "type": "translation" },
+        { "alias": "コリアンダーパウダー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "jeera powder",
+      "category": "spices",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 17.8,
+        "carbs_g": 44.2,
+        "fat_g": 22.3,
+        "fiber_g": 10.5
+      },
+      "aliases": [
+        { "alias": "cumin powder", "language": "en", "type": "synonym" },
+        { "alias": "जीरा पाउडर", "language": "hi", "type": "translation" },
+        { "alias": "クミンパウダー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "haldi powder",
+      "category": "spices",
+      "per_100g": {
+        "calories": 312,
+        "protein_g": 9.7,
+        "carbs_g": 67.1,
+        "fat_g": 3.3,
+        "fiber_g": 22.7
+      },
+      "aliases": [
+        { "alias": "turmeric powder", "language": "en", "type": "synonym" },
+        { "alias": "हल्दी", "language": "hi", "type": "translation" },
+        { "alias": "ターメリックパウダー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3 },
+        { "unit": "tbsp", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "lal mirch powder",
+      "category": "spices",
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 12.0,
+        "carbs_g": 56.6,
+        "fat_g": 17.3,
+        "fiber_g": 34.8
+      },
+      "aliases": [
+        { "alias": "red chili powder", "language": "en", "type": "synonym" },
+        { "alias": "cayenne pepper", "language": "en", "type": "synonym" },
+        { "alias": "लाल मिर्च पाउडर", "language": "hi", "type": "translation" },
+        { "alias": "レッドチリパウダー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "garam masala",
+      "category": "spices",
+      "per_100g": {
+        "calories": 379,
+        "protein_g": 14.3,
+        "carbs_g": 50.3,
+        "fat_g": 15.0,
+        "fiber_g": 24.5
+      },
+      "aliases": [
+        { "alias": "गरम मसाला", "language": "hi", "type": "translation" },
+        { "alias": "ガラムマサラ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3 },
+        { "unit": "tbsp", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "sambhar powder",
+      "category": "spices",
+      "per_100g": {
+        "calories": 328,
+        "protein_g": 13.2,
+        "carbs_g": 51.8,
+        "fat_g": 9.5,
+        "fiber_g": 21.3
+      },
+      "aliases": [
+        { "alias": "sambar masala", "language": "en", "type": "synonym" },
+        { "alias": "सांभर पाउडर", "language": "hi", "type": "translation" },
+        { "alias": "サンバルパウダー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3 },
+        { "unit": "tbsp", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "rasam powder",
+      "category": "spices",
+      "per_100g": {
+        "calories": 335,
+        "protein_g": 14.5,
+        "carbs_g": 49.2,
+        "fat_g": 10.8,
+        "fiber_g": 22.6
+      },
+      "aliases": [
+        { "alias": "rasam masala", "language": "en", "type": "synonym" },
+        { "alias": "रसम पाउडर", "language": "hi", "type": "translation" },
+        { "alias": "ラサムパウダー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3 },
+        { "unit": "tbsp", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "ginger garlic paste",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 125,
+        "protein_g": 4.2,
+        "carbs_g": 26.8,
+        "fat_g": 0.8,
+        "fiber_g": 3.5
+      },
+      "aliases": [
+        { "alias": "अदरक लहसुन पेस्ट", "language": "hi", "type": "translation" },
+        { "alias": "ジンジャーガーリックペースト", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 6 },
+        { "unit": "tbsp", "grams": 18 }
+      ]
+    },
+    {
+      "canonical_name": "green chutney",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 45,
+        "protein_g": 2.8,
+        "carbs_g": 8.5,
+        "fat_g": 0.6,
+        "fiber_g": 3.2
+      },
+      "aliases": [
+        { "alias": "mint coriander chutney", "language": "en", "type": "synonym" },
+        { "alias": "हरी चटनी", "language": "hi", "type": "translation" },
+        { "alias": "グリーンチャツネ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "tsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "tamarind chutney",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 180,
+        "protein_g": 1.5,
+        "carbs_g": 45.2,
+        "fat_g": 0.4,
+        "fiber_g": 3.8
+      },
+      "aliases": [
+        { "alias": "imli chutney", "language": "en", "type": "synonym" },
+        { "alias": "इमली चटनी", "language": "hi", "type": "translation" },
+        { "alias": "タマリンドチャツネ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 18 },
+        { "unit": "tsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "mustard seeds",
+      "category": "spices",
+      "per_100g": {
+        "calories": 508,
+        "protein_g": 26.1,
+        "carbs_g": 28.1,
+        "fat_g": 36.2,
+        "fiber_g": 12.2
+      },
+      "aliases": [
+        { "alias": "rai", "language": "en", "type": "synonym" },
+        { "alias": "sarson", "language": "en", "type": "synonym" },
+        { "alias": "राई", "language": "hi", "type": "translation" },
+        { "alias": "マスタードシード", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 4 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "fennel seeds",
+      "category": "spices",
+      "per_100g": {
+        "calories": 345,
+        "protein_g": 15.8,
+        "carbs_g": 52.3,
+        "fat_g": 14.9,
+        "fiber_g": 39.8
+      },
+      "aliases": [
+        { "alias": "saunf", "language": "en", "type": "synonym" },
+        { "alias": "सौंफ", "language": "hi", "type": "translation" },
+        { "alias": "フェンネルシード", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "fenugreek seeds",
+      "category": "spices",
+      "per_100g": {
+        "calories": 323,
+        "protein_g": 23.0,
+        "carbs_g": 58.4,
+        "fat_g": 6.4,
+        "fiber_g": 24.6
+      },
+      "aliases": [
+        { "alias": "methi seeds", "language": "en", "type": "synonym" },
+        { "alias": "मेथी", "language": "hi", "type": "translation" },
+        { "alias": "フェヌグリークシード", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 4 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "cardamom pods",
+      "category": "spices",
+      "per_100g": {
+        "calories": 311,
+        "protein_g": 10.8,
+        "carbs_g": 68.5,
+        "fat_g": 6.7,
+        "fiber_g": 28.0
+      },
+      "aliases": [
+        { "alias": "elaichi", "language": "en", "type": "synonym" },
+        { "alias": "green cardamom", "language": "en", "type": "synonym" },
+        { "alias": "इलायची", "language": "hi", "type": "translation" },
+        { "alias": "カルダモン", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "pod", "grams": 0.3 },
+        { "unit": "tsp", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "cloves",
+      "category": "spices",
+      "per_100g": {
+        "calories": 274,
+        "protein_g": 5.9,
+        "carbs_g": 65.5,
+        "fat_g": 13.0,
+        "fiber_g": 33.9
+      },
+      "aliases": [
+        { "alias": "laung", "language": "en", "type": "synonym" },
+        { "alias": "लौंग", "language": "hi", "type": "translation" },
+        { "alias": "クローブ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 0.5 },
+        { "unit": "tsp", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "cinnamon stick",
+      "category": "spices",
+      "per_100g": {
+        "calories": 247,
+        "protein_g": 3.9,
+        "carbs_g": 80.6,
+        "fat_g": 1.2,
+        "fiber_g": 53.1
+      },
+      "aliases": [
+        { "alias": "dalchini", "language": "en", "type": "synonym" },
+        { "alias": "दालचीनी", "language": "hi", "type": "translation" },
+        { "alias": "シナモンスティック", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "stick", "grams": 5 },
+        { "unit": "tsp", "grams": 3 }
+      ]
+    },
+    {
+      "canonical_name": "bay leaves",
+      "category": "herbs",
+      "per_100g": {
+        "calories": 313,
+        "protein_g": 7.6,
+        "carbs_g": 74.9,
+        "fat_g": 8.4,
+        "fiber_g": 26.3
+      },
+      "aliases": [
+        { "alias": "tej patta", "language": "en", "type": "synonym" },
+        { "alias": "तेज पत्ता", "language": "hi", "type": "translation" },
+        { "alias": "ベイリーフ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "leaf", "grams": 0.5 }
+      ]
+    },
+    {
+      "canonical_name": "star anise",
+      "category": "spices",
+      "per_100g": {
+        "calories": 337,
+        "protein_g": 17.6,
+        "carbs_g": 50.0,
+        "fat_g": 15.9,
+        "fiber_g": 14.6
+      },
+      "aliases": [
+        { "alias": "chakra phool", "language": "en", "type": "synonym" },
+        { "alias": "चक्र फूल", "language": "hi", "type": "translation" },
+        { "alias": "スターアニス", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 1 }
+      ]
+    },
+    {
+      "canonical_name": "black peppercorns",
+      "category": "spices",
+      "per_100g": {
+        "calories": 251,
+        "protein_g": 10.4,
+        "carbs_g": 63.9,
+        "fat_g": 3.3,
+        "fiber_g": 25.3
+      },
+      "aliases": [
+        { "alias": "kali mirch", "language": "en", "type": "synonym" },
+        { "alias": "काली मिर्च", "language": "hi", "type": "translation" },
+        { "alias": "ブラックペッパー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "sesame oil",
+      "category": "fats",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "til oil", "language": "en", "type": "synonym" },
+        { "alias": "gingelly oil", "language": "en", "type": "synonym" },
+        { "alias": "तिल का तेल", "language": "hi", "type": "translation" },
+        { "alias": "ごま油", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 14 },
+        { "unit": "tsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "peanut oil",
+      "category": "fats",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "groundnut oil", "language": "en", "type": "synonym" },
+        { "alias": "मूंगफली का तेल", "language": "hi", "type": "translation" },
+        { "alias": "ピーナッツオイル", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 14 },
+        { "unit": "tsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "cashew nuts",
+      "category": "nuts",
+      "per_100g": {
+        "calories": 553,
+        "protein_g": 18.2,
+        "carbs_g": 30.2,
+        "fat_g": 43.8,
+        "fiber_g": 3.3
+      },
+      "aliases": [
+        { "alias": "kaju", "language": "en", "type": "synonym" },
+        { "alias": "काजू", "language": "hi", "type": "translation" },
+        { "alias": "カシューナッツ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 1.5 },
+        { "unit": "cup", "grams": 130 }
+      ]
+    },
+    {
+      "canonical_name": "almonds",
+      "category": "nuts",
+      "per_100g": {
+        "calories": 579,
+        "protein_g": 21.2,
+        "carbs_g": 21.6,
+        "fat_g": 49.9,
+        "fiber_g": 12.5
+      },
+      "aliases": [
+        { "alias": "badam", "language": "en", "type": "synonym" },
+        { "alias": "बादाम", "language": "hi", "type": "translation" },
+        { "alias": "アーモンド", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 1.2 },
+        { "unit": "cup", "grams": 140 }
+      ]
+    },
+    {
+      "canonical_name": "pistachios",
+      "category": "nuts",
+      "per_100g": {
+        "calories": 560,
+        "protein_g": 20.2,
+        "carbs_g": 27.2,
+        "fat_g": 45.3,
+        "fiber_g": 10.6
+      },
+      "aliases": [
+        { "alias": "pista", "language": "en", "type": "synonym" },
+        { "alias": "पिस्ता", "language": "hi", "type": "translation" },
+        { "alias": "ピスタチオ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 0.8 },
+        { "unit": "cup", "grams": 123 }
+      ]
+    },
+    {
+      "canonical_name": "rose water",
+      "category": "flavorings",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "gulab jal", "language": "en", "type": "synonym" },
+        { "alias": "गुलाब जल", "language": "hi", "type": "translation" },
+        { "alias": "ローズウォーター", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 5 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "kewra water",
+      "category": "flavorings",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "screwpine water", "language": "en", "type": "synonym" },
+        { "alias": "pandanus water", "language": "en", "type": "synonym" },
+        { "alias": "केवड़ा जल", "language": "hi", "type": "translation" },
+        { "alias": "ケウラウォーター", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 5 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "saffron",
+      "category": "spices",
+      "per_100g": {
+        "calories": 310,
+        "protein_g": 11.4,
+        "carbs_g": 65.4,
+        "fat_g": 5.9,
+        "fiber_g": 3.9
+      },
+      "aliases": [
+        { "alias": "kesar", "language": "en", "type": "synonym" },
+        { "alias": "केसर", "language": "hi", "type": "translation" },
+        { "alias": "サフラン", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "pinch", "grams": 0.1 },
+        { "unit": "strand", "grams": 0.002 }
+      ]
+    },
+    {
+      "canonical_name": "chaat masala",
+      "category": "spices",
+      "per_100g": {
+        "calories": 308,
+        "protein_g": 12.8,
+        "carbs_g": 56.3,
+        "fat_g": 5.2,
+        "fiber_g": 18.5
+      },
+      "aliases": [
+        { "alias": "चाट मसाला", "language": "hi", "type": "translation" },
+        { "alias": "チャートマサラ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3 },
+        { "unit": "tbsp", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "black salt",
+      "category": "seasonings",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "kala namak", "language": "en", "type": "synonym" },
+        { "alias": "काला नमक", "language": "hi", "type": "translation" },
+        { "alias": "ブラックソルト", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 6 },
+        { "unit": "pinch", "grams": 0.5 }
+      ]
+    },
+    {
+      "canonical_name": "rock salt",
+      "category": "seasonings",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "sendha namak", "language": "en", "type": "synonym" },
+        { "alias": "सेंधा नमक", "language": "hi", "type": "translation" },
+        { "alias": "ロックソルト", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 6 },
+        { "unit": "pinch", "grams": 0.5 }
+      ]
+    },
+    {
+      "canonical_name": "coriander leaves",
+      "category": "herbs",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 2.1,
+        "carbs_g": 3.7,
+        "fat_g": 0.5,
+        "fiber_g": 2.8
+      },
+      "aliases": [
+        { "alias": "cilantro", "language": "en", "type": "synonym" },
+        { "alias": "dhania", "language": "en", "type": "synonym" },
+        { "alias": "धनिया पत्ती", "language": "hi", "type": "translation" },
+        { "alias": "コリアンダーリーフ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "handful", "grams": 10 },
+        { "unit": "bunch", "grams": 50 }
+      ]
+    },
+    {
+      "canonical_name": "mint leaves",
+      "category": "herbs",
+      "per_100g": {
+        "calories": 44,
+        "protein_g": 3.3,
+        "carbs_g": 8.4,
+        "fat_g": 0.7,
+        "fiber_g": 6.8
+      },
+      "aliases": [
+        { "alias": "pudina", "language": "en", "type": "synonym" },
+        { "alias": "पुदीना", "language": "hi", "type": "translation" },
+        { "alias": "ミントリーフ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "handful", "grams": 10 },
+        { "unit": "bunch", "grams": 40 }
+      ]
+    },
+    {
+      "canonical_name": "yogurt",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 61,
+        "protein_g": 3.5,
+        "carbs_g": 4.7,
+        "fat_g": 3.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "dahi", "language": "en", "type": "synonym" },
+        { "alias": "curd", "language": "en", "type": "synonym" },
+        { "alias": "दही", "language": "hi", "type": "translation" },
+        { "alias": "ヨーグルト", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 245 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "buttermilk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 3.3,
+        "carbs_g": 4.8,
+        "fat_g": 0.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chaas", "language": "en", "type": "synonym" },
+        { "alias": "छाछ", "language": "hi", "type": "translation" },
+        { "alias": "バターミルク", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 245 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "condensed milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 321,
+        "protein_g": 7.9,
+        "carbs_g": 54.4,
+        "fat_g": 8.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "mithai mawa", "language": "en", "type": "synonym" },
+        { "alias": "कंडेंस्ड मिल्क", "language": "hi", "type": "translation" },
+        { "alias": "コンデンスミルク", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 306 },
+        { "unit": "tbsp", "grams": 19 }
+      ]
+    },
+    {
+      "canonical_name": "evaporated milk",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 134,
+        "protein_g": 6.8,
+        "carbs_g": 10.0,
+        "fat_g": 7.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "इवेपोरेटेड मिल्क", "language": "hi", "type": "translation" },
+        { "alias": "エバミルク", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 252 },
+        { "unit": "tbsp", "grams": 16 }
+      ]
+    },
+    {
+      "canonical_name": "fresh coconut",
+      "category": "fruits",
+      "per_100g": {
+        "calories": 354,
+        "protein_g": 3.3,
+        "carbs_g": 15.2,
+        "fat_g": 33.5,
+        "fiber_g": 9.0
+      },
+      "aliases": [
+        { "alias": "nariyal", "language": "en", "type": "synonym" },
+        { "alias": "नारियल", "language": "hi", "type": "translation" },
+        { "alias": "フレッシュココナッツ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 80 },
+        { "unit": "tbsp", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "coconut milk",
+      "category": "dairy_alternatives",
+      "per_100g": {
+        "calories": 230,
+        "protein_g": 2.3,
+        "carbs_g": 5.5,
+        "fat_g": 23.8,
+        "fiber_g": 2.2
+      },
+      "aliases": [
+        { "alias": "nariyal ka doodh", "language": "en", "type": "synonym" },
+        { "alias": "नारियल का दूध", "language": "hi", "type": "translation" },
+        { "alias": "ココナッツミルク", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 240 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    }
+  ]
+}

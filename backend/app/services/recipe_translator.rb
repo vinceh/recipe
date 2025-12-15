@@ -8,27 +8,100 @@ class RecipeTranslator < AiService
     'fr' => 'French'
   }.freeze
 
-  def translate_recipe(recipe, target_language)
-    system_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_translation_system')
-    user_prompt = AiPrompt.active.find_by!(prompt_key: 'recipe_translation_user')
+  TRANSLATION_SCHEMA = {
+    type: 'object',
+    required: ['name', 'description', 'ingredient_groups', 'steps'],
+    properties: {
+      name: {
+        type: 'string',
+        description: 'Translated recipe name'
+      },
+      description: {
+        type: 'string',
+        description: 'Translated recipe description'
+      },
+      ingredient_groups: {
+        type: 'array',
+        items: {
+          type: 'object',
+          required: ['name', 'items'],
+          properties: {
+            name: { type: 'string', description: 'Translated group name' },
+            items: {
+              type: 'array',
+              items: {
+                type: 'object',
+                required: ['name'],
+                properties: {
+                  name: { type: 'string', description: 'Translated ingredient name' },
+                  amount: { type: 'string', description: 'Amount (keep unchanged)' },
+                  unit: { type: 'string', description: 'Unit (translate measurement names)' },
+                  preparation: { type: 'string', description: 'Translated preparation notes' }
+                }
+              }
+            }
+          }
+        }
+      },
+      steps: {
+        type: 'array',
+        items: {
+          type: 'object',
+          required: ['order', 'instruction'],
+          properties: {
+            order: { type: 'integer', description: 'Step number (keep unchanged)' },
+            instruction: { type: 'string', description: 'Translated instruction text' }
+          }
+        }
+      },
+      equipment: {
+        type: 'array',
+        items: { type: 'string' },
+        description: 'Translated equipment names'
+      }
+    }
+  }.freeze
 
+  SYSTEM_PROMPT = <<~PROMPT
+    You are a professional translator specializing in recipe translation with deep cultural knowledge of food terminology across languages.
+
+    Key principles:
+    1. For ingredients native to the target language's culture, use the authentic native term without explanation
+    2. For foreign ingredients, provide transliteration plus a brief explanation in the target language if helpful
+    3. Translate cooking techniques using proper culinary terminology for the target language
+    4. Keep ALL numeric values unchanged (amounts, step numbers)
+    5. Translate measurement units appropriately (e.g., "cups" → "カップ" in Japanese)
+    6. Maintain natural, fluent language that reads like it was originally written in the target language
+  PROMPT
+
+  def translate_recipe(recipe, target_language)
     lang_name = LANGUAGES[target_language]
     raise ArgumentError, "Unsupported language: #{target_language}" unless lang_name
 
     recipe_json = build_recipe_json_for_translation(recipe)
 
-    rendered_user_prompt = user_prompt.render(
-      target_language: lang_name,
-      recipe_json: recipe_json
-    )
+    user_prompt = <<~PROMPT
+      Translate this recipe to #{lang_name}.
 
-    response = call_claude(
-      system_prompt: system_prompt.prompt_text,
-      user_prompt: rendered_user_prompt,
+      Original Recipe:
+      #{recipe_json}
+
+      Translate all text fields while keeping numeric values unchanged.
+    PROMPT
+
+    result = call_claude_structured(
+      system_prompt: SYSTEM_PROMPT,
+      user_prompt: user_prompt,
+      tool_name: 'translate_recipe',
+      tool_description: "Translate recipe content to #{lang_name}",
+      json_schema: TRANSLATION_SCHEMA,
       max_tokens: 4096
     )
 
-    parse_translation_response(response, target_language)
+    result.deep_symbolize_keys
+  rescue StandardError => e
+    Rails.logger.error("Translation failed for #{target_language}: #{e.message}")
+    raise
   end
 
   private
@@ -58,16 +131,5 @@ class RecipeTranslator < AiService
       end,
       equipment: recipe.equipment.map(&:canonical_name)
     }.to_json
-  end
-
-  def parse_translation_response(response, language)
-    # Extract JSON from response (may be wrapped in markdown code blocks)
-    json_match = response.match(/```json\s*(\{.*?\})\s*```/m) || response.match(/(\{.*\})/m)
-    return nil unless json_match
-
-    JSON.parse(json_match[1])
-  rescue JSON::ParserError => e
-    Rails.logger.error("Translation parsing failed for #{language}: #{e.message}")
-    nil
   end
 end

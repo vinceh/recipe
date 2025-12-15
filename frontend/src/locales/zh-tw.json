@@ -36,7 +36,10 @@
       "actions": "操作",
       "yes": "是",
       "no": "否",
+      "serving": "份",
       "servings": "份",
+      "Serving": "份",
+      "Servings": "份",
       "difficulty": "難度"
     },
     "messages": {
@@ -55,6 +58,7 @@
     "home": "首頁",
     "recipes": "食譜",
     "favorites": "我的最愛",
+    "menu": "選單",
     "about": "關於",
     "contact": "聯絡我們",
     "login": "登入",
@@ -186,7 +190,25 @@
     "subtitle": "探索食譜集合",
     "searchPlaceholder": "搜尋食譜...",
     "noRecipes": "找不到食譜",
-    "noRecipesDescription": "調整您的搜尋或瀏覽所有食譜"
+    "noRecipesDescription": "調整您的搜尋或瀏覽所有食譜",
+    "featured": "精選",
+    "results": "搜尋結果",
+    "recipesCount": "個食譜",
+    "favorites": "收藏"
+  },
+  "favorites": {
+    "title": "收藏食譜",
+    "searchPlaceholder": "搜尋收藏的食譜...",
+    "noSearchResults": "未找到收藏的食譜",
+    "empty": {
+      "title": "還沒有收藏的食譜",
+      "description": "當您發現喜歡的食譜時，點擊愛心圖示將其儲存到這裡。",
+      "browseRecipes": "瀏覽食譜"
+    }
+  },
+  "profile": {
+    "accountInfo": "帳戶資訊",
+    "comingSoon": "更多個人資料功能即將推出..."
   },
   "recipe": {
     "view": {
@@ -196,9 +218,34 @@
       "cook": "烹調",
       "total": "總計",
       "ingredients": "食材",
+      "steps": "步驟",
       "equipment": "廚具",
       "instructions": "製作步驟",
-      "nutrition": "營養資訊"
+      "nutrition": "營養資訊",
+      "optional": "可選",
+      "perServing": "每份",
+      "cals": "卡路里",
+      "carbs": "碳水",
+      "protein": "蛋白質",
+      "fat": "脂肪",
+      "adjustRecipe": "調整食譜",
+      "adjusted": "已調整",
+      "aiImageCaption": "AI 生成的佔位圖片，可能與實際不符。",
+      "aiAdjustmentDisclaimer": "這是 AI 生成的調整。內容可能不完全準確。",
+      "restoreToOriginal": "恢復原版",
+      "images": "圖片",
+      "favorite": "加入收藏",
+      "unfavorite": "取消收藏"
+    },
+    "adjust": {
+      "title": "調整食譜",
+      "description": "您想如何調整這份食譜？",
+      "submit": "調整食譜",
+      "adjusting": "調整中...",
+      "adjustedFrom": "調整前：",
+      "placeholder": "範例：\n• 用蘑菇替代，做成素食\n• 雙倍香料，增加風味\n• 用雞肉替代牛肉\n• 做成無麩質版本\n• 糖量減半",
+      "error": "調整食譜失敗，請重試。",
+      "errorWithMessage": "調整食譜失敗：{message}"
     }
   },
   "admin": {

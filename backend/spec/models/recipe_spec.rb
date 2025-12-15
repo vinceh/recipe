@@ -19,11 +19,17 @@ describe Recipe do
       recipe.recipe_steps.build(step_number: 1, instruction_original: "Test step")
       ig = recipe.ingredient_groups.build(name: "Ingredients", position: 1)
       ingredient = Ingredient.find_or_create_by!(canonical_name: "test ingredient") { |i| i.category = "vegetable" }
-      ig.recipe_ingredients.build(ingredient_id: ingredient.id, ingredient_name: "test ingredient", amount: 1, unit: "cup", position: 1)
+      unit = Unit.find_or_create_by!(canonical_name: "cup") { |u| u.category = "unit_volume" }
+      ig.recipe_ingredients.build(ingredient_id: ingredient.id, ingredient_name: "test ingredient", amount: 1, unit: unit, position: 1)
       recipe.recipe_cuisines.build(data_reference: cuisine)
-      recipe.image.attach(
+      recipe.card_image.attach(
         io: File.open(Rails.root.join('spec/fixtures/files/test_image.png')),
-        filename: 'test_image.png',
+        filename: 'test_card_image.png',
+        content_type: 'image/png'
+      )
+      recipe.detail_image.attach(
+        io: File.open(Rails.root.join('spec/fixtures/files/test_image.png')),
+        filename: 'test_detail_image.png',
         content_type: 'image/png'
       )
       recipe
@@ -86,11 +92,17 @@ describe Recipe do
       recipe.recipe_steps.build(step_number: 1, instruction_original: "Test step")
       ig = recipe.ingredient_groups.build(name: "Ingredients", position: 1)
       ingredient = Ingredient.find_or_create_by!(canonical_name: "test ingredient") { |i| i.category = "vegetable" }
-      ig.recipe_ingredients.build(ingredient_id: ingredient.id, ingredient_name: "test ingredient", amount: 1, unit: "cup", position: 1)
+      unit = Unit.find_or_create_by!(canonical_name: "cup") { |u| u.category = "unit_volume" }
+      ig.recipe_ingredients.build(ingredient_id: ingredient.id, ingredient_name: "test ingredient", amount: 1, unit: unit, position: 1)
       recipe.recipe_cuisines.build(data_reference: cuisine)
-      recipe.image.attach(
+      recipe.card_image.attach(
         io: File.open(Rails.root.join('spec/fixtures/files/test_image.png')),
-        filename: 'test_image.png',
+        filename: 'test_card_image.png',
+        content_type: 'image/png'
+      )
+      recipe.detail_image.attach(
+        io: File.open(Rails.root.join('spec/fixtures/files/test_image.png')),
+        filename: 'test_detail_image.png',
         content_type: 'image/png'
       )
       recipe
@@ -143,25 +155,34 @@ describe Recipe do
   end
 
   describe 'image attachment' do
-    it 'has one attached image after creation' do
+    it 'has card_image and detail_image attached after creation' do
       recipe = create(:recipe)
-      expect(recipe.image).to be_attached
+      expect(recipe.card_image).to be_attached
+      expect(recipe.detail_image).to be_attached
     end
 
-    it 'requires an image to be present' do
+    it 'requires both images to be present' do
       recipe = create(:recipe)
-      recipe.image.purge
+      recipe.card_image.purge
+      recipe.detail_image.purge
       expect(recipe).not_to be_valid
-      expect(recipe.errors[:image]).to include('must be attached')
+      expect(recipe.errors[:card_image]).to include('must be attached')
+      expect(recipe.errors[:detail_image]).to include('must be attached')
     end
 
     it 'accepts valid image formats' do
       %w[image/png image/jpg image/jpeg image/gif image/webp].each do |content_type|
         recipe = create(:recipe)
-        recipe.image.purge
-        recipe.image.attach(
+        recipe.card_image.purge
+        recipe.detail_image.purge
+        recipe.card_image.attach(
           io: StringIO.new('fake'),
-          filename: 'test.png',
+          filename: 'test_card.png',
+          content_type: content_type
+        )
+        recipe.detail_image.attach(
+          io: StringIO.new('fake'),
+          filename: 'test_detail.png',
           content_type: content_type
         )
         expect(recipe).to be_valid
@@ -170,30 +191,63 @@ describe Recipe do
 
     skip 'rejects invalid image formats - requires image validator implementation' do
       recipe = create(:recipe)
-      recipe.image.purge
-      recipe.image.attach(
+      recipe.card_image.purge
+      recipe.card_image.attach(
         io: StringIO.new('fake'),
         filename: 'test.pdf',
         content_type: 'application/pdf'
       )
       expect(recipe).not_to be_valid
-      expect(recipe.errors[:image]).not_to be_empty
+      expect(recipe.errors[:card_image]).not_to be_empty
     end
 
     skip 'enforces maximum file size of 10MB - requires image size validator implementation' do
       recipe = create(:recipe)
-      recipe.image.purge
+      recipe.card_image.purge
 
       large_file = StringIO.new('x' * (11 * 1024 * 1024))
       allow(large_file).to receive(:size).and_return(11 * 1024 * 1024)
 
-      recipe.image.attach(
+      recipe.card_image.attach(
         io: large_file,
         filename: 'large.png',
         content_type: 'image/png'
       )
       expect(recipe).not_to be_valid
-      expect(recipe.errors[:image]).not_to be_empty
+      expect(recipe.errors[:card_image]).not_to be_empty
+    end
+  end
+
+  describe 'tags attribute' do
+    it 'defaults to empty array' do
+      recipe = create(:recipe)
+      expect(recipe.tags).to eq([])
+    end
+
+    it 'can store multiple string tags' do
+      recipe = create(:recipe)
+      recipe.update!(tags: ['quick', 'easy', 'weeknight'])
+      recipe.reload
+      expect(recipe.tags).to eq(['quick', 'easy', 'weeknight'])
+    end
+
+    it 'can be queried with ANY operator' do
+      recipe = create(:recipe)
+      recipe.update!(tags: ['quick', 'dinner'])
+
+      results = Recipe.where("? = ANY(tags)", 'quick')
+      expect(results).to include(recipe)
+
+      results = Recipe.where("? = ANY(tags)", 'nonexistent')
+      expect(results).not_to include(recipe)
+    end
+
+    it 'can be cleared by setting to empty array' do
+      recipe = create(:recipe)
+      recipe.update!(tags: ['something'])
+      recipe.update!(tags: [])
+      recipe.reload
+      expect(recipe.tags).to eq([])
     end
   end
 end

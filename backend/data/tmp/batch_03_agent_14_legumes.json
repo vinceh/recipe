@@ -1,0 +1,1668 @@
+{
+  "batch": 3,
+  "agent": 14,
+  "category": "legumes",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "black beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 341,
+        "protein_g": 21.6,
+        "carbs_g": 62.4,
+        "fat_g": 1.4,
+        "fiber_g": 15.5
+      },
+      "aliases": {
+        "en": ["black beans", "turtle beans", "dried black beans"],
+        "ja": ["黒豆", "ブラックビーンズ", "乾燥黒豆"],
+        "ko": ["검은콩", "건조 검은콩"],
+        "zh": ["黑豆", "乾黑豆"],
+        "es": ["frijoles negros", "frijoles negros secos", "porotos negros"],
+        "fr": ["haricots noirs", "haricots noirs secs"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "black beans, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 91,
+        "protein_g": 6.0,
+        "carbs_g": 16.0,
+        "fat_g": 0.3,
+        "fiber_g": 5.5
+      },
+      "aliases": {
+        "en": ["canned black beans", "black beans canned", "black beans in water"],
+        "ja": ["黒豆缶詰", "ブラックビーンズ缶"],
+        "ko": ["검은콩 통조림", "캔 검은콩"],
+        "zh": ["罐装黑豆", "黑豆罐头"],
+        "es": ["frijoles negros enlatados", "frijoles negros de lata"],
+        "fr": ["haricots noirs en conserve", "haricots noirs en boîte"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "kidney beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 333,
+        "protein_g": 23.6,
+        "carbs_g": 60.0,
+        "fat_g": 0.8,
+        "fiber_g": 15.2
+      },
+      "aliases": {
+        "en": ["red kidney beans", "dried kidney beans", "kidney beans"],
+        "ja": ["キドニービーンズ", "赤インゲン豆", "乾燥キドニービーンズ"],
+        "ko": ["강낭콩", "건조 강낭콩", "붉은 강낭콩"],
+        "zh": ["红腰豆", "乾红腰豆", "芸豆"],
+        "es": ["frijoles rojos", "alubias rojas", "frijoles rojos secos"],
+        "fr": ["haricots rouges", "haricots rouges secs"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "kidney beans, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 84,
+        "protein_g": 5.7,
+        "carbs_g": 14.5,
+        "fat_g": 0.3,
+        "fiber_g": 4.5
+      },
+      "aliases": {
+        "en": ["canned kidney beans", "red kidney beans canned"],
+        "ja": ["キドニービーンズ缶詰", "赤インゲン豆缶"],
+        "ko": ["강낭콩 통조림", "캔 강낭콩"],
+        "zh": ["罐装红腰豆", "红腰豆罐头"],
+        "es": ["frijoles rojos enlatados", "alubias rojas en conserva"],
+        "fr": ["haricots rouges en conserve", "haricots rouges en boîte"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "pinto beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 347,
+        "protein_g": 21.4,
+        "carbs_g": 63.0,
+        "fat_g": 1.2,
+        "fiber_g": 15.5
+      },
+      "aliases": {
+        "en": ["dried pinto beans", "pinto beans"],
+        "ja": ["ピントビーンズ", "乾燥うずら豆", "うずら豆"],
+        "ko": ["핀토콩", "건조 핀토콩", "얼룩콩"],
+        "zh": ["花豆", "乾花豆", "斑豆"],
+        "es": ["frijoles pintos", "frijoles pintos secos", "porotos pintos"],
+        "fr": ["haricots pinto", "haricots pinto secs"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "pinto beans, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 82,
+        "protein_g": 5.2,
+        "carbs_g": 15.0,
+        "fat_g": 0.4,
+        "fiber_g": 4.4
+      },
+      "aliases": {
+        "en": ["canned pinto beans", "pinto beans canned"],
+        "ja": ["ピントビーンズ缶詰", "うずら豆缶"],
+        "ko": ["핀토콩 통조림", "캔 핀토콩"],
+        "zh": ["罐装花豆", "花豆罐头"],
+        "es": ["frijoles pintos enlatados", "frijoles pintos de lata"],
+        "fr": ["haricots pinto en conserve", "haricots pinto en boîte"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "navy beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 337,
+        "protein_g": 22.3,
+        "carbs_g": 61.0,
+        "fat_g": 1.5,
+        "fiber_g": 15.3
+      },
+      "aliases": {
+        "en": ["navy beans", "dried navy beans", "haricot beans", "boston beans"],
+        "ja": ["ネイビービーンズ", "白インゲン豆", "乾燥白インゲン豆"],
+        "ko": ["네이비빈", "흰강낭콩", "건조 흰강낭콩"],
+        "zh": ["海军豆", "乾海军豆", "白芸豆"],
+        "es": ["frijoles blancos", "alubias blancas", "judías blancas"],
+        "fr": ["haricots blancs", "haricots blancs secs", "haricots cocos"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "navy beans, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 94,
+        "protein_g": 6.0,
+        "carbs_g": 16.9,
+        "fat_g": 0.4,
+        "fiber_g": 5.0
+      },
+      "aliases": {
+        "en": ["canned navy beans", "navy beans canned"],
+        "ja": ["ネイビービーンズ缶詰", "白インゲン豆缶"],
+        "ko": ["네이비빈 통조림", "캔 흰강낭콩"],
+        "zh": ["罐装海军豆", "海军豆罐头"],
+        "es": ["frijoles blancos enlatados", "alubias blancas en conserva"],
+        "fr": ["haricots blancs en conserve", "haricots blancs en boîte"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "cannellini beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 333,
+        "protein_g": 23.4,
+        "carbs_g": 60.3,
+        "fat_g": 0.9,
+        "fiber_g": 15.2
+      },
+      "aliases": {
+        "en": ["cannellini", "dried cannellini beans", "white kidney beans"],
+        "ja": ["カネリーニ豆", "白インゲン豆", "乾燥カネリーニ豆"],
+        "ko": ["카넬리니콩", "흰 강낭콩", "건조 카넬리니"],
+        "zh": ["白腰豆", "乾白腰豆", "意大利白豆"],
+        "es": ["judías cannellini", "alubias blancas", "frijoles blancos"],
+        "fr": ["haricots cannellini", "haricots blancs italiens"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "cannellini beans, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 85,
+        "protein_g": 5.9,
+        "carbs_g": 14.4,
+        "fat_g": 0.3,
+        "fiber_g": 4.8
+      },
+      "aliases": {
+        "en": ["canned cannellini beans", "cannellini beans canned"],
+        "ja": ["カネリーニ豆缶詰", "白インゲン豆缶"],
+        "ko": ["카넬리니콩 통조림", "캔 카넬리니"],
+        "zh": ["罐装白腰豆", "白腰豆罐头"],
+        "es": ["judías cannellini enlatadas", "alubias blancas en conserva"],
+        "fr": ["haricots cannellini en conserve", "haricots blancs en boîte"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "great northern beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 339,
+        "protein_g": 21.9,
+        "carbs_g": 62.4,
+        "fat_g": 1.2,
+        "fiber_g": 14.8
+      },
+      "aliases": {
+        "en": ["great northern beans", "dried great northern beans"],
+        "ja": ["グレートノーザンビーンズ", "乾燥グレートノーザン豆"],
+        "ko": ["그레이트 노던빈", "건조 그레이트 노던"],
+        "zh": ["大北方豆", "乾大北方豆"],
+        "es": ["frijoles great northern", "alubias great northern"],
+        "fr": ["haricots great northern", "haricots blancs great northern"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "great northern beans, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 90,
+        "protein_g": 5.8,
+        "carbs_g": 16.0,
+        "fat_g": 0.4,
+        "fiber_g": 4.7
+      },
+      "aliases": {
+        "en": ["canned great northern beans", "great northern beans canned"],
+        "ja": ["グレートノーザンビーンズ缶詰", "グレートノーザン豆缶"],
+        "ko": ["그레이트 노던빈 통조림", "캔 그레이트 노던"],
+        "zh": ["罐装大北方豆", "大北方豆罐头"],
+        "es": ["frijoles great northern enlatados", "alubias great northern en conserva"],
+        "fr": ["haricots great northern en conserve", "haricots blancs en boîte"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "lima beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 338,
+        "protein_g": 21.5,
+        "carbs_g": 63.4,
+        "fat_g": 0.7,
+        "fiber_g": 19.0
+      },
+      "aliases": {
+        "en": ["lima beans", "dried lima beans", "butter beans"],
+        "ja": ["ライマビーンズ", "リマ豆", "乾燥ライマビーンズ"],
+        "ko": ["리마콩", "건조 리마콩", "버터빈"],
+        "zh": ["利马豆", "乾利马豆", "皇帝豆"],
+        "es": ["habas de lima", "frijoles de lima", "pallares"],
+        "fr": ["haricots de lima", "haricots beurre"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "lima beans, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 79,
+        "protein_g": 4.9,
+        "carbs_g": 14.9,
+        "fat_g": 0.2,
+        "fiber_g": 4.2
+      },
+      "aliases": {
+        "en": ["canned lima beans", "lima beans canned", "butter beans canned"],
+        "ja": ["ライマビーンズ缶詰", "リマ豆缶"],
+        "ko": ["리마콩 통조림", "캔 리마콩"],
+        "zh": ["罐装利马豆", "利马豆罐头"],
+        "es": ["habas de lima enlatadas", "pallares en conserva"],
+        "fr": ["haricots de lima en conserve", "haricots beurre en boîte"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "fava beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 341,
+        "protein_g": 26.1,
+        "carbs_g": 58.3,
+        "fat_g": 1.5,
+        "fiber_g": 25.0
+      },
+      "aliases": {
+        "en": ["fava beans", "broad beans", "dried fava beans"],
+        "ja": ["そら豆", "乾燥そら豆", "ファバビーンズ"],
+        "ko": ["잠두", "건조 잠두", "파바콩"],
+        "zh": ["蚕豆", "乾蚕豆", "罗汉豆"],
+        "es": ["habas", "habas secas"],
+        "fr": ["fèves", "fèves sèches"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "fava beans, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 88,
+        "protein_g": 6.5,
+        "carbs_g": 14.7,
+        "fat_g": 0.4,
+        "fiber_g": 5.4
+      },
+      "aliases": {
+        "en": ["canned fava beans", "broad beans canned"],
+        "ja": ["そら豆缶詰", "ファバビーンズ缶"],
+        "ko": ["잠두 통조림", "캔 파바콩"],
+        "zh": ["罐装蚕豆", "蚕豆罐头"],
+        "es": ["habas enlatadas", "habas en conserva"],
+        "fr": ["fèves en conserve", "fèves en boîte"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "adzuki beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 329,
+        "protein_g": 19.9,
+        "carbs_g": 62.9,
+        "fat_g": 0.5,
+        "fiber_g": 12.7
+      },
+      "aliases": {
+        "en": ["adzuki beans", "azuki beans", "red beans", "dried adzuki"],
+        "ja": ["小豆", "あずき", "乾燥小豆"],
+        "ko": ["팥", "건조 팥", "적두"],
+        "zh": ["红豆", "赤豆", "乾红豆"],
+        "es": ["frijoles adzuki", "frijoles azuki", "judías adzuki"],
+        "fr": ["haricots adzuki", "haricots azuki"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "adzuki beans, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 128,
+        "protein_g": 7.5,
+        "carbs_g": 25.0,
+        "fat_g": 0.1,
+        "fiber_g": 5.0
+      },
+      "aliases": {
+        "en": ["canned adzuki beans", "azuki beans canned", "sweetened red beans"],
+        "ja": ["小豆缶詰", "茹で小豆", "小豆煮"],
+        "ko": ["팥 통조림", "캔 팥", "삶은 팥"],
+        "zh": ["罐装红豆", "红豆罐头"],
+        "es": ["frijoles adzuki enlatados", "judías adzuki en conserva"],
+        "fr": ["haricots adzuki en conserve", "haricots azuki en boîte"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "mung beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 347,
+        "protein_g": 23.9,
+        "carbs_g": 62.6,
+        "fat_g": 1.2,
+        "fiber_g": 16.3
+      },
+      "aliases": {
+        "en": ["mung beans", "green gram", "dried mung beans"],
+        "ja": ["緑豆", "りょくとう", "乾燥緑豆"],
+        "ko": ["녹두", "건조 녹두"],
+        "zh": ["绿豆", "乾绿豆", "青豆"],
+        "es": ["frijoles mungo", "judías mungo", "frijoles verdes"],
+        "fr": ["haricots mungo", "haricots mung"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "black-eyed peas, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 336,
+        "protein_g": 23.5,
+        "carbs_g": 60.7,
+        "fat_g": 1.3,
+        "fiber_g": 10.6
+      },
+      "aliases": {
+        "en": ["black-eyed peas", "cowpeas", "dried black-eyed peas"],
+        "ja": ["ブラックアイドピー", "ササゲ", "黒目豆"],
+        "ko": ["동부", "블랙아이드피", "건조 동부"],
+        "zh": ["眉豆", "黑眼豆", "乾眉豆"],
+        "es": ["frijoles de ojo negro", "caritas", "judías carilla"],
+        "fr": ["haricots à œil noir", "cornilles"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "black-eyed peas, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 77,
+        "protein_g": 5.2,
+        "carbs_g": 13.6,
+        "fat_g": 0.4,
+        "fiber_g": 3.6
+      },
+      "aliases": {
+        "en": ["canned black-eyed peas", "black-eyed peas canned"],
+        "ja": ["ブラックアイドピー缶詰", "ササゲ缶"],
+        "ko": ["동부 통조림", "캔 블랙아이드피"],
+        "zh": ["罐装眉豆", "黑眼豆罐头"],
+        "es": ["frijoles de ojo negro enlatados", "caritas en conserva"],
+        "fr": ["haricots à œil noir en conserve", "cornilles en boîte"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "chickpeas, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 19.3,
+        "carbs_g": 60.7,
+        "fat_g": 6.0,
+        "fiber_g": 17.4
+      },
+      "aliases": {
+        "en": ["chickpeas", "garbanzo beans", "dried chickpeas", "gram"],
+        "ja": ["ひよこ豆", "ガルバンゾ", "乾燥ひよこ豆"],
+        "ko": ["병아리콩", "가반조", "건조 병아리콩"],
+        "zh": ["鹰嘴豆", "乾鹰嘴豆", "雪莲子"],
+        "es": ["garbanzos", "garbanzos secos"],
+        "fr": ["pois chiches", "pois chiches secs"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "chickpeas, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 119,
+        "protein_g": 6.7,
+        "carbs_g": 17.7,
+        "fat_g": 2.1,
+        "fiber_g": 5.4
+      },
+      "aliases": {
+        "en": ["canned chickpeas", "garbanzo beans canned", "chickpeas canned"],
+        "ja": ["ひよこ豆缶詰", "ガルバンゾ缶"],
+        "ko": ["병아리콩 통조림", "캔 가반조"],
+        "zh": ["罐装鹰嘴豆", "鹰嘴豆罐头"],
+        "es": ["garbanzos enlatados", "garbanzos en conserva"],
+        "fr": ["pois chiches en conserve", "pois chiches en boîte"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "green lentils, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 352,
+        "protein_g": 25.8,
+        "carbs_g": 60.1,
+        "fat_g": 1.1,
+        "fiber_g": 10.7
+      },
+      "aliases": {
+        "en": ["green lentils", "dried green lentils", "lentils"],
+        "ja": ["緑レンズ豆", "レンティル", "乾燥緑レンズ豆"],
+        "ko": ["렌틸콩", "녹색 렌틸", "건조 렌틸"],
+        "zh": ["绿扁豆", "乾绿扁豆", "小扁豆"],
+        "es": ["lentejas verdes", "lentejas verdes secas"],
+        "fr": ["lentilles vertes", "lentilles vertes sèches"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "brown lentils, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 353,
+        "protein_g": 25.8,
+        "carbs_g": 63.4,
+        "fat_g": 1.1,
+        "fiber_g": 10.7
+      },
+      "aliases": {
+        "en": ["brown lentils", "dried brown lentils"],
+        "ja": ["茶レンズ豆", "ブラウンレンティル", "乾燥茶レンズ豆"],
+        "ko": ["갈색 렌틸", "건조 갈색 렌틸"],
+        "zh": ["棕扁豆", "乾棕扁豆"],
+        "es": ["lentejas marrones", "lentejas pardinas"],
+        "fr": ["lentilles brunes", "lentilles brunes sèches"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "red lentils, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 25.8,
+        "carbs_g": 63.1,
+        "fat_g": 1.3,
+        "fiber_g": 10.8
+      },
+      "aliases": {
+        "en": ["red lentils", "dried red lentils", "split red lentils"],
+        "ja": ["赤レンズ豆", "レッドレンティル", "乾燥赤レンズ豆"],
+        "ko": ["빨간 렌틸", "건조 붉은 렌틸"],
+        "zh": ["红扁豆", "乾红扁豆"],
+        "es": ["lentejas rojas", "lentejas rojas secas"],
+        "fr": ["lentilles rouges", "lentilles corail"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "black lentils, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 349,
+        "protein_g": 25.0,
+        "carbs_g": 60.0,
+        "fat_g": 1.5,
+        "fiber_g": 11.0
+      },
+      "aliases": {
+        "en": ["black lentils", "beluga lentils", "dried black lentils"],
+        "ja": ["黒レンズ豆", "ベルーガレンティル", "乾燥黒レンズ豆"],
+        "ko": ["검은 렌틸", "벨루가 렌틸", "건조 검은 렌틸"],
+        "zh": ["黑扁豆", "乾黑扁豆"],
+        "es": ["lentejas negras", "lentejas beluga"],
+        "fr": ["lentilles noires", "lentilles beluga"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "french lentils, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 352,
+        "protein_g": 26.0,
+        "carbs_g": 60.0,
+        "fat_g": 1.2,
+        "fiber_g": 11.5
+      },
+      "aliases": {
+        "en": ["french lentils", "puy lentils", "dried french lentils", "lentilles du puy"],
+        "ja": ["フレンチレンズ豆", "ピュイレンティル", "乾燥フレンチレンズ豆"],
+        "ko": ["프렌치 렌틸", "퓌이 렌틸", "건조 프렌치 렌틸"],
+        "zh": ["法国扁豆", "乾法国扁豆"],
+        "es": ["lentejas francesas", "lentejas de puy"],
+        "fr": ["lentilles du puy", "lentilles vertes du puy"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "yellow lentils, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 357,
+        "protein_g": 25.5,
+        "carbs_g": 62.8,
+        "fat_g": 1.2,
+        "fiber_g": 10.5
+      },
+      "aliases": {
+        "en": ["yellow lentils", "dried yellow lentils", "split yellow lentils"],
+        "ja": ["黄レンズ豆", "イエローレンティル", "乾燥黄レンズ豆"],
+        "ko": ["노란 렌틸", "건조 노란 렌틸"],
+        "zh": ["黄扁豆", "乾黄扁豆"],
+        "es": ["lentejas amarillas", "lentejas amarillas secas"],
+        "fr": ["lentilles jaunes", "lentilles jaunes sèches"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "split peas, green",
+      "category": "legume",
+      "per_100g": {
+        "calories": 341,
+        "protein_g": 24.6,
+        "carbs_g": 60.4,
+        "fat_g": 0.8,
+        "fiber_g": 25.5
+      },
+      "aliases": {
+        "en": ["green split peas", "dried green split peas", "split green peas"],
+        "ja": ["グリーンスプリットピー", "緑割豌豆", "乾燥グリーンスプリットピー"],
+        "ko": ["초록 완두콩", "건조 청완두", "그린 스플릿 피"],
+        "zh": ["青豌豆", "乾青豌豆", "绿豌豆瓣"],
+        "es": ["guisantes verdes partidos", "arvejas verdes partidas"],
+        "fr": ["pois cassés verts", "pois verts cassés"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "split peas, yellow",
+      "category": "legume",
+      "per_100g": {
+        "calories": 341,
+        "protein_g": 24.5,
+        "carbs_g": 60.4,
+        "fat_g": 0.8,
+        "fiber_g": 25.5
+      },
+      "aliases": {
+        "en": ["yellow split peas", "dried yellow split peas", "split yellow peas"],
+        "ja": ["イエロースプリットピー", "黄割豌豆", "乾燥イエロースプリットピー"],
+        "ko": ["노란 완두콩", "건조 황완두", "옐로 스플릿 피"],
+        "zh": ["黄豌豆", "乾黄豌豆", "黄豌豆瓣"],
+        "es": ["guisantes amarillos partidos", "arvejas amarillas partidas"],
+        "fr": ["pois cassés jaunes", "pois jaunes cassés"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "pigeon peas, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 343,
+        "protein_g": 21.7,
+        "carbs_g": 62.8,
+        "fat_g": 1.5,
+        "fiber_g": 15.0
+      },
+      "aliases": {
+        "en": ["pigeon peas", "dried pigeon peas", "toor dal", "arhar dal"],
+        "ja": ["キマメ", "ピジョンピー", "乾燥キマメ"],
+        "ko": ["비둘기콩", "건조 비둘기콩"],
+        "zh": ["木豆", "乾木豆", "树豆"],
+        "es": ["guandú", "frijoles de palo", "guisantes de paloma"],
+        "fr": ["pois d'Angole", "pois cajan"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "pigeon peas, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 85,
+        "protein_g": 5.4,
+        "carbs_g": 15.5,
+        "fat_g": 0.4,
+        "fiber_g": 4.3
+      },
+      "aliases": {
+        "en": ["canned pigeon peas", "pigeon peas canned"],
+        "ja": ["キマメ缶詰", "ピジョンピー缶"],
+        "ko": ["비둘기콩 통조림", "캔 비둘기콩"],
+        "zh": ["罐装木豆", "木豆罐头"],
+        "es": ["guandú enlatado", "guisantes de paloma en conserva"],
+        "fr": ["pois d'Angole en conserve", "pois cajan en boîte"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "lupini beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 36.2,
+        "carbs_g": 40.4,
+        "fat_g": 9.7,
+        "fiber_g": 18.9
+      },
+      "aliases": {
+        "en": ["lupini beans", "dried lupini beans", "lupin beans"],
+        "ja": ["ルピナス豆", "乾燥ルピナス豆"],
+        "ko": ["루피니콩", "건조 루피니콩"],
+        "zh": ["羽扇豆", "乾羽扇豆"],
+        "es": ["altramuces", "lupinos", "chochos"],
+        "fr": ["lupins", "haricots lupins"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "red bean paste",
+      "category": "legume",
+      "per_100g": {
+        "calories": 244,
+        "protein_g": 5.5,
+        "carbs_g": 53.2,
+        "fat_g": 0.6,
+        "fiber_g": 4.2
+      },
+      "aliases": {
+        "en": ["red bean paste", "adzuki bean paste", "sweet red bean paste", "anko"],
+        "ja": ["あんこ", "餡", "小豆餡", "つぶあん"],
+        "ko": ["팥앙금", "팥소", "단팥"],
+        "zh": ["红豆沙", "红豆馅", "豆沙"],
+        "es": ["pasta de frijol rojo", "pasta de adzuki"],
+        "fr": ["pâte de haricots rouges", "pâte d'adzuki"]
+      },
+      "common_units": ["cup", "tbsp", "g", "oz"]
+    },
+    {
+      "canonical_name": "white bean paste",
+      "category": "legume",
+      "per_100g": {
+        "calories": 235,
+        "protein_g": 6.2,
+        "carbs_g": 50.8,
+        "fat_g": 0.7,
+        "fiber_g": 3.8
+      },
+      "aliases": {
+        "en": ["white bean paste", "sweet white bean paste", "shiroan"],
+        "ja": ["白餡", "白あん", "白豆餡"],
+        "ko": ["백앙금", "백앙"],
+        "zh": ["白豆沙", "白豆馅"],
+        "es": ["pasta de frijol blanco", "pasta de judías blancas"],
+        "fr": ["pâte de haricots blancs"]
+      },
+      "common_units": ["cup", "tbsp", "g", "oz"]
+    },
+    {
+      "canonical_name": "fermented black beans",
+      "category": "legume",
+      "per_100g": {
+        "calories": 180,
+        "protein_g": 17.5,
+        "carbs_g": 19.0,
+        "fat_g": 1.0,
+        "fiber_g": 7.0
+      },
+      "aliases": {
+        "en": ["fermented black beans", "chinese fermented black beans", "douchi", "salted black beans"],
+        "ja": ["豆豉", "トウチ", "発酵黒豆"],
+        "ko": ["두시", "발효 검은콩"],
+        "zh": ["豆豉", "发酵黑豆", "豆鼓"],
+        "es": ["frijoles negros fermentados", "douchi"],
+        "fr": ["haricots noirs fermentés", "douchi"]
+      },
+      "common_units": ["tbsp", "tsp", "g", "oz"]
+    },
+    {
+      "canonical_name": "tempeh",
+      "category": "legume",
+      "per_100g": {
+        "calories": 193,
+        "protein_g": 20.3,
+        "carbs_g": 7.6,
+        "fat_g": 10.8,
+        "fiber_g": 4.8
+      },
+      "aliases": {
+        "en": ["tempeh", "soy tempeh", "fermented soy cake"],
+        "ja": ["テンペ", "テンペー", "発酵大豆"],
+        "ko": ["템페", "템페이"],
+        "zh": ["天贝", "豆豉饼", "发酵豆饼"],
+        "es": ["tempeh", "tempé"],
+        "fr": ["tempeh", "tempé"]
+      },
+      "common_units": ["cup", "piece", "g", "oz"]
+    },
+    {
+      "canonical_name": "natto",
+      "category": "legume",
+      "per_100g": {
+        "calories": 212,
+        "protein_g": 17.7,
+        "carbs_g": 12.7,
+        "fat_g": 11.0,
+        "fiber_g": 5.4
+      },
+      "aliases": {
+        "en": ["natto", "fermented soybeans", "sticky soybeans"],
+        "ja": ["納豆", "なっとう"],
+        "ko": ["낫토", "낫또"],
+        "zh": ["纳豆", "发酵黄豆"],
+        "es": ["natto", "soja fermentada"],
+        "fr": ["natto", "graines de soja fermentées"]
+      },
+      "common_units": ["cup", "pack", "g", "oz"]
+    },
+    {
+      "canonical_name": "soy milk, unsweetened",
+      "category": "legume",
+      "per_100g": {
+        "calories": 33,
+        "protein_g": 2.9,
+        "carbs_g": 1.6,
+        "fat_g": 1.8,
+        "fiber_g": 0.2
+      },
+      "aliases": {
+        "en": ["soy milk", "unsweetened soy milk", "soya milk", "soymilk"],
+        "ja": ["豆乳", "無調整豆乳"],
+        "ko": ["두유", "무가당 두유"],
+        "zh": ["豆浆", "无糖豆浆", "豆奶"],
+        "es": ["leche de soja", "leche de soya sin azúcar"],
+        "fr": ["lait de soja", "lait de soja nature"]
+      },
+      "common_units": ["cup", "ml", "fl oz", "liter"]
+    },
+    {
+      "canonical_name": "soy milk, sweetened",
+      "category": "legume",
+      "per_100g": {
+        "calories": 54,
+        "protein_g": 3.3,
+        "carbs_g": 6.3,
+        "fat_g": 1.8,
+        "fiber_g": 0.6
+      },
+      "aliases": {
+        "en": ["sweetened soy milk", "soy milk sweetened", "sweet soymilk"],
+        "ja": ["調製豆乳", "加糖豆乳"],
+        "ko": ["가당 두유", "달콤한 두유"],
+        "zh": ["甜豆浆", "加糖豆奶"],
+        "es": ["leche de soja endulzada", "leche de soya con azúcar"],
+        "fr": ["lait de soja sucré"]
+      },
+      "common_units": ["cup", "ml", "fl oz", "liter"]
+    },
+    {
+      "canonical_name": "textured vegetable protein",
+      "category": "legume",
+      "per_100g": {
+        "calories": 315,
+        "protein_g": 52.0,
+        "carbs_g": 30.9,
+        "fat_g": 1.2,
+        "fiber_g": 15.0
+      },
+      "aliases": {
+        "en": ["tvp", "textured vegetable protein", "soy protein", "textured soy protein"],
+        "ja": ["大豆ミート", "ソイミート", "大豆たんぱく"],
+        "ko": ["콩고기", "대두 단백", "식물성 단백"],
+        "zh": ["大豆蛋白", "素肉", "豆制肉"],
+        "es": ["proteína vegetal texturizada", "carne de soja"],
+        "fr": ["protéine de soja texturée", "viande de soja"]
+      },
+      "common_units": ["cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "refried beans, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 91,
+        "protein_g": 5.2,
+        "carbs_g": 15.2,
+        "fat_g": 1.4,
+        "fiber_g": 4.4
+      },
+      "aliases": {
+        "en": ["refried beans", "canned refried beans", "frijoles refritos"],
+        "ja": ["リフライドビーンズ", "リフライドビーンズ缶詰"],
+        "ko": ["리프라이드 빈", "재튀김 콩"],
+        "zh": ["炒豆泥", "罐装炒豆泥"],
+        "es": ["frijoles refritos", "frijoles refritos enlatados"],
+        "fr": ["haricots frits", "haricots refrits"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "baked beans, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 94,
+        "protein_g": 4.8,
+        "carbs_g": 17.5,
+        "fat_g": 0.5,
+        "fiber_g": 3.9
+      },
+      "aliases": {
+        "en": ["baked beans", "canned baked beans", "beans in tomato sauce"],
+        "ja": ["ベイクドビーンズ", "ベイクドビーンズ缶詰"],
+        "ko": ["베이크드 빈", "구운 콩 통조림"],
+        "zh": ["烤豆", "罐装烤豆", "茄汁豆"],
+        "es": ["frijoles horneados", "alubias en salsa de tomate"],
+        "fr": ["haricots au four", "haricots à la sauce tomate"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "chana dal",
+      "category": "legume",
+      "per_100g": {
+        "calories": 360,
+        "protein_g": 20.5,
+        "carbs_g": 60.9,
+        "fat_g": 5.2,
+        "fiber_g": 11.5
+      },
+      "aliases": {
+        "en": ["chana dal", "split chickpeas", "bengal gram", "dried split chickpeas"],
+        "ja": ["チャナダル", "割りひよこ豆"],
+        "ko": ["차나 달", "쪼갠 병아리콩"],
+        "zh": ["鹰嘴豆瓣", "孟加拉豆"],
+        "es": ["chana dal", "garbanzos partidos"],
+        "fr": ["chana dal", "pois chiches cassés"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "urad dal",
+      "category": "legume",
+      "per_100g": {
+        "calories": 341,
+        "protein_g": 25.2,
+        "carbs_g": 58.9,
+        "fat_g": 1.6,
+        "fiber_g": 18.3
+      },
+      "aliases": {
+        "en": ["urad dal", "black lentils split", "black gram", "matpe beans"],
+        "ja": ["ウラドダル", "黒レンズ豆割"],
+        "ko": ["우라드 달", "까만팥"],
+        "zh": ["黑扁豆瓣", "黑绿豆"],
+        "es": ["urad dal", "lenteja negra partida"],
+        "fr": ["urad dal", "haricot mungo noir"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "moong dal",
+      "category": "legume",
+      "per_100g": {
+        "calories": 347,
+        "protein_g": 24.0,
+        "carbs_g": 62.6,
+        "fat_g": 1.2,
+        "fiber_g": 16.3
+      },
+      "aliases": {
+        "en": ["moong dal", "mung dal", "split mung beans", "yellow moong dal"],
+        "ja": ["ムングダル", "緑豆割"],
+        "ko": ["무ング 달", "녹두 쪼갠것"],
+        "zh": ["绿豆瓣", "黄绿豆"],
+        "es": ["moong dal", "frijoles mungo partidos"],
+        "fr": ["moong dal", "haricots mungo cassés"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "masoor dal",
+      "category": "legume",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 25.8,
+        "carbs_g": 63.1,
+        "fat_g": 1.3,
+        "fiber_g": 10.8
+      },
+      "aliases": {
+        "en": ["masoor dal", "red lentils split", "red lentil dal"],
+        "ja": ["マスールダル", "赤レンズ豆割"],
+        "ko": ["마수르 달", "빨간 렌틸 쪼갠것"],
+        "zh": ["红扁豆瓣"],
+        "es": ["masoor dal", "lentejas rojas partidas"],
+        "fr": ["masoor dal", "lentilles corail"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "toor dal",
+      "category": "legume",
+      "per_100g": {
+        "calories": 343,
+        "protein_g": 21.7,
+        "carbs_g": 62.8,
+        "fat_g": 1.5,
+        "fiber_g": 15.0
+      },
+      "aliases": {
+        "en": ["toor dal", "arhar dal", "split pigeon peas", "yellow pigeon peas"],
+        "ja": ["トゥールダル", "キマメ割"],
+        "ko": ["투르 달", "비둘기콩 쪼갠것"],
+        "zh": ["木豆瓣", "树豆瓣"],
+        "es": ["toor dal", "guandú partido"],
+        "fr": ["toor dal", "pois d'Angole cassés"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "borlotti beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 335,
+        "protein_g": 23.0,
+        "carbs_g": 60.5,
+        "fat_g": 1.2,
+        "fiber_g": 15.7
+      },
+      "aliases": {
+        "en": ["borlotti beans", "cranberry beans", "dried borlotti beans", "roman beans"],
+        "ja": ["ボルロッティ豆", "クランベリー豆", "乾燥ボルロッティ豆"],
+        "ko": ["보를로티콩", "크랜베리빈", "건조 보를로티"],
+        "zh": ["花豆", "乾花豆", "罗马豆"],
+        "es": ["frijoles borlotti", "alubias borlotti", "judías pintas"],
+        "fr": ["haricots borlotti", "haricots coco"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "borlotti beans, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 86,
+        "protein_g": 5.5,
+        "carbs_g": 15.3,
+        "fat_g": 0.4,
+        "fiber_g": 5.0
+      },
+      "aliases": {
+        "en": ["canned borlotti beans", "cranberry beans canned"],
+        "ja": ["ボルロッティ豆缶詰", "クランベリー豆缶"],
+        "ko": ["보를로티콩 통조림", "캔 크랜베리빈"],
+        "zh": ["罐装花豆", "花豆罐头"],
+        "es": ["frijoles borlotti enlatados", "alubias borlotti en conserva"],
+        "fr": ["haricots borlotti en conserve", "haricots coco en boîte"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "anasazi beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 340,
+        "protein_g": 22.0,
+        "carbs_g": 61.0,
+        "fat_g": 1.1,
+        "fiber_g": 14.5
+      },
+      "aliases": {
+        "en": ["anasazi beans", "dried anasazi beans", "jacob's cattle beans"],
+        "ja": ["アナサジ豆", "乾燥アナサジ豆"],
+        "ko": ["아나사지콩", "건조 아나사지"],
+        "zh": ["阿纳萨齐豆", "乾阿纳萨齐豆"],
+        "es": ["frijoles anasazi", "alubias anasazi"],
+        "fr": ["haricots anasazi"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "white beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 337,
+        "protein_g": 22.3,
+        "carbs_g": 61.0,
+        "fat_g": 1.5,
+        "fiber_g": 15.3
+      },
+      "aliases": {
+        "en": ["white beans", "dried white beans", "small white beans"],
+        "ja": ["白豆", "白インゲン豆", "乾燥白豆"],
+        "ko": ["흰콩", "건조 흰콩"],
+        "zh": ["白豆", "乾白豆"],
+        "es": ["frijoles blancos", "alubias blancas"],
+        "fr": ["haricots blancs"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "white beans, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 94,
+        "protein_g": 6.0,
+        "carbs_g": 16.9,
+        "fat_g": 0.4,
+        "fiber_g": 5.0
+      },
+      "aliases": {
+        "en": ["canned white beans", "white beans canned"],
+        "ja": ["白豆缶詰", "白インゲン豆缶"],
+        "ko": ["흰콩 통조림", "캔 흰콩"],
+        "zh": ["罐装白豆", "白豆罐头"],
+        "es": ["frijoles blancos enlatados", "alubias blancas en conserva"],
+        "fr": ["haricots blancs en conserve"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "appaloosa beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 338,
+        "protein_g": 21.8,
+        "carbs_g": 61.5,
+        "fat_g": 1.3,
+        "fiber_g": 14.0
+      },
+      "aliases": {
+        "en": ["appaloosa beans", "dried appaloosa beans"],
+        "ja": ["アパルーサ豆", "乾燥アパルーサ豆"],
+        "ko": ["아팔루사콩", "건조 아팔루사"],
+        "zh": ["阿帕卢萨豆", "乾阿帕卢萨豆"],
+        "es": ["frijoles appaloosa", "alubias appaloosa"],
+        "fr": ["haricots appaloosa"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "flageolet beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 330,
+        "protein_g": 21.5,
+        "carbs_g": 59.8,
+        "fat_g": 1.0,
+        "fiber_g": 16.0
+      },
+      "aliases": {
+        "en": ["flageolet beans", "dried flageolet beans", "french flageolet"],
+        "ja": ["フラジョレ豆", "乾燥フラジョレ豆"],
+        "ko": ["플라졸레콩", "건조 플라졸레"],
+        "zh": ["扁豆", "乾扁豆", "法国扁豆"],
+        "es": ["frijoles flageolet", "alubias flageolet"],
+        "fr": ["flageolets", "haricots flageolets"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "flageolet beans, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 83,
+        "protein_g": 5.4,
+        "carbs_g": 14.8,
+        "fat_g": 0.3,
+        "fiber_g": 5.2
+      },
+      "aliases": {
+        "en": ["canned flageolet beans", "flageolet beans canned"],
+        "ja": ["フラジョレ豆缶詰", "フラジョレ豆缶"],
+        "ko": ["플라졸레콩 통조림", "캔 플라졸레"],
+        "zh": ["罐装扁豆", "扁豆罐头"],
+        "es": ["frijoles flageolet enlatados", "alubias flageolet en conserva"],
+        "fr": ["flageolets en conserve", "haricots flageolets en boîte"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "scarlet runner beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 339,
+        "protein_g": 22.5,
+        "carbs_g": 60.8,
+        "fat_g": 1.4,
+        "fiber_g": 15.0
+      },
+      "aliases": {
+        "en": ["scarlet runner beans", "runner beans", "dried runner beans"],
+        "ja": ["べにばないんげん", "ランナービーンズ", "乾燥べにばないんげん"],
+        "ko": ["스칼렛 러너빈", "러너빈", "건조 러너빈"],
+        "zh": ["红花菜豆", "乾红花菜豆"],
+        "es": ["frijoles escarlata", "alubias escarlata", "judías escarlata"],
+        "fr": ["haricots d'Espagne", "haricots écarlates"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "soy flour, defatted",
+      "category": "legume",
+      "per_100g": {
+        "calories": 330,
+        "protein_g": 47.0,
+        "carbs_g": 38.4,
+        "fat_g": 1.2,
+        "fiber_g": 17.5
+      },
+      "aliases": {
+        "en": ["soy flour", "defatted soy flour", "soya flour"],
+        "ja": ["大豆粉", "脱脂大豆粉", "きな粉"],
+        "ko": ["대두가루", "콩가루", "탈지 대두분"],
+        "zh": ["豆粉", "脱脂豆粉", "黄豆粉"],
+        "es": ["harina de soja", "harina de soya desgrasada"],
+        "fr": ["farine de soja", "farine de soja dégraissée"]
+      },
+      "common_units": ["cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "soy flour, full-fat",
+      "category": "legume",
+      "per_100g": {
+        "calories": 436,
+        "protein_g": 34.5,
+        "carbs_g": 35.2,
+        "fat_g": 20.6,
+        "fiber_g": 9.6
+      },
+      "aliases": {
+        "en": ["full-fat soy flour", "whole soy flour", "soya flour full-fat"],
+        "ja": ["全脂大豆粉", "全脂きな粉"],
+        "ko": ["전지 대두가루", "전지 콩가루"],
+        "zh": ["全脂豆粉", "全脂黄豆粉"],
+        "es": ["harina de soja entera", "harina de soya con grasa"],
+        "fr": ["farine de soja entière", "farine de soja complète"]
+      },
+      "common_units": ["cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "chickpea flour",
+      "category": "legume",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 22.4,
+        "carbs_g": 57.8,
+        "fat_g": 6.7,
+        "fiber_g": 10.8
+      },
+      "aliases": {
+        "en": ["chickpea flour", "gram flour", "besan", "garbanzo flour"],
+        "ja": ["ひよこ豆粉", "ベサン", "ガルバンゾ粉"],
+        "ko": ["병아리콩가루", "베산", "가반조 가루"],
+        "zh": ["鹰嘴豆粉", "印度豆粉"],
+        "es": ["harina de garbanzos", "harina de garbanzo"],
+        "fr": ["farine de pois chiches"]
+      },
+      "common_units": ["cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "lentil flour",
+      "category": "legume",
+      "per_100g": {
+        "calories": 353,
+        "protein_g": 25.8,
+        "carbs_g": 60.1,
+        "fat_g": 1.1,
+        "fiber_g": 10.7
+      },
+      "aliases": {
+        "en": ["lentil flour", "dal flour"],
+        "ja": ["レンズ豆粉", "レンティル粉"],
+        "ko": ["렌틸가루", "렌틸 가루"],
+        "zh": ["扁豆粉", "小扁豆粉"],
+        "es": ["harina de lentejas"],
+        "fr": ["farine de lentilles"]
+      },
+      "common_units": ["cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "pea protein powder",
+      "category": "legume",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 85.0,
+        "carbs_g": 7.0,
+        "fat_g": 6.0,
+        "fiber_g": 6.0
+      },
+      "aliases": {
+        "en": ["pea protein", "pea protein powder", "pea protein isolate"],
+        "ja": ["ピープロテイン", "エンドウ豆プロテイン", "ピープロテインパウダー"],
+        "ko": ["피 프로틴", "완두콩 단백질", "피 프로틴 파우더"],
+        "zh": ["豌豆蛋白", "豌豆蛋白粉"],
+        "es": ["proteína de guisante", "proteína de arveja en polvo"],
+        "fr": ["protéine de pois", "poudre de protéine de pois"]
+      },
+      "common_units": ["scoop", "tbsp", "g", "oz"]
+    },
+    {
+      "canonical_name": "soy protein isolate",
+      "category": "legume",
+      "per_100g": {
+        "calories": 338,
+        "protein_g": 88.3,
+        "carbs_g": 0.0,
+        "fat_g": 3.4,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["soy protein isolate", "isolated soy protein", "soy protein powder"],
+        "ja": ["大豆プロテインアイソレート", "分離大豆蛋白", "ソイプロテイン"],
+        "ko": ["대두 단백 분리물", "소이 프로틴 아이솔레이트"],
+        "zh": ["大豆分离蛋白", "分离大豆蛋白"],
+        "es": ["proteína de soja aislada", "aislado de proteína de soya"],
+        "fr": ["isolat de protéine de soja", "protéine de soja isolée"]
+      },
+      "common_units": ["scoop", "tbsp", "g", "oz"]
+    },
+    {
+      "canonical_name": "mung bean sprouts",
+      "category": "legume",
+      "per_100g": {
+        "calories": 30,
+        "protein_g": 3.0,
+        "carbs_g": 5.9,
+        "fat_g": 0.2,
+        "fiber_g": 1.8
+      },
+      "aliases": {
+        "en": ["mung bean sprouts", "bean sprouts", "green gram sprouts"],
+        "ja": ["もやし", "緑豆もやし", "緑豆スプラウト"],
+        "ko": ["숙주나물", "녹두나물"],
+        "zh": ["绿豆芽", "豆芽菜"],
+        "es": ["brotes de frijol mungo", "germinados de soja"],
+        "fr": ["germes de soja", "pousses de haricot mungo"]
+      },
+      "common_units": ["cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "lentil sprouts",
+      "category": "legume",
+      "per_100g": {
+        "calories": 106,
+        "protein_g": 8.8,
+        "carbs_g": 22.1,
+        "fat_g": 0.5,
+        "fiber_g": 7.8
+      },
+      "aliases": {
+        "en": ["lentil sprouts", "sprouted lentils"],
+        "ja": ["レンズ豆スプラウト", "発芽レンズ豆"],
+        "ko": ["렌틸 싹", "발아 렌틸"],
+        "zh": ["扁豆芽", "发芽扁豆"],
+        "es": ["brotes de lentejas", "lentejas germinadas"],
+        "fr": ["germes de lentilles", "lentilles germées"]
+      },
+      "common_units": ["cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "chickpea sprouts",
+      "category": "legume",
+      "per_100g": {
+        "calories": 141,
+        "protein_g": 10.7,
+        "carbs_g": 23.5,
+        "fat_g": 2.1,
+        "fiber_g": 8.0
+      },
+      "aliases": {
+        "en": ["chickpea sprouts", "sprouted chickpeas", "garbanzo sprouts"],
+        "ja": ["ひよこ豆スプラウト", "発芽ひよこ豆"],
+        "ko": ["병아리콩 싹", "발아 병아리콩"],
+        "zh": ["鹰嘴豆芽", "发芽鹰嘴豆"],
+        "es": ["brotes de garbanzos", "garbanzos germinados"],
+        "fr": ["germes de pois chiches", "pois chiches germés"]
+      },
+      "common_units": ["cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "black soybeans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 34.5,
+        "carbs_g": 30.2,
+        "fat_g": 17.0,
+        "fiber_g": 9.3
+      },
+      "aliases": {
+        "en": ["black soybeans", "black soy beans", "dried black soybeans"],
+        "ja": ["黒大豆", "黒豆", "乾燥黒大豆"],
+        "ko": ["검은콩", "서리태", "건조 검은콩"],
+        "zh": ["黑大豆", "乾黑大豆", "黑黄豆"],
+        "es": ["soja negra", "soya negra seca"],
+        "fr": ["graines de soja noires", "soja noir"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "black soybeans, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 118,
+        "protein_g": 11.0,
+        "carbs_g": 8.9,
+        "fat_g": 5.5,
+        "fiber_g": 5.0
+      },
+      "aliases": {
+        "en": ["canned black soybeans", "black soy beans canned"],
+        "ja": ["黒大豆缶詰", "黒豆缶"],
+        "ko": ["검은콩 통조림", "캔 검은콩"],
+        "zh": ["罐装黑大豆", "黑大豆罐头"],
+        "es": ["soja negra enlatada", "soya negra en conserva"],
+        "fr": ["graines de soja noires en conserve", "soja noir en boîte"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "yellow soybeans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 446,
+        "protein_g": 36.5,
+        "carbs_g": 30.2,
+        "fat_g": 19.9,
+        "fiber_g": 9.3
+      },
+      "aliases": {
+        "en": ["yellow soybeans", "soybeans", "dried soybeans", "soy beans"],
+        "ja": ["大豆", "黄大豆", "乾燥大豆"],
+        "ko": ["대두", "노란콩", "건조 대두"],
+        "zh": ["黄豆", "乾黄豆", "大豆"],
+        "es": ["soja amarilla", "soya seca"],
+        "fr": ["graines de soja jaunes", "soja sec"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "yellow soybeans, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 141,
+        "protein_g": 12.4,
+        "carbs_g": 10.0,
+        "fat_g": 6.4,
+        "fiber_g": 4.2
+      },
+      "aliases": {
+        "en": ["canned soybeans", "yellow soybeans canned", "soy beans canned"],
+        "ja": ["大豆缶詰", "黄大豆缶"],
+        "ko": ["대두 통조림", "캔 노란콩"],
+        "zh": ["罐装黄豆", "黄豆罐头"],
+        "es": ["soja enlatada", "soya en conserva"],
+        "fr": ["graines de soja en conserve", "soja en boîte"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "hummus",
+      "category": "legume",
+      "per_100g": {
+        "calories": 166,
+        "protein_g": 7.9,
+        "carbs_g": 14.3,
+        "fat_g": 9.6,
+        "fiber_g": 6.0
+      },
+      "aliases": {
+        "en": ["hummus", "houmous", "chickpea dip"],
+        "ja": ["フムス", "ひよこ豆ペースト"],
+        "ko": ["후무스", "병아리콩 딥"],
+        "zh": ["鹰嘴豆泥", "胡姆斯"],
+        "es": ["hummus", "humus", "puré de garbanzos"],
+        "fr": ["houmous", "hoummos", "purée de pois chiches"]
+      },
+      "common_units": ["cup", "tbsp", "g", "oz"]
+    },
+    {
+      "canonical_name": "black bean hummus",
+      "category": "legume",
+      "per_100g": {
+        "calories": 158,
+        "protein_g": 7.2,
+        "carbs_g": 15.8,
+        "fat_g": 8.4,
+        "fiber_g": 6.5
+      },
+      "aliases": {
+        "en": ["black bean hummus", "black bean dip"],
+        "ja": ["黒豆フムス", "黒豆ペースト"],
+        "ko": ["검은콩 후무스", "검은콩 딥"],
+        "zh": ["黑豆泥", "黑豆鹰嘴豆泥"],
+        "es": ["hummus de frijol negro", "puré de frijoles negros"],
+        "fr": ["houmous aux haricots noirs", "purée de haricots noirs"]
+      },
+      "common_units": ["cup", "tbsp", "g", "oz"]
+    },
+    {
+      "canonical_name": "soybean oil",
+      "category": "legume",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["soybean oil", "soy oil", "soya oil", "vegetable oil"],
+        "ja": ["大豆油", "ソイオイル", "サラダ油"],
+        "ko": ["대두유", "콩기름"],
+        "zh": ["大豆油", "黄豆油", "豆油"],
+        "es": ["aceite de soja", "aceite de soya"],
+        "fr": ["huile de soja"]
+      },
+      "common_units": ["cup", "tbsp", "tsp", "ml"]
+    },
+    {
+      "canonical_name": "miso paste, white",
+      "category": "legume",
+      "per_100g": {
+        "calories": 199,
+        "protein_g": 12.8,
+        "carbs_g": 25.4,
+        "fat_g": 6.0,
+        "fiber_g": 5.4
+      },
+      "aliases": {
+        "en": ["white miso", "shiro miso", "white miso paste"],
+        "ja": ["白味噌", "白みそ", "西京味噌"],
+        "ko": ["흰 미소", "시로 미소"],
+        "zh": ["白味噌", "白色味噌"],
+        "es": ["miso blanco", "pasta de miso blanco"],
+        "fr": ["miso blanc", "pâte de miso blanc"]
+      },
+      "common_units": ["tbsp", "tsp", "g", "oz"]
+    },
+    {
+      "canonical_name": "miso paste, red",
+      "category": "legume",
+      "per_100g": {
+        "calories": 198,
+        "protein_g": 13.0,
+        "carbs_g": 21.9,
+        "fat_g": 6.0,
+        "fiber_g": 5.4
+      },
+      "aliases": {
+        "en": ["red miso", "aka miso", "red miso paste"],
+        "ja": ["赤味噌", "赤みそ", "仙台味噌"],
+        "ko": ["붉은 미소", "아카 미소"],
+        "zh": ["红味噌", "红色味噌"],
+        "es": ["miso rojo", "pasta de miso rojo"],
+        "fr": ["miso rouge", "pâte de miso rouge"]
+      },
+      "common_units": ["tbsp", "tsp", "g", "oz"]
+    },
+    {
+      "canonical_name": "miso paste, yellow",
+      "category": "legume",
+      "per_100g": {
+        "calories": 192,
+        "protein_g": 12.5,
+        "carbs_g": 23.0,
+        "fat_g": 6.0,
+        "fiber_g": 5.4
+      },
+      "aliases": {
+        "en": ["yellow miso", "shinshu miso", "yellow miso paste"],
+        "ja": ["黄味噌", "信州味噌", "黄みそ"],
+        "ko": ["노란 미소", "신슈 미소"],
+        "zh": ["黄味噌", "黄色味噌"],
+        "es": ["miso amarillo", "pasta de miso amarillo"],
+        "fr": ["miso jaune", "pâte de miso jaune"]
+      },
+      "common_units": ["tbsp", "tsp", "g", "oz"]
+    },
+    {
+      "canonical_name": "lupin flour",
+      "category": "legume",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 40.0,
+        "carbs_g": 40.0,
+        "fat_g": 10.0,
+        "fiber_g": 37.0
+      },
+      "aliases": {
+        "en": ["lupin flour", "lupini flour", "lupine flour"],
+        "ja": ["ルピナス粉", "ルピナスフラワー"],
+        "ko": ["루핀가루", "루피니 가루"],
+        "zh": ["羽扇豆粉"],
+        "es": ["harina de altramuz", "harina de lupino"],
+        "fr": ["farine de lupin"]
+      },
+      "common_units": ["cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "white kidney beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 333,
+        "protein_g": 23.4,
+        "carbs_g": 60.3,
+        "fat_g": 0.9,
+        "fiber_g": 15.2
+      },
+      "aliases": {
+        "en": ["white kidney beans", "dried white kidney beans"],
+        "ja": ["白いんげん豆", "白インゲン豆", "乾燥白インゲン豆"],
+        "ko": ["흰 강낭콩", "건조 흰 강낭콩"],
+        "zh": ["白腰豆", "乾白腰豆"],
+        "es": ["alubias blancas", "frijoles blancos"],
+        "fr": ["haricots blancs"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "white kidney beans, canned",
+      "category": "legume",
+      "per_100g": {
+        "calories": 85,
+        "protein_g": 5.9,
+        "carbs_g": 14.4,
+        "fat_g": 0.3,
+        "fiber_g": 4.8
+      },
+      "aliases": {
+        "en": ["canned white kidney beans", "white kidney beans canned"],
+        "ja": ["白インゲン豆缶詰", "白いんげん豆缶"],
+        "ko": ["흰 강낭콩 통조림", "캔 흰 강낭콩"],
+        "zh": ["罐装白腰豆", "白腰豆罐头"],
+        "es": ["alubias blancas enlatadas", "frijoles blancos en conserva"],
+        "fr": ["haricots blancs en conserve"]
+      },
+      "common_units": ["can", "cup", "g", "oz"]
+    },
+    {
+      "canonical_name": "moth beans, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 343,
+        "protein_g": 23.6,
+        "carbs_g": 61.5,
+        "fat_g": 1.6,
+        "fiber_g": 15.5
+      },
+      "aliases": {
+        "en": ["moth beans", "matki beans", "dried moth beans"],
+        "ja": ["モスビーンズ", "マトキ豆"],
+        "ko": ["모스빈", "마트키콩"],
+        "zh": ["蛾豆", "乾蛾豆"],
+        "es": ["frijoles polilla", "alubias moth"],
+        "fr": ["haricots moth", "haricots papillon"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "horse gram, dried",
+      "category": "legume",
+      "per_100g": {
+        "calories": 321,
+        "protein_g": 22.0,
+        "carbs_g": 57.2,
+        "fat_g": 0.5,
+        "fiber_g": 16.0
+      },
+      "aliases": {
+        "en": ["horse gram", "kulthi beans", "dried horse gram"],
+        "ja": ["ホースグラム", "クルティ豆"],
+        "ko": ["말콩", "쿨티빈"],
+        "zh": ["马豆", "乾马豆"],
+        "es": ["frijol de caballo", "garbanzo de caballo"],
+        "fr": ["pois chiche sauvage", "haricot de cheval"]
+      },
+      "common_units": ["cup", "g", "oz", "lb"]
+    },
+    {
+      "canonical_name": "adzuki bean paste, sweetened",
+      "category": "legume",
+      "per_100g": {
+        "calories": 244,
+        "protein_g": 5.5,
+        "carbs_g": 53.2,
+        "fat_g": 0.6,
+        "fiber_g": 4.2
+      },
+      "aliases": {
+        "en": ["adzuki bean paste", "anko", "sweet adzuki paste", "red bean paste sweetened"],
+        "ja": ["あんこ", "餡", "小豆餡", "つぶあん", "こしあん"],
+        "ko": ["팥앙금", "단팥소"],
+        "zh": ["红豆沙", "甜红豆馅"],
+        "es": ["pasta de adzuki endulzada", "pasta de frijol rojo dulce"],
+        "fr": ["pâte d'adzuki sucrée", "pâte de haricots rouges sucrée"]
+      },
+      "common_units": ["cup", "tbsp", "g", "oz"]
+    }
+  ]
+}

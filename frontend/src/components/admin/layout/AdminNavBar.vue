@@ -12,8 +12,7 @@
         </button>
 
         <router-link to="/admin" class="admin-navbar__logo">
-          <i class="pi pi-fire"></i>
-          <span class="admin-navbar__brand">Ember</span>
+          <span class="admin-navbar__brand">Provisions</span>
           <span class="admin-navbar__badge">{{ $t('navigation.admin') }}</span>
         </router-link>
       </div>
@@ -67,7 +66,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useUserStore } from '@/stores/userStore'
@@ -87,7 +86,7 @@ const userStore = useUserStore()
 const userMenuOpen = ref(false)
 
 const userName = computed(() => userStore.currentUser?.name || 'Admin User')
-const userEmail = computed(() => userStore.currentUser?.email || 'admin@ember.app')
+const userEmail = computed(() => userStore.currentUser?.email || '')
 const userInitials = computed(() => {
   const name = userName.value
   return name
@@ -104,34 +103,34 @@ const toggleUserMenu = () => {
 
 const handleLogout = async () => {
   await userStore.logout()
-  router.push('/login')
+  router.push({ name: 'login' })
 }
 
 // Close dropdowns when clicking outside
-const closeDropdowns = () => {
-  userMenuOpen.value = false
+const handleClickOutside = (e: MouseEvent) => {
+  const target = e.target as HTMLElement
+  if (!target.closest('.admin-navbar__user')) {
+    userMenuOpen.value = false
+  }
 }
 
-// Close dropdowns on window click
-if (typeof window !== 'undefined') {
-  window.addEventListener('click', (e) => {
-    const target = e.target as HTMLElement
-    if (!target.closest('.admin-navbar__user')) {
-      closeDropdowns()
-    }
-  })
-}
+onMounted(() => {
+  window.addEventListener('click', handleClickOutside)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('click', handleClickOutside)
+})
 </script>
 
 <style scoped>
 .admin-navbar {
-  background-color: var(--color-background);
-  border-bottom: var(--border-width-thin) solid var(--color-border);
-  height: 64px;
+  background-color: var(--color-provisions-bg);
+  border-bottom: 1px solid var(--color-provisions-border);
+  height: 60px;
   position: sticky;
   top: 0;
   z-index: var(--z-index-sticky);
-  box-shadow: var(--shadow-sm);
 }
 
 .admin-navbar__container {
@@ -157,14 +156,14 @@ if (typeof window !== 'undefined') {
   height: 40px;
   border: none;
   background: none;
-  color: var(--color-text);
+  color: var(--color-provisions-border);
   cursor: pointer;
-  border-radius: var(--border-radius-md);
+  border-radius: 0;
   transition: background-color var(--transition-fast);
 }
 
 .admin-navbar__menu-toggle:hover {
-  background-color: var(--color-background-secondary);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .admin-navbar__logo {
@@ -172,51 +171,31 @@ if (typeof window !== 'undefined') {
   align-items: center;
   gap: var(--spacing-sm);
   text-decoration: none;
-  color: var(--color-text);
-  font-weight: var(--font-weight-semibold);
-}
-
-.admin-navbar__logo i {
-  font-size: var(--font-size-xl);
-  color: var(--color-primary);
+  color: var(--color-provisions-border);
 }
 
 .admin-navbar__brand {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .admin-navbar__badge {
-  padding: var(--spacing-xs) var(--spacing-sm);
-  background-color: var(--color-primary-pale);
-  color: var(--color-primary-dark);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-medium);
-  border-radius: var(--border-radius-full);
+  padding: 4px 10px;
+  background-color: var(--color-provisions-border);
+  color: var(--color-provisions-bg);
+  font-family: var(--font-family-heading);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .admin-navbar__right {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
-}
-
-.admin-navbar__icon-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border: none;
-  background: none;
-  color: var(--color-text);
-  cursor: pointer;
-  border-radius: var(--border-radius-md);
-  transition: background-color var(--transition-fast);
-}
-
-.admin-navbar__icon-btn:hover {
-  background-color: var(--color-background-secondary);
+  gap: var(--spacing-lg);
 }
 
 .admin-navbar__user {
@@ -226,76 +205,73 @@ if (typeof window !== 'undefined') {
 .admin-navbar__user-btn {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-xs) var(--spacing-sm);
+  gap: 6px;
+  padding: 6px 0;
   border: none;
   background: none;
-  color: var(--color-text);
+  color: var(--color-provisions-border);
   cursor: pointer;
-  border-radius: var(--border-radius-md);
-  transition: background-color var(--transition-fast);
-}
-
-.admin-navbar__user-btn:hover {
-  background-color: var(--color-background-secondary);
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .admin-navbar__avatar {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  border-radius: var(--border-radius-full);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
+  width: 28px;
+  height: 28px;
+  background-color: var(--color-provisions-border);
+  color: var(--color-provisions-bg);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .admin-navbar__user-name {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .admin-navbar__dropdown {
   position: absolute;
-  top: calc(100% + var(--spacing-sm));
+  top: calc(100% + 4px);
   right: 0;
-  min-width: 240px;
-  background-color: var(--color-background);
-  border: var(--border-width-thin) solid var(--color-border);
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-lg);
-  overflow: hidden;
+  min-width: 200px;
+  background-color: var(--color-provisions-bg);
+  border: 1px solid var(--color-provisions-border);
   z-index: var(--z-index-dropdown);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .admin-navbar__dropdown-header {
-  padding: var(--spacing-md);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-provisions-border);
 }
 
 .admin-navbar__user-info {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs);
+  gap: 2px;
 }
 
 .admin-navbar__user-info strong {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text);
+  font-family: var(--font-family-heading);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-provisions-text-dark);
 }
 
 .admin-navbar__user-info small {
-  font-size: var(--font-size-xs);
-  color: var(--color-text-secondary);
+  font-size: 12px;
+  color: var(--color-provisions-text-muted);
 }
 
 .admin-navbar__dropdown-divider {
   height: 1px;
-  background-color: var(--color-border);
-  margin: var(--spacing-xs) 0;
+  background-color: var(--color-provisions-border);
+  margin: 0;
 }
 
 .admin-navbar__dropdown-item {
@@ -303,24 +279,25 @@ if (typeof window !== 'undefined') {
   align-items: center;
   gap: var(--spacing-sm);
   width: 100%;
-  padding: var(--spacing-sm) var(--spacing-md);
+  padding: 12px 16px;
   border: none;
   background: none;
-  color: var(--color-text);
+  color: var(--color-provisions-text-dark);
   text-decoration: none;
   text-align: left;
   cursor: pointer;
-  transition: background-color var(--transition-fast);
-  font-size: var(--font-size-sm);
+  font-family: var(--font-family-heading);
+  font-size: 14px;
 }
 
 .admin-navbar__dropdown-item:hover {
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-provisions-border);
+  color: var(--color-provisions-bg);
 }
 
 .admin-navbar__dropdown-item i {
-  font-size: var(--font-size-base);
-  color: var(--color-text-secondary);
+  font-size: 14px;
+  color: inherit;
 }
 
 /* Responsive */
@@ -334,7 +311,12 @@ if (typeof window !== 'undefined') {
   }
 
   .admin-navbar__brand {
-    font-size: var(--font-size-base);
+    font-size: 18px;
+  }
+
+  .admin-navbar__badge {
+    font-size: 10px;
+    padding: 3px 8px;
   }
 }
 </style>

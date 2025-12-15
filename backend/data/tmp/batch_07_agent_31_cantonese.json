@@ -1,0 +1,1232 @@
+{
+  "batch": 7,
+  "agent": 31,
+  "category": "cantonese",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "Har Gow Wrapper",
+      "category": "grain",
+      "per_100g": {
+        "calories": 280,
+        "protein_g": 3.2,
+        "carbs_g": 65.8,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "zh-cn": "虾饺皮",
+        "zh-tw": "蝦餃皮",
+        "cantonese": "Haa Gaau Pei",
+        "pinyin": "Xiā Jiǎo Pí"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Siu Mai Wrapper",
+      "category": "grain",
+      "per_100g": {
+        "calories": 290,
+        "protein_g": 8.5,
+        "carbs_g": 58.2,
+        "fat_g": 1.2
+      },
+      "aliases": {
+        "zh-cn": "烧卖皮",
+        "zh-tw": "燒賣皮",
+        "cantonese": "Siu Maai Pei",
+        "pinyin": "Shāo Mài Pí"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Char Siu",
+      "category": "meat",
+      "per_100g": {
+        "calories": 245,
+        "protein_g": 22.5,
+        "carbs_g": 8.3,
+        "fat_g": 13.2
+      },
+      "aliases": {
+        "zh-cn": "叉烧",
+        "zh-tw": "叉燒",
+        "cantonese": "Chaa Siu",
+        "pinyin": "Chā Shāo"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Chinese Sausage",
+      "category": "meat",
+      "per_100g": {
+        "calories": 382,
+        "protein_g": 18.6,
+        "carbs_g": 12.5,
+        "fat_g": 29.3
+      },
+      "aliases": {
+        "zh-cn": "腊肠",
+        "zh-tw": "臘腸",
+        "cantonese": "Laap Cheung",
+        "pinyin": "Là Cháng"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Liver Sausage",
+      "category": "meat",
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 16.8,
+        "carbs_g": 10.2,
+        "fat_g": 28.5
+      },
+      "aliases": {
+        "zh-cn": "润肠",
+        "zh-tw": "潤腸",
+        "cantonese": "Yeon Cheung",
+        "pinyin": "Rùn Cháng"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Chinese Bacon",
+      "category": "meat",
+      "per_100g": {
+        "calories": 458,
+        "protein_g": 15.2,
+        "carbs_g": 3.8,
+        "fat_g": 42.5
+      },
+      "aliases": {
+        "zh-cn": "腊肉",
+        "zh-tw": "臘肉",
+        "cantonese": "Laap Yuk",
+        "pinyin": "Là Ròu"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Preserved Duck",
+      "category": "meat",
+      "per_100g": {
+        "calories": 372,
+        "protein_g": 18.4,
+        "carbs_g": 2.5,
+        "fat_g": 31.8
+      },
+      "aliases": {
+        "zh-cn": "腊鸭",
+        "zh-tw": "臘鴨",
+        "cantonese": "Laap Aap",
+        "pinyin": "Là Yā"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Chinese Broccoli",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 26,
+        "protein_g": 3.0,
+        "carbs_g": 4.6,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "zh-cn": "芥兰",
+        "zh-tw": "芥蘭",
+        "cantonese": "Gaai Laan",
+        "pinyin": "Jiè Lán"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Baby Bok Choy",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 13,
+        "protein_g": 1.5,
+        "carbs_g": 2.2,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "zh-cn": "小白菜",
+        "zh-tw": "小白菜",
+        "cantonese": "Siu Baak Choi",
+        "pinyin": "Xiǎo Bái Cài"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Choy Sum",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 20,
+        "protein_g": 2.6,
+        "carbs_g": 3.3,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "zh-cn": "菜心",
+        "zh-tw": "菜心",
+        "cantonese": "Choi Sam",
+        "pinyin": "Cài Xīn"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Yu Choy",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 2.8,
+        "carbs_g": 3.6,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "zh-cn": "油菜",
+        "zh-tw": "油菜",
+        "cantonese": "Yau Choi",
+        "pinyin": "Yóu Cài"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Chinese Celery",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 16,
+        "protein_g": 0.7,
+        "carbs_g": 3.0,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "zh-cn": "中国芹菜",
+        "zh-tw": "中國芹菜",
+        "cantonese": "Kan Choi",
+        "pinyin": "Zhōng Guó Qín Cài"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Winter Melon",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 13,
+        "protein_g": 0.4,
+        "carbs_g": 3.0,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "zh-cn": "冬瓜",
+        "zh-tw": "冬瓜",
+        "cantonese": "Dung Gwaa",
+        "pinyin": "Dōng Guā"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Fuzzy Melon",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 15,
+        "protein_g": 0.6,
+        "carbs_g": 3.5,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "zh-cn": "节瓜",
+        "zh-tw": "節瓜",
+        "cantonese": "Jit Gwaa",
+        "pinyin": "Jié Guā"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Bitter Melon",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 17,
+        "protein_g": 1.0,
+        "carbs_g": 3.7,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "zh-cn": "苦瓜",
+        "zh-tw": "苦瓜",
+        "cantonese": "Fu Gwaa",
+        "pinyin": "Kǔ Guā"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Dried Shrimp",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 306,
+        "protein_g": 63.2,
+        "carbs_g": 2.8,
+        "fat_g": 3.6
+      },
+      "aliases": {
+        "zh-cn": "虾米",
+        "zh-tw": "蝦米",
+        "cantonese": "Haa Mai",
+        "pinyin": "Xiā Mǐ"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Dried Scallop",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 275,
+        "protein_g": 56.8,
+        "carbs_g": 4.2,
+        "fat_g": 2.8
+      },
+      "aliases": {
+        "zh-cn": "干贝",
+        "zh-tw": "乾貝",
+        "cantonese": "Gon Bui",
+        "pinyin": "Gān Bèi"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Dried Oyster",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 258,
+        "protein_g": 48.5,
+        "carbs_g": 12.3,
+        "fat_g": 3.2
+      },
+      "aliases": {
+        "zh-cn": "蚝豉",
+        "zh-tw": "蠔豉",
+        "cantonese": "Hou Si",
+        "pinyin": "Háo Chǐ"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Salted Fish",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 185,
+        "protein_g": 38.2,
+        "carbs_g": 0.5,
+        "fat_g": 3.8
+      },
+      "aliases": {
+        "zh-cn": "咸鱼",
+        "zh-tw": "鹹魚",
+        "cantonese": "Haam Yu",
+        "pinyin": "Xián Yú"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Dried Fish Maw",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 165,
+        "protein_g": 36.8,
+        "carbs_g": 0.3,
+        "fat_g": 1.2
+      },
+      "aliases": {
+        "zh-cn": "花胶",
+        "zh-tw": "花膠",
+        "cantonese": "Faa Gaau",
+        "pinyin": "Huā Jiāo"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Dried Sea Cucumber",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 68,
+        "protein_g": 15.2,
+        "carbs_g": 0.8,
+        "fat_g": 0.5
+      },
+      "aliases": {
+        "zh-cn": "海参",
+        "zh-tw": "海參",
+        "cantonese": "Hoi Sam",
+        "pinyin": "Hǎi Shēn"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Dried Abalone",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 245,
+        "protein_g": 52.3,
+        "carbs_g": 3.8,
+        "fat_g": 2.5
+      },
+      "aliases": {
+        "zh-cn": "干鲍鱼",
+        "zh-tw": "乾鮑魚",
+        "cantonese": "Gon Baau Yu",
+        "pinyin": "Gān Bào Yú"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Hoisin Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 220,
+        "protein_g": 4.2,
+        "carbs_g": 45.8,
+        "fat_g": 3.2
+      },
+      "aliases": {
+        "zh-cn": "海鲜酱",
+        "zh-tw": "海鮮醬",
+        "cantonese": "Hoi Sin Jeung",
+        "pinyin": "Hǎi Xiān Jiàng"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Oyster Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 90,
+        "protein_g": 2.8,
+        "carbs_g": 18.5,
+        "fat_g": 0.6
+      },
+      "aliases": {
+        "zh-cn": "蚝油",
+        "zh-tw": "蠔油",
+        "cantonese": "Hou Yau",
+        "pinyin": "Háo Yóu"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    },
+    {
+      "canonical_name": "XO Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 285,
+        "protein_g": 12.5,
+        "carbs_g": 8.2,
+        "fat_g": 22.8
+      },
+      "aliases": {
+        "zh-cn": "XO酱",
+        "zh-tw": "XO醬",
+        "cantonese": "XO Jeung",
+        "pinyin": "XO Jiàng"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Chu Hou Paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 156,
+        "protein_g": 8.2,
+        "carbs_g": 22.5,
+        "fat_g": 3.8
+      },
+      "aliases": {
+        "zh-cn": "柱候酱",
+        "zh-tw": "柱候醬",
+        "cantonese": "Chu Hau Jeung",
+        "pinyin": "Zhù Hòu Jiàng"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Sha Cha Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 6.5,
+        "carbs_g": 18.2,
+        "fat_g": 28.5
+      },
+      "aliases": {
+        "zh-cn": "沙茶酱",
+        "zh-tw": "沙茶醬",
+        "cantonese": "Saa Chaa Jeung",
+        "pinyin": "Shā Chá Jiàng"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Plum Sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 175,
+        "protein_g": 0.8,
+        "carbs_g": 43.2,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "zh-cn": "梅酱",
+        "zh-tw": "梅醬",
+        "cantonese": "Mui Jeung",
+        "pinyin": "Méi Jiàng"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Preserved Black Beans",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 198,
+        "protein_g": 18.5,
+        "carbs_g": 28.2,
+        "fat_g": 3.2
+      },
+      "aliases": {
+        "zh-cn": "豆豉",
+        "zh-tw": "豆豉",
+        "cantonese": "Dau Si",
+        "pinyin": "Dòu Chǐ"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Wonton Wrapper",
+      "category": "grain",
+      "per_100g": {
+        "calories": 285,
+        "protein_g": 9.2,
+        "carbs_g": 57.5,
+        "fat_g": 1.5
+      },
+      "aliases": {
+        "zh-cn": "馄饨皮",
+        "zh-tw": "餛飩皮",
+        "cantonese": "Wan Tan Pei",
+        "pinyin": "Hún Tún Pí"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Spring Roll Wrapper",
+      "category": "grain",
+      "per_100g": {
+        "calories": 275,
+        "protein_g": 7.8,
+        "carbs_g": 55.2,
+        "fat_g": 1.8
+      },
+      "aliases": {
+        "zh-cn": "春卷皮",
+        "zh-tw": "春捲皮",
+        "cantonese": "Chun Gyun Pei",
+        "pinyin": "Chūn Juǎn Pí"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Dumpling Wrapper",
+      "category": "grain",
+      "per_100g": {
+        "calories": 288,
+        "protein_g": 8.8,
+        "carbs_g": 58.8,
+        "fat_g": 1.3
+      },
+      "aliases": {
+        "zh-cn": "饺子皮",
+        "zh-tw": "餃子皮",
+        "cantonese": "Gaau Ji Pei",
+        "pinyin": "Jiǎo Zi Pí"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Rice Noodle Roll",
+      "category": "grain",
+      "per_100g": {
+        "calories": 108,
+        "protein_g": 1.8,
+        "carbs_g": 25.2,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "zh-cn": "肠粉",
+        "zh-tw": "腸粉",
+        "cantonese": "Cheung Fan",
+        "pinyin": "Cháng Fěn"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Rice Noodle Sheet",
+      "category": "grain",
+      "per_100g": {
+        "calories": 112,
+        "protein_g": 2.2,
+        "carbs_g": 26.5,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "zh-cn": "河粉",
+        "zh-tw": "河粉",
+        "cantonese": "Ho Fan",
+        "pinyin": "Hé Fěn"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Dried Tangerine Peel",
+      "category": "spice",
+      "per_100g": {
+        "calories": 252,
+        "protein_g": 3.8,
+        "carbs_g": 64.2,
+        "fat_g": 1.5
+      },
+      "aliases": {
+        "zh-cn": "陈皮",
+        "zh-tw": "陳皮",
+        "cantonese": "Chan Pei",
+        "pinyin": "Chén Pí"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Five Spice Powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 285,
+        "protein_g": 8.5,
+        "carbs_g": 52.8,
+        "fat_g": 6.2
+      },
+      "aliases": {
+        "zh-cn": "五香粉",
+        "zh-tw": "五香粉",
+        "cantonese": "Ng Heung Fan",
+        "pinyin": "Wǔ Xiāng Fěn"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    },
+    {
+      "canonical_name": "White Pepper Powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 296,
+        "protein_g": 10.4,
+        "carbs_g": 68.2,
+        "fat_g": 2.1
+      },
+      "aliases": {
+        "zh-cn": "白胡椒粉",
+        "zh-tw": "白胡椒粉",
+        "cantonese": "Baak Wu Jiu Fan",
+        "pinyin": "Bái Hú Jiāo Fěn"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Salted Egg",
+      "category": "egg",
+      "per_100g": {
+        "calories": 168,
+        "protein_g": 12.8,
+        "carbs_g": 1.2,
+        "fat_g": 12.5
+      },
+      "aliases": {
+        "zh-cn": "咸蛋",
+        "zh-tw": "鹹蛋",
+        "cantonese": "Haam Daan",
+        "pinyin": "Xián Dàn"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Century Egg",
+      "category": "egg",
+      "per_100g": {
+        "calories": 172,
+        "protein_g": 13.5,
+        "carbs_g": 2.8,
+        "fat_g": 11.8
+      },
+      "aliases": {
+        "zh-cn": "皮蛋",
+        "zh-tw": "皮蛋",
+        "cantonese": "Pei Daan",
+        "pinyin": "Pí Dàn"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Salted Duck Egg Yolk",
+      "category": "egg",
+      "per_100g": {
+        "calories": 348,
+        "protein_g": 16.2,
+        "carbs_g": 1.8,
+        "fat_g": 30.5
+      },
+      "aliases": {
+        "zh-cn": "咸蛋黄",
+        "zh-tw": "鹹蛋黃",
+        "cantonese": "Haam Daan Wong",
+        "pinyin": "Xián Dàn Huáng"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Lotus Leaf",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 48,
+        "protein_g": 2.5,
+        "carbs_g": 9.8,
+        "fat_g": 0.5
+      },
+      "aliases": {
+        "zh-cn": "荷叶",
+        "zh-tw": "荷葉",
+        "cantonese": "Ho Yip",
+        "pinyin": "Hé Yè"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Bamboo Leaf",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 1.8,
+        "carbs_g": 7.2,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "zh-cn": "竹叶",
+        "zh-tw": "竹葉",
+        "cantonese": "Juk Yip",
+        "pinyin": "Zhú Yè"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Sticky Rice",
+      "category": "grain",
+      "per_100g": {
+        "calories": 348,
+        "protein_g": 6.5,
+        "carbs_g": 77.8,
+        "fat_g": 0.6
+      },
+      "aliases": {
+        "zh-cn": "糯米",
+        "zh-tw": "糯米",
+        "cantonese": "Lo Mai",
+        "pinyin": "Nuò Mǐ"
+      },
+      "common_units": ["gram", "tablespoon", "piece"]
+    },
+    {
+      "canonical_name": "Water Chestnut",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 97,
+        "protein_g": 1.4,
+        "carbs_g": 23.9,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "zh-cn": "马蹄",
+        "zh-tw": "馬蹄",
+        "cantonese": "Ma Tai",
+        "pinyin": "Mǎ Tí"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Bamboo Shoots",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 27,
+        "protein_g": 2.6,
+        "carbs_g": 5.2,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "zh-cn": "竹笋",
+        "zh-tw": "竹筍",
+        "cantonese": "Juk Seun",
+        "pinyin": "Zhú Sǔn"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Wood Ear Mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 1.1,
+        "carbs_g": 6.5,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "zh-cn": "木耳",
+        "zh-tw": "木耳",
+        "cantonese": "Muk Yi",
+        "pinyin": "Mù Ěr"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Snow Fungus",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 28,
+        "protein_g": 1.4,
+        "carbs_g": 6.8,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "zh-cn": "银耳",
+        "zh-tw": "銀耳",
+        "cantonese": "Ngan Yi",
+        "pinyin": "Yín Ěr"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Dried Shiitake Mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 296,
+        "protein_g": 9.6,
+        "carbs_g": 63.9,
+        "fat_g": 1.0
+      },
+      "aliases": {
+        "zh-cn": "香菇",
+        "zh-tw": "香菇",
+        "cantonese": "Heung Gu",
+        "pinyin": "Xiāng Gū"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Dried Lily Bulb",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 343,
+        "protein_g": 4.8,
+        "carbs_g": 77.2,
+        "fat_g": 0.5
+      },
+      "aliases": {
+        "zh-cn": "百合",
+        "zh-tw": "百合",
+        "cantonese": "Baak Hap",
+        "pinyin": "Bǎi Hé"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Dried Longan",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 283,
+        "protein_g": 4.9,
+        "carbs_g": 73.8,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "zh-cn": "桂圆",
+        "zh-tw": "桂圓",
+        "cantonese": "Gwai Yun",
+        "pinyin": "Guì Yuán"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Red Date",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 282,
+        "protein_g": 3.7,
+        "carbs_g": 73.9,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "zh-cn": "红枣",
+        "zh-tw": "紅棗",
+        "cantonese": "Hung Jo",
+        "pinyin": "Hóng Zǎo"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Wolfberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 349,
+        "protein_g": 13.9,
+        "carbs_g": 77.1,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "zh-cn": "枸杞",
+        "zh-tw": "枸杞",
+        "cantonese": "Gau Gei",
+        "pinyin": "Gǒu Qǐ"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Rock Sugar",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 0.0,
+        "carbs_g": 99.9,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "zh-cn": "冰糖",
+        "zh-tw": "冰糖",
+        "cantonese": "Bing Tong",
+        "pinyin": "Bīng Táng"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Dried Tangerine Peel Powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 248,
+        "protein_g": 3.5,
+        "carbs_g": 63.8,
+        "fat_g": 1.4
+      },
+      "aliases": {
+        "zh-cn": "陈皮粉",
+        "zh-tw": "陳皮粉",
+        "cantonese": "Chan Pei Fan",
+        "pinyin": "Chén Pí Fěn"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Turnip",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 28,
+        "protein_g": 0.9,
+        "carbs_g": 6.4,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "zh-cn": "白萝卜",
+        "zh-tw": "白蘿蔔",
+        "cantonese": "Baak Lo Baak",
+        "pinyin": "Bái Luó Bo"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Taro",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 112,
+        "protein_g": 1.5,
+        "carbs_g": 27.5,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "zh-cn": "芋头",
+        "zh-tw": "芋頭",
+        "cantonese": "Wu Tau",
+        "pinyin": "Yù Tóu"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Lotus Root",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 74,
+        "protein_g": 2.6,
+        "carbs_g": 17.2,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "zh-cn": "莲藕",
+        "zh-tw": "蓮藕",
+        "cantonese": "Lin Ngau",
+        "pinyin": "Lián Ǒu"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Lotus Seed",
+      "category": "grain",
+      "per_100g": {
+        "calories": 332,
+        "protein_g": 15.4,
+        "carbs_g": 64.5,
+        "fat_g": 1.9
+      },
+      "aliases": {
+        "zh-cn": "莲子",
+        "zh-tw": "蓮子",
+        "cantonese": "Lin Ji",
+        "plnyin": "Lián Zǐ"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Peanut Oil",
+      "category": "oil",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0
+      },
+      "aliases": {
+        "zh-cn": "花生油",
+        "zh-tw": "花生油",
+        "cantonese": "Faa Sang Yau",
+        "pinyin": "Huā Shēng Yóu"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Old Ginger",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 80,
+        "protein_g": 1.8,
+        "carbs_g": 17.8,
+        "fat_g": 0.8
+      },
+      "aliases": {
+        "zh-cn": "老姜",
+        "zh-tw": "老薑",
+        "cantonese": "Lou Geung",
+        "pinyin": "Lǎo Jiāng"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Yellow Chives",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 2.1,
+        "carbs_g": 4.3,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "zh-cn": "韭黄",
+        "zh-tw": "韭黃",
+        "cantonese": "Gau Wong",
+        "pinyin": "Jiǔ Huáng"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Bean Sprouts",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 30,
+        "protein_g": 3.0,
+        "carbs_g": 5.9,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "zh-cn": "豆芽",
+        "zh-tw": "豆芽",
+        "cantonese": "Dau Ngaa",
+        "pinyin": "Dòu Yá"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Pea Shoots",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 3.5,
+        "carbs_g": 6.0,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "zh-cn": "豆苗",
+        "zh-tw": "豆苗",
+        "cantonese": "Dau Miu",
+        "pinyin": "Dòu Miáo"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Snow Peas",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 42,
+        "protein_g": 2.8,
+        "carbs_g": 7.6,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "zh-cn": "荷兰豆",
+        "zh-tw": "荷蘭豆",
+        "cantonese": "Ho Laan Dau",
+        "pinyin": "Hé Lán Dòu"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Chinese Flowering Cabbage",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 2.7,
+        "carbs_g": 3.7,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "zh-cn": "菜花",
+        "zh-tw": "菜花",
+        "cantonese": "Choi Faa",
+        "pinyin": "Cài Huā"
+      },
+      "common_units": ["piece", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "Shrimp Paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 148,
+        "protein_g": 24.5,
+        "carbs_g": 3.8,
+        "fat_g": 4.2
+      },
+      "aliases": {
+        "zh-cn": "虾酱",
+        "zh-tw": "蝦醬",
+        "cantonese": "Haa Jeung",
+        "pinyin": "Xiā Jiàng"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Fermented Bean Curd",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 135,
+        "protein_g": 10.5,
+        "carbs_g": 5.8,
+        "fat_g": 8.2
+      },
+      "aliases": {
+        "zh-cn": "腐乳",
+        "zh-tw": "腐乳",
+        "cantonese": "Fu Yue",
+        "pinyin": "Fǔ Rǔ"
+      },
+      "common_units": ["piece", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Red Fermented Bean Curd",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 142,
+        "protein_g": 11.2,
+        "carbs_g": 6.5,
+        "fat_g": 8.8
+      },
+      "aliases": {
+        "zh-cn": "红腐乳",
+        "zh-tw": "紅腐乳",
+        "cantonese": "Hung Fu Yue",
+        "pinyin": "Hóng Fǔ Rǔ"
+      },
+      "common_units": ["piece", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "Shaoxing Wine",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 134,
+        "protein_g": 1.2,
+        "carbs_g": 5.8,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "zh-cn": "绍兴酒",
+        "zh-tw": "紹興酒",
+        "cantonese": "Siu Hing Jau",
+        "pinyin": "Shào Xīng Jiǔ"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Chinese Rose Wine",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 128,
+        "protein_g": 0.8,
+        "carbs_g": 4.5,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "zh-cn": "玫瑰露酒",
+        "zh-tw": "玫瑰露酒",
+        "cantonese": "Mui Gwai Lou Jau",
+        "pinyin": "Méi Guī Lù Jiǔ"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Sesame Oil",
+      "category": "oil",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0
+      },
+      "aliases": {
+        "zh-cn": "麻油",
+        "zh-tw": "麻油",
+        "cantonese": "Ma Yau",
+        "pinyin": "Má Yóu"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Fried Shallot",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 485,
+        "protein_g": 4.2,
+        "carbs_g": 38.5,
+        "fat_g": 33.8
+      },
+      "aliases": {
+        "zh-cn": "油葱酥",
+        "zh-tw": "油蔥酥",
+        "cantonese": "Yau Chung Sou",
+        "pinyin": "Yóu Cōng Sū"
+      },
+      "common_units": ["tablespoon", "gram", "piece"]
+    }
+  ]
+}

@@ -1,0 +1,2283 @@
+{
+  "batch": 3,
+  "agent": 12,
+  "category": "grains_rice",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "jasmine rice, white, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 7.1,
+        "carbs_g": 79.9,
+        "fat_g": 0.7,
+        "fiber_g": 1.3
+      },
+      "aliases": {
+        "en": ["jasmine rice", "thai fragrant rice", "hom mali rice", "white jasmine rice"],
+        "ja": ["ジャスミン米", "ジャスミンライス", "タイ米", "ホムマリ米"],
+        "ko": ["재스민 쌀", "자스민 라이스", "태국 쌀", "향미"],
+        "zh": ["茉莉香米", "泰国香米", "香米"],
+        "zh-tw": ["茉莉香米", "泰國香米", "香米"],
+        "es": ["arroz jazmín", "arroz aromático tailandés", "arroz thai"],
+        "fr": ["riz jasmin", "riz thaï parfumé", "riz hom mali"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 185},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "basmati rice, white, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 357,
+        "protein_g": 7.5,
+        "carbs_g": 78.0,
+        "fat_g": 0.6,
+        "fiber_g": 1.3
+      },
+      "aliases": {
+        "en": ["basmati rice", "indian basmati", "white basmati"],
+        "ja": ["バスマティ米", "バスマティライス", "インド米"],
+        "ko": ["바스마티 쌀", "바스마티 라이스", "인도 쌀"],
+        "zh": ["巴斯马蒂米", "印度香米", "长粒米"],
+        "zh-tw": ["巴斯馬蒂米", "印度香米", "長粒米"],
+        "es": ["arroz basmati", "arroz basmati blanco", "arroz indio"],
+        "fr": ["riz basmati", "riz basmati blanc", "riz indien"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 185},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "sushi rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 6.8,
+        "carbs_g": 79.2,
+        "fat_g": 0.5,
+        "fiber_g": 1.4
+      },
+      "aliases": {
+        "en": ["sushi rice", "japanese short grain rice", "shari"],
+        "ja": ["寿司米", "酢飯用米", "短粒米", "シャリ"],
+        "ko": ["초밥용 쌀", "스시 라이스", "단립미"],
+        "zh": ["寿司米", "日本短粒米", "醋饭米"],
+        "zh-tw": ["壽司米", "日本短粒米", "醋飯米"],
+        "es": ["arroz para sushi", "arroz japonés de grano corto"],
+        "fr": ["riz à sushi", "riz japonais à grain court"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 185},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "arborio rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 7.0,
+        "carbs_g": 79.5,
+        "fat_g": 0.6,
+        "fiber_g": 1.5
+      },
+      "aliases": {
+        "en": ["arborio rice", "risotto rice", "italian rice"],
+        "ja": ["アルボリオ米", "リゾット米", "イタリア米"],
+        "ko": ["아르보리오 쌀", "리조또용 쌀", "이탈리아 쌀"],
+        "zh": ["阿勃瑞欧米", "烩饭米", "意大利米"],
+        "zh-tw": ["阿勃瑞歐米", "燴飯米", "意大利米"],
+        "es": ["arroz arborio", "arroz para risotto", "arroz italiano"],
+        "fr": ["riz arborio", "riz pour risotto", "riz italien"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 185},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "long-grain white rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 7.1,
+        "carbs_g": 79.9,
+        "fat_g": 0.7,
+        "fiber_g": 1.3
+      },
+      "aliases": {
+        "en": ["long grain rice", "long grain white rice", "regular white rice"],
+        "ja": ["長粒米", "長粒種", "ロンググレインライス"],
+        "ko": ["장립종", "장립미", "긴쌀"],
+        "zh": ["长粒米", "长米", "白米"],
+        "zh-tw": ["長粒米", "長米", "白米"],
+        "es": ["arroz de grano largo", "arroz blanco largo"],
+        "fr": ["riz long grain", "riz blanc à grain long"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 185},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "short-grain white rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 6.5,
+        "carbs_g": 79.3,
+        "fat_g": 0.5,
+        "fiber_g": 1.4
+      },
+      "aliases": {
+        "en": ["short grain rice", "short grain white rice", "sticky rice"],
+        "ja": ["短粒米", "短粒種", "ショートグレインライス"],
+        "ko": ["단립종", "단립미", "짧은쌀"],
+        "zh": ["短粒米", "短米", "圆米"],
+        "zh-tw": ["短粒米", "短米", "圓米"],
+        "es": ["arroz de grano corto", "arroz blanco corto"],
+        "fr": ["riz grain court", "riz blanc à grain court"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 185},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "brown rice, long-grain, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 370,
+        "protein_g": 7.9,
+        "carbs_g": 77.2,
+        "fat_g": 2.9,
+        "fiber_g": 3.5
+      },
+      "aliases": {
+        "en": ["brown rice", "whole grain rice", "long grain brown rice"],
+        "ja": ["玄米", "長粒玄米", "ブラウンライス"],
+        "ko": ["현미", "장립 현미", "통곡물 쌀"],
+        "zh": ["糙米", "全谷米", "长粒糙米"],
+        "zh-tw": ["糙米", "全穀米", "長粒糙米"],
+        "es": ["arroz integral", "arroz moreno", "arroz integral largo"],
+        "fr": ["riz brun", "riz complet", "riz brun long grain"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 190},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "brown rice, short-grain, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 370,
+        "protein_g": 7.5,
+        "carbs_g": 77.5,
+        "fat_g": 2.7,
+        "fiber_g": 3.4
+      },
+      "aliases": {
+        "en": ["short grain brown rice", "brown sushi rice"],
+        "ja": ["短粒玄米", "玄米", "ショートグレイン玄米"],
+        "ko": ["단립 현미", "현미", "짧은 현미"],
+        "zh": ["短粒糙米", "糙米"],
+        "zh-tw": ["短粒糙米", "糙米"],
+        "es": ["arroz integral de grano corto", "arroz moreno corto"],
+        "fr": ["riz brun grain court", "riz complet court"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 190},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "wild rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 357,
+        "protein_g": 14.7,
+        "carbs_g": 74.9,
+        "fat_g": 1.1,
+        "fiber_g": 6.2
+      },
+      "aliases": {
+        "en": ["wild rice", "canadian rice", "indian rice", "water oats"],
+        "ja": ["ワイルドライス", "マコモ米", "野生米"],
+        "ko": ["와일드 라이스", "야생 쌀", "캐나다 쌀"],
+        "zh": ["野米", "菰米", "加拿大米"],
+        "zh-tw": ["野米", "菰米", "加拿大米"],
+        "es": ["arroz salvaje", "arroz silvestre", "arroz canadiense"],
+        "fr": ["riz sauvage", "zizanie aquatique", "folle avoine"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 160},
+        {"unit": "tablespoon", "grams": 10},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "black rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 8.9,
+        "carbs_g": 75.6,
+        "fat_g": 3.5,
+        "fiber_g": 4.9
+      },
+      "aliases": {
+        "en": ["black rice", "forbidden rice", "purple rice", "emperor's rice"],
+        "ja": ["黒米", "紫黒米", "古代米"],
+        "ko": ["흑미", "검은쌀", "자흑미"],
+        "zh": ["黑米", "紫米", "贡米"],
+        "zh-tw": ["黑米", "紫米", "貢米"],
+        "es": ["arroz negro", "arroz prohibido", "arroz del emperador"],
+        "fr": ["riz noir", "riz interdit", "riz pourpre"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 180},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "red rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 362,
+        "protein_g": 7.5,
+        "carbs_g": 76.2,
+        "fat_g": 2.8,
+        "fiber_g": 3.8
+      },
+      "aliases": {
+        "en": ["red rice", "bhutanese red rice", "himalayan red rice"],
+        "ja": ["赤米", "レッドライス", "古代米"],
+        "ko": ["적미", "붉은쌀", "히말라야 쌀"],
+        "zh": ["红米", "红糙米", "喜马拉雅米"],
+        "zh-tw": ["紅米", "紅糙米", "喜馬拉雅米"],
+        "es": ["arroz rojo", "arroz rojo del himalaya"],
+        "fr": ["riz rouge", "riz rouge de l'himalaya"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 180},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "sticky rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 348,
+        "protein_g": 6.6,
+        "carbs_g": 78.4,
+        "fat_g": 0.4,
+        "fiber_g": 1.2
+      },
+      "aliases": {
+        "en": ["sticky rice", "glutinous rice", "sweet rice", "mochi rice"],
+        "ja": ["もち米", "餅米", "糯米", "モチゴメ"],
+        "ko": ["찹쌀", "멥쌀", "찰떡쌀"],
+        "zh": ["糯米", "江米", "粘米"],
+        "zh-tw": ["糯米", "江米", "粘米"],
+        "es": ["arroz glutinoso", "arroz dulce", "arroz pegajoso"],
+        "fr": ["riz gluant", "riz glutineux", "riz mochi"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 185},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "parboiled rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 374,
+        "protein_g": 8.1,
+        "carbs_g": 80.9,
+        "fat_g": 1.0,
+        "fiber_g": 2.0
+      },
+      "aliases": {
+        "en": ["parboiled rice", "converted rice", "easy cook rice"],
+        "ja": ["パーボイルドライス", "加工米", "アルファ化米"],
+        "ko": ["파보일드 라이스", "전처리 쌀", "가공 쌀"],
+        "zh": ["半煮米", "预煮米", "转化米"],
+        "zh-tw": ["半煮米", "預煮米", "轉化米"],
+        "es": ["arroz precocido", "arroz sancochado", "arroz vaporizado"],
+        "fr": ["riz étuvé", "riz précuit", "riz converti"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 185},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "broken rice",
+      "category": "grain",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 7.0,
+        "carbs_g": 79.7,
+        "fat_g": 0.6,
+        "fiber_g": 1.2
+      },
+      "aliases": {
+        "en": ["broken rice", "fragmented rice", "com tam rice"],
+        "ja": ["砕米", "割れ米", "コムタム米"],
+        "ko": ["부서진 쌀", "분쇄미", "깨진쌀"],
+        "zh": ["碎米", "破碎米"],
+        "zh-tw": ["碎米", "破碎米"],
+        "es": ["arroz quebrado", "arroz partido", "com tam"],
+        "fr": ["riz brisé", "riz cassé", "com tam"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 180},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "bulgur wheat",
+      "category": "grain",
+      "per_100g": {
+        "calories": 342,
+        "protein_g": 12.3,
+        "carbs_g": 75.9,
+        "fat_g": 1.3,
+        "fiber_g": 12.5
+      },
+      "aliases": {
+        "en": ["bulgur", "bulgar wheat", "cracked wheat", "burghul"],
+        "ja": ["ブルグル", "ブルガー小麦", "挽き割り小麦"],
+        "ko": ["불거", "불가 밀", "부숴진 밀"],
+        "zh": ["碎麦", "布格麦", "粗麦粉"],
+        "zh-tw": ["碎麥", "布格麥", "粗麥粉"],
+        "es": ["bulgur", "trigo bulgur", "trigo partido"],
+        "fr": ["boulgour", "blé concassé", "bourghoul"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 140},
+        {"unit": "tablespoon", "grams": 9},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "couscous, dry",
+      "category": "grain",
+      "per_100g": {
+        "calories": 376,
+        "protein_g": 12.8,
+        "carbs_g": 77.4,
+        "fat_g": 0.6,
+        "fiber_g": 5.0
+      },
+      "aliases": {
+        "en": ["couscous", "moroccan couscous", "semolina couscous"],
+        "ja": ["クスクス", "モロッコクスクス", "セモリナクスクス"],
+        "ko": ["쿠스쿠스", "모로코 쿠스쿠스", "세몰리나"],
+        "zh": ["古斯米", "蒸粗麦粉", "库斯库斯"],
+        "zh-tw": ["古斯米", "蒸粗麥粉", "庫斯庫斯"],
+        "es": ["cuscús", "cous cous", "alcuzcuz"],
+        "fr": ["couscous", "semoule de blé"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 175},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "freekeh",
+      "category": "grain",
+      "per_100g": {
+        "calories": 325,
+        "protein_g": 14.7,
+        "carbs_g": 72.5,
+        "fat_g": 2.3,
+        "fiber_g": 13.3
+      },
+      "aliases": {
+        "en": ["freekeh", "frikeh", "farik", "green wheat"],
+        "ja": ["フリーカ", "フリーケ", "青麦"],
+        "ko": ["프리케", "프리카", "녹색 밀"],
+        "zh": ["火烤青麦", "烟熏青麦", "法里克"],
+        "zh-tw": ["火烤青麥", "煙燻青麥", "法里克"],
+        "es": ["freekeh", "trigo verde tostado", "farik"],
+        "fr": ["freekeh", "blé vert grillé", "farik"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 160},
+        {"unit": "tablespoon", "grams": 10},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "farro, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 340,
+        "protein_g": 14.6,
+        "carbs_g": 70.2,
+        "fat_g": 2.5,
+        "fiber_g": 10.7
+      },
+      "aliases": {
+        "en": ["farro", "emmer wheat", "spelt wheat"],
+        "ja": ["ファッロ", "エンマー小麦", "古代小麦"],
+        "ko": ["파로", "엠머 밀", "고대 밀"],
+        "zh": ["法罗", "二粒小麦", "古代小麦"],
+        "zh-tw": ["法羅", "二粒小麥", "古代小麥"],
+        "es": ["farro", "trigo emmer", "escaña"],
+        "fr": ["épeautre", "blé amidonnier", "farro"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 190},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "wheat berries, hard red",
+      "category": "grain",
+      "per_100g": {
+        "calories": 330,
+        "protein_g": 13.7,
+        "carbs_g": 71.2,
+        "fat_g": 2.5,
+        "fiber_g": 12.2
+      },
+      "aliases": {
+        "en": ["wheat berries", "whole wheat kernels", "wheat grain"],
+        "ja": ["小麦粒", "丸粒小麦", "ホールグレイン小麦"],
+        "ko": ["밀알", "통밀 알갱이", "밀 곡물"],
+        "zh": ["小麦粒", "全麦籽", "麦仁"],
+        "zh-tw": ["小麥粒", "全麥籽", "麥仁"],
+        "es": ["granos de trigo", "bayas de trigo", "trigo integral"],
+        "fr": ["baies de blé", "grains de blé entier", "blé complet"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 192},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "cracked wheat",
+      "category": "grain",
+      "per_100g": {
+        "calories": 327,
+        "protein_g": 12.5,
+        "carbs_g": 70.5,
+        "fat_g": 2.0,
+        "fiber_g": 11.8
+      },
+      "aliases": {
+        "en": ["cracked wheat", "broken wheat", "dalia"],
+        "ja": ["砕麦", "割れ小麦", "ダリア"],
+        "ko": ["부서진 밀", "크랙 밀", "달리아"],
+        "zh": ["碎小麦", "麦碎", "达利亚"],
+        "zh-tw": ["碎小麥", "麥碎", "達利亞"],
+        "es": ["trigo partido", "trigo quebrado", "dalia"],
+        "fr": ["blé concassé", "blé cassé", "dalia"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 140},
+        {"unit": "tablespoon", "grams": 9},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "quinoa, white, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 368,
+        "protein_g": 14.1,
+        "carbs_g": 64.2,
+        "fat_g": 6.1,
+        "fiber_g": 7.0
+      },
+      "aliases": {
+        "en": ["white quinoa", "quinoa", "keen-wa"],
+        "ja": ["キヌア", "白キヌア", "キンワ"],
+        "ko": ["퀴노아", "흰 퀴노아", "킨와"],
+        "zh": ["藜麦", "白藜麦", "奎奴亚藜"],
+        "zh-tw": ["藜麥", "白藜麥", "奎奴亞藜"],
+        "es": ["quinua", "quinoa blanca", "kinwa"],
+        "fr": ["quinoa", "quinoa blanc", "quinoa royal"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 170},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "quinoa, red, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 370,
+        "protein_g": 13.8,
+        "carbs_g": 64.8,
+        "fat_g": 6.3,
+        "fiber_g": 7.2
+      },
+      "aliases": {
+        "en": ["red quinoa", "red keen-wa"],
+        "ja": ["赤キヌア", "レッドキヌア"],
+        "ko": ["붉은 퀴노아", "적 퀴노아"],
+        "zh": ["红藜麦", "红色藜麦"],
+        "zh-tw": ["紅藜麥", "紅色藜麥"],
+        "es": ["quinua roja", "quinoa roja"],
+        "fr": ["quinoa rouge"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 170},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "quinoa, black, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 14.0,
+        "carbs_g": 64.5,
+        "fat_g": 6.2,
+        "fiber_g": 7.3
+      },
+      "aliases": {
+        "en": ["black quinoa", "black keen-wa"],
+        "ja": ["黒キヌア", "ブラックキヌア"],
+        "ko": ["검은 퀴노아", "흑 퀴노아"],
+        "zh": ["黑藜麦", "黑色藜麦"],
+        "zh-tw": ["黑藜麥", "黑色藜麥"],
+        "es": ["quinua negra", "quinoa negra"],
+        "fr": ["quinoa noir"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 170},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "pearl barley, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 352,
+        "protein_g": 9.9,
+        "carbs_g": 77.7,
+        "fat_g": 1.2,
+        "fiber_g": 15.6
+      },
+      "aliases": {
+        "en": ["pearl barley", "pearled barley", "polished barley"],
+        "ja": ["押し麦", "真珠大麦", "精白麦"],
+        "ko": ["진주 보리", "압맥", "정백 보리"],
+        "zh": ["珍珠麦", "精制大麦", "去壳大麦"],
+        "zh-tw": ["珍珠麥", "精製大麥", "去殼大麥"],
+        "es": ["cebada perlada", "cebada pulida"],
+        "fr": ["orge perlé", "orge mondé"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 200},
+        {"unit": "tablespoon", "grams": 13},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "hulled barley, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 354,
+        "protein_g": 12.5,
+        "carbs_g": 73.5,
+        "fat_g": 2.3,
+        "fiber_g": 17.3
+      },
+      "aliases": {
+        "en": ["hulled barley", "whole grain barley", "pot barley"],
+        "ja": ["丸麦", "全粒大麦", "皮付き大麦"],
+        "ko": ["껍질 보리", "통보리", "전곡 보리"],
+        "zh": ["带壳大麦", "全粒大麦", "完整大麦"],
+        "zh-tw": ["帶殼大麥", "全粒大麥", "完整大麥"],
+        "es": ["cebada con cáscara", "cebada integral", "cebada entera"],
+        "fr": ["orge mondée", "orge complète", "orge entière"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 184},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "rolled oats, old-fashioned",
+      "category": "grain",
+      "per_100g": {
+        "calories": 379,
+        "protein_g": 13.2,
+        "carbs_g": 67.7,
+        "fat_g": 6.5,
+        "fiber_g": 10.1
+      },
+      "aliases": {
+        "en": ["rolled oats", "old fashioned oats", "oat flakes"],
+        "ja": ["ロールドオーツ", "押しオート麦", "オートミール"],
+        "ko": ["롤드 오트", "압착 귀리", "오트밀"],
+        "zh": ["燕麦片", "压燕麦", "老式燕麦"],
+        "zh-tw": ["燕麥片", "壓燕麥", "老式燕麥"],
+        "es": ["avena arrollada", "hojuelas de avena", "avena tradicional"],
+        "fr": ["flocons d'avoine", "avoine roulée", "avoine à l'ancienne"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 80},
+        {"unit": "tablespoon", "grams": 5},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "steel-cut oats",
+      "category": "grain",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 13.7,
+        "carbs_g": 66.3,
+        "fat_g": 6.9,
+        "fiber_g": 10.6
+      },
+      "aliases": {
+        "en": ["steel cut oats", "irish oatmeal", "pinhead oats"],
+        "ja": ["スティールカットオーツ", "アイリッシュオートミール", "粗挽きオート麦"],
+        "ko": ["스틸컷 오트", "아이리시 오트밀", "거친 귀리"],
+        "zh": ["钢切燕麦", "爱尔兰燕麦", "粗燕麦"],
+        "zh-tw": ["鋼切燕麥", "愛爾蘭燕麥", "粗燕麥"],
+        "es": ["avena cortada en acero", "avena irlandesa", "avena gruesa"],
+        "fr": ["avoine coupée", "avoine irlandaise", "gruau d'avoine"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 170},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "instant oats",
+      "category": "grain",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 12.5,
+        "carbs_g": 68.2,
+        "fat_g": 6.2,
+        "fiber_g": 9.4
+      },
+      "aliases": {
+        "en": ["instant oats", "quick oats", "instant oatmeal"],
+        "ja": ["インスタントオーツ", "クイックオーツ", "即席オートミール"],
+        "ko": ["인스턴트 오트", "퀵 오트", "즉석 귀리"],
+        "zh": ["即食燕麦", "速煮燕麦", "快熟燕麦"],
+        "zh-tw": ["即食燕麥", "速煮燕麥", "快熟燕麥"],
+        "es": ["avena instantánea", "avena rápida"],
+        "fr": ["avoine instantanée", "avoine rapide"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 80},
+        {"unit": "tablespoon", "grams": 5},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "millet, whole grain",
+      "category": "grain",
+      "per_100g": {
+        "calories": 378,
+        "protein_g": 11.0,
+        "carbs_g": 72.8,
+        "fat_g": 4.2,
+        "fiber_g": 8.5
+      },
+      "aliases": {
+        "en": ["millet", "pearl millet", "proso millet"],
+        "ja": ["キビ", "アワ", "ミレット"],
+        "ko": ["기장", "조", "밀레트"],
+        "zh": ["小米", "粟米", "谷子"],
+        "zh-tw": ["小米", "粟米", "穀子"],
+        "es": ["mijo", "mijo perlado"],
+        "fr": ["millet", "mil", "millet perlé"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 200},
+        {"unit": "tablespoon", "grams": 13},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "sorghum, whole grain",
+      "category": "grain",
+      "per_100g": {
+        "calories": 339,
+        "protein_g": 10.6,
+        "carbs_g": 74.6,
+        "fat_g": 3.5,
+        "fiber_g": 6.7
+      },
+      "aliases": {
+        "en": ["sorghum", "milo", "jowar", "great millet"],
+        "ja": ["ソルガム", "モロコシ", "コーリャン"],
+        "ko": ["수수", "소르검", "조와"],
+        "zh": ["高粱", "蜀黍", "芦粟"],
+        "zh-tw": ["高粱", "蜀黍", "蘆粟"],
+        "es": ["sorgo", "mijo grande", "jowar"],
+        "fr": ["sorgho", "gros mil", "millet indien"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 192},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "buckwheat groats",
+      "category": "grain",
+      "per_100g": {
+        "calories": 343,
+        "protein_g": 13.3,
+        "carbs_g": 71.5,
+        "fat_g": 3.4,
+        "fiber_g": 10.0
+      },
+      "aliases": {
+        "en": ["buckwheat", "kasha", "buckwheat groats", "saracen corn"],
+        "ja": ["そば米", "蕎麦の実", "カーシャ"],
+        "ko": ["메밀", "메밀 알곡", "카샤"],
+        "zh": ["荞麦", "荞麦仁", "荞麦粒"],
+        "zh-tw": ["蕎麥", "蕎麥仁", "蕎麥粒"],
+        "es": ["trigo sarraceno", "alforfón", "kasha"],
+        "fr": ["sarrasin", "blé noir", "kasha"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 170},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "amaranth grain",
+      "category": "grain",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.6,
+        "carbs_g": 65.3,
+        "fat_g": 7.0,
+        "fiber_g": 6.7
+      },
+      "aliases": {
+        "en": ["amaranth", "amaranth grain", "kiwicha"],
+        "ja": ["アマランサス", "アマランス", "センニンコク"],
+        "ko": ["아마란스", "아마란스 곡물", "키위차"],
+        "zh": ["苋菜籽", "苋米", "红谷"],
+        "zh-tw": ["莧菜籽", "莧米", "紅穀"],
+        "es": ["amaranto", "grano de amaranto", "kiwicha"],
+        "fr": ["amarante", "grain d'amarante", "kiwicha"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 193},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "teff grain",
+      "category": "grain",
+      "per_100g": {
+        "calories": 367,
+        "protein_g": 13.3,
+        "carbs_g": 73.1,
+        "fat_g": 2.4,
+        "fiber_g": 8.0
+      },
+      "aliases": {
+        "en": ["teff", "tef", "eragrostis tef"],
+        "ja": ["テフ", "テフ穀物", "エチオピア穀物"],
+        "ko": ["테프", "테프 곡물", "에티오피아 곡물"],
+        "zh": ["苔麸", "画眉草", "埃塞俄比亚谷物"],
+        "zh-tw": ["苔麩", "畫眉草", "埃塞俄比亞穀物"],
+        "es": ["teff", "tef", "grano etíope"],
+        "fr": ["teff", "tef", "grain éthiopien"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 193},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "spelt berries",
+      "category": "grain",
+      "per_100g": {
+        "calories": 338,
+        "protein_g": 14.6,
+        "carbs_g": 70.2,
+        "fat_g": 2.4,
+        "fiber_g": 10.7
+      },
+      "aliases": {
+        "en": ["spelt", "spelt berries", "dinkel wheat"],
+        "ja": ["スペルト小麦", "ディンケル小麦", "古代小麦"],
+        "ko": ["스펠트 밀", "스펠트", "고대 밀"],
+        "zh": ["斯佩尔特小麦", "古代小麦", "二粒小麦"],
+        "zh-tw": ["斯佩爾特小麥", "古代小麥", "二粒小麥"],
+        "es": ["espelta", "grano de espelta", "trigo dinkel"],
+        "fr": ["épeautre", "petit épeautre", "blé des Gaulois"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 174},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "kamut grain",
+      "category": "grain",
+      "per_100g": {
+        "calories": 337,
+        "protein_g": 14.7,
+        "carbs_g": 70.5,
+        "fat_g": 2.2,
+        "fiber_g": 11.0
+      },
+      "aliases": {
+        "en": ["kamut", "khorasan wheat", "qamaḥ"],
+        "ja": ["カムット", "ホラサン小麦", "古代小麦"],
+        "ko": ["카뮤트", "호라산 밀", "고대 밀"],
+        "zh": ["卡姆小麦", "呼罗珊小麦", "古代小麦"],
+        "zh-tw": ["卡姆小麥", "呼羅珊小麥", "古代小麥"],
+        "es": ["kamut", "trigo khorasan", "trigo oriental"],
+        "fr": ["kamut", "blé khorasan", "blé oriental"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 172},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "rye berries",
+      "category": "grain",
+      "per_100g": {
+        "calories": 338,
+        "protein_g": 14.8,
+        "carbs_g": 75.9,
+        "fat_g": 2.5,
+        "fiber_g": 15.1
+      },
+      "aliases": {
+        "en": ["rye berries", "rye grain", "whole rye"],
+        "ja": ["ライ麦粒", "ライ麦", "全粒ライ麦"],
+        "ko": ["호밀알", "호밀", "통호밀"],
+        "zh": ["黑麦粒", "黑麦", "全粒黑麦"],
+        "zh-tw": ["黑麥粒", "黑麥", "全粒黑麥"],
+        "es": ["granos de centeno", "bayas de centeno", "centeno integral"],
+        "fr": ["baies de seigle", "grains de seigle", "seigle entier"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 165},
+        {"unit": "tablespoon", "grams": 10},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "rice flour, white",
+      "category": "grain",
+      "per_100g": {
+        "calories": 366,
+        "protein_g": 6.0,
+        "carbs_g": 80.1,
+        "fat_g": 1.4,
+        "fiber_g": 2.4
+      },
+      "aliases": {
+        "en": ["white rice flour", "rice powder", "rice starch"],
+        "ja": ["米粉", "上新粉", "ライスフラワー"],
+        "ko": ["쌀가루", "백미 가루", "라이스 파우더"],
+        "zh": ["米粉", "粘米粉", "大米粉"],
+        "zh-tw": ["米粉", "粘米粉", "大米粉"],
+        "es": ["harina de arroz", "harina de arroz blanco"],
+        "fr": ["farine de riz", "farine de riz blanc"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 158},
+        {"unit": "tablespoon", "grams": 10},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "rice flour, brown",
+      "category": "grain",
+      "per_100g": {
+        "calories": 363,
+        "protein_g": 7.2,
+        "carbs_g": 76.5,
+        "fat_g": 2.8,
+        "fiber_g": 4.6
+      },
+      "aliases": {
+        "en": ["brown rice flour", "whole grain rice flour"],
+        "ja": ["玄米粉", "全粒米粉", "ブラウンライスフラワー"],
+        "ko": ["현미 가루", "통곡물 쌀가루", "현미 분말"],
+        "zh": ["糙米粉", "全谷米粉", "全麦米粉"],
+        "zh-tw": ["糙米粉", "全穀米粉", "全麥米粉"],
+        "es": ["harina de arroz integral", "harina de arroz moreno"],
+        "fr": ["farine de riz brun", "farine de riz complet"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 158},
+        {"unit": "tablespoon", "grams": 10},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "glutinous rice flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 370,
+        "protein_g": 6.3,
+        "carbs_g": 81.7,
+        "fat_g": 1.0,
+        "fiber_g": 2.3
+      },
+      "aliases": {
+        "en": ["glutinous rice flour", "sweet rice flour", "mochiko"],
+        "ja": ["もち粉", "白玉粉", "餅粉"],
+        "ko": ["찹쌀가루", "찰가루", "모치코"],
+        "zh": ["糯米粉", "江米粉", "粘米粉"],
+        "zh-tw": ["糯米粉", "江米粉", "粘米粉"],
+        "es": ["harina de arroz glutinoso", "harina de arroz dulce"],
+        "fr": ["farine de riz gluant", "farine de riz mochi"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 160},
+        {"unit": "tablespoon", "grams": 10},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "calrose rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 6.9,
+        "carbs_g": 79.0,
+        "fat_g": 0.6,
+        "fiber_g": 1.3
+      },
+      "aliases": {
+        "en": ["calrose rice", "medium grain rice", "california rice"],
+        "ja": ["カルローズ米", "中粒米", "カリフォルニア米"],
+        "ko": ["칼로스 쌀", "중립미", "캘리포니아 쌀"],
+        "zh": ["加州米", "中粒米", "卡罗莱斯米"],
+        "zh-tw": ["加州米", "中粒米", "卡羅萊斯米"],
+        "es": ["arroz calrose", "arroz de grano medio", "arroz californiano"],
+        "fr": ["riz calrose", "riz grain moyen", "riz californien"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 185},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "carnaroli rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 359,
+        "protein_g": 7.1,
+        "carbs_g": 79.3,
+        "fat_g": 0.7,
+        "fiber_g": 1.6
+      },
+      "aliases": {
+        "en": ["carnaroli rice", "italian risotto rice", "superfino rice"],
+        "ja": ["カルナローリ米", "イタリアリゾット米", "高級米"],
+        "ko": ["카르나롤리 쌀", "이탈리아 리조또 쌀"],
+        "zh": ["卡纳罗利米", "意大利烩饭米", "高级米"],
+        "zh-tw": ["卡納羅利米", "意大利燴飯米", "高級米"],
+        "es": ["arroz carnaroli", "arroz italiano premium"],
+        "fr": ["riz carnaroli", "riz à risotto premium"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 185},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "vialone nano rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 357,
+        "protein_g": 6.8,
+        "carbs_g": 79.1,
+        "fat_g": 0.6,
+        "fiber_g": 1.5
+      },
+      "aliases": {
+        "en": ["vialone nano rice", "vialone rice", "veneto risotto rice"],
+        "ja": ["ビアローネナノ米", "ベネト米", "リゾット米"],
+        "ko": ["비알로네 나노 쌀", "베네토 쌀"],
+        "zh": ["维亚洛内米", "威尼托米", "烩饭米"],
+        "zh-tw": ["維亞洛內米", "威尼托米", "燴飯米"],
+        "es": ["arroz vialone nano", "arroz de veneto"],
+        "fr": ["riz vialone nano", "riz vénitien"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 185},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "bomba rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 360,
+        "protein_g": 7.3,
+        "carbs_g": 78.8,
+        "fat_g": 0.7,
+        "fiber_g": 1.7
+      },
+      "aliases": {
+        "en": ["bomba rice", "paella rice", "spanish rice"],
+        "ja": ["ボンバ米", "パエリア米", "スペイン米"],
+        "ko": ["봄바 쌀", "파에야 쌀", "스페인 쌀"],
+        "zh": ["炸弹米", "海鲜饭米", "西班牙米"],
+        "zh-tw": ["炸彈米", "海鮮飯米", "西班牙米"],
+        "es": ["arroz bomba", "arroz para paella", "arroz valenciano"],
+        "fr": ["riz bomba", "riz à paella", "riz espagnol"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 185},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "wehani rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 363,
+        "protein_g": 7.8,
+        "carbs_g": 76.5,
+        "fat_g": 2.7,
+        "fiber_g": 3.6
+      },
+      "aliases": {
+        "en": ["wehani rice", "red wehani", "aromatic brown rice"],
+        "ja": ["ウェハニ米", "赤褐色米", "香り米"],
+        "ko": ["웨하니 쌀", "붉은 웨하니", "향미"],
+        "zh": ["威哈尼米", "红褐米", "香米"],
+        "zh-tw": ["威哈尼米", "紅褐米", "香米"],
+        "es": ["arroz wehani", "arroz rojo aromático"],
+        "fr": ["riz wehani", "riz rouge aromatique"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 180},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "bhutanese red rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 7.7,
+        "carbs_g": 76.8,
+        "fat_g": 2.6,
+        "fiber_g": 3.9
+      },
+      "aliases": {
+        "en": ["bhutanese red rice", "himalayan red rice", "bhutan rice"],
+        "ja": ["ブータン赤米", "ヒマラヤ赤米", "高地米"],
+        "ko": ["부탄 적미", "히말라야 적미", "부탄 쌀"],
+        "zh": ["不丹红米", "喜马拉雅红米", "高原米"],
+        "zh-tw": ["不丹紅米", "喜馬拉雅紅米", "高原米"],
+        "es": ["arroz rojo butanés", "arroz rojo del himalaya"],
+        "fr": ["riz rouge du bhoutan", "riz rouge himalayen"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 180},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "himalayan red rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 7.9,
+        "carbs_g": 76.5,
+        "fat_g": 2.8,
+        "fiber_g": 4.1
+      },
+      "aliases": {
+        "en": ["himalayan red rice", "nepalese red rice", "mountain rice"],
+        "ja": ["ヒマラヤ赤米", "ネパール赤米", "山岳米"],
+        "ko": ["히말라야 적미", "네팔 적미", "산악 쌀"],
+        "zh": ["喜马拉雅红米", "尼泊尔红米", "山地米"],
+        "zh-tw": ["喜馬拉雅紅米", "尼泊爾紅米", "山地米"],
+        "es": ["arroz rojo himalayo", "arroz rojo nepalí"],
+        "fr": ["riz rouge de l'himalaya", "riz rouge népalais"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 180},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "thai black rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 357,
+        "protein_g": 9.1,
+        "carbs_g": 75.3,
+        "fat_g": 3.6,
+        "fiber_g": 5.0
+      },
+      "aliases": {
+        "en": ["thai black rice", "thai forbidden rice", "riceberry"],
+        "ja": ["タイ黒米", "タイ紫黒米", "ライスベリー"],
+        "ko": ["타이 흑미", "타이 금지 쌀", "라이스베리"],
+        "zh": ["泰国黑米", "泰国紫米", "莓米"],
+        "zh-tw": ["泰國黑米", "泰國紫米", "莓米"],
+        "es": ["arroz negro tailandés", "arroz prohibido tailandés"],
+        "fr": ["riz noir thaïlandais", "riz interdit thaï"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 180},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "chinese black rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 355,
+        "protein_g": 8.7,
+        "carbs_g": 75.8,
+        "fat_g": 3.4,
+        "fiber_g": 4.7
+      },
+      "aliases": {
+        "en": ["chinese black rice", "emperor's rice", "forbidden rice"],
+        "ja": ["中国黒米", "皇帝米", "紫黒米"],
+        "ko": ["중국 흑미", "황제 쌀", "금지 쌀"],
+        "zh": ["中国黑米", "皇帝米", "贡米"],
+        "zh-tw": ["中國黑米", "皇帝米", "貢米"],
+        "es": ["arroz negro chino", "arroz del emperador"],
+        "fr": ["riz noir chinois", "riz de l'empereur"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 180},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "rosematta rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 361,
+        "protein_g": 7.2,
+        "carbs_g": 77.1,
+        "fat_g": 2.5,
+        "fiber_g": 3.5
+      },
+      "aliases": {
+        "en": ["rosematta rice", "kerala red rice", "palakkadan matta"],
+        "ja": ["ローズマッタ米", "ケララ赤米", "マッタ米"],
+        "ko": ["로즈마타 쌀", "케랄라 적미", "마타 쌀"],
+        "zh": ["玫瑰红米", "喀拉拉红米", "印度红米"],
+        "zh-tw": ["玫瑰紅米", "喀拉拉紅米", "印度紅米"],
+        "es": ["arroz rosematta", "arroz rojo de kerala"],
+        "fr": ["riz rosematta", "riz rouge du kerala"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 180},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "bamboo rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 7.5,
+        "carbs_g": 77.8,
+        "fat_g": 2.1,
+        "fiber_g": 3.2
+      },
+      "aliases": {
+        "en": ["bamboo rice", "mulayari rice", "bamboo seed rice"],
+        "ja": ["竹米", "バンブーライス", "竹の実米"],
+        "ko": ["대나무 쌀", "죽미", "대나무 씨 쌀"],
+        "zh": ["竹米", "竹筒饭米", "竹籽米"],
+        "zh-tw": ["竹米", "竹筒飯米", "竹籽米"],
+        "es": ["arroz de bambú", "arroz de semilla de bambú"],
+        "fr": ["riz de bambou", "riz de graine de bambou"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 180},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "kalijira rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 355,
+        "protein_g": 7.6,
+        "carbs_g": 77.5,
+        "fat_g": 0.8,
+        "fiber_g": 1.4
+      },
+      "aliases": {
+        "en": ["kalijira rice", "baby basmati", "gobindobhog rice"],
+        "ja": ["カリジラ米", "ベビーバスマティ", "小粒バスマティ"],
+        "ko": ["칼리지라 쌀", "베이비 바스마티", "소립 바스마티"],
+        "zh": ["迷你香米", "小粒巴斯马蒂", "卡利吉拉米"],
+        "zh-tw": ["迷你香米", "小粒巴斯馬蒂", "卡利吉拉米"],
+        "es": ["arroz kalijira", "basmati bebé", "arroz miniatura"],
+        "fr": ["riz kalijira", "bébé basmati", "riz miniature"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 185},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "texmati rice, white, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 7.4,
+        "carbs_g": 78.2,
+        "fat_g": 0.6,
+        "fiber_g": 1.3
+      },
+      "aliases": {
+        "en": ["texmati rice", "american basmati", "texas basmati"],
+        "ja": ["テックスマティ米", "アメリカンバスマティ", "テキサス米"],
+        "ko": ["텍스마티 쌀", "미국 바스마티", "텍사스 쌀"],
+        "zh": ["德克萨斯香米", "美国香米", "德州米"],
+        "zh-tw": ["德克薩斯香米", "美國香米", "德州米"],
+        "es": ["arroz texmati", "basmati americano", "arroz texano"],
+        "fr": ["riz texmati", "basmati américain", "riz texan"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 185},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "jasmine brown rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 367,
+        "protein_g": 7.6,
+        "carbs_g": 77.5,
+        "fat_g": 2.7,
+        "fiber_g": 3.4
+      },
+      "aliases": {
+        "en": ["brown jasmine rice", "whole grain jasmine rice"],
+        "ja": ["玄米ジャスミン", "全粒ジャスミン米"],
+        "ko": ["현미 재스민", "통곡물 재스민 쌀"],
+        "zh": ["糙米茉莉香米", "全谷茉莉米"],
+        "zh-tw": ["糙米茉莉香米", "全穀茉莉米"],
+        "es": ["arroz jazmín integral", "arroz jazmín moreno"],
+        "fr": ["riz jasmin brun", "riz jasmin complet"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 190},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "basmati brown rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 7.8,
+        "carbs_g": 77.2,
+        "fat_g": 2.8,
+        "fiber_g": 3.5
+      },
+      "aliases": {
+        "en": ["brown basmati rice", "whole grain basmati"],
+        "ja": ["玄米バスマティ", "全粒バスマティ"],
+        "ko": ["현미 바스마티", "통곡물 바스마티"],
+        "zh": ["糙米巴斯马蒂", "全谷巴斯马蒂"],
+        "zh-tw": ["糙米巴斯馬蒂", "全穀巴斯馬蒂"],
+        "es": ["arroz basmati integral", "basmati moreno"],
+        "fr": ["riz basmati brun", "basmati complet"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 190},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "rice bran",
+      "category": "grain",
+      "per_100g": {
+        "calories": 316,
+        "protein_g": 13.4,
+        "carbs_g": 49.7,
+        "fat_g": 20.9,
+        "fiber_g": 21.0
+      },
+      "aliases": {
+        "en": ["rice bran", "nuka", "rice polishings"],
+        "ja": ["米糠", "米ぬか", "ヌカ"],
+        "ko": ["쌀겨", "미강", "쌀 껍질"],
+        "zh": ["米糠", "米皮", "糠麸"],
+        "zh-tw": ["米糠", "米皮", "糠麩"],
+        "es": ["salvado de arroz", "afrecho de arroz"],
+        "fr": ["son de riz", "farine de riz"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 118},
+        {"unit": "tablespoon", "grams": 7},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "sweet rice flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 6.1,
+        "carbs_g": 81.9,
+        "fat_g": 0.9,
+        "fiber_g": 2.2
+      },
+      "aliases": {
+        "en": ["sweet rice flour", "mochiko flour", "shiratamako"],
+        "ja": ["白玉粉", "もち粉", "上用粉"],
+        "ko": ["찹쌀가루", "백옥분", "떡가루"],
+        "zh": ["糯米粉", "汤圆粉", "江米粉"],
+        "zh-tw": ["糯米粉", "湯圓粉", "江米粉"],
+        "es": ["harina de arroz dulce", "harina mochiko"],
+        "fr": ["farine de riz gluant", "farine mochiko"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 160},
+        {"unit": "tablespoon", "grams": 10},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "couscous, pearl, dry",
+      "category": "grain",
+      "per_100g": {
+        "calories": 374,
+        "protein_g": 12.5,
+        "carbs_g": 77.8,
+        "fat_g": 0.5,
+        "fiber_g": 4.8
+      },
+      "aliases": {
+        "en": ["pearl couscous", "israeli couscous", "ptitim"],
+        "ja": ["パールクスクス", "イスラエルクスクス", "プティティム"],
+        "ko": ["진주 쿠스쿠스", "이스라엘 쿠스쿠스", "프티팀"],
+        "zh": ["珍珠古斯米", "以色列蒸粗麦粉", "大粒蒸麦"],
+        "zh-tw": ["珍珠古斯米", "以色列蒸粗麥粉", "大粒蒸麥"],
+        "es": ["cuscús perlado", "cuscús israelí", "ptitim"],
+        "fr": ["couscous perlé", "couscous israélien", "ptitim"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 180},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "whole wheat couscous, dry",
+      "category": "grain",
+      "per_100g": {
+        "calories": 353,
+        "protein_g": 13.2,
+        "carbs_g": 72.4,
+        "fat_g": 1.8,
+        "fiber_g": 8.7
+      },
+      "aliases": {
+        "en": ["whole wheat couscous", "brown couscous", "wholegrain couscous"],
+        "ja": ["全粒粉クスクス", "玄麦クスクス", "ホールグレインクスクス"],
+        "ko": ["통밀 쿠스쿠스", "전곡물 쿠스쿠스", "현미 쿠스쿠스"],
+        "zh": ["全麦古斯米", "全谷蒸粗麦粉", "糙麦蒸粉"],
+        "zh-tw": ["全麥古斯米", "全穀蒸粗麥粉", "糙麥蒸粉"],
+        "es": ["cuscús integral", "cuscús de trigo entero"],
+        "fr": ["couscous complet", "couscous de blé entier"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 175},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "tricolor quinoa, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 369,
+        "protein_g": 14.0,
+        "carbs_g": 64.4,
+        "fat_g": 6.2,
+        "fiber_g": 7.1
+      },
+      "aliases": {
+        "en": ["tricolor quinoa", "rainbow quinoa", "mixed quinoa"],
+        "ja": ["トリコロールキヌア", "レインボーキヌア", "ミックスキヌア"],
+        "ko": ["삼색 퀴노아", "무지개 퀴노아", "혼합 퀴노아"],
+        "zh": ["三色藜麦", "彩虹藜麦", "混合藜麦"],
+        "zh-tw": ["三色藜麥", "彩虹藜麥", "混合藜麥"],
+        "es": ["quinua tricolor", "quinoa arcoíris", "quinoa mixta"],
+        "fr": ["quinoa tricolore", "quinoa arc-en-ciel", "quinoa mélangé"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 170},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "quinoa flakes",
+      "category": "grain",
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 13.5,
+        "carbs_g": 65.8,
+        "fat_g": 5.8,
+        "fiber_g": 6.5
+      },
+      "aliases": {
+        "en": ["quinoa flakes", "rolled quinoa", "flaked quinoa"],
+        "ja": ["キヌアフレーク", "ロールドキヌア", "押しキヌア"],
+        "ko": ["퀴노아 플레이크", "압착 퀴노아", "롤드 퀴노아"],
+        "zh": ["藜麦片", "压藜麦", "藜麦薄片"],
+        "zh-tw": ["藜麥片", "壓藜麥", "藜麥薄片"],
+        "es": ["hojuelas de quinua", "quinoa arrollada"],
+        "fr": ["flocons de quinoa", "quinoa roulé"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 48},
+        {"unit": "tablespoon", "grams": 3},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "quinoa flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 13.8,
+        "carbs_g": 65.2,
+        "fat_g": 6.0,
+        "fiber_g": 6.8
+      },
+      "aliases": {
+        "en": ["quinoa flour", "ground quinoa", "quinoa powder"],
+        "ja": ["キヌア粉", "キヌアフラワー", "粉末キヌア"],
+        "ko": ["퀴노아 가루", "퀴노아 분말", "퀴노아 파우더"],
+        "zh": ["藜麦粉", "藜麦面粉", "奎奴亚粉"],
+        "zh-tw": ["藜麥粉", "藜麥麵粉", "奎奴亞粉"],
+        "es": ["harina de quinua", "harina de quinoa"],
+        "fr": ["farine de quinoa", "poudre de quinoa"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 112},
+        {"unit": "tablespoon", "grams": 7},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "oat groats",
+      "category": "grain",
+      "per_100g": {
+        "calories": 379,
+        "protein_g": 16.9,
+        "carbs_g": 66.3,
+        "fat_g": 6.9,
+        "fiber_g": 10.6
+      },
+      "aliases": {
+        "en": ["oat groats", "whole oats", "oat kernels"],
+        "ja": ["オート麦粒", "全粒オート麦", "カットオート麦"],
+        "ko": ["귀리 알곡", "통귀리", "귀리 낟알"],
+        "zh": ["燕麦粒", "全燕麦", "燕麦仁"],
+        "zh-tw": ["燕麥粒", "全燕麥", "燕麥仁"],
+        "es": ["granos de avena", "avena entera", "kernels de avena"],
+        "fr": ["grains d'avoine", "avoine entière", "gruau d'avoine"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 184},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "oat bran",
+      "category": "grain",
+      "per_100g": {
+        "calories": 246,
+        "protein_g": 17.3,
+        "carbs_g": 66.2,
+        "fat_g": 7.0,
+        "fiber_g": 15.4
+      },
+      "aliases": {
+        "en": ["oat bran", "oat fiber", "oat mill run"],
+        "ja": ["オートブラン", "えん麦ふすま", "オート麦外皮"],
+        "ko": ["귀리 겨", "오트 브랜", "귀리 섬유"],
+        "zh": ["燕麦麸", "燕麦皮", "麦麸"],
+        "zh-tw": ["燕麥麩", "燕麥皮", "麥麩"],
+        "es": ["salvado de avena", "fibra de avena"],
+        "fr": ["son d'avoine", "fibre d'avoine"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 94},
+        {"unit": "tablespoon", "grams": 6},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "oat flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 404,
+        "protein_g": 14.7,
+        "carbs_g": 65.7,
+        "fat_g": 9.1,
+        "fiber_g": 6.5
+      },
+      "aliases": {
+        "en": ["oat flour", "ground oats", "oat powder"],
+        "ja": ["オート麦粉", "オートフラワー", "オーツ粉"],
+        "ko": ["귀리 가루", "오트 밀가루", "귀리 분말"],
+        "zh": ["燕麦粉", "燕麦面粉", "燕麦粉末"],
+        "zh-tw": ["燕麥粉", "燕麥麵粉", "燕麥粉末"],
+        "es": ["harina de avena", "avena molida"],
+        "fr": ["farine d'avoine", "avoine moulue"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 120},
+        {"unit": "tablespoon", "grams": 8},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "barley flakes",
+      "category": "grain",
+      "per_100g": {
+        "calories": 345,
+        "protein_g": 10.5,
+        "carbs_g": 74.5,
+        "fat_g": 2.1,
+        "fiber_g": 14.8
+      },
+      "aliases": {
+        "en": ["barley flakes", "rolled barley", "flaked barley"],
+        "ja": ["押し麦フレーク", "ロールド麦", "麦フレーク"],
+        "ko": ["보리 플레이크", "압착 보리", "롤드 보리"],
+        "zh": ["压麦片", "大麦片", "碾压大麦"],
+        "zh-tw": ["壓麥片", "大麥片", "碾壓大麥"],
+        "es": ["hojuelas de cebada", "cebada arrollada"],
+        "fr": ["flocons d'orge", "orge roulé"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 100},
+        {"unit": "tablespoon", "grams": 6},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "barley flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 345,
+        "protein_g": 10.5,
+        "carbs_g": 74.5,
+        "fat_g": 1.6,
+        "fiber_g": 10.1
+      },
+      "aliases": {
+        "en": ["barley flour", "ground barley", "barley powder"],
+        "ja": ["大麦粉", "バーレイフラワー", "麦粉"],
+        "ko": ["보리 가루", "보리 분말", "대맥분"],
+        "zh": ["大麦粉", "麦粉", "大麦面粉"],
+        "zh-tw": ["大麥粉", "麥粉", "大麥麵粉"],
+        "es": ["harina de cebada", "cebada molida"],
+        "fr": ["farine d'orge", "orge moulu"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 148},
+        {"unit": "tablespoon", "grams": 9},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "wheat germ",
+      "category": "grain",
+      "per_100g": {
+        "calories": 360,
+        "protein_g": 23.2,
+        "carbs_g": 51.8,
+        "fat_g": 9.7,
+        "fiber_g": 13.2
+      },
+      "aliases": {
+        "en": ["wheat germ", "wheat embryo", "germ of wheat"],
+        "ja": ["小麦胚芽", "ウィートジャーム", "麦芽"],
+        "ko": ["밀 배아", "밀 눈", "위트 검"],
+        "zh": ["小麦胚芽", "麦胚", "麦芽"],
+        "zh-tw": ["小麥胚芽", "麥胚", "麥芽"],
+        "es": ["germen de trigo", "embrión de trigo"],
+        "fr": ["germe de blé", "embryon de blé"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 115},
+        {"unit": "tablespoon", "grams": 7},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "wheat bran",
+      "category": "grain",
+      "per_100g": {
+        "calories": 216,
+        "protein_g": 15.6,
+        "carbs_g": 64.5,
+        "fat_g": 4.3,
+        "fiber_g": 42.8
+      },
+      "aliases": {
+        "en": ["wheat bran", "miller's bran", "wheat fiber"],
+        "ja": ["小麦ふすま", "ブラン", "小麦外皮"],
+        "ko": ["밀 겨", "밀기울", "밀 섬유"],
+        "zh": ["小麦麸", "麦麸", "麦皮"],
+        "zh-tw": ["小麥麩", "麥麩", "麥皮"],
+        "es": ["salvado de trigo", "fibra de trigo", "afrecho"],
+        "fr": ["son de blé", "fibre de blé"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 58},
+        {"unit": "tablespoon", "grams": 4},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "semolina, durum wheat",
+      "category": "grain",
+      "per_100g": {
+        "calories": 360,
+        "protein_g": 12.7,
+        "carbs_g": 72.8,
+        "fat_g": 1.1,
+        "fiber_g": 3.9
+      },
+      "aliases": {
+        "en": ["semolina", "durum wheat semolina", "pasta flour"],
+        "ja": ["セモリナ粉", "デュラム小麦セモリナ", "パスタ粉"],
+        "ko": ["세몰리나", "듀럼 밀가루", "파스타 가루"],
+        "zh": ["粗麦粉", "硬粒小麦粉", "意面粉"],
+        "zh-tw": ["粗麥粉", "硬粒小麥粉", "意麵粉"],
+        "es": ["sémola", "sémola de trigo duro", "harina para pasta"],
+        "fr": ["semoule", "semoule de blé dur", "farine à pâtes"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 167},
+        {"unit": "tablespoon", "grams": 10},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "polenta, dry",
+      "category": "grain",
+      "per_100g": {
+        "calories": 362,
+        "protein_g": 8.1,
+        "carbs_g": 79.8,
+        "fat_g": 2.7,
+        "fiber_g": 4.6
+      },
+      "aliases": {
+        "en": ["polenta", "cornmeal", "corn grits", "maize meal"],
+        "ja": ["ポレンタ", "コーンミール", "トウモロコシ粉"],
+        "ko": ["폴렌타", "옥수수 가루", "콘밀"],
+        "zh": ["玉米粉", "玉米糊", "粗玉米粉"],
+        "zh-tw": ["玉米粉", "玉米糊", "粗玉米粉"],
+        "es": ["polenta", "harina de maíz", "sémola de maíz"],
+        "fr": ["polenta", "farine de maïs", "semoule de maïs"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 157},
+        {"unit": "tablespoon", "grams": 10},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "corn grits, white",
+      "category": "grain",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 8.6,
+        "carbs_g": 79.2,
+        "fat_g": 1.8,
+        "fiber_g": 3.9
+      },
+      "aliases": {
+        "en": ["white grits", "hominy grits", "white corn grits"],
+        "ja": ["ホワイトグリッツ", "白とうもろこし粉", "ホミニーグリッツ"],
+        "ko": ["화이트 그릿츠", "흰 옥수수 가루", "호미니 그릿츠"],
+        "zh": ["白玉米糁", "白玉米粗粉", "白玉米粒"],
+        "zh-tw": ["白玉米糝", "白玉米粗粉", "白玉米粒"],
+        "es": ["grits blancos", "sémola de maíz blanco", "hominy"],
+        "fr": ["gruau de maïs blanc", "semoule de maïs blanc"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 156},
+        {"unit": "tablespoon", "grams": 10},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "hominy, dried",
+      "category": "grain",
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 7.9,
+        "carbs_g": 78.8,
+        "fat_g": 1.5,
+        "fiber_g": 5.1
+      },
+      "aliases": {
+        "en": ["hominy", "nixtamalized corn", "pozole corn"],
+        "ja": ["ホミニー", "ポゾレ用とうもろこし", "アルカリ処理とうもろこし"],
+        "ko": ["호미니", "포졸레 옥수수", "니스타말화 옥수수"],
+        "zh": ["碱化玉米", "波左勒玉米", "碱处理玉米"],
+        "zh-tw": ["鹼化玉米", "波左勒玉米", "鹼處理玉米"],
+        "es": ["maíz nixtamalizado", "maíz pozolero", "mote"],
+        "fr": ["maïs nixtamalisé", "maïs hominy", "maïs pozole"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 165},
+        {"unit": "tablespoon", "grams": 10},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "cornmeal, yellow",
+      "category": "grain",
+      "per_100g": {
+        "calories": 362,
+        "protein_g": 8.1,
+        "carbs_g": 76.9,
+        "fat_g": 3.6,
+        "fiber_g": 7.3
+      },
+      "aliases": {
+        "en": ["yellow cornmeal", "yellow corn flour", "maize flour"],
+        "ja": ["イエローコーンミール", "黄色とうもろこし粉", "イエローメイズ粉"],
+        "ko": ["옐로우 콘밀", "노란 옥수수 가루", "황색 옥수수분"],
+        "zh": ["黄玉米粉", "黄玉米面", "黄色玉米粉"],
+        "zh-tw": ["黃玉米粉", "黃玉米麵", "黃色玉米粉"],
+        "es": ["harina de maíz amarillo", "polenta amarilla"],
+        "fr": ["farine de maïs jaune", "semoule de maïs jaune"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 138},
+        {"unit": "tablespoon", "grams": 9},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "masa harina",
+      "category": "grain",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 9.6,
+        "carbs_g": 73.7,
+        "fat_g": 3.8,
+        "fiber_g": 6.5
+      },
+      "aliases": {
+        "en": ["masa harina", "corn masa flour", "tortilla flour"],
+        "ja": ["マサハリナ", "トルティーヤ粉", "メキシコとうもろこし粉"],
+        "ko": ["마사 하리나", "토르티야 가루", "옥수수 반죽 가루"],
+        "zh": ["玉米团粉", "玉米面团粉", "墨西哥玉米粉"],
+        "zh-tw": ["玉米團粉", "玉米麵團粉", "墨西哥玉米粉"],
+        "es": ["masa harina", "harina de maíz nixtamalizado", "harina para tortillas"],
+        "fr": ["farine masa", "farine de maïs nixtamalisé", "farine à tortilla"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 114},
+        {"unit": "tablespoon", "grams": 7},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "millet flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 10.8,
+        "carbs_g": 72.9,
+        "fat_g": 4.0,
+        "fiber_g": 8.2
+      },
+      "aliases": {
+        "en": ["millet flour", "ground millet", "bajra flour"],
+        "ja": ["キビ粉", "アワ粉", "ミレットフラワー"],
+        "ko": ["기장 가루", "조 가루", "밀레트 가루"],
+        "zh": ["小米粉", "粟米粉", "谷子粉"],
+        "zh-tw": ["小米粉", "粟米粉", "穀子粉"],
+        "es": ["harina de mijo", "mijo molido"],
+        "fr": ["farine de millet", "millet moulu"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 119},
+        {"unit": "tablespoon", "grams": 7},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "sorghum flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 339,
+        "protein_g": 10.6,
+        "carbs_g": 74.6,
+        "fat_g": 3.5,
+        "fiber_g": 6.7
+      },
+      "aliases": {
+        "en": ["sorghum flour", "jowar flour", "milo flour"],
+        "ja": ["ソルガム粉", "モロコシ粉", "コーリャン粉"],
+        "ko": ["수수 가루", "소르검 가루", "조와 가루"],
+        "zh": ["高粱粉", "蜀黍粉", "芦粟粉"],
+        "zh-tw": ["高粱粉", "蜀黍粉", "蘆粟粉"],
+        "es": ["harina de sorgo", "harina de jowar"],
+        "fr": ["farine de sorgho", "farine de millet indien"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 136},
+        {"unit": "tablespoon", "grams": 9},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "buckwheat flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 335,
+        "protein_g": 12.6,
+        "carbs_g": 70.6,
+        "fat_g": 3.1,
+        "fiber_g": 10.0
+      },
+      "aliases": {
+        "en": ["buckwheat flour", "soba flour", "dark buckwheat flour"],
+        "ja": ["そば粉", "蕎麦粉", "バックウィート粉"],
+        "ko": ["메밀가루", "소바 가루", "메밀 분말"],
+        "zh": ["荞麦粉", "荞面", "荞麦面粉"],
+        "zh-tw": ["蕎麥粉", "蕎麵", "蕎麥麵粉"],
+        "es": ["harina de trigo sarraceno", "harina de alforfón"],
+        "fr": ["farine de sarrasin", "farine de blé noir"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 120},
+        {"unit": "tablespoon", "grams": 8},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "amaranth flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.6,
+        "carbs_g": 65.3,
+        "fat_g": 7.0,
+        "fiber_g": 6.7
+      },
+      "aliases": {
+        "en": ["amaranth flour", "ground amaranth", "kiwicha flour"],
+        "ja": ["アマランサス粉", "センニンコク粉", "アマランス粉"],
+        "ko": ["아마란스 가루", "아마란스 분말", "키위차 가루"],
+        "zh": ["苋菜籽粉", "苋米粉", "红谷粉"],
+        "zh-tw": ["莧菜籽粉", "莧米粉", "紅穀粉"],
+        "es": ["harina de amaranto", "harina de kiwicha"],
+        "fr": ["farine d'amarante", "amarante moulue"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 121},
+        {"unit": "tablespoon", "grams": 8},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "teff flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 367,
+        "protein_g": 13.3,
+        "carbs_g": 73.1,
+        "fat_g": 2.4,
+        "fiber_g": 8.0
+      },
+      "aliases": {
+        "en": ["teff flour", "tef flour", "injera flour"],
+        "ja": ["テフ粉", "エチオピア粉", "インジェラ粉"],
+        "ko": ["테프 가루", "에티오피아 가루", "인제라 가루"],
+        "zh": ["苔麸粉", "画眉草粉", "埃塞俄比亚面粉"],
+        "zh-tw": ["苔麩粉", "畫眉草粉", "埃塞俄比亞麵粉"],
+        "es": ["harina de teff", "harina etíope"],
+        "fr": ["farine de teff", "farine éthiopienne"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 121},
+        {"unit": "tablespoon", "grams": 8},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "spelt flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 338,
+        "protein_g": 14.6,
+        "carbs_g": 70.2,
+        "fat_g": 2.4,
+        "fiber_g": 10.7
+      },
+      "aliases": {
+        "en": ["spelt flour", "dinkel flour", "ancient wheat flour"],
+        "ja": ["スペルト小麦粉", "ディンケル粉", "古代小麦粉"],
+        "ko": ["스펠트 밀가루", "고대 밀가루", "스펠트 분말"],
+        "zh": ["斯佩尔特面粉", "古代小麦粉", "二粒小麦粉"],
+        "zh-tw": ["斯佩爾特麵粉", "古代小麥粉", "二粒小麥粉"],
+        "es": ["harina de espelta", "harina dinkel"],
+        "fr": ["farine d'épeautre", "farine de petit épeautre"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 120},
+        {"unit": "tablespoon", "grams": 8},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "rye flour, medium",
+      "category": "grain",
+      "per_100g": {
+        "calories": 325,
+        "protein_g": 10.3,
+        "carbs_g": 75.9,
+        "fat_g": 1.6,
+        "fiber_g": 14.3
+      },
+      "aliases": {
+        "en": ["rye flour", "medium rye flour", "pumpernickel flour"],
+        "ja": ["ライ麦粉", "中挽きライ麦粉", "パンパーニッケル粉"],
+        "ko": ["호밀가루", "중간 호밀가루", "펌퍼니켈 가루"],
+        "zh": ["黑麦粉", "中筋黑麦粉", "裸麦粉"],
+        "zh-tw": ["黑麥粉", "中筋黑麥粉", "裸麥粉"],
+        "es": ["harina de centeno", "harina de centeno media"],
+        "fr": ["farine de seigle", "farine de seigle moyenne"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 102},
+        {"unit": "tablespoon", "grams": 6},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "kamut flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 337,
+        "protein_g": 14.7,
+        "carbs_g": 70.5,
+        "fat_g": 2.2,
+        "fiber_g": 11.0
+      },
+      "aliases": {
+        "en": ["kamut flour", "khorasan wheat flour", "ancient grain flour"],
+        "ja": ["カムット粉", "ホラサン小麦粉", "古代小麦粉"],
+        "ko": ["카뮤트 가루", "호라산 밀가루", "고대 곡물 가루"],
+        "zh": ["卡姆小麦粉", "呼罗珊小麦粉", "古代麦粉"],
+        "zh-tw": ["卡姆小麥粉", "呼羅珊小麥粉", "古代麥粉"],
+        "es": ["harina de kamut", "harina de trigo khorasan"],
+        "fr": ["farine de kamut", "farine de blé khorasan"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 120},
+        {"unit": "tablespoon", "grams": 8},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "forbidden rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 8.9,
+        "carbs_g": 75.6,
+        "fat_g": 3.5,
+        "fiber_g": 4.9
+      },
+      "aliases": {
+        "en": ["forbidden rice", "black forbidden rice", "chinese forbidden rice"],
+        "ja": ["禁断米", "紫黒米", "皇帝禁止米"],
+        "ko": ["금지된 쌀", "검은 금지 쌀", "황제 쌀"],
+        "zh": ["禁米", "贡米", "黑禁米"],
+        "zh-tw": ["禁米", "貢米", "黑禁米"],
+        "es": ["arroz prohibido negro", "arroz imperial"],
+        "fr": ["riz interdit noir", "riz impérial"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 180},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "egyptian rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 6.7,
+        "carbs_g": 79.5,
+        "fat_g": 0.5,
+        "fiber_g": 1.2
+      },
+      "aliases": {
+        "en": ["egyptian rice", "giza rice", "middle eastern short grain"],
+        "ja": ["エジプト米", "ギザ米", "中東短粒米"],
+        "ko": ["이집트 쌀", "기자 쌀", "중동 단립미"],
+        "zh": ["埃及米", "吉萨米", "中东短粒米"],
+        "zh-tw": ["埃及米", "吉薩米", "中東短粒米"],
+        "es": ["arroz egipcio", "arroz giza", "arroz de oriente medio"],
+        "fr": ["riz égyptien", "riz giza", "riz moyen-oriental"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 185},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "congee rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 7.1,
+        "carbs_g": 79.9,
+        "fat_g": 0.7,
+        "fiber_g": 1.3
+      },
+      "aliases": {
+        "en": ["congee rice", "porridge rice", "jook rice"],
+        "ja": ["お粥用米", "粥米", "ジューク米"],
+        "ko": ["죽 쌀", "미음 쌀", "주크 쌀"],
+        "zh": ["粥米", "稀饭米", "煮粥米"],
+        "zh-tw": ["粥米", "稀飯米", "煮粥米"],
+        "es": ["arroz para congee", "arroz para papilla"],
+        "fr": ["riz à congee", "riz à bouillie"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 185},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "golden rice bran",
+      "category": "grain",
+      "per_100g": {
+        "calories": 316,
+        "protein_g": 13.4,
+        "carbs_g": 49.7,
+        "fat_g": 20.9,
+        "fiber_g": 21.0
+      },
+      "aliases": {
+        "en": ["golden rice bran", "stabilized rice bran", "toasted rice bran"],
+        "ja": ["ゴールデン米糠", "安定化米ぬか", "焙煎米糠"],
+        "ko": ["골든 쌀겨", "안정화 미강", "볶은 쌀겨"],
+        "zh": ["金色米糠", "稳定米糠", "烤米糠"],
+        "zh-tw": ["金色米糠", "穩定米糠", "烤米糠"],
+        "es": ["salvado de arroz dorado", "salvado de arroz estabilizado"],
+        "fr": ["son de riz doré", "son de riz stabilisé"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 118},
+        {"unit": "tablespoon", "grams": 7},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "medium-grain white rice, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 6.9,
+        "carbs_g": 79.0,
+        "fat_g": 0.6,
+        "fiber_g": 1.3
+      },
+      "aliases": {
+        "en": ["medium grain rice", "medium grain white rice", "calrose-type rice"],
+        "ja": ["中粒米", "中粒種", "ミディアムグレイン米"],
+        "ko": ["중립종", "중립미", "중간쌀"],
+        "zh": ["中粒米", "中米", "中等米"],
+        "zh-tw": ["中粒米", "中米", "中等米"],
+        "es": ["arroz de grano medio", "arroz blanco medio"],
+        "fr": ["riz grain moyen", "riz blanc moyen"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 185},
+        {"unit": "tablespoon", "grams": 12},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "mixed grain blend",
+      "category": "grain",
+      "per_100g": {
+        "calories": 355,
+        "protein_g": 11.5,
+        "carbs_g": 70.8,
+        "fat_g": 3.2,
+        "fiber_g": 9.5
+      },
+      "aliases": {
+        "en": ["mixed grains", "multi-grain blend", "grain medley"],
+        "ja": ["雑穀米", "十六穀米", "ミックスグレイン"],
+        "ko": ["잡곡", "혼합 곡물", "멀티 그레인"],
+        "zh": ["杂粮", "混合谷物", "五谷米"],
+        "zh-tw": ["雜糧", "混合穀物", "五穀米"],
+        "es": ["granos mixtos", "mezcla de cereales", "multigrano"],
+        "fr": ["mélange de grains", "céréales mélangées", "multigrain"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 180},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "red quinoa, uncooked",
+      "category": "grain",
+      "per_100g": {
+        "calories": 370,
+        "protein_g": 13.8,
+        "carbs_g": 64.8,
+        "fat_g": 6.3,
+        "fiber_g": 7.2
+      },
+      "aliases": {
+        "en": ["red quinoa", "red keen-wa"],
+        "ja": ["赤キヌア", "レッドキヌア"],
+        "ko": ["붉은 퀴노아", "적 퀴노아"],
+        "zh": ["红藜麦", "红色藜麦"],
+        "zh-tw": ["紅藜麥", "紅色藜麥"],
+        "es": ["quinua roja", "quinoa roja"],
+        "fr": ["quinoa rouge"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 170},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "roasted buckwheat groats",
+      "category": "grain",
+      "per_100g": {
+        "calories": 346,
+        "protein_g": 13.0,
+        "carbs_g": 71.9,
+        "fat_g": 3.3,
+        "fiber_g": 9.8
+      },
+      "aliases": {
+        "en": ["roasted buckwheat", "toasted kasha", "roasted buckwheat groats"],
+        "ja": ["炒り蕎麦の実", "ローストそば米", "焙煎カーシャ"],
+        "ko": ["볶은 메밀", "구운 카샤", "볶은 메밀 알곡"],
+        "zh": ["烤荞麦", "炒荞麦仁", "烘焙荞麦"],
+        "zh-tw": ["烤蕎麥", "炒蕎麥仁", "烘焙蕎麥"],
+        "es": ["trigo sarraceno tostado", "kasha tostado"],
+        "fr": ["sarrasin grillé", "kasha grillé"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 170},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "steel-cut wheat",
+      "category": "grain",
+      "per_100g": {
+        "calories": 329,
+        "protein_g": 13.2,
+        "carbs_g": 71.2,
+        "fat_g": 2.3,
+        "fiber_g": 12.0
+      },
+      "aliases": {
+        "en": ["steel cut wheat", "cut wheat", "chopped wheat"],
+        "ja": ["スティールカット小麦", "刻み小麦", "カット小麦"],
+        "ko": ["스틸컷 밀", "절단 밀", "자른 밀"],
+        "zh": ["切粒小麦", "切割小麦", "钢切小麦"],
+        "zh-tw": ["切粒小麥", "切割小麥", "鋼切小麥"],
+        "es": ["trigo cortado en acero", "trigo picado"],
+        "fr": ["blé coupé", "blé haché"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 170},
+        {"unit": "tablespoon", "grams": 11},
+        {"unit": "gram", "grams": 1}
+      ]
+    }
+  ]
+}

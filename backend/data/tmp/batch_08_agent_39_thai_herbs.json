@@ -1,0 +1,1170 @@
+[
+  {
+    "canonical_name": "lemongrass",
+    "category": "herb",
+    "aliases": ["ตะไคร้", "takrai", "ta khrai", "sereh", "citronella"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 99,
+        "protein_g": 1.8,
+        "carbs_g": 25.3,
+        "fat_g": 0.5,
+        "fiber_g": 0.0,
+        "sodium_mg": 6
+      }
+    },
+    "common_units": ["stalk", "tablespoon", "teaspoon", "cup", "gram"]
+  },
+  {
+    "canonical_name": "galangal",
+    "category": "herb",
+    "aliases": ["ข่า", "kha", "khaa", "Thai ginger", "blue ginger", "Siamese ginger"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 71,
+        "protein_g": 1.0,
+        "carbs_g": 15.0,
+        "fat_g": 0.6,
+        "fiber_g": 2.1,
+        "sodium_mg": 15
+      }
+    },
+    "common_units": ["slice", "piece", "tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "kaffir lime leaves",
+    "category": "herb",
+    "aliases": ["ใบมะกรูด", "bai makrut", "makrut lime leaves", "Thai lime leaves"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 0.8,
+        "carbs_g": 8.5,
+        "fat_g": 0.2,
+        "fiber_g": 2.0,
+        "sodium_mg": 3
+      }
+    },
+    "common_units": ["leaf", "leaves", "gram"]
+  },
+  {
+    "canonical_name": "kaffir lime",
+    "category": "herb",
+    "aliases": ["มะกรูด", "makrut", "makrut lime", "Thai lime"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 30,
+        "protein_g": 0.7,
+        "carbs_g": 10.5,
+        "fat_g": 0.2,
+        "fiber_g": 2.8,
+        "sodium_mg": 2
+      }
+    },
+    "common_units": ["whole", "piece", "zest", "tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "Thai basil",
+    "category": "herb",
+    "aliases": ["โหระพา", "horapha", "sweet basil", "Asian basil"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 3.2,
+        "carbs_g": 2.7,
+        "fat_g": 0.6,
+        "fiber_g": 1.6,
+        "sodium_mg": 4
+      }
+    },
+    "common_units": ["leaf", "leaves", "cup", "bunch", "gram"]
+  },
+  {
+    "canonical_name": "holy basil",
+    "category": "herb",
+    "aliases": ["กะเพรา", "kaphrao", "ka phrao", "tulsi", "hot basil"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 3.2,
+        "carbs_g": 2.7,
+        "fat_g": 0.6,
+        "fiber_g": 1.6,
+        "sodium_mg": 4
+      }
+    },
+    "common_units": ["leaf", "leaves", "cup", "bunch", "gram"]
+  },
+  {
+    "canonical_name": "lemon basil",
+    "category": "herb",
+    "aliases": ["แมงลัก", "maenglak", "maeng lak"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 3.2,
+        "carbs_g": 2.7,
+        "fat_g": 0.6,
+        "fiber_g": 1.6,
+        "sodium_mg": 4
+      }
+    },
+    "common_units": ["leaf", "leaves", "cup", "bunch", "gram"]
+  },
+  {
+    "canonical_name": "Thai bird's eye chili",
+    "category": "spice",
+    "aliases": ["พริกขี้หนู", "phrik khi nu", "prik kee noo", "bird chili", "Thai chili"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 2.0,
+        "carbs_g": 9.5,
+        "fat_g": 0.2,
+        "fiber_g": 1.5,
+        "sodium_mg": 7
+      }
+    },
+    "common_units": ["piece", "chili", "tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "large Thai chili",
+    "category": "spice",
+    "aliases": ["พริกชี้ฟ้า", "phrik chi fa", "prik chee fah", "cayenne pepper", "finger chili"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 2.0,
+        "carbs_g": 9.5,
+        "fat_g": 0.2,
+        "fiber_g": 1.5,
+        "sodium_mg": 7
+      }
+    },
+    "common_units": ["piece", "chili", "tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "red curry paste",
+    "category": "paste",
+    "aliases": ["พริกแกงเผ็ด", "phrik kaeng phet", "nam phrik kaeng phet", "Thai red curry paste"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 145,
+        "protein_g": 3.5,
+        "carbs_g": 18.0,
+        "fat_g": 7.0,
+        "fiber_g": 4.5,
+        "sodium_mg": 1850
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram"]
+  },
+  {
+    "canonical_name": "green curry paste",
+    "category": "paste",
+    "aliases": ["พริกแกงเขียวหวาน", "phrik kaeng khiao wan", "nam phrik kaeng khiao wan", "Thai green curry paste"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 140,
+        "protein_g": 3.2,
+        "carbs_g": 17.5,
+        "fat_g": 6.8,
+        "fiber_g": 4.2,
+        "sodium_mg": 1920
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram"]
+  },
+  {
+    "canonical_name": "yellow curry paste",
+    "category": "paste",
+    "aliases": ["พริกแกงเหลือง", "phrik kaeng lueang", "nam phrik kaeng lueang", "Thai yellow curry paste"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 135,
+        "protein_g": 3.0,
+        "carbs_g": 16.8,
+        "fat_g": 6.5,
+        "fiber_g": 3.8,
+        "sodium_mg": 1780
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram"]
+  },
+  {
+    "canonical_name": "massaman curry paste",
+    "category": "paste",
+    "aliases": ["พริกแกงมัสมั่น", "phrik kaeng matsaman", "nam phrik kaeng matsaman", "Muslim curry paste"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 150,
+        "protein_g": 3.8,
+        "carbs_g": 19.0,
+        "fat_g": 7.2,
+        "fiber_g": 4.0,
+        "sodium_mg": 1650
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram"]
+  },
+  {
+    "canonical_name": "shrimp paste",
+    "category": "paste",
+    "aliases": ["กะปิ", "kapi", "ka pi", "belacan", "terasi"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 210,
+        "protein_g": 38.0,
+        "carbs_g": 8.5,
+        "fat_g": 2.5,
+        "fiber_g": 0.0,
+        "sodium_mg": 8500
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "palm sugar",
+    "category": "sweetener",
+    "aliases": ["น้ำตาลปึก", "nam tan puek", "namtan peep", "coconut sugar", "jaggery"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 0.5,
+        "carbs_g": 96.5,
+        "fat_g": 0.0,
+        "fiber_g": 0.0,
+        "sodium_mg": 45
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram"]
+  },
+  {
+    "canonical_name": "coriander root",
+    "category": "herb",
+    "aliases": ["รากผักชี", "rak phak chi", "cilantro root", "Chinese parsley root"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 2.1,
+        "carbs_g": 3.7,
+        "fat_g": 0.5,
+        "fiber_g": 2.8,
+        "sodium_mg": 46
+      }
+    },
+    "common_units": ["piece", "root", "tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "Thai coriander",
+    "category": "herb",
+    "aliases": ["ผักชี", "phak chi", "pak chee", "cilantro", "Chinese parsley"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 2.1,
+        "carbs_g": 3.7,
+        "fat_g": 0.5,
+        "fiber_g": 2.8,
+        "sodium_mg": 46
+      }
+    },
+    "common_units": ["leaf", "leaves", "cup", "bunch", "tablespoon", "gram"]
+  },
+  {
+    "canonical_name": "sawtooth coriander",
+    "category": "herb",
+    "aliases": ["ผักชีฝรั่ง", "phak chi farang", "pak chee farang", "long coriander", "culantro"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 2.1,
+        "carbs_g": 3.7,
+        "fat_g": 0.5,
+        "fiber_g": 2.8,
+        "sodium_mg": 46
+      }
+    },
+    "common_units": ["leaf", "leaves", "cup", "bunch", "gram"]
+  },
+  {
+    "canonical_name": "Thai ginger",
+    "category": "herb",
+    "aliases": ["ขิง", "khing", "ginger root"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 80,
+        "protein_g": 1.8,
+        "carbs_g": 17.8,
+        "fat_g": 0.8,
+        "fiber_g": 2.0,
+        "sodium_mg": 13
+      }
+    },
+    "common_units": ["piece", "slice", "tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "fingerroot",
+    "category": "herb",
+    "aliases": ["กระชาย", "krachai", "Chinese keys", "Chinese ginger"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 75,
+        "protein_g": 1.5,
+        "carbs_g": 16.2,
+        "fat_g": 0.7,
+        "fiber_g": 2.3,
+        "sodium_mg": 10
+      }
+    },
+    "common_units": ["piece", "finger", "tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "turmeric",
+    "category": "spice",
+    "aliases": ["ขมิ้น", "khamin", "kha min", "fresh turmeric"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 312,
+        "protein_g": 9.7,
+        "carbs_g": 67.1,
+        "fat_g": 3.2,
+        "fiber_g": 22.7,
+        "sodium_mg": 27
+      }
+    },
+    "common_units": ["piece", "tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "Thai shallot",
+    "category": "aromatic",
+    "aliases": ["หอมแดง", "hom daeng", "Asian shallot", "red onion"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 72,
+        "protein_g": 2.5,
+        "carbs_g": 16.8,
+        "fat_g": 0.1,
+        "fiber_g": 3.2,
+        "sodium_mg": 12
+      }
+    },
+    "common_units": ["piece", "bulb", "tablespoon", "teaspoon", "cup", "gram"]
+  },
+  {
+    "canonical_name": "Thai garlic",
+    "category": "aromatic",
+    "aliases": ["กระเทียม", "kratiam", "garlic"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 149,
+        "protein_g": 6.4,
+        "carbs_g": 33.1,
+        "fat_g": 0.5,
+        "fiber_g": 2.1,
+        "sodium_mg": 17
+      }
+    },
+    "common_units": ["clove", "bulb", "tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "white peppercorn",
+    "category": "spice",
+    "aliases": ["พริกไทยขาว", "phrik thai khao", "prik thai khao"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 296,
+        "protein_g": 10.4,
+        "carbs_g": 68.6,
+        "fat_g": 2.1,
+        "fiber_g": 26.2,
+        "sodium_mg": 5
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "black peppercorn",
+    "category": "spice",
+    "aliases": ["พริกไทยดำ", "phrik thai dam", "prik thai dam"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 251,
+        "protein_g": 10.4,
+        "carbs_g": 63.9,
+        "fat_g": 3.3,
+        "fiber_g": 25.3,
+        "sodium_mg": 20
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "pandan leaf",
+    "category": "herb",
+    "aliases": ["ใบเตย", "bai toey", "screwpine leaf", "pandanus leaf"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 30,
+        "protein_g": 0.5,
+        "carbs_g": 7.0,
+        "fat_g": 0.1,
+        "fiber_g": 2.0,
+        "sodium_mg": 2
+      }
+    },
+    "common_units": ["leaf", "leaves", "gram"]
+  },
+  {
+    "canonical_name": "Thai lime",
+    "category": "citrus",
+    "aliases": ["มะนาว", "manao", "ma nao", "key lime"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 30,
+        "protein_g": 0.7,
+        "carbs_g": 10.5,
+        "fat_g": 0.2,
+        "fiber_g": 2.8,
+        "sodium_mg": 2
+      }
+    },
+    "common_units": ["whole", "piece", "tablespoon", "teaspoon", "cup", "gram"]
+  },
+  {
+    "canonical_name": "tamarind paste",
+    "category": "paste",
+    "aliases": ["มะขาม", "makham", "ma kham", "asam jawa"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 239,
+        "protein_g": 2.8,
+        "carbs_g": 62.5,
+        "fat_g": 0.6,
+        "fiber_g": 5.1,
+        "sodium_mg": 28
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram"]
+  },
+  {
+    "canonical_name": "fish sauce",
+    "category": "sauce",
+    "aliases": ["น้ำปลา", "nam pla", "nuoc mam"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 5.6,
+        "carbs_g": 3.7,
+        "fat_g": 0.0,
+        "fiber_g": 0.0,
+        "sodium_mg": 5757
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram", "milliliter"]
+  },
+  {
+    "canonical_name": "oyster sauce",
+    "category": "sauce",
+    "aliases": ["น้ำมันหอย", "nam man hoi", "sauce huitre"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 51,
+        "protein_g": 1.4,
+        "carbs_g": 11.0,
+        "fat_g": 0.2,
+        "fiber_g": 0.0,
+        "sodium_mg": 2733
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram", "milliliter"]
+  },
+  {
+    "canonical_name": "soy sauce",
+    "category": "sauce",
+    "aliases": ["ซีอิ๊ว", "si io", "see ew", "shoyu"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 53,
+        "protein_g": 5.6,
+        "carbs_g": 4.9,
+        "fat_g": 0.0,
+        "fiber_g": 0.8,
+        "sodium_mg": 5493
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram", "milliliter"]
+  },
+  {
+    "canonical_name": "dark soy sauce",
+    "category": "sauce",
+    "aliases": ["ซีอิ๊วดำ", "si io dam", "see ew dam", "kecap manis"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 65,
+        "protein_g": 4.2,
+        "carbs_g": 11.5,
+        "fat_g": 0.1,
+        "fiber_g": 0.5,
+        "sodium_mg": 4800
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram", "milliliter"]
+  },
+  {
+    "canonical_name": "sweet soy sauce",
+    "category": "sauce",
+    "aliases": ["ซีอิ๊วหวาน", "si io wan", "see ew wan"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 150,
+        "protein_g": 3.5,
+        "carbs_g": 32.0,
+        "fat_g": 0.2,
+        "fiber_g": 0.3,
+        "sodium_mg": 3200
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram", "milliliter"]
+  },
+  {
+    "canonical_name": "rice vinegar",
+    "category": "condiment",
+    "aliases": ["น้ำส้มสายชู", "nam som sai chu", "rice wine vinegar"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 0.0,
+        "fiber_g": 0.0,
+        "sodium_mg": 2
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram", "milliliter"]
+  },
+  {
+    "canonical_name": "coconut milk",
+    "category": "dairy",
+    "aliases": ["กะทิ", "kati", "ka ti", "santan"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 230,
+        "protein_g": 2.3,
+        "carbs_g": 5.5,
+        "fat_g": 23.8,
+        "fiber_g": 2.2,
+        "sodium_mg": 15
+      }
+    },
+    "common_units": ["cup", "tablespoon", "can", "milliliter", "gram"]
+  },
+  {
+    "canonical_name": "coconut cream",
+    "category": "dairy",
+    "aliases": ["หัวกะทิ", "hua kati", "thick coconut milk"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 330,
+        "protein_g": 3.6,
+        "carbs_g": 6.7,
+        "fat_g": 34.7,
+        "fiber_g": 2.2,
+        "sodium_mg": 18
+      }
+    },
+    "common_units": ["cup", "tablespoon", "can", "milliliter", "gram"]
+  },
+  {
+    "canonical_name": "cumin",
+    "category": "spice",
+    "aliases": ["ยี่รา", "yira", "jeera"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 17.8,
+        "carbs_g": 44.2,
+        "fat_g": 22.3,
+        "fiber_g": 10.5,
+        "sodium_mg": 168
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "coriander seed",
+    "category": "spice",
+    "aliases": ["เมล็ดผักชี", "malet phak chi", "met phak chee"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 298,
+        "protein_g": 12.4,
+        "carbs_g": 54.2,
+        "fat_g": 17.8,
+        "fiber_g": 41.9,
+        "sodium_mg": 35
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "cardamom",
+    "category": "spice",
+    "aliases": ["กระวาน", "krawan", "elaichi"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 311,
+        "protein_g": 10.8,
+        "carbs_g": 68.5,
+        "fat_g": 6.7,
+        "fiber_g": 28.0,
+        "sodium_mg": 18
+      }
+    },
+    "common_units": ["pod", "tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "star anise",
+    "category": "spice",
+    "aliases": ["โป๊ยกั๊ก", "poy kak", "badian"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 337,
+        "protein_g": 17.6,
+        "carbs_g": 50.0,
+        "fat_g": 15.9,
+        "fiber_g": 14.6,
+        "sodium_mg": 16
+      }
+    },
+    "common_units": ["whole", "piece", "tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "cinnamon stick",
+    "category": "spice",
+    "aliases": ["อบเชย", "op choei", "dalchini"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 247,
+        "protein_g": 4.0,
+        "carbs_g": 80.6,
+        "fat_g": 1.2,
+        "fiber_g": 53.1,
+        "sodium_mg": 10
+      }
+    },
+    "common_units": ["stick", "piece", "tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "clove",
+    "category": "spice",
+    "aliases": ["กานพลู", "kan phlu", "laung"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 274,
+        "protein_g": 6.0,
+        "carbs_g": 65.5,
+        "fat_g": 13.0,
+        "fiber_g": 33.9,
+        "sodium_mg": 277
+      }
+    },
+    "common_units": ["whole", "piece", "tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "bay leaf",
+    "category": "herb",
+    "aliases": ["ใบกระวาน", "bai krawan", "tej patta"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 313,
+        "protein_g": 7.6,
+        "carbs_g": 74.9,
+        "fat_g": 8.4,
+        "fiber_g": 26.3,
+        "sodium_mg": 23
+      }
+    },
+    "common_units": ["leaf", "leaves", "gram"]
+  },
+  {
+    "canonical_name": "dried chili",
+    "category": "spice",
+    "aliases": ["พริกแห้ง", "phrik haeng", "prik haeng"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 282,
+        "protein_g": 12.0,
+        "carbs_g": 50.0,
+        "fat_g": 14.3,
+        "fiber_g": 27.2,
+        "sodium_mg": 91
+      }
+    },
+    "common_units": ["piece", "tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "dried chili flakes",
+    "category": "spice",
+    "aliases": ["พริกป่น", "phrik pon", "prik pon", "chili powder"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 12.0,
+        "carbs_g": 56.6,
+        "fat_g": 17.3,
+        "fiber_g": 28.7,
+        "sodium_mg": 1640
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "Thai chili paste in oil",
+    "category": "paste",
+    "aliases": ["น้ำพริกเผา", "nam phrik phao", "roasted chili paste"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 195,
+        "protein_g": 4.2,
+        "carbs_g": 28.5,
+        "fat_g": 8.5,
+        "fiber_g": 3.5,
+        "sodium_mg": 1450
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "jar", "gram"]
+  },
+  {
+    "canonical_name": "panang curry paste",
+    "category": "paste",
+    "aliases": ["พริกแกงพะแนง", "phrik kaeng panaeng", "nam phrik kaeng panaeng"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 155,
+        "protein_g": 3.6,
+        "carbs_g": 18.5,
+        "fat_g": 7.8,
+        "fiber_g": 4.3,
+        "sodium_mg": 1800
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram"]
+  },
+  {
+    "canonical_name": "jungle curry paste",
+    "category": "paste",
+    "aliases": ["พริกแกงป่า", "phrik kaeng pa", "nam phrik kaeng pa"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 130,
+        "protein_g": 3.0,
+        "carbs_g": 16.0,
+        "fat_g": 6.2,
+        "fiber_g": 4.0,
+        "sodium_mg": 1700
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram"]
+  },
+  {
+    "canonical_name": "sour curry paste",
+    "category": "paste",
+    "aliases": ["พริกแกงส้ม", "phrik kaeng som", "nam phrik kaeng som"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 125,
+        "protein_g": 2.8,
+        "carbs_g": 15.5,
+        "fat_g": 6.0,
+        "fiber_g": 3.8,
+        "sodium_mg": 1650
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram"]
+  },
+  {
+    "canonical_name": "roasted rice powder",
+    "category": "spice",
+    "aliases": ["ข้าวคั่ว", "khao khua", "toasted rice powder"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 7.1,
+        "carbs_g": 79.9,
+        "fat_g": 0.9,
+        "fiber_g": 1.3,
+        "sodium_mg": 5
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram"]
+  },
+  {
+    "canonical_name": "Thai sweet chili sauce",
+    "category": "sauce",
+    "aliases": ["น้ำจิ้มไก่", "nam chim kai", "sweet chili dipping sauce"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 182,
+        "protein_g": 0.5,
+        "carbs_g": 44.0,
+        "fat_g": 0.2,
+        "fiber_g": 0.5,
+        "sodium_mg": 850
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram", "milliliter"]
+  },
+  {
+    "canonical_name": "Thai sriracha sauce",
+    "category": "sauce",
+    "aliases": ["ซอสศรีราชา", "sauce sriracha", "hot chili sauce"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 93,
+        "protein_g": 1.9,
+        "carbs_g": 19.0,
+        "fat_g": 0.9,
+        "fiber_g": 1.8,
+        "sodium_mg": 2300
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram", "milliliter"]
+  },
+  {
+    "canonical_name": "Thai seasoning sauce",
+    "category": "sauce",
+    "aliases": ["ซอสปรุงรส", "sauce prung rot", "Maggi seasoning"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 45,
+        "protein_g": 6.5,
+        "carbs_g": 5.0,
+        "fat_g": 0.0,
+        "fiber_g": 0.0,
+        "sodium_mg": 5800
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram", "milliliter"]
+  },
+  {
+    "canonical_name": "Thai golden mountain sauce",
+    "category": "sauce",
+    "aliases": ["ซอสเขาแดง", "sauce khao daeng", "thin soy sauce"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 48,
+        "protein_g": 5.8,
+        "carbs_g": 5.2,
+        "fat_g": 0.0,
+        "fiber_g": 0.0,
+        "sodium_mg": 5500
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram", "milliliter"]
+  },
+  {
+    "canonical_name": "mint",
+    "category": "herb",
+    "aliases": ["สะระแหน่", "saranae", "sa ra nae", "spearmint"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 44,
+        "protein_g": 3.8,
+        "carbs_g": 8.4,
+        "fat_g": 0.7,
+        "fiber_g": 6.8,
+        "sodium_mg": 30
+      }
+    },
+    "common_units": ["leaf", "leaves", "cup", "bunch", "gram"]
+  },
+  {
+    "canonical_name": "dill",
+    "category": "herb",
+    "aliases": ["ผักชีลาว", "phak chi lao", "Lao coriander"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 3.5,
+        "carbs_g": 7.0,
+        "fat_g": 1.1,
+        "fiber_g": 2.1,
+        "sodium_mg": 61
+      }
+    },
+    "common_units": ["leaf", "leaves", "cup", "bunch", "tablespoon", "gram"]
+  },
+  {
+    "canonical_name": "Vietnamese coriander",
+    "category": "herb",
+    "aliases": ["ผักแพว", "phak phaeo", "rau ram", "laksa leaf"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 2.5,
+        "carbs_g": 4.0,
+        "fat_g": 0.5,
+        "fiber_g": 2.0,
+        "sodium_mg": 10
+      }
+    },
+    "common_units": ["leaf", "leaves", "cup", "bunch", "gram"]
+  },
+  {
+    "canonical_name": "Thai eggplant",
+    "category": "vegetable",
+    "aliases": ["มะเขือพวง", "makhuea phuang", "pea eggplant"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 1.0,
+        "carbs_g": 5.9,
+        "fat_g": 0.2,
+        "fiber_g": 3.0,
+        "sodium_mg": 2
+      }
+    },
+    "common_units": ["piece", "cup", "gram"]
+  },
+  {
+    "canonical_name": "long eggplant",
+    "category": "vegetable",
+    "aliases": ["มะเขือยาว", "makhuea yao", "Japanese eggplant"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 1.0,
+        "carbs_g": 5.9,
+        "fat_g": 0.2,
+        "fiber_g": 3.0,
+        "sodium_mg": 2
+      }
+    },
+    "common_units": ["piece", "cup", "gram"]
+  },
+  {
+    "canonical_name": "wing bean",
+    "category": "vegetable",
+    "aliases": ["ถั่วพู", "thua phu", "asparagus bean", "four-angled bean"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 49,
+        "protein_g": 4.8,
+        "carbs_g": 7.1,
+        "fat_g": 0.4,
+        "fiber_g": 1.5,
+        "sodium_mg": 38
+      }
+    },
+    "common_units": ["piece", "cup", "gram"]
+  },
+  {
+    "canonical_name": "yard long bean",
+    "category": "vegetable",
+    "aliases": ["ถั่วฝักยาว", "thua fak yao", "snake bean", "Chinese long bean"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 47,
+        "protein_g": 2.8,
+        "carbs_g": 8.4,
+        "fat_g": 0.4,
+        "fiber_g": 3.6,
+        "sodium_mg": 4
+      }
+    },
+    "common_units": ["piece", "cup", "gram"]
+  },
+  {
+    "canonical_name": "morning glory",
+    "category": "vegetable",
+    "aliases": ["ผักบุ้ง", "phak bung", "water spinach", "kangkong"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 19,
+        "protein_g": 2.6,
+        "carbs_g": 3.1,
+        "fat_g": 0.2,
+        "fiber_g": 2.1,
+        "sodium_mg": 113
+      }
+    },
+    "common_units": ["bunch", "cup", "gram"]
+  },
+  {
+    "canonical_name": "banana blossom",
+    "category": "vegetable",
+    "aliases": ["หัวปลี", "hua pli", "banana flower", "banana heart"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 51,
+        "protein_g": 1.6,
+        "carbs_g": 9.9,
+        "fat_g": 0.6,
+        "fiber_g": 5.7,
+        "sodium_mg": 1
+      }
+    },
+    "common_units": ["whole", "cup", "gram"]
+  },
+  {
+    "canonical_name": "Thai sweet basil seed",
+    "category": "seed",
+    "aliases": ["เมล็ดแมงลัก", "malet maenglak", "basil seed"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 15.0,
+        "carbs_g": 63.8,
+        "fat_g": 18.0,
+        "fiber_g": 22.6,
+        "sodium_mg": 30
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "gram"]
+  },
+  {
+    "canonical_name": "Thai chili jam",
+    "category": "paste",
+    "aliases": ["น้ำพริกเผาน้ำมัน", "nam phrik phao nam man", "chili in oil"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 210,
+        "protein_g": 3.8,
+        "carbs_g": 30.0,
+        "fat_g": 9.5,
+        "fiber_g": 3.2,
+        "sodium_mg": 1500
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "jar", "gram"]
+  },
+  {
+    "canonical_name": "fermented soybean paste",
+    "category": "paste",
+    "aliases": ["เต้าเจี้ยว", "tao jiao", "yellow bean sauce"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 163,
+        "protein_g": 14.5,
+        "carbs_g": 18.0,
+        "fat_g": 5.5,
+        "fiber_g": 4.5,
+        "sodium_mg": 4200
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram"]
+  },
+  {
+    "canonical_name": "preserved radish",
+    "category": "preserved",
+    "aliases": ["ไชโป๊ว", "chai poh", "salted radish", "pickled daikon"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 95,
+        "protein_g": 3.2,
+        "carbs_g": 18.5,
+        "fat_g": 0.8,
+        "fiber_g": 2.5,
+        "sodium_mg": 4500
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram"]
+  },
+  {
+    "canonical_name": "Thai dried shrimp",
+    "category": "seafood",
+    "aliases": ["กุ้งแห้ง", "kung haeng", "dried prawns"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 306,
+        "protein_g": 63.4,
+        "carbs_g": 2.6,
+        "fat_g": 3.7,
+        "fiber_g": 0.0,
+        "sodium_mg": 3200
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram"]
+  },
+  {
+    "canonical_name": "fried shallot",
+    "category": "condiment",
+    "aliases": ["หอมเจียว", "hom jiao", "crispy shallots"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 458,
+        "protein_g": 5.2,
+        "carbs_g": 43.0,
+        "fat_g": 30.5,
+        "fiber_g": 6.5,
+        "sodium_mg": 25
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram"]
+  },
+  {
+    "canonical_name": "fried garlic",
+    "category": "condiment",
+    "aliases": ["กระเทียมเจียว", "kratiam jiao", "crispy garlic"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 485,
+        "protein_g": 8.5,
+        "carbs_g": 48.0,
+        "fat_g": 29.5,
+        "fiber_g": 4.2,
+        "sodium_mg": 30
+      }
+    },
+    "common_units": ["tablespoon", "teaspoon", "cup", "gram"]
+  },
+  {
+    "canonical_name": "Thai basil flower",
+    "category": "herb",
+    "aliases": ["ดอกโหระพา", "dok horapha", "basil flower"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 3.5,
+        "carbs_g": 3.0,
+        "fat_g": 0.7,
+        "fiber_g": 1.8,
+        "sodium_mg": 5
+      }
+    },
+    "common_units": ["piece", "gram"]
+  },
+  {
+    "canonical_name": "Asian pennywort",
+    "category": "herb",
+    "aliases": ["ใบบัวบก", "bai bua bok", "gotu kola", "centella"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 2.4,
+        "carbs_g": 6.7,
+        "fat_g": 0.2,
+        "fiber_g": 3.3,
+        "sodium_mg": 45
+      }
+    },
+    "common_units": ["leaf", "leaves", "cup", "bunch", "gram"]
+  },
+  {
+    "canonical_name": "betel leaf",
+    "category": "herb",
+    "aliases": ["ใบชะพลู", "bai cha phlu", "wild betel"],
+    "nutritional_info": {
+      "per_100g": {
+        "calories": 44,
+        "protein_g": 3.1,
+        "carbs_g": 6.1,
+        "fat_g": 0.8,
+        "fiber_g": 2.3,
+        "sodium_mg": 40
+      }
+    },
+    "common_units": ["leaf", "leaves", "gram"]
+  }
+]

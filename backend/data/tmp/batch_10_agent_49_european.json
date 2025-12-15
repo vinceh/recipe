@@ -1,0 +1,1457 @@
+{
+  "batch": 10,
+  "agent": 49,
+  "category": "european",
+  "ingredients": [
+    {
+      "canonical_name": "herbes de Provence",
+      "category": "spice",
+      "per_100g": {
+        "calories": 276,
+        "protein_g": 7.5,
+        "carbs_g": 47.8,
+        "fat_g": 5.2,
+        "fiber_g": 18.3
+      },
+      "aliases": [
+        { "alias": "Provencal herbs", "language": "en", "type": "synonym" },
+        { "alias": "エルブ・ド・プロヴァンス", "language": "ja", "type": "translation" },
+        { "alias": "普罗旺斯香草", "language": "zh", "type": "translation" },
+        { "alias": "hierbas de Provenza", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 1.5 },
+        { "unit": "tbsp", "grams": 4 }
+      ]
+    },
+    {
+      "canonical_name": "fleur de sel",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "flower of salt", "language": "en", "type": "translation" },
+        { "alias": "フルール・ド・セル", "language": "ja", "type": "translation" },
+        { "alias": "盐之花", "language": "zh", "type": "translation" },
+        { "alias": "flor de sal", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 6 },
+        { "unit": "tbsp", "grams": 18 },
+        { "unit": "pinch", "grams": 0.5 }
+      ]
+    },
+    {
+      "canonical_name": "Dijon mustard",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 66,
+        "protein_g": 4.5,
+        "carbs_g": 5.7,
+        "fat_g": 3.0,
+        "fiber_g": 3.3
+      },
+      "aliases": [
+        { "alias": "mostaza de Dijon", "language": "es", "type": "translation" },
+        { "alias": "ディジョンマスタード", "language": "ja", "type": "translation" },
+        { "alias": "第戎芥末", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 5 },
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "cup", "grams": 240 }
+      ]
+    },
+    {
+      "canonical_name": "crème fraîche",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 292,
+        "protein_g": 2.4,
+        "carbs_g": 3.2,
+        "fat_g": 30.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "fresh cream", "language": "en", "type": "translation" },
+        { "alias": "クレーム・フレーシュ", "language": "ja", "type": "translation" },
+        { "alias": "法式酸奶油", "language": "zh", "type": "translation" },
+        { "alias": "nata fresca", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "cup", "grams": 240 }
+      ]
+    },
+    {
+      "canonical_name": "duck fat",
+      "category": "fat",
+      "per_100g": {
+        "calories": 900,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "graisse de canard", "language": "fr", "type": "translation" },
+        { "alias": "鸭油", "language": "zh", "type": "translation" },
+        { "alias": "ダックファット", "language": "ja", "type": "translation" },
+        { "alias": "grasa de pato", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 13 },
+        { "unit": "cup", "grams": 205 }
+      ]
+    },
+    {
+      "canonical_name": "San Marzano tomatoes",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 1.4,
+        "carbs_g": 6.7,
+        "fat_g": 0.3,
+        "fiber_g": 2.0
+      },
+      "aliases": [
+        { "alias": "San Marzano tomato", "language": "en", "type": "synonym" },
+        { "alias": "サンマルツァーノトマト", "language": "ja", "type": "translation" },
+        { "alias": "圣马扎诺番茄", "language": "zh", "type": "translation" },
+        { "alias": "tomates San Marzano", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "can", "grams": 400 },
+        { "unit": "cup", "grams": 180 }
+      ]
+    },
+    {
+      "canonical_name": "00 flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 12.0,
+        "carbs_g": 74.0,
+        "fat_g": 1.0,
+        "fiber_g": 2.5
+      },
+      "aliases": [
+        { "alias": "doppio zero flour", "language": "en", "type": "synonym" },
+        { "alias": "tipo 00 flour", "language": "en", "type": "synonym" },
+        { "alias": "00粉", "language": "zh", "type": "translation" },
+        { "alias": "ダブルゼロ粉", "language": "ja", "type": "translation" },
+        { "alias": "harina 00", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 125 },
+        { "unit": "tbsp", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "mascarpone",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 429,
+        "protein_g": 4.8,
+        "carbs_g": 4.0,
+        "fat_g": 44.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "マスカルポーネ", "language": "ja", "type": "translation" },
+        { "alias": "马斯卡彭芝士", "language": "zh", "type": "translation" },
+        { "alias": "queso mascarpone", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 240 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "nduja",
+      "category": "meat",
+      "per_100g": {
+        "calories": 450,
+        "protein_g": 15.0,
+        "carbs_g": 3.0,
+        "fat_g": 42.0,
+        "fiber_g": 1.0
+      },
+      "aliases": [
+        { "alias": "spicy spreadable salami", "language": "en", "type": "synonym" },
+        { "alias": "ンドゥイヤ", "language": "ja", "type": "translation" },
+        { "alias": "恩杜亚辣香肠", "language": "zh", "type": "translation" },
+        { "alias": "salami picante untable", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 20 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "bottarga",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 373,
+        "protein_g": 39.0,
+        "carbs_g": 0,
+        "fat_g": 24.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "dried mullet roe", "language": "en", "type": "synonym" },
+        { "alias": "カラスミ", "language": "ja", "type": "translation" },
+        { "alias": "鱼子酱", "language": "zh", "type": "translation" },
+        { "alias": "huevas de mújol", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 10 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "smoked paprika",
+      "category": "spice",
+      "per_100g": {
+        "calories": 282,
+        "protein_g": 14.1,
+        "carbs_g": 53.9,
+        "fat_g": 12.9,
+        "fiber_g": 34.9
+      },
+      "aliases": [
+        { "alias": "pimentón", "language": "es", "type": "synonym" },
+        { "alias": "Spanish paprika", "language": "en", "type": "synonym" },
+        { "alias": "燻製パプリカ", "language": "ja", "type": "translation" },
+        { "alias": "烟熏辣椒粉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.3 },
+        { "unit": "tbsp", "grams": 6.8 }
+      ]
+    },
+    {
+      "canonical_name": "saffron",
+      "category": "spice",
+      "per_100g": {
+        "calories": 310,
+        "protein_g": 11.4,
+        "carbs_g": 65.4,
+        "fat_g": 5.9,
+        "fiber_g": 3.9
+      },
+      "aliases": [
+        { "alias": "azafrán", "language": "es", "type": "translation" },
+        { "alias": "サフラン", "language": "ja", "type": "translation" },
+        { "alias": "藏红花", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "pinch", "grams": 0.1 },
+        { "unit": "tsp", "grams": 0.7 }
+      ]
+    },
+    {
+      "canonical_name": "Marcona almonds",
+      "category": "nut",
+      "per_100g": {
+        "calories": 607,
+        "protein_g": 21.2,
+        "carbs_g": 19.7,
+        "fat_g": 52.8,
+        "fiber_g": 12.2
+      },
+      "aliases": [
+        { "alias": "Spanish almonds", "language": "en", "type": "synonym" },
+        { "alias": "マルコナアーモンド", "language": "ja", "type": "translation" },
+        { "alias": "马科纳杏仁", "language": "zh", "type": "translation" },
+        { "alias": "almendras Marcona", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 143 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "Spanish chorizo",
+      "category": "meat",
+      "per_100g": {
+        "calories": 455,
+        "protein_g": 24.1,
+        "carbs_g": 2.0,
+        "fat_g": 38.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chorizo", "language": "en", "type": "synonym" },
+        { "alias": "チョリソー", "language": "ja", "type": "translation" },
+        { "alias": "西班牙香肠", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "link", "grams": 60 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "cup", "grams": 120 }
+      ]
+    },
+    {
+      "canonical_name": "Iberico pork",
+      "category": "meat",
+      "per_100g": {
+        "calories": 208,
+        "protein_g": 19.5,
+        "carbs_g": 0,
+        "fat_g": 14.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Iberian pork", "language": "en", "type": "synonym" },
+        { "alias": "イベリコ豚", "language": "ja", "type": "translation" },
+        { "alias": "伊比利亚猪肉", "language": "zh", "type": "translation" },
+        { "alias": "cerdo ibérico", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "feta cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 264,
+        "protein_g": 14.2,
+        "carbs_g": 4.1,
+        "fat_g": 21.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "feta", "language": "en", "type": "synonym" },
+        { "alias": "フェタチーズ", "language": "ja", "type": "translation" },
+        { "alias": "菲达芝士", "language": "zh", "type": "translation" },
+        { "alias": "queso feta", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 150 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "Kalamata olives",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 115,
+        "protein_g": 0.8,
+        "carbs_g": 6.3,
+        "fat_g": 10.7,
+        "fiber_g": 3.2
+      },
+      "aliases": [
+        { "alias": "Kalamata olive", "language": "en", "type": "synonym" },
+        { "alias": "カラマタオリーブ", "language": "ja", "type": "translation" },
+        { "alias": "卡拉马塔橄榄", "language": "zh", "type": "translation" },
+        { "alias": "aceitunas Kalamata", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 135 },
+        { "unit": "olive", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "Greek oregano",
+      "category": "herb",
+      "per_100g": {
+        "calories": 265,
+        "protein_g": 9.0,
+        "carbs_g": 68.9,
+        "fat_g": 4.3,
+        "fiber_g": 42.5
+      },
+      "aliases": [
+        { "alias": "rigani", "language": "en", "type": "synonym" },
+        { "alias": "ギリシャオレガノ", "language": "ja", "type": "translation" },
+        { "alias": "希腊牛至", "language": "zh", "type": "translation" },
+        { "alias": "orégano griego", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 1.5 },
+        { "unit": "tbsp", "grams": 3 }
+      ]
+    },
+    {
+      "canonical_name": "Greek yogurt",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 59,
+        "protein_g": 10.2,
+        "carbs_g": 3.6,
+        "fat_g": 0.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "strained yogurt", "language": "en", "type": "synonym" },
+        { "alias": "ギリシャヨーグルト", "language": "ja", "type": "translation" },
+        { "alias": "希腊酸奶", "language": "zh", "type": "translation" },
+        { "alias": "yogur griego", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 245 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "grape leaves",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 93,
+        "protein_g": 5.6,
+        "carbs_g": 17.3,
+        "fat_g": 1.2,
+        "fiber_g": 11.0
+      },
+      "aliases": [
+        { "alias": "vine leaves", "language": "en", "type": "synonym" },
+        { "alias": "dolma leaves", "language": "en", "type": "synonym" },
+        { "alias": "ブドウの葉", "language": "ja", "type": "translation" },
+        { "alias": "葡萄叶", "language": "zh", "type": "translation" },
+        { "alias": "hojas de parra", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "leaf", "grams": 3 },
+        { "unit": "jar", "grams": 450 }
+      ]
+    },
+    {
+      "canonical_name": "sour cream",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 193,
+        "protein_g": 2.4,
+        "carbs_g": 4.6,
+        "fat_g": 19.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "サワークリーム", "language": "ja", "type": "translation" },
+        { "alias": "酸奶油", "language": "zh", "type": "translation" },
+        { "alias": "crema agria", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 230 },
+        { "unit": "tbsp", "grams": 14 }
+      ]
+    },
+    {
+      "canonical_name": "fresh dill",
+      "category": "herb",
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 3.5,
+        "carbs_g": 7.0,
+        "fat_g": 1.1,
+        "fiber_g": 2.1
+      },
+      "aliases": [
+        { "alias": "dill", "language": "en", "type": "synonym" },
+        { "alias": "ディル", "language": "ja", "type": "translation" },
+        { "alias": "莳萝", "language": "zh", "type": "translation" },
+        { "alias": "eneldo", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 9 },
+        { "unit": "tbsp", "grams": 1 },
+        { "unit": "sprig", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "caraway seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 333,
+        "protein_g": 19.8,
+        "carbs_g": 49.9,
+        "fat_g": 14.6,
+        "fiber_g": 38.0
+      },
+      "aliases": [
+        { "alias": "caraway", "language": "en", "type": "synonym" },
+        { "alias": "キャラウェイ", "language": "ja", "type": "translation" },
+        { "alias": "香菜籽", "language": "zh", "type": "translation" },
+        { "alias": "semillas de alcaravea", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.1 },
+        { "unit": "tbsp", "grams": 6.7 }
+      ]
+    },
+    {
+      "canonical_name": "prepared horseradish",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 48,
+        "protein_g": 1.2,
+        "carbs_g": 11.3,
+        "fat_g": 0.7,
+        "fiber_g": 3.3
+      },
+      "aliases": [
+        { "alias": "horseradish", "language": "en", "type": "synonym" },
+        { "alias": "ホースラディッシュ", "language": "ja", "type": "translation" },
+        { "alias": "辣根", "language": "zh", "type": "translation" },
+        { "alias": "rábano picante", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "tsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "beet kvass",
+      "category": "beverage",
+      "per_100g": {
+        "calories": 15,
+        "protein_g": 0.5,
+        "carbs_g": 3.2,
+        "fat_g": 0.1,
+        "fiber_g": 0.5
+      },
+      "aliases": [
+        { "alias": "beet kvas", "language": "en", "type": "synonym" },
+        { "alias": "ビーツクワス", "language": "ja", "type": "translation" },
+        { "alias": "甜菜克瓦斯", "language": "zh", "type": "translation" },
+        { "alias": "kvas de remolacha", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 240 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "malt vinegar",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 0,
+        "carbs_g": 0.4,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "モルトビネガー", "language": "ja", "type": "translation" },
+        { "alias": "麦芽醋", "language": "zh", "type": "translation" },
+        { "alias": "vinagre de malta", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "cup", "grams": 240 }
+      ]
+    },
+    {
+      "canonical_name": "clotted cream",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 586,
+        "protein_g": 1.7,
+        "carbs_g": 2.3,
+        "fat_g": 63.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Cornish cream", "language": "en", "type": "synonym" },
+        { "alias": "クロテッドクリーム", "language": "ja", "type": "translation" },
+        { "alias": "凝脂奶油", "language": "zh", "type": "translation" },
+        { "alias": "nata cuajada", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "cup", "grams": 240 }
+      ]
+    },
+    {
+      "canonical_name": "black pudding",
+      "category": "meat",
+      "per_100g": {
+        "calories": 297,
+        "protein_g": 12.9,
+        "carbs_g": 15.0,
+        "fat_g": 21.5,
+        "fiber_g": 0.5
+      },
+      "aliases": [
+        { "alias": "blood sausage", "language": "en", "type": "synonym" },
+        { "alias": "ブラックプディング", "language": "ja", "type": "translation" },
+        { "alias": "血肠", "language": "zh", "type": "translation" },
+        { "alias": "morcilla", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 50 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "treacle",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 298,
+        "protein_g": 0.5,
+        "carbs_g": 77.2,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "black treacle", "language": "en", "type": "synonym" },
+        { "alias": "トリークル", "language": "ja", "type": "translation" },
+        { "alias": "糖蜜", "language": "zh", "type": "translation" },
+        { "alias": "melaza", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 20 },
+        { "unit": "cup", "grams": 340 }
+      ]
+    },
+    {
+      "canonical_name": "sauerkraut",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 19,
+        "protein_g": 0.9,
+        "carbs_g": 4.3,
+        "fat_g": 0.1,
+        "fiber_g": 2.9
+      },
+      "aliases": [
+        { "alias": "ザワークラウト", "language": "ja", "type": "translation" },
+        { "alias": "酸菜", "language": "zh", "type": "translation" },
+        { "alias": "col fermentada", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 142 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "speck",
+      "category": "meat",
+      "per_100g": {
+        "calories": 300,
+        "protein_g": 28.3,
+        "carbs_g": 0.5,
+        "fat_g": 20.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "smoked prosciutto", "language": "en", "type": "synonym" },
+        { "alias": "シュペック", "language": "ja", "type": "translation" },
+        { "alias": "烟熏火腿", "language": "zh", "type": "translation" },
+        { "alias": "jamón ahumado", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 20 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pumpernickel bread",
+      "category": "grain",
+      "per_100g": {
+        "calories": 250,
+        "protein_g": 8.7,
+        "carbs_g": 47.5,
+        "fat_g": 3.1,
+        "fiber_g": 6.5
+      },
+      "aliases": [
+        { "alias": "pumpernickel", "language": "en", "type": "synonym" },
+        { "alias": "プンパニッケル", "language": "ja", "type": "translation" },
+        { "alias": "黑麦面包", "language": "zh", "type": "translation" },
+        { "alias": "pan pumpernickel", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 32 },
+        { "unit": "cup", "grams": 108 }
+      ]
+    },
+    {
+      "canonical_name": "quark",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 67,
+        "protein_g": 12.6,
+        "carbs_g": 4.0,
+        "fat_g": 0.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "German cottage cheese", "language": "en", "type": "synonym" },
+        { "alias": "クワルク", "language": "ja", "type": "translation" },
+        { "alias": "夸克奶酪", "language": "zh", "type": "translation" },
+        { "alias": "requesón alemán", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 245 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "Parmigiano-Reggiano",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 431,
+        "protein_g": 38.5,
+        "carbs_g": 3.2,
+        "fat_g": 28.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Parmesan cheese", "language": "en", "type": "synonym" },
+        { "alias": "パルミジャーノ・レッジャーノ", "language": "ja", "type": "translation" },
+        { "alias": "帕尔马干酪", "language": "zh", "type": "translation" },
+        { "alias": "queso parmesano", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 100 },
+        { "unit": "tbsp", "grams": 5 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "Gruyère cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 413,
+        "protein_g": 29.8,
+        "carbs_g": 0.4,
+        "fat_g": 32.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Gruyere", "language": "en", "type": "synonym" },
+        { "alias": "グリュイエールチーズ", "language": "ja", "type": "translation" },
+        { "alias": "格鲁耶尔芝士", "language": "zh", "type": "translation" },
+        { "alias": "queso Gruyère", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 108 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "Comté cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 409,
+        "protein_g": 28.5,
+        "carbs_g": 0.5,
+        "fat_g": 32.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Comte", "language": "en", "type": "synonym" },
+        { "alias": "コンテチーズ", "language": "ja", "type": "translation" },
+        { "alias": "孔泰芝士", "language": "zh", "type": "translation" },
+        { "alias": "queso Comté", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 108 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "Roquefort cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 369,
+        "protein_g": 21.5,
+        "carbs_g": 2.0,
+        "fat_g": 30.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Roquefort", "language": "en", "type": "synonym" },
+        { "alias": "ロックフォールチーズ", "language": "ja", "type": "translation" },
+        { "alias": "洛克福芝士", "language": "zh", "type": "translation" },
+        { "alias": "queso Roquefort", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "cup", "grams": 135 }
+      ]
+    },
+    {
+      "canonical_name": "balsamic vinegar",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 88,
+        "protein_g": 0.5,
+        "carbs_g": 17.0,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "aceto balsamico", "language": "it", "type": "translation" },
+        { "alias": "バルサミコ酢", "language": "ja", "type": "translation" },
+        { "alias": "香醋", "language": "zh", "type": "translation" },
+        { "alias": "vinagre balsámico", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 16 },
+        { "unit": "cup", "grams": 256 }
+      ]
+    },
+    {
+      "canonical_name": "Manchego cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 392,
+        "protein_g": 25.4,
+        "carbs_g": 0.5,
+        "fat_g": 32.1,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Manchego", "language": "en", "type": "synonym" },
+        { "alias": "マンチェゴチーズ", "language": "ja", "type": "translation" },
+        { "alias": "曼切格芝士", "language": "zh", "type": "translation" },
+        { "alias": "queso Manchego", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "cup", "grams": 113 }
+      ]
+    },
+    {
+      "canonical_name": "prosciutto di Parma",
+      "category": "meat",
+      "per_100g": {
+        "calories": 237,
+        "protein_g": 25.5,
+        "carbs_g": 0,
+        "fat_g": 15.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Parma ham", "language": "en", "type": "synonym" },
+        { "alias": "prosciutto", "language": "en", "type": "synonym" },
+        { "alias": "プロシュート", "language": "ja", "type": "translation" },
+        { "alias": "帕尔马火腿", "language": "zh", "type": "translation" },
+        { "alias": "jamón de Parma", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 15 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "pancetta",
+      "category": "meat",
+      "per_100g": {
+        "calories": 459,
+        "protein_g": 14.6,
+        "carbs_g": 0.7,
+        "fat_g": 45.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Italian bacon", "language": "en", "type": "synonym" },
+        { "alias": "パンチェッタ", "language": "ja", "type": "translation" },
+        { "alias": "意式培根", "language": "zh", "type": "translation" },
+        { "alias": "tocino italiano", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "cup", "grams": 135 }
+      ]
+    },
+    {
+      "canonical_name": "guanciale",
+      "category": "meat",
+      "per_100g": {
+        "calories": 655,
+        "protein_g": 9.9,
+        "carbs_g": 0,
+        "fat_g": 69.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "cured pork jowl", "language": "en", "type": "synonym" },
+        { "alias": "グアンチャーレ", "language": "ja", "type": "translation" },
+        { "alias": "猪颊肉", "language": "zh", "type": "translation" },
+        { "alias": "tocino de papada", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "cup", "grams": 135 }
+      ]
+    },
+    {
+      "canonical_name": "pecorino Romano",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 31.8,
+        "carbs_g": 3.6,
+        "fat_g": 26.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "pecorino", "language": "en", "type": "synonym" },
+        { "alias": "ペコリーノ・ロマーノ", "language": "ja", "type": "translation" },
+        { "alias": "罗马羊奶芝士", "language": "zh", "type": "translation" },
+        { "alias": "queso pecorino", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 100 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "tbsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "burrata",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 330,
+        "protein_g": 17.0,
+        "carbs_g": 3.0,
+        "fat_g": 28.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "ブッラータ", "language": "ja", "type": "translation" },
+        { "alias": "布拉塔芝士", "language": "zh", "type": "translation" },
+        { "alias": "queso burrata", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "ball", "grams": 125 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "ricotta salata",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 271,
+        "protein_g": 21.7,
+        "carbs_g": 5.1,
+        "fat_g": 19.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "salted ricotta", "language": "en", "type": "synonym" },
+        { "alias": "リコッタ・サラータ", "language": "ja", "type": "translation" },
+        { "alias": "盐渍里科塔", "language": "zh", "type": "translation" },
+        { "alias": "ricota salada", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 124 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "arborio rice",
+      "category": "grain",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 7.5,
+        "carbs_g": 79.3,
+        "fat_g": 0.6,
+        "fiber_g": 1.4
+      },
+      "aliases": [
+        { "alias": "risotto rice", "language": "en", "type": "synonym" },
+        { "alias": "アルボリオ米", "language": "ja", "type": "translation" },
+        { "alias": "阿波里欧米", "language": "zh", "type": "translation" },
+        { "alias": "arroz arborio", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 195 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "polenta",
+      "category": "grain",
+      "per_100g": {
+        "calories": 362,
+        "protein_g": 8.1,
+        "carbs_g": 79.0,
+        "fat_g": 2.0,
+        "fiber_g": 4.6
+      },
+      "aliases": [
+        { "alias": "cornmeal", "language": "en", "type": "synonym" },
+        { "alias": "ポレンタ", "language": "ja", "type": "translation" },
+        { "alias": "玉米糊", "language": "zh", "type": "translation" },
+        { "alias": "harina de maíz", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 157 },
+        { "unit": "tbsp", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "capers",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 2.4,
+        "carbs_g": 4.9,
+        "fat_g": 0.9,
+        "fiber_g": 3.2
+      },
+      "aliases": [
+        { "alias": "caper", "language": "en", "type": "synonym" },
+        { "alias": "ケーパー", "language": "ja", "type": "translation" },
+        { "alias": "酸豆", "language": "zh", "type": "translation" },
+        { "alias": "alcaparras", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 8 },
+        { "unit": "tsp", "grams": 3 }
+      ]
+    },
+    {
+      "canonical_name": "anchovies",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 210,
+        "protein_g": 28.9,
+        "carbs_g": 0,
+        "fat_g": 9.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "anchovy", "language": "en", "type": "synonym" },
+        { "alias": "アンチョビ", "language": "ja", "type": "translation" },
+        { "alias": "凤尾鱼", "language": "zh", "type": "translation" },
+        { "alias": "anchoas", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "fillet", "grams": 4 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "porcini mushrooms",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 26,
+        "protein_g": 3.1,
+        "carbs_g": 3.0,
+        "fat_g": 0.3,
+        "fiber_g": 1.3
+      },
+      "aliases": [
+        { "alias": "porcini", "language": "en", "type": "synonym" },
+        { "alias": "boletus", "language": "en", "type": "synonym" },
+        { "alias": "ポルチーニ", "language": "ja", "type": "translation" },
+        { "alias": "牛肝菌", "language": "zh", "type": "translation" },
+        { "alias": "hongos porcini", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "alias": "cup", "grams": 70 }
+      ]
+    },
+    {
+      "canonical_name": "truffle oil",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "トリュフオイル", "language": "ja", "type": "translation" },
+        { "alias": "松露油", "language": "zh", "type": "translation" },
+        { "alias": "aceite de trufa", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 4.5 },
+        { "unit": "tbsp", "grams": 14 }
+      ]
+    },
+    {
+      "canonical_name": "semolina flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 360,
+        "protein_g": 12.7,
+        "carbs_g": 72.8,
+        "fat_g": 1.1,
+        "fiber_g": 3.9
+      },
+      "aliases": [
+        { "alias": "semolina", "language": "en", "type": "synonym" },
+        { "alias": "セモリナ粉", "language": "ja", "type": "translation" },
+        { "alias": "粗粒小麦粉", "language": "zh", "type": "translation" },
+        { "alias": "harina de sémola", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 167 },
+        { "unit": "tbsp", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "Serrano ham",
+      "category": "meat",
+      "per_100g": {
+        "calories": 241,
+        "protein_g": 30.5,
+        "carbs_g": 0,
+        "fat_g": 13.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "jamón serrano", "language": "es", "type": "translation" },
+        { "alias": "セラーノハム", "language": "ja", "type": "translation" },
+        { "alias": "塞拉诺火腿", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 15 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "halloumi cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 321,
+        "protein_g": 21.2,
+        "carbs_g": 2.7,
+        "fat_g": 25.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "halloumi", "language": "en", "type": "synonym" },
+        { "alias": "ハルーミチーズ", "language": "ja", "type": "translation" },
+        { "alias": "哈罗米芝士", "language": "zh", "type": "translation" },
+        { "alias": "queso halloumi", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 30 },
+        { "unit": "oz", "grams": 28 },
+        { "unit": "cup", "grams": 140 }
+      ]
+    },
+    {
+      "canonical_name": "tahini",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 595,
+        "protein_g": 17.0,
+        "carbs_g": 21.2,
+        "fat_g": 53.8,
+        "fiber_g": 9.3
+      },
+      "aliases": [
+        { "alias": "sesame paste", "language": "en", "type": "synonym" },
+        { "alias": "タヒニ", "language": "ja", "type": "translation" },
+        { "alias": "芝麻酱", "language": "zh", "type": "translation" },
+        { "alias": "pasta de sésamo", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 15 },
+        { "unit": "cup", "grams": 240 }
+      ]
+    },
+    {
+      "canonical_name": "za'atar",
+      "category": "spice",
+      "per_100g": {
+        "calories": 264,
+        "protein_g": 8.5,
+        "carbs_g": 44.3,
+        "fat_g": 7.8,
+        "fiber_g": 18.6
+      },
+      "aliases": [
+        { "alias": "zaatar", "language": "en", "type": "synonym" },
+        { "alias": "ザータル", "language": "ja", "type": "translation" },
+        { "alias": "扎塔尔", "language": "zh", "type": "translation" },
+        { "alias": "zatar", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "sumac",
+      "category": "spice",
+      "per_100g": {
+        "calories": 235,
+        "protein_g": 4.1,
+        "carbs_g": 58.8,
+        "fat_g": 3.4,
+        "fiber_g": 14.6
+      },
+      "aliases": [
+        { "alias": "スマック", "language": "ja", "type": "translation" },
+        { "alias": "漆树", "language": "zh", "type": "translation" },
+        { "alias": "zumaque", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.3 },
+        { "unit": "tbsp", "grams": 7 }
+      ]
+    },
+    {
+      "canonical_name": "labneh",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 118,
+        "protein_g": 7.8,
+        "carbs_g": 4.7,
+        "fat_g": 8.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "labne", "language": "en", "type": "synonym" },
+        { "alias": "strained yogurt cheese", "language": "en", "type": "synonym" },
+        { "alias": "ラブネ", "language": "ja", "type": "translation" },
+        { "alias": "拉布尼", "language": "zh", "type": "translation" },
+        { "alias": "queso labneh", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 240 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "kefalotyri cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 385,
+        "protein_g": 28.6,
+        "carbs_g": 1.5,
+        "fat_g": 29.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "kefalotiri", "language": "en", "type": "synonym" },
+        { "alias": "ケファロティリチーズ", "language": "ja", "type": "translation" },
+        { "alias": "凯法洛蒂里芝士", "language": "zh", "type": "translation" },
+        { "alias": "queso kefalotyri", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "cup", "grams": 113 }
+      ]
+    },
+    {
+      "canonical_name": "lardo",
+      "category": "meat",
+      "per_100g": {
+        "calories": 812,
+        "protein_g": 2.9,
+        "carbs_g": 0,
+        "fat_g": 88.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "cured pork fat", "language": "en", "type": "synonym" },
+        { "alias": "ラルド", "language": "ja", "type": "translation" },
+        { "alias": "意式腌猪背膘", "language": "zh", "type": "translation" },
+        { "alias": "tocino curado", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 10 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "taleggio cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 315,
+        "protein_g": 19.0,
+        "carbs_g": 0.2,
+        "fat_g": 26.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Taleggio", "language": "en", "type": "synonym" },
+        { "alias": "タレッジョチーズ", "language": "ja", "type": "translation" },
+        { "alias": "塔雷吉欧芝士", "language": "zh", "type": "translation" },
+        { "alias": "queso taleggio", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "cup", "grams": 140 }
+      ]
+    },
+    {
+      "canonical_name": "gorgonzola cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 353,
+        "protein_g": 21.4,
+        "carbs_g": 2.3,
+        "fat_g": 28.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Gorgonzola", "language": "en", "type": "synonym" },
+        { "alias": "ゴルゴンゾーラ", "language": "ja", "type": "translation" },
+        { "alias": "戈贡佐拉芝士", "language": "zh", "type": "translation" },
+        { "alias": "queso gorgonzola", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "cup", "grams": 135 }
+      ]
+    },
+    {
+      "canonical_name": "boquerones",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 131,
+        "protein_g": 20.4,
+        "carbs_g": 0,
+        "fat_g": 4.8,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "white anchovies", "language": "en", "type": "synonym" },
+        { "alias": "marinated anchovies", "language": "en", "type": "synonym" },
+        { "alias": "ボケロネス", "language": "ja", "type": "translation" },
+        { "alias": "白凤尾鱼", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "fillet", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "Ras el Hanout",
+      "category": "spice",
+      "per_100g": {
+        "calories": 325,
+        "protein_g": 10.5,
+        "carbs_g": 60.2,
+        "fat_g": 8.4,
+        "fiber_g": 24.3
+      },
+      "aliases": [
+        { "alias": "Moroccan spice blend", "language": "en", "type": "synonym" },
+        { "alias": "ラス・エル・ハヌート", "language": "ja", "type": "translation" },
+        { "alias": "哈努特香料", "language": "zh", "type": "translation" },
+        { "alias": "mezcla de especias marroquí", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "preserved lemons",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 29,
+        "protein_g": 1.1,
+        "carbs_g": 9.3,
+        "fat_g": 0.3,
+        "fiber_g": 2.8
+      },
+      "aliases": [
+        { "alias": "preserved lemon", "language": "en", "type": "synonym" },
+        { "alias": "塩漬けレモン", "language": "ja", "type": "translation" },
+        { "alias": "腌柠檬", "language": "zh", "type": "translation" },
+        { "alias": "limones en conserva", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lemon", "grams": 50 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "Stilton cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 353,
+        "protein_g": 23.0,
+        "carbs_g": 0.1,
+        "fat_g": 28.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Stilton", "language": "en", "type": "synonym" },
+        { "alias": "スティルトンチーズ", "language": "ja", "type": "translation" },
+        { "alias": "斯蒂尔顿芝士", "language": "zh", "type": "translation" },
+        { "alias": "queso Stilton", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "cup", "grams": 135 }
+      ]
+    },
+    {
+      "canonical_name": "Camembert cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 300,
+        "protein_g": 19.8,
+        "carbs_g": 0.5,
+        "fat_g": 24.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Camembert", "language": "en", "type": "synonym" },
+        { "alias": "カマンベールチーズ", "language": "ja", "type": "translation" },
+        { "alias": "卡门贝尔芝士", "language": "zh", "type": "translation" },
+        { "alias": "queso Camembert", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "wedge", "grams": 42 }
+      ]
+    },
+    {
+      "canonical_name": "Brie cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 334,
+        "protein_g": 20.8,
+        "carbs_g": 0.5,
+        "fat_g": 27.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Brie", "language": "en", "type": "synonym" },
+        { "alias": "ブリーチーズ", "language": "ja", "type": "translation" },
+        { "alias": "布里芝士", "language": "zh", "type": "translation" },
+        { "alias": "queso Brie", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "wedge", "grams": 42 }
+      ]
+    },
+    {
+      "canonical_name": "fontina cheese",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 389,
+        "protein_g": 25.6,
+        "carbs_g": 1.6,
+        "fat_g": 31.1,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "Fontina", "language": "en", "type": "synonym" },
+        { "alias": "フォンティーナチーズ", "language": "ja", "type": "translation" },
+        { "alias": "丰蒂娜芝士", "language": "zh", "type": "translation" },
+        { "alias": "queso fontina", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "oz", "grams": 28 },
+        { "unit": "cup", "grams": 108 }
+      ]
+    }
+  ]
+}

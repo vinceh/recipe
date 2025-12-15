@@ -6,7 +6,7 @@ import PageHeader from '@/components/shared/PageHeader.vue'
 import ErrorMessage from '@/components/shared/ErrorMessage.vue'
 import { adminApi } from '@/services/adminApi'
 import type { RecipeDetail } from '@/services/types'
-import { formatAmount } from '@/utils/ingredientFormatters'
+import { formatAmount } from '@/utils/measurementFormatter'
 
 const route = useRoute()
 const router = useRouter()
@@ -63,12 +63,12 @@ const getCuisineDisplayName = (key: string) => getDisplayName(key, 'cuisines')
 const getDietaryTagDisplayName = (key: string) => getDisplayName(key, 'dietary_tags')
 
 function goBack() {
-  router.push('/admin/recipes')
+  router.push({ name: 'admin-recipes' })
 }
 
 function editRecipe() {
   if (!recipe.value) return
-  router.push(`/admin/recipes/${recipe.value.id}/edit`)
+  router.push({ name: 'admin-recipe-edit', params: { id: recipe.value.id } })
 }
 
 async function deleteRecipe() {
@@ -78,7 +78,7 @@ async function deleteRecipe() {
 
   try {
     await adminApi.deleteRecipe(recipe.value.id)
-    router.push('/admin/recipes')
+    router.push({ name: 'admin-recipes' })
   } catch (e) {
     error.value = e instanceof Error ? e : new Error('Failed to delete recipe')
   }
@@ -349,7 +349,7 @@ onBeforeUnmount(() => {
         </div>
         <div class="card-body">
           <ol class="steps-list">
-            <li v-for="(step, index) in recipe?.steps" :key="index">
+            <li v-for="step in recipe?.steps" :key="step.id">
               <div class="step-content">
                 <p class="step-instruction">{{ step.instruction }}</p>
               </div>
@@ -509,18 +509,18 @@ onBeforeUnmount(() => {
 }
 
 .difficulty-easy {
-  background: #d4f4dd;
-  color: #1b5e20;
+  background: var(--color-difficulty-easy-bg);
+  color: var(--color-difficulty-easy-text);
 }
 
 .difficulty-medium {
-  background: #fff3cd;
-  color: #856404;
+  background: var(--color-difficulty-medium-bg);
+  color: var(--color-difficulty-medium-text);
 }
 
 .difficulty-hard {
-  background: #f8d7da;
-  color: #721c24;
+  background: var(--color-difficulty-hard-bg);
+  color: var(--color-difficulty-hard-text);
 }
 
 .tags {

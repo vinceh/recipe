@@ -1,0 +1,1688 @@
+{
+  "batch": 3,
+  "agent": 15,
+  "category": "nuts_seeds",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "almond, whole raw",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 579,
+        "protein_g": 21.2,
+        "carbs_g": 21.6,
+        "fat_g": 49.9,
+        "fiber_g": 12.5
+      },
+      "aliases": {
+        "en": ["raw almonds", "whole almonds", "sweet almonds"],
+        "ja": ["生アーモンド", "アーモンド"],
+        "ko": ["생아몬드", "아몬드"],
+        "zh": ["生杏仁", "杏仁"],
+        "zh-tw": ["生杏仁", "杏仁"],
+        "es": ["almendras crudas", "almendras enteras"],
+        "fr": ["amandes crues", "amandes entières"]
+      },
+      "common_units": ["cup", "oz", "g", "piece", "handful"]
+    },
+    {
+      "canonical_name": "almond, sliced",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 579,
+        "protein_g": 21.2,
+        "carbs_g": 21.6,
+        "fat_g": 49.9,
+        "fiber_g": 12.5
+      },
+      "aliases": {
+        "en": ["sliced almonds", "almond slices"],
+        "ja": ["スライスアーモンド", "アーモンドスライス"],
+        "ko": ["슬라이스 아몬드", "아몬드 슬라이스"],
+        "zh": ["杏仁片", "切片杏仁"],
+        "zh-tw": ["杏仁片", "切片杏仁"],
+        "es": ["almendras laminadas", "almendras en láminas"],
+        "fr": ["amandes effilées", "amandes en lamelles"]
+      },
+      "common_units": ["cup", "tbsp", "oz", "g"]
+    },
+    {
+      "canonical_name": "almond, slivered",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 579,
+        "protein_g": 21.2,
+        "carbs_g": 21.6,
+        "fat_g": 49.9,
+        "fiber_g": 12.5
+      },
+      "aliases": {
+        "en": ["slivered almonds", "almond slivers"],
+        "ja": ["スライバーアーモンド", "細切りアーモンド"],
+        "ko": ["슬리버드 아몬드", "가늘게 썬 아몬드"],
+        "zh": ["杏仁条", "杏仁丝"],
+        "zh-tw": ["杏仁條", "杏仁絲"],
+        "es": ["almendras fileteadas"],
+        "fr": ["amandes effilées"]
+      },
+      "common_units": ["cup", "tbsp", "oz", "g"]
+    },
+    {
+      "canonical_name": "almond, roasted unsalted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 597,
+        "protein_g": 21.4,
+        "carbs_g": 20.7,
+        "fat_g": 52.5,
+        "fiber_g": 11.8
+      },
+      "aliases": {
+        "en": ["roasted almonds unsalted", "dry roasted almonds"],
+        "ja": ["ローストアーモンド無塩", "素焼きアーモンド"],
+        "ko": ["무염 로스트 아몬드", "구운 아몬드"],
+        "zh": ["烤杏仁无盐", "烘焙杏仁"],
+        "zh-tw": ["烤杏仁無鹽", "烘焙杏仁"],
+        "es": ["almendras tostadas sin sal"],
+        "fr": ["amandes grillées sans sel"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "almond, roasted salted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 607,
+        "protein_g": 21.2,
+        "carbs_g": 19.3,
+        "fat_g": 53.4,
+        "fiber_g": 11.8
+      },
+      "aliases": {
+        "en": ["salted roasted almonds", "roasted salted almonds"],
+        "ja": ["ローストアーモンド塩味", "塩味アーモンド"],
+        "ko": ["가염 로스트 아몬드", "소금 구운 아몬드"],
+        "zh": ["烤杏仁加盐", "咸味杏仁"],
+        "zh-tw": ["烤杏仁加鹽", "鹹味杏仁"],
+        "es": ["almendras tostadas saladas"],
+        "fr": ["amandes grillées salées"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "almond butter",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 614,
+        "protein_g": 20.3,
+        "carbs_g": 18.8,
+        "fat_g": 55.5,
+        "fiber_g": 10.3
+      },
+      "aliases": {
+        "en": ["almond paste spread", "creamy almond butter"],
+        "ja": ["アーモンドバター", "アーモンドペースト"],
+        "ko": ["아몬드 버터", "아몬드 페이스트"],
+        "zh": ["杏仁酱", "杏仁黄油"],
+        "zh-tw": ["杏仁醬", "杏仁奶油"],
+        "es": ["mantequilla de almendra", "crema de almendras"],
+        "fr": ["beurre d'amande", "purée d'amandes"]
+      },
+      "common_units": ["tbsp", "cup", "oz", "g"]
+    },
+    {
+      "canonical_name": "walnut, raw",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 654,
+        "protein_g": 15.2,
+        "carbs_g": 13.7,
+        "fat_g": 65.2,
+        "fiber_g": 6.7
+      },
+      "aliases": {
+        "en": ["raw walnuts", "english walnuts", "walnut halves"],
+        "ja": ["生くるみ", "クルミ", "胡桃"],
+        "ko": ["생호두", "호두"],
+        "zh": ["生核桃", "核桃"],
+        "zh-tw": ["生核桃", "核桃"],
+        "es": ["nueces crudas", "nueces de nogal"],
+        "fr": ["noix crues", "cerneaux de noix"]
+      },
+      "common_units": ["cup", "oz", "g", "piece", "handful"]
+    },
+    {
+      "canonical_name": "walnut, roasted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 666,
+        "protein_g": 15.6,
+        "carbs_g": 13.4,
+        "fat_g": 66.6,
+        "fiber_g": 6.4
+      },
+      "aliases": {
+        "en": ["roasted walnuts", "toasted walnuts"],
+        "ja": ["ローストくるみ", "焼きクルミ"],
+        "ko": ["로스트 호두", "구운 호두"],
+        "zh": ["烤核桃", "烘焙核桃"],
+        "zh-tw": ["烤核桃", "烘焙核桃"],
+        "es": ["nueces tostadas"],
+        "fr": ["noix grillées"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "walnut, candied",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 710,
+        "protein_g": 12.5,
+        "carbs_g": 28.3,
+        "fat_g": 61.2,
+        "fiber_g": 5.2
+      },
+      "aliases": {
+        "en": ["candied walnuts", "sugared walnuts", "glazed walnuts"],
+        "ja": ["キャンディードウォルナッツ", "砂糖がけクルミ"],
+        "ko": ["캔디드 호두", "설탕 호두"],
+        "zh": ["糖渍核桃", "蜜汁核桃"],
+        "zh-tw": ["糖漬核桃", "蜜汁核桃"],
+        "es": ["nueces confitadas", "nueces azucaradas"],
+        "fr": ["noix caramélisées", "noix confites"]
+      },
+      "common_units": ["cup", "oz", "g", "piece"]
+    },
+    {
+      "canonical_name": "pecan, raw",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 691,
+        "protein_g": 9.2,
+        "carbs_g": 13.9,
+        "fat_g": 72.0,
+        "fiber_g": 9.6
+      },
+      "aliases": {
+        "en": ["raw pecans", "pecan halves"],
+        "ja": ["生ピーカン", "ペカンナッツ"],
+        "ko": ["생피칸", "피칸"],
+        "zh": ["生山核桃", "碧根果"],
+        "zh-tw": ["生山核桃", "碧根果"],
+        "es": ["pacanas crudas", "nueces pecanas"],
+        "fr": ["pacanes crues", "noix de pécan"]
+      },
+      "common_units": ["cup", "oz", "g", "piece", "handful"]
+    },
+    {
+      "canonical_name": "pecan, roasted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 710,
+        "protein_g": 9.5,
+        "carbs_g": 13.4,
+        "fat_g": 74.3,
+        "fiber_g": 9.4
+      },
+      "aliases": {
+        "en": ["roasted pecans", "toasted pecans"],
+        "ja": ["ローストピーカン", "焼きピーカン"],
+        "ko": ["로스트 피칸", "구운 피칸"],
+        "zh": ["烤山核桃", "烘焙碧根果"],
+        "zh-tw": ["烤山核桃", "烘焙碧根果"],
+        "es": ["pacanas tostadas"],
+        "fr": ["pacanes grillées"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "cashew, raw",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 553,
+        "protein_g": 18.2,
+        "carbs_g": 30.2,
+        "fat_g": 43.9,
+        "fiber_g": 3.3
+      },
+      "aliases": {
+        "en": ["raw cashews", "cashew nuts"],
+        "ja": ["生カシューナッツ", "カシュー"],
+        "ko": ["생캐슈", "캐슈넛"],
+        "zh": ["生腰果", "腰果"],
+        "zh-tw": ["生腰果", "腰果"],
+        "es": ["anacardos crudos", "cajú"],
+        "fr": ["noix de cajou crues", "anacarde"]
+      },
+      "common_units": ["cup", "oz", "g", "piece", "handful"]
+    },
+    {
+      "canonical_name": "cashew, roasted unsalted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 574,
+        "protein_g": 18.2,
+        "carbs_g": 32.7,
+        "fat_g": 46.4,
+        "fiber_g": 3.0
+      },
+      "aliases": {
+        "en": ["roasted cashews unsalted", "dry roasted cashews"],
+        "ja": ["ローストカシュー無塩", "素焼きカシューナッツ"],
+        "ko": ["무염 로스트 캐슈", "구운 캐슈넛"],
+        "zh": ["烤腰果无盐", "烘焙腰果"],
+        "zh-tw": ["烤腰果無鹽", "烘焙腰果"],
+        "es": ["anacardos tostados sin sal"],
+        "fr": ["noix de cajou grillées sans sel"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "cashew, roasted salted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 582,
+        "protein_g": 15.3,
+        "carbs_g": 30.5,
+        "fat_g": 47.8,
+        "fiber_g": 3.0
+      },
+      "aliases": {
+        "en": ["salted cashews", "roasted salted cashews"],
+        "ja": ["ローストカシュー塩味", "塩味カシューナッツ"],
+        "ko": ["가염 캐슈", "소금 구운 캐슈"],
+        "zh": ["烤腰果加盐", "咸味腰果"],
+        "zh-tw": ["烤腰果加鹽", "鹹味腰果"],
+        "es": ["anacardos tostados salados"],
+        "fr": ["noix de cajou grillées salées"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "cashew butter",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 587,
+        "protein_g": 17.6,
+        "carbs_g": 27.6,
+        "fat_g": 49.4,
+        "fiber_g": 2.0
+      },
+      "aliases": {
+        "en": ["cashew nut butter", "creamy cashew butter"],
+        "ja": ["カシューバター", "カシューナッツペースト"],
+        "ko": ["캐슈 버터", "캐슈넛 버터"],
+        "zh": ["腰果酱", "腰果黄油"],
+        "zh-tw": ["腰果醬", "腰果奶油"],
+        "es": ["mantequilla de anacardo", "crema de cajú"],
+        "fr": ["beurre de cajou", "purée de cajou"]
+      },
+      "common_units": ["tbsp", "cup", "oz", "g"]
+    },
+    {
+      "canonical_name": "pistachio, raw",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 562,
+        "protein_g": 20.6,
+        "carbs_g": 27.7,
+        "fat_g": 45.4,
+        "fiber_g": 10.3
+      },
+      "aliases": {
+        "en": ["raw pistachios", "pistachio nuts"],
+        "ja": ["生ピスタチオ", "ピスタチオナッツ"],
+        "ko": ["생피스타치오", "피스타치오"],
+        "zh": ["生开心果", "开心果"],
+        "zh-tw": ["生開心果", "開心果"],
+        "es": ["pistachos crudos", "pistaches"],
+        "fr": ["pistaches crues"]
+      },
+      "common_units": ["cup", "oz", "g", "piece", "handful"]
+    },
+    {
+      "canonical_name": "pistachio, roasted unsalted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 572,
+        "protein_g": 21.1,
+        "carbs_g": 27.5,
+        "fat_g": 45.8,
+        "fiber_g": 10.6
+      },
+      "aliases": {
+        "en": ["roasted pistachios unsalted", "dry roasted pistachios"],
+        "ja": ["ローストピスタチオ無塩", "素焼きピスタチオ"],
+        "ko": ["무염 로스트 피스타치오", "구운 피스타치오"],
+        "zh": ["烤开心果无盐", "烘焙开心果"],
+        "zh-tw": ["烤開心果無鹽", "烘焙開心果"],
+        "es": ["pistachos tostados sin sal"],
+        "fr": ["pistaches grillées sans sel"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "pistachio, roasted salted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 569,
+        "protein_g": 21.4,
+        "carbs_g": 27.2,
+        "fat_g": 45.4,
+        "fiber_g": 10.6
+      },
+      "aliases": {
+        "en": ["salted pistachios", "roasted salted pistachios"],
+        "ja": ["ローストピスタチオ塩味", "塩味ピスタチオ"],
+        "ko": ["가염 피스타치오", "소금 구운 피스타치오"],
+        "zh": ["烤开心果加盐", "咸味开心果"],
+        "zh-tw": ["烤開心果加鹽", "鹹味開心果"],
+        "es": ["pistachos tostados salados"],
+        "fr": ["pistaches grillées salées"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "hazelnut, raw",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 628,
+        "protein_g": 15.0,
+        "carbs_g": 16.7,
+        "fat_g": 60.8,
+        "fiber_g": 9.7
+      },
+      "aliases": {
+        "en": ["raw hazelnuts", "filberts", "cobnuts"],
+        "ja": ["生ヘーゼルナッツ", "ヘーゼルナッツ"],
+        "ko": ["생헤이즐넛", "개암"],
+        "zh": ["生榛子", "榛果"],
+        "zh-tw": ["生榛子", "榛果"],
+        "es": ["avellanas crudas"],
+        "fr": ["noisettes crues"]
+      },
+      "common_units": ["cup", "oz", "g", "piece", "handful"]
+    },
+    {
+      "canonical_name": "hazelnut, roasted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 646,
+        "protein_g": 15.0,
+        "carbs_g": 17.0,
+        "fat_g": 62.4,
+        "fiber_g": 9.4
+      },
+      "aliases": {
+        "en": ["roasted hazelnuts", "toasted hazelnuts"],
+        "ja": ["ローストヘーゼルナッツ", "焼きヘーゼルナッツ"],
+        "ko": ["로스트 헤이즐넛", "구운 헤이즐넛"],
+        "zh": ["烤榛子", "烘焙榛果"],
+        "zh-tw": ["烤榛子", "烘焙榛果"],
+        "es": ["avellanas tostadas"],
+        "fr": ["noisettes grillées"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "macadamia nut, raw",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 718,
+        "protein_g": 7.9,
+        "carbs_g": 13.8,
+        "fat_g": 75.8,
+        "fiber_g": 8.6
+      },
+      "aliases": {
+        "en": ["raw macadamias", "macadamia nuts"],
+        "ja": ["生マカダミアナッツ", "マカダミア"],
+        "ko": ["생마카다미아", "마카다미아 너트"],
+        "zh": ["生夏威夷果", "澳洲坚果"],
+        "zh-tw": ["生夏威夷果", "澳洲堅果"],
+        "es": ["nueces de macadamia crudas"],
+        "fr": ["noix de macadamia crues"]
+      },
+      "common_units": ["cup", "oz", "g", "piece", "handful"]
+    },
+    {
+      "canonical_name": "macadamia nut, roasted unsalted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 718,
+        "protein_g": 7.9,
+        "carbs_g": 13.4,
+        "fat_g": 76.1,
+        "fiber_g": 8.0
+      },
+      "aliases": {
+        "en": ["roasted macadamias unsalted", "dry roasted macadamias"],
+        "ja": ["ローストマカダミア無塩", "素焼きマカダミア"],
+        "ko": ["무염 로스트 마카다미아", "구운 마카다미아"],
+        "zh": ["烤夏威夷果无盐", "烘焙澳洲坚果"],
+        "zh-tw": ["烤夏威夷果無鹽", "烘焙澳洲堅果"],
+        "es": ["macadamias tostadas sin sal"],
+        "fr": ["noix de macadamia grillées sans sel"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "macadamia nut, roasted salted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 718,
+        "protein_g": 7.9,
+        "carbs_g": 13.4,
+        "fat_g": 76.1,
+        "fiber_g": 8.0
+      },
+      "aliases": {
+        "en": ["salted macadamias", "roasted salted macadamias"],
+        "ja": ["ローストマカダミア塩味", "塩味マカダミア"],
+        "ko": ["가염 마카다미아", "소금 구운 마카다미아"],
+        "zh": ["烤夏威夷果加盐", "咸味澳洲坚果"],
+        "zh-tw": ["烤夏威夷果加鹽", "鹹味澳洲堅果"],
+        "es": ["macadamias tostadas saladas"],
+        "fr": ["noix de macadamia grillées salées"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "brazil nut, raw",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 656,
+        "protein_g": 14.3,
+        "carbs_g": 12.3,
+        "fat_g": 66.4,
+        "fiber_g": 7.5
+      },
+      "aliases": {
+        "en": ["raw brazil nuts", "brazil nuts"],
+        "ja": ["生ブラジルナッツ", "ブラジリアンナッツ"],
+        "ko": ["생브라질너트", "브라질 너트"],
+        "zh": ["生巴西坚果", "巴西果"],
+        "zh-tw": ["生巴西堅果", "巴西果"],
+        "es": ["nueces de brasil crudas", "castañas de pará"],
+        "fr": ["noix du brésil crues"]
+      },
+      "common_units": ["cup", "oz", "g", "piece", "handful"]
+    },
+    {
+      "canonical_name": "pine nut",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 673,
+        "protein_g": 13.7,
+        "carbs_g": 13.1,
+        "fat_g": 68.4,
+        "fiber_g": 3.7
+      },
+      "aliases": {
+        "en": ["pine nuts", "pignoli", "pinon nuts"],
+        "ja": ["松の実", "パインナッツ"],
+        "ko": ["잣", "송자"],
+        "zh": ["松子", "松仁"],
+        "zh-tw": ["松子", "松仁"],
+        "es": ["piñones"],
+        "fr": ["pignons de pin"]
+      },
+      "common_units": ["cup", "tbsp", "oz", "g"]
+    },
+    {
+      "canonical_name": "chestnut, raw",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 213,
+        "protein_g": 2.4,
+        "carbs_g": 45.5,
+        "fat_g": 2.3,
+        "fiber_g": 8.1
+      },
+      "aliases": {
+        "en": ["raw chestnuts", "fresh chestnuts"],
+        "ja": ["生栗", "くり"],
+        "ko": ["생밤", "밤"],
+        "zh": ["生板栗", "栗子"],
+        "zh-tw": ["生板栗", "栗子"],
+        "es": ["castañas crudas"],
+        "fr": ["châtaignes crues", "marrons"]
+      },
+      "common_units": ["cup", "oz", "g", "piece"]
+    },
+    {
+      "canonical_name": "chestnut, roasted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 245,
+        "protein_g": 3.2,
+        "carbs_g": 52.9,
+        "fat_g": 2.2,
+        "fiber_g": 5.1
+      },
+      "aliases": {
+        "en": ["roasted chestnuts", "roast chestnuts"],
+        "ja": ["焼き栗", "ローストくり"],
+        "ko": ["군밤", "구운 밤"],
+        "zh": ["烤板栗", "炒栗子"],
+        "zh-tw": ["烤板栗", "炒栗子"],
+        "es": ["castañas asadas"],
+        "fr": ["châtaignes grillées", "marrons grillés"]
+      },
+      "common_units": ["cup", "oz", "g", "piece"]
+    },
+    {
+      "canonical_name": "peanut, raw",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 567,
+        "protein_g": 25.8,
+        "carbs_g": 16.1,
+        "fat_g": 49.2,
+        "fiber_g": 8.5
+      },
+      "aliases": {
+        "en": ["raw peanuts", "groundnuts", "goobers"],
+        "ja": ["生ピーナッツ", "落花生"],
+        "ko": ["생땅콩", "낙화생"],
+        "zh": ["生花生", "落花生"],
+        "zh-tw": ["生花生", "落花生"],
+        "es": ["cacahuetes crudos", "maní crudo"],
+        "fr": ["arachides crues", "cacahuètes crues"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "peanut, roasted unsalted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 587,
+        "protein_g": 24.4,
+        "carbs_g": 21.3,
+        "fat_g": 49.7,
+        "fiber_g": 8.0
+      },
+      "aliases": {
+        "en": ["roasted peanuts unsalted", "dry roasted peanuts"],
+        "ja": ["ローストピーナッツ無塩", "素焼き落花生"],
+        "ko": ["무염 로스트 땅콩", "구운 땅콩"],
+        "zh": ["烤花生无盐", "烘焙花生"],
+        "zh-tw": ["烤花生無鹽", "烘焙花生"],
+        "es": ["cacahuetes tostados sin sal"],
+        "fr": ["arachides grillées sans sel"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "peanut, roasted salted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 599,
+        "protein_g": 28.0,
+        "carbs_g": 15.3,
+        "fat_g": 52.5,
+        "fiber_g": 8.4
+      },
+      "aliases": {
+        "en": ["salted peanuts", "roasted salted peanuts"],
+        "ja": ["ローストピーナッツ塩味", "塩味落花生"],
+        "ko": ["가염 땅콩", "소금 구운 땅콩"],
+        "zh": ["烤花生加盐", "咸味花生"],
+        "zh-tw": ["烤花生加鹽", "鹹味花生"],
+        "es": ["cacahuetes tostados salados"],
+        "fr": ["arachides grillées salées"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "peanut butter, smooth",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 588,
+        "protein_g": 25.1,
+        "carbs_g": 19.6,
+        "fat_g": 50.4,
+        "fiber_g": 6.0
+      },
+      "aliases": {
+        "en": ["smooth peanut butter", "creamy peanut butter"],
+        "ja": ["スムースピーナッツバター", "クリーミーピーナッツバター"],
+        "ko": ["스무스 땅콩 버터", "부드러운 땅콩버터"],
+        "zh": ["柔滑花生酱", "顺滑花生酱"],
+        "zh-tw": ["柔滑花生醬", "順滑花生醬"],
+        "es": ["mantequilla de cacahuete suave", "crema de maní"],
+        "fr": ["beurre de cacahuète lisse"]
+      },
+      "common_units": ["tbsp", "cup", "oz", "g"]
+    },
+    {
+      "canonical_name": "peanut butter, crunchy",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 589,
+        "protein_g": 24.1,
+        "carbs_g": 21.6,
+        "fat_g": 49.9,
+        "fiber_g": 6.6
+      },
+      "aliases": {
+        "en": ["crunchy peanut butter", "chunky peanut butter"],
+        "ja": ["クランチピーナッツバター", "粒入りピーナッツバター"],
+        "ko": ["크런치 땅콩 버터", "알갱이 땅콩버터"],
+        "zh": ["颗粒花生酱", "粗粒花生酱"],
+        "zh-tw": ["顆粒花生醬", "粗粒花生醬"],
+        "es": ["mantequilla de cacahuete crujiente"],
+        "fr": ["beurre de cacahuète croquant"]
+      },
+      "common_units": ["tbsp", "cup", "oz", "g"]
+    },
+    {
+      "canonical_name": "sesame seeds, white",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 573,
+        "protein_g": 17.7,
+        "carbs_g": 23.4,
+        "fat_g": 49.7,
+        "fiber_g": 11.8
+      },
+      "aliases": {
+        "en": ["white sesame seeds", "hulled sesame"],
+        "ja": ["白ごま", "ゴマ"],
+        "ko": ["흰깨", "참깨"],
+        "zh": ["白芝麻"],
+        "zh-tw": ["白芝麻"],
+        "es": ["semillas de sésamo blanco", "ajonjolí blanco"],
+        "fr": ["graines de sésame blanc"]
+      },
+      "common_units": ["tbsp", "cup", "oz", "g", "tsp"]
+    },
+    {
+      "canonical_name": "sesame seeds, black",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 565,
+        "protein_g": 18.2,
+        "carbs_g": 25.7,
+        "fat_g": 48.0,
+        "fiber_g": 14.0
+      },
+      "aliases": {
+        "en": ["black sesame seeds", "unhulled sesame"],
+        "ja": ["黒ごま", "黒胡麻"],
+        "ko": ["검은깨", "흑임자"],
+        "zh": ["黑芝麻"],
+        "zh-tw": ["黑芝麻"],
+        "es": ["semillas de sésamo negro", "ajonjolí negro"],
+        "fr": ["graines de sésame noir"]
+      },
+      "common_units": ["tbsp", "cup", "oz", "g", "tsp"]
+    },
+    {
+      "canonical_name": "sesame seeds, toasted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 565,
+        "protein_g": 16.9,
+        "carbs_g": 25.7,
+        "fat_g": 48.0,
+        "fiber_g": 16.9
+      },
+      "aliases": {
+        "en": ["toasted sesame seeds", "roasted sesame"],
+        "ja": ["炒りごま", "焼きごま"],
+        "ko": ["볶은 참깨", "볶은 깨"],
+        "zh": ["炒芝麻", "烤芝麻"],
+        "zh-tw": ["炒芝麻", "烤芝麻"],
+        "es": ["semillas de sésamo tostado"],
+        "fr": ["graines de sésame grillées"]
+      },
+      "common_units": ["tbsp", "cup", "oz", "g", "tsp"]
+    },
+    {
+      "canonical_name": "tahini",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 595,
+        "protein_g": 17.0,
+        "carbs_g": 21.2,
+        "fat_g": 53.8,
+        "fiber_g": 9.3
+      },
+      "aliases": {
+        "en": ["tahini paste", "sesame seed paste", "sesame butter"],
+        "ja": ["タヒニ", "ゴマペースト", "練りごま"],
+        "ko": ["타히니", "참깨 페이스트"],
+        "zh": ["芝麻酱", "芝麻糊"],
+        "zh-tw": ["芝麻醬", "芝麻糊"],
+        "es": ["tahini", "pasta de sésamo"],
+        "fr": ["tahini", "purée de sésame"]
+      },
+      "common_units": ["tbsp", "cup", "oz", "g"]
+    },
+    {
+      "canonical_name": "sunflower seeds, raw",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 584,
+        "protein_g": 20.8,
+        "carbs_g": 20.0,
+        "fat_g": 51.5,
+        "fiber_g": 8.6
+      },
+      "aliases": {
+        "en": ["raw sunflower seeds", "sunflower kernels"],
+        "ja": ["生ひまわりの種", "サンフラワーシード"],
+        "ko": ["생해바라기씨", "해바라기 씨"],
+        "zh": ["生葵花籽", "瓜子"],
+        "zh-tw": ["生葵花籽", "瓜子"],
+        "es": ["semillas de girasol crudas", "pipas crudas"],
+        "fr": ["graines de tournesol crues"]
+      },
+      "common_units": ["cup", "oz", "g", "tbsp"]
+    },
+    {
+      "canonical_name": "sunflower seeds, roasted unsalted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 582,
+        "protein_g": 20.8,
+        "carbs_g": 24.1,
+        "fat_g": 49.8,
+        "fiber_g": 11.1
+      },
+      "aliases": {
+        "en": ["roasted sunflower seeds unsalted", "dry roasted sunflower"],
+        "ja": ["ローストひまわり種無塩", "素焼きサンフラワー"],
+        "ko": ["무염 로스트 해바라기씨"],
+        "zh": ["烤葵花籽无盐"],
+        "zh-tw": ["烤葵花籽無鹽"],
+        "es": ["semillas de girasol tostadas sin sal"],
+        "fr": ["graines de tournesol grillées sans sel"]
+      },
+      "common_units": ["cup", "oz", "g", "tbsp"]
+    },
+    {
+      "canonical_name": "sunflower seeds, roasted salted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 619,
+        "protein_g": 19.3,
+        "carbs_g": 19.9,
+        "fat_g": 56.8,
+        "fiber_g": 6.0
+      },
+      "aliases": {
+        "en": ["salted sunflower seeds", "roasted salted sunflower"],
+        "ja": ["ローストひまわり種塩味", "塩味サンフラワー"],
+        "ko": ["가염 해바라기씨", "소금 구운 해바라기씨"],
+        "zh": ["烤葵花籽加盐", "咸味瓜子"],
+        "zh-tw": ["烤葵花籽加鹽", "鹹味瓜子"],
+        "es": ["semillas de girasol tostadas saladas"],
+        "fr": ["graines de tournesol grillées salées"]
+      },
+      "common_units": ["cup", "oz", "g", "tbsp"]
+    },
+    {
+      "canonical_name": "sunflower seed butter",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 617,
+        "protein_g": 20.0,
+        "carbs_g": 18.3,
+        "fat_g": 55.0,
+        "fiber_g": 6.7
+      },
+      "aliases": {
+        "en": ["sunflower butter", "sunbutter"],
+        "ja": ["ひまわりの種バター", "サンフラワーバター"],
+        "ko": ["해바라기씨 버터", "선버터"],
+        "zh": ["葵花籽酱", "葵花籽黄油"],
+        "zh-tw": ["葵花籽醬", "葵花籽奶油"],
+        "es": ["mantequilla de semillas de girasol"],
+        "fr": ["beurre de graines de tournesol"]
+      },
+      "common_units": ["tbsp", "cup", "oz", "g"]
+    },
+    {
+      "canonical_name": "pumpkin seeds, raw",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 446,
+        "protein_g": 18.6,
+        "carbs_g": 53.8,
+        "fat_g": 19.4,
+        "fiber_g": 18.4
+      },
+      "aliases": {
+        "en": ["raw pumpkin seeds", "raw pepitas"],
+        "ja": ["生パンプキンシード", "かぼちゃの種"],
+        "ko": ["생호박씨", "펌킨시드"],
+        "zh": ["生南瓜子"],
+        "zh-tw": ["生南瓜子"],
+        "es": ["semillas de calabaza crudas", "pepitas crudas"],
+        "fr": ["graines de citrouille crues"]
+      },
+      "common_units": ["cup", "oz", "g", "tbsp"]
+    },
+    {
+      "canonical_name": "pumpkin seeds, roasted unsalted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 559,
+        "protein_g": 30.2,
+        "carbs_g": 14.7,
+        "fat_g": 49.1,
+        "fiber_g": 6.5
+      },
+      "aliases": {
+        "en": ["roasted pumpkin seeds unsalted", "roasted pepitas"],
+        "ja": ["ローストパンプキンシード無塩", "焼きかぼちゃ種"],
+        "ko": ["무염 로스트 호박씨", "구운 펌킨시드"],
+        "zh": ["烤南瓜子无盐"],
+        "zh-tw": ["烤南瓜子無鹽"],
+        "es": ["semillas de calabaza tostadas sin sal"],
+        "fr": ["graines de citrouille grillées sans sel"]
+      },
+      "common_units": ["cup", "oz", "g", "tbsp"]
+    },
+    {
+      "canonical_name": "pumpkin seeds, roasted salted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 574,
+        "protein_g": 29.8,
+        "carbs_g": 13.9,
+        "fat_g": 49.1,
+        "fiber_g": 6.0
+      },
+      "aliases": {
+        "en": ["salted pumpkin seeds", "salted pepitas"],
+        "ja": ["ローストパンプキンシード塩味", "塩味かぼちゃ種"],
+        "ko": ["가염 호박씨", "소금 구운 펌킨시드"],
+        "zh": ["烤南瓜子加盐", "咸味南瓜子"],
+        "zh-tw": ["烤南瓜子加鹽", "鹹味南瓜子"],
+        "es": ["semillas de calabaza tostadas saladas"],
+        "fr": ["graines de citrouille grillées salées"]
+      },
+      "common_units": ["cup", "oz", "g", "tbsp"]
+    },
+    {
+      "canonical_name": "chia seeds",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 486,
+        "protein_g": 16.5,
+        "carbs_g": 42.1,
+        "fat_g": 30.7,
+        "fiber_g": 34.4
+      },
+      "aliases": {
+        "en": ["chia seed"],
+        "ja": ["チアシード"],
+        "ko": ["치아씨드", "치아시드"],
+        "zh": ["奇亚籽", "鼠尾草籽"],
+        "zh-tw": ["奇亞籽", "鼠尾草籽"],
+        "es": ["semillas de chía"],
+        "fr": ["graines de chia"]
+      },
+      "common_units": ["tbsp", "cup", "oz", "g"]
+    },
+    {
+      "canonical_name": "flax seeds, whole",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 534,
+        "protein_g": 18.3,
+        "carbs_g": 28.9,
+        "fat_g": 42.2,
+        "fiber_g": 27.3
+      },
+      "aliases": {
+        "en": ["flaxseed", "linseed", "whole flax"],
+        "ja": ["フラックスシード", "亜麻仁"],
+        "ko": ["아마씨", "플랙스시드"],
+        "zh": ["亚麻籽"],
+        "zh-tw": ["亞麻籽"],
+        "es": ["semillas de lino enteras", "linaza"],
+        "fr": ["graines de lin entières"]
+      },
+      "common_units": ["tbsp", "cup", "oz", "g"]
+    },
+    {
+      "canonical_name": "flax seeds, ground",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 534,
+        "protein_g": 18.3,
+        "carbs_g": 28.9,
+        "fat_g": 42.2,
+        "fiber_g": 27.3
+      },
+      "aliases": {
+        "en": ["ground flaxseed", "flax meal", "flaxseed meal"],
+        "ja": ["フラックスシードパウダー", "亜麻仁粉"],
+        "ko": ["갈은 아마씨", "아마씨 가루"],
+        "zh": ["亚麻籽粉", "磨碎亚麻籽"],
+        "zh-tw": ["亞麻籽粉", "磨碎亞麻籽"],
+        "es": ["semillas de lino molidas", "harina de linaza"],
+        "fr": ["graines de lin moulues", "farine de lin"]
+      },
+      "common_units": ["tbsp", "cup", "oz", "g"]
+    },
+    {
+      "canonical_name": "hemp hearts",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 553,
+        "protein_g": 31.6,
+        "carbs_g": 10.9,
+        "fat_g": 48.8,
+        "fiber_g": 4.0
+      },
+      "aliases": {
+        "en": ["hemp seeds", "shelled hemp seeds", "hulled hemp"],
+        "ja": ["ヘンプシード", "麻の実"],
+        "ko": ["헴프씨드", "햄프시드"],
+        "zh": ["大麻籽", "火麻仁"],
+        "zh-tw": ["大麻籽", "火麻仁"],
+        "es": ["semillas de cáñamo", "corazones de cáñamo"],
+        "fr": ["graines de chanvre décortiquées"]
+      },
+      "common_units": ["tbsp", "cup", "oz", "g"]
+    },
+    {
+      "canonical_name": "poppy seeds",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 525,
+        "protein_g": 17.9,
+        "carbs_g": 28.1,
+        "fat_g": 41.6,
+        "fiber_g": 19.5
+      },
+      "aliases": {
+        "en": ["poppy seed"],
+        "ja": ["ポピーシード", "けしの実"],
+        "ko": ["양귀비씨", "포피시드"],
+        "zh": ["罂粟籽"],
+        "zh-tw": ["罌粟籽"],
+        "es": ["semillas de amapola"],
+        "fr": ["graines de pavot"]
+      },
+      "common_units": ["tbsp", "tsp", "oz", "g"]
+    },
+    {
+      "canonical_name": "nigella seeds",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 345,
+        "protein_g": 17.8,
+        "carbs_g": 52.4,
+        "fat_g": 14.6,
+        "fiber_g": 10.5
+      },
+      "aliases": {
+        "en": ["black cumin", "black seed", "kalonji"],
+        "ja": ["ブラッククミン", "ニゲラシード"],
+        "ko": ["블랙커민", "니겔라"],
+        "zh": ["黑种草籽", "黑孜然"],
+        "zh-tw": ["黑種草籽", "黑孜然"],
+        "es": ["semillas de nigella", "comino negro"],
+        "fr": ["graines de nigelle", "cumin noir"]
+      },
+      "common_units": ["tsp", "tbsp", "oz", "g"]
+    },
+    {
+      "canonical_name": "ginkgo nuts",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 182,
+        "protein_g": 4.3,
+        "carbs_g": 37.6,
+        "fat_g": 1.7,
+        "fiber_g": 0.6
+      },
+      "aliases": {
+        "en": ["ginkgo", "ginkgo biloba nuts", "maidenhair nuts"],
+        "ja": ["銀杏", "ぎんなん"],
+        "ko": ["은행", "은행열매"],
+        "zh": ["银杏果", "白果"],
+        "zh-tw": ["銀杏果", "白果"],
+        "es": ["nueces de ginkgo"],
+        "fr": ["noix de ginkgo"]
+      },
+      "common_units": ["cup", "oz", "g", "piece"]
+    },
+    {
+      "canonical_name": "lotus seeds, dried",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 332,
+        "protein_g": 15.4,
+        "carbs_g": 64.5,
+        "fat_g": 1.9,
+        "fiber_g": 14.5
+      },
+      "aliases": {
+        "en": ["dried lotus seeds", "lotus nuts"],
+        "ja": ["蓮の実", "ハスの実"],
+        "ko": ["연밥", "연자육"],
+        "zh": ["莲子", "干莲子"],
+        "zh-tw": ["蓮子", "乾蓮子"],
+        "es": ["semillas de loto secas"],
+        "fr": ["graines de lotus séchées"]
+      },
+      "common_units": ["cup", "oz", "g", "piece"]
+    },
+    {
+      "canonical_name": "coconut, shredded unsweetened",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 650,
+        "protein_g": 6.9,
+        "carbs_g": 23.7,
+        "fat_g": 64.5,
+        "fiber_g": 16.3
+      },
+      "aliases": {
+        "en": ["unsweetened shredded coconut", "desiccated coconut"],
+        "ja": ["無糖ココナッツファイン", "ココナッツフレーク"],
+        "ko": ["무가당 코코넛", "건조 코코넛"],
+        "zh": ["无糖椰丝", "椰蓉"],
+        "zh-tw": ["無糖椰絲", "椰蓉"],
+        "es": ["coco rallado sin azúcar"],
+        "fr": ["noix de coco râpée non sucrée"]
+      },
+      "common_units": ["cup", "oz", "g", "tbsp"]
+    },
+    {
+      "canonical_name": "coconut, shredded sweetened",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 501,
+        "protein_g": 3.0,
+        "carbs_g": 44.4,
+        "fat_g": 35.1,
+        "fiber_g": 11.1
+      },
+      "aliases": {
+        "en": ["sweetened shredded coconut", "sweetened coconut flakes"],
+        "ja": ["加糖ココナッツファイン", "甘いココナッツフレーク"],
+        "ko": ["가당 코코넛", "달콤한 코코넛"],
+        "zh": ["加糖椰丝", "甜椰蓉"],
+        "zh-tw": ["加糖椰絲", "甜椰蓉"],
+        "es": ["coco rallado azucarado"],
+        "fr": ["noix de coco râpée sucrée"]
+      },
+      "common_units": ["cup", "oz", "g", "tbsp"]
+    },
+    {
+      "canonical_name": "coconut flakes",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 660,
+        "protein_g": 6.3,
+        "carbs_g": 24.2,
+        "fat_g": 64.5,
+        "fiber_g": 16.3
+      },
+      "aliases": {
+        "en": ["coconut chips", "large coconut flakes"],
+        "ja": ["ココナッツフレーク", "ココナッツチップス"],
+        "ko": ["코코넛 플레이크", "코코넛 칩"],
+        "zh": ["椰片", "椰子片"],
+        "zh-tw": ["椰片", "椰子片"],
+        "es": ["hojuelas de coco", "chips de coco"],
+        "fr": ["flocons de noix de coco", "copeaux de coco"]
+      },
+      "common_units": ["cup", "oz", "g", "tbsp"]
+    },
+    {
+      "canonical_name": "coconut milk, canned",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 230,
+        "protein_g": 2.3,
+        "carbs_g": 5.5,
+        "fat_g": 23.8,
+        "fiber_g": 2.2
+      },
+      "aliases": {
+        "en": ["canned coconut milk", "coconut milk"],
+        "ja": ["ココナッツミルク缶詰", "ココナッツミルク"],
+        "ko": ["코코넛 밀크", "코코넛 우유"],
+        "zh": ["椰奶", "椰浆"],
+        "zh-tw": ["椰奶", "椰漿"],
+        "es": ["leche de coco enlatada"],
+        "fr": ["lait de coco en conserve"]
+      },
+      "common_units": ["cup", "ml", "can", "tbsp"]
+    },
+    {
+      "canonical_name": "coconut cream, canned",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 330,
+        "protein_g": 3.6,
+        "carbs_g": 6.7,
+        "fat_g": 34.7,
+        "fiber_g": 2.2
+      },
+      "aliases": {
+        "en": ["canned coconut cream", "coconut cream"],
+        "ja": ["ココナッツクリーム缶詰", "ココナッツクリーム"],
+        "ko": ["코코넛 크림"],
+        "zh": ["椰浆", "椰子奶油"],
+        "zh-tw": ["椰漿", "椰子奶油"],
+        "es": ["crema de coco enlatada"],
+        "fr": ["crème de coco en conserve"]
+      },
+      "common_units": ["cup", "ml", "can", "tbsp"]
+    },
+    {
+      "canonical_name": "mixed nuts, raw",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 607,
+        "protein_g": 16.7,
+        "carbs_g": 21.7,
+        "fat_g": 54.2,
+        "fiber_g": 7.2
+      },
+      "aliases": {
+        "en": ["raw mixed nuts", "raw nut mix"],
+        "ja": ["生ミックスナッツ", "生ナッツミックス"],
+        "ko": ["생 혼합 견과류", "믹스 너트"],
+        "zh": ["生综合坚果", "混合坚果"],
+        "zh-tw": ["生綜合堅果", "混合堅果"],
+        "es": ["nueces mixtas crudas", "mezcla de frutos secos"],
+        "fr": ["mélange de noix crues"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "mixed nuts, roasted unsalted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 615,
+        "protein_g": 18.0,
+        "carbs_g": 23.7,
+        "fat_g": 53.7,
+        "fiber_g": 7.5
+      },
+      "aliases": {
+        "en": ["roasted mixed nuts unsalted", "dry roasted mixed nuts"],
+        "ja": ["ローストミックスナッツ無塩", "素焼きミックスナッツ"],
+        "ko": ["무염 로스트 혼합 견과류"],
+        "zh": ["烤综合坚果无盐"],
+        "zh-tw": ["烤綜合堅果無鹽"],
+        "es": ["nueces mixtas tostadas sin sal"],
+        "fr": ["mélange de noix grillées sans sel"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "mixed nuts, roasted salted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 615,
+        "protein_g": 17.3,
+        "carbs_g": 22.0,
+        "fat_g": 54.5,
+        "fiber_g": 7.0
+      },
+      "aliases": {
+        "en": ["salted mixed nuts", "roasted salted mixed nuts"],
+        "ja": ["ローストミックスナッツ塩味", "塩味ミックスナッツ"],
+        "ko": ["가염 혼합 견과류", "소금 구운 믹스 너트"],
+        "zh": ["烤综合坚果加盐", "咸味混合坚果"],
+        "zh-tw": ["烤綜合堅果加鹽", "鹹味混合堅果"],
+        "es": ["nueces mixtas tostadas saladas"],
+        "fr": ["mélange de noix grillées salées"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "trail mix",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 462,
+        "protein_g": 13.8,
+        "carbs_g": 44.9,
+        "fat_g": 29.4,
+        "fiber_g": 5.9
+      },
+      "aliases": {
+        "en": ["gorp", "scroggin", "nuts and raisins"],
+        "ja": ["トレイルミックス", "ナッツ＆ドライフルーツ"],
+        "ko": ["트레일 믹스", "견과류 건과일 믹스"],
+        "zh": ["什锦坚果干果", "综合坚果"],
+        "zh-tw": ["什錦堅果乾果", "綜合堅果"],
+        "es": ["mezcla de frutos secos y pasas"],
+        "fr": ["mélange montagnard"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "almond flour",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 571,
+        "protein_g": 21.4,
+        "carbs_g": 21.4,
+        "fat_g": 50.0,
+        "fiber_g": 10.7
+      },
+      "aliases": {
+        "en": ["ground almonds", "almond meal"],
+        "ja": ["アーモンドフラワー", "アーモンドパウダー"],
+        "ko": ["아몬드 가루", "아몬드 파우더"],
+        "zh": ["杏仁粉"],
+        "zh-tw": ["杏仁粉"],
+        "es": ["harina de almendra"],
+        "fr": ["farine d'amande", "poudre d'amande"]
+      },
+      "common_units": ["cup", "oz", "g", "tbsp"]
+    },
+    {
+      "canonical_name": "hazelnut flour",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 628,
+        "protein_g": 14.1,
+        "carbs_g": 17.6,
+        "fat_g": 60.8,
+        "fiber_g": 9.4
+      },
+      "aliases": {
+        "en": ["ground hazelnuts", "hazelnut meal"],
+        "ja": ["ヘーゼルナッツフラワー", "ヘーゼルナッツパウダー"],
+        "ko": ["헤이즐넛 가루", "헤이즐넛 파우더"],
+        "zh": ["榛子粉"],
+        "zh-tw": ["榛子粉"],
+        "es": ["harina de avellana"],
+        "fr": ["farine de noisette", "poudre de noisette"]
+      },
+      "common_units": ["cup", "oz", "g", "tbsp"]
+    },
+    {
+      "canonical_name": "coconut flour",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 400,
+        "protein_g": 19.3,
+        "carbs_g": 60.0,
+        "fat_g": 13.3,
+        "fiber_g": 38.5
+      },
+      "aliases": {
+        "en": ["ground coconut"],
+        "ja": ["ココナッツフラワー", "ココナッツ粉"],
+        "ko": ["코코넛 가루", "코코넛 플라워"],
+        "zh": ["椰子粉"],
+        "zh-tw": ["椰子粉"],
+        "es": ["harina de coco"],
+        "fr": ["farine de noix de coco"]
+      },
+      "common_units": ["cup", "oz", "g", "tbsp"]
+    },
+    {
+      "canonical_name": "pecan pieces",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 691,
+        "protein_g": 9.2,
+        "carbs_g": 13.9,
+        "fat_g": 72.0,
+        "fiber_g": 9.6
+      },
+      "aliases": {
+        "en": ["chopped pecans", "pecan chips"],
+        "ja": ["ピーカン砕片", "刻みピーカン"],
+        "ko": ["잘게 썬 피칸", "피칸 조각"],
+        "zh": ["山核桃碎", "碎碧根果"],
+        "zh-tw": ["山核桃碎", "碎碧根果"],
+        "es": ["trozos de pacana", "pacanas picadas"],
+        "fr": ["morceaux de pacanes", "pacanes concassées"]
+      },
+      "common_units": ["cup", "oz", "g", "tbsp"]
+    },
+    {
+      "canonical_name": "walnut pieces",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 654,
+        "protein_g": 15.2,
+        "carbs_g": 13.7,
+        "fat_g": 65.2,
+        "fiber_g": 6.7
+      },
+      "aliases": {
+        "en": ["chopped walnuts", "walnut chips"],
+        "ja": ["くるみ砕片", "刻みクルミ"],
+        "ko": ["잘게 썬 호두", "호두 조각"],
+        "zh": ["核桃碎", "碎核桃"],
+        "zh-tw": ["核桃碎", "碎核桃"],
+        "es": ["trozos de nuez", "nueces picadas"],
+        "fr": ["morceaux de noix", "noix concassées"]
+      },
+      "common_units": ["cup", "oz", "g", "tbsp"]
+    },
+    {
+      "canonical_name": "peanuts, honey roasted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 569,
+        "protein_g": 22.6,
+        "carbs_g": 27.5,
+        "fat_g": 44.4,
+        "fiber_g": 7.7
+      },
+      "aliases": {
+        "en": ["honey roasted peanuts", "honey peanuts"],
+        "ja": ["ハニーローストピーナッツ", "はちみつピーナッツ"],
+        "ko": ["허니 로스트 땅콩", "꿀 땅콩"],
+        "zh": ["蜂蜜烤花生", "蜜汁花生"],
+        "zh-tw": ["蜂蜜烤花生", "蜜汁花生"],
+        "es": ["cacahuetes tostados con miel"],
+        "fr": ["arachides grillées au miel"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "almonds, honey roasted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 595,
+        "protein_g": 19.8,
+        "carbs_g": 28.4,
+        "fat_g": 49.9,
+        "fiber_g": 10.9
+      },
+      "aliases": {
+        "en": ["honey roasted almonds", "honey almonds"],
+        "ja": ["ハニーローストアーモンド", "はちみつアーモンド"],
+        "ko": ["허니 로스트 아몬드", "꿀 아몬드"],
+        "zh": ["蜂蜜烤杏仁", "蜜汁杏仁"],
+        "zh-tw": ["蜂蜜烤杏仁", "蜜汁杏仁"],
+        "es": ["almendras tostadas con miel"],
+        "fr": ["amandes grillées au miel"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "cashews, honey roasted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 570,
+        "protein_g": 17.2,
+        "carbs_g": 36.7,
+        "fat_g": 42.2,
+        "fiber_g": 3.3
+      },
+      "aliases": {
+        "en": ["honey roasted cashews", "honey cashews"],
+        "ja": ["ハニーローストカシュー", "はちみつカシューナッツ"],
+        "ko": ["허니 로스트 캐슈", "꿀 캐슈"],
+        "zh": ["蜂蜜烤腰果", "蜜汁腰果"],
+        "zh-tw": ["蜂蜜烤腰果", "蜜汁腰果"],
+        "es": ["anacardos tostados con miel"],
+        "fr": ["noix de cajou grillées au miel"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "watermelon seeds, dried",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 557,
+        "protein_g": 28.3,
+        "carbs_g": 15.3,
+        "fat_g": 47.4,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["dried watermelon seeds", "watermelon kernels"],
+        "ja": ["スイカの種", "乾燥スイカの種"],
+        "ko": ["수박씨", "건조 수박씨"],
+        "zh": ["西瓜子", "瓜子"],
+        "zh-tw": ["西瓜子", "瓜子"],
+        "es": ["semillas de sandía secas"],
+        "fr": ["graines de pastèque séchées"]
+      },
+      "common_units": ["cup", "oz", "g", "tbsp"]
+    },
+    {
+      "canonical_name": "sesame paste, chinese",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 618,
+        "protein_g": 18.1,
+        "carbs_g": 18.5,
+        "fat_g": 58.0,
+        "fiber_g": 9.3
+      },
+      "aliases": {
+        "en": ["chinese sesame paste", "zhima jiang"],
+        "ja": ["中華ごまペースト", "芝麻醤"],
+        "ko": ["중국 참깨 페이스트", "지마장"],
+        "zh": ["芝麻酱", "麻酱"],
+        "zh-tw": ["芝麻醬", "麻醬"],
+        "es": ["pasta de sésamo china"],
+        "fr": ["pâte de sésame chinoise"]
+      },
+      "common_units": ["tbsp", "cup", "oz", "g"]
+    },
+    {
+      "canonical_name": "pistachio, shelled",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 562,
+        "protein_g": 20.6,
+        "carbs_g": 27.7,
+        "fat_g": 45.4,
+        "fiber_g": 10.3
+      },
+      "aliases": {
+        "en": ["shelled pistachios", "pistachio kernels"],
+        "ja": ["殻なしピスタチオ", "ピスタチオナッツ"],
+        "ko": ["껍질 없는 피스타치오", "피스타치오 알맹이"],
+        "zh": ["去壳开心果", "开心果仁"],
+        "zh-tw": ["去殼開心果", "開心果仁"],
+        "es": ["pistachos pelados"],
+        "fr": ["pistaches décortiquées"]
+      },
+      "common_units": ["cup", "oz", "g", "handful"]
+    },
+    {
+      "canonical_name": "almond, blanched",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 590,
+        "protein_g": 21.4,
+        "carbs_g": 18.7,
+        "fat_g": 52.5,
+        "fiber_g": 9.9
+      },
+      "aliases": {
+        "en": ["blanched almonds", "skinless almonds"],
+        "ja": ["皮なしアーモンド", "ブランチアーモンド"],
+        "ko": ["데친 아몬드", "껍질 벗긴 아몬드"],
+        "zh": ["去皮杏仁", "漂白杏仁"],
+        "zh-tw": ["去皮杏仁", "漂白杏仁"],
+        "es": ["almendras blanqueadas", "almendras sin piel"],
+        "fr": ["amandes blanchies", "amandes émondées"]
+      },
+      "common_units": ["cup", "oz", "g", "piece"]
+    },
+    {
+      "canonical_name": "hazelnut, blanched",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 628,
+        "protein_g": 15.0,
+        "carbs_g": 16.7,
+        "fat_g": 60.8,
+        "fiber_g": 9.7
+      },
+      "aliases": {
+        "en": ["blanched hazelnuts", "skinless hazelnuts"],
+        "ja": ["皮なしヘーゼルナッツ", "ブランチヘーゼルナッツ"],
+        "ko": ["데친 헤이즐넛", "껍질 벗긴 헤이즐넛"],
+        "zh": ["去皮榛子"],
+        "zh-tw": ["去皮榛子"],
+        "es": ["avellanas blanqueadas", "avellanas sin piel"],
+        "fr": ["noisettes blanchies", "noisettes émondées"]
+      },
+      "common_units": ["cup", "oz", "g", "piece"]
+    },
+    {
+      "canonical_name": "pumpkin seed oil",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["pepita oil", "pumpkinseed oil"],
+        "ja": ["パンプキンシードオイル", "かぼちゃ種油"],
+        "ko": ["호박씨 오일", "펌킨시드 오일"],
+        "zh": ["南瓜籽油"],
+        "zh-tw": ["南瓜籽油"],
+        "es": ["aceite de semilla de calabaza"],
+        "fr": ["huile de pépins de courge"]
+      },
+      "common_units": ["tbsp", "tsp", "ml", "cup"]
+    },
+    {
+      "canonical_name": "walnut oil",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["oil of walnut"],
+        "ja": ["くるみ油", "ウォルナッツオイル"],
+        "ko": ["호두 오일", "월넛 오일"],
+        "zh": ["核桃油"],
+        "zh-tw": ["核桃油"],
+        "es": ["aceite de nuez"],
+        "fr": ["huile de noix"]
+      },
+      "common_units": ["tbsp", "tsp", "ml", "cup"]
+    },
+    {
+      "canonical_name": "hazelnut oil",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["oil of hazelnut", "filbert oil"],
+        "ja": ["ヘーゼルナッツオイル", "ヘーゼルナッツ油"],
+        "ko": ["헤이즐넛 오일"],
+        "zh": ["榛子油"],
+        "zh-tw": ["榛子油"],
+        "es": ["aceite de avellana"],
+        "fr": ["huile de noisette"]
+      },
+      "common_units": ["tbsp", "tsp", "ml", "cup"]
+    },
+    {
+      "canonical_name": "almond oil",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["oil of almond", "sweet almond oil"],
+        "ja": ["アーモンドオイル", "アーモンド油"],
+        "ko": ["아몬드 오일"],
+        "zh": ["杏仁油"],
+        "zh-tw": ["杏仁油"],
+        "es": ["aceite de almendra"],
+        "fr": ["huile d'amande"]
+      },
+      "common_units": ["tbsp", "tsp", "ml", "cup"]
+    },
+    {
+      "canonical_name": "peanut oil",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["groundnut oil", "arachis oil"],
+        "ja": ["ピーナッツオイル", "落花生油"],
+        "ko": ["땅콩 오일", "낙화생유"],
+        "zh": ["花生油"],
+        "zh-tw": ["花生油"],
+        "es": ["aceite de cacahuete", "aceite de maní"],
+        "fr": ["huile d'arachide"]
+      },
+      "common_units": ["tbsp", "tsp", "ml", "cup"]
+    },
+    {
+      "canonical_name": "sesame oil, toasted",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["toasted sesame oil", "asian sesame oil"],
+        "ja": ["焙煎ごま油", "香りごま油"],
+        "ko": ["참기름", "볶은 참기름"],
+        "zh": ["香油", "麻油"],
+        "zh-tw": ["香油", "麻油"],
+        "es": ["aceite de sésamo tostado"],
+        "fr": ["huile de sésame grillée"]
+      },
+      "common_units": ["tbsp", "tsp", "ml", "cup"]
+    },
+    {
+      "canonical_name": "sesame oil, light",
+      "category": "nut_seed",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["light sesame oil", "untoasted sesame oil"],
+        "ja": ["太白ごま油", "白ごま油"],
+        "ko": ["일반 참기름", "흰 참기름"],
+        "zh": ["白芝麻油"],
+        "zh-tw": ["白芝麻油"],
+        "es": ["aceite de sésamo ligero"],
+        "fr": ["huile de sésame légère"]
+      },
+      "common_units": ["tbsp", "tsp", "ml", "cup"]
+    }
+  ]
+}

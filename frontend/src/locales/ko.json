@@ -36,7 +36,10 @@
       "actions": "작업",
       "yes": "예",
       "no": "아니오",
+      "serving": "인분",
       "servings": "인분",
+      "Serving": "인분",
+      "Servings": "인분",
       "difficulty": "난이도"
     },
     "messages": {
@@ -55,6 +58,7 @@
     "home": "홈",
     "recipes": "레시피",
     "favorites": "즐겨찾기",
+    "menu": "메뉴",
     "about": "소개",
     "contact": "연락처",
     "login": "로그인",
@@ -186,7 +190,25 @@
     "subtitle": "레시피 컬렉션 탐색",
     "searchPlaceholder": "레시피 검색...",
     "noRecipes": "레시피를 찾을 수 없습니다",
-    "noRecipesDescription": "검색을 조정하거나 모든 레시피를 찾아보세요"
+    "noRecipesDescription": "검색을 조정하거나 모든 레시피를 찾아보세요",
+    "featured": "추천",
+    "results": "검색 결과",
+    "recipesCount": "개 레시피",
+    "favorites": "즐겨찾기"
+  },
+  "favorites": {
+    "title": "즐겨찾기 레시피",
+    "searchPlaceholder": "즐겨찾기 레시피 검색...",
+    "noSearchResults": "즐겨찾기 레시피를 찾을 수 없습니다",
+    "empty": {
+      "title": "아직 즐겨찾기 레시피가 없습니다",
+      "description": "마음에 드는 레시피를 발견하면 하트 아이콘을 클릭하여 여기에 저장하세요.",
+      "browseRecipes": "레시피 둘러보기"
+    }
+  },
+  "profile": {
+    "accountInfo": "계정 정보",
+    "comingSoon": "더 많은 프로필 기능이 곧 제공됩니다..."
   },
   "recipe": {
     "view": {
@@ -196,9 +218,34 @@
       "cook": "조리",
       "total": "총",
       "ingredients": "재료",
+      "steps": "만드는 방법",
       "equipment": "조리 기구",
       "instructions": "만드는 방법",
-      "nutrition": "영양 정보"
+      "nutrition": "영양 정보",
+      "optional": "선택 사항",
+      "perServing": "1인분 기준",
+      "cals": "칼로리",
+      "carbs": "탄수화물",
+      "protein": "단백질",
+      "fat": "지방",
+      "adjustRecipe": "레시피 조정",
+      "adjusted": "조정됨",
+      "aiImageCaption": "AI가 생성한 플레이스홀더 이미지입니다. 정확하지 않을 수 있습니다.",
+      "aiAdjustmentDisclaimer": "AI가 생성한 조정입니다. 정확하지 않을 수 있습니다.",
+      "restoreToOriginal": "원본으로 복원",
+      "images": "이미지",
+      "favorite": "즐겨찾기에 추가",
+      "unfavorite": "즐겨찾기에서 제거"
+    },
+    "adjust": {
+      "title": "레시피 조정",
+      "description": "이 레시피에서 무엇을 조정하시겠습니까?",
+      "submit": "레시피 조정",
+      "adjusting": "조정 중...",
+      "adjustedFrom": "조정 전:",
+      "placeholder": "예시:\n• 버섯을 넣어 채식으로 만들기\n• 향신료를 두 배로 늘려 풍미 강화\n• 소고기를 닭고기로 대체\n• 글루텐 프리로 만들기\n• 설탕을 절반으로 줄이기",
+      "error": "레시피 조정에 실패했습니다. 다시 시도해 주세요.",
+      "errorWithMessage": "레시피 조정 실패: {message}"
     }
   },
   "admin": {

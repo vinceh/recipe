@@ -128,4 +128,49 @@ describe 'Admin::RecipesController', type: :request do
       expect(recipe_item['image_url']).to match(%r{^https?://})
     end
   end
+
+  describe 'tags attribute' do
+    let(:recipe) { create(:recipe) }
+
+    it 'includes tags in recipe list response' do
+      recipe.update!(tags: ['quick', 'easy'])
+
+      get '/admin/recipes'
+
+      expect(response).to have_http_status(:ok)
+      data = JSON.parse(response.body)['data']
+      recipe_item = data['recipes'].find { |r| r['id'] == recipe.id }
+      expect(recipe_item['tags']).to eq(['quick', 'easy'])
+    end
+
+    it 'includes tags in recipe detail response' do
+      recipe.update!(tags: ['dinner', 'healthy'])
+
+      get "/admin/recipes/#{recipe.id}"
+
+      expect(response).to have_http_status(:ok)
+      data = JSON.parse(response.body)['data']
+      expect(data['recipe']['tags']).to eq(['dinner', 'healthy'])
+    end
+
+    it 'allows updating tags via PUT' do
+      put "/admin/recipes/#{recipe.id}", params: {
+        recipe: { tags: ['updated', 'tags'] }
+      }
+
+      expect(response).to have_http_status(:ok)
+      recipe.reload
+      expect(recipe.tags).to eq(['updated', 'tags'])
+    end
+
+    it 'returns empty array when recipe has no tags' do
+      recipe.update!(tags: [])
+
+      get "/admin/recipes/#{recipe.id}"
+
+      expect(response).to have_http_status(:ok)
+      data = JSON.parse(response.body)['data']
+      expect(data['recipe']['tags']).to eq([])
+    end
+  end
 end

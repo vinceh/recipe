@@ -1,0 +1,258 @@
+{
+  "batch": 5,
+  "agent": 22,
+  "category": "japanese_soy",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "name": "Silken Tofu",
+      "aliases": ["絹ごし豆腐", "kinugoshi tofu", "絹豆腐", "kinugoshi doufu", "soft tofu"],
+      "category": "tofu"
+    },
+    {
+      "name": "Firm Tofu",
+      "aliases": ["木綿豆腐", "momen tofu", "木綿とうふ", "momen doufu", "cotton tofu"],
+      "category": "tofu"
+    },
+    {
+      "name": "Extra Firm Tofu",
+      "aliases": ["超硬豆腐", "chou katai tofu", "固豆腐", "katai doufu", "pressed tofu"],
+      "category": "tofu"
+    },
+    {
+      "name": "Aburaage",
+      "aliases": ["油揚げ", "abura-age", "あぶらあげ", "deep-fried tofu pouch", "fried tofu skin"],
+      "category": "tofu"
+    },
+    {
+      "name": "Atsuage",
+      "aliases": ["厚揚げ", "atsu-age", "あつあげ", "thick fried tofu", "nama-age", "生揚げ"],
+      "category": "tofu"
+    },
+    {
+      "name": "Koya Tofu",
+      "aliases": ["高野豆腐", "koya-dofu", "凍り豆腐", "kori-dofu", "freeze-dried tofu", "frozen tofu"],
+      "category": "tofu"
+    },
+    {
+      "name": "Yuba",
+      "aliases": ["湯葉", "yuba", "ゆば", "tofu skin", "bean curd skin", "soy milk skin"],
+      "category": "tofu"
+    },
+    {
+      "name": "Ganmodoki",
+      "aliases": ["がんもどき", "ganmodoki", "雁擬き", "fried tofu fritter", "tofu patty"],
+      "category": "tofu"
+    },
+    {
+      "name": "Tofu Dengaku",
+      "aliases": ["豆腐田楽", "tofu dengaku", "とうふでんがく", "miso-glazed tofu"],
+      "category": "tofu"
+    },
+    {
+      "name": "Yaki Tofu",
+      "aliases": ["焼き豆腐", "yaki-dofu", "やきどうふ", "grilled tofu", "broiled tofu"],
+      "category": "tofu"
+    },
+    {
+      "name": "Oboro Tofu",
+      "aliases": ["おぼろ豆腐", "oboro-dofu", "朧豆腐", "soft scrambled tofu", "fluffy tofu"],
+      "category": "tofu"
+    },
+    {
+      "name": "Jimami Tofu",
+      "aliases": ["ジーマーミ豆腐", "jimami-dofu", "地豆豆腐", "peanut tofu", "Okinawan tofu"],
+      "category": "tofu"
+    },
+    {
+      "name": "Natto",
+      "aliases": ["納豆", "nattou", "なっとう", "fermented soybeans", "sticky soybeans"],
+      "category": "fermented"
+    },
+    {
+      "name": "Hikiwari Natto",
+      "aliases": ["ひきわり納豆", "hikiwari nattou", "引き割り納豆", "crushed natto", "chopped natto"],
+      "category": "fermented"
+    },
+    {
+      "name": "Itohiki Natto",
+      "aliases": ["糸引き納豆", "itohiki nattou", "いとひきなっとう", "stringy natto", "regular natto"],
+      "category": "fermented"
+    },
+    {
+      "name": "Tempeh",
+      "aliases": ["テンペ", "tenpe", "テンペー", "fermented soybean cake", "Indonesian tempeh"],
+      "category": "fermented"
+    },
+    {
+      "name": "Soy Sauce",
+      "aliases": ["醤油", "shoyu", "しょうゆ", "regular soy sauce", "koikuchi shoyu", "濃口醤油"],
+      "category": "soy_sauce"
+    },
+    {
+      "name": "Light Soy Sauce",
+      "aliases": ["薄口醤油", "usukuchi shoyu", "うすくちしょうゆ", "light colored soy sauce", "pale soy sauce"],
+      "category": "soy_sauce"
+    },
+    {
+      "name": "Tamari",
+      "aliases": ["たまり", "tamari shoyu", "溜まり醤油", "tamari soy sauce", "wheat-free soy sauce"],
+      "category": "soy_sauce"
+    },
+    {
+      "name": "White Soy Sauce",
+      "aliases": ["白醤油", "shiro shoyu", "しろしょうゆ", "white shoyu", "pale soy sauce"],
+      "category": "soy_sauce"
+    },
+    {
+      "name": "Sweet Soy Sauce",
+      "aliases": ["甘口醤油", "amakuchi shoyu", "あまくちしょうゆ", "sweet shoyu", "sashimi shoyu"],
+      "category": "soy_sauce"
+    },
+    {
+      "name": "Saishikomi Shoyu",
+      "aliases": ["再仕込み醤油", "saishikomi shoyu", "さいしこみしょうゆ", "twice-brewed soy sauce", "double-fermented soy sauce"],
+      "category": "soy_sauce"
+    },
+    {
+      "name": "Soy Milk",
+      "aliases": ["豆乳", "tonyu", "とうにゅう", "soy beverage", "soybean milk"],
+      "category": "soy_milk"
+    },
+    {
+      "name": "Unsweetened Soy Milk",
+      "aliases": ["無調整豆乳", "muchousei tonyu", "むちょうせいとうにゅう", "plain soy milk", "unflavored soy milk"],
+      "category": "soy_milk"
+    },
+    {
+      "name": "Sweetened Soy Milk",
+      "aliases": ["調整豆乳", "chousei tonyu", "ちょうせいとうにゅう", "adjusted soy milk", "flavored soy milk"],
+      "category": "soy_milk"
+    },
+    {
+      "name": "White Miso",
+      "aliases": ["白味噌", "shiro miso", "しろみそ", "sweet miso", "Kyoto miso", "西京味噌", "saikyo miso"],
+      "category": "miso"
+    },
+    {
+      "name": "Red Miso",
+      "aliases": ["赤味噌", "aka miso", "あかみそ", "dark miso", "sendai miso", "仙台味噌"],
+      "category": "miso"
+    },
+    {
+      "name": "Awase Miso",
+      "aliases": ["合わせ味噌", "awase miso", "あわせみそ", "mixed miso", "blended miso"],
+      "category": "miso"
+    },
+    {
+      "name": "Barley Miso",
+      "aliases": ["麦味噌", "mugi miso", "むぎみそ", "barley-koji miso", "country miso"],
+      "category": "miso"
+    },
+    {
+      "name": "Hatcho Miso",
+      "aliases": ["八丁味噌", "hatcho miso", "はっちょうみそ", "soybean miso", "Nagoya miso"],
+      "category": "miso"
+    },
+    {
+      "name": "Genmai Miso",
+      "aliases": ["玄米味噌", "genmai miso", "げんまいみそ", "brown rice miso", "whole grain miso"],
+      "category": "miso"
+    },
+    {
+      "name": "Shinshu Miso",
+      "aliases": ["信州味噌", "shinshu miso", "しんしゅうみそ", "Nagano miso", "yellow miso"],
+      "category": "miso"
+    },
+    {
+      "name": "Saikyo Miso",
+      "aliases": ["西京味噌", "saikyo miso", "さいきょうみそ", "Kyoto white miso", "sweet white miso"],
+      "category": "miso"
+    },
+    {
+      "name": "Edamame",
+      "aliases": ["枝豆", "edamame", "えだまめ", "young soybeans", "green soybeans"],
+      "category": "soy_other"
+    },
+    {
+      "name": "Kinako",
+      "aliases": ["きな粉", "kinako", "黄粉", "roasted soybean flour", "soybean powder"],
+      "category": "soy_other"
+    },
+    {
+      "name": "Okara",
+      "aliases": ["おから", "okara", "卯の花", "unohana", "soy pulp", "tofu lees"],
+      "category": "soy_other"
+    },
+    {
+      "name": "Moyashi",
+      "aliases": ["もやし", "moyashi", "豆もやし", "mame-moyashi", "soybean sprouts"],
+      "category": "soy_other"
+    },
+    {
+      "name": "Kuromame",
+      "aliases": ["黒豆", "kuromame", "くろまめ", "black soybeans", "black beans"],
+      "category": "soy_other"
+    },
+    {
+      "name": "Daizu",
+      "aliases": ["大豆", "daizu", "だいず", "soybeans", "soy beans"],
+      "category": "soy_other"
+    },
+    {
+      "name": "Iri Daizu",
+      "aliases": ["煎り大豆", "iri-daizu", "いりだいず", "roasted soybeans", "dry-roasted soybeans"],
+      "category": "soy_other"
+    },
+    {
+      "name": "Natto Maki",
+      "aliases": ["納豆巻き", "natto maki", "なっとうまき", "natto sushi roll", "fermented soybean roll"],
+      "category": "fermented"
+    },
+    {
+      "name": "Tofu Shirataki",
+      "aliases": ["豆腐しらたき", "tofu shirataki", "とうふしらたき", "tofu noodles", "tofu-konnyaku noodles"],
+      "category": "tofu"
+    },
+    {
+      "name": "Inari Age",
+      "aliases": ["稲荷揚げ", "inari-age", "いなりあげ", "seasoned fried tofu", "inari pouch"],
+      "category": "tofu"
+    },
+    {
+      "name": "Nama Yuba",
+      "aliases": ["生湯葉", "nama yuba", "なまゆば", "fresh tofu skin", "fresh bean curd skin"],
+      "category": "tofu"
+    },
+    {
+      "name": "Yaki Yuba",
+      "aliases": ["焼き湯葉", "yaki yuba", "やきゆば", "dried tofu skin", "dried bean curd skin"],
+      "category": "tofu"
+    },
+    {
+      "name": "Ponzu Shoyu",
+      "aliases": ["ポン酢醤油", "ponzu shoyu", "ぽんずしょうゆ", "citrus soy sauce", "ponzu sauce"],
+      "category": "soy_sauce"
+    },
+    {
+      "name": "Teriyaki Sauce",
+      "aliases": ["照り焼きソース", "teriyaki sauce", "てりやきそーす", "teriyaki shoyu", "照り焼き醤油"],
+      "category": "soy_sauce"
+    },
+    {
+      "name": "Moromi Miso",
+      "aliases": ["もろみ味噌", "moromi miso", "醪味噌", "chunky miso", "miso paste"],
+      "category": "miso"
+    },
+    {
+      "name": "Miso Dama",
+      "aliases": ["味噌玉", "miso-dama", "みそだま", "miso ball", "instant miso soup ball"],
+      "category": "miso"
+    },
+    {
+      "name": "Kuroshoyu",
+      "aliases": ["黒醤油", "kuro shoyu", "くろしょうゆ", "black soy sauce", "dark soy sauce"],
+      "category": "soy_sauce"
+    }
+  ]
+}

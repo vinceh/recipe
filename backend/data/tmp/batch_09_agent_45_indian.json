@@ -1,0 +1,1786 @@
+{
+  "batch": 9,
+  "agent": 45,
+  "category": "indian_spices",
+  "ingredients": [
+    {
+      "canonical_name": "cumin seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 17.8,
+        "carbs_g": 44.2,
+        "fat_g": 22.3,
+        "fiber_g": 10.5
+      },
+      "aliases": [
+        { "alias": "jeera", "language": "hi", "type": "native" },
+        { "alias": "クミンシード", "language": "ja", "type": "translation" },
+        { "alias": "comino", "language": "es", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.1 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "coriander seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 298,
+        "protein_g": 12.4,
+        "carbs_g": 54.2,
+        "fat_g": 17.8,
+        "fiber_g": 41.9
+      },
+      "aliases": [
+        { "alias": "dhania", "language": "hi", "type": "native" },
+        { "alias": "コリアンダーシード", "language": "ja", "type": "translation" },
+        { "alias": "cilantro seeds", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 1.8 },
+        { "unit": "tbsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "mustard seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 508,
+        "protein_g": 26.1,
+        "carbs_g": 28.1,
+        "fat_g": 36.2,
+        "fiber_g": 12.2
+      },
+      "aliases": [
+        { "alias": "rai", "language": "hi", "type": "native" },
+        { "alias": "sarson", "language": "hi", "type": "native" },
+        { "alias": "マスタードシード", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3.5 },
+        { "unit": "tbsp", "grams": 11 }
+      ]
+    },
+    {
+      "canonical_name": "fenugreek seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 323,
+        "protein_g": 23,
+        "carbs_g": 58.4,
+        "fat_g": 6.4,
+        "fiber_g": 24.6
+      },
+      "aliases": [
+        { "alias": "methi", "language": "hi", "type": "native" },
+        { "alias": "フェヌグリーク", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3.7 },
+        { "unit": "tbsp", "grams": 11.1 }
+      ]
+    },
+    {
+      "canonical_name": "fennel seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 345,
+        "protein_g": 15.8,
+        "carbs_g": 52.3,
+        "fat_g": 14.9,
+        "fiber_g": 39.8
+      },
+      "aliases": [
+        { "alias": "saunf", "language": "hi", "type": "native" },
+        { "alias": "フェンネルシード", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 5.8 }
+      ]
+    },
+    {
+      "canonical_name": "green cardamom",
+      "category": "spice",
+      "per_100g": {
+        "calories": 311,
+        "protein_g": 10.8,
+        "carbs_g": 68.5,
+        "fat_g": 6.7,
+        "fiber_g": 28
+      },
+      "aliases": [
+        { "alias": "elaichi", "language": "hi", "type": "native" },
+        { "alias": "choti elaichi", "language": "hi", "type": "native" },
+        { "alias": "カルダモン", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "pod", "grams": 0.3 },
+        { "unit": "tsp", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "black cardamom",
+      "category": "spice",
+      "per_100g": {
+        "calories": 300,
+        "protein_g": 10.2,
+        "carbs_g": 66.5,
+        "fat_g": 6.2,
+        "fiber_g": 25
+      },
+      "aliases": [
+        { "alias": "badi elaichi", "language": "hi", "type": "native" },
+        { "alias": "kali elaichi", "language": "hi", "type": "native" },
+        { "alias": "ブラックカルダモン", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "pod", "grams": 1 },
+        { "unit": "tsp", "grams": 3 }
+      ]
+    },
+    {
+      "canonical_name": "cloves",
+      "category": "spice",
+      "per_100g": {
+        "calories": 274,
+        "protein_g": 5.97,
+        "carbs_g": 65.5,
+        "fat_g": 13,
+        "fiber_g": 33.9
+      },
+      "aliases": [
+        { "alias": "laung", "language": "hi", "type": "native" },
+        { "alias": "クローブ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole", "grams": 0.1 },
+        { "unit": "tsp", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "cinnamon stick",
+      "category": "spice",
+      "per_100g": {
+        "calories": 247,
+        "protein_g": 4,
+        "carbs_g": 80.6,
+        "fat_g": 1.2,
+        "fiber_g": 53.1
+      },
+      "aliases": [
+        { "alias": "dalchini", "language": "hi", "type": "native" },
+        { "alias": "シナモン", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "stick", "grams": 2.6 },
+        { "unit": "tsp", "grams": 2.6 }
+      ]
+    },
+    {
+      "canonical_name": "bay leaves",
+      "category": "spice",
+      "per_100g": {
+        "calories": 313,
+        "protein_g": 7.6,
+        "carbs_g": 74.9,
+        "fat_g": 8.4,
+        "fiber_g": 26.3
+      },
+      "aliases": [
+        { "alias": "tej patta", "language": "hi", "type": "native" },
+        { "alias": "ベイリーフ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "leaf", "grams": 0.5 }
+      ]
+    },
+    {
+      "canonical_name": "black pepper",
+      "category": "spice",
+      "per_100g": {
+        "calories": 251,
+        "protein_g": 10.4,
+        "carbs_g": 63.9,
+        "fat_g": 3.3,
+        "fiber_g": 25.3
+      },
+      "aliases": [
+        { "alias": "kali mirch", "language": "hi", "type": "native" },
+        { "alias": "ブラックペッパー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.3 },
+        { "unit": "tbsp", "grams": 6.9 }
+      ]
+    },
+    {
+      "canonical_name": "Malabar black pepper",
+      "category": "spice",
+      "per_100g": {
+        "calories": 255,
+        "protein_g": 10.9,
+        "carbs_g": 64.8,
+        "fat_g": 3.3,
+        "fiber_g": 26.5
+      },
+      "aliases": [
+        { "alias": "Malabar pepper", "language": "en", "type": "alternative" },
+        { "alias": "Kerala pepper", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.3 },
+        { "unit": "tbsp", "grams": 6.9 }
+      ]
+    },
+    {
+      "canonical_name": "star anise",
+      "category": "spice",
+      "per_100g": {
+        "calories": 337,
+        "protein_g": 17.6,
+        "carbs_g": 50.0,
+        "fat_g": 15.9,
+        "fiber_g": 14.6
+      },
+      "aliases": [
+        { "alias": "chakra phool", "language": "hi", "type": "native" },
+        { "alias": "八角", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole", "grams": 0.5 }
+      ]
+    },
+    {
+      "canonical_name": "carom seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 305,
+        "protein_g": 15.4,
+        "carbs_g": 43.0,
+        "fat_g": 21.8,
+        "fiber_g": 21.2
+      },
+      "aliases": [
+        { "alias": "ajwain", "language": "hi", "type": "native" },
+        { "alias": "bishop's weed", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "nigella seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 17.8,
+        "carbs_g": 44.2,
+        "fat_g": 22.3,
+        "fiber_g": 10.5
+      },
+      "aliases": [
+        { "alias": "kalonji", "language": "hi", "type": "native" },
+        { "alias": "black cumin", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.2 },
+        { "unit": "tbsp", "grams": 6.5 }
+      ]
+    },
+    {
+      "canonical_name": "turmeric powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 312,
+        "protein_g": 9.7,
+        "carbs_g": 67.1,
+        "fat_g": 3.3,
+        "fiber_g": 22.7
+      },
+      "aliases": [
+        { "alias": "haldi", "language": "hi", "type": "native" },
+        { "alias": "ターメリック", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3 },
+        { "unit": "tbsp", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "red chili powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 282,
+        "protein_g": 13.5,
+        "carbs_g": 53.9,
+        "fat_g": 14.3,
+        "fiber_g": 27.2
+      },
+      "aliases": [
+        { "alias": "lal mirch", "language": "hi", "type": "native" },
+        { "alias": "cayenne pepper", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.6 },
+        { "unit": "tbsp", "grams": 7.8 }
+      ]
+    },
+    {
+      "canonical_name": "Kashmiri red chili powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 280,
+        "protein_g": 13.2,
+        "carbs_g": 54.2,
+        "fat_g": 14.0,
+        "fiber_g": 27.0
+      },
+      "aliases": [
+        { "alias": "Kashmiri mirch", "language": "hi", "type": "native" },
+        { "alias": "Kashmiri chili", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.6 },
+        { "unit": "tbsp", "grams": 7.8 }
+      ]
+    },
+    {
+      "canonical_name": "Guntur red chili powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 285,
+        "protein_g": 13.8,
+        "carbs_g": 54.5,
+        "fat_g": 14.5,
+        "fiber_g": 28.0
+      },
+      "aliases": [
+        { "alias": "Guntur mirch", "language": "hi", "type": "native" },
+        { "alias": "Andhra chili powder", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.6 },
+        { "unit": "tbsp", "grams": 7.8 }
+      ]
+    },
+    {
+      "canonical_name": "coriander powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 298,
+        "protein_g": 12.4,
+        "carbs_g": 54.2,
+        "fat_g": 17.8,
+        "fiber_g": 41.9
+      },
+      "aliases": [
+        { "alias": "dhania powder", "language": "hi", "type": "native" },
+        { "alias": "コリアンダーパウダー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 1.8 },
+        { "unit": "tbsp", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "cumin powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 17.8,
+        "carbs_g": 44.2,
+        "fat_g": 22.3,
+        "fiber_g": 10.5
+      },
+      "aliases": [
+        { "alias": "jeera powder", "language": "hi", "type": "native" },
+        { "alias": "クミンパウダー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.1 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "garam masala",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 379,
+        "protein_g": 14.3,
+        "carbs_g": 58.2,
+        "fat_g": 15.0,
+        "fiber_g": 24.5
+      },
+      "aliases": [
+        { "alias": "ガラムマサラ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "chaat masala",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 300,
+        "protein_g": 12.0,
+        "carbs_g": 55.0,
+        "fat_g": 8.5,
+        "fiber_g": 20.0
+      },
+      "aliases": [
+        { "alias": "chat masala", "language": "en", "type": "alternative" },
+        { "alias": "チャートマサラ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "dried mango powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 1.0,
+        "carbs_g": 93.0,
+        "fat_g": 0.5,
+        "fiber_g": 4.0
+      },
+      "aliases": [
+        { "alias": "amchur", "language": "hi", "type": "native" },
+        { "alias": "amchoor", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "dried pomegranate seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 328,
+        "protein_g": 3.3,
+        "carbs_g": 78.2,
+        "fat_g": 2.0,
+        "fiber_g": 6.5
+      },
+      "aliases": [
+        { "alias": "anardana", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 3.5 },
+        { "unit": "tbsp", "grams": 10.5 }
+      ]
+    },
+    {
+      "canonical_name": "asafoetida",
+      "category": "spice",
+      "per_100g": {
+        "calories": 297,
+        "protein_g": 4.0,
+        "carbs_g": 67.8,
+        "fat_g": 1.1,
+        "fiber_g": 4.1
+      },
+      "aliases": [
+        { "alias": "hing", "language": "hi", "type": "native" },
+        { "alias": "heeng", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "pinch", "grams": 0.2 },
+        { "unit": "tsp", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "black salt",
+      "category": "spice",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "kala namak", "language": "hi", "type": "native" },
+        { "alias": "sanchal", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 6 },
+        { "unit": "tbsp", "grams": 18 }
+      ]
+    },
+    {
+      "canonical_name": "curry leaves",
+      "category": "herb",
+      "per_100g": {
+        "calories": 108,
+        "protein_g": 6.1,
+        "carbs_g": 18.7,
+        "fat_g": 1.0,
+        "fiber_g": 6.4
+      },
+      "aliases": [
+        { "alias": "kadi patta", "language": "hi", "type": "native" },
+        { "alias": "meetha neem", "language": "hi", "type": "native" },
+        { "alias": "カレーリーフ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "sprig", "grams": 2 },
+        { "unit": "leaf", "grams": 0.2 }
+      ]
+    },
+    {
+      "canonical_name": "dried kokum",
+      "category": "spice",
+      "per_100g": {
+        "calories": 60,
+        "protein_g": 1.5,
+        "carbs_g": 14.3,
+        "fat_g": 0.3,
+        "fiber_g": 2.0
+      },
+      "aliases": [
+        { "alias": "kokum", "language": "hi", "type": "native" },
+        { "alias": "garcinia", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 1.5 }
+      ]
+    },
+    {
+      "canonical_name": "tamarind paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 239,
+        "protein_g": 2.8,
+        "carbs_g": 62.5,
+        "fat_g": 0.6,
+        "fiber_g": 5.1
+      },
+      "aliases": [
+        { "alias": "imli", "language": "hi", "type": "native" },
+        { "alias": "タマリンド", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 5 },
+        { "unit": "tbsp", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "panch phoron",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 345,
+        "protein_g": 16.5,
+        "carbs_g": 48.0,
+        "fat_g": 18.2,
+        "fiber_g": 28.0
+      },
+      "aliases": [
+        { "alias": "panch puran", "language": "hi", "type": "native" },
+        { "alias": "five spice blend", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "sambar powder",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 325,
+        "protein_g": 13.5,
+        "carbs_g": 56.0,
+        "fat_g": 12.0,
+        "fiber_g": 25.0
+      },
+      "aliases": [
+        { "alias": "sambhar masala", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "rasam powder",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 310,
+        "protein_g": 12.8,
+        "carbs_g": 54.5,
+        "fat_g": 11.5,
+        "fiber_g": 24.0
+      },
+      "aliases": [
+        { "alias": "rasam masala", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "biryani masala",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 14.0,
+        "carbs_g": 57.5,
+        "fat_g": 14.5,
+        "fiber_g": 26.0
+      },
+      "aliases": [
+        { "alias": "ビリヤニマサラ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "tandoori masala",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 350,
+        "protein_g": 13.2,
+        "carbs_g": 56.0,
+        "fat_g": 13.5,
+        "fiber_g": 24.5
+      },
+      "aliases": [
+        { "alias": "タンドリーマサラ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "chana dal",
+      "category": "legume",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 22.0,
+        "carbs_g": 60.9,
+        "fat_g": 5.6,
+        "fiber_g": 10.2
+      },
+      "aliases": [
+        { "alias": "bengal gram", "language": "en", "type": "alternative" },
+        { "alias": "split chickpeas", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 190 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "toor dal",
+      "category": "legume",
+      "per_100g": {
+        "calories": 343,
+        "protein_g": 22.3,
+        "carbs_g": 62.0,
+        "fat_g": 1.5,
+        "fiber_g": 15.0
+      },
+      "aliases": [
+        { "alias": "arhar dal", "language": "hi", "type": "native" },
+        { "alias": "pigeon peas", "language": "en", "type": "alternative" },
+        { "alias": "split pigeon peas", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 200 },
+        { "unit": "tbsp", "grams": 13 }
+      ]
+    },
+    {
+      "canonical_name": "moong dal",
+      "category": "legume",
+      "per_100g": {
+        "calories": 347,
+        "protein_g": 24.0,
+        "carbs_g": 62.6,
+        "fat_g": 1.2,
+        "fiber_g": 16.3
+      },
+      "aliases": [
+        { "alias": "mung dal", "language": "hi", "type": "native" },
+        { "alias": "split mung beans", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 195 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "urad dal",
+      "category": "legume",
+      "per_100g": {
+        "calories": 341,
+        "protein_g": 25.0,
+        "carbs_g": 59.0,
+        "fat_g": 1.6,
+        "fiber_g": 18.3
+      },
+      "aliases": [
+        { "alias": "black gram", "language": "en", "type": "alternative" },
+        { "alias": "split black lentils", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 200 },
+        { "unit": "tbsp", "grams": 13 }
+      ]
+    },
+    {
+      "canonical_name": "masoor dal",
+      "category": "legume",
+      "per_100g": {
+        "calories": 352,
+        "protein_g": 24.3,
+        "carbs_g": 63.4,
+        "fat_g": 1.1,
+        "fiber_g": 11.0
+      },
+      "aliases": [
+        { "alias": "red lentils", "language": "en", "type": "alternative" },
+        { "alias": "split red lentils", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 192 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "whole moong beans",
+      "category": "legume",
+      "per_100g": {
+        "calories": 347,
+        "protein_g": 24.0,
+        "carbs_g": 62.6,
+        "fat_g": 1.2,
+        "fiber_g": 16.3
+      },
+      "aliases": [
+        { "alias": "sabut moong", "language": "hi", "type": "native" },
+        { "alias": "whole mung beans", "language": "en", "type": "alternative" },
+        { "alias": "green gram", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 200 },
+        { "unit": "tbsp", "grams": 13 }
+      ]
+    },
+    {
+      "canonical_name": "whole urad beans",
+      "category": "legume",
+      "per_100g": {
+        "calories": 341,
+        "protein_g": 25.0,
+        "carbs_g": 59.0,
+        "fat_g": 1.6,
+        "fiber_g": 18.3
+      },
+      "aliases": [
+        { "alias": "sabut urad", "language": "hi", "type": "native" },
+        { "alias": "whole black gram", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 205 },
+        { "unit": "tbsp", "grams": 13 }
+      ]
+    },
+    {
+      "canonical_name": "kabuli chana",
+      "category": "legume",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 19.3,
+        "carbs_g": 60.7,
+        "fat_g": 6.0,
+        "fiber_g": 17.4
+      },
+      "aliases": [
+        { "alias": "chickpeas", "language": "en", "type": "alternative" },
+        { "alias": "garbanzo beans", "language": "en", "type": "alternative" },
+        { "alias": "chole", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 200 },
+        { "unit": "tbsp", "grams": 13 }
+      ]
+    },
+    {
+      "canonical_name": "rajma",
+      "category": "legume",
+      "per_100g": {
+        "calories": 333,
+        "protein_g": 22.5,
+        "carbs_g": 60.0,
+        "fat_g": 1.1,
+        "fiber_g": 15.2
+      },
+      "aliases": [
+        { "alias": "kidney beans", "language": "en", "type": "alternative" },
+        { "alias": "red kidney beans", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 185 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "moth beans",
+      "category": "legume",
+      "per_100g": {
+        "calories": 343,
+        "protein_g": 22.9,
+        "carbs_g": 61.5,
+        "fat_g": 1.6,
+        "fiber_g": 4.7
+      },
+      "aliases": [
+        { "alias": "matki", "language": "hi", "type": "native" },
+        { "alias": "Turkish gram", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 195 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "horse gram",
+      "category": "legume",
+      "per_100g": {
+        "calories": 321,
+        "protein_g": 22.0,
+        "carbs_g": 57.2,
+        "fat_g": 0.6,
+        "fiber_g": 5.3
+      },
+      "aliases": [
+        { "alias": "kulthi", "language": "hi", "type": "native" },
+        { "alias": "kollu", "language": "ta", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 190 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "black-eyed peas",
+      "category": "legume",
+      "per_100g": {
+        "calories": 336,
+        "protein_g": 23.5,
+        "carbs_g": 60.0,
+        "fat_g": 1.3,
+        "fiber_g": 10.6
+      },
+      "aliases": [
+        { "alias": "lobiya", "language": "hi", "type": "native" },
+        { "alias": "cowpeas", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 165 },
+        { "unit": "tbsp", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "green lentils",
+      "category": "legume",
+      "per_100g": {
+        "calories": 352,
+        "protein_g": 24.3,
+        "carbs_g": 63.4,
+        "fat_g": 1.1,
+        "fiber_g": 11.0
+      },
+      "aliases": [
+        { "alias": "sabut masoor", "language": "hi", "type": "native" },
+        { "alias": "whole masoor", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 192 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "mace",
+      "category": "spice",
+      "per_100g": {
+        "calories": 475,
+        "protein_g": 6.7,
+        "carbs_g": 50.5,
+        "fat_g": 32.4,
+        "fiber_g": 20.2
+      },
+      "aliases": [
+        { "alias": "javitri", "language": "hi", "type": "native" },
+        { "alias": "メース", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "blade", "grams": 0.2 },
+        { "unit": "tsp", "grams": 1.7 }
+      ]
+    },
+    {
+      "canonical_name": "nutmeg",
+      "category": "spice",
+      "per_100g": {
+        "calories": 525,
+        "protein_g": 5.8,
+        "carbs_g": 49.3,
+        "fat_g": 36.3,
+        "fiber_g": 20.8
+      },
+      "aliases": [
+        { "alias": "jaiphal", "language": "hi", "type": "native" },
+        { "alias": "ナツメグ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "whole", "grams": 5 },
+        { "unit": "tsp", "grams": 2.2 }
+      ]
+    },
+    {
+      "canonical_name": "dried fenugreek leaves",
+      "category": "herb",
+      "per_100g": {
+        "calories": 323,
+        "protein_g": 23.0,
+        "carbs_g": 58.4,
+        "fat_g": 6.4,
+        "fiber_g": 24.6
+      },
+      "aliases": [
+        { "alias": "kasuri methi", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 3 },
+        { "unit": "tsp", "grams": 1 }
+      ]
+    },
+    {
+      "canonical_name": "saffron",
+      "category": "spice",
+      "per_100g": {
+        "calories": 310,
+        "protein_g": 11.4,
+        "carbs_g": 65.4,
+        "fat_g": 5.9,
+        "fiber_g": 3.9
+      },
+      "aliases": [
+        { "alias": "kesar", "language": "hi", "type": "native" },
+        { "alias": "サフラン", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "pinch", "grams": 0.1 },
+        { "unit": "strand", "grams": 0.002 }
+      ]
+    },
+    {
+      "canonical_name": "dried red chilies",
+      "category": "spice",
+      "per_100g": {
+        "calories": 324,
+        "protein_g": 12.0,
+        "carbs_g": 69.9,
+        "fat_g": 17.3,
+        "fiber_g": 28.7
+      },
+      "aliases": [
+        { "alias": "sukhi lal mirch", "language": "hi", "type": "native" },
+        { "alias": "red chili whole", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "whole", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "peppercorns",
+      "category": "spice",
+      "per_100g": {
+        "calories": 251,
+        "protein_g": 10.4,
+        "carbs_g": 63.9,
+        "fat_g": 3.3,
+        "fiber_g": 25.3
+      },
+      "aliases": [
+        { "alias": "sabut kali mirch", "language": "hi", "type": "native" },
+        { "alias": "whole black pepper", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.3 },
+        { "unit": "whole", "grams": 0.04 }
+      ]
+    },
+    {
+      "canonical_name": "sesame seeds",
+      "category": "seed",
+      "per_100g": {
+        "calories": 573,
+        "protein_g": 17.7,
+        "carbs_g": 23.5,
+        "fat_g": 49.7,
+        "fiber_g": 11.8
+      },
+      "aliases": [
+        { "alias": "til", "language": "hi", "type": "native" },
+        { "alias": "ゴマ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 9 },
+        { "unit": "tsp", "grams": 3 }
+      ]
+    },
+    {
+      "canonical_name": "white poppy seeds",
+      "category": "seed",
+      "per_100g": {
+        "calories": 525,
+        "protein_g": 18.0,
+        "carbs_g": 28.1,
+        "fat_g": 41.6,
+        "fiber_g": 19.5
+      },
+      "aliases": [
+        { "alias": "khus khus", "language": "hi", "type": "native" },
+        { "alias": "posto", "language": "bn", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 9 },
+        { "unit": "tsp", "grams": 3 }
+      ]
+    },
+    {
+      "canonical_name": "melon seeds",
+      "category": "seed",
+      "per_100g": {
+        "calories": 555,
+        "protein_g": 28.5,
+        "carbs_g": 15.3,
+        "fat_g": 47.4,
+        "fiber_g": 4.0
+      },
+      "aliases": [
+        { "alias": "magaz", "language": "hi", "type": "native" },
+        { "alias": "char magaz", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 10 },
+        { "unit": "tsp", "grams": 3.5 }
+      ]
+    },
+    {
+      "canonical_name": "dried ginger powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 335,
+        "protein_g": 9.0,
+        "carbs_g": 71.6,
+        "fat_g": 4.2,
+        "fiber_g": 14.1
+      },
+      "aliases": [
+        { "alias": "saunth", "language": "hi", "type": "native" },
+        { "alias": "sonth", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 1.8 },
+        { "unit": "tbsp", "grams": 5.4 }
+      ]
+    },
+    {
+      "canonical_name": "dry mint leaves",
+      "category": "herb",
+      "per_100g": {
+        "calories": 285,
+        "protein_g": 19.9,
+        "carbs_g": 52.0,
+        "fat_g": 6.0,
+        "fiber_g": 28.9
+      },
+      "aliases": [
+        { "alias": "pudina", "language": "hi", "type": "native" },
+        { "alias": "dried mint", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 3 },
+        { "unit": "tsp", "grams": 1 }
+      ]
+    },
+    {
+      "canonical_name": "cinnamon powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 247,
+        "protein_g": 4.0,
+        "carbs_g": 80.6,
+        "fat_g": 1.2,
+        "fiber_g": 53.1
+      },
+      "aliases": [
+        { "alias": "dalchini powder", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.6 },
+        { "unit": "tbsp", "grams": 7.8 }
+      ]
+    },
+    {
+      "canonical_name": "cardamom powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 311,
+        "protein_g": 10.8,
+        "carbs_g": 68.5,
+        "fat_g": 6.7,
+        "fiber_g": 28.0
+      },
+      "aliases": [
+        { "alias": "elaichi powder", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "clove powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 274,
+        "protein_g": 5.97,
+        "carbs_g": 65.5,
+        "fat_g": 13.0,
+        "fiber_g": 33.9
+      },
+      "aliases": [
+        { "alias": "laung powder", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "black pepper powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 251,
+        "protein_g": 10.4,
+        "carbs_g": 63.9,
+        "fat_g": 3.3,
+        "fiber_g": 25.3
+      },
+      "aliases": [
+        { "alias": "kali mirch powder", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.3 },
+        { "unit": "tbsp", "grams": 6.9 }
+      ]
+    },
+    {
+      "canonical_name": "white pepper",
+      "category": "spice",
+      "per_100g": {
+        "calories": 296,
+        "protein_g": 10.4,
+        "carbs_g": 68.6,
+        "fat_g": 2.1,
+        "fiber_g": 26.2
+      },
+      "aliases": [
+        { "alias": "safed mirch", "language": "hi", "type": "native" },
+        { "alias": "ホワイトペッパー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.4 },
+        { "unit": "tbsp", "grams": 7.1 }
+      ]
+    },
+    {
+      "canonical_name": "green chili powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 280,
+        "protein_g": 13.0,
+        "carbs_g": 53.5,
+        "fat_g": 14.0,
+        "fiber_g": 27.0
+      },
+      "aliases": [
+        { "alias": "hari mirch powder", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.6 },
+        { "unit": "tbsp", "grams": 7.8 }
+      ]
+    },
+    {
+      "canonical_name": "chole masala",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 340,
+        "protein_g": 12.5,
+        "carbs_g": 55.5,
+        "fat_g": 13.0,
+        "fiber_g": 23.5
+      },
+      "aliases": [
+        { "alias": "chana masala", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "pav bhaji masala",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 335,
+        "protein_g": 12.0,
+        "carbs_g": 54.0,
+        "fat_g": 12.5,
+        "fiber_g": 22.0
+      },
+      "aliases": [
+        { "alias": "パブバジマサラ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "kitchen king masala",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 355,
+        "protein_g": 13.5,
+        "carbs_g": 56.5,
+        "fat_g": 13.8,
+        "fiber_g": 24.0
+      },
+      "aliases": [
+        { "alias": "kitchen masala", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "meat masala",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 360,
+        "protein_g": 14.2,
+        "carbs_g": 57.0,
+        "fat_g": 14.2,
+        "fiber_g": 25.5
+      },
+      "aliases": [
+        { "alias": "gosht masala", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "chicken masala",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 345,
+        "protein_g": 13.0,
+        "carbs_g": 55.0,
+        "fat_g": 13.5,
+        "fiber_g": 23.0
+      },
+      "aliases": [
+        { "alias": "murgh masala", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "fish masala",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 330,
+        "protein_g": 12.8,
+        "carbs_g": 54.5,
+        "fat_g": 12.0,
+        "fiber_g": 22.5
+      },
+      "aliases": [
+        { "alias": "machli masala", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "curry powder",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 325,
+        "protein_g": 14.3,
+        "carbs_g": 55.8,
+        "fat_g": 14.0,
+        "fiber_g": 53.2
+      },
+      "aliases": [
+        { "alias": "カレーパウダー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6.3 }
+      ]
+    },
+    {
+      "canonical_name": "sabji masala",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 338,
+        "protein_g": 12.5,
+        "carbs_g": 55.2,
+        "fat_g": 12.8,
+        "fiber_g": 23.5
+      },
+      "aliases": [
+        { "alias": "vegetable masala", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "dal masala",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 335,
+        "protein_g": 13.0,
+        "carbs_g": 54.5,
+        "fat_g": 12.5,
+        "fiber_g": 24.0
+      },
+      "aliases": [
+        { "alias": "ダルマサラ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "shahi paneer masala",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 350,
+        "protein_g": 12.0,
+        "carbs_g": 56.0,
+        "fat_g": 13.5,
+        "fiber_g": 22.5
+      },
+      "aliases": [
+        { "alias": "paneer masala", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "korma masala",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 13.5,
+        "carbs_g": 57.0,
+        "fat_g": 14.5,
+        "fiber_g": 24.5
+      },
+      "aliases": [
+        { "alias": "qorma masala", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "nihari masala",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 355,
+        "protein_g": 14.0,
+        "carbs_g": 56.5,
+        "fat_g": 14.0,
+        "fiber_g": 25.0
+      },
+      "aliases": [
+        { "alias": "ニハリマサラ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "pani puri masala",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 310,
+        "protein_g": 11.5,
+        "carbs_g": 53.0,
+        "fat_g": 11.0,
+        "fiber_g": 21.0
+      },
+      "aliases": [
+        { "alias": "golgappa masala", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "jaljeera powder",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 315,
+        "protein_g": 12.0,
+        "carbs_g": 53.5,
+        "fat_g": 11.5,
+        "fiber_g": 22.0
+      },
+      "aliases": [
+        { "alias": "jal jeera", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "kashmiri garam masala",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 385,
+        "protein_g": 14.5,
+        "carbs_g": 58.5,
+        "fat_g": 15.5,
+        "fiber_g": 25.0
+      },
+      "aliases": [
+        { "alias": "Kashmiri masala", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "madras curry powder",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 330,
+        "protein_g": 14.0,
+        "carbs_g": 56.0,
+        "fat_g": 14.5,
+        "fiber_g": 52.0
+      },
+      "aliases": [
+        { "alias": "Madras masala", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2 },
+        { "unit": "tbsp", "grams": 6.3 }
+      ]
+    },
+    {
+      "canonical_name": "goda masala",
+      "category": "spice_blend",
+      "per_100g": {
+        "calories": 370,
+        "protein_g": 13.8,
+        "carbs_g": 57.5,
+        "fat_g": 15.0,
+        "fiber_g": 26.0
+      },
+      "aliases": [
+        { "alias": "Maharashtrian garam masala", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "bottle gourd seeds",
+      "category": "seed",
+      "per_100g": {
+        "calories": 560,
+        "protein_g": 30.0,
+        "carbs_g": 14.5,
+        "fat_g": 48.0,
+        "fiber_g": 3.5
+      },
+      "aliases": [
+        { "alias": "lauki ke beej", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 10 },
+        { "unit": "tsp", "grams": 3.5 }
+      ]
+    },
+    {
+      "canonical_name": "pumpkin seeds",
+      "category": "seed",
+      "per_100g": {
+        "calories": 559,
+        "protein_g": 30.2,
+        "carbs_g": 10.7,
+        "fat_g": 49.0,
+        "fiber_g": 6.0
+      },
+      "aliases": [
+        { "alias": "kaddu ke beej", "language": "hi", "type": "native" },
+        { "alias": "pepitas", "language": "es", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 9 },
+        { "unit": "tsp", "grams": 3 }
+      ]
+    },
+    {
+      "canonical_name": "watermelon seeds",
+      "category": "seed",
+      "per_100g": {
+        "calories": 557,
+        "protein_g": 28.3,
+        "carbs_g": 15.3,
+        "fat_g": 47.4,
+        "fiber_g": 3.5
+      },
+      "aliases": [
+        { "alias": "tarbooj ke beej", "language": "hi", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tbsp", "grams": 10 },
+        { "unit": "tsp", "grams": 3.5 }
+      ]
+    },
+    {
+      "canonical_name": "long pepper",
+      "category": "spice",
+      "per_100g": {
+        "calories": 265,
+        "protein_g": 10.0,
+        "carbs_g": 62.5,
+        "fat_g": 3.5,
+        "fiber_g": 24.0
+      },
+      "aliases": [
+        { "alias": "pippali", "language": "hi", "type": "native" },
+        { "alias": "Indian long pepper", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 0.5 },
+        { "unit": "tsp", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "stone flower",
+      "category": "spice",
+      "per_100g": {
+        "calories": 250,
+        "protein_g": 4.5,
+        "carbs_g": 60.0,
+        "fat_g": 2.5,
+        "fiber_g": 15.0
+      },
+      "aliases": [
+        { "alias": "dagad phool", "language": "hi", "type": "native" },
+        { "alias": "patthar ke phool", "language": "hi", "type": "native" },
+        { "alias": "black stone flower", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 1 },
+        { "unit": "tsp", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "black cumin",
+      "category": "spice",
+      "per_100g": {
+        "calories": 370,
+        "protein_g": 17.5,
+        "carbs_g": 44.0,
+        "fat_g": 22.0,
+        "fiber_g": 10.0
+      },
+      "aliases": [
+        { "alias": "shahi jeera", "language": "hi", "type": "native" },
+        { "alias": "royal cumin", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.1 },
+        { "unit": "tbsp", "grams": 6 }
+      ]
+    },
+    {
+      "canonical_name": "ajowan",
+      "category": "spice",
+      "per_100g": {
+        "calories": 305,
+        "protein_g": 15.4,
+        "carbs_g": 43.0,
+        "fat_g": 21.8,
+        "fiber_g": 21.2
+      },
+      "aliases": [
+        { "alias": "ajwain seeds", "language": "en", "type": "alternative" },
+        { "alias": "carom", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "tsp", "grams": 2.5 },
+        { "unit": "tbsp", "grams": 7.5 }
+      ]
+    },
+    {
+      "canonical_name": "besan",
+      "category": "legume",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 22.4,
+        "carbs_g": 57.8,
+        "fat_g": 6.7,
+        "fiber_g": 10.8
+      },
+      "aliases": [
+        { "alias": "gram flour", "language": "en", "type": "alternative" },
+        { "alias": "chickpea flour", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 120 },
+        { "unit": "tbsp", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "makki ka atta",
+      "category": "grain",
+      "per_100g": {
+        "calories": 361,
+        "protein_g": 8.1,
+        "carbs_g": 76.9,
+        "fat_g": 3.9,
+        "fiber_g": 7.3
+      },
+      "aliases": [
+        { "alias": "corn flour", "language": "en", "type": "alternative" },
+        { "alias": "maize flour", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 117 },
+        { "unit": "tbsp", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "atta",
+      "category": "grain",
+      "per_100g": {
+        "calories": 340,
+        "protein_g": 12.6,
+        "carbs_g": 69.4,
+        "fat_g": 1.7,
+        "fiber_g": 11.2
+      },
+      "aliases": [
+        { "alias": "whole wheat flour", "language": "en", "type": "alternative" },
+        { "alias": "chapati flour", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 120 },
+        { "unit": "tbsp", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "sooji",
+      "category": "grain",
+      "per_100g": {
+        "calories": 360,
+        "protein_g": 12.7,
+        "carbs_g": 72.8,
+        "fat_g": 1.1,
+        "fiber_g": 3.9
+      },
+      "aliases": [
+        { "alias": "rava", "language": "hi", "type": "native" },
+        { "alias": "semolina", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 160 },
+        { "unit": "tbsp", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "basmati rice",
+      "category": "grain",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 7.5,
+        "carbs_g": 78.3,
+        "fat_g": 0.6,
+        "fiber_g": 1.3
+      },
+      "aliases": [
+        { "alias": "バスマティライス", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 195 },
+        { "unit": "tbsp", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "poha",
+      "category": "grain",
+      "per_100g": {
+        "calories": 346,
+        "protein_g": 6.6,
+        "carbs_g": 76.9,
+        "fat_g": 1.2,
+        "fiber_g": 3.0
+      },
+      "aliases": [
+        { "alias": "flattened rice", "language": "en", "type": "alternative" },
+        { "alias": "beaten rice", "language": "en", "type": "alternative" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 80 },
+        { "unit": "tbsp", "grams": 5 }
+      ]
+    }
+  ]
+}

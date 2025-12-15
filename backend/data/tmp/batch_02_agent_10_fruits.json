@@ -1,0 +1,3004 @@
+{
+  "batch": 2,
+  "agent": 10,
+  "category": "fruits",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "lemon",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 29,
+        "protein_g": 1.1,
+        "carbs_g": 9.3,
+        "fat_g": 0.3,
+        "fiber_g": 2.8
+      },
+      "aliases": {
+        "en": ["lemon", "fresh lemon"],
+        "ja": ["レモン"],
+        "ko": ["레몬"],
+        "zh": ["柠檬"],
+        "zh-tw": ["檸檬"],
+        "es": ["limón"],
+        "fr": ["citron"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 58},
+        {"unit": "wedge", "grams": 10},
+        {"unit": "cup, juice", "grams": 244}
+      ]
+    },
+    {
+      "canonical_name": "lime",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 30,
+        "protein_g": 0.7,
+        "carbs_g": 10.5,
+        "fat_g": 0.2,
+        "fiber_g": 2.8
+      },
+      "aliases": {
+        "en": ["lime", "fresh lime"],
+        "ja": ["ライム"],
+        "ko": ["라임"],
+        "zh": ["酸橙"],
+        "zh-tw": ["萊姆"],
+        "es": ["lima"],
+        "fr": ["citron vert", "lime"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 67},
+        {"unit": "wedge", "grams": 8},
+        {"unit": "cup, juice", "grams": 242}
+      ]
+    },
+    {
+      "canonical_name": "orange, navel",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 49,
+        "protein_g": 0.9,
+        "carbs_g": 12.5,
+        "fat_g": 0.2,
+        "fiber_g": 2.2
+      },
+      "aliases": {
+        "en": ["navel orange", "orange"],
+        "ja": ["ネーブルオレンジ", "オレンジ"],
+        "ko": ["네이블 오렌지", "오렌지"],
+        "zh": ["脐橙"],
+        "zh-tw": ["臍橙"],
+        "es": ["naranja navel", "naranja"],
+        "fr": ["orange navel", "orange"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 140},
+        {"unit": "cup, sections", "grams": 180}
+      ]
+    },
+    {
+      "canonical_name": "orange, blood",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 47,
+        "protein_g": 0.9,
+        "carbs_g": 11.8,
+        "fat_g": 0.1,
+        "fiber_g": 2.3
+      },
+      "aliases": {
+        "en": ["blood orange"],
+        "ja": ["ブラッドオレンジ"],
+        "ko": ["블러드 오렌지"],
+        "zh": ["血橙"],
+        "zh-tw": ["血橙"],
+        "es": ["naranja sanguina"],
+        "fr": ["orange sanguine"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 130},
+        {"unit": "cup, sections", "grams": 165}
+      ]
+    },
+    {
+      "canonical_name": "orange, mandarin",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 53,
+        "protein_g": 0.8,
+        "carbs_g": 13.3,
+        "fat_g": 0.3,
+        "fiber_g": 1.8
+      },
+      "aliases": {
+        "en": ["mandarin orange", "mandarin", "tangerine"],
+        "ja": ["みかん", "マンダリン"],
+        "ko": ["귤", "만다린"],
+        "zh": ["橘子", "柑橘"],
+        "zh-tw": ["橘子", "柑橘"],
+        "es": ["mandarina"],
+        "fr": ["mandarine"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 88},
+        {"unit": "cup, sections", "grams": 195}
+      ]
+    },
+    {
+      "canonical_name": "grapefruit, pink",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 42,
+        "protein_g": 0.8,
+        "carbs_g": 10.7,
+        "fat_g": 0.1,
+        "fiber_g": 1.6
+      },
+      "aliases": {
+        "en": ["pink grapefruit", "grapefruit"],
+        "ja": ["ピンクグレープフルーツ", "グレープフルーツ"],
+        "ko": ["핑크 자몽", "자몽"],
+        "zh": ["红葡萄柚", "葡萄柚"],
+        "zh-tw": ["紅葡萄柚", "葡萄柚"],
+        "es": ["pomelo rosado", "toronja"],
+        "fr": ["pamplemousse rose"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 246},
+        {"unit": "half", "grams": 123}
+      ]
+    },
+    {
+      "canonical_name": "grapefruit, white",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 33,
+        "protein_g": 0.7,
+        "carbs_g": 8.4,
+        "fat_g": 0.1,
+        "fiber_g": 1.1
+      },
+      "aliases": {
+        "en": ["white grapefruit"],
+        "ja": ["ホワイトグレープフルーツ"],
+        "ko": ["화이트 자몽"],
+        "zh": ["白葡萄柚"],
+        "zh-tw": ["白葡萄柚"],
+        "es": ["pomelo blanco"],
+        "fr": ["pamplemousse blanc"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 246},
+        {"unit": "half", "grams": 123}
+      ]
+    },
+    {
+      "canonical_name": "pomelo",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 38,
+        "protein_g": 0.8,
+        "carbs_g": 9.6,
+        "fat_g": 0.0,
+        "fiber_g": 1.0
+      },
+      "aliases": {
+        "en": ["pomelo", "pummelo", "chinese grapefruit"],
+        "ja": ["ザボン", "文旦"],
+        "ko": ["포멜로", "유자"],
+        "zh": ["柚子"],
+        "zh-tw": ["柚子"],
+        "es": ["pomelo"],
+        "fr": ["pamplemousse chinois", "pomelo"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 609},
+        {"unit": "cup, sections", "grams": 190}
+      ]
+    },
+    {
+      "canonical_name": "yuzu",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 53,
+        "protein_g": 0.5,
+        "carbs_g": 13.3,
+        "fat_g": 0.1,
+        "fiber_g": 1.8
+      },
+      "aliases": {
+        "en": ["yuzu"],
+        "ja": ["ゆず", "柚子"],
+        "ko": ["유자"],
+        "zh": ["香橙"],
+        "zh-tw": ["香橙"],
+        "es": ["yuzu"],
+        "fr": ["yuzu"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 80},
+        {"unit": "tablespoon, juice", "grams": 15}
+      ]
+    },
+    {
+      "canonical_name": "calamansi",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 31,
+        "protein_g": 0.6,
+        "carbs_g": 10.8,
+        "fat_g": 0.1,
+        "fiber_g": 2.0
+      },
+      "aliases": {
+        "en": ["calamansi", "calamondin", "philippine lime"],
+        "ja": ["カラマンシー"],
+        "ko": ["칼라만시"],
+        "zh": ["四季橘"],
+        "zh-tw": ["四季橘"],
+        "es": ["calamansi"],
+        "fr": ["calamondin"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 12},
+        {"unit": "tablespoon, juice", "grams": 15}
+      ]
+    },
+    {
+      "canonical_name": "strawberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 0.7,
+        "carbs_g": 7.7,
+        "fat_g": 0.3,
+        "fiber_g": 2.0
+      },
+      "aliases": {
+        "en": ["strawberry", "strawberries"],
+        "ja": ["いちご", "苺"],
+        "ko": ["딸기"],
+        "zh": ["草莓"],
+        "zh-tw": ["草莓"],
+        "es": ["fresa"],
+        "fr": ["fraise"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 12},
+        {"unit": "cup, whole", "grams": 144},
+        {"unit": "cup, sliced", "grams": 166}
+      ]
+    },
+    {
+      "canonical_name": "blueberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 57,
+        "protein_g": 0.7,
+        "carbs_g": 14.5,
+        "fat_g": 0.3,
+        "fiber_g": 2.4
+      },
+      "aliases": {
+        "en": ["blueberry", "blueberries"],
+        "ja": ["ブルーベリー"],
+        "ko": ["블루베리"],
+        "zh": ["蓝莓"],
+        "zh-tw": ["藍莓"],
+        "es": ["arándano azul"],
+        "fr": ["myrtille", "bleuet"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 148}
+      ]
+    },
+    {
+      "canonical_name": "raspberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 52,
+        "protein_g": 1.2,
+        "carbs_g": 11.9,
+        "fat_g": 0.7,
+        "fiber_g": 6.5
+      },
+      "aliases": {
+        "en": ["raspberry", "raspberries"],
+        "ja": ["ラズベリー", "木苺"],
+        "ko": ["라즈베리", "산딸기"],
+        "zh": ["覆盆子"],
+        "zh-tw": ["覆盆子"],
+        "es": ["frambuesa"],
+        "fr": ["framboise"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 123}
+      ]
+    },
+    {
+      "canonical_name": "blackberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 1.4,
+        "carbs_g": 9.6,
+        "fat_g": 0.5,
+        "fiber_g": 5.3
+      },
+      "aliases": {
+        "en": ["blackberry", "blackberries"],
+        "ja": ["ブラックベリー"],
+        "ko": ["블랙베리"],
+        "zh": ["黑莓"],
+        "zh-tw": ["黑莓"],
+        "es": ["mora"],
+        "fr": ["mûre"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 144}
+      ]
+    },
+    {
+      "canonical_name": "cranberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 46,
+        "protein_g": 0.4,
+        "carbs_g": 12.2,
+        "fat_g": 0.1,
+        "fiber_g": 4.6
+      },
+      "aliases": {
+        "en": ["cranberry", "cranberries"],
+        "ja": ["クランベリー"],
+        "ko": ["크랜베리"],
+        "zh": ["蔓越莓"],
+        "zh-tw": ["蔓越莓"],
+        "es": ["arándano rojo"],
+        "fr": ["canneberge"]
+      },
+      "common_units": [
+        {"unit": "cup, whole", "grams": 100}
+      ]
+    },
+    {
+      "canonical_name": "gooseberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 44,
+        "protein_g": 0.9,
+        "carbs_g": 10.2,
+        "fat_g": 0.6,
+        "fiber_g": 4.3
+      },
+      "aliases": {
+        "en": ["gooseberry", "gooseberries"],
+        "ja": ["グーズベリー", "西洋スグリ"],
+        "ko": ["구스베리"],
+        "zh": ["醋栗"],
+        "zh-tw": ["醋栗"],
+        "es": ["grosella espinosa"],
+        "fr": ["groseille à maquereau"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 150}
+      ]
+    },
+    {
+      "canonical_name": "mulberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 1.4,
+        "carbs_g": 9.8,
+        "fat_g": 0.4,
+        "fiber_g": 1.7
+      },
+      "aliases": {
+        "en": ["mulberry", "mulberries"],
+        "ja": ["桑の実", "マルベリー"],
+        "ko": ["뽕나무 열매", "오디"],
+        "zh": ["桑葚"],
+        "zh-tw": ["桑葚"],
+        "es": ["mora de morera"],
+        "fr": ["mûre blanche"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 140}
+      ]
+    },
+    {
+      "canonical_name": "elderberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 73,
+        "protein_g": 0.7,
+        "carbs_g": 18.4,
+        "fat_g": 0.5,
+        "fiber_g": 7.0
+      },
+      "aliases": {
+        "en": ["elderberry", "elderberries"],
+        "ja": ["エルダーベリー", "ニワトコの実"],
+        "ko": ["엘더베리"],
+        "zh": ["接骨木莓"],
+        "zh-tw": ["接骨木莓"],
+        "es": ["baya de saúco"],
+        "fr": ["baie de sureau"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 145}
+      ]
+    },
+    {
+      "canonical_name": "peach",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 39,
+        "protein_g": 0.9,
+        "carbs_g": 9.5,
+        "fat_g": 0.3,
+        "fiber_g": 1.5
+      },
+      "aliases": {
+        "en": ["peach", "peaches"],
+        "ja": ["桃"],
+        "ko": ["복숭아"],
+        "zh": ["桃子"],
+        "zh-tw": ["桃子"],
+        "es": ["durazno", "melocotón"],
+        "fr": ["pêche"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 150},
+        {"unit": "cup, sliced", "grams": 154}
+      ]
+    },
+    {
+      "canonical_name": "nectarine",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 44,
+        "protein_g": 1.1,
+        "carbs_g": 10.6,
+        "fat_g": 0.3,
+        "fiber_g": 1.7
+      },
+      "aliases": {
+        "en": ["nectarine", "nectarines"],
+        "ja": ["ネクタリン"],
+        "ko": ["천도복숭아", "넥타린"],
+        "zh": ["油桃"],
+        "zh-tw": ["油桃"],
+        "es": ["nectarina"],
+        "fr": ["nectarine", "brugnon"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 142},
+        {"unit": "cup, sliced", "grams": 143}
+      ]
+    },
+    {
+      "canonical_name": "plum",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 46,
+        "protein_g": 0.7,
+        "carbs_g": 11.4,
+        "fat_g": 0.3,
+        "fiber_g": 1.4
+      },
+      "aliases": {
+        "en": ["plum", "plums"],
+        "ja": ["プラム", "すもも"],
+        "ko": ["자두"],
+        "zh": ["李子"],
+        "zh-tw": ["李子"],
+        "es": ["ciruela"],
+        "fr": ["prune"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 66},
+        {"unit": "cup, sliced", "grams": 165}
+      ]
+    },
+    {
+      "canonical_name": "apricot",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 48,
+        "protein_g": 1.4,
+        "carbs_g": 11.1,
+        "fat_g": 0.4,
+        "fiber_g": 2.0
+      },
+      "aliases": {
+        "en": ["apricot", "apricots"],
+        "ja": ["あんず", "杏"],
+        "ko": ["살구"],
+        "zh": ["杏"],
+        "zh-tw": ["杏"],
+        "es": ["albaricoque", "damasco"],
+        "fr": ["abricot"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 35},
+        {"unit": "cup, halves", "grams": 155}
+      ]
+    },
+    {
+      "canonical_name": "cherry, sweet",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 63,
+        "protein_g": 1.1,
+        "carbs_g": 16.0,
+        "fat_g": 0.2,
+        "fiber_g": 2.1
+      },
+      "aliases": {
+        "en": ["sweet cherry", "cherry", "cherries"],
+        "ja": ["さくらんぼ", "チェリー"],
+        "ko": ["체리"],
+        "zh": ["樱桃"],
+        "zh-tw": ["櫻桃"],
+        "es": ["cereza"],
+        "fr": ["cerise"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 8},
+        {"unit": "cup, with pits", "grams": 138},
+        {"unit": "cup, pitted", "grams": 154}
+      ]
+    },
+    {
+      "canonical_name": "cherry, sour",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 50,
+        "protein_g": 1.0,
+        "carbs_g": 12.2,
+        "fat_g": 0.3,
+        "fiber_g": 1.6
+      },
+      "aliases": {
+        "en": ["sour cherry", "tart cherry"],
+        "ja": ["酸っぱいチェリー"],
+        "ko": ["신맛 체리"],
+        "zh": ["酸樱桃"],
+        "zh-tw": ["酸櫻桃"],
+        "es": ["cereza ácida"],
+        "fr": ["griotte", "cerise aigre"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 8},
+        {"unit": "cup, pitted", "grams": 155}
+      ]
+    },
+    {
+      "canonical_name": "mango",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 60,
+        "protein_g": 0.8,
+        "carbs_g": 15.0,
+        "fat_g": 0.4,
+        "fiber_g": 1.6
+      },
+      "aliases": {
+        "en": ["mango", "mangoes"],
+        "ja": ["マンゴー"],
+        "ko": ["망고"],
+        "zh": ["芒果"],
+        "zh-tw": ["芒果"],
+        "es": ["mango"],
+        "fr": ["mangue"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 336},
+        {"unit": "cup, pieces", "grams": 165}
+      ]
+    },
+    {
+      "canonical_name": "banana",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 89,
+        "protein_g": 1.1,
+        "carbs_g": 22.8,
+        "fat_g": 0.3,
+        "fiber_g": 2.6
+      },
+      "aliases": {
+        "en": ["banana", "bananas"],
+        "ja": ["バナナ"],
+        "ko": ["바나나"],
+        "zh": ["香蕉"],
+        "zh-tw": ["香蕉"],
+        "es": ["plátano", "banana"],
+        "fr": ["banane"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 118},
+        {"unit": "cup, sliced", "grams": 150},
+        {"unit": "cup, mashed", "grams": 225}
+      ]
+    },
+    {
+      "canonical_name": "plantain",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 122,
+        "protein_g": 1.3,
+        "carbs_g": 31.9,
+        "fat_g": 0.4,
+        "fiber_g": 2.3
+      },
+      "aliases": {
+        "en": ["plantain", "plantains", "cooking banana"],
+        "ja": ["プランテン", "料理用バナナ"],
+        "ko": ["플랜테인", "조리용 바나나"],
+        "zh": ["大蕉"],
+        "zh-tw": ["大蕉"],
+        "es": ["plátano macho"],
+        "fr": ["banane plantain"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 179},
+        {"unit": "cup, sliced", "grams": 148}
+      ]
+    },
+    {
+      "canonical_name": "papaya",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 0.5,
+        "carbs_g": 10.8,
+        "fat_g": 0.3,
+        "fiber_g": 1.7
+      },
+      "aliases": {
+        "en": ["papaya", "pawpaw"],
+        "ja": ["パパイア"],
+        "ko": ["파파야"],
+        "zh": ["木瓜"],
+        "zh-tw": ["木瓜"],
+        "es": ["papaya"],
+        "fr": ["papaye"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 304},
+        {"unit": "cup, cubed", "grams": 140}
+      ]
+    },
+    {
+      "canonical_name": "pineapple",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 50,
+        "protein_g": 0.5,
+        "carbs_g": 13.1,
+        "fat_g": 0.1,
+        "fiber_g": 1.4
+      },
+      "aliases": {
+        "en": ["pineapple"],
+        "ja": ["パイナップル"],
+        "ko": ["파인애플"],
+        "zh": ["菠萝"],
+        "zh-tw": ["鳳梨"],
+        "es": ["piña", "ananá"],
+        "fr": ["ananas"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 905},
+        {"unit": "cup, chunks", "grams": 165},
+        {"unit": "slice", "grams": 84}
+      ]
+    },
+    {
+      "canonical_name": "coconut, fresh",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 354,
+        "protein_g": 3.3,
+        "carbs_g": 15.2,
+        "fat_g": 33.5,
+        "fiber_g": 9.0
+      },
+      "aliases": {
+        "en": ["fresh coconut", "coconut meat"],
+        "ja": ["ココナッツ", "生ココナッツ"],
+        "ko": ["코코넛", "생 코코넛"],
+        "zh": ["椰子", "鲜椰子"],
+        "zh-tw": ["椰子", "鮮椰子"],
+        "es": ["coco fresco"],
+        "fr": ["noix de coco fraîche"]
+      },
+      "common_units": [
+        {"unit": "cup, shredded", "grams": 80}
+      ]
+    },
+    {
+      "canonical_name": "passion fruit",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 97,
+        "protein_g": 2.2,
+        "carbs_g": 23.4,
+        "fat_g": 0.7,
+        "fiber_g": 10.4
+      },
+      "aliases": {
+        "en": ["passion fruit", "passionfruit"],
+        "ja": ["パッションフルーツ"],
+        "ko": ["패션프루트"],
+        "zh": ["百香果"],
+        "zh-tw": ["百香果"],
+        "es": ["maracuyá", "fruta de la pasión"],
+        "fr": ["fruit de la passion"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 18}
+      ]
+    },
+    {
+      "canonical_name": "guava",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 68,
+        "protein_g": 2.6,
+        "carbs_g": 14.3,
+        "fat_g": 1.0,
+        "fiber_g": 5.4
+      },
+      "aliases": {
+        "en": ["guava", "guavas"],
+        "ja": ["グアバ"],
+        "ko": ["구아바"],
+        "zh": ["番石榴"],
+        "zh-tw": ["番石榴"],
+        "es": ["guayaba"],
+        "fr": ["goyave"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 90},
+        {"unit": "cup", "grams": 165}
+      ]
+    },
+    {
+      "canonical_name": "lychee",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 66,
+        "protein_g": 0.8,
+        "carbs_g": 16.5,
+        "fat_g": 0.4,
+        "fiber_g": 1.3
+      },
+      "aliases": {
+        "en": ["lychee", "litchi"],
+        "ja": ["ライチ"],
+        "ko": ["리치"],
+        "zh": ["荔枝"],
+        "zh-tw": ["荔枝"],
+        "es": ["lichi"],
+        "fr": ["litchi"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 10},
+        {"unit": "cup", "grams": 190}
+      ]
+    },
+    {
+      "canonical_name": "rambutan",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 82,
+        "protein_g": 0.7,
+        "carbs_g": 20.9,
+        "fat_g": 0.2,
+        "fiber_g": 0.9
+      },
+      "aliases": {
+        "en": ["rambutan"],
+        "ja": ["ランブータン"],
+        "ko": ["람부탄"],
+        "zh": ["红毛丹"],
+        "zh-tw": ["紅毛丹"],
+        "es": ["rambután"],
+        "fr": ["ramboutan"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 9}
+      ]
+    },
+    {
+      "canonical_name": "dragon fruit, white flesh",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 60,
+        "protein_g": 1.2,
+        "carbs_g": 13.0,
+        "fat_g": 0.4,
+        "fiber_g": 3.0
+      },
+      "aliases": {
+        "en": ["white dragon fruit", "pitaya", "pitahaya"],
+        "ja": ["白いドラゴンフルーツ", "ピタヤ"],
+        "ko": ["화이트 용과", "피타야"],
+        "zh": ["白肉火龙果"],
+        "zh-tw": ["白肉火龍果"],
+        "es": ["pitaya blanca"],
+        "fr": ["fruit du dragon blanc"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 300},
+        {"unit": "cup, cubed", "grams": 150}
+      ]
+    },
+    {
+      "canonical_name": "dragon fruit, red flesh",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 60,
+        "protein_g": 1.2,
+        "carbs_g": 13.0,
+        "fat_g": 0.4,
+        "fiber_g": 3.0
+      },
+      "aliases": {
+        "en": ["red dragon fruit", "red pitaya"],
+        "ja": ["赤いドラゴンフルーツ"],
+        "ko": ["레드 용과"],
+        "zh": ["红肉火龙果"],
+        "zh-tw": ["紅肉火龍果"],
+        "es": ["pitaya roja"],
+        "fr": ["fruit du dragon rouge"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 300},
+        {"unit": "cup, cubed", "grams": 150}
+      ]
+    },
+    {
+      "canonical_name": "jackfruit",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 95,
+        "protein_g": 1.7,
+        "carbs_g": 23.2,
+        "fat_g": 0.6,
+        "fiber_g": 1.5
+      },
+      "aliases": {
+        "en": ["jackfruit"],
+        "ja": ["ジャックフルーツ"],
+        "ko": ["잭프루트"],
+        "zh": ["菠萝蜜"],
+        "zh-tw": ["波羅蜜"],
+        "es": ["jaca", "yaca"],
+        "fr": ["jacquier"]
+      },
+      "common_units": [
+        {"unit": "cup, sliced", "grams": 165}
+      ]
+    },
+    {
+      "canonical_name": "durian",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 147,
+        "protein_g": 1.5,
+        "carbs_g": 27.1,
+        "fat_g": 5.3,
+        "fiber_g": 3.8
+      },
+      "aliases": {
+        "en": ["durian"],
+        "ja": ["ドリアン"],
+        "ko": ["두리안"],
+        "zh": ["榴莲"],
+        "zh-tw": ["榴槤"],
+        "es": ["durián"],
+        "fr": ["durian"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 243}
+      ]
+    },
+    {
+      "canonical_name": "starfruit",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 31,
+        "protein_g": 1.0,
+        "carbs_g": 6.7,
+        "fat_g": 0.3,
+        "fiber_g": 2.8
+      },
+      "aliases": {
+        "en": ["starfruit", "carambola", "star fruit"],
+        "ja": ["スターフルーツ"],
+        "ko": ["스타프루트", "양도"],
+        "zh": ["杨桃"],
+        "zh-tw": ["楊桃"],
+        "es": ["carambola"],
+        "fr": ["carambole"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 91},
+        {"unit": "cup, cubed", "grams": 132}
+      ]
+    },
+    {
+      "canonical_name": "apple, fuji",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 52,
+        "protein_g": 0.3,
+        "carbs_g": 13.8,
+        "fat_g": 0.2,
+        "fiber_g": 2.4
+      },
+      "aliases": {
+        "en": ["fuji apple", "apple"],
+        "ja": ["ふじりんご", "りんご"],
+        "ko": ["후지 사과", "사과"],
+        "zh": ["富士苹果", "苹果"],
+        "zh-tw": ["富士蘋果", "蘋果"],
+        "es": ["manzana fuji", "manzana"],
+        "fr": ["pomme fuji", "pomme"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 182},
+        {"unit": "cup, sliced", "grams": 110}
+      ]
+    },
+    {
+      "canonical_name": "apple, granny smith",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 52,
+        "protein_g": 0.3,
+        "carbs_g": 13.8,
+        "fat_g": 0.2,
+        "fiber_g": 2.4
+      },
+      "aliases": {
+        "en": ["granny smith apple"],
+        "ja": ["グラニースミスりんご"],
+        "ko": ["그래니 스미스 사과"],
+        "zh": ["青苹果"],
+        "zh-tw": ["青蘋果"],
+        "es": ["manzana granny smith"],
+        "fr": ["pomme granny smith"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 182},
+        {"unit": "cup, sliced", "grams": 110}
+      ]
+    },
+    {
+      "canonical_name": "apple, honeycrisp",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 52,
+        "protein_g": 0.3,
+        "carbs_g": 13.8,
+        "fat_g": 0.2,
+        "fiber_g": 2.4
+      },
+      "aliases": {
+        "en": ["honeycrisp apple"],
+        "ja": ["ハニークリスプりんご"],
+        "ko": ["허니크리스프 사과"],
+        "zh": ["蜜脆苹果"],
+        "zh-tw": ["蜜脆蘋果"],
+        "es": ["manzana honeycrisp"],
+        "fr": ["pomme honeycrisp"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 182},
+        {"unit": "cup, sliced", "grams": 110}
+      ]
+    },
+    {
+      "canonical_name": "apple, gala",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 52,
+        "protein_g": 0.3,
+        "carbs_g": 13.8,
+        "fat_g": 0.2,
+        "fiber_g": 2.4
+      },
+      "aliases": {
+        "en": ["gala apple"],
+        "ja": ["ガラりんご"],
+        "ko": ["갈라 사과"],
+        "zh": ["嘎啦苹果"],
+        "zh-tw": ["嘎啦蘋果"],
+        "es": ["manzana gala"],
+        "fr": ["pomme gala"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 182},
+        {"unit": "cup, sliced", "grams": 110}
+      ]
+    },
+    {
+      "canonical_name": "pear, asian",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 42,
+        "protein_g": 0.5,
+        "carbs_g": 10.7,
+        "fat_g": 0.2,
+        "fiber_g": 3.6
+      },
+      "aliases": {
+        "en": ["asian pear", "nashi pear", "apple pear"],
+        "ja": ["梨", "日本梨"],
+        "ko": ["배"],
+        "zh": ["雪梨", "鸭梨"],
+        "zh-tw": ["雪梨", "鴨梨"],
+        "es": ["pera asiática"],
+        "fr": ["poire asiatique", "nashi"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 275},
+        {"unit": "cup, sliced", "grams": 122}
+      ]
+    },
+    {
+      "canonical_name": "pear, bartlett",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 57,
+        "protein_g": 0.4,
+        "carbs_g": 15.2,
+        "fat_g": 0.1,
+        "fiber_g": 3.1
+      },
+      "aliases": {
+        "en": ["bartlett pear", "pear"],
+        "ja": ["バートレット梨", "洋梨"],
+        "ko": ["바틀렛 배", "서양배"],
+        "zh": ["西洋梨"],
+        "zh-tw": ["西洋梨"],
+        "es": ["pera bartlett"],
+        "fr": ["poire williams"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 178},
+        {"unit": "cup, sliced", "grams": 140}
+      ]
+    },
+    {
+      "canonical_name": "pear, bosc",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 57,
+        "protein_g": 0.4,
+        "carbs_g": 15.2,
+        "fat_g": 0.1,
+        "fiber_g": 3.1
+      },
+      "aliases": {
+        "en": ["bosc pear"],
+        "ja": ["ボスク梨"],
+        "ko": ["보스크 배"],
+        "zh": ["波士克梨"],
+        "zh-tw": ["波士克梨"],
+        "es": ["pera bosc"],
+        "fr": ["poire bosc"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 178},
+        {"unit": "cup, sliced", "grams": 140}
+      ]
+    },
+    {
+      "canonical_name": "watermelon",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 30,
+        "protein_g": 0.6,
+        "carbs_g": 7.6,
+        "fat_g": 0.2,
+        "fiber_g": 0.4
+      },
+      "aliases": {
+        "en": ["watermelon"],
+        "ja": ["スイカ"],
+        "ko": ["수박"],
+        "zh": ["西瓜"],
+        "zh-tw": ["西瓜"],
+        "es": ["sandía"],
+        "fr": ["pastèque"]
+      },
+      "common_units": [
+        {"unit": "cup, diced", "grams": 152},
+        {"unit": "wedge", "grams": 286}
+      ]
+    },
+    {
+      "canonical_name": "cantaloupe",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 34,
+        "protein_g": 0.8,
+        "carbs_g": 8.2,
+        "fat_g": 0.2,
+        "fiber_g": 0.9
+      },
+      "aliases": {
+        "en": ["cantaloupe", "muskmelon"],
+        "ja": ["カンタロープ", "メロン"],
+        "ko": ["칸탈루프 멜론"],
+        "zh": ["哈密瓜"],
+        "zh-tw": ["哈密瓜"],
+        "es": ["melón cantalupo"],
+        "fr": ["cantaloup"]
+      },
+      "common_units": [
+        {"unit": "cup, diced", "grams": 160},
+        {"unit": "wedge", "grams": 69}
+      ]
+    },
+    {
+      "canonical_name": "honeydew melon",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 36,
+        "protein_g": 0.5,
+        "carbs_g": 9.1,
+        "fat_g": 0.1,
+        "fiber_g": 0.8
+      },
+      "aliases": {
+        "en": ["honeydew", "honeydew melon"],
+        "ja": ["ハニーデューメロン"],
+        "ko": ["허니듀 멜론"],
+        "zh": ["蜜瓜"],
+        "zh-tw": ["蜜瓜"],
+        "es": ["melón verde"],
+        "fr": ["melon miel"]
+      },
+      "common_units": [
+        {"unit": "cup, diced", "grams": 170},
+        {"unit": "wedge", "grams": 125}
+      ]
+    },
+    {
+      "canonical_name": "grape, red",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 69,
+        "protein_g": 0.7,
+        "carbs_g": 18.1,
+        "fat_g": 0.2,
+        "fiber_g": 0.9
+      },
+      "aliases": {
+        "en": ["red grape", "red grapes"],
+        "ja": ["赤ぶどう"],
+        "ko": ["적포도"],
+        "zh": ["红葡萄"],
+        "zh-tw": ["紅葡萄"],
+        "es": ["uva roja"],
+        "fr": ["raisin rouge"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 151}
+      ]
+    },
+    {
+      "canonical_name": "grape, green",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 69,
+        "protein_g": 0.7,
+        "carbs_g": 18.1,
+        "fat_g": 0.2,
+        "fiber_g": 0.9
+      },
+      "aliases": {
+        "en": ["green grape", "white grape", "green grapes"],
+        "ja": ["緑ぶどう", "白ぶどう"],
+        "ko": ["청포도"],
+        "zh": ["绿葡萄"],
+        "zh-tw": ["綠葡萄"],
+        "es": ["uva verde"],
+        "fr": ["raisin vert"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 151}
+      ]
+    },
+    {
+      "canonical_name": "grape, black",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 69,
+        "protein_g": 0.7,
+        "carbs_g": 18.1,
+        "fat_g": 0.2,
+        "fiber_g": 0.9
+      },
+      "aliases": {
+        "en": ["black grape", "black grapes"],
+        "ja": ["黒ぶどう"],
+        "ko": ["흑포도"],
+        "zh": ["黑葡萄"],
+        "zh-tw": ["黑葡萄"],
+        "es": ["uva negra"],
+        "fr": ["raisin noir"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 151}
+      ]
+    },
+    {
+      "canonical_name": "fig, fresh",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 74,
+        "protein_g": 0.8,
+        "carbs_g": 19.2,
+        "fat_g": 0.3,
+        "fiber_g": 2.9
+      },
+      "aliases": {
+        "en": ["fresh fig", "fig"],
+        "ja": ["イチジク", "生イチジク"],
+        "ko": ["무화과"],
+        "zh": ["无花果"],
+        "zh-tw": ["無花果"],
+        "es": ["higo fresco"],
+        "fr": ["figue fraîche"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 50},
+        {"unit": "cup", "grams": 149}
+      ]
+    },
+    {
+      "canonical_name": "date, medjool",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 277,
+        "protein_g": 1.8,
+        "carbs_g": 75.0,
+        "fat_g": 0.2,
+        "fiber_g": 6.7
+      },
+      "aliases": {
+        "en": ["medjool date", "date"],
+        "ja": ["メジョール デーツ", "ナツメヤシ"],
+        "ko": ["메줄 대추야자"],
+        "zh": ["椰枣"],
+        "zh-tw": ["椰棗"],
+        "es": ["dátil medjool"],
+        "fr": ["datte medjool"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 24}
+      ]
+    },
+    {
+      "canonical_name": "pomegranate",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 83,
+        "protein_g": 1.7,
+        "carbs_g": 18.7,
+        "fat_g": 1.2,
+        "fiber_g": 4.0
+      },
+      "aliases": {
+        "en": ["pomegranate"],
+        "ja": ["ザクロ"],
+        "ko": ["석류"],
+        "zh": ["石榴"],
+        "zh-tw": ["石榴"],
+        "es": ["granada"],
+        "fr": ["grenade"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 282},
+        {"unit": "cup, arils", "grams": 174}
+      ]
+    },
+    {
+      "canonical_name": "kiwi, green",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 61,
+        "protein_g": 1.1,
+        "carbs_g": 14.7,
+        "fat_g": 0.5,
+        "fiber_g": 3.0
+      },
+      "aliases": {
+        "en": ["green kiwi", "kiwi", "kiwifruit"],
+        "ja": ["キウイフルーツ", "緑キウイ"],
+        "ko": ["키위", "그린 키위"],
+        "zh": ["猕猴桃", "奇异果"],
+        "zh-tw": ["奇異果"],
+        "es": ["kiwi verde"],
+        "fr": ["kiwi vert"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 69},
+        {"unit": "cup, sliced", "grams": 180}
+      ]
+    },
+    {
+      "canonical_name": "kiwi, gold",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 61,
+        "protein_g": 1.0,
+        "carbs_g": 14.7,
+        "fat_g": 0.5,
+        "fiber_g": 1.4
+      },
+      "aliases": {
+        "en": ["gold kiwi", "golden kiwi"],
+        "ja": ["ゴールドキウイ"],
+        "ko": ["골드 키위"],
+        "zh": ["黄金猕猴桃"],
+        "zh-tw": ["黃金奇異果"],
+        "es": ["kiwi dorado"],
+        "fr": ["kiwi jaune"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 69},
+        {"unit": "cup, sliced", "grams": 180}
+      ]
+    },
+    {
+      "canonical_name": "persimmon, fuyu",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 70,
+        "protein_g": 0.6,
+        "carbs_g": 18.6,
+        "fat_g": 0.2,
+        "fiber_g": 3.6
+      },
+      "aliases": {
+        "en": ["fuyu persimmon", "persimmon"],
+        "ja": ["柿", "富有柿"],
+        "ko": ["단감", "후유 감"],
+        "zh": ["柿子"],
+        "zh-tw": ["柿子"],
+        "es": ["caqui fuyu"],
+        "fr": ["kaki fuyu"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 168}
+      ]
+    },
+    {
+      "canonical_name": "persimmon, hachiya",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 70,
+        "protein_g": 0.6,
+        "carbs_g": 18.6,
+        "fat_g": 0.2,
+        "fiber_g": 3.6
+      },
+      "aliases": {
+        "en": ["hachiya persimmon"],
+        "ja": ["蜂屋柿"],
+        "ko": ["하치야 감"],
+        "zh": ["蜂屋柿"],
+        "zh-tw": ["蜂屋柿"],
+        "es": ["caqui hachiya"],
+        "fr": ["kaki hachiya"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 168}
+      ]
+    },
+    {
+      "canonical_name": "avocado",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 160,
+        "protein_g": 2.0,
+        "carbs_g": 8.5,
+        "fat_g": 14.7,
+        "fiber_g": 6.7
+      },
+      "aliases": {
+        "en": ["avocado"],
+        "ja": ["アボカド"],
+        "ko": ["아보카도"],
+        "zh": ["鳄梨"],
+        "zh-tw": ["酪梨"],
+        "es": ["aguacate", "palta"],
+        "fr": ["avocat"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 201},
+        {"unit": "cup, sliced", "grams": 146}
+      ]
+    },
+    {
+      "canonical_name": "acai berry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 70,
+        "protein_g": 2.0,
+        "carbs_g": 4.0,
+        "fat_g": 5.0,
+        "fiber_g": 2.0
+      },
+      "aliases": {
+        "en": ["acai", "acai berry"],
+        "ja": ["アサイー"],
+        "ko": ["아사이 베리"],
+        "zh": ["巴西莓"],
+        "zh-tw": ["巴西莓"],
+        "es": ["açaí"],
+        "fr": ["açaï", "baie d'açaï"]
+      },
+      "common_units": [
+        {"unit": "cup, puree", "grams": 240}
+      ]
+    },
+    {
+      "canonical_name": "breadfruit",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 103,
+        "protein_g": 1.1,
+        "carbs_g": 27.1,
+        "fat_g": 0.2,
+        "fiber_g": 4.9
+      },
+      "aliases": {
+        "en": ["breadfruit"],
+        "ja": ["パンノキ"],
+        "ko": ["빵나무 열매"],
+        "zh": ["面包果"],
+        "zh-tw": ["麵包果"],
+        "es": ["fruta del pan"],
+        "fr": ["fruit à pain"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 220}
+      ]
+    },
+    {
+      "canonical_name": "tamarind",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 239,
+        "protein_g": 2.8,
+        "carbs_g": 62.5,
+        "fat_g": 0.6,
+        "fiber_g": 5.1
+      },
+      "aliases": {
+        "en": ["tamarind"],
+        "ja": ["タマリンド"],
+        "ko": ["타마린드"],
+        "zh": ["罗望子"],
+        "zh-tw": ["羅望子"],
+        "es": ["tamarindo"],
+        "fr": ["tamarin"]
+      },
+      "common_units": [
+        {"unit": "cup, pulp", "grams": 120}
+      ]
+    },
+    {
+      "canonical_name": "longan",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 60,
+        "protein_g": 1.3,
+        "carbs_g": 15.1,
+        "fat_g": 0.1,
+        "fiber_g": 1.1
+      },
+      "aliases": {
+        "en": ["longan", "dragon eye"],
+        "ja": ["龍眼"],
+        "ko": ["용안"],
+        "zh": ["龙眼"],
+        "zh-tw": ["龍眼"],
+        "es": ["longan"],
+        "fr": ["longane"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 3}
+      ]
+    },
+    {
+      "canonical_name": "mangosteen",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 73,
+        "protein_g": 0.4,
+        "carbs_g": 17.9,
+        "fat_g": 0.6,
+        "fiber_g": 1.8
+      },
+      "aliases": {
+        "en": ["mangosteen"],
+        "ja": ["マンゴスチン"],
+        "ko": ["망고스틴"],
+        "zh": ["山竹"],
+        "zh-tw": ["山竹"],
+        "es": ["mangostán"],
+        "fr": ["mangoustan"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 75}
+      ]
+    },
+    {
+      "canonical_name": "soursop",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 66,
+        "protein_g": 1.0,
+        "carbs_g": 16.8,
+        "fat_g": 0.3,
+        "fiber_g": 3.3
+      },
+      "aliases": {
+        "en": ["soursop", "guanabana"],
+        "ja": ["サワーソップ"],
+        "ko": ["사워솝"],
+        "zh": ["刺果番荔枝"],
+        "zh-tw": ["刺果番荔枝"],
+        "es": ["guanábana"],
+        "fr": ["corossol"]
+      },
+      "common_units": [
+        {"unit": "cup, pulp", "grams": 225}
+      ]
+    },
+    {
+      "canonical_name": "quince",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 57,
+        "protein_g": 0.4,
+        "carbs_g": 15.3,
+        "fat_g": 0.1,
+        "fiber_g": 1.9
+      },
+      "aliases": {
+        "en": ["quince"],
+        "ja": ["マルメロ"],
+        "ko": ["모과"],
+        "zh": ["榅桲"],
+        "zh-tw": ["榅桲"],
+        "es": ["membrillo"],
+        "fr": ["coing"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 92}
+      ]
+    },
+    {
+      "canonical_name": "kumquat",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 71,
+        "protein_g": 1.9,
+        "carbs_g": 15.9,
+        "fat_g": 0.9,
+        "fiber_g": 6.5
+      },
+      "aliases": {
+        "en": ["kumquat"],
+        "ja": ["金柑"],
+        "ko": ["금귤"],
+        "zh": ["金橘"],
+        "zh-tw": ["金橘"],
+        "es": ["kumquat"],
+        "fr": ["kumquat"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 19}
+      ]
+    },
+    {
+      "canonical_name": "currant, black",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 63,
+        "protein_g": 1.4,
+        "carbs_g": 15.4,
+        "fat_g": 0.4,
+        "fiber_g": 4.8
+      },
+      "aliases": {
+        "en": ["black currant", "blackcurrant"],
+        "ja": ["黒スグリ", "カシス"],
+        "ko": ["블랙커런트"],
+        "zh": ["黑醋栗"],
+        "zh-tw": ["黑醋栗"],
+        "es": ["grosella negra"],
+        "fr": ["cassis"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 112}
+      ]
+    },
+    {
+      "canonical_name": "currant, red",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 56,
+        "protein_g": 1.4,
+        "carbs_g": 13.8,
+        "fat_g": 0.2,
+        "fiber_g": 4.3
+      },
+      "aliases": {
+        "en": ["red currant", "redcurrant"],
+        "ja": ["赤スグリ"],
+        "ko": ["레드커런트"],
+        "zh": ["红醋栗"],
+        "zh-tw": ["紅醋栗"],
+        "es": ["grosella roja"],
+        "fr": ["groseille rouge"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 112}
+      ]
+    },
+    {
+      "canonical_name": "boysenberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 50,
+        "protein_g": 1.0,
+        "carbs_g": 11.9,
+        "fat_g": 0.3,
+        "fiber_g": 5.0
+      },
+      "aliases": {
+        "en": ["boysenberry", "boysenberries"],
+        "ja": ["ボイセンベリー"],
+        "ko": ["보이센베리"],
+        "zh": ["博伊森莓"],
+        "zh-tw": ["博伊森莓"],
+        "es": ["boysenberry"],
+        "fr": ["boysenberry"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 132}
+      ]
+    },
+    {
+      "canonical_name": "cloudberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 51,
+        "protein_g": 2.4,
+        "carbs_g": 8.6,
+        "fat_g": 0.8,
+        "fiber_g": 6.3
+      },
+      "aliases": {
+        "en": ["cloudberry", "bakeapple"],
+        "ja": ["ホロムイイチゴ"],
+        "ko": ["클라우드베리"],
+        "zh": ["云莓"],
+        "zh-tw": ["雲莓"],
+        "es": ["mora de los pantanos"],
+        "fr": ["plaquebière"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 140}
+      ]
+    },
+    {
+      "canonical_name": "huckleberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 37,
+        "protein_g": 0.7,
+        "carbs_g": 8.7,
+        "fat_g": 0.4,
+        "fiber_g": 3.0
+      },
+      "aliases": {
+        "en": ["huckleberry"],
+        "ja": ["ハックルベリー"],
+        "ko": ["허클베리"],
+        "zh": ["哈克贝利"],
+        "zh-tw": ["哈克貝利"],
+        "es": ["arándano americano"],
+        "fr": ["myrtille américaine"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 145}
+      ]
+    },
+    {
+      "canonical_name": "salmonberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 1.0,
+        "carbs_g": 7.0,
+        "fat_g": 0.3,
+        "fiber_g": 4.0
+      },
+      "aliases": {
+        "en": ["salmonberry"],
+        "ja": ["サーモンベリー"],
+        "ko": ["새먼베리"],
+        "zh": ["鲑莓"],
+        "zh-tw": ["鮭莓"],
+        "es": ["frambuesa salmón"],
+        "fr": ["ronce remarquable"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 140}
+      ]
+    },
+    {
+      "canonical_name": "marionberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 1.4,
+        "carbs_g": 9.6,
+        "fat_g": 0.5,
+        "fiber_g": 5.3
+      },
+      "aliases": {
+        "en": ["marionberry"],
+        "ja": ["マリオンベリー"],
+        "ko": ["마리온베리"],
+        "zh": ["马里昂莓"],
+        "zh-tw": ["馬里昂莓"],
+        "es": ["marionberry"],
+        "fr": ["marionberry"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 144}
+      ]
+    },
+    {
+      "canonical_name": "loganberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 55,
+        "protein_g": 1.5,
+        "carbs_g": 12.9,
+        "fat_g": 0.3,
+        "fiber_g": 5.3
+      },
+      "aliases": {
+        "en": ["loganberry"],
+        "ja": ["ローガンベリー"],
+        "ko": ["로간베리"],
+        "zh": ["罗甘莓"],
+        "zh-tw": ["羅甘莓"],
+        "es": ["loganberry"],
+        "fr": ["loganberry"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 147}
+      ]
+    },
+    {
+      "canonical_name": "bilberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 57,
+        "protein_g": 0.7,
+        "carbs_g": 14.5,
+        "fat_g": 0.3,
+        "fiber_g": 2.4
+      },
+      "aliases": {
+        "en": ["bilberry", "european blueberry"],
+        "ja": ["ビルベリー"],
+        "ko": ["빌베리"],
+        "zh": ["越橘"],
+        "zh-tw": ["越橘"],
+        "es": ["arándano europeo"],
+        "fr": ["myrtille sauvage"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 145}
+      ]
+    },
+    {
+      "canonical_name": "lingonberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 54,
+        "protein_g": 0.8,
+        "carbs_g": 11.3,
+        "fat_g": 0.5,
+        "fiber_g": 3.7
+      },
+      "aliases": {
+        "en": ["lingonberry", "cowberry"],
+        "ja": ["リンゴンベリー", "コケモモ"],
+        "ko": ["링곤베리"],
+        "zh": ["越橘"],
+        "zh-tw": ["越橘"],
+        "es": ["arándano rojo europeo"],
+        "fr": ["airelle rouge"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 145}
+      ]
+    },
+    {
+      "canonical_name": "bearberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 50,
+        "protein_g": 0.6,
+        "carbs_g": 12.0,
+        "fat_g": 0.2,
+        "fiber_g": 4.0
+      },
+      "aliases": {
+        "en": ["bearberry", "kinnikinnick"],
+        "ja": ["ベアベリー"],
+        "ko": ["베어베리"],
+        "zh": ["熊果"],
+        "zh-tw": ["熊果"],
+        "es": ["gayuba"],
+        "fr": ["raisin d'ours"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 140}
+      ]
+    },
+    {
+      "canonical_name": "jabuticaba",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 58,
+        "protein_g": 0.6,
+        "carbs_g": 15.3,
+        "fat_g": 0.1,
+        "fiber_g": 2.3
+      },
+      "aliases": {
+        "en": ["jabuticaba", "brazilian grape tree"],
+        "ja": ["ジャボチカバ"],
+        "ko": ["자부티카바"],
+        "zh": ["嘉宝果"],
+        "zh-tw": ["嘉寶果"],
+        "es": ["jabuticaba"],
+        "fr": ["jaboticaba"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 15}
+      ]
+    },
+    {
+      "canonical_name": "acerola",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 0.4,
+        "carbs_g": 7.7,
+        "fat_g": 0.3,
+        "fiber_g": 1.1
+      },
+      "aliases": {
+        "en": ["acerola", "barbados cherry"],
+        "ja": ["アセロラ"],
+        "ko": ["아세로라"],
+        "zh": ["针叶樱桃"],
+        "zh-tw": ["針葉櫻桃"],
+        "es": ["acerola"],
+        "fr": ["acérola"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 5},
+        {"unit": "cup", "grams": 98}
+      ]
+    },
+    {
+      "canonical_name": "camu camu",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 17,
+        "protein_g": 0.4,
+        "carbs_g": 4.7,
+        "fat_g": 0.2,
+        "fiber_g": 1.1
+      },
+      "aliases": {
+        "en": ["camu camu"],
+        "ja": ["カムカム"],
+        "ko": ["카무카무"],
+        "zh": ["卡姆果"],
+        "zh-tw": ["卡姆果"],
+        "es": ["camu camu"],
+        "fr": ["camu camu"]
+      },
+      "common_units": [
+        {"unit": "tablespoon, powder", "grams": 5}
+      ]
+    },
+    {
+      "canonical_name": "cupuacu",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 49,
+        "protein_g": 1.1,
+        "carbs_g": 11.5,
+        "fat_g": 0.3,
+        "fiber_g": 1.5
+      },
+      "aliases": {
+        "en": ["cupuacu", "cupuassu"],
+        "ja": ["クプアス"],
+        "ko": ["쿠푸아수"],
+        "zh": ["库普阿苏"],
+        "zh-tw": ["庫普阿蘇"],
+        "es": ["cupuazú"],
+        "fr": ["cupuaçu"]
+      },
+      "common_units": [
+        {"unit": "cup, pulp", "grams": 240}
+      ]
+    },
+    {
+      "canonical_name": "feijoa",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 55,
+        "protein_g": 1.2,
+        "carbs_g": 13.0,
+        "fat_g": 0.6,
+        "fiber_g": 6.4
+      },
+      "aliases": {
+        "en": ["feijoa", "pineapple guava"],
+        "ja": ["フェイジョア"],
+        "ko": ["페이조아"],
+        "zh": ["斐济果"],
+        "zh-tw": ["斐濟果"],
+        "es": ["feijoa"],
+        "fr": ["feijoa"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 42}
+      ]
+    },
+    {
+      "canonical_name": "cherimoya",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 75,
+        "protein_g": 1.6,
+        "carbs_g": 17.7,
+        "fat_g": 0.7,
+        "fiber_g": 3.0
+      },
+      "aliases": {
+        "en": ["cherimoya", "custard apple"],
+        "ja": ["チェリモヤ"],
+        "ko": ["체리모야"],
+        "zh": ["番荔枝"],
+        "zh-tw": ["番荔枝"],
+        "es": ["chirimoya"],
+        "fr": ["chérimole"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 270}
+      ]
+    },
+    {
+      "canonical_name": "atemoya",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 94,
+        "protein_g": 2.1,
+        "carbs_g": 23.6,
+        "fat_g": 0.3,
+        "fiber_g": 2.4
+      },
+      "aliases": {
+        "en": ["atemoya"],
+        "ja": ["アテモヤ"],
+        "ko": ["아테모야"],
+        "zh": ["凤梨释迦"],
+        "zh-tw": ["鳳梨釋迦"],
+        "es": ["atemoya"],
+        "fr": ["atemoya"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 250}
+      ]
+    },
+    {
+      "canonical_name": "sapodilla",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 83,
+        "protein_g": 0.4,
+        "carbs_g": 19.9,
+        "fat_g": 1.1,
+        "fiber_g": 5.3
+      },
+      "aliases": {
+        "en": ["sapodilla", "chikoo"],
+        "ja": ["サポジラ"],
+        "ko": ["사포딜라"],
+        "zh": ["人心果"],
+        "zh-tw": ["人心果"],
+        "es": ["zapote"],
+        "fr": ["sapotille"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 170}
+      ]
+    },
+    {
+      "canonical_name": "pawpaw",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 80,
+        "protein_g": 1.2,
+        "carbs_g": 18.8,
+        "fat_g": 1.2,
+        "fiber_g": 2.6
+      },
+      "aliases": {
+        "en": ["pawpaw", "american pawpaw"],
+        "ja": ["ポーポー"],
+        "ko": ["포포"],
+        "zh": ["泡泡果"],
+        "zh-tw": ["泡泡果"],
+        "es": ["papaya americana"],
+        "fr": ["asiminier"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 60}
+      ]
+    },
+    {
+      "canonical_name": "jujube",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 79,
+        "protein_g": 1.2,
+        "carbs_g": 20.2,
+        "fat_g": 0.2,
+        "fiber_g": 10.0
+      },
+      "aliases": {
+        "en": ["jujube", "chinese date", "red date"],
+        "ja": ["ナツメ"],
+        "ko": ["대추"],
+        "zh": ["枣", "大枣"],
+        "zh-tw": ["棗", "大棗"],
+        "es": ["azufaifo"],
+        "fr": ["jujube"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 5}
+      ]
+    },
+    {
+      "canonical_name": "loquat",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 47,
+        "protein_g": 0.4,
+        "carbs_g": 12.1,
+        "fat_g": 0.2,
+        "fiber_g": 1.7
+      },
+      "aliases": {
+        "en": ["loquat", "japanese plum"],
+        "ja": ["枇杷"],
+        "ko": ["비파"],
+        "zh": ["枇杷"],
+        "zh-tw": ["枇杷"],
+        "es": ["níspero"],
+        "fr": ["nèfle du japon"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 17},
+        {"unit": "cup", "grams": 149}
+      ]
+    },
+    {
+      "canonical_name": "medlar",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 97,
+        "protein_g": 0.4,
+        "carbs_g": 24.0,
+        "fat_g": 0.2,
+        "fiber_g": 5.8
+      },
+      "aliases": {
+        "en": ["medlar"],
+        "ja": ["セイヨウカリン"],
+        "ko": ["메들라"],
+        "zh": ["欧楂"],
+        "zh-tw": ["歐楂"],
+        "es": ["níspero europeo"],
+        "fr": ["nèfle"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 30}
+      ]
+    },
+    {
+      "canonical_name": "serviceberry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 95,
+        "protein_g": 0.3,
+        "carbs_g": 24.0,
+        "fat_g": 0.2,
+        "fiber_g": 2.4
+      },
+      "aliases": {
+        "en": ["serviceberry", "saskatoon berry", "juneberry"],
+        "ja": ["サスカトゥーン"],
+        "ko": ["서비스베리"],
+        "zh": ["唐棣"],
+        "zh-tw": ["唐棣"],
+        "es": ["amelanchier"],
+        "fr": ["amélanche"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 140}
+      ]
+    },
+    {
+      "canonical_name": "crabapple",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 76,
+        "protein_g": 0.3,
+        "carbs_g": 20.0,
+        "fat_g": 0.3,
+        "fiber_g": 2.3
+      },
+      "aliases": {
+        "en": ["crabapple", "crab apple"],
+        "ja": ["ハナリンゴ"],
+        "ko": ["야생 사과"],
+        "zh": ["海棠果"],
+        "zh-tw": ["海棠果"],
+        "es": ["manzana silvestre"],
+        "fr": ["pomme sauvage"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 35}
+      ]
+    },
+    {
+      "canonical_name": "cactus pear",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 41,
+        "protein_g": 0.7,
+        "carbs_g": 9.6,
+        "fat_g": 0.5,
+        "fiber_g": 3.6
+      },
+      "aliases": {
+        "en": ["cactus pear", "prickly pear", "opuntia"],
+        "ja": ["サボテンの実"],
+        "ko": ["선인장 열매"],
+        "zh": ["仙人掌果"],
+        "zh-tw": ["仙人掌果"],
+        "es": ["tuna", "higo chumbo"],
+        "fr": ["figue de barbarie"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 103}
+      ]
+    },
+    {
+      "canonical_name": "pear, anjou",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 57,
+        "protein_g": 0.4,
+        "carbs_g": 15.2,
+        "fat_g": 0.1,
+        "fiber_g": 3.1
+      },
+      "aliases": {
+        "en": ["anjou pear"],
+        "ja": ["アンジュー梨"],
+        "ko": ["안주 배"],
+        "zh": ["安茹梨"],
+        "zh-tw": ["安茹梨"],
+        "es": ["pera anjou"],
+        "fr": ["poire d'anjou"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 178}
+      ]
+    },
+    {
+      "canonical_name": "clementine",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 47,
+        "protein_g": 0.9,
+        "carbs_g": 12.0,
+        "fat_g": 0.2,
+        "fiber_g": 1.7
+      },
+      "aliases": {
+        "en": ["clementine"],
+        "ja": ["クレメンタイン"],
+        "ko": ["클레멘타인"],
+        "zh": ["克莱门氏小柑橘"],
+        "zh-tw": ["克萊門氏小柑橘"],
+        "es": ["clementina"],
+        "fr": ["clémentine"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 74}
+      ]
+    },
+    {
+      "canonical_name": "tangerine",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 53,
+        "protein_g": 0.8,
+        "carbs_g": 13.3,
+        "fat_g": 0.3,
+        "fiber_g": 1.8
+      },
+      "aliases": {
+        "en": ["tangerine"],
+        "ja": ["タンジェリン"],
+        "ko": ["탠저린"],
+        "zh": ["橘子"],
+        "zh-tw": ["橘子"],
+        "es": ["mandarina"],
+        "fr": ["tangerine"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 88}
+      ]
+    },
+    {
+      "canonical_name": "satsuma",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 53,
+        "protein_g": 0.8,
+        "carbs_g": 13.3,
+        "fat_g": 0.3,
+        "fiber_g": 1.8
+      },
+      "aliases": {
+        "en": ["satsuma", "satsuma mandarin"],
+        "ja": ["温州みかん"],
+        "ko": ["사츠마 귤"],
+        "zh": ["温州蜜柑"],
+        "zh-tw": ["溫州蜜柑"],
+        "es": ["satsuma"],
+        "fr": ["satsuma"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 88}
+      ]
+    },
+    {
+      "canonical_name": "ugli fruit",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 47,
+        "protein_g": 0.8,
+        "carbs_g": 11.5,
+        "fat_g": 0.1,
+        "fiber_g": 2.0
+      },
+      "aliases": {
+        "en": ["ugli fruit", "uniq fruit"],
+        "ja": ["ウグリフルーツ"],
+        "ko": ["어글리 프루트"],
+        "zh": ["丑橘"],
+        "zh-tw": ["醜橘"],
+        "es": ["fruta ugli"],
+        "fr": ["ugli"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 270}
+      ]
+    },
+    {
+      "canonical_name": "horned melon",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 44,
+        "protein_g": 1.8,
+        "carbs_g": 7.6,
+        "fat_g": 1.3,
+        "fiber_g": 2.0
+      },
+      "aliases": {
+        "en": ["horned melon", "kiwano", "african cucumber"],
+        "ja": ["キワノ"],
+        "ko": ["키와노"],
+        "zh": ["刺角瓜"],
+        "zh-tw": ["刺角瓜"],
+        "es": ["kiwano", "pepino africano"],
+        "fr": ["kiwano", "concombre cornu"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 209}
+      ]
+    },
+    {
+      "canonical_name": "sugar apple",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 94,
+        "protein_g": 2.1,
+        "carbs_g": 23.6,
+        "fat_g": 0.3,
+        "fiber_g": 4.4
+      },
+      "aliases": {
+        "en": ["sugar apple", "sweetsop"],
+        "ja": ["シュガーアップル", "バンレイシ"],
+        "ko": ["슈가애플"],
+        "zh": ["释迦"],
+        "zh-tw": ["釋迦"],
+        "es": ["anón"],
+        "fr": ["pomme cannelle"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 155}
+      ]
+    },
+    {
+      "canonical_name": "miracle fruit",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 11,
+        "protein_g": 0.4,
+        "carbs_g": 2.8,
+        "fat_g": 0.0,
+        "fiber_g": 0.1
+      },
+      "aliases": {
+        "en": ["miracle fruit", "miracle berry"],
+        "ja": ["ミラクルフルーツ"],
+        "ko": ["미라클 프루트"],
+        "zh": ["神秘果"],
+        "zh-tw": ["神秘果"],
+        "es": ["fruta milagrosa"],
+        "fr": ["fruit miracle"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 2}
+      ]
+    },
+    {
+      "canonical_name": "mamey sapote",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 124,
+        "protein_g": 1.5,
+        "carbs_g": 32.1,
+        "fat_g": 0.5,
+        "fiber_g": 5.4
+      },
+      "aliases": {
+        "en": ["mamey sapote"],
+        "ja": ["マメイサポテ"],
+        "ko": ["마메이 사포테"],
+        "zh": ["马梅果"],
+        "zh-tw": ["馬梅果"],
+        "es": ["zapote mamey"],
+        "fr": ["sapote mamey"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 800}
+      ]
+    },
+    {
+      "canonical_name": "black sapote",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 134,
+        "protein_g": 1.9,
+        "carbs_g": 35.6,
+        "fat_g": 0.4,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["black sapote", "chocolate pudding fruit"],
+        "ja": ["ブラックサポテ"],
+        "ko": ["블랙 사포테"],
+        "zh": ["黑柿"],
+        "zh-tw": ["黑柿"],
+        "es": ["zapote negro"],
+        "fr": ["sapote noir"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 225}
+      ]
+    },
+    {
+      "canonical_name": "white sapote",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 92,
+        "protein_g": 1.7,
+        "carbs_g": 22.0,
+        "fat_g": 0.5,
+        "fiber_g": 3.0
+      },
+      "aliases": {
+        "en": ["white sapote"],
+        "ja": ["ホワイトサポテ"],
+        "ko": ["화이트 사포테"],
+        "zh": ["白柿"],
+        "zh-tw": ["白柿"],
+        "es": ["zapote blanco"],
+        "fr": ["sapote blanche"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 160}
+      ]
+    },
+    {
+      "canonical_name": "langsat",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 57,
+        "protein_g": 1.0,
+        "carbs_g": 14.0,
+        "fat_g": 0.2,
+        "fiber_g": 2.3
+      },
+      "aliases": {
+        "en": ["langsat", "lanzones"],
+        "ja": ["ランサット"],
+        "ko": ["랑사트"],
+        "zh": ["兰撒果"],
+        "zh-tw": ["蘭撒果"],
+        "es": ["langsat"],
+        "fr": ["langsat"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 5}
+      ]
+    },
+    {
+      "canonical_name": "santol",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 71,
+        "protein_g": 0.5,
+        "carbs_g": 17.9,
+        "fat_g": 0.1,
+        "fiber_g": 1.5
+      },
+      "aliases": {
+        "en": ["santol", "cotton fruit"],
+        "ja": ["サントル"],
+        "ko": ["산톨"],
+        "zh": ["山陀儿"],
+        "zh-tw": ["山陀兒"],
+        "es": ["santol"],
+        "fr": ["santol"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 100}
+      ]
+    },
+    {
+      "canonical_name": "bignay",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 75,
+        "protein_g": 0.8,
+        "carbs_g": 18.5,
+        "fat_g": 0.3,
+        "fiber_g": 1.2
+      },
+      "aliases": {
+        "en": ["bignay", "chinese laurel"],
+        "ja": ["ビグナイ"],
+        "ko": ["빅나이"],
+        "zh": ["鲁花树"],
+        "zh-tw": ["魯花樹"],
+        "es": ["bignay"],
+        "fr": ["bignay"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 140}
+      ]
+    },
+    {
+      "canonical_name": "salak",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 82,
+        "protein_g": 0.4,
+        "carbs_g": 20.9,
+        "fat_g": 0.4,
+        "fiber_g": 0.3
+      },
+      "aliases": {
+        "en": ["salak", "snake fruit"],
+        "ja": ["サラク"],
+        "ko": ["살락"],
+        "zh": ["蛇皮果"],
+        "zh-tw": ["蛇皮果"],
+        "es": ["salak"],
+        "fr": ["salak"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 50}
+      ]
+    },
+    {
+      "canonical_name": "wax apple",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 0.6,
+        "carbs_g": 5.7,
+        "fat_g": 0.3,
+        "fiber_g": 0.8
+      },
+      "aliases": {
+        "en": ["wax apple", "rose apple", "water apple"],
+        "ja": ["ワックスアップル", "レンブ"],
+        "ko": ["왁스애플"],
+        "zh": ["莲雾"],
+        "zh-tw": ["蓮霧"],
+        "es": ["manzana de cera"],
+        "fr": ["pomme d'eau"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 48}
+      ]
+    },
+    {
+      "canonical_name": "wood apple",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 134,
+        "protein_g": 7.1,
+        "carbs_g": 31.0,
+        "fat_g": 3.7,
+        "fiber_g": 5.0
+      },
+      "aliases": {
+        "en": ["wood apple", "bael fruit"],
+        "ja": ["ウッドアップル"],
+        "ko": ["우드 애플"],
+        "zh": ["木苹果"],
+        "zh-tw": ["木蘋果"],
+        "es": ["manzana de madera"],
+        "fr": ["pomme de bois"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 300}
+      ]
+    },
+    {
+      "canonical_name": "african cherry orange",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 39,
+        "protein_g": 0.9,
+        "carbs_g": 9.6,
+        "fat_g": 0.1,
+        "fiber_g": 2.0
+      },
+      "aliases": {
+        "en": ["african cherry orange", "agbalumo"],
+        "ja": ["アフリカンチェリーオレンジ"],
+        "ko": ["아프리칸 체리 오렌지"],
+        "zh": ["非洲樱桃橙"],
+        "zh-tw": ["非洲櫻桃橙"],
+        "es": ["cereza naranja africana"],
+        "fr": ["cerise orange africaine"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 25}
+      ]
+    },
+    {
+      "canonical_name": "marang",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 90,
+        "protein_g": 1.5,
+        "carbs_g": 22.0,
+        "fat_g": 0.5,
+        "fiber_g": 1.5
+      },
+      "aliases": {
+        "en": ["marang"],
+        "ja": ["マラン"],
+        "ko": ["마랑"],
+        "zh": ["马槟榔"],
+        "zh-tw": ["馬檳榔"],
+        "es": ["marang"],
+        "fr": ["marang"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 165}
+      ]
+    },
+    {
+      "canonical_name": "safou",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 239,
+        "protein_g": 3.8,
+        "carbs_g": 11.6,
+        "fat_g": 21.4,
+        "fiber_g": 6.8
+      },
+      "aliases": {
+        "en": ["safou", "african pear", "bush butter"],
+        "ja": ["サフー"],
+        "ko": ["사푸"],
+        "zh": ["非洲梨"],
+        "zh-tw": ["非洲梨"],
+        "es": ["pera africana"],
+        "fr": ["safou"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 45}
+      ]
+    },
+    {
+      "canonical_name": "rollinia",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 76,
+        "protein_g": 1.0,
+        "carbs_g": 18.5,
+        "fat_g": 0.3,
+        "fiber_g": 2.0
+      },
+      "aliases": {
+        "en": ["rollinia", "biriba"],
+        "ja": ["ロリニア"],
+        "ko": ["롤리니아"],
+        "zh": ["罗林果"],
+        "zh-tw": ["羅林果"],
+        "es": ["anona amazónica"],
+        "fr": ["rollinia"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 200}
+      ]
+    },
+    {
+      "canonical_name": "canistel",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 139,
+        "protein_g": 2.5,
+        "carbs_g": 36.7,
+        "fat_g": 0.1,
+        "fiber_g": 0.0
+      },
+      "aliases": {
+        "en": ["canistel", "egg fruit"],
+        "ja": ["カニステル"],
+        "ko": ["카니스텔"],
+        "zh": ["蛋黄果"],
+        "zh-tw": ["蛋黃果"],
+        "es": ["canistel"],
+        "fr": ["canistel"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 200}
+      ]
+    },
+    {
+      "canonical_name": "abiu",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 95,
+        "protein_g": 1.8,
+        "carbs_g": 22.3,
+        "fat_g": 0.7,
+        "fiber_g": 2.2
+      },
+      "aliases": {
+        "en": ["abiu"],
+        "ja": ["アビウ"],
+        "ko": ["아비우"],
+        "zh": ["黄金果"],
+        "zh-tw": ["黃金果"],
+        "es": ["abiu", "caimito"],
+        "fr": ["abiu"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 120}
+      ]
+    },
+    {
+      "canonical_name": "lucuma",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 97,
+        "protein_g": 1.5,
+        "carbs_g": 23.3,
+        "fat_g": 0.5,
+        "fiber_g": 2.3
+      },
+      "aliases": {
+        "en": ["lucuma"],
+        "ja": ["ルクマ"],
+        "ko": ["루쿠마"],
+        "zh": ["卢库马"],
+        "zh-tw": ["盧庫馬"],
+        "es": ["lúcuma"],
+        "fr": ["lucuma"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 250},
+        {"unit": "tablespoon, powder", "grams": 7}
+      ]
+    },
+    {
+      "canonical_name": "pepino melon",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 0.6,
+        "carbs_g": 5.1,
+        "fat_g": 0.1,
+        "fiber_g": 1.1
+      },
+      "aliases": {
+        "en": ["pepino melon", "pepino"],
+        "ja": ["ペピーノ"],
+        "ko": ["페피노"],
+        "zh": ["香瓜茄"],
+        "zh-tw": ["香瓜茄"],
+        "es": ["pepino dulce"],
+        "fr": ["pépino"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 200}
+      ]
+    },
+    {
+      "canonical_name": "naranjilla",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 0.6,
+        "carbs_g": 5.9,
+        "fat_g": 0.1,
+        "fiber_g": 3.5
+      },
+      "aliases": {
+        "en": ["naranjilla", "lulo"],
+        "ja": ["ナランヒージャ"],
+        "ko": ["나란히야"],
+        "zh": ["酸茄"],
+        "zh-tw": ["酸茄"],
+        "es": ["naranjilla", "lulo"],
+        "fr": ["naranjilla"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 50}
+      ]
+    },
+    {
+      "canonical_name": "cocona",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 27,
+        "protein_g": 0.9,
+        "carbs_g": 5.8,
+        "fat_g": 0.2,
+        "fiber_g": 1.5
+      },
+      "aliases": {
+        "en": ["cocona", "peach tomato"],
+        "ja": ["ココナ"],
+        "ko": ["코코나"],
+        "zh": ["可可纳"],
+        "zh-tw": ["可可納"],
+        "es": ["cocona"],
+        "fr": ["cocona"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 60}
+      ]
+    },
+    {
+      "canonical_name": "jamelão",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 60,
+        "protein_g": 0.7,
+        "carbs_g": 15.6,
+        "fat_g": 0.3,
+        "fiber_g": 0.9
+      },
+      "aliases": {
+        "en": ["jamelão", "java plum", "jambolan"],
+        "ja": ["ジャメラオン"],
+        "ko": ["자바 플럼"],
+        "zh": ["海南蒲桃"],
+        "zh-tw": ["海南蒲桃"],
+        "es": ["jambolán"],
+        "fr": ["jamelon"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 135}
+      ]
+    },
+    {
+      "canonical_name": "pitanga",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 33,
+        "protein_g": 0.8,
+        "carbs_g": 7.5,
+        "fat_g": 0.4,
+        "fiber_g": 3.0
+      },
+      "aliases": {
+        "en": ["pitanga", "surinam cherry"],
+        "ja": ["ピタンガ"],
+        "ko": ["피탕가"],
+        "zh": ["苏里南樱桃"],
+        "zh-tw": ["蘇里南櫻桃"],
+        "es": ["pitanga"],
+        "fr": ["pitanga"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 5},
+        {"unit": "cup", "grams": 112}
+      ]
+    },
+    {
+      "canonical_name": "grumichama",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 58,
+        "protein_g": 0.9,
+        "carbs_g": 14.3,
+        "fat_g": 0.3,
+        "fiber_g": 2.0
+      },
+      "aliases": {
+        "en": ["grumichama", "brazilian cherry"],
+        "ja": ["グルミチャマ"],
+        "ko": ["그루미차마"],
+        "zh": ["巴西樱桃"],
+        "zh-tw": ["巴西櫻桃"],
+        "es": ["grumichama"],
+        "fr": ["grumichama"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 7}
+      ]
+    },
+    {
+      "canonical_name": "cambuca",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 45,
+        "protein_g": 0.8,
+        "carbs_g": 11.0,
+        "fat_g": 0.2,
+        "fiber_g": 2.5
+      },
+      "aliases": {
+        "en": ["cambuca"],
+        "ja": ["カンブカ"],
+        "ko": ["캄부카"],
+        "zh": ["坎布卡"],
+        "zh-tw": ["坎布卡"],
+        "es": ["cambucá"],
+        "fr": ["cambuca"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 100}
+      ]
+    },
+    {
+      "canonical_name": "uvaia",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 51,
+        "protein_g": 0.9,
+        "carbs_g": 12.5,
+        "fat_g": 0.4,
+        "fiber_g": 3.2
+      },
+      "aliases": {
+        "en": ["uvaia", "uvalha"],
+        "ja": ["ウヴァイア"],
+        "ko": ["우바이아"],
+        "zh": ["乌瓦伊亚"],
+        "zh-tw": ["烏瓦伊亞"],
+        "es": ["uvaia"],
+        "fr": ["uvaia"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 15}
+      ]
+    },
+    {
+      "canonical_name": "araza",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 41,
+        "protein_g": 0.5,
+        "carbs_g": 10.1,
+        "fat_g": 0.2,
+        "fiber_g": 1.8
+      },
+      "aliases": {
+        "en": ["araza"],
+        "ja": ["アラザ"],
+        "ko": ["아라자"],
+        "zh": ["阿拉扎"],
+        "zh-tw": ["阿拉扎"],
+        "es": ["arazá"],
+        "fr": ["araza"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 40}
+      ]
+    },
+    {
+      "canonical_name": "camu camu berry",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 17,
+        "protein_g": 0.4,
+        "carbs_g": 4.7,
+        "fat_g": 0.2,
+        "fiber_g": 1.1
+      },
+      "aliases": {
+        "en": ["camu berry"],
+        "ja": ["カムベリー"],
+        "ko": ["카무 베리"],
+        "zh": ["卡姆莓"],
+        "zh-tw": ["卡姆莓"],
+        "es": ["baya camu"],
+        "fr": ["baie de camu"]
+      },
+      "common_units": [
+        {"unit": "whole", "grams": 8}
+      ]
+    }
+  ]
+}

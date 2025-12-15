@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   # Authentication routes
   devise_for :users, path: 'api/v1/auth', controllers: {
     registrations: 'api/v1/auth/registrations',
-    sessions: 'api/v1/auth/sessions'
+    sessions: 'api/v1/auth/sessions',
+    passwords: 'api/v1/auth/passwords'
   }, path_names: {
     sign_up: 'sign_up',
     sign_in: 'sign_in',
@@ -18,6 +19,9 @@ Rails.application.routes.draw do
   # API routes
   namespace :api do
     namespace :v1 do
+      # Current user endpoint
+      get 'auth/me', to: 'auth/me#show'
+
       resources :recipes, only: [:index, :show] do
         member do
           post :scale
@@ -32,6 +36,15 @@ Rails.application.routes.draw do
 
       # User favorites
       get 'users/me/favorites', to: 'favorites#index'
+
+      # AI-powered features
+      post 'ai/adjust_recipe', to: 'ai_adjustments#adjust_recipe'
+
+      # Ingredient search
+      get 'ingredients/search', to: 'ingredients#search'
+
+      # Units (public endpoint for frontend translations)
+      resources :units, only: [:index]
     end
   end
 
@@ -66,6 +79,12 @@ Rails.application.routes.draw do
     resources :ingredients do
       member do
         post :refresh_nutrition
+      end
+    end
+
+    resources :units do
+      member do
+        post :translate
       end
     end
   end

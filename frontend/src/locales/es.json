@@ -36,7 +36,10 @@
       "actions": "Acciones",
       "yes": "Sí",
       "no": "No",
-      "servings": "Porciones",
+      "serving": "porción",
+      "servings": "porciones",
+      "Serving": "Porción",
+      "Servings": "Porciones",
       "difficulty": "Dificultad"
     },
     "messages": {
@@ -55,6 +58,7 @@
     "home": "Inicio",
     "recipes": "Recetas",
     "favorites": "Favoritos",
+    "menu": "Menú",
     "about": "Acerca de",
     "contact": "Contacto",
     "login": "Iniciar sesión",
@@ -186,7 +190,25 @@
     "subtitle": "Explora nuestra colección de recetas",
     "searchPlaceholder": "Buscar recetas...",
     "noRecipes": "No se encontraron recetas",
-    "noRecipesDescription": "Ajusta tu búsqueda o explora todas las recetas"
+    "noRecipesDescription": "Ajusta tu búsqueda o explora todas las recetas",
+    "featured": "Destacados",
+    "results": "Resultados",
+    "recipesCount": "Recetas",
+    "favorites": "Favoritos"
+  },
+  "favorites": {
+    "title": "Recetas Favoritas",
+    "searchPlaceholder": "buscar en tus recetas favoritas...",
+    "noSearchResults": "No se encontraron recetas favoritas",
+    "empty": {
+      "title": "Aún no tienes recetas favoritas",
+      "description": "Cuando encuentres recetas que te gusten, haz clic en el ícono del corazón para guardarlas aquí.",
+      "browseRecipes": "Explorar Recetas"
+    }
+  },
+  "profile": {
+    "accountInfo": "Información de la Cuenta",
+    "comingSoon": "Más funciones de perfil próximamente..."
   },
   "recipe": {
     "view": {
@@ -196,9 +218,35 @@
       "cook": "Cocción",
       "total": "Total",
       "ingredients": "Ingredientes",
+      "steps": "Pasos",
       "equipment": "Equipo",
       "instructions": "Instrucciones",
-      "nutrition": "Información nutricional"
+      "nutrition": "Información nutricional",
+      "optional": "opcional",
+      "perServing": "Por Porción",
+      "cals": "Cals",
+      "carbs": "Carbs",
+      "protein": "Proteína",
+      "fat": "Grasa",
+      "adjustRecipe": "Ajustar Receta",
+      "adjusted": "Ajustada",
+      "aiImageCaption": "Imagen generada por IA, puede no ser 100% precisa.",
+      "aiAdjustmentDisclaimer": "Este es un ajuste generado por IA. Puede no ser 100% preciso.",
+      "restoreToOriginal": "Restaurar Original",
+      "images": "Imágenes",
+      "favorite": "Agregar a favoritos",
+      "unfavorite": "Quitar de favoritos"
+    },
+    "adjust": {
+      "title": "Ajustar Receta",
+      "description": "¿Qué te gustaría ajustar de esta receta?",
+      "submit": "Ajustar Receta",
+      "adjusting": "Ajustando...",
+      "adjustedFrom": "Ajustado de:",
+      "newlyAdded": "Recién agregado",
+      "placeholder": "Ejemplos:\n• Hacerla vegetariana con champiñones\n• Duplicar las especias para más sabor\n• Sustituir la carne de res por pollo\n• Hacerla sin gluten\n• Reducir el azúcar a la mitad",
+      "error": "Error al ajustar la receta. Por favor, inténtalo de nuevo.",
+      "errorWithMessage": "Error al ajustar la receta: {message}"
     }
   },
   "admin": {

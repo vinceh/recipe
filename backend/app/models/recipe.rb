@@ -20,9 +20,12 @@ class Recipe < ApplicationRecord
   has_many :recipe_cuisines, dependent: :destroy
   has_many :cuisines, through: :recipe_cuisines, source: :data_reference
   has_many :recipe_aliases, dependent: :destroy
+  has_many :recipe_step_images, -> { order(:position) }, dependent: :destroy
+  has_many :instruction_items, class_name: 'RecipeInstructionItem', dependent: :destroy
 
-  # File attachments
-  has_one_attached :image
+  # File attachments - two aspect ratios for different views
+  has_one_attached :card_image    # 3:4 aspect ratio for card/index view
+  has_one_attached :detail_image  # 1:1 square aspect ratio for detail view
 
   # Nested attributes for normalized schema
   accepts_nested_attributes_for :ingredient_groups,
@@ -46,6 +49,9 @@ class Recipe < ApplicationRecord
   accepts_nested_attributes_for :recipe_aliases,
     allow_destroy: true,
     reject_if: proc { |attrs| attrs['alias_name'].blank? }
+  accepts_nested_attributes_for :instruction_items,
+    allow_destroy: true,
+    reject_if: proc { |attrs| attrs['item_type'].blank? }
 
   # Validations
   validates :name, presence: true
@@ -65,6 +71,9 @@ class Recipe < ApplicationRecord
   after_commit :enqueue_translation_on_create, on: :create
   after_commit :enqueue_translation_on_update, on: :update
 
+  # Callback for nutrition calculation (synchronous - uses local ingredient database)
+  after_commit :calculate_nutrition, on: [:create, :update]
+
   # Helper method for aliases
   def aliases
     recipe_aliases.pluck(:alias_name)
@@ -74,6 +83,31 @@ class Recipe < ApplicationRecord
 
   def enqueue_translation_on_create
     TranslateRecipeJob.perform_later(id)
+  end
+
+  def calculate_nutrition
+    calculator = RecipeNutritionCalculator.new(self)
+    nutrition_data = calculator.calculate
+
+    if recipe_nutrition
+      recipe_nutrition.update!(
+        calories: nutrition_data[:per_serving][:calories],
+        protein_g: nutrition_data[:per_serving][:protein_g],
+        carbs_g: nutrition_data[:per_serving][:carbs_g],
+        fat_g: nutrition_data[:per_serving][:fat_g],
+        fiber_g: nutrition_data[:per_serving][:fiber_g]
+      )
+    else
+      create_recipe_nutrition!(
+        calories: nutrition_data[:per_serving][:calories],
+        protein_g: nutrition_data[:per_serving][:protein_g],
+        carbs_g: nutrition_data[:per_serving][:carbs_g],
+        fat_g: nutrition_data[:per_serving][:fat_g],
+        fiber_g: nutrition_data[:per_serving][:fiber_g]
+      )
+    end
+  rescue StandardError => e
+    Rails.logger.error("Nutrition calculation failed for recipe #{id}: #{e.message}")
   end
 
   def enqueue_translation_on_update
@@ -195,8 +229,9 @@ class Recipe < ApplicationRecord
   end
 
   def image_attached
-    return if image.attached?
+    return if card_image.attached? && detail_image.attached?
 
-    errors.add(:image, 'must be attached')
+    errors.add(:card_image, 'must be attached') unless card_image.attached?
+    errors.add(:detail_image, 'must be attached') unless detail_image.attached?
   end
 end

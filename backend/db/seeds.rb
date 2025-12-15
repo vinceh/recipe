@@ -196,14 +196,14 @@ puts "   ✅ Created #{CUISINES.count} cuisines"
 # =============================================================================
 puts "\n👤 Creating admin user..."
 
-admin = User.find_or_create_by!(email: 'admin@ember.app') do |user|
+admin = User.find_or_create_by!(email: 'admin@provisions.com') do |user|
   user.password = '123456'
   user.password_confirmation = '123456'
   user.role = :admin
   user.preferred_language = 'en'
 end
 
-puts "   ✅ Admin user created: #{admin.email} (password: 123456)"
+puts "   ✅ Admin user: #{admin.email} (password: 123456)"
 
 # =============================================================================
 # AI PROMPTS
@@ -271,6 +271,19 @@ puts "   ✅ Created #{AiPrompt.where(feature_area: 'translation').count} transl
 # SUMMARY
 # =============================================================================
 # =============================================================================
+# UNITS
+# =============================================================================
+puts "\n📏 Seeding units..."
+load Rails.root.join('db/seeds/units.rb')
+
+# =============================================================================
+# INGREDIENTS
+# =============================================================================
+puts "\n🥕 Seeding ingredients..."
+load Rails.root.join('db/seeds/05_ingredients_data.rb')
+seed_ingredients
+
+# =============================================================================
 # RECIPES
 # =============================================================================
 puts "\n🍽️  Seeding recipes..."
@@ -289,6 +302,8 @@ puts "="*60
 puts "📊 Summary:"
 puts "   • Dietary Tags: #{DataReference.dietary_tags.count}"
 puts "   • Cuisines: #{DataReference.cuisines.count}"
+puts "   • Units: #{Unit.count}"
+puts "   • Ingredients: #{Ingredient.count}"
 puts "   • Recipes: #{Recipe.count}"
 puts "   • AI Prompts: #{AiPrompt.count}"
 puts "   • Admin Users: #{User.admin.count}"

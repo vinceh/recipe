@@ -71,6 +71,69 @@ RSpec.describe RecipeSearchService, type: :service do
     end
   end
 
+  describe 'Tag Search' do
+    context 'AC-SEARCH-002b: Fuzzy Text Search - Tag Match' do
+      it 'finds recipe by exact tag' do
+        recipe = make_recipe(tags: ["quick", "weeknight", "family-friendly"])
+        recipe.name = "Tagged Recipe"
+        recipe.save
+
+        results = RecipeSearchService.search_by_tags("weeknight")
+
+        expect(results).to include(recipe)
+      end
+
+      it 'finds recipe with partial tag match (fuzzy)' do
+        recipe = make_recipe(tags: ["weeknight", "family-friendly"])
+        recipe.name = "Tagged Recipe"
+        recipe.save
+
+        results = RecipeSearchService.search_by_tags("week")
+
+        expect(results).to include(recipe)
+      end
+
+      it 'is case-insensitive' do
+        recipe = make_recipe(tags: ["weeknight"])
+        recipe.name = "Tagged Recipe"
+        recipe.save
+
+        results = RecipeSearchService.search_by_tags("WEEKNIGHT")
+
+        expect(results).to include(recipe)
+      end
+
+      it 'returns empty results for blank query' do
+        recipe = make_recipe(tags: ["quick"])
+        recipe.save
+
+        results = RecipeSearchService.search_by_tags("")
+
+        expect(results).to be_empty
+      end
+
+      it 'returns empty when tag not found' do
+        recipe = make_recipe(tags: ["quick", "easy"])
+        recipe.name = "Test"
+        recipe.save
+
+        results = RecipeSearchService.search_by_tags("gourmet")
+
+        expect(results).to be_empty
+      end
+
+      it 'returns empty when recipe has no tags' do
+        recipe = make_recipe(tags: [])
+        recipe.name = "No Tags"
+        recipe.save
+
+        results = RecipeSearchService.search_by_tags("quick")
+
+        expect(results).to be_empty
+      end
+    end
+  end
+
   describe 'Ingredient Search' do
     context 'AC-SEARCH-003: Ingredient-Based Search' do
       it 'returns empty results for blank query' do
@@ -571,6 +634,29 @@ RSpec.describe RecipeSearchService, type: :service do
 
         expect(results).to include(recipe_match)
         expect(results).not_to include(recipe_wrong_cuisine, recipe_high_cal)
+      end
+    end
+
+    context 'Comprehensive Search includes Tags' do
+      it 'finds recipe by tag when name and alias do not match' do
+        recipe = make_recipe(tags: ["weeknight", "quick"])
+        recipe.name = "Pasta Carbonara"
+        recipe.save
+        create(:recipe_alias, recipe: recipe, alias_name: "Italian Pasta")
+
+        results = RecipeSearchService.comprehensive_search("weeknight")
+
+        expect(results).to include(recipe)
+      end
+
+      it 'returns recipes matching tags when no name or alias matches' do
+        recipe = make_recipe(tags: ["quick-meal", "one-pot"])
+        recipe.name = "Spaghetti Bolognese"
+        recipe.save
+
+        results = RecipeSearchService.comprehensive_search("one-pot")
+
+        expect(results).to include(recipe)
       end
     end
 

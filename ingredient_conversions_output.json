@@ -1,0 +1,292 @@
+[
+  {
+    "ingredient_id": 2018,
+    "name": "panko bread crumbs",
+    "conversions": [
+      {"unit": "cup", "grams": 100},
+      {"unit": "tbsp", "grams": 6},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2020,
+    "name": "pappardelle",
+    "conversions": [
+      {"unit": "cup", "grams": 110},
+      {"unit": "gram", "grams": 1},
+      {"unit": "ounce", "grams": 28}
+    ]
+  },
+  {
+    "ingredient_id": 2021,
+    "name": "paprika",
+    "conversions": [
+      {"unit": "tsp", "grams": 3},
+      {"unit": "tbsp", "grams": 8},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2023,
+    "name": "parmesan cheese",
+    "conversions": [
+      {"unit": "cup", "grams": 100},
+      {"unit": "tbsp", "grams": 7},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2028,
+    "name": "part skim ricotta cheese",
+    "conversions": [
+      {"unit": "cup", "grams": 250},
+      {"unit": "tbsp", "grams": 15},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2030,
+    "name": "pasilla chili powder",
+    "conversions": [
+      {"unit": "tsp", "grams": 2},
+      {"unit": "tbsp", "grams": 6},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2032,
+    "name": "pastry flour",
+    "conversions": [
+      {"unit": "cup", "grams": 120},
+      {"unit": "tbsp", "grams": 8},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2033,
+    "name": "patis",
+    "conversions": [
+      {"unit": "tsp", "grams": 5},
+      {"unit": "tbsp", "grams": 15},
+      {"unit": "ml", "grams": 1},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2037,
+    "name": "pea milk",
+    "conversions": [
+      {"unit": "cup", "grams": 245},
+      {"unit": "ml", "grams": 1},
+      {"unit": "tbsp", "grams": 15}
+    ]
+  },
+  {
+    "ingredient_id": 2038,
+    "name": "pea protein powder",
+    "conversions": [
+      {"unit": "cup", "grams": 120},
+      {"unit": "tbsp", "grams": 8},
+      {"unit": "scoop", "grams": 30},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2041,
+    "name": "peanut butter",
+    "conversions": [
+      {"unit": "cup", "grams": 240},
+      {"unit": "tbsp", "grams": 16},
+      {"unit": "tsp", "grams": 5},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2042,
+    "name": "peanut butter, crunchy",
+    "conversions": [
+      {"unit": "cup", "grams": 240},
+      {"unit": "tbsp", "grams": 16},
+      {"unit": "tsp", "grams": 5},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2043,
+    "name": "peanut butter, smooth",
+    "conversions": [
+      {"unit": "cup", "grams": 240},
+      {"unit": "tbsp", "grams": 16},
+      {"unit": "tsp", "grams": 5},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2044,
+    "name": "peanut oil",
+    "conversions": [
+      {"unit": "cup", "grams": 220},
+      {"unit": "tbsp", "grams": 14},
+      {"unit": "tsp", "grams": 5},
+      {"unit": "ml", "grams": 0.92}
+    ]
+  },
+  {
+    "ingredient_id": 2045,
+    "name": "peanut powder",
+    "conversions": [
+      {"unit": "cup", "grams": 90},
+      {"unit": "tbsp", "grams": 6},
+      {"unit": "tsp", "grams": 2},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2046,
+    "name": "peanut, raw",
+    "conversions": [
+      {"unit": "cup", "grams": 140},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "pound", "grams": 454},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2047,
+    "name": "peanut, roasted salted",
+    "conversions": [
+      {"unit": "cup", "grams": 140},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "handful", "grams": 50},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2048,
+    "name": "peanut, roasted unsalted",
+    "conversions": [
+      {"unit": "cup", "grams": 140},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "handful", "grams": 50},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2050,
+    "name": "peanuts, honey roasted",
+    "conversions": [
+      {"unit": "cup", "grams": 150},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "handful", "grams": 50},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2058,
+    "name": "pearl sugar",
+    "conversions": [
+      {"unit": "cup", "grams": 200},
+      {"unit": "tbsp", "grams": 12},
+      {"unit": "tsp", "grams": 4},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2059,
+    "name": "pecan pieces",
+    "conversions": [
+      {"unit": "cup", "grams": 110},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "tbsp", "grams": 7},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2060,
+    "name": "pecan, raw",
+    "conversions": [
+      {"unit": "cup", "grams": 110},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "handful", "grams": 45},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2061,
+    "name": "pecan, roasted",
+    "conversions": [
+      {"unit": "cup", "grams": 110},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "handful", "grams": 45},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2063,
+    "name": "pecorino romano cheese",
+    "conversions": [
+      {"unit": "cup", "grams": 110},
+      {"unit": "tbsp", "grams": 7},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2064,
+    "name": "pectin",
+    "conversions": [
+      {"unit": "tbsp", "grams": 9},
+      {"unit": "tsp", "grams": 3},
+      {"unit": "packet", "grams": 21},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2066,
+    "name": "penne",
+    "conversions": [
+      {"unit": "cup", "grams": 120},
+      {"unit": "gram", "grams": 1},
+      {"unit": "ounce", "grams": 28}
+    ]
+  },
+  {
+    "ingredient_id": 2069,
+    "name": "pepper jack cheese",
+    "conversions": [
+      {"unit": "cup", "grams": 115},
+      {"unit": "tbsp", "grams": 7},
+      {"unit": "ounce", "grams": 28},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2071,
+    "name": "peppermint extract",
+    "conversions": [
+      {"unit": "tsp", "grams": 5},
+      {"unit": "tbsp", "grams": 15},
+      {"unit": "ml", "grams": 1},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2075,
+    "name": "perilla seed powder",
+    "conversions": [
+      {"unit": "tbsp", "grams": 9},
+      {"unit": "tsp", "grams": 3},
+      {"unit": "gram", "grams": 1}
+    ]
+  },
+  {
+    "ingredient_id": 2076,
+    "name": "perilla seeds",
+    "conversions": [
+      {"unit": "tbsp", "grams": 12},
+      {"unit": "tsp", "grams": 4},
+      {"unit": "gram", "grams": 1}
+    ]
+  }
+]

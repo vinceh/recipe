@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_10_30_103531) do
+ActiveRecord::Schema[8.0].define(version: 2025_12_14_091933) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pg_trgm"
@@ -111,6 +111,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_103531) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["alias", "language"], name: "index_ingredient_aliases_on_alias_and_language", unique: true
+    t.index ["alias"], name: "index_ingredient_aliases_on_alias_trgm", opclass: :gin_trgm_ops, using: :gin
     t.index ["ingredient_id"], name: "index_ingredient_aliases_on_ingredient_id"
   end
 
@@ -149,12 +150,24 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_103531) do
     t.index ["ingredient_id"], name: "index_ingredient_nutrition_on_ingredient_id"
   end
 
+  create_table "ingredient_unit_conversions", force: :cascade do |t|
+    t.bigint "ingredient_id", null: false
+    t.decimal "grams", precision: 10, scale: 2, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "unit_id", null: false
+    t.index ["ingredient_id", "unit_id"], name: "index_ingredient_unit_conversions_on_ingredient_id_and_unit_id", unique: true
+    t.index ["ingredient_id"], name: "index_ingredient_unit_conversions_on_ingredient_id"
+    t.index ["unit_id"], name: "index_ingredient_unit_conversions_on_unit_id"
+  end
+
   create_table "ingredients", force: :cascade do |t|
     t.string "canonical_name", null: false
     t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["canonical_name"], name: "index_ingredients_on_canonical_name", unique: true
+    t.index ["canonical_name"], name: "index_ingredients_on_canonical_name_trgm", opclass: :gin_trgm_ops, using: :gin
     t.index ["category"], name: "index_ingredients_on_category"
   end
 
@@ -223,15 +236,37 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_103531) do
     t.bigint "ingredient_id"
     t.string "ingredient_name"
     t.decimal "amount", precision: 10, scale: 2
-    t.string "unit"
     t.text "preparation_notes"
     t.boolean "optional", default: false
     t.integer "position", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "unit_id"
     t.index ["ingredient_group_id", "position"], name: "index_recipe_ingredients_on_ingredient_group_id_and_position"
     t.index ["ingredient_group_id"], name: "index_recipe_ingredients_on_ingredient_group_id"
     t.index ["ingredient_id"], name: "index_recipe_ingredients_on_ingredient_id"
+    t.index ["unit_id"], name: "index_recipe_ingredients_on_unit_id"
+  end
+
+  create_table "recipe_instruction_item_translations", force: :cascade do |t|
+    t.string "locale", null: false
+    t.bigint "recipe_instruction_item_id", null: false
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_instruction_item_id", "locale"], name: "index_instruction_item_translations_on_item_id_and_locale", unique: true
+    t.index ["recipe_instruction_item_id"], name: "index_instruction_item_translations_on_item_id"
+  end
+
+  create_table "recipe_instruction_items", force: :cascade do |t|
+    t.bigint "recipe_id", null: false
+    t.string "item_type", null: false
+    t.integer "position", null: false
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id", "position"], name: "index_recipe_instruction_items_on_recipe_id_and_position"
+    t.index ["recipe_id"], name: "index_recipe_instruction_items_on_recipe_id"
   end
 
   create_table "recipe_nutritions", force: :cascade do |t|
@@ -248,6 +283,17 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_103531) do
     t.index ["recipe_id"], name: "index_recipe_nutritions_on_recipe_id", unique: true
   end
 
+  create_table "recipe_step_images", force: :cascade do |t|
+    t.bigint "recipe_id", null: false
+    t.decimal "position", precision: 10, scale: 2, null: false
+    t.text "caption"
+    t.boolean "ai_generated", default: true, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id", "position"], name: "index_recipe_step_images_on_recipe_id_and_position"
+    t.index ["recipe_id"], name: "index_recipe_step_images_on_recipe_id"
+  end
+
   create_table "recipe_step_translations", force: :cascade do |t|
     t.bigint "recipe_step_id", null: false
     t.string "locale", null: false
@@ -256,6 +302,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_103531) do
     t.text "instruction_no_equipment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "section_heading"
     t.index ["locale"], name: "index_recipe_step_translations_on_locale"
     t.index ["recipe_step_id", "locale"], name: "index_recipe_step_translations_on_recipe_step_id_and_locale", unique: true
     t.index ["recipe_step_id"], name: "index_recipe_step_translations_on_recipe_step_id"
@@ -267,6 +314,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_103531) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "instruction_original"
+    t.string "section_heading"
     t.index ["recipe_id", "step_number"], name: "index_recipe_steps_on_recipe_id_and_step_number", unique: true
     t.index ["recipe_id"], name: "index_recipe_steps_on_recipe_id"
   end
@@ -301,8 +349,31 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_103531) do
     t.datetime "updated_at", null: false
     t.datetime "last_translated_at"
     t.integer "difficulty_level", default: 1, null: false
+    t.text "tags", default: [], array: true
+    t.boolean "image_ai_generated", default: true, null: false
     t.index ["difficulty_level"], name: "index_recipes_on_difficulty_level"
     t.index ["source_language"], name: "index_recipes_on_source_language"
+    t.index ["tags"], name: "index_recipes_on_tags", using: :gin
+  end
+
+  create_table "unit_translations", force: :cascade do |t|
+    t.bigint "unit_id", null: false
+    t.string "locale", null: false
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["locale"], name: "index_unit_translations_on_locale"
+    t.index ["unit_id", "locale"], name: "index_unit_translations_on_unit_id_and_locale", unique: true
+    t.index ["unit_id"], name: "index_unit_translations_on_unit_id"
+  end
+
+  create_table "units", force: :cascade do |t|
+    t.string "canonical_name", null: false
+    t.integer "category", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["canonical_name"], name: "index_units_on_canonical_name", unique: true
+    t.index ["category"], name: "index_units_on_category"
   end
 
   create_table "user_favorites", force: :cascade do |t|
@@ -347,6 +418,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_103531) do
   add_foreign_key "ingredient_group_translations", "ingredient_groups", on_delete: :cascade
   add_foreign_key "ingredient_groups", "recipes", on_delete: :cascade
   add_foreign_key "ingredient_nutrition", "ingredients", on_delete: :cascade
+  add_foreign_key "ingredient_unit_conversions", "ingredients"
+  add_foreign_key "ingredient_unit_conversions", "units"
   add_foreign_key "recipe_aliases", "recipes", on_delete: :cascade
   add_foreign_key "recipe_cuisines", "data_references", on_delete: :cascade
   add_foreign_key "recipe_cuisines", "recipes", on_delete: :cascade
@@ -357,10 +430,15 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_30_103531) do
   add_foreign_key "recipe_ingredient_translations", "recipe_ingredients", on_delete: :cascade
   add_foreign_key "recipe_ingredients", "ingredient_groups", on_delete: :cascade
   add_foreign_key "recipe_ingredients", "ingredients", on_delete: :nullify
+  add_foreign_key "recipe_ingredients", "units"
+  add_foreign_key "recipe_instruction_item_translations", "recipe_instruction_items"
+  add_foreign_key "recipe_instruction_items", "recipes"
   add_foreign_key "recipe_nutritions", "recipes", on_delete: :cascade
+  add_foreign_key "recipe_step_images", "recipes"
   add_foreign_key "recipe_step_translations", "recipe_steps", on_delete: :cascade
   add_foreign_key "recipe_steps", "recipes", on_delete: :cascade
   add_foreign_key "recipe_translations", "recipes", on_delete: :cascade
+  add_foreign_key "unit_translations", "units"
   add_foreign_key "user_favorites", "recipes", on_delete: :cascade
   add_foreign_key "user_favorites", "users", on_delete: :cascade
   add_foreign_key "user_recipe_notes", "recipes", on_delete: :cascade

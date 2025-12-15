@@ -1,0 +1,758 @@
+{
+  "batch": 6,
+  "agent": 26,
+  "category": "japanese_dashi",
+  "generated_at": "2025-12-11T00:00:00Z",
+  "ingredients": [
+    {
+      "canonical_name": "awase dashi",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 5,
+        "protein_g": 0.8,
+        "carbs_g": 0.5,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "ja": "合わせだし",
+        "romanji": "awase dashi"
+      },
+      "common_units": ["tablespoon", "cup", "gram"]
+    },
+    {
+      "canonical_name": "katsuo dashi",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 3,
+        "protein_g": 0.6,
+        "carbs_g": 0.2,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "ja": "鰹だし",
+        "romanji": "katsuo dashi"
+      },
+      "common_units": ["tablespoon", "cup", "gram"]
+    },
+    {
+      "canonical_name": "kombu dashi",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 4,
+        "protein_g": 0.3,
+        "carbs_g": 0.8,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "ja": "昆布だし",
+        "romanji": "kombu dashi"
+      },
+      "common_units": ["tablespoon", "cup", "gram"]
+    },
+    {
+      "canonical_name": "iriko dashi",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 6,
+        "protein_g": 1.2,
+        "carbs_g": 0.3,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "ja": "いりこだし",
+        "romanji": "iriko dashi"
+      },
+      "common_units": ["tablespoon", "cup", "gram"]
+    },
+    {
+      "canonical_name": "shiitake dashi",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 7,
+        "protein_g": 0.5,
+        "carbs_g": 1.2,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "ja": "椎茸だし",
+        "romanji": "shiitake dashi"
+      },
+      "common_units": ["tablespoon", "cup", "gram"]
+    },
+    {
+      "canonical_name": "dashi packet",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 280,
+        "protein_g": 35.0,
+        "carbs_g": 15.0,
+        "fat_g": 3.0
+      },
+      "aliases": {
+        "ja": "だしパック",
+        "romanji": "dashi pakku"
+      },
+      "common_units": ["packet", "gram"]
+    },
+    {
+      "canonical_name": "dashi granules",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 310,
+        "protein_g": 25.0,
+        "carbs_g": 40.0,
+        "fat_g": 2.5
+      },
+      "aliases": {
+        "ja": "だしの素",
+        "romanji": "dashi no moto"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "hon dashi",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 320,
+        "protein_g": 28.0,
+        "carbs_g": 38.0,
+        "fat_g": 2.0
+      },
+      "aliases": {
+        "ja": "ほんだし",
+        "romanji": "hon dashi"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "liquid dashi concentrate",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 45,
+        "protein_g": 4.0,
+        "carbs_g": 6.0,
+        "fat_g": 0.5
+      },
+      "aliases": {
+        "ja": "液体だし",
+        "romanji": "ekitai dashi"
+      },
+      "common_units": ["tablespoon", "teaspoon", "milliliter"]
+    },
+    {
+      "canonical_name": "hanakatsuo",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 77.1,
+        "carbs_g": 0.8,
+        "fat_g": 2.9
+      },
+      "aliases": {
+        "ja": "花かつお",
+        "romanji": "hanakatsuo"
+      },
+      "common_units": ["tablespoon", "cup", "gram"]
+    },
+    {
+      "canonical_name": "katsuobushi",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 77.1,
+        "carbs_g": 0.8,
+        "fat_g": 2.9
+      },
+      "aliases": {
+        "ja": "鰹節",
+        "romanji": "katsuobushi"
+      },
+      "common_units": ["tablespoon", "cup", "gram"]
+    },
+    {
+      "canonical_name": "kezuribushi",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 77.1,
+        "carbs_g": 0.8,
+        "fat_g": 2.9
+      },
+      "aliases": {
+        "ja": "削り節",
+        "romanji": "kezuribushi"
+      },
+      "common_units": ["tablespoon", "cup", "gram"]
+    },
+    {
+      "canonical_name": "thick katsuobushi shavings",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 77.1,
+        "carbs_g": 0.8,
+        "fat_g": 2.9
+      },
+      "aliases": {
+        "ja": "厚削り",
+        "romanji": "atsu kezuri"
+      },
+      "common_units": ["tablespoon", "cup", "gram"]
+    },
+    {
+      "canonical_name": "ma-kombu",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 145,
+        "protein_g": 8.2,
+        "carbs_g": 61.5,
+        "fat_g": 1.2
+      },
+      "aliases": {
+        "ja": "真昆布",
+        "romanji": "ma-kombu"
+      },
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "rausu kombu",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 145,
+        "protein_g": 8.2,
+        "carbs_g": 61.5,
+        "fat_g": 1.2
+      },
+      "aliases": {
+        "ja": "羅臼昆布",
+        "romanji": "rausu kombu"
+      },
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "hidaka kombu",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 145,
+        "protein_g": 8.2,
+        "carbs_g": 61.5,
+        "fat_g": 1.2
+      },
+      "aliases": {
+        "ja": "日高昆布",
+        "romanji": "hidaka kombu"
+      },
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "rishiri kombu",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 145,
+        "protein_g": 8.2,
+        "carbs_g": 61.5,
+        "fat_g": 1.2
+      },
+      "aliases": {
+        "ja": "利尻昆布",
+        "romanji": "rishiri kombu"
+      },
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "naga kombu",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 145,
+        "protein_g": 8.2,
+        "carbs_g": 61.5,
+        "fat_g": 1.2
+      },
+      "aliases": {
+        "ja": "長昆布",
+        "romanji": "naga kombu"
+      },
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "dried shiitake mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 296,
+        "protein_g": 19.3,
+        "carbs_g": 63.4,
+        "fat_g": 3.7
+      },
+      "aliases": {
+        "ja": "干し椎茸",
+        "romanji": "hoshi shiitake"
+      },
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "donko shiitake",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 296,
+        "protein_g": 19.3,
+        "carbs_g": 63.4,
+        "fat_g": 3.7
+      },
+      "aliases": {
+        "ja": "どんこ椎茸",
+        "romanji": "donko shiitake"
+      },
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "koshin shiitake",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 296,
+        "protein_g": 19.3,
+        "carbs_g": 63.4,
+        "fat_g": 3.7
+      },
+      "aliases": {
+        "ja": "香信椎茸",
+        "romanji": "koshin shiitake"
+      },
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "niboshi",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 332,
+        "protein_g": 64.5,
+        "carbs_g": 0.3,
+        "fat_g": 6.2
+      },
+      "aliases": {
+        "ja": "煮干し",
+        "romanji": "niboshi"
+      },
+      "common_units": ["piece", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "iriko",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 332,
+        "protein_g": 64.5,
+        "carbs_g": 0.3,
+        "fat_g": 6.2
+      },
+      "aliases": {
+        "ja": "いりこ",
+        "romanji": "iriko"
+      },
+      "common_units": ["piece", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "ago dashi",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 8,
+        "protein_g": 1.5,
+        "carbs_g": 0.2,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "ja": "あごだし",
+        "romanji": "ago dashi"
+      },
+      "common_units": ["tablespoon", "cup", "gram"]
+    },
+    {
+      "canonical_name": "dried flying fish",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 340,
+        "protein_g": 68.0,
+        "carbs_g": 0.5,
+        "fat_g": 7.5
+      },
+      "aliases": {
+        "ja": "焼きあご",
+        "romanji": "yaki ago"
+      },
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "sakura ebi",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 312,
+        "protein_g": 64.9,
+        "carbs_g": 0.1,
+        "fat_g": 3.9
+      },
+      "aliases": {
+        "ja": "桜えび",
+        "romanji": "sakura ebi"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "dried whitebait",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 372,
+        "protein_g": 73.2,
+        "carbs_g": 0.5,
+        "fat_g": 6.9
+      },
+      "aliases": {
+        "ja": "ちりめんじゃこ",
+        "romanji": "chirimen jako"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "shirasuboshi",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 206,
+        "protein_g": 40.5,
+        "carbs_g": 0.2,
+        "fat_g": 3.5
+      },
+      "aliases": {
+        "ja": "しらす干し",
+        "romanji": "shirasu boshi"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "dried scallop",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 321,
+        "protein_g": 65.7,
+        "carbs_g": 5.0,
+        "fat_g": 2.2
+      },
+      "aliases": {
+        "ja": "干し貝柱",
+        "romanji": "hoshi kaibashira"
+      },
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "dried squid",
+      "category": "seafood",
+      "per_100g": {
+        "calories": 334,
+        "protein_g": 69.2,
+        "carbs_g": 4.5,
+        "fat_g": 4.3
+      },
+      "aliases": {
+        "ja": "するめ",
+        "romanji": "surume"
+      },
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "chicken stock powder",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 280,
+        "protein_g": 20.0,
+        "carbs_g": 35.0,
+        "fat_g": 5.0
+      },
+      "aliases": {
+        "ja": "チキンスープの素",
+        "romanji": "chikin supu no moto"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "chinese chicken stock powder",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 285,
+        "protein_g": 18.0,
+        "carbs_g": 38.0,
+        "fat_g": 6.0
+      },
+      "aliases": {
+        "ja": "鶏がらスープの素",
+        "romanji": "torigara supu no moto"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "consomme powder",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 275,
+        "protein_g": 22.0,
+        "carbs_g": 32.0,
+        "fat_g": 4.5
+      },
+      "aliases": {
+        "ja": "コンソメ",
+        "romanji": "konsome"
+      },
+      "common_units": ["tablespoon", "teaspoon", "cube", "gram"]
+    },
+    {
+      "canonical_name": "consomme cube",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 275,
+        "protein_g": 22.0,
+        "carbs_g": 32.0,
+        "fat_g": 4.5
+      },
+      "aliases": {
+        "ja": "コンソメキューブ",
+        "romanji": "konsome kyubu"
+      },
+      "common_units": ["cube", "gram"]
+    },
+    {
+      "canonical_name": "kelp tea",
+      "category": "beverage",
+      "per_100g": {
+        "calories": 295,
+        "protein_g": 8.5,
+        "carbs_g": 65.0,
+        "fat_g": 1.0
+      },
+      "aliases": {
+        "ja": "昆布茶",
+        "romanji": "kobucha"
+      },
+      "common_units": ["teaspoon", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "vegetable bouillon",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 220,
+        "protein_g": 8.0,
+        "carbs_g": 42.0,
+        "fat_g": 2.0
+      },
+      "aliases": {
+        "ja": "野菜ブイヨン",
+        "romanji": "yasai buiyon"
+      },
+      "common_units": ["cube", "tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "shio kombu",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 117,
+        "protein_g": 6.5,
+        "carbs_g": 48.0,
+        "fat_g": 0.9
+      },
+      "aliases": {
+        "ja": "塩昆布",
+        "romanji": "shio kombu"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "tororo kombu",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 117,
+        "protein_g": 6.8,
+        "carbs_g": 50.2,
+        "fat_g": 1.0
+      },
+      "aliases": {
+        "ja": "とろろ昆布",
+        "romanji": "tororo kombu"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "oboro kombu",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 117,
+        "protein_g": 6.8,
+        "carbs_g": 50.2,
+        "fat_g": 1.0
+      },
+      "aliases": {
+        "ja": "おぼろ昆布",
+        "romanji": "oboro kombu"
+      },
+      "common_units": ["tablespoon", "gram"]
+    },
+    {
+      "canonical_name": "kizami kombu",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 145,
+        "protein_g": 8.2,
+        "carbs_g": 61.5,
+        "fat_g": 1.2
+      },
+      "aliases": {
+        "ja": "刻み昆布",
+        "romanji": "kizami kombu"
+      },
+      "common_units": ["tablespoon", "cup", "gram"]
+    },
+    {
+      "canonical_name": "mekabu",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 11,
+        "protein_g": 0.9,
+        "carbs_g": 3.4,
+        "fat_g": 0.6
+      },
+      "aliases": {
+        "ja": "めかぶ",
+        "romanji": "mekabu"
+      },
+      "common_units": ["tablespoon", "cup", "gram"]
+    },
+    {
+      "canonical_name": "dried wakame",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 117,
+        "protein_g": 13.6,
+        "carbs_g": 41.8,
+        "fat_g": 1.6
+      },
+      "aliases": {
+        "ja": "乾燥わかめ",
+        "romanji": "kanso wakame"
+      },
+      "common_units": ["tablespoon", "cup", "gram"]
+    },
+    {
+      "canonical_name": "cut wakame",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 117,
+        "protein_g": 13.6,
+        "carbs_g": 41.8,
+        "fat_g": 1.6
+      },
+      "aliases": {
+        "ja": "カットわかめ",
+        "romanji": "katto wakame"
+      },
+      "common_units": ["tablespoon", "cup", "gram"]
+    },
+    {
+      "canonical_name": "hijiki",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 149,
+        "protein_g": 9.2,
+        "carbs_g": 58.4,
+        "fat_g": 1.3
+      },
+      "aliases": {
+        "ja": "ひじき",
+        "romanji": "hijiki"
+      },
+      "common_units": ["tablespoon", "cup", "gram"]
+    },
+    {
+      "canonical_name": "arame",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 140,
+        "protein_g": 8.5,
+        "carbs_g": 56.0,
+        "fat_g": 1.5
+      },
+      "aliases": {
+        "ja": "あらめ",
+        "romanji": "arame"
+      },
+      "common_units": ["tablespoon", "cup", "gram"]
+    },
+    {
+      "canonical_name": "mozuku",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 6,
+        "protein_g": 0.2,
+        "carbs_g": 2.0,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "ja": "もずく",
+        "romanji": "mozuku"
+      },
+      "common_units": ["tablespoon", "cup", "gram"]
+    },
+    {
+      "canonical_name": "ao nori powder",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 164,
+        "protein_g": 29.4,
+        "carbs_g": 41.0,
+        "fat_g": 3.7
+      },
+      "aliases": {
+        "ja": "青のり",
+        "romanji": "ao nori"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "nori flakes",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 188,
+        "protein_g": 41.4,
+        "carbs_g": 44.3,
+        "fat_g": 3.7
+      },
+      "aliases": {
+        "ja": "のりフレーク",
+        "romanji": "nori fureku"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "katsuo furikake",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 385,
+        "protein_g": 28.0,
+        "carbs_g": 45.0,
+        "fat_g": 8.5
+      },
+      "aliases": {
+        "ja": "鰹ふりかけ",
+        "romanji": "katsuo furikake"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "ume kombu tea",
+      "category": "beverage",
+      "per_100g": {
+        "calories": 290,
+        "protein_g": 7.5,
+        "carbs_g": 64.0,
+        "fat_g": 0.8
+      },
+      "aliases": {
+        "ja": "梅昆布茶",
+        "romanji": "ume kobucha"
+      },
+      "common_units": ["teaspoon", "tablespoon", "gram"]
+    }
+  ]
+}

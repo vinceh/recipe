@@ -37,43 +37,175 @@ end
 # Load recipe translations for all languages
 load File.join(File.dirname(__FILE__), '01_recipe_translations_data.rb')
 
-def apply_recipe_translations(recipe, recipe_key)
-  return unless defined?(RECIPE_TRANSLATIONS) && RECIPE_TRANSLATIONS[recipe_key.to_sym]
+# Load full translations (ingredients, steps, equipment) if available
+full_translations_path = File.join(File.dirname(__FILE__), '02_recipe_full_translations_data.rb')
+load full_translations_path if File.exist?(full_translations_path)
 
-  # Reload to ensure fresh state
+# Load section heading translations if available
+section_heading_path = File.join(File.dirname(__FILE__), '03_section_heading_translations_data.rb')
+load section_heading_path if File.exist?(section_heading_path)
+
+# Load unit data (with aliases)
+units_data_path = File.join(File.dirname(__FILE__), '04_units_data.rb')
+load units_data_path if File.exist?(units_data_path)
+
+def find_unit(unit_string)
+  return nil if unit_string.blank?
+
+  canonical_name = if defined?(UNIT_ALIASES) && UNIT_ALIASES[unit_string]
+                     UNIT_ALIASES[unit_string]
+                   else
+                     unit_string
+                   end
+
+  Unit.find_by(canonical_name: canonical_name)
+end
+
+LOCALES = [:ja, :ko, :'zh-tw', :'zh-cn', :es, :fr].freeze
+LOCALE_TO_KEY = { :'zh-tw' => :zh_tw, :'zh-cn' => :zh_cn }.freeze
+
+def apply_recipe_translations(recipe)
   recipe.reload
+  recipe_name = recipe.name
 
-  # Map translation keys to I18n locales (hyphens vs underscores)
-  locale_map = {
-    'ja' => :ja,
-    'ko' => :ko,
-    'zh_tw' => :'zh-tw',
-    'zh_cn' => :'zh-cn',
-    'es' => :es,
-    'fr' => :fr
-  }
-
-  locale_map.each do |trans_key, i18n_locale|
-    trans_key_sym = trans_key.to_sym
-    next unless RECIPE_TRANSLATIONS[recipe_key.to_sym] && RECIPE_TRANSLATIONS[recipe_key.to_sym][trans_key_sym]
+  LOCALES.each do |i18n_locale|
+    trans_key = LOCALE_TO_KEY[i18n_locale] || i18n_locale
 
     I18n.with_locale(i18n_locale) do
-      recipe.name = RECIPE_TRANSLATIONS[recipe_key.to_sym][trans_key_sym][:name]
-      recipe.description = RECIPE_TRANSLATIONS[recipe_key.to_sym][trans_key_sym][:description]
-      recipe.save!(validate: false)
+      apply_translations_for_locale(recipe, recipe_name, trans_key)
     end
   end
 end
 
-def attach_image_to_recipe(recipe)
-  image_path = Rails.root.join('db/seeds/assets/foodimg.png')
-  return unless File.exist?(image_path)
+def apply_translations_for_locale(recipe, recipe_name, trans_key)
+  data = translation_data_for(recipe_name, trans_key)
+  return unless data
 
-  recipe.image.attach(
-    io: StringIO.new(File.read(image_path)),
-    filename: 'foodimg.png',
+  recipe.name = data[:name] if data[:name]
+  recipe.description = data[:description] if data[:description]
+  recipe.save!(validate: false)
+
+  apply_ingredient_group_translations(recipe, data[:ingredient_groups], trans_key)
+  apply_step_translations(recipe, data[:steps])
+  apply_equipment_translations(recipe, data[:equipment])
+  apply_section_heading_translations(recipe, recipe_name, trans_key)
+end
+
+def translation_data_for(recipe_name, trans_key)
+  if defined?(RECIPE_FULL_TRANSLATIONS) && RECIPE_FULL_TRANSLATIONS.dig(recipe_name, trans_key)
+    RECIPE_FULL_TRANSLATIONS[recipe_name][trans_key]
+  elsif defined?(RECIPE_TRANSLATIONS) && RECIPE_TRANSLATIONS.dig(recipe_name, trans_key)
+    RECIPE_TRANSLATIONS[recipe_name][trans_key]
+  end
+end
+
+def apply_ingredient_group_translations(recipe, groups_data, _trans_key)
+  return unless groups_data&.any?
+
+  recipe.ingredient_groups.order(:position).each_with_index do |group, idx|
+    group_data = groups_data[idx]
+    next unless group_data
+
+    group.update!(name: group_data[:name]) if group_data[:name]
+
+    next unless group_data[:items]&.any?
+
+    group.recipe_ingredients.order(:position).each_with_index do |ingredient, item_idx|
+      item_data = group_data[:items][item_idx]
+      next unless item_data
+
+      ingredient.update!(
+        ingredient_name: item_data[:name],
+        preparation_notes: item_data[:preparation]
+      )
+    end
+  end
+end
+
+def apply_step_translations(recipe, steps_data)
+  return unless steps_data&.any?
+
+  recipe.recipe_steps.order(:step_number).each_with_index do |step, idx|
+    step_data = steps_data[idx]
+    next unless step_data
+
+    updates = {}
+    updates[:instruction_original] = step_data[:instruction] if step_data[:instruction]
+    updates[:section_heading] = step_data[:section_heading] if step_data[:section_heading]
+    step.update!(updates) if updates.any?
+  end
+end
+
+def apply_equipment_translations(recipe, equipment_data)
+  return unless equipment_data&.any?
+
+  recipe.equipment.each_with_index do |equipment, idx|
+    equipment_name = equipment_data[idx]
+    equipment.update!(canonical_name: equipment_name) if equipment_name
+  end
+end
+
+def apply_section_heading_translations(recipe, recipe_name, trans_key)
+  return unless defined?(SECTION_HEADING_TRANSLATIONS)
+
+  headings = SECTION_HEADING_TRANSLATIONS.dig(recipe_name, trans_key)
+  return unless headings&.any?
+
+  steps_with_headings = I18n.with_locale(:en) do
+    recipe.recipe_steps.order(:step_number).select { |s| s.section_heading.present? }
+  end
+
+  steps_with_headings.each_with_index do |step, idx|
+    translated_heading = headings[idx]
+    step.update!(section_heading: translated_heading) if translated_heading
+  end
+end
+
+def attach_image_to_recipe(recipe)
+  slug = recipe.name.parameterize
+  recipes_dir = Rails.root.join('db/seeds/assets/recipes')
+
+  card_path = recipes_dir.join("#{slug}-card.png")
+  detail_path = recipes_dir.join("#{slug}-detail.png")
+
+  fallback_path = Rails.root.join('db/seeds/assets/foodimg.png')
+
+  card_image_path = File.exist?(card_path) ? card_path : fallback_path
+  detail_image_path = File.exist?(detail_path) ? detail_path : fallback_path
+
+  return unless File.exist?(card_image_path) && File.exist?(detail_image_path)
+
+  recipe.card_image.attach(
+    io: File.open(card_image_path),
+    filename: File.basename(card_image_path),
     content_type: 'image/png'
   )
+
+  recipe.detail_image.attach(
+    io: File.open(detail_image_path),
+    filename: File.basename(detail_image_path),
+    content_type: 'image/png'
+  )
+end
+
+def convert_steps_to_instruction_items(recipe)
+  position = 0
+  recipe.recipe_steps.order(:step_number).each do |step|
+    if step.section_heading.present?
+      position += 1
+      recipe.instruction_items.create!(
+        item_type: 'heading',
+        position: position,
+        content: step.section_heading
+      )
+    end
+    position += 1
+    recipe.instruction_items.create!(
+      item_type: 'text',
+      position: position,
+      content: step.instruction_original
+    )
+  end
 end
 
 # ============================================================================
@@ -94,7 +226,8 @@ margherita = Recipe.new(
   precision_reason: "baking",
   difficulty_level: :medium,
   admin_notes: "Classic Neapolitan pizza. Traditional recipe with pizza stone oven technique.",
-  translations_completed: true
+  translations_completed: true,
+  tags: ["dinner", "comfort-food", "baking", "classic"]
 )
 
 
@@ -102,78 +235,70 @@ ig_dough = margherita.ingredient_groups.build(name: "Pizza Dough", position: 1)
 ig_dough.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("bread flour", "grain").id,
   ingredient_name: "bread flour",
-  amount: 500,
-  unit: "g",
-  preparation_notes: "Type 00 flour preferred",
+  amount: 350,
+  unit: find_unit("g"),
+  preparation_notes: "Type 00 flour preferred, 175g per pizza",
   position: 1
 )
 ig_dough.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("water", "other").id,
   ingredient_name: "water",
-  amount: 325,
-  unit: "ml",
-  preparation_notes: "room temperature",
+  amount: 210,
+  unit: find_unit("ml"),
+  preparation_notes: "room temperature, 60% hydration",
   position: 2
 )
 ig_dough.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("salt", "spice").id,
   ingredient_name: "salt",
-  amount: 10,
-  unit: "g",
-  preparation_notes: nil,
+  amount: 7,
+  unit: find_unit("g"),
+  preparation_notes: "2% of flour weight",
   position: 3
 )
 ig_dough.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("instant yeast", "other").id,
   ingredient_name: "instant yeast",
   amount: 3,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: nil,
   position: 4
-)
-ig_dough.recipe_ingredients.build(
-  ingredient_id: find_or_create_ingredient("olive oil", "other").id,
-  ingredient_name: "olive oil",
-  amount: 15,
-  unit: "ml",
-  preparation_notes: "extra virgin",
-  position: 5
 )
 
 ig_topping = margherita.ingredient_groups.build(name: "Toppings", position: 2)
 ig_topping.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("tomato sauce", "vegetable").id,
   ingredient_name: "tomato sauce",
-  amount: 250,
-  unit: "g",
-  preparation_notes: "San Marzano preferred",
+  amount: 150,
+  unit: find_unit("g"),
+  preparation_notes: "San Marzano preferred, 75g per pizza",
   position: 1
 )
 ig_topping.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("fresh mozzarella", "dairy").id,
   ingredient_name: "fresh mozzarella",
-  amount: 250,
-  unit: "g",
-  preparation_notes: "buffalo mozzarella, sliced",
+  amount: 150,
+  unit: find_unit("g"),
+  preparation_notes: "buffalo mozzarella, sliced, 75g per pizza",
   position: 2
 )
 ig_topping.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("fresh basil", "spice").id,
   ingredient_name: "fresh basil",
-  amount: 20,
-  unit: "g",
+  amount: 10,
+  unit: find_unit("g"),
   preparation_notes: "tear leaves, add after baking",
   position: 3
 )
 
-margherita.recipe_steps.build(step_number: 1, instruction_original: "Mix flour and water in a large bowl. Let sit for 20 minutes (autolyse).")
+margherita.recipe_steps.build(step_number: 1, section_heading: "Prepare the Dough", instruction_original: "Mix flour and water in a large bowl. Let sit for 20 minutes (autolyse).")
 margherita.recipe_steps.build(step_number: 2, instruction_original: "Add yeast and salt. Knead for 10 minutes until smooth and elastic.")
 margherita.recipe_steps.build(step_number: 3, instruction_original: "Add olive oil and continue kneading for 5 minutes until fully incorporated.")
-margherita.recipe_steps.build(step_number: 4, instruction_original: "Cover and let rise at room temperature for 4-6 hours until doubled.")
-margherita.recipe_steps.build(step_number: 5, instruction_original: "Preheat oven to 475°F (245°C) with pizza stone inside for 30 minutes.")
-margherita.recipe_steps.build(step_number: 6, instruction_original: "Divide dough into 2 portions. Gently stretch each into 10-inch circle.")
+margherita.recipe_steps.build(step_number: 4, section_heading: "Proof the Dough", instruction_original: "Cover and let rise at room temperature for 4-6 hours until doubled.")
+margherita.recipe_steps.build(step_number: 5, section_heading: "Prepare the Oven", instruction_original: "Preheat oven to 475°F (245°C) with pizza stone inside for 30 minutes.")
+margherita.recipe_steps.build(step_number: 6, section_heading: "Shape and Top", instruction_original: "Divide dough into 2 portions. Gently stretch each into 10-inch circle.")
 margherita.recipe_steps.build(step_number: 7, instruction_original: "Spread tomato sauce, leaving 1-inch crust. Top with mozzarella pieces.")
-margherita.recipe_steps.build(step_number: 8, instruction_original: "Bake 12 minutes until crust is golden and cheese is bubbly.")
+margherita.recipe_steps.build(step_number: 8, section_heading: "Bake and Serve", instruction_original: "Bake 12 minutes until crust is golden and cheese is bubbly.")
 margherita.recipe_steps.build(step_number: 9, instruction_original: "Remove from oven. Tear fresh basil leaves and scatter over pizza. Drizzle with olive oil.")
 
 
@@ -187,13 +312,12 @@ margherita.recipe_aliases.build(alias_name: "ピザ・マルゲリータ", langu
 
 attach_image_to_recipe(margherita)
 margherita.save!
-apply_recipe_translations(margherita, :margherita)
+apply_recipe_translations(margherita)
 
 margherita.recipe_equipment.create!(equipment: find_or_create_equipment("Pizza Stone"), optional: false)
 margherita.recipe_equipment.create!(equipment: find_or_create_equipment("Mixing Bowl"), optional: false)
 margherita.recipe_equipment.create!(equipment: find_or_create_equipment("Rolling Peel"), optional: true)
 
-margherita.create_recipe_nutrition!(calories: 290, protein_g: 12, carbs_g: 38, fat_g: 10, fiber_g: 2, sodium_mg: 580, sugar_g: 3)
 
 puts "   ✅ Recipe 1: Margherita Pizza"
 
@@ -214,7 +338,8 @@ pad_thai = Recipe.new(
   requires_precision: false,
   difficulty_level: :medium,
   admin_notes: "Authentic Thai street food noodle dish. Balance of sweet, sour, salty, spicy flavors.",
-  translations_completed: true
+  translations_completed: true,
+  tags: ["quick", "dinner", "weeknight", "street-food", "noodles"]
 )
 
 
@@ -222,8 +347,8 @@ ig_noodles = pad_thai.ingredient_groups.build(name: "Noodles & Sauce", position:
 ig_noodles.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("dried rice noodles", "grain").id,
   ingredient_name: "dried rice noodles",
-  amount: 250,
-  unit: "g",
+  amount: 115,
+  unit: find_unit("g"),
   preparation_notes: "about 1/4 inch wide, soaked in water 30 minutes",
   position: 1
 )
@@ -231,7 +356,7 @@ ig_noodles.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("tamarind paste", "spice").id,
   ingredient_name: "tamarind paste",
   amount: 3,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: "or lime juice",
   position: 2
 )
@@ -239,7 +364,7 @@ ig_noodles.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("fish sauce", "spice").id,
   ingredient_name: "fish sauce",
   amount: 3,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: nil,
   position: 3
 )
@@ -247,7 +372,7 @@ ig_noodles.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("palm sugar", "spice").id,
   ingredient_name: "palm sugar",
   amount: 2,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: "or brown sugar",
   position: 4
 )
@@ -256,8 +381,8 @@ ig_protein = pad_thai.ingredient_groups.build(name: "Protein & Vegetables", posi
 ig_protein.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("shrimp", "protein").id,
   ingredient_name: "shrimp",
-  amount: 250,
-  unit: "g",
+  amount: 115,
+  unit: find_unit("g"),
   preparation_notes: "peeled, deveined",
   position: 1
 )
@@ -265,7 +390,7 @@ ig_protein.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("eggs", "protein").id,
   ingredient_name: "eggs",
   amount: 2,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: "beaten",
   position: 2
 )
@@ -273,7 +398,7 @@ ig_protein.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("garlic", "spice").id,
   ingredient_name: "garlic",
   amount: 4,
-  unit: "cloves",
+  unit: find_unit("cloves"),
   preparation_notes: "minced",
   position: 3
 )
@@ -281,7 +406,7 @@ ig_protein.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("bean sprouts", "vegetable").id,
   ingredient_name: "bean sprouts",
   amount: 100,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: "fresh",
   position: 4
 )
@@ -289,7 +414,7 @@ ig_protein.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("scallions", "vegetable").id,
   ingredient_name: "scallions",
   amount: 3,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: "cut into 2-inch pieces",
   position: 5
 )
@@ -299,7 +424,7 @@ ig_garnish.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("crushed peanuts", "other").id,
   ingredient_name: "crushed peanuts",
   amount: 50,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: "roasted, unsalted",
   position: 1
 )
@@ -307,7 +432,7 @@ ig_garnish.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("lime", "vegetable").id,
   ingredient_name: "lime",
   amount: 1,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: "cut into wedges",
   position: 2
 )
@@ -315,18 +440,18 @@ ig_garnish.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("vegetable oil", "other").id,
   ingredient_name: "vegetable oil",
   amount: 2,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: nil,
   position: 3
 )
 
-pad_thai.recipe_steps.build(step_number: 1, instruction_original: "Soak dried rice noodles in water for 30 minutes until softened. Drain well.")
-pad_thai.recipe_steps.build(step_number: 2, instruction_original: "Mix tamarind paste, fish sauce, and palm sugar in a small bowl. Set aside.")
-pad_thai.recipe_steps.build(step_number: 3, instruction_original: "Heat a large wok or skillet over high heat. Add 1 tbsp oil.")
+pad_thai.recipe_steps.build(step_number: 1, section_heading: "Prep the Noodles", instruction_original: "Soak dried rice noodles in water for 30 minutes until softened. Drain well.")
+pad_thai.recipe_steps.build(step_number: 2, section_heading: "Make the Sauce", instruction_original: "Mix tamarind paste, fish sauce, and palm sugar in a small bowl. Set aside.")
+pad_thai.recipe_steps.build(step_number: 3, section_heading: "Stir-Fry", instruction_original: "Heat a large wok or skillet over high heat. Add 1 tbsp oil.")
 pad_thai.recipe_steps.build(step_number: 4, instruction_original: "Add minced garlic and stir-fry for 10 seconds until fragrant.")
 pad_thai.recipe_steps.build(step_number: 5, instruction_original: "Add shrimp and cook until pink, about 2 minutes. Push to side of wok.")
 pad_thai.recipe_steps.build(step_number: 6, instruction_original: "Pour beaten eggs into empty space. Scramble and mix with shrimp.")
-pad_thai.recipe_steps.build(step_number: 7, instruction_original: "Add drained noodles and sauce mixture. Toss everything together for 2 minutes.")
+pad_thai.recipe_steps.build(step_number: 7, section_heading: "Combine and Serve", instruction_original: "Add drained noodles and sauce mixture. Toss everything together for 2 minutes.")
 pad_thai.recipe_steps.build(step_number: 8, instruction_original: "Add bean sprouts and scallions. Toss for 30 seconds to combine.")
 pad_thai.recipe_steps.build(step_number: 9, instruction_original: "Transfer to plates. Top with crushed peanuts and lime wedges on the side.")
 
@@ -342,12 +467,11 @@ pad_thai.recipe_aliases.build(alias_name: "ผัดไทย", language: "th")
 
 attach_image_to_recipe(pad_thai)
 pad_thai.save!
-apply_recipe_translations(pad_thai, :pad_thai)
+apply_recipe_translations(pad_thai)
 
 pad_thai.recipe_equipment.create!(equipment: find_or_create_equipment("Wok"), optional: false)
 pad_thai.recipe_equipment.create!(equipment: find_or_create_equipment("Wooden Spatula"), optional: false)
 
-pad_thai.create_recipe_nutrition!(calories: 420, protein_g: 22, carbs_g: 52, fat_g: 14, fiber_g: 3, sodium_mg: 950, sugar_g: 12)
 
 puts "   ✅ Recipe 2: Pad Thai"
 
@@ -367,7 +491,8 @@ shakshuka = Recipe.new(
   requires_precision: false,
   difficulty_level: :medium,
   admin_notes: "Traditional Middle Eastern breakfast dish with poached eggs in spiced tomato sauce.",
-  translations_completed: true
+  translations_completed: true,
+  tags: ["breakfast", "brunch", "one-pot", "quick", "healthy"]
 )
 
 
@@ -376,7 +501,7 @@ ig_sauce.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("olive oil", "other").id,
   ingredient_name: "olive oil",
   amount: 3,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: "extra virgin",
   position: 1
 )
@@ -384,7 +509,7 @@ ig_sauce.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("onion", "vegetable").id,
   ingredient_name: "onion",
   amount: 1,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: "diced",
   position: 2
 )
@@ -392,23 +517,23 @@ ig_sauce.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("garlic", "spice").id,
   ingredient_name: "garlic",
   amount: 4,
-  unit: "cloves",
+  unit: find_unit("cloves"),
   preparation_notes: "minced",
   position: 3
 )
 ig_sauce.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("canned tomatoes", "vegetable").id,
   ingredient_name: "canned tomatoes",
-  amount: 800,
-  unit: "g",
-  preparation_notes: "crushed or diced",
+  amount: 400,
+  unit: find_unit("g"),
+  preparation_notes: "crushed or diced, one 14oz can",
   position: 4
 )
 ig_sauce.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("cumin", "spice").id,
   ingredient_name: "cumin",
   amount: 1,
-  unit: "tsp",
+  unit: find_unit("tsp"),
   preparation_notes: nil,
   position: 5
 )
@@ -416,7 +541,7 @@ ig_sauce.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("paprika", "spice").id,
   ingredient_name: "paprika",
   amount: 1,
-  unit: "tsp",
+  unit: find_unit("tsp"),
   preparation_notes: nil,
   position: 6
 )
@@ -433,8 +558,8 @@ ig_eggs = shakshuka.ingredient_groups.build(name: "Eggs", position: 2)
 ig_eggs.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("eggs", "protein").id,
   ingredient_name: "eggs",
-  amount: 6,
-  unit: "whole",
+  amount: 4,
+  unit: find_unit("whole"),
   preparation_notes: nil,
   position: 1
 )
@@ -444,7 +569,7 @@ ig_garnish.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("fresh cilantro", "spice").id,
   ingredient_name: "fresh cilantro",
   amount: 20,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: "chopped",
   position: 1
 )
@@ -452,20 +577,20 @@ ig_garnish.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("pita bread", "grain").id,
   ingredient_name: "pita bread",
   amount: 4,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: "for serving",
   position: 2
 )
 
-shakshuka.recipe_steps.build(step_number: 1, instruction_original: "Heat olive oil in a large skillet over medium heat.")
+shakshuka.recipe_steps.build(step_number: 1, section_heading: "Build the Base", instruction_original: "Heat olive oil in a large skillet over medium heat.")
 shakshuka.recipe_steps.build(step_number: 2, instruction_original: "Add diced onion and sauté for 3-4 minutes until softened.")
 shakshuka.recipe_steps.build(step_number: 3, instruction_original: "Add minced garlic and cook for 1 minute until fragrant.")
-shakshuka.recipe_steps.build(step_number: 4, instruction_original: "Stir in canned tomatoes, cumin, and paprika. Simmer for 10 minutes.")
+shakshuka.recipe_steps.build(step_number: 4, section_heading: "Make the Sauce", instruction_original: "Stir in canned tomatoes, cumin, and paprika. Simmer for 10 minutes.")
 shakshuka.recipe_steps.build(step_number: 5, instruction_original: "Season with salt and pepper to taste.")
-shakshuka.recipe_steps.build(step_number: 6, instruction_original: "Make 6 wells in the sauce with the back of a spoon.")
+shakshuka.recipe_steps.build(step_number: 6, section_heading: "Poach the Eggs", instruction_original: "Make 6 wells in the sauce with the back of a spoon.")
 shakshuka.recipe_steps.build(step_number: 7, instruction_original: "Crack an egg into each well. Cover skillet with a lid.")
 shakshuka.recipe_steps.build(step_number: 8, instruction_original: "Cook for 5-7 minutes until egg whites are set but yolks are runny.")
-shakshuka.recipe_steps.build(step_number: 9, instruction_original: "Garnish with fresh cilantro. Serve hot with pita bread.")
+shakshuka.recipe_steps.build(step_number: 9, section_heading: "Serve", instruction_original: "Garnish with fresh cilantro. Serve hot with pita bread.")
 
 
 
@@ -481,12 +606,11 @@ shakshuka.recipe_aliases.build(alias_name: "شکشوک", language: "ar")
 
 attach_image_to_recipe(shakshuka)
 shakshuka.save!  # TODO: Fix attachment issue for this recipe
-apply_recipe_translations(shakshuka, :shakshuka)
+apply_recipe_translations(shakshuka)
 
 shakshuka.recipe_equipment.create!(equipment: find_or_create_equipment("Large Skillet"), optional: false)
 shakshuka.recipe_equipment.create!(equipment: find_or_create_equipment("Skillet Lid"), optional: true)
 
-shakshuka.create_recipe_nutrition!(calories: 280, protein_g: 14, carbs_g: 15, fat_g: 18, fiber_g: 3, sodium_mg: 450, sugar_g: 6)
 
 puts "   ✅ Recipe 3: Shakshuka"
 
@@ -507,7 +631,8 @@ tom_yum = Recipe.new(
   difficulty_level: :medium,
   requires_precision: false,
   admin_notes: "Authentic Thai hot and sour soup with shrimp. Aromatic and flavorful.",
-  translations_completed: true
+  translations_completed: true,
+  tags: ["soup", "spicy", "quick", "healthy", "seafood"]
 )
 
 
@@ -515,16 +640,16 @@ ig_broth = tom_yum.ingredient_groups.build(name: "Broth Base", position: 1)
 ig_broth.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("chicken stock", "other").id,
   ingredient_name: "chicken stock",
-  amount: 1.5,
-  unit: "liters",
-  preparation_notes: nil,
+  amount: 960,
+  unit: find_unit("ml"),
+  preparation_notes: "about 4 cups",
   position: 1
 )
 ig_broth.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("lemongrass", "spice").id,
   ingredient_name: "lemongrass",
   amount: 3,
-  unit: "stalks",
+  unit: find_unit("stalks"),
   preparation_notes: "cut into 2-inch pieces, bruised",
   position: 2
 )
@@ -532,7 +657,7 @@ ig_broth.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("galangal", "spice").id,
   ingredient_name: "galangal",
   amount: 4,
-  unit: "slices",
+  unit: find_unit("slices"),
   preparation_notes: "thin slices",
   position: 3
 )
@@ -540,7 +665,7 @@ ig_broth.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("kaffir lime leaves", "spice").id,
   ingredient_name: "kaffir lime leaves",
   amount: 5,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: nil,
   position: 4
 )
@@ -549,8 +674,8 @@ ig_protein = tom_yum.ingredient_groups.build(name: "Protein & Vegetables", posit
 ig_protein.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("shrimp", "protein").id,
   ingredient_name: "shrimp",
-  amount: 400,
-  unit: "g",
+  amount: 300,
+  unit: find_unit("g"),
   preparation_notes: "peeled, deveined",
   position: 1
 )
@@ -558,7 +683,7 @@ ig_protein.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("mushrooms", "vegetable").id,
   ingredient_name: "mushrooms",
   amount: 200,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: "button or straw mushrooms, halved",
   position: 2
 )
@@ -566,7 +691,7 @@ ig_protein.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("cherry tomatoes", "vegetable").id,
   ingredient_name: "cherry tomatoes",
   amount: 150,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: "halved",
   position: 3
 )
@@ -576,7 +701,7 @@ ig_seasonings.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("fish sauce", "spice").id,
   ingredient_name: "fish sauce",
   amount: 2,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: nil,
   position: 1
 )
@@ -584,7 +709,7 @@ ig_seasonings.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("lime juice", "vegetable").id,
   ingredient_name: "lime juice",
   amount: 3,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: "fresh",
   position: 2
 )
@@ -592,7 +717,7 @@ ig_seasonings.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("thai chili paste", "spice").id,
   ingredient_name: "thai chili paste",
   amount: 2,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: "or chili flakes",
   position: 3
 )
@@ -600,17 +725,17 @@ ig_seasonings.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("fresh cilantro", "spice").id,
   ingredient_name: "fresh cilantro",
   amount: 30,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: "chopped, for garnish",
   position: 4
 )
 
-tom_yum.recipe_steps.build(step_number: 1, instruction_original: "Bring chicken stock to a boil in a large pot.")
+tom_yum.recipe_steps.build(step_number: 1, section_heading: "Build the Broth", instruction_original: "Bring chicken stock to a boil in a large pot.")
 tom_yum.recipe_steps.build(step_number: 2, instruction_original: "Add lemongrass, galangal, and kaffir lime leaves. Simmer for 5 minutes.")
 tom_yum.recipe_steps.build(step_number: 3, instruction_original: "Add mushrooms and simmer for 3 minutes.")
-tom_yum.recipe_steps.build(step_number: 4, instruction_original: "Add shrimp and cook for 2-3 minutes until pink.")
+tom_yum.recipe_steps.build(step_number: 4, section_heading: "Add the Protein", instruction_original: "Add shrimp and cook for 2-3 minutes until pink.")
 tom_yum.recipe_steps.build(step_number: 5, instruction_original: "Add cherry tomatoes and cook for 1 minute.")
-tom_yum.recipe_steps.build(step_number: 6, instruction_original: "Stir in fish sauce, lime juice, and chili paste.")
+tom_yum.recipe_steps.build(step_number: 6, section_heading: "Season and Serve", instruction_original: "Stir in fish sauce, lime juice, and chili paste.")
 tom_yum.recipe_steps.build(step_number: 7, instruction_original: "Taste and adjust seasonings. Soup should be hot, sour, and spicy.")
 tom_yum.recipe_steps.build(step_number: 8, instruction_original: "Ladle into bowls and garnish with fresh cilantro.")
 
@@ -627,11 +752,10 @@ tom_yum.recipe_aliases.build(alias_name: "ต้มยำกุ้ง", language
 
 attach_image_to_recipe(tom_yum)
 tom_yum.save!
-apply_recipe_translations(tom_yum, :tom_yum)
+apply_recipe_translations(tom_yum)
 
 tom_yum.recipe_equipment.create!(equipment: find_or_create_equipment("Large Pot"), optional: false)
 
-tom_yum.create_recipe_nutrition!(calories: 220, protein_g: 28, carbs_g: 12, fat_g: 6, fiber_g: 2, sodium_mg: 850, sugar_g: 4)
 
 puts "   ✅ Recipe 4: Tom Yum Soup"
 
@@ -652,7 +776,8 @@ aglio_olio = Recipe.new(
   total_minutes: 20,
   requires_precision: false,
   admin_notes: "Classic Roman pasta. Simple, elegant, uses only 4 ingredients plus pasta.",
-  translations_completed: true
+  translations_completed: true,
+  tags: ["quick", "weeknight", "dinner", "budget-friendly", "pasta"]
 )
 
 
@@ -660,24 +785,24 @@ ig = aglio_olio.ingredient_groups.build(name: "Ingredients", position: 1)
 ig.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("spaghetti", "grain").id,
   ingredient_name: "spaghetti",
-  amount: 400,
-  unit: "g",
-  preparation_notes: nil,
+  amount: 200,
+  unit: find_unit("g"),
+  preparation_notes: "100g per serving",
   position: 1
 )
 ig.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("garlic", "spice").id,
   ingredient_name: "garlic",
-  amount: 8,
-  unit: "cloves",
+  amount: 4,
+  unit: find_unit("cloves"),
   preparation_notes: "thinly sliced",
   position: 2
 )
 ig.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("extra virgin olive oil", "other").id,
   ingredient_name: "extra virgin olive oil",
-  amount: 120,
-  unit: "ml",
+  amount: 60,
+  unit: find_unit("ml"),
   preparation_notes: "good quality",
   position: 3
 )
@@ -698,12 +823,12 @@ ig.recipe_ingredients.build(
   position: 5
 )
 
-aglio_olio.recipe_steps.build(step_number: 1, instruction_original: "Bring a large pot of salted water to a boil. Cook spaghetti until al dente, about 9-10 minutes.")
-aglio_olio.recipe_steps.build(step_number: 2, instruction_original: "While pasta cooks, heat olive oil in a large skillet over medium heat.")
+aglio_olio.recipe_steps.build(step_number: 1, section_heading: "Cook the Pasta", instruction_original: "Bring a large pot of salted water to a boil. Cook spaghetti until al dente, about 9-10 minutes.")
+aglio_olio.recipe_steps.build(step_number: 2, section_heading: "Make the Garlic Oil", instruction_original: "While pasta cooks, heat olive oil in a large skillet over medium heat.")
 aglio_olio.recipe_steps.build(step_number: 3, instruction_original: "Add sliced garlic to the oil. Cook gently for 2-3 minutes, stirring frequently.")
 aglio_olio.recipe_steps.build(step_number: 4, instruction_original: "Do not let garlic brown. Remove from heat when golden and fragrant.")
 aglio_olio.recipe_steps.build(step_number: 5, instruction_original: "Add red pepper flakes to the garlic oil. Stir to combine.")
-aglio_olio.recipe_steps.build(step_number: 6, instruction_original: "Drain pasta, reserving 1 cup pasta water.")
+aglio_olio.recipe_steps.build(step_number: 6, section_heading: "Combine and Serve", instruction_original: "Drain pasta, reserving 1 cup pasta water.")
 aglio_olio.recipe_steps.build(step_number: 7, instruction_original: "Add hot pasta to the garlic oil. Toss to coat, adding pasta water as needed for silkiness.")
 aglio_olio.recipe_steps.build(step_number: 8, instruction_original: "Serve immediately in warm bowls. Season with salt and pepper to taste.")
 
@@ -720,12 +845,11 @@ aglio_olio.recipe_aliases.build(alias_name: "パスタ・アーリオ・オー�
 
 attach_image_to_recipe(aglio_olio)
 aglio_olio.save!
-apply_recipe_translations(aglio_olio, :aglio_olio)
+apply_recipe_translations(aglio_olio)
 
 aglio_olio.recipe_equipment.create!(equipment: find_or_create_equipment("Large Pot"), optional: false)
 aglio_olio.recipe_equipment.create!(equipment: find_or_create_equipment("Large Skillet"), optional: false)
 
-aglio_olio.create_recipe_nutrition!(calories: 380, protein_g: 13, carbs_g: 74, fat_g: 6, fiber_g: 3, sodium_mg: 2, sugar_g: 1)
 
 puts "   ✅ Recipe 5: Spaghetti Aglio e Olio"
 
@@ -746,7 +870,8 @@ oyakodon = Recipe.new(
   total_minutes: 25,
   requires_precision: false,
   admin_notes: "Classic Japanese comfort food with poached eggs on chicken and rice.",
-  translations_completed: true
+  translations_completed: true,
+  tags: ["quick", "weeknight", "comfort-food", "one-pot", "rice-bowl"]
 )
 
 
@@ -754,24 +879,24 @@ ig_protein = oyakodon.ingredient_groups.build(name: "Main Ingredients", position
 ig_protein.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("chicken thigh", "protein").id,
   ingredient_name: "chicken thigh",
-  amount: 300,
-  unit: "g",
-  preparation_notes: "boneless, skinless, cut into bite-size pieces",
+  amount: 280,
+  unit: find_unit("g"),
+  preparation_notes: "boneless, skinless, cut into bite-size pieces, 140g per serving",
   position: 1
 )
 ig_protein.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("eggs", "protein").id,
   ingredient_name: "eggs",
-  amount: 4,
-  unit: "whole",
+  amount: 3,
+  unit: find_unit("whole"),
   preparation_notes: "beaten",
   position: 2
 )
 ig_protein.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("onion", "vegetable").id,
   ingredient_name: "onion",
-  amount: 1,
-  unit: "whole",
+  amount: 0.5,
+  unit: find_unit("whole"),
   preparation_notes: "thinly sliced",
   position: 3
 )
@@ -781,7 +906,7 @@ ig_sauce.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("dashi stock", "other").id,
   ingredient_name: "dashi stock",
   amount: 200,
-  unit: "ml",
+  unit: find_unit("ml"),
   preparation_notes: nil,
   position: 1
 )
@@ -789,7 +914,7 @@ ig_sauce.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("soy sauce", "spice").id,
   ingredient_name: "soy sauce",
   amount: 2,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: nil,
   position: 2
 )
@@ -797,7 +922,7 @@ ig_sauce.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("mirin", "other").id,
   ingredient_name: "mirin",
   amount: 2,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: nil,
   position: 3
 )
@@ -805,7 +930,7 @@ ig_sauce.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("sake", "other").id,
   ingredient_name: "sake",
   amount: 1,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: nil,
   position: 4
 )
@@ -815,7 +940,7 @@ ig_serving.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("cooked rice", "grain").id,
   ingredient_name: "cooked rice",
   amount: 500,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: "hot, steamed",
   position: 1
 )
@@ -823,19 +948,19 @@ ig_serving.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("scallions", "vegetable").id,
   ingredient_name: "scallions",
   amount: 2,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: "thinly sliced",
   position: 2
 )
 
-oyakodon.recipe_steps.build(step_number: 1, instruction_original: "Mix dashi stock, soy sauce, mirin, and sake in a small bowl.")
-oyakodon.recipe_steps.build(step_number: 2, instruction_original: "Heat a medium skillet or donburi pan over medium-high heat.")
+oyakodon.recipe_steps.build(step_number: 1, section_heading: "Prepare the Sauce", instruction_original: "Mix dashi stock, soy sauce, mirin, and sake in a small bowl.")
+oyakodon.recipe_steps.build(step_number: 2, section_heading: "Cook the Chicken", instruction_original: "Heat a medium skillet or donburi pan over medium-high heat.")
 oyakodon.recipe_steps.build(step_number: 3, instruction_original: "Add sliced onion and cook for 2 minutes until softened.")
 oyakodon.recipe_steps.build(step_number: 4, instruction_original: "Add chicken pieces and cook for 3-4 minutes, stirring occasionally.")
 oyakodon.recipe_steps.build(step_number: 5, instruction_original: "Pour in the sauce mixture. Simmer for 3 minutes until chicken is cooked through.")
-oyakodon.recipe_steps.build(step_number: 6, instruction_original: "Pour beaten eggs over the chicken in a steady stream while gently stirring.")
+oyakodon.recipe_steps.build(step_number: 6, section_heading: "Add the Eggs", instruction_original: "Pour beaten eggs over the chicken in a steady stream while gently stirring.")
 oyakodon.recipe_steps.build(step_number: 7, instruction_original: "Cook for 30 seconds until eggs are just set but still slightly wet. Do not overcook.")
-oyakodon.recipe_steps.build(step_number: 8, instruction_original: "Place hot rice in a bowl. Pour the chicken and egg mixture over the rice.")
+oyakodon.recipe_steps.build(step_number: 8, section_heading: "Assemble and Serve", instruction_original: "Place hot rice in a bowl. Pour the chicken and egg mixture over the rice.")
 oyakodon.recipe_steps.build(step_number: 9, instruction_original: "Garnish with sliced scallions. Serve immediately while hot.")
 
 
@@ -848,12 +973,11 @@ oyakodon.recipe_aliases.build(alias_name: "親子丼", language: "ja")
 
 attach_image_to_recipe(oyakodon)
 oyakodon.save!
-apply_recipe_translations(oyakodon, :oyakodon)
+apply_recipe_translations(oyakodon)
 
 oyakodon.recipe_equipment.create!(equipment: find_or_create_equipment("Donburi Pan or Skillet"), optional: false)
 oyakodon.recipe_equipment.create!(equipment: find_or_create_equipment("Rice Cooker"), optional: true)
 
-oyakodon.create_recipe_nutrition!(calories: 450, protein_g: 35, carbs_g: 45, fat_g: 12, fiber_g: 1, sodium_mg: 800, sugar_g: 8)
 
 puts "   ✅ Recipe 6: Oyakodon"
 
@@ -873,7 +997,8 @@ greek_salad = Recipe.new(
   total_minutes: 15,
   requires_precision: false,
   admin_notes: "Traditional Mediterranean salad. Simple, fresh, and healthy.",
-  translations_completed: true
+  translations_completed: true,
+  tags: ["salad", "healthy", "quick", "no-cook", "summer", "lunch"]
 )
 
 
@@ -881,24 +1006,24 @@ ig = greek_salad.ingredient_groups.build(name: "Salad", position: 1)
 ig.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("tomatoes", "vegetable").id,
   ingredient_name: "tomatoes",
-  amount: 600,
-  unit: "g",
-  preparation_notes: "cut into chunks",
+  amount: 250,
+  unit: find_unit("g"),
+  preparation_notes: "cut into chunks, about 2 medium",
   position: 1
 )
 ig.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("cucumbers", "vegetable").id,
   ingredient_name: "cucumbers",
-  amount: 400,
-  unit: "g",
-  preparation_notes: "diced",
+  amount: 200,
+  unit: find_unit("g"),
+  preparation_notes: "diced, about 1 medium",
   position: 2
 )
 ig.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("red onion", "vegetable").id,
   ingredient_name: "red onion",
   amount: 1,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: "thinly sliced",
   position: 3
 )
@@ -906,16 +1031,16 @@ ig.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("kalamata olives", "other").id,
   ingredient_name: "kalamata olives",
   amount: 150,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: nil,
   position: 4
 )
 ig.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("feta cheese", "dairy").id,
   ingredient_name: "feta cheese",
-  amount: 200,
-  unit: "g",
-  preparation_notes: "crumbled",
+  amount: 100,
+  unit: find_unit("g"),
+  preparation_notes: "crumbled, about 3.5 oz",
   position: 5
 )
 
@@ -924,7 +1049,7 @@ ig_dressing.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("extra virgin olive oil", "other").id,
   ingredient_name: "extra virgin olive oil",
   amount: 80,
-  unit: "ml",
+  unit: find_unit("ml"),
   preparation_notes: nil,
   position: 1
 )
@@ -932,7 +1057,7 @@ ig_dressing.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("red wine vinegar", "other").id,
   ingredient_name: "red wine vinegar",
   amount: 2,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: nil,
   position: 2
 )
@@ -940,7 +1065,7 @@ ig_dressing.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("oregano", "spice").id,
   ingredient_name: "oregano",
   amount: 1,
-  unit: "tsp",
+  unit: find_unit("tsp"),
   preparation_notes: "dried",
   position: 3
 )
@@ -953,10 +1078,10 @@ ig_dressing.recipe_ingredients.build(
   position: 4
 )
 
-greek_salad.recipe_steps.build(step_number: 1, instruction_original: "Combine tomatoes, cucumbers, and red onion in a large bowl.")
+greek_salad.recipe_steps.build(step_number: 1, section_heading: "Assemble the Vegetables", instruction_original: "Combine tomatoes, cucumbers, and red onion in a large bowl.")
 greek_salad.recipe_steps.build(step_number: 2, instruction_original: "Add kalamata olives and toss gently.")
-greek_salad.recipe_steps.build(step_number: 3, instruction_original: "In a small bowl, whisk together olive oil, red wine vinegar, oregano, salt, and pepper.")
-greek_salad.recipe_steps.build(step_number: 4, instruction_original: "Pour dressing over salad and toss gently to combine.")
+greek_salad.recipe_steps.build(step_number: 3, section_heading: "Make the Dressing", instruction_original: "In a small bowl, whisk together olive oil, red wine vinegar, oregano, salt, and pepper.")
+greek_salad.recipe_steps.build(step_number: 4, section_heading: "Dress and Serve", instruction_original: "Pour dressing over salad and toss gently to combine.")
 greek_salad.recipe_steps.build(step_number: 5, instruction_original: "Top with crumbled feta cheese just before serving.")
 
 
@@ -972,12 +1097,11 @@ greek_salad.recipe_aliases.build(alias_name: "Ελληνική Σαλάτα", la
 
 attach_image_to_recipe(greek_salad)
 greek_salad.save!
-apply_recipe_translations(greek_salad, :greek_salad)
+apply_recipe_translations(greek_salad)
 
 greek_salad.recipe_equipment.create!(equipment: find_or_create_equipment("Cutting Board"), optional: false)
 greek_salad.recipe_equipment.create!(equipment: find_or_create_equipment("Large Bowl"), optional: false)
 
-greek_salad.create_recipe_nutrition!(calories: 180, protein_g: 8, carbs_g: 12, fat_g: 12, fiber_g: 3, sodium_mg: 650, sugar_g: 6)
 
 puts "   ✅ Recipe 7: Greek Salad"
 
@@ -998,7 +1122,8 @@ sourdough = Recipe.new(
   precision_reason: "baking",
   difficulty_level: :medium,
   admin_notes: "Artisan sourdough with long fermentation. Requires sourdough starter.",
-  translations_completed: true
+  translations_completed: true,
+  tags: ["baking", "bread", "weekend-project", "fermented", "artisan"]
 )
 
 
@@ -1007,7 +1132,7 @@ ig_dough.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("bread flour", "grain").id,
   ingredient_name: "bread flour",
   amount: 500,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: "Type 00 or high-protein",
   position: 1
 )
@@ -1015,7 +1140,7 @@ ig_dough.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("water", "other").id,
   ingredient_name: "water",
   amount: 350,
-  unit: "ml",
+  unit: find_unit("ml"),
   preparation_notes: "filtered, room temperature",
   position: 2
 )
@@ -1023,7 +1148,7 @@ ig_dough.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("sourdough starter", "other").id,
   ingredient_name: "sourdough starter",
   amount: 100,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: "active, 100% hydration",
   position: 3
 )
@@ -1031,19 +1156,19 @@ ig_dough.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("salt", "spice").id,
   ingredient_name: "salt",
   amount: 10,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: "fine sea salt",
   position: 4
 )
 
-sourdough.recipe_steps.build(step_number: 1, instruction_original: "Mix flour and water. Let rest for 30 minutes (autolyse) until hydrated.")
+sourdough.recipe_steps.build(step_number: 1, section_heading: "Mix the Dough", instruction_original: "Mix flour and water. Let rest for 30 minutes (autolyse) until hydrated.")
 sourdough.recipe_steps.build(step_number: 2, instruction_original: "Add sourdough starter and salt. Mix until fully incorporated.")
-sourdough.recipe_steps.build(step_number: 3, instruction_original: "Perform stretch and folds every 30 minutes for 2 hours. Cover bowl loosely.")
+sourdough.recipe_steps.build(step_number: 3, section_heading: "Bulk Fermentation", instruction_original: "Perform stretch and folds every 30 minutes for 2 hours. Cover bowl loosely.")
 sourdough.recipe_steps.build(step_number: 4, instruction_original: "Bulk ferment at room temperature (68-72°F) for 4-6 hours until dough doubles.")
-sourdough.recipe_steps.build(step_number: 5, instruction_original: "Turn dough onto a floured surface. Pre-shape into a round. Rest for 20 minutes.")
+sourdough.recipe_steps.build(step_number: 5, section_heading: "Shape the Loaf", instruction_original: "Turn dough onto a floured surface. Pre-shape into a round. Rest for 20 minutes.")
 sourdough.recipe_steps.build(step_number: 6, instruction_original: "Final shape by pulling dough toward you, rotating, until surface is tight.")
-sourdough.recipe_steps.build(step_number: 7, instruction_original: "Place in banneton seam-side up. Cold retard in fridge for 8-16 hours.")
-sourdough.recipe_steps.build(step_number: 8, instruction_original: "Preheat oven to 500°F (260°C) with Dutch oven inside for 30 minutes.")
+sourdough.recipe_steps.build(step_number: 7, section_heading: "Cold Proof", instruction_original: "Place in banneton seam-side up. Cold retard in fridge for 8-16 hours.")
+sourdough.recipe_steps.build(step_number: 8, section_heading: "Bake", instruction_original: "Preheat oven to 500°F (260°C) with Dutch oven inside for 30 minutes.")
 sourdough.recipe_steps.build(step_number: 9, instruction_original: "Score the dough with a sharp knife. Bake covered for 20 minutes.")
 sourdough.recipe_steps.build(step_number: 10, instruction_original: "Remove lid and bake another 25 minutes until deep golden brown.")
 
@@ -1058,13 +1183,12 @@ sourdough.recipe_aliases.build(alias_name: "サワードウ", language: "ja")
 
 attach_image_to_recipe(sourdough)
 sourdough.save!
-apply_recipe_translations(sourdough, :sourdough)
+apply_recipe_translations(sourdough)
 
 sourdough.recipe_equipment.create!(equipment: find_or_create_equipment("Dutch Oven"), optional: false)
 sourdough.recipe_equipment.create!(equipment: find_or_create_equipment("Banneton Basket"), optional: false)
 sourdough.recipe_equipment.create!(equipment: find_or_create_equipment("Bread Knife"), optional: false)
 
-sourdough.create_recipe_nutrition!(calories: 280, protein_g: 9, carbs_g: 56, fat_g: 1, fiber_g: 2, sodium_mg: 480, sugar_g: 1)
 
 puts "   ✅ Recipe 8: Sourdough Bread"
 
@@ -1084,7 +1208,8 @@ beef_tacos = Recipe.new(
   total_minutes: 30,
   requires_precision: false,
   admin_notes: "Traditional Mexican street tacos with seasoned ground beef.",
-  translations_completed: true
+  translations_completed: true,
+  tags: ["quick", "dinner", "weeknight", "family-friendly", "crowd-pleaser"]
 )
 
 
@@ -1092,16 +1217,16 @@ ig_meat = beef_tacos.ingredient_groups.build(name: "Meat & Seasoning", position:
 ig_meat.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("ground beef", "protein").id,
   ingredient_name: "ground beef",
-  amount: 600,
-  unit: "g",
-  preparation_notes: "80/20 blend",
+  amount: 450,
+  unit: find_unit("g"),
+  preparation_notes: "80/20 blend, about 115g per serving",
   position: 1
 )
 ig_meat.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("cumin", "spice").id,
   ingredient_name: "cumin",
   amount: 2,
-  unit: "tsp",
+  unit: find_unit("tsp"),
   preparation_notes: nil,
   position: 2
 )
@@ -1109,7 +1234,7 @@ ig_meat.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("chili powder", "spice").id,
   ingredient_name: "chili powder",
   amount: 1,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: nil,
   position: 3
 )
@@ -1117,7 +1242,7 @@ ig_meat.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("garlic powder", "spice").id,
   ingredient_name: "garlic powder",
   amount: 1,
-  unit: "tsp",
+  unit: find_unit("tsp"),
   preparation_notes: nil,
   position: 4
 )
@@ -1125,7 +1250,7 @@ ig_meat.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("onion powder", "spice").id,
   ingredient_name: "onion powder",
   amount: 1,
-  unit: "tsp",
+  unit: find_unit("tsp"),
   preparation_notes: nil,
   position: 5
 )
@@ -1142,16 +1267,16 @@ ig_shells = beef_tacos.ingredient_groups.build(name: "Shells & Toppings", positi
 ig_shells.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("corn tortillas", "grain").id,
   ingredient_name: "corn tortillas",
-  amount: 12,
-  unit: "whole",
-  preparation_notes: "warm",
+  amount: 8,
+  unit: find_unit("whole"),
+  preparation_notes: "warm, 2 per serving",
   position: 1
 )
 ig_shells.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("lettuce", "vegetable").id,
   ingredient_name: "lettuce",
   amount: 200,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: "shredded",
   position: 2
 )
@@ -1159,7 +1284,7 @@ ig_shells.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("tomatoes", "vegetable").id,
   ingredient_name: "tomatoes",
   amount: 300,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: "diced",
   position: 3
 )
@@ -1167,7 +1292,7 @@ ig_shells.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("cheddar cheese", "dairy").id,
   ingredient_name: "cheddar cheese",
   amount: 200,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: "shredded",
   position: 4
 )
@@ -1175,7 +1300,7 @@ ig_shells.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("sour cream", "dairy").id,
   ingredient_name: "sour cream",
   amount: 100,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: nil,
   position: 5
 )
@@ -1183,17 +1308,17 @@ ig_shells.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("salsa", "other").id,
   ingredient_name: "salsa",
   amount: 150,
-  unit: "ml",
+  unit: find_unit("ml"),
   preparation_notes: nil,
   position: 6
 )
 
-beef_tacos.recipe_steps.build(step_number: 1, instruction_original: "Heat a large skillet over medium-high heat. Add ground beef.")
+beef_tacos.recipe_steps.build(step_number: 1, section_heading: "Cook the Meat", instruction_original: "Heat a large skillet over medium-high heat. Add ground beef.")
 beef_tacos.recipe_steps.build(step_number: 2, instruction_original: "Cook beef, breaking it up with a spoon, until browned, about 5 minutes.")
-beef_tacos.recipe_steps.build(step_number: 3, instruction_original: "Drain excess fat if needed. Add cumin, chili powder, garlic powder, and onion powder.")
+beef_tacos.recipe_steps.build(step_number: 3, section_heading: "Season", instruction_original: "Drain excess fat if needed. Add cumin, chili powder, garlic powder, and onion powder.")
 beef_tacos.recipe_steps.build(step_number: 4, instruction_original: "Add 1/4 cup water and simmer for 3 minutes until sauce thickens.")
 beef_tacos.recipe_steps.build(step_number: 5, instruction_original: "Season with salt and pepper to taste.")
-beef_tacos.recipe_steps.build(step_number: 6, instruction_original: "Warm corn tortillas in a dry skillet or over an open flame for 30 seconds per side.")
+beef_tacos.recipe_steps.build(step_number: 6, section_heading: "Assemble and Serve", instruction_original: "Warm corn tortillas in a dry skillet or over an open flame for 30 seconds per side.")
 beef_tacos.recipe_steps.build(step_number: 7, instruction_original: "Fill each tortilla with seasoned beef.")
 beef_tacos.recipe_steps.build(step_number: 8, instruction_original: "Top with lettuce, tomatoes, cheese, sour cream, and salsa as desired.")
 
@@ -1207,11 +1332,10 @@ beef_tacos.recipe_aliases.build(alias_name: "Tacos de Carne Molida", language: "
 
 attach_image_to_recipe(beef_tacos)
 beef_tacos.save!  # TODO: Fix attachment issue for this recipe
-apply_recipe_translations(beef_tacos, :beef_tacos)
+apply_recipe_translations(beef_tacos)
 
 beef_tacos.recipe_equipment.create!(equipment: find_or_create_equipment("Large Skillet"), optional: false)
 
-beef_tacos.create_recipe_nutrition!(calories: 350, protein_g: 22, carbs_g: 28, fat_g: 16, fiber_g: 2, sodium_mg: 520, sugar_g: 2)
 
 puts "   ✅ Recipe 9: Beef Tacos"
 
@@ -1231,7 +1355,8 @@ kimchi_jjigae = Recipe.new(
   total_minutes: 30,
   requires_precision: false,
   admin_notes: "Korean kimchi stew with pork belly. Spicy, warm, and comforting.",
-  translations_completed: true
+  translations_completed: true,
+  tags: ["soup", "spicy", "comfort-food", "fermented", "one-pot", "winter"]
 )
 
 
@@ -1239,24 +1364,24 @@ ig_main = kimchi_jjigae.ingredient_groups.build(name: "Main Ingredients", positi
 ig_main.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("pork belly", "protein").id,
   ingredient_name: "pork belly",
-  amount: 300,
-  unit: "g",
+  amount: 200,
+  unit: find_unit("g"),
   preparation_notes: "sliced thin",
   position: 1
 )
 ig_main.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("kimchi", "vegetable").id,
   ingredient_name: "kimchi",
-  amount: 300,
-  unit: "g",
-  preparation_notes: "chopped, with juice",
+  amount: 400,
+  unit: find_unit("g"),
+  preparation_notes: "chopped, with juice, aged kimchi preferred",
   position: 2
 )
 ig_main.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("tofu", "protein").id,
   ingredient_name: "tofu",
-  amount: 300,
-  unit: "g",
+  amount: 200,
+  unit: find_unit("g"),
   preparation_notes: "silken, cut into chunks",
   position: 3
 )
@@ -1264,7 +1389,7 @@ ig_main.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("onion", "vegetable").id,
   ingredient_name: "onion",
   amount: 1,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: "sliced",
   position: 4
 )
@@ -1274,7 +1399,7 @@ ig_broth.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("anchovy stock", "other").id,
   ingredient_name: "anchovy stock",
   amount: 500,
-  unit: "ml",
+  unit: find_unit("ml"),
   preparation_notes: nil,
   position: 1
 )
@@ -1282,7 +1407,7 @@ ig_broth.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("gochugaru", "spice").id,
   ingredient_name: "gochugaru",
   amount: 1,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: "Korean chili flakes",
   position: 2
 )
@@ -1290,7 +1415,7 @@ ig_broth.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("soy sauce", "spice").id,
   ingredient_name: "soy sauce",
   amount: 1,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: nil,
   position: 3
 )
@@ -1298,7 +1423,7 @@ ig_broth.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("garlic", "spice").id,
   ingredient_name: "garlic",
   amount: 3,
-  unit: "cloves",
+  unit: find_unit("cloves"),
   preparation_notes: "minced",
   position: 4
 )
@@ -1308,7 +1433,7 @@ ig_garnish.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("scallions", "vegetable").id,
   ingredient_name: "scallions",
   amount: 3,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: "sliced",
   position: 1
 )
@@ -1316,17 +1441,17 @@ ig_garnish.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("sesame seeds", "spice").id,
   ingredient_name: "sesame seeds",
   amount: 1,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: nil,
   position: 2
 )
 
-kimchi_jjigae.recipe_steps.build(step_number: 1, instruction_original: "Heat a large pot or stone bowl over medium-high heat. Add pork belly slices.")
+kimchi_jjigae.recipe_steps.build(step_number: 1, section_heading: "Cook the Pork", instruction_original: "Heat a large pot or stone bowl over medium-high heat. Add pork belly slices.")
 kimchi_jjigae.recipe_steps.build(step_number: 2, instruction_original: "Cook pork until edges are browned, about 2 minutes. Stir often.")
 kimchi_jjigae.recipe_steps.build(step_number: 3, instruction_original: "Add minced garlic and cook for 30 seconds until fragrant.")
-kimchi_jjigae.recipe_steps.build(step_number: 4, instruction_original: "Add chopped kimchi and its juice. Stir and cook for 2 minutes.")
+kimchi_jjigae.recipe_steps.build(step_number: 4, section_heading: "Build the Stew", instruction_original: "Add chopped kimchi and its juice. Stir and cook for 2 minutes.")
 kimchi_jjigae.recipe_steps.build(step_number: 5, instruction_original: "Pour in anchovy stock. Add gochugaru and soy sauce. Bring to a boil.")
-kimchi_jjigae.recipe_steps.build(step_number: 6, instruction_original: "Add sliced onion and tofu chunks. Reduce heat and simmer for 10 minutes.")
+kimchi_jjigae.recipe_steps.build(step_number: 6, section_heading: "Simmer and Serve", instruction_original: "Add sliced onion and tofu chunks. Reduce heat and simmer for 10 minutes.")
 kimchi_jjigae.recipe_steps.build(step_number: 7, instruction_original: "Taste and adjust seasonings with more kimchi juice or soy sauce if needed.")
 kimchi_jjigae.recipe_steps.build(step_number: 8, instruction_original: "Ladle into bowls. Garnish with sliced scallions and sesame seeds.")
 
@@ -1340,11 +1465,10 @@ kimchi_jjigae.recipe_aliases.build(alias_name: "김치찌개", language: "ko")
 
 attach_image_to_recipe(kimchi_jjigae)
 kimchi_jjigae.save!  # TODO: Fix attachment issue for this recipe
-apply_recipe_translations(kimchi_jjigae, :kimchi_jjigae)
+apply_recipe_translations(kimchi_jjigae)
 
 kimchi_jjigae.recipe_equipment.create!(equipment: find_or_create_equipment("Stone Bowl or Pot"), optional: false)
 
-kimchi_jjigae.create_recipe_nutrition!(calories: 380, protein_g: 28, carbs_g: 14, fat_g: 25, fiber_g: 2, sodium_mg: 900, sugar_g: 3)
 
 puts "   ✅ Recipe 10: Kimchi Jjigae"
 
@@ -1364,7 +1488,8 @@ onion_soup = Recipe.new(
   total_minutes: 80,
   requires_precision: false,
   admin_notes: "Classic French bistro soup with caramelized onions and melted Gruyère cheese.",
-  translations_completed: true
+  translations_completed: true,
+  tags: ["soup", "comfort-food", "classic", "winter", "dinner-party"]
 )
 
 
@@ -1372,16 +1497,16 @@ ig_onions = onion_soup.ingredient_groups.build(name: "Onions & Base", position: 
 ig_onions.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("yellow onions", "vegetable").id,
   ingredient_name: "yellow onions",
-  amount: 900,
-  unit: "g",
-  preparation_notes: "thinly sliced",
+  amount: 1400,
+  unit: find_unit("g"),
+  preparation_notes: "thinly sliced, about 6 large onions, they cook down significantly",
   position: 1
 )
 ig_onions.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("butter", "dairy").id,
   ingredient_name: "butter",
   amount: 50,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: nil,
   position: 2
 )
@@ -1389,7 +1514,7 @@ ig_onions.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("olive oil", "other").id,
   ingredient_name: "olive oil",
   amount: 2,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: nil,
   position: 3
 )
@@ -1398,16 +1523,16 @@ ig_broth = onion_soup.ingredient_groups.build(name: "Broth", position: 2)
 ig_broth.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("beef stock", "other").id,
   ingredient_name: "beef stock",
-  amount: 1,
-  unit: "liter",
-  preparation_notes: nil,
+  amount: 1900,
+  unit: find_unit("ml"),
+  preparation_notes: "about 8 cups",
   position: 1
 )
 ig_broth.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("dry white wine", "other").id,
   ingredient_name: "dry white wine",
   amount: 200,
-  unit: "ml",
+  unit: find_unit("ml"),
   preparation_notes: nil,
   position: 2
 )
@@ -1415,7 +1540,7 @@ ig_broth.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("bay leaf", "spice").id,
   ingredient_name: "bay leaf",
   amount: 2,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: nil,
   position: 3
 )
@@ -1423,7 +1548,7 @@ ig_broth.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("thyme", "spice").id,
   ingredient_name: "thyme",
   amount: 2,
-  unit: "sprigs",
+  unit: find_unit("sprigs"),
   preparation_notes: "fresh",
   position: 4
 )
@@ -1433,7 +1558,7 @@ ig_bread.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("crusty bread", "grain").id,
   ingredient_name: "crusty bread",
   amount: 8,
-  unit: "slices",
+  unit: find_unit("slices"),
   preparation_notes: "1/2 inch thick",
   position: 1
 )
@@ -1441,18 +1566,18 @@ ig_bread.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("gruyère cheese", "dairy").id,
   ingredient_name: "gruyère cheese",
   amount: 200,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: "shredded",
   position: 2
 )
 
-onion_soup.recipe_steps.build(step_number: 1, instruction_original: "Heat butter and olive oil in a large, heavy pot over medium heat.")
+onion_soup.recipe_steps.build(step_number: 1, section_heading: "Caramelize the Onions", instruction_original: "Heat butter and olive oil in a large, heavy pot over medium heat.")
 onion_soup.recipe_steps.build(step_number: 2, instruction_original: "Add sliced onions and cook, stirring frequently, for 40 minutes until deeply caramelized.")
 onion_soup.recipe_steps.build(step_number: 3, instruction_original: "Onions should be golden brown and sweet. Do not rush this step.")
-onion_soup.recipe_steps.build(step_number: 4, instruction_original: "Deglaze pot with dry white wine, scraping up browned bits from bottom.")
+onion_soup.recipe_steps.build(step_number: 4, section_heading: "Build the Soup", instruction_original: "Deglaze pot with dry white wine, scraping up browned bits from bottom.")
 onion_soup.recipe_steps.build(step_number: 5, instruction_original: "Add beef stock, bay leaf, and thyme. Bring to a boil.")
 onion_soup.recipe_steps.build(step_number: 6, instruction_original: "Reduce heat and simmer for 20 minutes. Taste and season with salt and pepper.")
-onion_soup.recipe_steps.build(step_number: 7, instruction_original: "Preheat broiler to high. Place bread slices on a baking sheet. Toast until golden.")
+onion_soup.recipe_steps.build(step_number: 7, section_heading: "Prepare the Gratinée", instruction_original: "Preheat broiler to high. Place bread slices on a baking sheet. Toast until golden.")
 onion_soup.recipe_steps.build(step_number: 8, instruction_original: "Ladle soup into oven-safe bowls. Top each with a slice of toasted bread.")
 onion_soup.recipe_steps.build(step_number: 9, instruction_original: "Pile shredded Gruyère on bread. Broil for 2-3 minutes until cheese melts and bubbles.")
 
@@ -1467,12 +1592,11 @@ onion_soup.recipe_aliases.build(alias_name: "玉ねぎのスープ", language: "
 
 attach_image_to_recipe(onion_soup)
 onion_soup.save!
-apply_recipe_translations(onion_soup, :onion_soup)
+apply_recipe_translations(onion_soup)
 
 onion_soup.recipe_equipment.create!(equipment: find_or_create_equipment("Large Heavy Pot"), optional: false)
 onion_soup.recipe_equipment.create!(equipment: find_or_create_equipment("Oven-Safe Bowls"), optional: false)
 
-onion_soup.create_recipe_nutrition!(calories: 320, protein_g: 14, carbs_g: 24, fat_g: 18, fiber_g: 2, sodium_mg: 720, sugar_g: 8)
 
 puts "   ✅ Recipe 11: French Onion Soup"
 
@@ -1494,7 +1618,8 @@ cookies = Recipe.new(
   precision_reason: "baking",
   difficulty_level: :medium,
   admin_notes: "Classic Toll House recipe. Buttery, chewy, with melty chocolate chips.",
-  translations_completed: true
+  translations_completed: true,
+  tags: ["dessert", "baking", "quick", "classic", "kids-favorite", "snack"]
 )
 
 
@@ -1503,7 +1628,7 @@ ig_dry.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("all-purpose flour", "grain").id,
   ingredient_name: "all-purpose flour",
   amount: 225,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: "2 cups, spooned and leveled",
   position: 1
 )
@@ -1511,7 +1636,7 @@ ig_dry.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("baking soda", "other").id,
   ingredient_name: "baking soda",
   amount: 1,
-  unit: "tsp",
+  unit: find_unit("tsp"),
   preparation_notes: nil,
   position: 2
 )
@@ -1519,7 +1644,7 @@ ig_dry.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("salt", "spice").id,
   ingredient_name: "salt",
   amount: 1,
-  unit: "tsp",
+  unit: find_unit("tsp"),
   preparation_notes: nil,
   position: 3
 )
@@ -1529,7 +1654,7 @@ ig_butter.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("butter", "dairy").id,
   ingredient_name: "butter",
   amount: 170,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: "softened, 6 oz",
   position: 1
 )
@@ -1537,7 +1662,7 @@ ig_butter.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("granulated sugar", "other").id,
   ingredient_name: "granulated sugar",
   amount: 150,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: "3/4 cup",
   position: 2
 )
@@ -1545,7 +1670,7 @@ ig_butter.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("brown sugar", "other").id,
   ingredient_name: "brown sugar",
   amount: 160,
-  unit: "g",
+  unit: find_unit("g"),
   preparation_notes: "3/4 cup packed",
   position: 3
 )
@@ -1553,7 +1678,7 @@ ig_butter.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("vanilla extract", "other").id,
   ingredient_name: "vanilla extract",
   amount: 1,
-  unit: "tsp",
+  unit: find_unit("tsp"),
   preparation_notes: nil,
   position: 4
 )
@@ -1563,26 +1688,26 @@ ig_eggs.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("eggs", "protein").id,
   ingredient_name: "eggs",
   amount: 2,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: nil,
   position: 1
 )
 ig_eggs.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("chocolate chips", "other").id,
   ingredient_name: "chocolate chips",
-  amount: 340,
-  unit: "g",
-  preparation_notes: "semi-sweet, 2 cups",
+  amount: 200,
+  unit: find_unit("g"),
+  preparation_notes: "semi-sweet, about 1.25 cups",
   position: 2
 )
 
-cookies.recipe_steps.build(step_number: 1, instruction_original: "Preheat oven to 375°F (190°C).")
+cookies.recipe_steps.build(step_number: 1, section_heading: "Prepare", instruction_original: "Preheat oven to 375°F (190°C).")
 cookies.recipe_steps.build(step_number: 2, instruction_original: "In a small bowl, mix flour, baking soda, and salt. Set aside.")
-cookies.recipe_steps.build(step_number: 3, instruction_original: "In a large bowl, beat softened butter and both sugars until creamy.")
+cookies.recipe_steps.build(step_number: 3, section_heading: "Mix the Dough", instruction_original: "In a large bowl, beat softened butter and both sugars until creamy.")
 cookies.recipe_steps.build(step_number: 4, instruction_original: "Add vanilla extract and eggs. Beat until well combined.")
 cookies.recipe_steps.build(step_number: 5, instruction_original: "Gradually stir in flour mixture until just combined.")
 cookies.recipe_steps.build(step_number: 6, instruction_original: "Fold in chocolate chips.")
-cookies.recipe_steps.build(step_number: 7, instruction_original: "Drop rounded tablespoons of dough onto ungreased baking sheets.")
+cookies.recipe_steps.build(step_number: 7, section_heading: "Bake", instruction_original: "Drop rounded tablespoons of dough onto ungreased baking sheets.")
 cookies.recipe_steps.build(step_number: 8, instruction_original: "Bake for 10-12 minutes until golden brown around edges.")
 cookies.recipe_steps.build(step_number: 9, instruction_original: "Cool on baking sheet for 2 minutes, then transfer to wire rack.")
 
@@ -1596,12 +1721,11 @@ cookies.recipe_aliases.build(alias_name: "チョコレートチップクッキ�
 
 attach_image_to_recipe(cookies)
 cookies.save!
-apply_recipe_translations(cookies, :cookies)
+apply_recipe_translations(cookies)
 
 cookies.recipe_equipment.create!(equipment: find_or_create_equipment("Baking Sheet"), optional: false)
 cookies.recipe_equipment.create!(equipment: find_or_create_equipment("Mixing Bowls"), optional: false)
 
-cookies.create_recipe_nutrition!(calories: 210, protein_g: 2, carbs_g: 28, fat_g: 10, fiber_g: 0, sodium_mg: 220, sugar_g: 22)
 
 puts "   ✅ Recipe 12: Chocolate Chip Cookies"
 
@@ -1621,7 +1745,8 @@ guacamole = Recipe.new(
   total_minutes: 10,
   requires_precision: false,
   admin_notes: "Fresh Mexican guacamole. Simple, authentic, best served immediately.",
-  translations_completed: true
+  translations_completed: true,
+  tags: ["appetizer", "quick", "no-cook", "party", "healthy", "dip"]
 )
 
 
@@ -1630,7 +1755,7 @@ ig.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("avocados", "vegetable").id,
   ingredient_name: "avocados",
   amount: 3,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: "ripe, halved and pitted",
   position: 1
 )
@@ -1638,7 +1763,7 @@ ig.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("lime", "vegetable").id,
   ingredient_name: "lime",
   amount: 1,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: "freshly squeezed juice",
   position: 2
 )
@@ -1654,23 +1779,23 @@ ig.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("white onion", "vegetable").id,
   ingredient_name: "white onion",
   amount: 0.5,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: "finely diced",
   position: 4
 )
 ig.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("cilantro", "spice").id,
   ingredient_name: "cilantro",
-  amount: 30,
-  unit: "g",
-  preparation_notes: "fresh, chopped",
+  amount: 15,
+  unit: find_unit("g"),
+  preparation_notes: "fresh, chopped, about 1/4 cup",
   position: 5
 )
 ig.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("jalapeño", "vegetable").id,
   ingredient_name: "jalapeño",
   amount: 1,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: "minced, seeds removed",
   position: 6
 )
@@ -1678,18 +1803,18 @@ ig.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("tomato", "vegetable").id,
   ingredient_name: "tomato",
   amount: 1,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: "diced, optional",
   position: 7
 )
 
-guacamole.recipe_steps.build(step_number: 1, instruction_original: "Cut avocados in half lengthwise. Remove pit and scoop flesh into a bowl.")
+guacamole.recipe_steps.build(step_number: 1, section_heading: "Prepare the Avocados", instruction_original: "Cut avocados in half lengthwise. Remove pit and scoop flesh into a bowl.")
 guacamole.recipe_steps.build(step_number: 2, instruction_original: "Squeeze lime juice over avocados immediately to prevent browning.")
 guacamole.recipe_steps.build(step_number: 3, instruction_original: "Mash avocados with a fork to desired consistency. Leave some chunks.")
-guacamole.recipe_steps.build(step_number: 4, instruction_original: "Add diced white onion, chopped cilantro, and minced jalapeño.")
+guacamole.recipe_steps.build(step_number: 4, section_heading: "Mix and Season", instruction_original: "Add diced white onion, chopped cilantro, and minced jalapeño.")
 guacamole.recipe_steps.build(step_number: 5, instruction_original: "Add diced tomato if desired.")
 guacamole.recipe_steps.build(step_number: 6, instruction_original: "Season with salt to taste. Mix gently to combine.")
-guacamole.recipe_steps.build(step_number: 7, instruction_original: "Taste and adjust seasonings. Serve immediately with tortilla chips.")
+guacamole.recipe_steps.build(step_number: 7, section_heading: "Serve", instruction_original: "Taste and adjust seasonings. Serve immediately with tortilla chips.")
 
 
 
@@ -1705,12 +1830,11 @@ guacamole.recipe_aliases.build(alias_name: "Guacamole de Aguacate", language: "e
 
 attach_image_to_recipe(guacamole)
 guacamole.save!
-apply_recipe_translations(guacamole, :guacamole)
+apply_recipe_translations(guacamole)
 
 guacamole.recipe_equipment.create!(equipment: find_or_create_equipment("Bowl"), optional: false)
 guacamole.recipe_equipment.create!(equipment: find_or_create_equipment("Fork"), optional: false)
 
-guacamole.create_recipe_nutrition!(calories: 160, protein_g: 2, carbs_g: 10, fat_g: 15, fiber_g: 7, sodium_mg: 280, sugar_g: 1)
 
 puts "   ✅ Recipe 13: Guacamole"
 
@@ -1730,7 +1854,8 @@ ratatouille = Recipe.new(
   total_minutes: 60,
   requires_precision: false,
   admin_notes: "Rustic French vegetable stew. Can be served warm or at room temperature.",
-  translations_completed: true
+  translations_completed: true,
+  tags: ["vegetarian", "vegan", "healthy", "summer", "make-ahead", "side-dish"]
 )
 
 
@@ -1738,32 +1863,32 @@ ig_vegetables = ratatouille.ingredient_groups.build(name: "Vegetables", position
 ig_vegetables.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("eggplant", "vegetable").id,
   ingredient_name: "eggplant",
-  amount: 400,
-  unit: "g",
-  preparation_notes: "diced",
+  amount: 200,
+  unit: find_unit("g"),
+  preparation_notes: "diced, about 1 small",
   position: 1
 )
 ig_vegetables.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("zucchini", "vegetable").id,
   ingredient_name: "zucchini",
-  amount: 350,
-  unit: "g",
-  preparation_notes: "diced",
+  amount: 175,
+  unit: find_unit("g"),
+  preparation_notes: "diced, about 1 medium",
   position: 2
 )
 ig_vegetables.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("bell pepper", "vegetable").id,
   ingredient_name: "bell pepper",
-  amount: 300,
-  unit: "g",
-  preparation_notes: "diced, mixed colors",
+  amount: 150,
+  unit: find_unit("g"),
+  preparation_notes: "diced, mixed colors, about 1 large",
   position: 3
 )
 ig_vegetables.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("tomatoes", "vegetable").id,
   ingredient_name: "tomatoes",
-  amount: 400,
-  unit: "g",
+  amount: 200,
+  unit: find_unit("g"),
   preparation_notes: "diced or canned",
   position: 4
 )
@@ -1771,7 +1896,7 @@ ig_vegetables.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("onion", "vegetable").id,
   ingredient_name: "onion",
   amount: 1,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: "diced",
   position: 5
 )
@@ -1780,16 +1905,16 @@ ig_seasonings = ratatouille.ingredient_groups.build(name: "Seasonings & Oil", po
 ig_seasonings.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("olive oil", "other").id,
   ingredient_name: "olive oil",
-  amount: 60,
-  unit: "ml",
-  preparation_notes: nil,
+  amount: 90,
+  unit: find_unit("ml"),
+  preparation_notes: "for sautéing vegetables",
   position: 1
 )
 ig_seasonings.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("garlic", "spice").id,
   ingredient_name: "garlic",
   amount: 4,
-  unit: "cloves",
+  unit: find_unit("cloves"),
   preparation_notes: "minced",
   position: 2
 )
@@ -1797,7 +1922,7 @@ ig_seasonings.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("thyme", "spice").id,
   ingredient_name: "thyme",
   amount: 2,
-  unit: "tsp",
+  unit: find_unit("tsp"),
   preparation_notes: "dried",
   position: 3
 )
@@ -1805,7 +1930,7 @@ ig_seasonings.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("basil", "spice").id,
   ingredient_name: "basil",
   amount: 2,
-  unit: "tsp",
+  unit: find_unit("tsp"),
   preparation_notes: "dried",
   position: 4
 )
@@ -1818,12 +1943,12 @@ ig_seasonings.recipe_ingredients.build(
   position: 5
 )
 
-ratatouille.recipe_steps.build(step_number: 1, instruction_original: "Heat olive oil in a large, deep skillet over medium heat.")
+ratatouille.recipe_steps.build(step_number: 1, section_heading: "Build the Base", instruction_original: "Heat olive oil in a large, deep skillet over medium heat.")
 ratatouille.recipe_steps.build(step_number: 2, instruction_original: "Add diced onion and cook for 3 minutes until softened.")
 ratatouille.recipe_steps.build(step_number: 3, instruction_original: "Add minced garlic and cook for 1 minute until fragrant.")
-ratatouille.recipe_steps.build(step_number: 4, instruction_original: "Add diced eggplant and bell peppers. Cook for 5 minutes, stirring occasionally.")
+ratatouille.recipe_steps.build(step_number: 4, section_heading: "Add the Vegetables", instruction_original: "Add diced eggplant and bell peppers. Cook for 5 minutes, stirring occasionally.")
 ratatouille.recipe_steps.build(step_number: 5, instruction_original: "Add diced zucchini and tomatoes. Stir in thyme and basil.")
-ratatouille.recipe_steps.build(step_number: 6, instruction_original: "Reduce heat to low and simmer uncovered for 30 minutes until vegetables are tender.")
+ratatouille.recipe_steps.build(step_number: 6, section_heading: "Simmer and Serve", instruction_original: "Reduce heat to low and simmer uncovered for 30 minutes until vegetables are tender.")
 ratatouille.recipe_steps.build(step_number: 7, instruction_original: "Stir occasionally and break up any large pieces of vegetable.")
 ratatouille.recipe_steps.build(step_number: 8, instruction_original: "Season with salt and pepper to taste.")
 ratatouille.recipe_steps.build(step_number: 9, instruction_original: "Serve warm or at room temperature. Tastes even better the next day.")
@@ -1839,11 +1964,10 @@ ratatouille.recipe_aliases.build(alias_name: "Ratatouille Niçoise", language: "
 
 attach_image_to_recipe(ratatouille)
 ratatouille.save!  # TODO: Fix attachment issue for this recipe
-apply_recipe_translations(ratatouille, :ratatouille)
+apply_recipe_translations(ratatouille)
 
 ratatouille.recipe_equipment.create!(equipment: find_or_create_equipment("Large Deep Skillet"), optional: false)
 
-ratatouille.create_recipe_nutrition!(calories: 160, protein_g: 5, carbs_g: 20, fat_g: 7, fiber_g: 5, sodium_mg: 320, sugar_g: 9)
 
 puts "   ✅ Recipe 14: Ratatouille"
 
@@ -1863,7 +1987,8 @@ teriyaki = Recipe.new(
   requires_precision: false,
   difficulty_level: :medium,
   admin_notes: "Japanese grilled chicken with homemade teriyaki glaze. Served with rice.",
-  translations_completed: true
+  translations_completed: true,
+  tags: ["quick", "dinner", "weeknight", "family-friendly", "asian", "grilling"]
 )
 
 
@@ -1871,9 +1996,9 @@ ig_chicken = teriyaki.ingredient_groups.build(name: "Chicken", position: 1)
 ig_chicken.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("chicken thighs", "protein").id,
   ingredient_name: "chicken thighs",
-  amount: 800,
-  unit: "g",
-  preparation_notes: "boneless, skinless, cut into 2-inch pieces",
+  amount: 450,
+  unit: find_unit("g"),
+  preparation_notes: "boneless, skinless, cut into 2-inch pieces, about 115g per serving",
   position: 1
 )
 ig_chicken.recipe_ingredients.build(
@@ -1890,7 +2015,7 @@ ig_sauce.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("soy sauce", "spice").id,
   ingredient_name: "soy sauce",
   amount: 80,
-  unit: "ml",
+  unit: find_unit("ml"),
   preparation_notes: nil,
   position: 1
 )
@@ -1898,7 +2023,7 @@ ig_sauce.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("mirin", "other").id,
   ingredient_name: "mirin",
   amount: 60,
-  unit: "ml",
+  unit: find_unit("ml"),
   preparation_notes: nil,
   position: 2
 )
@@ -1906,7 +2031,7 @@ ig_sauce.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("sake", "other").id,
   ingredient_name: "sake",
   amount: 60,
-  unit: "ml",
+  unit: find_unit("ml"),
   preparation_notes: nil,
   position: 3
 )
@@ -1914,7 +2039,7 @@ ig_sauce.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("sugar", "other").id,
   ingredient_name: "sugar",
   amount: 2,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: nil,
   position: 4
 )
@@ -1922,7 +2047,7 @@ ig_sauce.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("garlic", "spice").id,
   ingredient_name: "garlic",
   amount: 2,
-  unit: "cloves",
+  unit: find_unit("cloves"),
   preparation_notes: "minced",
   position: 5
 )
@@ -1930,7 +2055,7 @@ ig_sauce.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("ginger", "spice").id,
   ingredient_name: "ginger",
   amount: 1,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: "grated",
   position: 6
 )
@@ -1939,16 +2064,16 @@ ig_serving = teriyaki.ingredient_groups.build(name: "For Serving", position: 3)
 ig_serving.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("cooked rice", "grain").id,
   ingredient_name: "cooked rice",
-  amount: 600,
-  unit: "g",
-  preparation_notes: "hot, steamed",
+  amount: 400,
+  unit: find_unit("g"),
+  preparation_notes: "hot, steamed, about 100g per serving",
   position: 1
 )
 ig_serving.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("scallions", "vegetable").id,
   ingredient_name: "scallions",
   amount: 2,
-  unit: "whole",
+  unit: find_unit("whole"),
   preparation_notes: "sliced",
   position: 2
 )
@@ -1956,18 +2081,18 @@ ig_serving.recipe_ingredients.build(
   ingredient_id: find_or_create_ingredient("sesame seeds", "spice").id,
   ingredient_name: "sesame seeds",
   amount: 1,
-  unit: "tbsp",
+  unit: find_unit("tbsp"),
   preparation_notes: "toasted",
   position: 3
 )
 
-teriyaki.recipe_steps.build(step_number: 1, instruction_original: "In a small saucepan, combine soy sauce, mirin, sake, and sugar.")
+teriyaki.recipe_steps.build(step_number: 1, section_heading: "Make the Sauce", instruction_original: "In a small saucepan, combine soy sauce, mirin, sake, and sugar.")
 teriyaki.recipe_steps.build(step_number: 2, instruction_original: "Add minced garlic and grated ginger. Bring to a simmer over medium heat.")
 teriyaki.recipe_steps.build(step_number: 3, instruction_original: "Simmer for 5 minutes until sauce thickens slightly. Set aside.")
-teriyaki.recipe_steps.build(step_number: 4, instruction_original: "Season chicken pieces with salt and pepper.")
+teriyaki.recipe_steps.build(step_number: 4, section_heading: "Cook the Chicken", instruction_original: "Season chicken pieces with salt and pepper.")
 teriyaki.recipe_steps.build(step_number: 5, instruction_original: "Heat a large skillet or grill pan over medium-high heat. Add chicken pieces.")
 teriyaki.recipe_steps.build(step_number: 6, instruction_original: "Cook chicken for 4-5 minutes on each side until browned and cooked through.")
-teriyaki.recipe_steps.build(step_number: 7, instruction_original: "Pour prepared teriyaki sauce over chicken in the pan.")
+teriyaki.recipe_steps.build(step_number: 7, section_heading: "Glaze and Serve", instruction_original: "Pour prepared teriyaki sauce over chicken in the pan.")
 teriyaki.recipe_steps.build(step_number: 8, instruction_original: "Toss chicken to coat evenly. Cook for 2-3 minutes until sauce caramelizes slightly.")
 teriyaki.recipe_steps.build(step_number: 9, instruction_original: "Serve chicken and sauce over hot steamed rice. Garnish with scallions and sesame seeds.")
 
@@ -1981,12 +2106,11 @@ teriyaki.recipe_aliases.build(alias_name: "照り焼きチキン", language: "ja
 
 attach_image_to_recipe(teriyaki)
 teriyaki.save!
-apply_recipe_translations(teriyaki, :teriyaki)
+apply_recipe_translations(teriyaki)
 
 teriyaki.recipe_equipment.create!(equipment: find_or_create_equipment("Large Skillet"), optional: false)
 teriyaki.recipe_equipment.create!(equipment: find_or_create_equipment("Saucepan"), optional: false)
 
-teriyaki.create_recipe_nutrition!(calories: 420, protein_g: 42, carbs_g: 38, fat_g: 10, fiber_g: 1, sodium_mg: 920, sugar_g: 14)
 
 puts "   ✅ Recipe 15: Chicken Teriyaki"
 
@@ -1998,3 +2122,14 @@ puts "   • All recipes have proper ingredient groups and amounts ✓"
 puts "   • All recipes have equipment specifications ✓"
 puts "   • All recipes have dietary tags where appropriate ✓"
 puts "   • All recipes have aliases in multiple languages ✓"
+
+puts "\n🔄 Converting recipe steps to instruction items..."
+Recipe.find_each do |recipe|
+  next if recipe.instruction_items.any?
+  convert_steps_to_instruction_items(recipe)
+  puts "   ✅ Converted: #{recipe.name}"
+end
+puts "   All recipes now have instruction_items ✓"
+
+puts "\n📷 To generate step images (requires GEMINI_API_KEY):"
+puts "   bundle exec rake recipes:generate_step_images"

@@ -22,7 +22,8 @@
       "manageData": "Manage Data",
       "addReferenceData": "Add Reference Data",
       "createPromptTemplate": "Create Prompt Template",
-      "getStarted": "Get Started"
+      "getStarted": "Get Started",
+      "retry": "Retry"
     },
     "labels": {
       "name": "Name",
@@ -36,7 +37,10 @@
       "actions": "Actions",
       "yes": "Yes",
       "no": "No",
+      "serving": "serving",
       "servings": "servings",
+      "Serving": "Serving",
+      "Servings": "Servings",
       "difficulty": "Difficulty"
     },
     "messages": {
@@ -44,6 +48,7 @@
       "error": "An error occurred",
       "confirmDelete": "Are you sure you want to delete this item?",
       "loading": "Loading...",
+      "saved": "Saved",
       "noResults": "No results found",
       "welcome": "Welcome to Ember",
       "subtitle": "Your recipe management platform",
@@ -55,6 +60,7 @@
     "home": "Home",
     "recipes": "Recipes",
     "favorites": "Favorites",
+    "menu": "Menu",
     "about": "About",
     "contact": "Contact",
     "login": "Login",
@@ -70,12 +76,28 @@
   },
   "auth": {
     "signIn": "Sign In",
+    "signUp": "Sign Up",
     "signInSubtitle": "Sign in to continue",
+    "signUpSubtitle": "Create your free account",
     "backToHome": "Back to Home",
     "loginError": "Failed to sign in. Please check your credentials.",
+    "signupError": "Failed to create account. Please try again.",
     "adminLogin": "Admin Login",
     "adminSignInSubtitle": "Sign in to access admin dashboard",
-    "adminAccessRequired": "Admin access required"
+    "adminAccessRequired": "Admin access required",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "signUpSuccess": "Account created successfully!",
+    "passwordMismatch": "Passwords do not match",
+    "forgotPassword": "Forgot password?",
+    "forgotPasswordDescription": "Enter your email address and we'll send you a link to reset your password.",
+    "sendResetLink": "Send Reset Link",
+    "backToSignIn": "Back to Sign In",
+    "resetEmailSent": "Check your email for a link to reset your password.",
+    "enterNewPassword": "Enter your new password below.",
+    "savePassword": "Save Password",
+    "resetError": "Failed to process request. Please try again.",
+    "invalidResetToken": "Invalid or expired reset link."
   },
   "forms": {
     "recipe": {
@@ -114,6 +136,9 @@
       },
       "dietaryTags": "Dietary Tags",
       "dietaryTagsPlaceholder": "Select dietary tags",
+      "tags": "Tags",
+      "tagsPlaceholder": "e.g., quick, weeknight, comfort-food",
+      "tagsHint": "Press Enter to add. Free-form labels to help users discover recipes.",
       "cuisines": "Cuisines",
       "cuisinesPlaceholder": "Select cuisines",
       "aliases": "Alternate Names",
@@ -166,11 +191,14 @@
     "user": {
       "email": "Email",
       "password": "Password",
+      "newPassword": "New Password",
       "passwordConfirmation": "Confirm Password",
       "rememberMe": "Remember Me",
       "forgotPassword": "Forgot Password?",
       "emailPlaceholder": "Enter your email",
-      "passwordPlaceholder": "Enter your password"
+      "passwordPlaceholder": "Enter your password",
+      "newPasswordPlaceholder": "Enter your new password",
+      "passwordConfirmPlaceholder": "Confirm your password"
     }
   },
   "errors": {
@@ -186,7 +214,25 @@
     "subtitle": "Explore our collection of recipes",
     "searchPlaceholder": "search for recipes...",
     "noRecipes": "No recipes found",
-    "noRecipesDescription": "Try adjusting your search or browse all recipes"
+    "noRecipesDescription": "Try adjusting your search or browse all recipes",
+    "featured": "Featured",
+    "results": "Results",
+    "recipesCount": "Recipes",
+    "favorites": "Favorites"
+  },
+  "favorites": {
+    "title": "Favorite Recipes",
+    "searchPlaceholder": "search through your favorite recipes...",
+    "noSearchResults": "No Favorite Recipes Found",
+    "empty": {
+      "title": "No favorite recipes yet",
+      "description": "When you find recipes you love, click the heart icon to save them here.",
+      "browseRecipes": "Browse Recipes"
+    }
+  },
+  "profile": {
+    "accountInfo": "Account Information",
+    "comingSoon": "More profile features coming soon..."
   },
   "recipe": {
     "view": {
@@ -196,9 +242,35 @@
       "cook": "Cook",
       "total": "Total",
       "ingredients": "Ingredients",
+      "steps": "Steps",
       "equipment": "Equipment",
       "instructions": "Instructions",
-      "nutrition": "Nutrition"
+      "nutrition": "Nutrition",
+      "optional": "optional",
+      "perServing": "Per Serving",
+      "cals": "Cals",
+      "carbs": "Carbs",
+      "protein": "Protein",
+      "fat": "Fat",
+      "adjustRecipe": "Adjust Recipe",
+      "adjusted": "Adjusted",
+      "aiImageCaption": "AI-generated placeholder image, may not be 100% accurate.",
+      "aiAdjustmentDisclaimer": "This is an AI-generated adjustment. Adjustment may not be 100% accurate.",
+      "restoreToOriginal": "Restore to Original",
+      "images": "Images",
+      "favorite": "Add to favorites",
+      "unfavorite": "Remove from favorites"
+    },
+    "adjust": {
+      "title": "Adjust Recipe",
+      "description": "What would you like to adjust about this recipe?",
+      "submit": "Adjust Recipe",
+      "adjusting": "Adjusting...",
+      "adjustedFrom": "Adjusted from:",
+      "newlyAdded": "Newly added",
+      "placeholder": "Examples:\n• Make it vegetarian with mushrooms\n• Double the spices for more flavor\n• Substitute beef with chicken\n• Make it gluten-free\n• Reduce the sugar by half",
+      "error": "Failed to adjust recipe. Please try again.",
+      "errorWithMessage": "Failed to adjust recipe: {message}"
     }
   },
   "admin": {

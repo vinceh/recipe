@@ -1,0 +1,1008 @@
+{
+  "batch": 4,
+  "agent": 18,
+  "category": "sweeteners",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "white sugar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 0,
+        "carbs_g": 100,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["granulated sugar", "white granulated sugar", "table sugar", "cane sugar", "refined sugar"],
+        "ja": ["砂糖", "白砂糖", "グラニュー糖", "上白糖"],
+        "ko": ["설탕", "백설탕", "흰설탕"],
+        "zh": ["白糖", "砂糖", "白砂糖"],
+        "es": ["azúcar blanca", "azúcar granulada", "azúcar refinada"],
+        "fr": ["sucre blanc", "sucre cristallisé", "sucre semoule"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "light brown sugar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 380,
+        "protein_g": 0.1,
+        "carbs_g": 98,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["brown sugar", "soft brown sugar", "golden brown sugar"],
+        "ja": ["ブラウンシュガー", "きび砂糖", "三温糖"],
+        "ko": ["황설탕", "브라운슈가"],
+        "zh": ["黄糖", "红糖", "浅褐色糖"],
+        "es": ["azúcar morena", "azúcar rubia"],
+        "fr": ["cassonade", "sucre roux", "vergeoise blonde"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "dark brown sugar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 377,
+        "protein_g": 0.1,
+        "carbs_g": 97.3,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["dark soft brown sugar", "molasses sugar"],
+        "ja": ["ダークブラウンシュガー", "黒砂糖"],
+        "ko": ["진한 황설탕", "흑설탕"],
+        "zh": ["深褐色糖", "黑糖"],
+        "es": ["azúcar morena oscura"],
+        "fr": ["vergeoise brune", "cassonade brune"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "powdered sugar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 389,
+        "protein_g": 0,
+        "carbs_g": 100,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["confectioners sugar", "icing sugar", "10x sugar", "powdered confectioners sugar"],
+        "ja": ["粉砂糖", "粉糖", "シュガーパウダー"],
+        "ko": ["슈가파우더", "가루설탕"],
+        "zh": ["糖粉", "细糖粉"],
+        "es": ["azúcar glas", "azúcar impalpable", "azúcar en polvo"],
+        "fr": ["sucre glace", "sucre à glacer"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "turbinado sugar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 0,
+        "carbs_g": 99.8,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["raw sugar", "sugar in the raw", "turbinado"],
+        "ja": ["タービナドシュガー", "粗糖"],
+        "ko": ["터비나도 설탕", "원당"],
+        "zh": ["粗糖", "原糖"],
+        "es": ["azúcar turbinado", "azúcar crudo"],
+        "fr": ["sucre turbinado", "sucre brut"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "demerara sugar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 383,
+        "protein_g": 0.1,
+        "carbs_g": 99,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["demerara", "raw cane sugar"],
+        "ja": ["デメララシュガー"],
+        "ko": ["데메라라 설탕"],
+        "zh": ["德梅拉拉糖"],
+        "es": ["azúcar demerara"],
+        "fr": ["sucre demerara"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "muscovado sugar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 380,
+        "protein_g": 0.3,
+        "carbs_g": 95,
+        "fat_g": 0.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["muscovado", "barbados sugar", "khandsari sugar"],
+        "ja": ["マスコバド糖"],
+        "ko": ["머스코바도 설탕"],
+        "zh": ["马斯科瓦多糖", "肌肉糖"],
+        "es": ["azúcar moscabado", "azúcar mascabado"],
+        "fr": ["sucre muscovado"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "coconut sugar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 1.1,
+        "carbs_g": 92,
+        "fat_g": 0.4,
+        "fiber_g": 2
+      },
+      "aliases": {
+        "en": ["coconut palm sugar", "coco sugar"],
+        "ja": ["ココナッツシュガー", "ヤシ糖"],
+        "ko": ["코코넛 슈가", "야자 설탕"],
+        "zh": ["椰子糖", "椰糖"],
+        "es": ["azúcar de coco"],
+        "fr": ["sucre de coco"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "palm sugar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 382,
+        "protein_g": 0.5,
+        "carbs_g": 94,
+        "fat_g": 0.2,
+        "fiber_g": 1
+      },
+      "aliases": {
+        "en": ["jaggery", "gula melaka", "gur"],
+        "ja": ["パームシュガー", "椰子砂糖"],
+        "ko": ["팜슈가", "야자당"],
+        "zh": ["棕榈糖", "椰棕糖"],
+        "es": ["azúcar de palma", "panela"],
+        "fr": ["sucre de palme"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce", "block"]
+    },
+    {
+      "canonical_name": "honey",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 304,
+        "protein_g": 0.3,
+        "carbs_g": 82.4,
+        "fat_g": 0,
+        "fiber_g": 0.2
+      },
+      "aliases": {
+        "en": ["pure honey", "raw honey"],
+        "ja": ["蜂蜜", "ハチミツ", "はちみつ"],
+        "ko": ["꿀", "벌꿀"],
+        "zh": ["蜂蜜", "蜜糖"],
+        "es": ["miel"],
+        "fr": ["miel"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce", "milliliter"]
+    },
+    {
+      "canonical_name": "maple syrup",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 260,
+        "protein_g": 0,
+        "carbs_g": 67,
+        "fat_g": 0.2,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["pure maple syrup", "grade a maple syrup"],
+        "ja": ["メープルシロップ"],
+        "ko": ["메이플 시럽", "단풍나무 시럽"],
+        "zh": ["枫糖浆", "枫树糖浆"],
+        "es": ["jarabe de arce", "sirope de arce"],
+        "fr": ["sirop d'érable"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "agave nectar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 310,
+        "protein_g": 0.1,
+        "carbs_g": 76,
+        "fat_g": 0.5,
+        "fiber_g": 0.2
+      },
+      "aliases": {
+        "en": ["agave syrup", "agave"],
+        "ja": ["アガベシロップ", "龍舌蘭糖漿"],
+        "ko": ["아가베 시럽", "용설란 시럽"],
+        "zh": ["龙舌兰糖浆", "龙舌兰蜜"],
+        "es": ["néctar de agave", "miel de agave", "jarabe de agave"],
+        "fr": ["sirop d'agave", "nectar d'agave"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "molasses",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 290,
+        "protein_g": 0,
+        "carbs_g": 74.7,
+        "fat_g": 0.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["light molasses", "unsulphured molasses"],
+        "ja": ["モラセス", "糖蜜"],
+        "ko": ["당밀", "몰라세스"],
+        "zh": ["糖蜜"],
+        "es": ["melaza", "melaza clara"],
+        "fr": ["mélasse", "mélasse claire"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "dark molasses",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 235,
+        "protein_g": 0,
+        "carbs_g": 60,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["robust molasses"],
+        "ja": ["ダークモラセス", "黒糖蜜"],
+        "ko": ["다크 당밀"],
+        "zh": ["黑糖蜜"],
+        "es": ["melaza oscura"],
+        "fr": ["mélasse noire"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "blackstrap molasses",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 235,
+        "protein_g": 0,
+        "carbs_g": 55,
+        "fat_g": 0.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["final molasses"],
+        "ja": ["ブラックストラップ糖蜜"],
+        "ko": ["블랙스트랩 당밀"],
+        "zh": ["黑带糖蜜"],
+        "es": ["melaza negra"],
+        "fr": ["mélasse blackstrap"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "light corn syrup",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 286,
+        "protein_g": 0,
+        "carbs_g": 76,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["corn syrup", "karo syrup"],
+        "ja": ["コーンシロップ"],
+        "ko": ["옥수수 시럽", "콘시럽"],
+        "zh": ["玉米糖浆"],
+        "es": ["jarabe de maíz"],
+        "fr": ["sirop de maïs"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "dark corn syrup",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 286,
+        "protein_g": 0,
+        "carbs_g": 76,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["dark karo syrup"],
+        "ja": ["ダークコーンシロップ"],
+        "ko": ["다크 옥수수 시럽"],
+        "zh": ["深色玉米糖浆"],
+        "es": ["jarabe de maíz oscuro"],
+        "fr": ["sirop de maïs brun"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "golden syrup",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 310,
+        "protein_g": 0.2,
+        "carbs_g": 79,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["lyle's golden syrup", "light treacle", "refiner's syrup"],
+        "ja": ["ゴールデンシロップ"],
+        "ko": ["골든 시럽"],
+        "zh": ["金黄糖浆"],
+        "es": ["jarabe dorado"],
+        "fr": ["sirop doré"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "rice syrup",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 316,
+        "protein_g": 0,
+        "carbs_g": 78,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["brown rice syrup", "rice malt syrup"],
+        "ja": ["米飴", "ライスシロップ"],
+        "ko": ["쌀 시럽", "쌀엿"],
+        "zh": ["米糖浆", "米饴"],
+        "es": ["jarabe de arroz"],
+        "fr": ["sirop de riz"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "barley malt syrup",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 6,
+        "carbs_g": 71,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["malt syrup", "barley malt extract"],
+        "ja": ["麦芽シロップ", "大麦麦芽シロップ"],
+        "ko": ["보리 맥아 시럽", "맥아 시럽"],
+        "zh": ["大麦麦芽糖浆", "麦芽糖浆"],
+        "es": ["jarabe de malta de cebada"],
+        "fr": ["sirop de malt d'orge"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "rock sugar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 0,
+        "carbs_g": 100,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["chinese rock sugar", "rock candy", "crystal sugar"],
+        "ja": ["氷砂糖", "ロックシュガー"],
+        "ko": ["빙설탕", "얼음설탕"],
+        "zh": ["冰糖"],
+        "es": ["azúcar de roca", "azúcar candi"],
+        "fr": ["sucre candi", "sucre cristal"]
+      },
+      "common_units": ["piece", "gram", "ounce", "tablespoon"]
+    },
+    {
+      "canonical_name": "maltose",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 0,
+        "carbs_g": 78,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["malt sugar", "maltose syrup"],
+        "ja": ["麦芽糖", "マルトース"],
+        "ko": ["맥아당", "엿"],
+        "zh": ["麦芽糖"],
+        "es": ["maltosa", "azúcar de malta"],
+        "fr": ["maltose", "sucre de malt"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "milliliter"]
+    },
+    {
+      "canonical_name": "kurozato",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 354,
+        "protein_g": 1.7,
+        "carbs_g": 89.7,
+        "fat_g": 0.3,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["japanese black sugar", "okinawan brown sugar", "kokuto"],
+        "ja": ["黒糖", "黒砂糖"],
+        "ko": ["일본 흑설탕"],
+        "zh": ["日本黑糖"],
+        "es": ["azúcar negra japonesa"],
+        "fr": ["sucre noir japonais"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "korean rice syrup",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 0.4,
+        "carbs_g": 78,
+        "fat_g": 0.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["jocheong", "korean malt syrup", "ssalyeot"],
+        "ja": ["チョチョン", "韓国水飴"],
+        "ko": ["조청", "쌀조청", "물엿"],
+        "zh": ["韩国米糖浆", "饴糖"],
+        "es": ["jarabe de arroz coreano"],
+        "fr": ["sirop de riz coréen"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "stevia",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["stevia extract", "stevia sweetener"],
+        "ja": ["ステビア"],
+        "ko": ["스테비아"],
+        "zh": ["甜菊糖", "甜叶菊"],
+        "es": ["estevia"],
+        "fr": ["stévia"]
+      },
+      "common_units": ["teaspoon", "packet", "gram", "drop"]
+    },
+    {
+      "canonical_name": "monk fruit sweetener",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["luo han guo", "monk fruit", "monkfruit"],
+        "ja": ["羅漢果", "モンクフルーツ"],
+        "ko": ["나한과", "몽크프루트"],
+        "zh": ["罗汉果"],
+        "es": ["fruta del monje"],
+        "fr": ["fruit du moine"]
+      },
+      "common_units": ["teaspoon", "packet", "gram", "tablespoon"]
+    },
+    {
+      "canonical_name": "erythritol",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0,
+        "carbs_g": 100,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["erythritol sweetener"],
+        "ja": ["エリスリトール"],
+        "ko": ["에리스리톨"],
+        "zh": ["赤藓糖醇"],
+        "es": ["eritritol"],
+        "fr": ["érythritol"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "xylitol",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 240,
+        "protein_g": 0,
+        "carbs_g": 100,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["xylitol sweetener", "birch sugar"],
+        "ja": ["キシリトール"],
+        "ko": ["자일리톨"],
+        "zh": ["木糖醇"],
+        "es": ["xilitol"],
+        "fr": ["xylitol"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "aspartame",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 4,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["equal", "nutrasweet"],
+        "ja": ["アスパルテーム"],
+        "ko": ["아스파탐"],
+        "zh": ["阿斯巴甜"],
+        "es": ["aspartamo"],
+        "fr": ["aspartame"]
+      },
+      "common_units": ["packet", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "sucralose",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["splenda"],
+        "ja": ["スクラロース"],
+        "ko": ["수크랄로스"],
+        "zh": ["三氯蔗糖"],
+        "es": ["sucralosa"],
+        "fr": ["sucralose"]
+      },
+      "common_units": ["packet", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "date syrup",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 287,
+        "protein_g": 1.8,
+        "carbs_g": 75,
+        "fat_g": 0.4,
+        "fiber_g": 3.5
+      },
+      "aliases": {
+        "en": ["date molasses", "silan", "date honey"],
+        "ja": ["デーツシロップ"],
+        "ko": ["대추 시럽"],
+        "zh": ["枣糖浆", "椰枣糖浆"],
+        "es": ["jarabe de dátiles", "miel de dátiles"],
+        "fr": ["sirop de dattes", "mélasse de dattes"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "pomegranate molasses",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 250,
+        "protein_g": 0.3,
+        "carbs_g": 65,
+        "fat_g": 0.3,
+        "fiber_g": 0.1
+      },
+      "aliases": {
+        "en": ["pomegranate syrup", "pomegranate concentrate"],
+        "ja": ["ザクロ糖蜜", "ザクロシロップ"],
+        "ko": ["석류 시럽", "석류 당밀"],
+        "zh": ["石榴糖浆"],
+        "es": ["melaza de granada", "jarabe de granada"],
+        "fr": ["mélasse de grenade", "sirop de grenade"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "sorghum syrup",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 290,
+        "protein_g": 0,
+        "carbs_g": 73,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["sorghum molasses", "sorghum"],
+        "ja": ["ソルガムシロップ"],
+        "ko": ["수수 시럽"],
+        "zh": ["高粱糖浆"],
+        "es": ["jarabe de sorgo", "melaza de sorgo"],
+        "fr": ["sirop de sorgho", "mélasse de sorgho"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "mirin",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 226,
+        "protein_g": 0.3,
+        "carbs_g": 43.2,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["sweet rice wine", "japanese sweet cooking wine", "hon mirin"],
+        "ja": ["みりん", "本みりん"],
+        "ko": ["미림", "미린"],
+        "zh": ["味醂", "米霖"],
+        "es": ["mirin", "vino de arroz dulce"],
+        "fr": ["mirin", "vin de riz doux"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "jam",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 250,
+        "protein_g": 0.4,
+        "carbs_g": 65,
+        "fat_g": 0.1,
+        "fiber_g": 1.1
+      },
+      "aliases": {
+        "en": ["fruit jam", "preserves", "fruit preserves"],
+        "ja": ["ジャム", "フルーツジャム"],
+        "ko": ["잼", "과일잼"],
+        "zh": ["果酱"],
+        "es": ["mermelada"],
+        "fr": ["confiture"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "caster sugar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 0,
+        "carbs_g": 100,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["superfine sugar", "castor sugar", "baker's sugar", "berry sugar"],
+        "ja": ["カスターシュガー", "細目グラニュー糖"],
+        "ko": ["캐스터 슈가", "미세 설탕"],
+        "zh": ["细砂糖", "幼砂糖"],
+        "es": ["azúcar extrafina", "azúcar caster"],
+        "fr": ["sucre en poudre", "sucre semoule fine"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "pearl sugar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 0,
+        "carbs_g": 100,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["nib sugar", "hail sugar", "swedish pearl sugar"],
+        "ja": ["パールシュガー", "あられ糖"],
+        "ko": ["펄 슈가"],
+        "zh": ["珍珠糖"],
+        "es": ["azúcar perlado", "azúcar granizo"],
+        "fr": ["sucre perlé", "sucre grêlé"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "vanilla sugar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 0,
+        "carbs_g": 100,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["vanilla-flavored sugar"],
+        "ja": ["バニラシュガー"],
+        "ko": ["바닐라 슈가"],
+        "zh": ["香草糖"],
+        "es": ["azúcar vainillado", "azúcar de vainilla"],
+        "fr": ["sucre vanillé"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "glucose syrup",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 316,
+        "protein_g": 0,
+        "carbs_g": 78,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["liquid glucose", "confectioner's glucose"],
+        "ja": ["グルコースシロップ", "水飴"],
+        "ko": ["글루코스 시럽", "포도당 시럽"],
+        "zh": ["葡萄糖浆"],
+        "es": ["jarabe de glucosa", "glucosa líquida"],
+        "fr": ["sirop de glucose", "glucose liquide"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "invert sugar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 320,
+        "protein_g": 0,
+        "carbs_g": 80,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["inverted sugar syrup", "trimoline"],
+        "ja": ["転化糖", "インバートシュガー"],
+        "ko": ["전화당"],
+        "zh": ["转化糖浆"],
+        "es": ["azúcar invertido"],
+        "fr": ["sucre inverti"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "treacle",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 298,
+        "protein_g": 0.7,
+        "carbs_g": 79,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["black treacle", "dark treacle"],
+        "ja": ["トレークル", "ブラックトレークル"],
+        "ko": ["트리클", "블랙 트리클"],
+        "zh": ["糖浆", "黑糖浆"],
+        "es": ["melaza inglesa"],
+        "fr": ["mélasse raffinée"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "yacon syrup",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 133,
+        "protein_g": 0,
+        "carbs_g": 65,
+        "fat_g": 0,
+        "fiber_g": 33
+      },
+      "aliases": {
+        "en": ["yacón syrup"],
+        "ja": ["ヤーコンシロップ"],
+        "ko": ["야콘 시럽"],
+        "zh": ["雪莲果糖浆"],
+        "es": ["jarabe de yacón"],
+        "fr": ["sirop de yacon"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "allulose",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["d-psicose", "rare sugar"],
+        "ja": ["アルロース", "希少糖"],
+        "ko": ["알룰로스"],
+        "zh": ["阿洛酮糖"],
+        "es": ["alulosa"],
+        "fr": ["allulose"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "saccharin",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["sweet'n low", "saccharine"],
+        "ja": ["サッカリン"],
+        "ko": ["사카린"],
+        "zh": ["糖精"],
+        "es": ["sacarina"],
+        "fr": ["saccharine"]
+      },
+      "common_units": ["packet", "teaspoon", "tablet", "gram"]
+    },
+    {
+      "canonical_name": "fruit sugar",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 368,
+        "protein_g": 0,
+        "carbs_g": 95,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["fructose", "levulose"],
+        "ja": ["果糖", "フルクトース"],
+        "ko": ["과당", "프룩토스"],
+        "zh": ["果糖"],
+        "es": ["fructosa", "azúcar de fruta"],
+        "fr": ["fructose", "sucre de fruit"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "dextrose",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 0,
+        "carbs_g": 91.2,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["glucose", "corn sugar", "grape sugar"],
+        "ja": ["ブドウ糖", "デキストロース"],
+        "ko": ["포도당", "덱스트로스"],
+        "zh": ["右旋糖", "葡萄糖"],
+        "es": ["dextrosa", "glucosa"],
+        "fr": ["dextrose", "glucose"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "panela",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 312,
+        "protein_g": 0.7,
+        "carbs_g": 78,
+        "fat_g": 0.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["piloncillo", "rapadura", "panocha"],
+        "ja": ["パネラ"],
+        "ko": ["파넬라"],
+        "zh": ["红糖块"],
+        "es": ["panela", "piloncillo", "chancaca"],
+        "fr": ["panela", "rapadura"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce", "cone"]
+    },
+    {
+      "canonical_name": "sucanat",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 378,
+        "protein_g": 0.1,
+        "carbs_g": 97,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["whole cane sugar", "dried cane juice"],
+        "ja": ["スカナット"],
+        "ko": ["수카낫"],
+        "zh": ["全蔗糖"],
+        "es": ["sucanat", "azúcar de caña integral"],
+        "fr": ["sucanat", "sucre de canne complet"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "cane syrup",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 269,
+        "protein_g": 0,
+        "carbs_g": 68,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["sugar cane syrup", "pure cane syrup"],
+        "ja": ["サトウキビシロップ"],
+        "ko": ["사탕수수 시럽"],
+        "zh": ["甘蔗糖浆"],
+        "es": ["jarabe de caña", "miel de caña"],
+        "fr": ["sirop de canne"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    },
+    {
+      "canonical_name": "birch syrup",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 254,
+        "protein_g": 0,
+        "carbs_g": 64,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["birch sap syrup"],
+        "ja": ["白樺シロップ"],
+        "ko": ["자작나무 시럽"],
+        "zh": ["桦树糖浆"],
+        "es": ["jarabe de abedul"],
+        "fr": ["sirop de bouleau"]
+      },
+      "common_units": ["cup", "tablespoon", "teaspoon", "milliliter", "fluid ounce"]
+    }
+  ]
+}

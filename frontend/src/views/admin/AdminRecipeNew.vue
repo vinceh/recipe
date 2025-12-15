@@ -27,30 +27,120 @@ function getDataReferenceIdByKey(key: string, referenceType: 'dietary_tag' | 'cu
   return refMap[referenceType]?.find(ref => ref.key === key)?.id
 }
 
+const UNIT_ALIASES: Record<string, string> = {
+  'tablespoons': 'tbsp',
+  'tablespoon': 'tbsp',
+  'teaspoons': 'tsp',
+  'teaspoon': 'tsp',
+  'cups': 'cup',
+  'ounces': 'oz',
+  'ounce': 'oz',
+  'pounds': 'lb',
+  'pound': 'lb',
+  'grams': 'g',
+  'gram': 'g',
+  'kilograms': 'kg',
+  'kilogram': 'kg',
+  'milligrams': 'mg',
+  'milligram': 'mg',
+  'milliliters': 'ml',
+  'milliliter': 'ml',
+  'liters': 'l',
+  'liter': 'l',
+  'cloves': 'clove',
+  'slices': 'slice',
+  'sprigs': 'sprig',
+  'stalks': 'stalk',
+  'pieces': 'piece',
+  'leaves': 'leaf',
+  'heads': 'head',
+  'bunches': 'bunch',
+  'cans': 'can',
+  'packages': 'package',
+  'packet': 'package',
+  'packets': 'package',
+  'servings': 'serving',
+  'strips': 'strip',
+  'wedges': 'wedge',
+  'fillets': 'fillet',
+  'handfuls': 'handful',
+  'drops': 'drop',
+  'pinches': 'pinch',
+  'dashes': 'dash',
+  'pints': 'pint',
+  'quarts': 'quart',
+  'gallons': 'gallon',
+  'inches': 'inch',
+  'sheets': 'sheet',
+  'sticks': 'stick',
+  'blocks': 'block',
+  'pods': 'pod',
+  'cubes': 'cube',
+  'jars': 'jar',
+  'dozens': 'dozen'
+}
+
+function normalizeUnit(unit: string | undefined): string {
+  if (!unit) return ''
+  const normalized = unit.toLowerCase().trim()
+  return UNIT_ALIASES[normalized] || normalized
+}
+
+let instructionItemIdCounter = 1
+
 function transformParsedRecipe(recipe: any): Partial<RecipeDetail> {
-  // Transform ingredient items to match new API structure
+  // Transform ingredient items to match new API structure with unit normalization
   const transformedIngredientGroups = recipe.ingredient_groups?.map((group: any) => ({
     ...group,
     items: group.items?.map((item: any) => ({
       name: item.name,
       amount: item.amount,
-      unit: item.unit,
+      unit: normalizeUnit(item.unit),
       preparation: item.preparation || item.notes || '',
       optional: item.optional || false
     }))
   }))
 
-  // Transform steps to match new API structure (flat instruction field with order)
+  // Transform steps to instruction_items format (what the form expects)
+  // Each step with section_heading becomes a heading item + text item
+  // Steps without section_heading become just a text item
+  const instructionItems: any[] = []
+
+  recipe.steps?.forEach((step: any) => {
+    const instruction = step.instruction || step.instructions?.original || step.instructions?.[recipe.language || 'en'] || ''
+
+    // If step has a section heading, add it as a separate heading item
+    if (step.section_heading) {
+      instructionItems.push({
+        id: `item-${instructionItemIdCounter++}`,
+        item_type: 'heading',
+        content: step.section_heading
+      })
+    }
+
+    // Add the instruction as a text item
+    if (instruction) {
+      instructionItems.push({
+        id: `item-${instructionItemIdCounter++}`,
+        item_type: 'text',
+        content: instruction
+      })
+    }
+  })
+
+  // Also create a steps array for the preview (ViewRecipe uses steps format)
   const transformedSteps = recipe.steps?.map((step: any, index: number) => ({
     id: step.id,
     order: index + 1,
-    instruction: step.instruction || step.instructions?.original || step.instructions?.[recipe.language || 'en'] || ''
+    instruction: step.instruction || step.instructions?.original || step.instructions?.[recipe.language || 'en'] || '',
+    section_heading: step.section_heading || ''
   }))
 
   return {
     ...recipe,
     ingredient_groups: transformedIngredientGroups,
-    steps: transformedSteps
+    steps: transformedSteps,
+    instruction_items: instructionItems
   }
 }
 const saving = ref(false)
@@ -180,7 +270,7 @@ async function handleSaveRecipe() {
     const response = await adminApi.createRecipe(payload)
 
     if (response.success && response.data) {
-      router.push(`/admin/recipes/${response.data.recipe.id}`)
+      router.push({ name: 'admin-recipe-detail', params: { id: response.data.recipe.id } })
     } else {
       throw new Error(response.message || 'Failed to create recipe')
     }
@@ -192,7 +282,7 @@ async function handleSaveRecipe() {
 }
 
 function handleCancelRecipe() {
-  router.push('/admin/recipes')
+  router.push({ name: 'admin-recipes' })
 }
 
 function openImportDialog() {
@@ -419,7 +509,7 @@ function handleSwitchToText(url: string) {
 
 .split-panel-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 600px;
   gap: var(--spacing-lg);
   padding: 0 var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
   flex: 1;

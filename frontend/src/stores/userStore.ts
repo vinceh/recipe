@@ -126,7 +126,7 @@ export const useUserStore = defineStore('user', () => {
   }
 
   async function fetchFavorites() {
-    if (!isAuthenticated.value) {
+    if (!authToken.value) {
       return
     }
 
@@ -137,7 +137,7 @@ export const useUserStore = defineStore('user', () => {
       const response = await authApi.getFavorites()
 
       if (response.success && response.data) {
-        favorites.value = response.data.recipes
+        favorites.value = response.data.favorites
       } else {
         throw new Error(response.message || 'Failed to fetch favorites')
       }

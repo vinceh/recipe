@@ -1,0 +1,716 @@
+{
+  "batch": 5,
+  "agent": 24,
+  "category": "japanese_vegetables",
+  "generated_at": "2025-12-11T00:00:00Z",
+  "ingredients": [
+    {
+      "canonical_name": "daikon radish",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 0.6,
+        "carbs_g": 4.1,
+        "fat_g": 0.1
+      },
+      "aliases": ["大根", "daikon", "dikon", "japanese radish", "white radish"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "kabu",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 28,
+        "protein_g": 0.9,
+        "carbs_g": 6.4,
+        "fat_g": 0.1
+      },
+      "aliases": ["かぶ", "蕪", "japanese turnip", "turnip", "kabu turnip"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "napa cabbage",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 16,
+        "protein_g": 1.2,
+        "carbs_g": 3.2,
+        "fat_g": 0.2
+      },
+      "aliases": ["白菜", "hakusai", "chinese cabbage", "nappa cabbage", "celery cabbage"],
+      "common_units": ["cup", "piece", "gram"]
+    },
+    {
+      "canonical_name": "japanese eggplant",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 0.9,
+        "carbs_g": 5.7,
+        "fat_g": 0.2
+      },
+      "aliases": ["なす", "茄子", "nasu", "asian eggplant", "japanese aubergine"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "edamame",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 122,
+        "protein_g": 11.9,
+        "carbs_g": 8.9,
+        "fat_g": 5.2
+      },
+      "aliases": ["枝豆", "green soybeans", "edamame beans", "young soybeans"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "gobo",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 72,
+        "protein_g": 1.5,
+        "carbs_g": 17.3,
+        "fat_g": 0.2
+      },
+      "aliases": ["ごぼう", "牛蒡", "burdock root", "gobou", "burdock"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "renkon",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 74,
+        "protein_g": 1.6,
+        "carbs_g": 17.2,
+        "fat_g": 0.1
+      },
+      "aliases": ["蓮根", "lotus root", "renkon root", "rengon", "lotus rhizome"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "kabocha squash",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 34,
+        "protein_g": 1.6,
+        "carbs_g": 8.1,
+        "fat_g": 0.1
+      },
+      "aliases": ["かぼちゃ", "南瓜", "japanese pumpkin", "kabotcha", "kabocha"],
+      "common_units": ["cup", "piece", "gram"]
+    },
+    {
+      "canonical_name": "satsumaimo",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 86,
+        "protein_g": 1.6,
+        "carbs_g": 20.1,
+        "fat_g": 0.1
+      },
+      "aliases": ["さつまいも", "薩摩芋", "japanese sweet potato", "satsuma imo", "purple sweet potato"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "shiso leaf",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 37,
+        "protein_g": 3.9,
+        "carbs_g": 7.5,
+        "fat_g": 0.1
+      },
+      "aliases": ["大葉", "紫蘇", "perilla", "shiso", "ooba", "japanese basil"],
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "myoga",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 12,
+        "protein_g": 0.9,
+        "carbs_g": 2.6,
+        "fat_g": 0.1
+      },
+      "aliases": ["茗荷", "japanese ginger", "myouga", "ginger bud"],
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "negi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 28,
+        "protein_g": 1.9,
+        "carbs_g": 6.5,
+        "fat_g": 0.1
+      },
+      "aliases": ["葱", "ねぎ", "japanese leek", "welsh onion", "long onion"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "tokyo negi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 34,
+        "protein_g": 1.5,
+        "carbs_g": 7.8,
+        "fat_g": 0.2
+      },
+      "aliases": ["根深葱", "nebuka negi", "tokyo green onion", "naganegi"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "takuan",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 27,
+        "protein_g": 0.6,
+        "carbs_g": 6.3,
+        "fat_g": 0.1
+      },
+      "aliases": ["たくあん", "沢庵", "pickled daikon", "takuwan", "yellow radish pickle"],
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "umeboshi",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 33,
+        "protein_g": 0.9,
+        "carbs_g": 7.9,
+        "fat_g": 0.5
+      },
+      "aliases": ["梅干し", "pickled plum", "umeboshi plum", "salt plum", "ume"],
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "beni shoga",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 27,
+        "protein_g": 0.6,
+        "carbs_g": 6.1,
+        "fat_g": 0.2
+      },
+      "aliases": ["紅生姜", "pickled red ginger", "benishoga", "red pickled ginger"],
+      "common_units": ["gram"]
+    },
+    {
+      "canonical_name": "gari",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 51,
+        "protein_g": 0.4,
+        "carbs_g": 12.5,
+        "fat_g": 0.1
+      },
+      "aliases": ["ガリ", "pickled ginger", "sushi ginger", "ginger pickle"],
+      "common_units": ["gram"]
+    },
+    {
+      "canonical_name": "takenoko",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 27,
+        "protein_g": 2.6,
+        "carbs_g": 5.2,
+        "fat_g": 0.3
+      },
+      "aliases": ["筍", "竹の子", "bamboo shoots", "bamboo shoot", "takenoko shoots"],
+      "common_units": ["cup", "piece", "gram"]
+    },
+    {
+      "canonical_name": "mizuna",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 2.2,
+        "carbs_g": 4.1,
+        "fat_g": 0.5
+      },
+      "aliases": ["水菜", "japanese mustard greens", "kyona", "potherb mustard", "mizna"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "komatsuna",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 14,
+        "protein_g": 1.5,
+        "carbs_g": 2.4,
+        "fat_g": 0.2
+      },
+      "aliases": ["小松菜", "japanese mustard spinach", "komatsna", "komatsu greens"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "shimeji mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 2.3,
+        "carbs_g": 3.7,
+        "fat_g": 0.4
+      },
+      "aliases": ["しめじ", "shimmeji", "beech mushroom", "white beech mushroom"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "enoki mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 37,
+        "protein_g": 2.7,
+        "carbs_g": 7.8,
+        "fat_g": 0.3
+      },
+      "aliases": ["えのき", "榎茸", "enokitake", "golden needle mushroom", "enoki"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "shiitake mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 34,
+        "protein_g": 2.2,
+        "carbs_g": 6.8,
+        "fat_g": 0.5
+      },
+      "aliases": ["椎茸", "しいたけ", "shiitake", "shitake", "black forest mushroom"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "dried shiitake mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 296,
+        "protein_g": 9.6,
+        "carbs_g": 75.4,
+        "fat_g": 1.0
+      },
+      "aliases": ["干し椎茸", "hoshi shiitake", "dried shitake", "dried black mushroom"],
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "maitake mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 31,
+        "protein_g": 1.9,
+        "carbs_g": 6.9,
+        "fat_g": 0.2
+      },
+      "aliases": ["舞茸", "まいたけ", "hen of the woods", "dancing mushroom", "maitaki"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "nameko mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 15,
+        "protein_g": 1.7,
+        "carbs_g": 3.3,
+        "fat_g": 0.2
+      },
+      "aliases": ["なめこ", "滑子", "butterscotch mushroom", "nameko"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "matsutake mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 2.0,
+        "carbs_g": 4.9,
+        "fat_g": 0.4
+      },
+      "aliases": ["松茸", "まつたけ", "pine mushroom", "matsutaki"],
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "kyuri",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 15,
+        "protein_g": 0.7,
+        "carbs_g": 3.6,
+        "fat_g": 0.1
+      },
+      "aliases": ["きゅうり", "胡瓜", "japanese cucumber", "kyuuri", "cucumber"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "shishito pepper",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 27,
+        "protein_g": 1.9,
+        "carbs_g": 5.7,
+        "fat_g": 0.2
+      },
+      "aliases": ["ししとう", "獅子唐", "shishito", "shishitou", "japanese pepper"],
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "nira",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 21,
+        "protein_g": 1.7,
+        "carbs_g": 4.0,
+        "fat_g": 0.3
+      },
+      "aliases": ["ニラ", "韮", "chinese chives", "garlic chives", "nila"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "taro root",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 112,
+        "protein_g": 1.5,
+        "carbs_g": 26.5,
+        "fat_g": 0.2
+      },
+      "aliases": ["里芋", "さといも", "satoimo", "taro", "eddoe"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "yamaimo",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 65,
+        "protein_g": 2.2,
+        "carbs_g": 14.6,
+        "fat_g": 0.3
+      },
+      "aliases": ["山芋", "やまいも", "mountain yam", "japanese yam", "nagaimo"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "nagaimo",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 65,
+        "protein_g": 2.2,
+        "carbs_g": 14.6,
+        "fat_g": 0.3
+      },
+      "aliases": ["長芋", "ながいも", "chinese yam", "long yam", "nagimo"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "horenso",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 2.9,
+        "carbs_g": 3.6,
+        "fat_g": 0.4
+      },
+      "aliases": ["ほうれん草", "菠薐草", "japanese spinach", "horenso spinach", "spinach"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "moyashi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 30,
+        "protein_g": 3.0,
+        "carbs_g": 5.9,
+        "fat_g": 0.2
+      },
+      "aliases": ["もやし", "bean sprouts", "soybean sprouts", "moyasi"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "ninnjin",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 41,
+        "protein_g": 0.9,
+        "carbs_g": 9.6,
+        "fat_g": 0.2
+      },
+      "aliases": ["にんじん", "人参", "japanese carrot", "ninjin", "carrot"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "tamanegi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 1.1,
+        "carbs_g": 9.3,
+        "fat_g": 0.1
+      },
+      "aliases": ["玉ねぎ", "たまねぎ", "onion", "japanese onion", "tamanegi onion"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "hakusai no tsukemono",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 16,
+        "protein_g": 1.2,
+        "carbs_g": 3.5,
+        "fat_g": 0.1
+      },
+      "aliases": ["白菜の漬物", "pickled napa cabbage", "hakusai pickle", "chinese cabbage pickle"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "shibazuke",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 1.0,
+        "carbs_g": 5.8,
+        "fat_g": 0.2
+      },
+      "aliases": ["柴漬け", "しばづけ", "eggplant pickle", "kyoto pickle", "purple pickle"],
+      "common_units": ["gram"]
+    },
+    {
+      "canonical_name": "fukujinzuke",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 46,
+        "protein_g": 1.1,
+        "carbs_g": 10.8,
+        "fat_g": 0.3
+      },
+      "aliases": ["福神漬", "ふくじんづけ", "seven gods pickle", "curry pickle"],
+      "common_units": ["gram"]
+    },
+    {
+      "canonical_name": "asazuke",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 0.8,
+        "carbs_g": 4.2,
+        "fat_g": 0.1
+      },
+      "aliases": ["浅漬け", "あさづけ", "lightly pickled vegetables", "quick pickle"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "nukazuke",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 1.0,
+        "carbs_g": 5.1,
+        "fat_g": 0.2
+      },
+      "aliases": ["ぬか漬け", "糠漬け", "rice bran pickle", "nuka pickle"],
+      "common_units": ["gram"]
+    },
+    {
+      "canonical_name": "shiozuke",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 19,
+        "protein_g": 0.9,
+        "carbs_g": 4.4,
+        "fat_g": 0.1
+      },
+      "aliases": ["塩漬け", "しおづけ", "salt pickle", "salted vegetables"],
+      "common_units": ["gram"]
+    },
+    {
+      "canonical_name": "menma",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 2.1,
+        "carbs_g": 6.9,
+        "fat_g": 0.4
+      },
+      "aliases": ["メンマ", "shinachiku", "fermented bamboo shoots", "menma bamboo"],
+      "common_units": ["gram"]
+    },
+    {
+      "canonical_name": "nozawana",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 19,
+        "protein_g": 1.6,
+        "carbs_g": 3.8,
+        "fat_g": 0.2
+      },
+      "aliases": ["野沢菜", "のざわな", "nozawana greens", "nozawa greens"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "pickled nozawana",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 24,
+        "protein_g": 1.5,
+        "carbs_g": 5.2,
+        "fat_g": 0.2
+      },
+      "aliases": ["野沢菜漬け", "nozawana zuke", "pickled nozawa greens"],
+      "common_units": ["gram"]
+    },
+    {
+      "canonical_name": "senmaizuke",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 21,
+        "protein_g": 0.7,
+        "carbs_g": 4.9,
+        "fat_g": 0.1
+      },
+      "aliases": ["千枚漬け", "せんまいづけ", "thousand slice pickle", "kyoto turnip pickle"],
+      "common_units": ["gram"]
+    },
+    {
+      "canonical_name": "shungiku",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 2.3,
+        "carbs_g": 3.9,
+        "fat_g": 0.3
+      },
+      "aliases": ["春菊", "しゅんぎく", "chrysanthemum greens", "garland chrysanthemum", "crown daisy"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "mitsuba",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 13,
+        "protein_g": 1.3,
+        "carbs_g": 2.5,
+        "fat_g": 0.2
+      },
+      "aliases": ["三つ葉", "みつば", "japanese parsley", "trefoil", "japanese wild parsley"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "kinoko moriawase",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 2.1,
+        "carbs_g": 5.2,
+        "fat_g": 0.3
+      },
+      "aliases": ["きのこ盛り合わせ", "mixed mushrooms", "assorted mushrooms", "kinoko mix"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "warabi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 21,
+        "protein_g": 0.4,
+        "carbs_g": 5.5,
+        "fat_g": 0.1
+      },
+      "aliases": ["わらび", "蕨", "bracken", "fiddlehead fern", "warabi fern"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "zenmai",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 29,
+        "protein_g": 0.5,
+        "carbs_g": 7.2,
+        "fat_g": 0.2
+      },
+      "aliases": ["ぜんまい", "薇", "royal fern", "osmunda", "zenmai fern"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "fuki",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 11,
+        "protein_g": 0.3,
+        "carbs_g": 2.9,
+        "fat_g": 0.1
+      },
+      "aliases": ["蕗", "ふき", "butterbur", "japanese butterbur", "fuki stalk"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "tsukushi",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 38,
+        "protein_g": 4.5,
+        "carbs_g": 7.0,
+        "fat_g": 0.3
+      },
+      "aliases": ["つくし", "土筆", "horsetail shoots", "field horsetail", "scouring rush"],
+      "common_units": ["gram"]
+    },
+    {
+      "canonical_name": "udo",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 0.7,
+        "carbs_g": 4.3,
+        "fat_g": 0.1
+      },
+      "aliases": ["うど", "独活", "udo plant", "japanese spikenard"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "rakkyou",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 118,
+        "protein_g": 1.4,
+        "carbs_g": 28.8,
+        "fat_g": 0.2
+      },
+      "aliases": ["らっきょう", "辣韮", "chinese onion", "rakkyo", "scallion"],
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "pickled rakkyou",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 115,
+        "protein_g": 1.2,
+        "carbs_g": 28.1,
+        "fat_g": 0.2
+      },
+      "aliases": ["らっきょう漬け", "rakkyou zuke", "pickled chinese onion"],
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "kyurizuke",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 16,
+        "protein_g": 0.8,
+        "carbs_g": 3.8,
+        "fat_g": 0.1
+      },
+      "aliases": ["きゅうり漬け", "胡瓜漬け", "pickled cucumber", "japanese cucumber pickle"],
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "iburigakko",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 30,
+        "protein_g": 0.7,
+        "carbs_g": 7.0,
+        "fat_g": 0.1
+      },
+      "aliases": ["いぶりがっこ", "smoked daikon pickle", "akita pickle", "iburi gakko"],
+      "common_units": ["piece", "gram"]
+    }
+  ]
+}

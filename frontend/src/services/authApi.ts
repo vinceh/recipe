@@ -18,8 +18,18 @@ export const authApi = {
   },
 
   async signup(credentials: SignupData): Promise<ApiResponse<AuthResponse>> {
-    const { data } = await apiClient.post('/auth/sign_up', { user: credentials })
-    return data
+    const response = await apiClient.post('/auth', { user: credentials })
+
+    // Extract JWT token from Authorization header (same as login)
+    const token = response.headers.authorization || response.headers.Authorization
+
+    return {
+      ...response.data,
+      data: {
+        ...response.data.data,
+        token: token
+      }
+    }
   },
 
   async logout(): Promise<ApiResponse<{ message: string }>> {
@@ -32,8 +42,24 @@ export const authApi = {
     return data
   },
 
-  async getFavorites(): Promise<ApiResponse<{ recipes: Recipe[] }>> {
+  async getFavorites(): Promise<ApiResponse<{ favorites: Recipe[] }>> {
     const { data } = await apiClient.get('/users/me/favorites')
+    return data
+  },
+
+  async requestPasswordReset(email: string): Promise<ApiResponse<{ message: string }>> {
+    const { data } = await apiClient.post('/auth/password', { user: { email } })
+    return data
+  },
+
+  async resetPassword(token: string, password: string): Promise<ApiResponse<{ message: string }>> {
+    const { data } = await apiClient.put('/auth/password', {
+      user: {
+        reset_password_token: token,
+        password: password,
+        password_confirmation: password
+      }
+    })
     return data
   }
 }

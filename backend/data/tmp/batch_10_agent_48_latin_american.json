@@ -1,0 +1,1574 @@
+{
+  "batch": 10,
+  "agent": 48,
+  "category": "latin_american",
+  "ingredients": [
+    {
+      "canonical_name": "dried ancho chile",
+      "category": "spice",
+      "per_100g": {
+        "calories": 281,
+        "protein_g": 11.9,
+        "carbs_g": 51.4,
+        "fat_g": 8.2,
+        "fiber_g": 28.7
+      },
+      "aliases": [
+        { "alias": "chile ancho", "language": "es", "type": "native" },
+        { "alias": "dried poblano", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "chile", "grams": 17 },
+        { "unit": "cup chopped", "grams": 75 }
+      ]
+    },
+    {
+      "canonical_name": "dried guajillo chile",
+      "category": "spice",
+      "per_100g": {
+        "calories": 280,
+        "protein_g": 12.0,
+        "carbs_g": 50.8,
+        "fat_g": 8.5,
+        "fiber_g": 27.9
+      },
+      "aliases": [
+        { "alias": "chile guajillo", "language": "es", "type": "native" },
+        { "alias": "guajillo pepper", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "chile", "grams": 12 },
+        { "unit": "cup chopped", "grams": 70 }
+      ]
+    },
+    {
+      "canonical_name": "dried pasilla chile",
+      "category": "spice",
+      "per_100g": {
+        "calories": 283,
+        "protein_g": 11.5,
+        "carbs_g": 52.1,
+        "fat_g": 8.0,
+        "fiber_g": 29.3
+      },
+      "aliases": [
+        { "alias": "chile pasilla", "language": "es", "type": "native" },
+        { "alias": "chile negro", "language": "es", "type": "synonym" },
+        { "alias": "pasilla negro", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "chile", "grams": 15 },
+        { "unit": "cup chopped", "grams": 72 }
+      ]
+    },
+    {
+      "canonical_name": "chipotle chile in adobo",
+      "category": "spice",
+      "per_100g": {
+        "calories": 108,
+        "protein_g": 3.2,
+        "carbs_g": 18.5,
+        "fat_g": 3.1,
+        "fiber_g": 5.2
+      },
+      "aliases": [
+        { "alias": "chipotle en adobo", "language": "es", "type": "native" },
+        { "alias": "chipotle pepper", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "chile", "grams": 25 },
+        { "unit": "can", "grams": 210 },
+        { "unit": "tablespoon", "grams": 18 }
+      ]
+    },
+    {
+      "canonical_name": "dried chile de arbol",
+      "category": "spice",
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 11.8,
+        "carbs_g": 56.6,
+        "fat_g": 7.8,
+        "fiber_g": 30.2
+      },
+      "aliases": [
+        { "alias": "chile de arbol", "language": "es", "type": "native" },
+        { "alias": "arbol chile", "language": "en", "type": "synonym" },
+        { "alias": "bird's beak chile", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "chile", "grams": 2 },
+        { "unit": "tablespoon", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "dried mulato chile",
+      "category": "spice",
+      "per_100g": {
+        "calories": 279,
+        "protein_g": 11.7,
+        "carbs_g": 51.2,
+        "fat_g": 8.1,
+        "fiber_g": 28.5
+      },
+      "aliases": [
+        { "alias": "chile mulato", "language": "es", "type": "native" },
+        { "alias": "mulato pepper", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "chile", "grams": 18 },
+        { "unit": "cup chopped", "grams": 76 }
+      ]
+    },
+    {
+      "canonical_name": "dried morita chile",
+      "category": "spice",
+      "per_100g": {
+        "calories": 282,
+        "protein_g": 12.3,
+        "carbs_g": 50.4,
+        "fat_g": 8.6,
+        "fiber_g": 28.1
+      },
+      "aliases": [
+        { "alias": "chile morita", "language": "es", "type": "native" },
+        { "alias": "morita chipotle", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "chile", "grams": 3 },
+        { "unit": "tablespoon", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "masa harina",
+      "category": "grain",
+      "per_100g": {
+        "calories": 361,
+        "protein_g": 8.7,
+        "carbs_g": 76.9,
+        "fat_g": 3.9,
+        "fiber_g": 7.3
+      },
+      "aliases": [
+        { "alias": "corn flour for tortillas", "language": "en", "type": "synonym" },
+        { "alias": "nixtamalized corn flour", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 114 },
+        { "unit": "tablespoon", "grams": 7 }
+      ]
+    },
+    {
+      "canonical_name": "fresh epazote",
+      "category": "herb",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 3.8,
+        "carbs_g": 4.7,
+        "fat_g": 0.6,
+        "fiber_g": 3.8
+      },
+      "aliases": [
+        { "alias": "epazote", "language": "es", "type": "native" },
+        { "alias": "wormseed", "language": "en", "type": "synonym" },
+        { "alias": "mexican tea", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "bunch", "grams": 30 },
+        { "unit": "tablespoon chopped", "grams": 4 },
+        { "unit": "sprig", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "fresh hoja santa",
+      "category": "herb",
+      "per_100g": {
+        "calories": 28,
+        "protein_g": 2.9,
+        "carbs_g": 5.1,
+        "fat_g": 0.5,
+        "fiber_g": 3.2
+      },
+      "aliases": [
+        { "alias": "hoja santa", "language": "es", "type": "native" },
+        { "alias": "mexican pepperleaf", "language": "en", "type": "synonym" },
+        { "alias": "root beer plant", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "leaf", "grams": 15 },
+        { "unit": "cup chopped", "grams": 45 }
+      ]
+    },
+    {
+      "canonical_name": "achiote seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 385,
+        "protein_g": 9.1,
+        "carbs_g": 51.2,
+        "fat_g": 14.6,
+        "fiber_g": 15.8
+      },
+      "aliases": [
+        { "alias": "annatto seeds", "language": "en", "type": "synonym" },
+        { "alias": "achiote", "language": "es", "type": "native" },
+        { "alias": "annatto", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "tablespoon", "grams": 9 },
+        { "unit": "teaspoon", "grams": 3 }
+      ]
+    },
+    {
+      "canonical_name": "piloncillo",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 380,
+        "protein_g": 0.1,
+        "carbs_g": 98.0,
+        "fat_g": 0.0,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        { "alias": "panela", "language": "es", "type": "synonym" },
+        { "alias": "mexican brown sugar cone", "language": "en", "type": "synonym" },
+        { "alias": "panocha", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cone", "grams": 90 },
+        { "unit": "tablespoon grated", "grams": 12 },
+        { "unit": "cup grated", "grams": 180 }
+      ]
+    },
+    {
+      "canonical_name": "fresh loroco buds",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 36,
+        "protein_g": 3.2,
+        "carbs_g": 6.8,
+        "fat_g": 0.4,
+        "fiber_g": 2.9
+      },
+      "aliases": [
+        { "alias": "loroco", "language": "es", "type": "native" },
+        { "alias": "quilete", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 85 },
+        { "unit": "tablespoon", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "pepitoria",
+      "category": "spice",
+      "per_100g": {
+        "calories": 446,
+        "protein_g": 18.6,
+        "carbs_g": 53.8,
+        "fat_g": 15.4,
+        "fiber_g": 6.2
+      },
+      "aliases": [
+        { "alias": "ground pumpkin seed spice", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "tablespoon", "grams": 8 },
+        { "unit": "cup", "grams": 120 }
+      ]
+    },
+    {
+      "canonical_name": "achiote paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 312,
+        "protein_g": 5.8,
+        "carbs_g": 42.5,
+        "fat_g": 13.2,
+        "fiber_g": 8.4
+      },
+      "aliases": [
+        { "alias": "recado rojo", "language": "es", "type": "synonym" },
+        { "alias": "annatto paste", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "tablespoon", "grams": 15 },
+        { "unit": "package", "grams": 100 }
+      ]
+    },
+    {
+      "canonical_name": "fresh scotch bonnet pepper",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 2.0,
+        "carbs_g": 8.8,
+        "fat_g": 0.2,
+        "fiber_g": 1.5
+      },
+      "aliases": [
+        { "alias": "scotch bonnet", "language": "en", "type": "native" },
+        { "alias": "bonney pepper", "language": "en", "type": "synonym" },
+        { "alias": "caribbean red pepper", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "pepper", "grams": 15 },
+        { "unit": "tablespoon minced", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "whole allspice berries",
+      "category": "spice",
+      "per_100g": {
+        "calories": 263,
+        "protein_g": 6.1,
+        "carbs_g": 72.1,
+        "fat_g": 8.7,
+        "fiber_g": 21.6
+      },
+      "aliases": [
+        { "alias": "pimento", "language": "en", "type": "synonym" },
+        { "alias": "jamaica", "language": "es", "type": "native" },
+        { "alias": "pimienta gorda", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "teaspoon", "grams": 3 },
+        { "unit": "tablespoon", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "sofrito base",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 68,
+        "protein_g": 1.8,
+        "carbs_g": 9.2,
+        "fat_g": 3.1,
+        "fiber_g": 2.4
+      },
+      "aliases": [
+        { "alias": "sofrito", "language": "es", "type": "native" },
+        { "alias": "recaito", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "tablespoon", "grams": 15 },
+        { "unit": "cup", "grams": 240 }
+      ]
+    },
+    {
+      "canonical_name": "fresh aji amarillo",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 36,
+        "protein_g": 1.9,
+        "carbs_g": 7.8,
+        "fat_g": 0.3,
+        "fiber_g": 1.8
+      },
+      "aliases": [
+        { "alias": "aji amarillo", "language": "es", "type": "native" },
+        { "alias": "yellow peruvian pepper", "language": "en", "type": "synonym" },
+        { "alias": "yellow chili", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "pepper", "grams": 25 },
+        { "unit": "tablespoon chopped", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "aji amarillo paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 112,
+        "protein_g": 2.4,
+        "carbs_g": 18.5,
+        "fat_g": 4.2,
+        "fiber_g": 3.1
+      },
+      "aliases": [
+        { "alias": "pasta de aji amarillo", "language": "es", "type": "native" },
+        { "alias": "yellow pepper paste", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "tablespoon", "grams": 15 },
+        { "unit": "jar", "grams": 225 }
+      ]
+    },
+    {
+      "canonical_name": "fresh rocoto pepper",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 38,
+        "protein_g": 2.1,
+        "carbs_g": 8.2,
+        "fat_g": 0.3,
+        "fiber_g": 1.9
+      },
+      "aliases": [
+        { "alias": "rocoto", "language": "es", "type": "native" },
+        { "alias": "manzano pepper", "language": "es", "type": "synonym" },
+        { "alias": "locoto", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "pepper", "grams": 35 },
+        { "unit": "tablespoon chopped", "grams": 14 }
+      ]
+    },
+    {
+      "canonical_name": "fresh huacatay",
+      "category": "herb",
+      "per_100g": {
+        "calories": 34,
+        "protein_g": 3.5,
+        "carbs_g": 5.2,
+        "fat_g": 0.7,
+        "fiber_g": 3.4
+      },
+      "aliases": [
+        { "alias": "huacatay", "language": "es", "type": "native" },
+        { "alias": "peruvian black mint", "language": "en", "type": "synonym" },
+        { "alias": "black mint", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "bunch", "grams": 25 },
+        { "unit": "tablespoon chopped", "grams": 5 },
+        { "unit": "cup chopped", "grams": 40 }
+      ]
+    },
+    {
+      "canonical_name": "quinoa white",
+      "category": "grain",
+      "per_100g": {
+        "calories": 368,
+        "protein_g": 14.1,
+        "carbs_g": 64.2,
+        "fat_g": 6.1,
+        "fiber_g": 7.0
+      },
+      "aliases": [
+        { "alias": "quinoa", "language": "en", "type": "synonym" },
+        { "alias": "quinua", "language": "es", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 170 },
+        { "unit": "tablespoon", "grams": 11 }
+      ]
+    },
+    {
+      "canonical_name": "quinoa red",
+      "category": "grain",
+      "per_100g": {
+        "calories": 370,
+        "protein_g": 14.3,
+        "carbs_g": 64.8,
+        "fat_g": 6.2,
+        "fiber_g": 7.2
+      },
+      "aliases": [
+        { "alias": "red quinoa", "language": "en", "type": "synonym" },
+        { "alias": "quinua roja", "language": "es", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 170 },
+        { "unit": "tablespoon", "grams": 11 }
+      ]
+    },
+    {
+      "canonical_name": "quinoa black",
+      "category": "grain",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 14.5,
+        "carbs_g": 65.0,
+        "fat_g": 6.3,
+        "fiber_g": 7.4
+      },
+      "aliases": [
+        { "alias": "black quinoa", "language": "en", "type": "synonym" },
+        { "alias": "quinua negra", "language": "es", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 170 },
+        { "unit": "tablespoon", "grams": 11 }
+      ]
+    },
+    {
+      "canonical_name": "dende oil",
+      "category": "oil",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        { "alias": "palm oil", "language": "en", "type": "synonym" },
+        { "alias": "red palm oil", "language": "en", "type": "synonym" },
+        { "alias": "azeite de dende", "language": "pt", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tablespoon", "grams": 14 },
+        { "unit": "cup", "grams": 218 }
+      ]
+    },
+    {
+      "canonical_name": "fresh cassava root",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 160,
+        "protein_g": 1.4,
+        "carbs_g": 38.1,
+        "fat_g": 0.3,
+        "fiber_g": 1.8
+      },
+      "aliases": [
+        { "alias": "yuca", "language": "es", "type": "synonym" },
+        { "alias": "mandioca", "language": "pt", "type": "native" },
+        { "alias": "manioc", "language": "en", "type": "synonym" },
+        { "alias": "cassava", "language": "en", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "root", "grams": 500 },
+        { "unit": "cup cubed", "grams": 206 },
+        { "unit": "pound", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "cassava flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 1.2,
+        "carbs_g": 88.0,
+        "fat_g": 0.4,
+        "fiber_g": 2.0
+      },
+      "aliases": [
+        { "alias": "tapioca flour", "language": "en", "type": "synonym" },
+        { "alias": "yuca flour", "language": "en", "type": "synonym" },
+        { "alias": "farinha de mandioca", "language": "pt", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 120 },
+        { "unit": "tablespoon", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "tucupi sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 45,
+        "protein_g": 0.8,
+        "carbs_g": 10.2,
+        "fat_g": 0.2,
+        "fiber_g": 0.5
+      },
+      "aliases": [
+        { "alias": "tucupi", "language": "pt", "type": "native" },
+        { "alias": "yellow manioc juice", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 240 },
+        { "unit": "tablespoon", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "fresh jambu leaves",
+      "category": "herb",
+      "per_100g": {
+        "calories": 28,
+        "protein_g": 2.8,
+        "carbs_g": 5.3,
+        "fat_g": 0.4,
+        "fiber_g": 3.1
+      },
+      "aliases": [
+        { "alias": "jambu", "language": "pt", "type": "native" },
+        { "alias": "para cress", "language": "en", "type": "synonym" },
+        { "alias": "toothache plant", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup leaves", "grams": 30 },
+        { "unit": "tablespoon chopped", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "purple corn",
+      "category": "grain",
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 8.9,
+        "carbs_g": 74.3,
+        "fat_g": 4.7,
+        "fiber_g": 7.3
+      },
+      "aliases": [
+        { "alias": "maiz morado", "language": "es", "type": "native" },
+        { "alias": "purple maize", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup kernels", "grams": 160 },
+        { "unit": "cob", "grams": 225 }
+      ]
+    },
+    {
+      "canonical_name": "cancha corn",
+      "category": "snack",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 9.5,
+        "carbs_g": 76.8,
+        "fat_g": 5.2,
+        "fiber_g": 8.1
+      },
+      "aliases": [
+        { "alias": "cancha", "language": "es", "type": "native" },
+        { "alias": "toasted corn", "language": "en", "type": "synonym" },
+        { "alias": "canchita", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 125 },
+        { "unit": "tablespoon", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "kiwicha",
+      "category": "grain",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.6,
+        "carbs_g": 65.3,
+        "fat_g": 7.0,
+        "fiber_g": 6.7
+      },
+      "aliases": [
+        { "alias": "amaranth", "language": "en", "type": "synonym" },
+        { "alias": "kiwicha", "language": "es", "type": "native" },
+        { "alias": "peruvian amaranth", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 193 },
+        { "unit": "tablespoon", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "dried hibiscus flowers",
+      "category": "herb",
+      "per_100g": {
+        "calories": 49,
+        "protein_g": 0.9,
+        "carbs_g": 11.8,
+        "fat_g": 0.6,
+        "fiber_g": 12.0
+      },
+      "aliases": [
+        { "alias": "jamaica flowers", "language": "en", "type": "synonym" },
+        { "alias": "flor de jamaica", "language": "es", "type": "native" },
+        { "alias": "sorrel", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 28 },
+        { "unit": "tablespoon", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "fresh culantro",
+      "category": "herb",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 2.3,
+        "carbs_g": 3.7,
+        "fat_g": 0.5,
+        "fiber_g": 2.8
+      },
+      "aliases": [
+        { "alias": "culantro", "language": "es", "type": "native" },
+        { "alias": "recao", "language": "es", "type": "synonym" },
+        { "alias": "mexican coriander", "language": "en", "type": "synonym" },
+        { "alias": "long coriander", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "leaf", "grams": 4 },
+        { "unit": "tablespoon chopped", "grams": 6 },
+        { "unit": "cup chopped", "grams": 48 }
+      ]
+    },
+    {
+      "canonical_name": "fresh aji panca",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 34,
+        "protein_g": 1.8,
+        "carbs_g": 7.4,
+        "fat_g": 0.3,
+        "fiber_g": 1.7
+      },
+      "aliases": [
+        { "alias": "aji panca", "language": "es", "type": "native" },
+        { "alias": "panca pepper", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "pepper", "grams": 28 },
+        { "unit": "tablespoon chopped", "grams": 13 }
+      ]
+    },
+    {
+      "canonical_name": "aji panca paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 108,
+        "protein_g": 2.2,
+        "carbs_g": 17.8,
+        "fat_g": 3.9,
+        "fiber_g": 2.8
+      },
+      "aliases": [
+        { "alias": "pasta de aji panca", "language": "es", "type": "native" },
+        { "alias": "panca paste", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "tablespoon", "grams": 15 },
+        { "unit": "jar", "grams": 225 }
+      ]
+    },
+    {
+      "canonical_name": "fresh aji limo",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 2.0,
+        "carbs_g": 8.9,
+        "fat_g": 0.4,
+        "fiber_g": 1.5
+      },
+      "aliases": [
+        { "alias": "aji limo", "language": "es", "type": "native" },
+        { "alias": "lemon drop pepper", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "pepper", "grams": 12 },
+        { "unit": "tablespoon minced", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "fresh mexican oregano",
+      "category": "herb",
+      "per_100g": {
+        "calories": 265,
+        "protein_g": 9.0,
+        "carbs_g": 68.9,
+        "fat_g": 4.3,
+        "fiber_g": 42.5
+      },
+      "aliases": [
+        { "alias": "oregano mexicano", "language": "es", "type": "native" },
+        { "alias": "mexican oregano", "language": "en", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tablespoon chopped", "grams": 3 },
+        { "unit": "sprig", "grams": 2 }
+      ]
+    },
+    {
+      "canonical_name": "fresh calabaza squash",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 26,
+        "protein_g": 1.0,
+        "carbs_g": 6.5,
+        "fat_g": 0.1,
+        "fiber_g": 0.5
+      },
+      "aliases": [
+        { "alias": "calabaza", "language": "es", "type": "native" },
+        { "alias": "west indian pumpkin", "language": "en", "type": "synonym" },
+        { "alias": "caribbean pumpkin", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup cubed", "grams": 140 },
+        { "unit": "pound", "grams": 454 }
+      ]
+    },
+    {
+      "canonical_name": "fresh chayote",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 19,
+        "protein_g": 0.8,
+        "carbs_g": 4.5,
+        "fat_g": 0.1,
+        "fiber_g": 1.7
+      },
+      "aliases": [
+        { "alias": "chayote", "language": "es", "type": "native" },
+        { "alias": "mirliton", "language": "en", "type": "synonym" },
+        { "alias": "vegetable pear", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "chayote", "grams": 203 },
+        { "unit": "cup cubed", "grams": 132 }
+      ]
+    },
+    {
+      "canonical_name": "fresh tomatillos",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 1.0,
+        "carbs_g": 5.8,
+        "fat_g": 1.0,
+        "fiber_g": 1.9
+      },
+      "aliases": [
+        { "alias": "tomatillo", "language": "es", "type": "native" },
+        { "alias": "green tomato", "language": "en", "type": "synonym" },
+        { "alias": "husk tomato", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "tomatillo", "grams": 34 },
+        { "unit": "cup chopped", "grams": 132 }
+      ]
+    },
+    {
+      "canonical_name": "fresh nopales",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 16,
+        "protein_g": 1.4,
+        "carbs_g": 3.3,
+        "fat_g": 0.1,
+        "fiber_g": 2.2
+      },
+      "aliases": [
+        { "alias": "nopales", "language": "es", "type": "native" },
+        { "alias": "cactus pads", "language": "en", "type": "synonym" },
+        { "alias": "prickly pear cactus", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "pad", "grams": 100 },
+        { "unit": "cup sliced", "grams": 86 }
+      ]
+    },
+    {
+      "canonical_name": "fresh jicama",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 38,
+        "protein_g": 0.7,
+        "carbs_g": 8.8,
+        "fat_g": 0.1,
+        "fiber_g": 4.9
+      },
+      "aliases": [
+        { "alias": "jicama", "language": "es", "type": "native" },
+        { "alias": "mexican turnip", "language": "en", "type": "synonym" },
+        { "alias": "yam bean", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup sliced", "grams": 120 },
+        { "unit": "medium", "grams": 450 }
+      ]
+    },
+    {
+      "canonical_name": "mexican crema",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 228,
+        "protein_g": 2.9,
+        "carbs_g": 3.8,
+        "fat_g": 22.8,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        { "alias": "crema mexicana", "language": "es", "type": "native" },
+        { "alias": "mexican sour cream", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "tablespoon", "grams": 15 },
+        { "unit": "cup", "grams": 240 }
+      ]
+    },
+    {
+      "canonical_name": "queso fresco",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 321,
+        "protein_g": 21.4,
+        "carbs_g": 4.0,
+        "fat_g": 25.0,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        { "alias": "queso fresco", "language": "es", "type": "native" },
+        { "alias": "fresh cheese", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup crumbled", "grams": 113 },
+        { "unit": "ounce", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "queso cotija",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 28.4,
+        "carbs_g": 3.1,
+        "fat_g": 30.0,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        { "alias": "queso cotija", "language": "es", "type": "native" },
+        { "alias": "cotija cheese", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup crumbled", "grams": 113 },
+        { "unit": "ounce", "grams": 28 },
+        { "unit": "tablespoon grated", "grams": 7 }
+      ]
+    },
+    {
+      "canonical_name": "queso oaxaca",
+      "category": "dairy",
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 22.6,
+        "carbs_g": 2.8,
+        "fat_g": 24.5,
+        "fiber_g": 0.0
+      },
+      "aliases": [
+        { "alias": "queso oaxaca", "language": "es", "type": "native" },
+        { "alias": "oaxaca cheese", "language": "en", "type": "synonym" },
+        { "alias": "quesillo", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup shredded", "grams": 113 },
+        { "unit": "ounce", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "fresh plantains",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 122,
+        "protein_g": 1.3,
+        "carbs_g": 31.9,
+        "fat_g": 0.4,
+        "fiber_g": 2.3
+      },
+      "aliases": [
+        { "alias": "platano", "language": "es", "type": "native" },
+        { "alias": "plantain", "language": "en", "type": "native" },
+        { "alias": "cooking banana", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "plantain", "grams": 179 },
+        { "unit": "cup sliced", "grams": 148 }
+      ]
+    },
+    {
+      "canonical_name": "fresh yuca leaves",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 54,
+        "protein_g": 7.6,
+        "carbs_g": 7.2,
+        "fat_g": 0.5,
+        "fiber_g": 3.7
+      },
+      "aliases": [
+        { "alias": "cassava leaves", "language": "en", "type": "synonym" },
+        { "alias": "hojas de yuca", "language": "es", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "cup chopped", "grams": 70 },
+        { "unit": "tablespoon chopped", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "fresh malanga",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 98,
+        "protein_g": 1.9,
+        "carbs_g": 22.3,
+        "fat_g": 0.2,
+        "fiber_g": 3.2
+      },
+      "aliases": [
+        { "alias": "malanga", "language": "es", "type": "native" },
+        { "alias": "taro root", "language": "en", "type": "synonym" },
+        { "alias": "yautia", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup cubed", "grams": 132 },
+        { "unit": "root", "grams": 200 }
+      ]
+    },
+    {
+      "canonical_name": "fresh yuca bitter",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 159,
+        "protein_g": 1.4,
+        "carbs_g": 38.0,
+        "fat_g": 0.3,
+        "fiber_g": 1.8
+      },
+      "aliases": [
+        { "alias": "bitter cassava", "language": "en", "type": "synonym" },
+        { "alias": "mandioca brava", "language": "pt", "type": "native" },
+        { "alias": "yuca amarga", "language": "es", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "root", "grams": 500 },
+        { "unit": "cup cubed", "grams": 206 }
+      ]
+    },
+    {
+      "canonical_name": "fresh hearts of palm",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 28,
+        "protein_g": 2.5,
+        "carbs_g": 4.6,
+        "fat_g": 0.6,
+        "fiber_g": 1.5
+      },
+      "aliases": [
+        { "alias": "palmito", "language": "es", "type": "native" },
+        { "alias": "palm hearts", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup sliced", "grams": 146 },
+        { "unit": "piece", "grams": 33 }
+      ]
+    },
+    {
+      "canonical_name": "fresh tamarind pulp",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 239,
+        "protein_g": 2.8,
+        "carbs_g": 62.5,
+        "fat_g": 0.6,
+        "fiber_g": 5.1
+      },
+      "aliases": [
+        { "alias": "tamarindo", "language": "es", "type": "native" },
+        { "alias": "tamarind", "language": "en", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 120 },
+        { "unit": "tablespoon", "grams": 15 }
+      ]
+    },
+    {
+      "canonical_name": "tamarind paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 247,
+        "protein_g": 2.9,
+        "carbs_g": 64.8,
+        "fat_g": 0.6,
+        "fiber_g": 5.3
+      },
+      "aliases": [
+        { "alias": "pasta de tamarindo", "language": "es", "type": "native" },
+        { "alias": "tamarind concentrate", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "tablespoon", "grams": 20 },
+        { "unit": "jar", "grams": 227 }
+      ]
+    },
+    {
+      "canonical_name": "fresh sacha inchi seeds",
+      "category": "seed",
+      "per_100g": {
+        "calories": 553,
+        "protein_g": 27.0,
+        "carbs_g": 8.4,
+        "fat_g": 48.6,
+        "fiber_g": 5.2
+      },
+      "aliases": [
+        { "alias": "sacha inchi", "language": "es", "type": "native" },
+        { "alias": "inca peanut", "language": "en", "type": "synonym" },
+        { "alias": "mountain peanut", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "tablespoon", "grams": 12 },
+        { "unit": "cup", "grams": 140 }
+      ]
+    },
+    {
+      "canonical_name": "fresh maca root",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 325,
+        "protein_g": 10.2,
+        "carbs_g": 71.4,
+        "fat_g": 1.0,
+        "fiber_g": 8.5
+      },
+      "aliases": [
+        { "alias": "maca", "language": "es", "type": "native" },
+        { "alias": "peruvian ginseng", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "root", "grams": 50 },
+        { "unit": "tablespoon powder", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "fresh lucuma fruit",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 99,
+        "protein_g": 1.5,
+        "carbs_g": 25.0,
+        "fat_g": 0.2,
+        "fiber_g": 2.3
+      },
+      "aliases": [
+        { "alias": "lucuma", "language": "es", "type": "native" },
+        { "alias": "lucmo", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "fruit", "grams": 150 },
+        { "unit": "cup pulp", "grams": 180 }
+      ]
+    },
+    {
+      "canonical_name": "lucuma powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 329,
+        "protein_g": 4.0,
+        "carbs_g": 83.2,
+        "fat_g": 0.7,
+        "fiber_g": 7.6
+      },
+      "aliases": [
+        { "alias": "dried lucuma", "language": "en", "type": "synonym" },
+        { "alias": "lucuma en polvo", "language": "es", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "tablespoon", "grams": 8 },
+        { "unit": "cup", "grams": 120 }
+      ]
+    },
+    {
+      "canonical_name": "fresh cherimoya",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 75,
+        "protein_g": 1.6,
+        "carbs_g": 17.7,
+        "fat_g": 0.7,
+        "fiber_g": 3.0
+      },
+      "aliases": [
+        { "alias": "chirimoya", "language": "es", "type": "native" },
+        { "alias": "custard apple", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "fruit", "grams": 270 },
+        { "unit": "cup cubed", "grams": 160 }
+      ]
+    },
+    {
+      "canonical_name": "fresh guanabana",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 66,
+        "protein_g": 1.0,
+        "carbs_g": 16.8,
+        "fat_g": 0.3,
+        "fiber_g": 3.3
+      },
+      "aliases": [
+        { "alias": "guanabana", "language": "es", "type": "native" },
+        { "alias": "soursop", "language": "en", "type": "synonym" },
+        { "alias": "graviola", "language": "pt", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "fruit", "grams": 625 },
+        { "unit": "cup pulp", "grams": 225 }
+      ]
+    },
+    {
+      "canonical_name": "fresh guava",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 68,
+        "protein_g": 2.6,
+        "carbs_g": 14.3,
+        "fat_g": 1.0,
+        "fiber_g": 5.4
+      },
+      "aliases": [
+        { "alias": "guayaba", "language": "es", "type": "native" },
+        { "alias": "guava", "language": "en", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "fruit", "grams": 90 },
+        { "unit": "cup cubed", "grams": 165 }
+      ]
+    },
+    {
+      "canonical_name": "guava paste",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 278,
+        "protein_g": 0.5,
+        "carbs_g": 72.3,
+        "fat_g": 0.2,
+        "fiber_g": 4.8
+      },
+      "aliases": [
+        { "alias": "pasta de guayaba", "language": "es", "type": "native" },
+        { "alias": "guava jelly", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "slice", "grams": 30 },
+        { "unit": "tablespoon", "grams": 20 }
+      ]
+    },
+    {
+      "canonical_name": "fresh passion fruit",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 97,
+        "protein_g": 2.2,
+        "carbs_g": 23.4,
+        "fat_g": 0.7,
+        "fiber_g": 10.4
+      },
+      "aliases": [
+        { "alias": "maracuya", "language": "es", "type": "native" },
+        { "alias": "passion fruit", "language": "en", "type": "native" },
+        { "alias": "granadilla", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "fruit", "grams": 18 },
+        { "unit": "cup pulp", "grams": 236 }
+      ]
+    },
+    {
+      "canonical_name": "fresh papaya",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 0.5,
+        "carbs_g": 11.0,
+        "fat_g": 0.3,
+        "fiber_g": 1.7
+      },
+      "aliases": [
+        { "alias": "papaya", "language": "es", "type": "native" },
+        { "alias": "pawpaw", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup cubed", "grams": 140 },
+        { "unit": "fruit", "grams": 500 }
+      ]
+    },
+    {
+      "canonical_name": "dried papaya seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 457,
+        "protein_g": 22.5,
+        "carbs_g": 38.1,
+        "fat_g": 24.3,
+        "fiber_g": 19.2
+      },
+      "aliases": [
+        { "alias": "semillas de papaya", "language": "es", "type": "native" },
+        { "alias": "papaya seeds", "language": "en", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "teaspoon", "grams": 3 },
+        { "unit": "tablespoon", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "fresh mamey sapote",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 124,
+        "protein_g": 1.5,
+        "carbs_g": 32.1,
+        "fat_g": 0.5,
+        "fiber_g": 5.4
+      },
+      "aliases": [
+        { "alias": "mamey", "language": "es", "type": "native" },
+        { "alias": "mamey sapote", "language": "en", "type": "native" },
+        { "alias": "zapote", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "fruit", "grams": 720 },
+        { "unit": "cup cubed", "grams": 175 }
+      ]
+    },
+    {
+      "canonical_name": "fresh cacao nibs",
+      "category": "snack",
+      "per_100g": {
+        "calories": 567,
+        "protein_g": 12.9,
+        "carbs_g": 37.7,
+        "fat_g": 43.1,
+        "fiber_g": 26.2
+      },
+      "aliases": [
+        { "alias": "cacao nibs", "language": "en", "type": "native" },
+        { "alias": "cocoa nibs", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "tablespoon", "grams": 10 },
+        { "unit": "cup", "grams": 140 }
+      ]
+    },
+    {
+      "canonical_name": "fresh oca tubers",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 61,
+        "protein_g": 1.1,
+        "carbs_g": 13.6,
+        "fat_g": 0.2,
+        "fiber_g": 1.9
+      },
+      "aliases": [
+        { "alias": "oca", "language": "es", "type": "native" },
+        { "alias": "new zealand yam", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "tuber", "grams": 25 },
+        { "unit": "cup", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "fresh ulluco tubers",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 65,
+        "protein_g": 1.5,
+        "carbs_g": 14.2,
+        "fat_g": 0.3,
+        "fiber_g": 2.1
+      },
+      "aliases": [
+        { "alias": "ulluco", "language": "es", "type": "native" },
+        { "alias": "olluco", "language": "es", "type": "synonym" },
+        { "alias": "papa lisa", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "tuber", "grams": 30 },
+        { "unit": "cup", "grams": 160 }
+      ]
+    },
+    {
+      "canonical_name": "fresh achira root",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 155,
+        "protein_g": 1.0,
+        "carbs_g": 37.8,
+        "fat_g": 0.2,
+        "fiber_g": 2.5
+      },
+      "aliases": [
+        { "alias": "achira", "language": "es", "type": "native" },
+        { "alias": "canna root", "language": "en", "type": "synonym" },
+        { "alias": "queensland arrowroot", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "root", "grams": 180 },
+        { "unit": "cup cubed", "grams": 140 }
+      ]
+    },
+    {
+      "canonical_name": "fresh pacay fruit",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 96,
+        "protein_g": 1.8,
+        "carbs_g": 23.4,
+        "fat_g": 0.4,
+        "fiber_g": 4.2
+      },
+      "aliases": [
+        { "alias": "pacay", "language": "es", "type": "native" },
+        { "alias": "ice cream bean", "language": "en", "type": "synonym" },
+        { "alias": "guaba", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "pod", "grams": 120 },
+        { "unit": "cup pulp", "grams": 140 }
+      ]
+    },
+    {
+      "canonical_name": "fresh camu camu",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 17,
+        "protein_g": 0.5,
+        "carbs_g": 4.7,
+        "fat_g": 0.2,
+        "fiber_g": 1.1
+      },
+      "aliases": [
+        { "alias": "camu camu", "language": "es", "type": "native" },
+        { "alias": "camucamu", "language": "es", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "fruit", "grams": 12 },
+        { "unit": "cup", "grams": 145 }
+      ]
+    },
+    {
+      "canonical_name": "camu camu powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 57,
+        "protein_g": 1.7,
+        "carbs_g": 15.6,
+        "fat_g": 0.7,
+        "fiber_g": 3.7
+      },
+      "aliases": [
+        { "alias": "dried camu camu", "language": "en", "type": "synonym" },
+        { "alias": "camu camu en polvo", "language": "es", "type": "native" }
+      ],
+      "common_units": [
+        { "unit": "teaspoon", "grams": 3 },
+        { "unit": "tablespoon", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "fresh aguaymanto",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 53,
+        "protein_g": 1.9,
+        "carbs_g": 11.2,
+        "fat_g": 0.7,
+        "fiber_g": 3.0
+      },
+      "aliases": [
+        { "alias": "aguaymanto", "language": "es", "type": "native" },
+        { "alias": "golden berry", "language": "en", "type": "synonym" },
+        { "alias": "cape gooseberry", "language": "en", "type": "synonym" },
+        { "alias": "physalis", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "berry", "grams": 5 },
+        { "unit": "cup", "grams": 140 }
+      ]
+    },
+    {
+      "canonical_name": "fresh yacon root",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 54,
+        "protein_g": 0.4,
+        "carbs_g": 13.2,
+        "fat_g": 0.1,
+        "fiber_g": 1.0
+      },
+      "aliases": [
+        { "alias": "yacon", "language": "es", "type": "native" },
+        { "alias": "peruvian ground apple", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "root", "grams": 200 },
+        { "unit": "cup sliced", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "yacon syrup",
+      "category": "sweetener",
+      "per_100g": {
+        "calories": 267,
+        "protein_g": 0.2,
+        "carbs_g": 69.8,
+        "fat_g": 0.1,
+        "fiber_g": 0.5
+      },
+      "aliases": [
+        { "alias": "jarabe de yacon", "language": "es", "type": "native" },
+        { "alias": "yacon molasses", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "tablespoon", "grams": 21 },
+        { "unit": "cup", "grams": 336 }
+      ]
+    },
+    {
+      "canonical_name": "fresh cochayuyo seaweed",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 4.2,
+        "carbs_g": 9.6,
+        "fat_g": 0.6,
+        "fiber_g": 8.2
+      },
+      "aliases": [
+        { "alias": "cochayuyo", "language": "es", "type": "native" },
+        { "alias": "bull kelp", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "cup rehydrated", "grams": 100 },
+        { "unit": "tablespoon dried", "grams": 5 }
+      ]
+    },
+    {
+      "canonical_name": "fresh merkén spice",
+      "category": "spice",
+      "per_100g": {
+        "calories": 292,
+        "protein_g": 12.5,
+        "carbs_g": 48.7,
+        "fat_g": 9.3,
+        "fiber_g": 27.8
+      },
+      "aliases": [
+        { "alias": "merken", "language": "es", "type": "native" },
+        { "alias": "merkén", "language": "es", "type": "native" },
+        { "alias": "chilean smoked chili", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "teaspoon", "grams": 3 },
+        { "unit": "tablespoon", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "fresh arracacha root",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 96,
+        "protein_g": 0.8,
+        "carbs_g": 23.2,
+        "fat_g": 0.2,
+        "fiber_g": 1.4
+      },
+      "aliases": [
+        { "alias": "arracacha", "language": "es", "type": "native" },
+        { "alias": "apio", "language": "es", "type": "synonym" },
+        { "alias": "peruvian parsnip", "language": "en", "type": "synonym" }
+      ],
+      "common_units": [
+        { "unit": "root", "grams": 150 },
+        { "unit": "cup cubed", "grams": 140 }
+      ]
+    }
+  ]
+}

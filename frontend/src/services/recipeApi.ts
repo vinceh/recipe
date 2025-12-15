@@ -7,7 +7,9 @@ import type {
   Note,
   RecipeFilters,
   ApiResponse,
-  SupportedLanguage
+  SupportedLanguage,
+  Unit,
+  UnitCategory
 } from './types'
 
 export const recipeApi = {
@@ -88,6 +90,16 @@ export const recipeApi = {
 
   async deleteNote(id: number): Promise<ApiResponse<{ deleted: boolean }>> {
     const { data } = await apiClient.delete(`/notes/${id}`)
+    return data
+  },
+
+  async adjustRecipe(recipe: RecipeDetail, prompt: string): Promise<ApiResponse<{ recipe: RecipeDetail }>> {
+    const { data } = await apiClient.post('/ai/adjust_recipe', { recipe, prompt })
+    return data
+  },
+
+  async getUnits(): Promise<ApiResponse<{ units: Unit[], categories: UnitCategory[] }>> {
+    const { data } = await apiClient.get('/units')
     return data
   }
 }

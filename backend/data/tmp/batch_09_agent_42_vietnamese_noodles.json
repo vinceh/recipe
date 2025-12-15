@@ -1,0 +1,1100 @@
+{
+  "batch": 9,
+  "agent": 42,
+  "category": "vietnamese_noodles",
+  "ingredients": [
+    {
+      "canonical_name": "rice vermicelli (bun)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 3.4,
+        "carbs_g": 83.2,
+        "fat_g": 0.6,
+        "fiber_g": 1.6
+      },
+      "aliases": [
+        { "alias": "bun", "language": "vi", "type": "native" },
+        { "alias": "bún", "language": "vi", "type": "native" },
+        { "alias": "rice vermicelli", "language": "en", "type": "translation" },
+        { "alias": "ブン", "language": "ja", "type": "translation" },
+        { "alias": "번", "language": "ko", "type": "translation" },
+        { "alias": "米粉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup cooked", "grams": 175 },
+        { "unit": "bundle dry", "grams": 60 },
+        { "unit": "serving dry", "grams": 75 }
+      ]
+    },
+    {
+      "canonical_name": "pho noodles (fresh)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 135,
+        "protein_g": 2.0,
+        "carbs_g": 30.5,
+        "fat_g": 0.3,
+        "fiber_g": 0.8
+      },
+      "aliases": [
+        { "alias": "banh pho tuoi", "language": "vi", "type": "native" },
+        { "alias": "bánh phở tươi", "language": "vi", "type": "native" },
+        { "alias": "fresh pho noodles", "language": "en", "type": "translation" },
+        { "alias": "フォー麺", "language": "ja", "type": "translation" },
+        { "alias": "쌀국수", "language": "ko", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving", "grams": 200 },
+        { "unit": "package", "grams": 400 }
+      ]
+    },
+    {
+      "canonical_name": "pho noodles (dried)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 360,
+        "protein_g": 3.5,
+        "carbs_g": 82.0,
+        "fat_g": 0.5,
+        "fiber_g": 1.5
+      },
+      "aliases": [
+        { "alias": "banh pho kho", "language": "vi", "type": "native" },
+        { "alias": "bánh phở khô", "language": "vi", "type": "native" },
+        { "alias": "dried pho noodles", "language": "en", "type": "translation" },
+        { "alias": "乾燥フォー", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "package", "grams": 400 },
+        { "unit": "serving dry", "grams": 75 }
+      ]
+    },
+    {
+      "canonical_name": "banh canh noodles",
+      "category": "grain",
+      "per_100g": {
+        "calories": 140,
+        "protein_g": 2.2,
+        "carbs_g": 31.0,
+        "fat_g": 0.4,
+        "fiber_g": 1.0
+      },
+      "aliases": [
+        { "alias": "banh canh", "language": "vi", "type": "native" },
+        { "alias": "bánh canh", "language": "vi", "type": "native" },
+        { "alias": "thick tapioca noodles", "language": "en", "type": "translation" },
+        { "alias": "バインカン", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving", "grams": 180 },
+        { "unit": "package", "grams": 400 }
+      ]
+    },
+    {
+      "canonical_name": "hu tieu noodles (dried)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 3.2,
+        "carbs_g": 82.5,
+        "fat_g": 0.5,
+        "fiber_g": 1.4
+      },
+      "aliases": [
+        { "alias": "hu tieu", "language": "vi", "type": "native" },
+        { "alias": "hủ tiếu", "language": "vi", "type": "native" },
+        { "alias": "kway teow", "language": "en", "type": "translation" },
+        { "alias": "粿條", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "package", "grams": 400 },
+        { "unit": "serving dry", "grams": 70 }
+      ]
+    },
+    {
+      "canonical_name": "hu tieu noodles (fresh)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 138,
+        "protein_g": 2.1,
+        "carbs_g": 30.8,
+        "fat_g": 0.4,
+        "fiber_g": 0.9
+      },
+      "aliases": [
+        { "alias": "hu tieu tuoi", "language": "vi", "type": "native" },
+        { "alias": "hủ tiếu tươi", "language": "vi", "type": "native" },
+        { "alias": "fresh kway teow", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving", "grams": 200 },
+        { "unit": "package", "grams": 500 }
+      ]
+    },
+    {
+      "canonical_name": "mi quang noodles",
+      "category": "grain",
+      "per_100g": {
+        "calories": 145,
+        "protein_g": 3.8,
+        "carbs_g": 30.0,
+        "fat_g": 0.7,
+        "fiber_g": 1.2
+      },
+      "aliases": [
+        { "alias": "mi quang", "language": "vi", "type": "native" },
+        { "alias": "mì quảng", "language": "vi", "type": "native" },
+        { "alias": "quang noodles", "language": "en", "type": "translation" },
+        { "alias": "ミークアン", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving", "grams": 150 },
+        { "unit": "package", "grams": 400 }
+      ]
+    },
+    {
+      "canonical_name": "rice paper (spring roll)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 333,
+        "protein_g": 0.6,
+        "carbs_g": 83.1,
+        "fat_g": 0.3,
+        "fiber_g": 2.8
+      },
+      "aliases": [
+        { "alias": "banh trang", "language": "vi", "type": "native" },
+        { "alias": "bánh tráng", "language": "vi", "type": "native" },
+        { "alias": "rice paper", "language": "en", "type": "translation" },
+        { "alias": "ライスペーパー", "language": "ja", "type": "translation" },
+        { "alias": "라이스페이퍼", "language": "ko", "type": "translation" },
+        { "alias": "春捲皮", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "sheet", "grams": 3 },
+        { "unit": "package", "grams": 300 }
+      ]
+    },
+    {
+      "canonical_name": "rice paper (thick, for grilling)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 340,
+        "protein_g": 0.8,
+        "carbs_g": 84.0,
+        "fat_g": 0.4,
+        "fiber_g": 3.0
+      },
+      "aliases": [
+        { "alias": "banh trang nuong", "language": "vi", "type": "native" },
+        { "alias": "bánh tráng nướng", "language": "vi", "type": "native" },
+        { "alias": "grilled rice paper", "language": "en", "type": "translation" },
+        { "alias": "vietnamese pizza", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "sheet", "grams": 5 },
+        { "unit": "package", "grams": 200 }
+      ]
+    },
+    {
+      "canonical_name": "rice paper (sesame)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 2.5,
+        "carbs_g": 80.0,
+        "fat_g": 2.8,
+        "fiber_g": 3.5
+      },
+      "aliases": [
+        { "alias": "banh trang me", "language": "vi", "type": "native" },
+        { "alias": "bánh tráng mè", "language": "vi", "type": "native" },
+        { "alias": "sesame rice paper", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "sheet", "grams": 4 },
+        { "unit": "package", "grams": 250 }
+      ]
+    },
+    {
+      "canonical_name": "rice paper (fresh, soft)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 135,
+        "protein_g": 0.4,
+        "carbs_g": 33.0,
+        "fat_g": 0.2,
+        "fiber_g": 1.0
+      },
+      "aliases": [
+        { "alias": "banh trang tuoi", "language": "vi", "type": "native" },
+        { "alias": "bánh tráng tươi", "language": "vi", "type": "native" },
+        { "alias": "fresh rice paper", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "sheet", "grams": 8 },
+        { "unit": "package", "grams": 200 }
+      ]
+    },
+    {
+      "canonical_name": "banh cuon (steamed rice rolls)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 130,
+        "protein_g": 2.0,
+        "carbs_g": 29.0,
+        "fat_g": 0.5,
+        "fiber_g": 0.8
+      },
+      "aliases": [
+        { "alias": "banh cuon", "language": "vi", "type": "native" },
+        { "alias": "bánh cuốn", "language": "vi", "type": "native" },
+        { "alias": "steamed rice rolls", "language": "en", "type": "translation" },
+        { "alias": "バインクオン", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "roll", "grams": 40 },
+        { "unit": "serving", "grams": 200 }
+      ]
+    },
+    {
+      "canonical_name": "banh uot (wet rice paper)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 132,
+        "protein_g": 1.8,
+        "carbs_g": 29.5,
+        "fat_g": 0.4,
+        "fiber_g": 0.7
+      },
+      "aliases": [
+        { "alias": "banh uot", "language": "vi", "type": "native" },
+        { "alias": "bánh ướt", "language": "vi", "type": "native" },
+        { "alias": "wet rice paper", "language": "en", "type": "translation" },
+        { "alias": "steamed rice sheet", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "sheet", "grams": 50 },
+        { "unit": "serving", "grams": 200 }
+      ]
+    },
+    {
+      "canonical_name": "banh bot loc (tapioca dumplings)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 155,
+        "protein_g": 3.5,
+        "carbs_g": 32.0,
+        "fat_g": 1.2,
+        "fiber_g": 1.0
+      },
+      "aliases": [
+        { "alias": "banh bot loc", "language": "vi", "type": "native" },
+        { "alias": "bánh bột lọc", "language": "vi", "type": "native" },
+        { "alias": "tapioca dumplings", "language": "en", "type": "translation" },
+        { "alias": "clear shrimp dumplings", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "dumpling", "grams": 25 },
+        { "unit": "serving", "grams": 150 }
+      ]
+    },
+    {
+      "canonical_name": "mi vang (yellow egg noodles)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 368,
+        "protein_g": 11.0,
+        "carbs_g": 72.0,
+        "fat_g": 2.5,
+        "fiber_g": 2.8
+      },
+      "aliases": [
+        { "alias": "mi vang", "language": "vi", "type": "native" },
+        { "alias": "mì vàng", "language": "vi", "type": "native" },
+        { "alias": "yellow egg noodles", "language": "en", "type": "translation" },
+        { "alias": "卵麺", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving dry", "grams": 80 },
+        { "unit": "package", "grams": 400 }
+      ]
+    },
+    {
+      "canonical_name": "mi trung (egg noodles, fresh)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 158,
+        "protein_g": 5.0,
+        "carbs_g": 30.0,
+        "fat_g": 1.5,
+        "fiber_g": 1.5
+      },
+      "aliases": [
+        { "alias": "mi trung", "language": "vi", "type": "native" },
+        { "alias": "mì trứng", "language": "vi", "type": "native" },
+        { "alias": "fresh egg noodles", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving", "grams": 180 },
+        { "unit": "package", "grams": 400 }
+      ]
+    },
+    {
+      "canonical_name": "tapioca pearls (small)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 0.2,
+        "carbs_g": 88.7,
+        "fat_g": 0.0,
+        "fiber_g": 0.9
+      },
+      "aliases": [
+        { "alias": "bot san day", "language": "vi", "type": "native" },
+        { "alias": "bột sắn dây", "language": "vi", "type": "native" },
+        { "alias": "tapioca pearls", "language": "en", "type": "translation" },
+        { "alias": "sago", "language": "en", "type": "translation" },
+        { "alias": "タピオカパール", "language": "ja", "type": "translation" },
+        { "alias": "珍珠粉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup dry", "grams": 152 },
+        { "unit": "tablespoon", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "tapioca starch",
+      "category": "grain",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 0.2,
+        "carbs_g": 88.7,
+        "fat_g": 0.0,
+        "fiber_g": 0.9
+      },
+      "aliases": [
+        { "alias": "bot nang", "language": "vi", "type": "native" },
+        { "alias": "bột năng", "language": "vi", "type": "native" },
+        { "alias": "tapioca starch", "language": "en", "type": "translation" },
+        { "alias": "tapioca flour", "language": "en", "type": "translation" },
+        { "alias": "タピオカ粉", "language": "ja", "type": "translation" },
+        { "alias": "木薯粉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 120 },
+        { "unit": "tablespoon", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "mung bean starch",
+      "category": "grain",
+      "per_100g": {
+        "calories": 351,
+        "protein_g": 0.1,
+        "carbs_g": 87.5,
+        "fat_g": 0.1,
+        "fiber_g": 0.5
+      },
+      "aliases": [
+        { "alias": "bot dau xanh", "language": "vi", "type": "native" },
+        { "alias": "bột đậu xanh", "language": "vi", "type": "native" },
+        { "alias": "mung bean starch", "language": "en", "type": "translation" },
+        { "alias": "green bean starch", "language": "en", "type": "translation" },
+        { "alias": "緑豆澱粉", "language": "ja", "type": "translation" },
+        { "alias": "綠豆粉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 125 },
+        { "unit": "tablespoon", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "cellophane noodles (mung bean)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 351,
+        "protein_g": 0.2,
+        "carbs_g": 86.0,
+        "fat_g": 0.1,
+        "fiber_g": 0.5
+      },
+      "aliases": [
+        { "alias": "mien", "language": "vi", "type": "native" },
+        { "alias": "miến", "language": "vi", "type": "native" },
+        { "alias": "glass noodles", "language": "en", "type": "translation" },
+        { "alias": "cellophane noodles", "language": "en", "type": "translation" },
+        { "alias": "bean thread noodles", "language": "en", "type": "translation" },
+        { "alias": "春雨", "language": "ja", "type": "translation" },
+        { "alias": "당면", "language": "ko", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "bundle dry", "grams": 50 },
+        { "unit": "cup cooked", "grams": 190 }
+      ]
+    },
+    {
+      "canonical_name": "rice stick noodles (thin)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 362,
+        "protein_g": 3.3,
+        "carbs_g": 83.5,
+        "fat_g": 0.5,
+        "fiber_g": 1.5
+      },
+      "aliases": [
+        { "alias": "banh pho nho", "language": "vi", "type": "native" },
+        { "alias": "bánh phở nhỏ", "language": "vi", "type": "native" },
+        { "alias": "thin rice sticks", "language": "en", "type": "translation" },
+        { "alias": "rice sticks", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "package", "grams": 400 },
+        { "unit": "serving dry", "grams": 75 }
+      ]
+    },
+    {
+      "canonical_name": "rice stick noodles (medium)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 361,
+        "protein_g": 3.4,
+        "carbs_g": 83.0,
+        "fat_g": 0.6,
+        "fiber_g": 1.6
+      },
+      "aliases": [
+        { "alias": "banh pho vua", "language": "vi", "type": "native" },
+        { "alias": "bánh phở vừa", "language": "vi", "type": "native" },
+        { "alias": "medium rice sticks", "language": "en", "type": "translation" },
+        { "alias": "pad thai noodles", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "package", "grams": 400 },
+        { "unit": "serving dry", "grams": 75 }
+      ]
+    },
+    {
+      "canonical_name": "rice stick noodles (wide)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 360,
+        "protein_g": 3.5,
+        "carbs_g": 82.8,
+        "fat_g": 0.5,
+        "fiber_g": 1.5
+      },
+      "aliases": [
+        { "alias": "banh pho lon", "language": "vi", "type": "native" },
+        { "alias": "bánh phở lớn", "language": "vi", "type": "native" },
+        { "alias": "wide rice sticks", "language": "en", "type": "translation" },
+        { "alias": "flat rice noodles", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "package", "grams": 400 },
+        { "unit": "serving dry", "grams": 80 }
+      ]
+    },
+    {
+      "canonical_name": "banh da (pandan rice paper)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 142,
+        "protein_g": 2.3,
+        "carbs_g": 31.0,
+        "fat_g": 0.6,
+        "fiber_g": 1.2
+      },
+      "aliases": [
+        { "alias": "banh da", "language": "vi", "type": "native" },
+        { "alias": "bánh đa", "language": "vi", "type": "native" },
+        { "alias": "pandan rice crackers", "language": "en", "type": "translation" },
+        { "alias": "green rice paper", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "sheet", "grams": 15 },
+        { "unit": "serving", "grams": 60 }
+      ]
+    },
+    {
+      "canonical_name": "banh hoi (woven rice vermicelli)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 138,
+        "protein_g": 2.0,
+        "carbs_g": 31.0,
+        "fat_g": 0.4,
+        "fiber_g": 0.9
+      },
+      "aliases": [
+        { "alias": "banh hoi", "language": "vi", "type": "native" },
+        { "alias": "bánh hỏi", "language": "vi", "type": "native" },
+        { "alias": "woven rice vermicelli", "language": "en", "type": "translation" },
+        { "alias": "rice vermicelli mat", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "mat", "grams": 80 },
+        { "unit": "serving", "grams": 120 }
+      ]
+    },
+    {
+      "canonical_name": "instant pho noodles",
+      "category": "grain",
+      "per_100g": {
+        "calories": 380,
+        "protein_g": 8.5,
+        "carbs_g": 76.0,
+        "fat_g": 3.5,
+        "fiber_g": 2.0
+      },
+      "aliases": [
+        { "alias": "pho an lien", "language": "vi", "type": "native" },
+        { "alias": "phở ăn liền", "language": "vi", "type": "native" },
+        { "alias": "instant pho", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "package", "grams": 75 },
+        { "unit": "serving", "grams": 75 }
+      ]
+    },
+    {
+      "canonical_name": "banh pho ga (chicken pho noodles)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 138,
+        "protein_g": 2.2,
+        "carbs_g": 30.5,
+        "fat_g": 0.4,
+        "fiber_g": 0.8
+      },
+      "aliases": [
+        { "alias": "banh pho ga", "language": "vi", "type": "native" },
+        { "alias": "bánh phở gà", "language": "vi", "type": "native" },
+        { "alias": "chicken pho noodles", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving", "grams": 200 },
+        { "unit": "package", "grams": 500 }
+      ]
+    },
+    {
+      "canonical_name": "mi goi (instant egg noodles)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 436,
+        "protein_g": 10.0,
+        "carbs_g": 64.0,
+        "fat_g": 14.5,
+        "fiber_g": 2.5
+      },
+      "aliases": [
+        { "alias": "mi goi", "language": "vi", "type": "native" },
+        { "alias": "mì gói", "language": "vi", "type": "native" },
+        { "alias": "instant noodles", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "package", "grams": 75 },
+        { "unit": "serving", "grams": 75 }
+      ]
+    },
+    {
+      "canonical_name": "mi chay (vegetarian noodles)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 11.5,
+        "carbs_g": 71.0,
+        "fat_g": 2.2,
+        "fiber_g": 3.0
+      },
+      "aliases": [
+        { "alias": "mi chay", "language": "vi", "type": "native" },
+        { "alias": "mì chay", "language": "vi", "type": "native" },
+        { "alias": "vegetarian noodles", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving dry", "grams": 80 },
+        { "unit": "package", "grams": 400 }
+      ]
+    },
+    {
+      "canonical_name": "banh trang phoi suong (dew rice paper)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 335,
+        "protein_g": 0.7,
+        "carbs_g": 83.5,
+        "fat_g": 0.3,
+        "fiber_g": 2.5
+      },
+      "aliases": [
+        { "alias": "banh trang phoi suong", "language": "vi", "type": "native" },
+        { "alias": "bánh tráng phơi sương", "language": "vi", "type": "native" },
+        { "alias": "dew rice paper", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "sheet", "grams": 3 },
+        { "unit": "package", "grams": 300 }
+      ]
+    },
+    {
+      "canonical_name": "banh trang tron (mixed rice paper)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 338,
+        "protein_g": 1.0,
+        "carbs_g": 83.0,
+        "fat_g": 0.5,
+        "fiber_g": 2.8
+      },
+      "aliases": [
+        { "alias": "banh trang tron", "language": "vi", "type": "native" },
+        { "alias": "bánh tráng trộn", "language": "vi", "type": "native" },
+        { "alias": "mixed rice paper snack", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving", "grams": 50 },
+        { "unit": "package", "grams": 200 }
+      ]
+    },
+    {
+      "canonical_name": "banh trang cuon (rolling rice paper)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 332,
+        "protein_g": 0.6,
+        "carbs_g": 83.0,
+        "fat_g": 0.3,
+        "fiber_g": 2.7
+      },
+      "aliases": [
+        { "alias": "banh trang cuon", "language": "vi", "type": "native" },
+        { "alias": "bánh tráng cuốn", "language": "vi", "type": "native" },
+        { "alias": "rolling rice paper", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "sheet", "grams": 3 },
+        { "unit": "package", "grams": 400 }
+      ]
+    },
+    {
+      "canonical_name": "bun tuoi (fresh rice vermicelli)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 140,
+        "protein_g": 1.8,
+        "carbs_g": 32.0,
+        "fat_g": 0.3,
+        "fiber_g": 0.8
+      },
+      "aliases": [
+        { "alias": "bun tuoi", "language": "vi", "type": "native" },
+        { "alias": "bún tươi", "language": "vi", "type": "native" },
+        { "alias": "fresh rice vermicelli", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving", "grams": 175 },
+        { "unit": "package", "grams": 500 }
+      ]
+    },
+    {
+      "canonical_name": "bun kho (dried rice vermicelli)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 3.4,
+        "carbs_g": 83.2,
+        "fat_g": 0.6,
+        "fiber_g": 1.6
+      },
+      "aliases": [
+        { "alias": "bun kho", "language": "vi", "type": "native" },
+        { "alias": "bún khô", "language": "vi", "type": "native" },
+        { "alias": "dried rice vermicelli", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "bundle dry", "grams": 60 },
+        { "unit": "package", "grams": 400 }
+      ]
+    },
+    {
+      "canonical_name": "bun gao (rice noodles)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 363,
+        "protein_g": 3.5,
+        "carbs_g": 83.0,
+        "fat_g": 0.5,
+        "fiber_g": 1.5
+      },
+      "aliases": [
+        { "alias": "bun gao", "language": "vi", "type": "native" },
+        { "alias": "bún gạo", "language": "vi", "type": "native" },
+        { "alias": "rice noodles", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving dry", "grams": 75 },
+        { "unit": "package", "grams": 400 }
+      ]
+    },
+    {
+      "canonical_name": "banh canh bot loc (tapioca thick noodles)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 143,
+        "protein_g": 2.0,
+        "carbs_g": 32.5,
+        "fat_g": 0.3,
+        "fiber_g": 1.1
+      },
+      "aliases": [
+        { "alias": "banh canh bot loc", "language": "vi", "type": "native" },
+        { "alias": "bánh canh bột lọc", "language": "vi", "type": "native" },
+        { "alias": "tapioca thick noodles", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving", "grams": 180 },
+        { "unit": "package", "grams": 400 }
+      ]
+    },
+    {
+      "canonical_name": "banh canh cua (crab thick noodles)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 141,
+        "protein_g": 2.1,
+        "carbs_g": 31.5,
+        "fat_g": 0.4,
+        "fiber_g": 1.0
+      },
+      "aliases": [
+        { "alias": "banh canh cua", "language": "vi", "type": "native" },
+        { "alias": "bánh canh cua", "language": "vi", "type": "native" },
+        { "alias": "crab thick noodles", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving", "grams": 180 },
+        { "unit": "package", "grams": 400 }
+      ]
+    },
+    {
+      "canonical_name": "tapioca flour (refined)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 360,
+        "protein_g": 0.2,
+        "carbs_g": 89.0,
+        "fat_g": 0.0,
+        "fiber_g": 1.0
+      },
+      "aliases": [
+        { "alias": "bot nang tinh che", "language": "vi", "type": "native" },
+        { "alias": "bột năng tinh chế", "language": "vi", "type": "native" },
+        { "alias": "refined tapioca flour", "language": "en", "type": "translation" },
+        { "alias": "cassava starch", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 120 },
+        { "unit": "tablespoon", "grams": 8 }
+      ]
+    },
+    {
+      "canonical_name": "sweet potato starch",
+      "category": "grain",
+      "per_100g": {
+        "calories": 357,
+        "protein_g": 0.3,
+        "carbs_g": 88.2,
+        "fat_g": 0.1,
+        "fiber_g": 1.2
+      },
+      "aliases": [
+        { "alias": "bot khoai lang", "language": "vi", "type": "native" },
+        { "alias": "bột khoai lang", "language": "vi", "type": "native" },
+        { "alias": "sweet potato starch", "language": "en", "type": "translation" },
+        { "alias": "サツマイモ澱粉", "language": "ja", "type": "translation" },
+        { "alias": "고구마전분", "language": "ko", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 128 },
+        { "unit": "tablespoon", "grams": 9 }
+      ]
+    },
+    {
+      "canonical_name": "rice flour (regular)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 366,
+        "protein_g": 5.9,
+        "carbs_g": 80.1,
+        "fat_g": 1.4,
+        "fiber_g": 2.4
+      },
+      "aliases": [
+        { "alias": "bot gao", "language": "vi", "type": "native" },
+        { "alias": "bột gạo", "language": "vi", "type": "native" },
+        { "alias": "rice flour", "language": "en", "type": "translation" },
+        { "alias": "米粉", "language": "ja", "type": "translation" },
+        { "alias": "쌀가루", "language": "ko", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 158 },
+        { "unit": "tablespoon", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "glutinous rice flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 370,
+        "protein_g": 6.2,
+        "carbs_g": 81.0,
+        "fat_g": 1.3,
+        "fiber_g": 2.5
+      },
+      "aliases": [
+        { "alias": "bot nep", "language": "vi", "type": "native" },
+        { "alias": "bột nếp", "language": "vi", "type": "native" },
+        { "alias": "glutinous rice flour", "language": "en", "type": "translation" },
+        { "alias": "sweet rice flour", "language": "en", "type": "translation" },
+        { "alias": "もち粉", "language": "ja", "type": "translation" },
+        { "alias": "糯米粉", "language": "zh", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup", "grams": 160 },
+        { "unit": "tablespoon", "grams": 10 }
+      ]
+    },
+    {
+      "canonical_name": "banh pho tuoi dai (wide fresh pho noodles)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 136,
+        "protein_g": 2.0,
+        "carbs_g": 30.8,
+        "fat_g": 0.3,
+        "fiber_g": 0.8
+      },
+      "aliases": [
+        { "alias": "banh pho tuoi dai", "language": "vi", "type": "native" },
+        { "alias": "bánh phở tươi dài", "language": "vi", "type": "native" },
+        { "alias": "wide fresh pho noodles", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving", "grams": 220 },
+        { "unit": "package", "grams": 500 }
+      ]
+    },
+    {
+      "canonical_name": "banh pho tuoi nho (thin fresh pho noodles)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 134,
+        "protein_g": 2.0,
+        "carbs_g": 30.3,
+        "fat_g": 0.3,
+        "fiber_g": 0.7
+      },
+      "aliases": [
+        { "alias": "banh pho tuoi nho", "language": "vi", "type": "native" },
+        { "alias": "bánh phở tươi nhỏ", "language": "vi", "type": "native" },
+        { "alias": "thin fresh pho noodles", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving", "grams": 180 },
+        { "unit": "package", "grams": 400 }
+      ]
+    },
+    {
+      "canonical_name": "mi udon (udon noodles, vietnamese style)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 148,
+        "protein_g": 4.5,
+        "carbs_g": 30.0,
+        "fat_g": 0.8,
+        "fiber_g": 1.8
+      },
+      "aliases": [
+        { "alias": "mi udon", "language": "vi", "type": "native" },
+        { "alias": "mì udon", "language": "vi", "type": "native" },
+        { "alias": "udon noodles", "language": "en", "type": "translation" },
+        { "alias": "うどん", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving", "grams": 200 },
+        { "unit": "package", "grams": 400 }
+      ]
+    },
+    {
+      "canonical_name": "mi soba (soba noodles, vietnamese style)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 352,
+        "protein_g": 13.5,
+        "carbs_g": 70.0,
+        "fat_g": 2.5,
+        "fiber_g": 4.5
+      },
+      "aliases": [
+        { "alias": "mi soba", "language": "vi", "type": "native" },
+        { "alias": "mì soba", "language": "vi", "type": "native" },
+        { "alias": "soba noodles", "language": "en", "type": "translation" },
+        { "alias": "そば", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving dry", "grams": 85 },
+        { "unit": "package", "grams": 400 }
+      ]
+    },
+    {
+      "canonical_name": "banh trang nem (spring roll wrappers)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 334,
+        "protein_g": 0.7,
+        "carbs_g": 83.2,
+        "fat_g": 0.3,
+        "fiber_g": 2.8
+      },
+      "aliases": [
+        { "alias": "banh trang nem", "language": "vi", "type": "native" },
+        { "alias": "bánh tráng nem", "language": "vi", "type": "native" },
+        { "alias": "spring roll wrappers", "language": "en", "type": "translation" },
+        { "alias": "fried spring roll wrappers", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "sheet", "grams": 3 },
+        { "unit": "package", "grams": 340 }
+      ]
+    },
+    {
+      "canonical_name": "banh trang goi cuon (summer roll wrappers)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 331,
+        "protein_g": 0.6,
+        "carbs_g": 82.8,
+        "fat_g": 0.3,
+        "fiber_g": 2.7
+      },
+      "aliases": [
+        { "alias": "banh trang goi cuon", "language": "vi", "type": "native" },
+        { "alias": "bánh tráng gỏi cuốn", "language": "vi", "type": "native" },
+        { "alias": "summer roll wrappers", "language": "en", "type": "translation" },
+        { "alias": "fresh spring roll wrappers", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "sheet", "grams": 3 },
+        { "unit": "package", "grams": 300 }
+      ]
+    },
+    {
+      "canonical_name": "banh trang rice paper round 22cm",
+      "category": "grain",
+      "per_100g": {
+        "calories": 333,
+        "protein_g": 0.6,
+        "carbs_g": 83.0,
+        "fat_g": 0.3,
+        "fiber_g": 2.8
+      },
+      "aliases": [
+        { "alias": "banh trang 22cm", "language": "vi", "type": "native" },
+        { "alias": "bánh tráng 22cm", "language": "vi", "type": "native" },
+        { "alias": "22cm rice paper", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "sheet", "grams": 3 },
+        { "unit": "package", "grams": 400 }
+      ]
+    },
+    {
+      "canonical_name": "banh trang rice paper round 16cm",
+      "category": "grain",
+      "per_100g": {
+        "calories": 332,
+        "protein_g": 0.6,
+        "carbs_g": 82.9,
+        "fat_g": 0.3,
+        "fiber_g": 2.8
+      },
+      "aliases": [
+        { "alias": "banh trang 16cm", "language": "vi", "type": "native" },
+        { "alias": "bánh tráng 16cm", "language": "vi", "type": "native" },
+        { "alias": "16cm rice paper", "language": "en", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "sheet", "grams": 2 },
+        { "unit": "package", "grams": 300 }
+      ]
+    },
+    {
+      "canonical_name": "bot san day den (black tapioca pearls)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 360,
+        "protein_g": 0.3,
+        "carbs_g": 89.0,
+        "fat_g": 0.1,
+        "fiber_g": 1.0
+      },
+      "aliases": [
+        { "alias": "bot san day den", "language": "vi", "type": "native" },
+        { "alias": "bột sắn dây đen", "language": "vi", "type": "native" },
+        { "alias": "black tapioca pearls", "language": "en", "type": "translation" },
+        { "alias": "boba pearls", "language": "en", "type": "translation" },
+        { "alias": "タピオカパール黒", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cup dry", "grams": 152 },
+        { "unit": "tablespoon", "grams": 12 }
+      ]
+    },
+    {
+      "canonical_name": "mi ramen (ramen noodles)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 10.5,
+        "carbs_g": 73.0,
+        "fat_g": 2.8,
+        "fiber_g": 2.5
+      },
+      "aliases": [
+        { "alias": "mi ramen", "language": "vi", "type": "native" },
+        { "alias": "mì ramen", "language": "vi", "type": "native" },
+        { "alias": "ramen noodles", "language": "en", "type": "translation" },
+        { "alias": "ラーメン", "language": "ja", "type": "translation" },
+        { "alias": "라면", "language": "ko", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving dry", "grams": 80 },
+        { "unit": "package", "grams": 85 }
+      ]
+    },
+    {
+      "canonical_name": "mi spaghetti (spaghetti, vietnamese style)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 371,
+        "protein_g": 13.0,
+        "carbs_g": 74.7,
+        "fat_g": 1.5,
+        "fiber_g": 3.2
+      },
+      "aliases": [
+        { "alias": "mi y", "language": "vi", "type": "native" },
+        { "alias": "mì ý", "language": "vi", "type": "native" },
+        { "alias": "spaghetti", "language": "en", "type": "translation" },
+        { "alias": "スパゲッティ", "language": "ja", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "serving dry", "grams": 85 },
+        { "unit": "package", "grams": 500 }
+      ]
+    }
+  ]
+}

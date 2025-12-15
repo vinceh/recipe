@@ -1,0 +1,1975 @@
+{
+  "batch": 1,
+  "agent": 2,
+  "category": "beef_lamb_game",
+  "generated_at": "2025-12-11T00:00:00Z",
+  "ingredients": [
+    {
+      "canonical_name": "beef ribeye steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 291,
+        "protein_g": 24.0,
+        "carbs_g": 0,
+        "fat_g": 21.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "ribeye", "language": "en", "type": "synonym" },
+        { "alias": "rib eye steak", "language": "en", "type": "synonym" },
+        { "alias": "リブアイステーキ", "language": "ja", "type": "translation" },
+        { "alias": "등심 스테이크", "language": "ko", "type": "translation" },
+        { "alias": "肋眼牛排", "language": "zh-cn", "type": "translation" },
+        { "alias": "肋眼牛排", "language": "zh-tw", "type": "translation" },
+        { "alias": "bistec de costilla", "language": "es", "type": "translation" },
+        { "alias": "entrecôte", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 225 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef sirloin steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 183,
+        "protein_g": 27.0,
+        "carbs_g": 0,
+        "fat_g": 7.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "sirloin", "language": "en", "type": "synonym" },
+        { "alias": "top sirloin", "language": "en", "type": "synonym" },
+        { "alias": "サーロインステーキ", "language": "ja", "type": "translation" },
+        { "alias": "안심 스테이크", "language": "ko", "type": "translation" },
+        { "alias": "西冷牛排", "language": "zh-cn", "type": "translation" },
+        { "alias": "西冷牛排", "language": "zh-tw", "type": "translation" },
+        { "alias": "bistec de solomillo", "language": "es", "type": "translation" },
+        { "alias": "faux-filet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 225 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef tenderloin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 227,
+        "protein_g": 26.0,
+        "carbs_g": 0,
+        "fat_g": 13.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "filet mignon", "language": "en", "type": "synonym" },
+        { "alias": "beef fillet", "language": "en", "type": "synonym" },
+        { "alias": "フィレミニョン", "language": "ja", "type": "translation" },
+        { "alias": "안심", "language": "ko", "type": "translation" },
+        { "alias": "牛柳", "language": "zh-cn", "type": "translation" },
+        { "alias": "牛柳", "language": "zh-tw", "type": "translation" },
+        { "alias": "solomillo", "language": "es", "type": "translation" },
+        { "alias": "filet de boeuf", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 170 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef chuck roast",
+      "category": "protein",
+      "per_100g": {
+        "calories": 211,
+        "protein_g": 23.0,
+        "carbs_g": 0,
+        "fat_g": 13.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chuck roast", "language": "en", "type": "synonym" },
+        { "alias": "chuck steak", "language": "en", "type": "synonym" },
+        { "alias": "チャックロースト", "language": "ja", "type": "translation" },
+        { "alias": "목심", "language": "ko", "type": "translation" },
+        { "alias": "牛肩肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "牛肩肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "asado de paleta", "language": "es", "type": "translation" },
+        { "alias": "paleron", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "roast", "grams": 1360 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef brisket",
+      "category": "protein",
+      "per_100g": {
+        "calories": 282,
+        "protein_g": 19.0,
+        "carbs_g": 0,
+        "fat_g": 22.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "brisket", "language": "en", "type": "synonym" },
+        { "alias": "ブリスケット", "language": "ja", "type": "translation" },
+        { "alias": "양지", "language": "ko", "type": "translation" },
+        { "alias": "牛腩", "language": "zh-cn", "type": "translation" },
+        { "alias": "牛腩", "language": "zh-tw", "type": "translation" },
+        { "alias": "pecho de res", "language": "es", "type": "translation" },
+        { "alias": "poitrine de boeuf", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef flank steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 192,
+        "protein_g": 26.0,
+        "carbs_g": 0,
+        "fat_g": 9.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "flank steak", "language": "en", "type": "synonym" },
+        { "alias": "フランクステーキ", "language": "ja", "type": "translation" },
+        { "alias": "옆구리살", "language": "ko", "type": "translation" },
+        { "alias": "牛腹肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "牛腹肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "arrachera", "language": "es", "type": "translation" },
+        { "alias": "bavette", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 340 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef skirt steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 213,
+        "protein_g": 26.0,
+        "carbs_g": 0,
+        "fat_g": 11.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "skirt steak", "language": "en", "type": "synonym" },
+        { "alias": "スカートステーキ", "language": "ja", "type": "translation" },
+        { "alias": "치마살", "language": "ko", "type": "translation" },
+        { "alias": "横膈膜肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "橫膈膜肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "fajita", "language": "es", "type": "translation" },
+        { "alias": "hampe", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 340 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef short ribs",
+      "category": "protein",
+      "per_100g": {
+        "calories": 312,
+        "protein_g": 18.0,
+        "carbs_g": 0,
+        "fat_g": 26.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "short ribs", "language": "en", "type": "synonym" },
+        { "alias": "flanken", "language": "en", "type": "synonym" },
+        { "alias": "ショートリブ", "language": "ja", "type": "translation" },
+        { "alias": "갈비", "language": "ko", "type": "translation" },
+        { "alias": "牛小排", "language": "zh-cn", "type": "translation" },
+        { "alias": "牛小排", "language": "zh-tw", "type": "translation" },
+        { "alias": "costillas cortas", "language": "es", "type": "translation" },
+        { "alias": "côtes courtes", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "rib", "grams": 85 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef oxtail",
+      "category": "protein",
+      "per_100g": {
+        "calories": 262,
+        "protein_g": 18.0,
+        "carbs_g": 0,
+        "fat_g": 20.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "oxtail", "language": "en", "type": "synonym" },
+        { "alias": "オックステール", "language": "ja", "type": "translation" },
+        { "alias": "꼬리", "language": "ko", "type": "translation" },
+        { "alias": "牛尾", "language": "zh-cn", "type": "translation" },
+        { "alias": "牛尾", "language": "zh-tw", "type": "translation" },
+        { "alias": "rabo de res", "language": "es", "type": "translation" },
+        { "alias": "queue de boeuf", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "piece", "grams": 115 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "ground beef 93% lean",
+      "category": "protein",
+      "per_100g": {
+        "calories": 152,
+        "protein_g": 22.0,
+        "carbs_g": 0,
+        "fat_g": 7.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "extra lean ground beef", "language": "en", "type": "synonym" },
+        { "alias": "93/7 ground beef", "language": "en", "type": "synonym" },
+        { "alias": "牛ひき肉 赤身", "language": "ja", "type": "translation" },
+        { "alias": "소고기 다짐육", "language": "ko", "type": "translation" },
+        { "alias": "瘦牛绞肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "瘦牛絞肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "carne molida magra", "language": "es", "type": "translation" },
+        { "alias": "boeuf haché maigre", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "ground beef 85% lean",
+      "category": "protein",
+      "per_100g": {
+        "calories": 215,
+        "protein_g": 21.0,
+        "carbs_g": 0,
+        "fat_g": 14.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "lean ground beef", "language": "en", "type": "synonym" },
+        { "alias": "85/15 ground beef", "language": "en", "type": "synonym" },
+        { "alias": "牛ひき肉", "language": "ja", "type": "translation" },
+        { "alias": "소고기 간 것", "language": "ko", "type": "translation" },
+        { "alias": "牛绞肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "牛絞肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "carne molida", "language": "es", "type": "translation" },
+        { "alias": "boeuf haché", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "ground beef 80% lean",
+      "category": "protein",
+      "per_100g": {
+        "calories": 254,
+        "protein_g": 20.0,
+        "carbs_g": 0,
+        "fat_g": 19.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "regular ground beef", "language": "en", "type": "synonym" },
+        { "alias": "80/20 ground beef", "language": "en", "type": "synonym" },
+        { "alias": "牛ひき肉 普通", "language": "ja", "type": "translation" },
+        { "alias": "소고기 다진 고기", "language": "ko", "type": "translation" },
+        { "alias": "普通牛绞肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "普通牛絞肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "carne molida regular", "language": "es", "type": "translation" },
+        { "alias": "boeuf haché ordinaire", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "ground beef 73% lean",
+      "category": "protein",
+      "per_100g": {
+        "calories": 288,
+        "protein_g": 19.0,
+        "carbs_g": 0,
+        "fat_g": 23.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "fatty ground beef", "language": "en", "type": "synonym" },
+        { "alias": "73/27 ground beef", "language": "en", "type": "synonym" },
+        { "alias": "牛ひき肉 脂身多め", "language": "ja", "type": "translation" },
+        { "alias": "지방이 많은 소고기", "language": "ko", "type": "translation" },
+        { "alias": "肥牛绞肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "肥牛絞肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "carne molida grasa", "language": "es", "type": "translation" },
+        { "alias": "boeuf haché gras", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef stew meat",
+      "category": "protein",
+      "per_100g": {
+        "calories": 201,
+        "protein_g": 24.0,
+        "carbs_g": 0,
+        "fat_g": 11.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "stewing beef", "language": "en", "type": "synonym" },
+        { "alias": "beef for stew", "language": "en", "type": "synonym" },
+        { "alias": "シチュー用牛肉", "language": "ja", "type": "translation" },
+        { "alias": "찜용 소고기", "language": "ko", "type": "translation" },
+        { "alias": "炖牛肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "燉牛肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "carne para guisar", "language": "es", "type": "translation" },
+        { "alias": "boeuf à braiser", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef liver",
+      "category": "protein",
+      "per_100g": {
+        "calories": 135,
+        "protein_g": 20.4,
+        "carbs_g": 3.9,
+        "fat_g": 3.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "liver", "language": "en", "type": "synonym" },
+        { "alias": "牛レバー", "language": "ja", "type": "translation" },
+        { "alias": "소 간", "language": "ko", "type": "translation" },
+        { "alias": "牛肝", "language": "zh-cn", "type": "translation" },
+        { "alias": "牛肝", "language": "zh-tw", "type": "translation" },
+        { "alias": "hígado de res", "language": "es", "type": "translation" },
+        { "alias": "foie de boeuf", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef tongue",
+      "category": "protein",
+      "per_100g": {
+        "calories": 224,
+        "protein_g": 16.0,
+        "carbs_g": 3.7,
+        "fat_g": 16.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "tongue", "language": "en", "type": "synonym" },
+        { "alias": "ox tongue", "language": "en", "type": "synonym" },
+        { "alias": "牛タン", "language": "ja", "type": "translation" },
+        { "alias": "우설", "language": "ko", "type": "translation" },
+        { "alias": "牛舌", "language": "zh-cn", "type": "translation" },
+        { "alias": "牛舌", "language": "zh-tw", "type": "translation" },
+        { "alias": "lengua de res", "language": "es", "type": "translation" },
+        { "alias": "langue de boeuf", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tongue", "grams": 900 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef bone marrow",
+      "category": "protein",
+      "per_100g": {
+        "calories": 786,
+        "protein_g": 7.0,
+        "carbs_g": 0,
+        "fat_g": 84.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "marrow bones", "language": "en", "type": "synonym" },
+        { "alias": "bone marrow", "language": "en", "type": "synonym" },
+        { "alias": "骨髄", "language": "ja", "type": "translation" },
+        { "alias": "골수", "language": "ko", "type": "translation" },
+        { "alias": "骨髓", "language": "zh-cn", "type": "translation" },
+        { "alias": "骨髓", "language": "zh-tw", "type": "translation" },
+        { "alias": "tuétano", "language": "es", "type": "translation" },
+        { "alias": "moelle osseuse", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "bone", "grams": 170 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef t-bone steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 247,
+        "protein_g": 24.0,
+        "carbs_g": 0,
+        "fat_g": 16.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "t-bone", "language": "en", "type": "synonym" },
+        { "alias": "Tボーンステーキ", "language": "ja", "type": "translation" },
+        { "alias": "티본 스테이크", "language": "ko", "type": "translation" },
+        { "alias": "T骨牛排", "language": "zh-cn", "type": "translation" },
+        { "alias": "T骨牛排", "language": "zh-tw", "type": "translation" },
+        { "alias": "bistec T-bone", "language": "es", "type": "translation" },
+        { "alias": "bifteck T-bone", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 450 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef porterhouse steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 258,
+        "protein_g": 23.0,
+        "carbs_g": 0,
+        "fat_g": 18.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "porterhouse", "language": "en", "type": "synonym" },
+        { "alias": "ポーターハウスステーキ", "language": "ja", "type": "translation" },
+        { "alias": "포터하우스 스테이크", "language": "ko", "type": "translation" },
+        { "alias": "波特豪斯牛排", "language": "zh-cn", "type": "translation" },
+        { "alias": "波特豪斯牛排", "language": "zh-tw", "type": "translation" },
+        { "alias": "bistec porterhouse", "language": "es", "type": "translation" },
+        { "alias": "bifteck porterhouse", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 500 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef new york strip steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 219,
+        "protein_g": 26.0,
+        "carbs_g": 0,
+        "fat_g": 12.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "NY strip", "language": "en", "type": "synonym" },
+        { "alias": "strip steak", "language": "en", "type": "synonym" },
+        { "alias": "ニューヨークストリップ", "language": "ja", "type": "translation" },
+        { "alias": "뉴욕 스트립", "language": "ko", "type": "translation" },
+        { "alias": "纽约客牛排", "language": "zh-cn", "type": "translation" },
+        { "alias": "紐約客牛排", "language": "zh-tw", "type": "translation" },
+        { "alias": "bistec Nueva York", "language": "es", "type": "translation" },
+        { "alias": "contre-filet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 300 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef top round roast",
+      "category": "protein",
+      "per_100g": {
+        "calories": 175,
+        "protein_g": 28.0,
+        "carbs_g": 0,
+        "fat_g": 6.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "top round", "language": "en", "type": "synonym" },
+        { "alias": "inside round", "language": "en", "type": "synonym" },
+        { "alias": "トップラウンド", "language": "ja", "type": "translation" },
+        { "alias": "우둔살", "language": "ko", "type": "translation" },
+        { "alias": "上后腿肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "上後腿肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "pulpa de pierna", "language": "es", "type": "translation" },
+        { "alias": "rond de gîte", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "roast", "grams": 1360 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef bottom round roast",
+      "category": "protein",
+      "per_100g": {
+        "calories": 187,
+        "protein_g": 27.0,
+        "carbs_g": 0,
+        "fat_g": 8.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "bottom round", "language": "en", "type": "synonym" },
+        { "alias": "outside round", "language": "en", "type": "synonym" },
+        { "alias": "ボトムラウンド", "language": "ja", "type": "translation" },
+        { "alias": "설깃살", "language": "ko", "type": "translation" },
+        { "alias": "下后腿肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "下後腿肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "carne de pierna", "language": "es", "type": "translation" },
+        { "alias": "gîte à la noix", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "roast", "grams": 1360 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef eye of round roast",
+      "category": "protein",
+      "per_100g": {
+        "calories": 149,
+        "protein_g": 27.0,
+        "carbs_g": 0,
+        "fat_g": 4.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "eye of round", "language": "en", "type": "synonym" },
+        { "alias": "アイラウンド", "language": "ja", "type": "translation" },
+        { "alias": "홍두깨살", "language": "ko", "type": "translation" },
+        { "alias": "后腿芯肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "後腿芯肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "ojo de bola", "language": "es", "type": "translation" },
+        { "alias": "tende de tranche", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "roast", "grams": 1130 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef tri-tip roast",
+      "category": "protein",
+      "per_100g": {
+        "calories": 178,
+        "protein_g": 25.0,
+        "carbs_g": 0,
+        "fat_g": 8.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "tri-tip", "language": "en", "type": "synonym" },
+        { "alias": "triangle roast", "language": "en", "type": "synonym" },
+        { "alias": "トライチップ", "language": "ja", "type": "translation" },
+        { "alias": "삼각살", "language": "ko", "type": "translation" },
+        { "alias": "三角牛肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "三角牛肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "tri-tip", "language": "es", "type": "translation" },
+        { "alias": "pointe de surlonge", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "roast", "grams": 900 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef shank",
+      "category": "protein",
+      "per_100g": {
+        "calories": 201,
+        "protein_g": 24.0,
+        "carbs_g": 0,
+        "fat_g": 11.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "shin beef", "language": "en", "type": "synonym" },
+        { "alias": "牛すね肉", "language": "ja", "type": "translation" },
+        { "alias": "사태", "language": "ko", "type": "translation" },
+        { "alias": "牛腱", "language": "zh-cn", "type": "translation" },
+        { "alias": "牛腱", "language": "zh-tw", "type": "translation" },
+        { "alias": "chambarete", "language": "es", "type": "translation" },
+        { "alias": "jarret de boeuf", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef plate ribs",
+      "category": "protein",
+      "per_100g": {
+        "calories": 338,
+        "protein_g": 16.0,
+        "carbs_g": 0,
+        "fat_g": 30.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "plate short ribs", "language": "en", "type": "synonym" },
+        { "alias": "beef back ribs", "language": "en", "type": "synonym" },
+        { "alias": "プレートリブ", "language": "ja", "type": "translation" },
+        { "alias": "갈비뼈", "language": "ko", "type": "translation" },
+        { "alias": "牛肋骨", "language": "zh-cn", "type": "translation" },
+        { "alias": "牛肋骨", "language": "zh-tw", "type": "translation" },
+        { "alias": "costillas de placa", "language": "es", "type": "translation" },
+        { "alias": "côtes de plaque", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "rack", "grams": 900 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef cheek",
+      "category": "protein",
+      "per_100g": {
+        "calories": 209,
+        "protein_g": 23.0,
+        "carbs_g": 0,
+        "fat_g": 13.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "beef cheeks", "language": "en", "type": "synonym" },
+        { "alias": "牛ほほ肉", "language": "ja", "type": "translation" },
+        { "alias": "우볼살", "language": "ko", "type": "translation" },
+        { "alias": "牛脸颊肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "牛臉頰肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "cachete de res", "language": "es", "type": "translation" },
+        { "alias": "joue de boeuf", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "cheek", "grams": 340 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef hanger steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 194,
+        "protein_g": 25.0,
+        "carbs_g": 0,
+        "fat_g": 10.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "hanger steak", "language": "en", "type": "synonym" },
+        { "alias": "butcher's steak", "language": "en", "type": "synonym" },
+        { "alias": "ハンガーステーキ", "language": "ja", "type": "translation" },
+        { "alias": "안창살", "language": "ko", "type": "translation" },
+        { "alias": "挂肉牛排", "language": "zh-cn", "type": "translation" },
+        { "alias": "掛肉牛排", "language": "zh-tw", "type": "translation" },
+        { "alias": "entraña", "language": "es", "type": "translation" },
+        { "alias": "onglet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 340 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef flat iron steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 202,
+        "protein_g": 25.0,
+        "carbs_g": 0,
+        "fat_g": 11.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "flat iron steak", "language": "en", "type": "synonym" },
+        { "alias": "butler's steak", "language": "en", "type": "synonym" },
+        { "alias": "フラットアイロンステーキ", "language": "ja", "type": "translation" },
+        { "alias": "부채살", "language": "ko", "type": "translation" },
+        { "alias": "板腱牛排", "language": "zh-cn", "type": "translation" },
+        { "alias": "板腱牛排", "language": "zh-tw", "type": "translation" },
+        { "alias": "bistec de paleta", "language": "es", "type": "translation" },
+        { "alias": "araignée", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 200 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef picanha",
+      "category": "protein",
+      "per_100g": {
+        "calories": 265,
+        "protein_g": 22.0,
+        "carbs_g": 0,
+        "fat_g": 19.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "picanha", "language": "en", "type": "synonym" },
+        { "alias": "sirloin cap", "language": "en", "type": "synonym" },
+        { "alias": "ピカーニャ", "language": "ja", "type": "translation" },
+        { "alias": "피칸냐", "language": "ko", "type": "translation" },
+        { "alias": "臀盖肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "臀蓋肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "picaña", "language": "es", "type": "translation" },
+        { "alias": "culotte", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "roast", "grams": 900 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef heart",
+      "category": "protein",
+      "per_100g": {
+        "calories": 112,
+        "protein_g": 17.7,
+        "carbs_g": 0.1,
+        "fat_g": 3.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "heart", "language": "en", "type": "synonym" },
+        { "alias": "牛ハツ", "language": "ja", "type": "translation" },
+        { "alias": "염통", "language": "ko", "type": "translation" },
+        { "alias": "牛心", "language": "zh-cn", "type": "translation" },
+        { "alias": "牛心", "language": "zh-tw", "type": "translation" },
+        { "alias": "corazón de res", "language": "es", "type": "translation" },
+        { "alias": "coeur de boeuf", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "heart", "grams": 450 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef kidney",
+      "category": "protein",
+      "per_100g": {
+        "calories": 99,
+        "protein_g": 17.4,
+        "carbs_g": 0,
+        "fat_g": 2.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "kidney", "language": "en", "type": "synonym" },
+        { "alias": "牛腎臓", "language": "ja", "type": "translation" },
+        { "alias": "콩팥", "language": "ko", "type": "translation" },
+        { "alias": "牛肾", "language": "zh-cn", "type": "translation" },
+        { "alias": "牛腎", "language": "zh-tw", "type": "translation" },
+        { "alias": "riñón de res", "language": "es", "type": "translation" },
+        { "alias": "rognon de boeuf", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "kidney", "grams": 170 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef tripe",
+      "category": "protein",
+      "per_100g": {
+        "calories": 85,
+        "protein_g": 12.0,
+        "carbs_g": 0,
+        "fat_g": 3.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "tripe", "language": "en", "type": "synonym" },
+        { "alias": "牛トライプ", "language": "ja", "type": "translation" },
+        { "alias": "소 양", "language": "ko", "type": "translation" },
+        { "alias": "牛肚", "language": "zh-cn", "type": "translation" },
+        { "alias": "牛肚", "language": "zh-tw", "type": "translation" },
+        { "alias": "callos", "language": "es", "type": "translation" },
+        { "alias": "tripes", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef sweetbreads",
+      "category": "protein",
+      "per_100g": {
+        "calories": 131,
+        "protein_g": 18.0,
+        "carbs_g": 0,
+        "fat_g": 6.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "sweetbreads", "language": "en", "type": "synonym" },
+        { "alias": "牛胸腺", "language": "ja", "type": "translation" },
+        { "alias": "소 흉선", "language": "ko", "type": "translation" },
+        { "alias": "牛胸腺", "language": "zh-cn", "type": "translation" },
+        { "alias": "牛胸腺", "language": "zh-tw", "type": "translation" },
+        { "alias": "mollejas", "language": "es", "type": "translation" },
+        { "alias": "ris de veau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef back ribs",
+      "category": "protein",
+      "per_100g": {
+        "calories": 286,
+        "protein_g": 19.0,
+        "carbs_g": 0,
+        "fat_g": 23.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "back ribs", "language": "en", "type": "synonym" },
+        { "alias": "dinosaur ribs", "language": "en", "type": "synonym" },
+        { "alias": "バックリブ", "language": "ja", "type": "translation" },
+        { "alias": "등갈비", "language": "ko", "type": "translation" },
+        { "alias": "背肋", "language": "zh-cn", "type": "translation" },
+        { "alias": "背肋", "language": "zh-tw", "type": "translation" },
+        { "alias": "costillas traseras", "language": "es", "type": "translation" },
+        { "alias": "côtes de dos", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "rack", "grams": 900 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef cubed steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 181,
+        "protein_g": 25.0,
+        "carbs_g": 0,
+        "fat_g": 8.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "cubed steak", "language": "en", "type": "synonym" },
+        { "alias": "minute steak", "language": "en", "type": "synonym" },
+        { "alias": "キューブステーキ", "language": "ja", "type": "translation" },
+        { "alias": "큐브 스테이크", "language": "ko", "type": "translation" },
+        { "alias": "方块牛排", "language": "zh-cn", "type": "translation" },
+        { "alias": "方塊牛排", "language": "zh-tw", "type": "translation" },
+        { "alias": "bistec cubado", "language": "es", "type": "translation" },
+        { "alias": "bifteck minute", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 115 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb leg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 191,
+        "protein_g": 25.6,
+        "carbs_g": 0,
+        "fat_g": 9.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "leg of lamb", "language": "en", "type": "synonym" },
+        { "alias": "lamb leg roast", "language": "en", "type": "synonym" },
+        { "alias": "ラムレッグ", "language": "ja", "type": "translation" },
+        { "alias": "양 다리", "language": "ko", "type": "translation" },
+        { "alias": "羊腿", "language": "zh-cn", "type": "translation" },
+        { "alias": "羊腿", "language": "zh-tw", "type": "translation" },
+        { "alias": "pierna de cordero", "language": "es", "type": "translation" },
+        { "alias": "gigot d'agneau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "leg", "grams": 2270 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb rack",
+      "category": "protein",
+      "per_100g": {
+        "calories": 254,
+        "protein_g": 21.0,
+        "carbs_g": 0,
+        "fat_g": 18.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "rack of lamb", "language": "en", "type": "synonym" },
+        { "alias": "lamb rib roast", "language": "en", "type": "synonym" },
+        { "alias": "ラムラック", "language": "ja", "type": "translation" },
+        { "alias": "양 갈비", "language": "ko", "type": "translation" },
+        { "alias": "羊排", "language": "zh-cn", "type": "translation" },
+        { "alias": "羊排", "language": "zh-tw", "type": "translation" },
+        { "alias": "costillar de cordero", "language": "es", "type": "translation" },
+        { "alias": "carré d'agneau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "rack", "grams": 680 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb loin chops",
+      "category": "protein",
+      "per_100g": {
+        "calories": 220,
+        "protein_g": 24.0,
+        "carbs_g": 0,
+        "fat_g": 13.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "lamb loin", "language": "en", "type": "synonym" },
+        { "alias": "loin chops", "language": "en", "type": "synonym" },
+        { "alias": "ラムロイン", "language": "ja", "type": "translation" },
+        { "alias": "양 등심", "language": "ko", "type": "translation" },
+        { "alias": "羊里脊", "language": "zh-cn", "type": "translation" },
+        { "alias": "羊里脊", "language": "zh-tw", "type": "translation" },
+        { "alias": "chuletas de lomo", "language": "es", "type": "translation" },
+        { "alias": "côtelettes de longe", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "chop", "grams": 85 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb shoulder",
+      "category": "protein",
+      "per_100g": {
+        "calories": 234,
+        "protein_g": 23.0,
+        "carbs_g": 0,
+        "fat_g": 15.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "shoulder of lamb", "language": "en", "type": "synonym" },
+        { "alias": "lamb shoulder roast", "language": "en", "type": "synonym" },
+        { "alias": "ラムショルダー", "language": "ja", "type": "translation" },
+        { "alias": "양 어깨", "language": "ko", "type": "translation" },
+        { "alias": "羊肩肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "羊肩肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "paleta de cordero", "language": "es", "type": "translation" },
+        { "alias": "épaule d'agneau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "shoulder", "grams": 1814 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb shank",
+      "category": "protein",
+      "per_100g": {
+        "calories": 206,
+        "protein_g": 24.0,
+        "carbs_g": 0,
+        "fat_g": 12.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "lamb shanks", "language": "en", "type": "synonym" },
+        { "alias": "ラムシャンク", "language": "ja", "type": "translation" },
+        { "alias": "양 정강이", "language": "ko", "type": "translation" },
+        { "alias": "羊腱", "language": "zh-cn", "type": "translation" },
+        { "alias": "羊腱", "language": "zh-tw", "type": "translation" },
+        { "alias": "jarrete de cordero", "language": "es", "type": "translation" },
+        { "alias": "jarret d'agneau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "shank", "grams": 340 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "ground lamb",
+      "category": "protein",
+      "per_100g": {
+        "calories": 283,
+        "protein_g": 17.0,
+        "carbs_g": 0,
+        "fat_g": 23.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "minced lamb", "language": "en", "type": "synonym" },
+        { "alias": "羊ひき肉", "language": "ja", "type": "translation" },
+        { "alias": "양고기 간 것", "language": "ko", "type": "translation" },
+        { "alias": "羊绞肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "羊絞肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "cordero molido", "language": "es", "type": "translation" },
+        { "alias": "agneau haché", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb rib chops",
+      "category": "protein",
+      "per_100g": {
+        "calories": 264,
+        "protein_g": 20.0,
+        "carbs_g": 0,
+        "fat_g": 20.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "lamb chops", "language": "en", "type": "synonym" },
+        { "alias": "rib chops", "language": "en", "type": "synonym" },
+        { "alias": "ラムチョップ", "language": "ja", "type": "translation" },
+        { "alias": "양갈비", "language": "ko", "type": "translation" },
+        { "alias": "羊肋排", "language": "zh-cn", "type": "translation" },
+        { "alias": "羊肋排", "language": "zh-tw", "type": "translation" },
+        { "alias": "chuletas de cordero", "language": "es", "type": "translation" },
+        { "alias": "côtelettes d'agneau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "chop", "grams": 70 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb neck",
+      "category": "protein",
+      "per_100g": {
+        "calories": 242,
+        "protein_g": 22.0,
+        "carbs_g": 0,
+        "fat_g": 16.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "lamb neck fillet", "language": "en", "type": "synonym" },
+        { "alias": "羊首肉", "language": "ja", "type": "translation" },
+        { "alias": "양 목살", "language": "ko", "type": "translation" },
+        { "alias": "羊颈肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "羊頸肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "cuello de cordero", "language": "es", "type": "translation" },
+        { "alias": "collier d'agneau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb shoulder chops",
+      "category": "protein",
+      "per_100g": {
+        "calories": 240,
+        "protein_g": 22.0,
+        "carbs_g": 0,
+        "fat_g": 16.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "shoulder lamb chops", "language": "en", "type": "synonym" },
+        { "alias": "blade chops", "language": "en", "type": "synonym" },
+        { "alias": "ラムショルダーチョップ", "language": "ja", "type": "translation" },
+        { "alias": "양 어깨 갈비", "language": "ko", "type": "translation" },
+        { "alias": "羊肩排", "language": "zh-cn", "type": "translation" },
+        { "alias": "羊肩排", "language": "zh-tw", "type": "translation" },
+        { "alias": "chuletas de paleta", "language": "es", "type": "translation" },
+        { "alias": "côtelettes d'épaule", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "chop", "grams": 115 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb sirloin chops",
+      "category": "protein",
+      "per_100g": {
+        "calories": 225,
+        "protein_g": 24.0,
+        "carbs_g": 0,
+        "fat_g": 14.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "sirloin lamb chops", "language": "en", "type": "synonym" },
+        { "alias": "ラムサーロインチョップ", "language": "ja", "type": "translation" },
+        { "alias": "양 허리 갈비", "language": "ko", "type": "translation" },
+        { "alias": "羊腰排", "language": "zh-cn", "type": "translation" },
+        { "alias": "羊腰排", "language": "zh-tw", "type": "translation" },
+        { "alias": "chuletas de solomillo", "language": "es", "type": "translation" },
+        { "alias": "côtelettes de longe", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "chop", "grams": 115 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb breast",
+      "category": "protein",
+      "per_100g": {
+        "calories": 304,
+        "protein_g": 18.0,
+        "carbs_g": 0,
+        "fat_g": 25.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "breast of lamb", "language": "en", "type": "synonym" },
+        { "alias": "羊胸肉", "language": "ja", "type": "translation" },
+        { "alias": "양 가슴살", "language": "ko", "type": "translation" },
+        { "alias": "羊胸", "language": "zh-cn", "type": "translation" },
+        { "alias": "羊胸", "language": "zh-tw", "type": "translation" },
+        { "alias": "pecho de cordero", "language": "es", "type": "translation" },
+        { "alias": "poitrine d'agneau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb liver",
+      "category": "protein",
+      "per_100g": {
+        "calories": 139,
+        "protein_g": 20.0,
+        "carbs_g": 2.2,
+        "fat_g": 5.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "liver", "language": "en", "type": "synonym" },
+        { "alias": "羊レバー", "language": "ja", "type": "translation" },
+        { "alias": "양 간", "language": "ko", "type": "translation" },
+        { "alias": "羊肝", "language": "zh-cn", "type": "translation" },
+        { "alias": "羊肝", "language": "zh-tw", "type": "translation" },
+        { "alias": "hígado de cordero", "language": "es", "type": "translation" },
+        { "alias": "foie d'agneau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb kidney",
+      "category": "protein",
+      "per_100g": {
+        "calories": 88,
+        "protein_g": 15.7,
+        "carbs_g": 0.8,
+        "fat_g": 2.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "kidney", "language": "en", "type": "synonym" },
+        { "alias": "羊腎臓", "language": "ja", "type": "translation" },
+        { "alias": "양 콩팥", "language": "ko", "type": "translation" },
+        { "alias": "羊肾", "language": "zh-cn", "type": "translation" },
+        { "alias": "羊腎", "language": "zh-tw", "type": "translation" },
+        { "alias": "riñón de cordero", "language": "es", "type": "translation" },
+        { "alias": "rognon d'agneau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "kidney", "grams": 85 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb heart",
+      "category": "protein",
+      "per_100g": {
+        "calories": 122,
+        "protein_g": 16.5,
+        "carbs_g": 2.2,
+        "fat_g": 5.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "heart", "language": "en", "type": "synonym" },
+        { "alias": "羊ハツ", "language": "ja", "type": "translation" },
+        { "alias": "양 염통", "language": "ko", "type": "translation" },
+        { "alias": "羊心", "language": "zh-cn", "type": "translation" },
+        { "alias": "羊心", "language": "zh-tw", "type": "translation" },
+        { "alias": "corazón de cordero", "language": "es", "type": "translation" },
+        { "alias": "coeur d'agneau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "heart", "grams": 170 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb tenderloin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 189,
+        "protein_g": 26.0,
+        "carbs_g": 0,
+        "fat_g": 9.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "lamb fillet", "language": "en", "type": "synonym" },
+        { "alias": "ラムフィレ", "language": "ja", "type": "translation" },
+        { "alias": "양 안심", "language": "ko", "type": "translation" },
+        { "alias": "羊柳", "language": "zh-cn", "type": "translation" },
+        { "alias": "羊柳", "language": "zh-tw", "type": "translation" },
+        { "alias": "solomillo de cordero", "language": "es", "type": "translation" },
+        { "alias": "filet d'agneau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "tenderloin", "grams": 225 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "venison loin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 149,
+        "protein_g": 30.2,
+        "carbs_g": 0,
+        "fat_g": 2.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "deer loin", "language": "en", "type": "synonym" },
+        { "alias": "venison backstrap", "language": "en", "type": "synonym" },
+        { "alias": "鹿ロイン", "language": "ja", "type": "translation" },
+        { "alias": "사슴 등심", "language": "ko", "type": "translation" },
+        { "alias": "鹿里脊", "language": "zh-cn", "type": "translation" },
+        { "alias": "鹿里脊", "language": "zh-tw", "type": "translation" },
+        { "alias": "lomo de venado", "language": "es", "type": "translation" },
+        { "alias": "longe de cerf", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "ground venison",
+      "category": "protein",
+      "per_100g": {
+        "calories": 157,
+        "protein_g": 26.5,
+        "carbs_g": 0,
+        "fat_g": 5.3,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "ground deer", "language": "en", "type": "synonym" },
+        { "alias": "minced venison", "language": "en", "type": "synonym" },
+        { "alias": "鹿ひき肉", "language": "ja", "type": "translation" },
+        { "alias": "사슴고기 간 것", "language": "ko", "type": "translation" },
+        { "alias": "鹿绞肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "鹿絞肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "venado molido", "language": "es", "type": "translation" },
+        { "alias": "cerf haché", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "venison stew meat",
+      "category": "protein",
+      "per_100g": {
+        "calories": 149,
+        "protein_g": 30.2,
+        "carbs_g": 0,
+        "fat_g": 2.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "deer stew meat", "language": "en", "type": "synonym" },
+        { "alias": "シチュー用鹿肉", "language": "ja", "type": "translation" },
+        { "alias": "찜용 사슴고기", "language": "ko", "type": "translation" },
+        { "alias": "炖鹿肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "燉鹿肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "venado para guisar", "language": "es", "type": "translation" },
+        { "alias": "cerf à braiser", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "bison ribeye steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 146,
+        "protein_g": 28.4,
+        "carbs_g": 0,
+        "fat_g": 2.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "buffalo ribeye", "language": "en", "type": "synonym" },
+        { "alias": "バイソンリブアイ", "language": "ja", "type": "translation" },
+        { "alias": "들소 등심", "language": "ko", "type": "translation" },
+        { "alias": "野牛肋眼", "language": "zh-cn", "type": "translation" },
+        { "alias": "野牛肋眼", "language": "zh-tw", "type": "translation" },
+        { "alias": "bistec de bisonte", "language": "es", "type": "translation" },
+        { "alias": "bison entrecôte", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 225 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "ground bison",
+      "category": "protein",
+      "per_100g": {
+        "calories": 146,
+        "protein_g": 25.5,
+        "carbs_g": 0,
+        "fat_g": 4.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "ground buffalo", "language": "en", "type": "synonym" },
+        { "alias": "バイソンひき肉", "language": "ja", "type": "translation" },
+        { "alias": "들소 간 고기", "language": "ko", "type": "translation" },
+        { "alias": "野牛绞肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "野牛絞肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "bisonte molido", "language": "es", "type": "translation" },
+        { "alias": "bison haché", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "elk steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 146,
+        "protein_g": 30.2,
+        "carbs_g": 0,
+        "fat_g": 1.9,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "elk meat", "language": "en", "type": "synonym" },
+        { "alias": "エルクステーキ", "language": "ja", "type": "translation" },
+        { "alias": "엘크 스테이크", "language": "ko", "type": "translation" },
+        { "alias": "马鹿肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "馬鹿肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "bistec de alce", "language": "es", "type": "translation" },
+        { "alias": "wapiti", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 225 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "ground elk",
+      "category": "protein",
+      "per_100g": {
+        "calories": 155,
+        "protein_g": 27.0,
+        "carbs_g": 0,
+        "fat_g": 5.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "minced elk", "language": "en", "type": "synonym" },
+        { "alias": "エルクひき肉", "language": "ja", "type": "translation" },
+        { "alias": "엘크 간 고기", "language": "ko", "type": "translation" },
+        { "alias": "马鹿绞肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "馬鹿絞肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "alce molido", "language": "es", "type": "translation" },
+        { "alias": "wapiti haché", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "rabbit meat",
+      "category": "protein",
+      "per_100g": {
+        "calories": 173,
+        "protein_g": 33.0,
+        "carbs_g": 0,
+        "fat_g": 3.5,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "rabbit", "language": "en", "type": "synonym" },
+        { "alias": "ウサギ肉", "language": "ja", "type": "translation" },
+        { "alias": "토끼고기", "language": "ko", "type": "translation" },
+        { "alias": "兔肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "兔肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "conejo", "language": "es", "type": "translation" },
+        { "alias": "lapin", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "rabbit", "grams": 1130 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "wild boar meat",
+      "category": "protein",
+      "per_100g": {
+        "calories": 160,
+        "protein_g": 28.3,
+        "carbs_g": 0,
+        "fat_g": 4.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "wild boar", "language": "en", "type": "synonym" },
+        { "alias": "boar", "language": "en", "type": "synonym" },
+        { "alias": "イノシシ肉", "language": "ja", "type": "translation" },
+        { "alias": "멧돼지고기", "language": "ko", "type": "translation" },
+        { "alias": "野猪肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "野豬肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "jabalí", "language": "es", "type": "translation" },
+        { "alias": "sanglier", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef prime rib",
+      "category": "protein",
+      "per_100g": {
+        "calories": 291,
+        "protein_g": 24.0,
+        "carbs_g": 0,
+        "fat_g": 21.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "prime rib roast", "language": "en", "type": "synonym" },
+        { "alias": "standing rib roast", "language": "en", "type": "synonym" },
+        { "alias": "プライムリブ", "language": "ja", "type": "translation" },
+        { "alias": "프라임 립", "language": "ko", "type": "translation" },
+        { "alias": "上等牛排", "language": "zh-cn", "type": "translation" },
+        { "alias": "上等牛排", "language": "zh-tw", "type": "translation" },
+        { "alias": "costilla de primera", "language": "es", "type": "translation" },
+        { "alias": "côte de boeuf", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "roast", "grams": 2270 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef rump roast",
+      "category": "protein",
+      "per_100g": {
+        "calories": 175,
+        "protein_g": 28.0,
+        "carbs_g": 0,
+        "fat_g": 6.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "rump roast", "language": "en", "type": "synonym" },
+        { "alias": "ランプロースト", "language": "ja", "type": "translation" },
+        { "alias": "엉덩이 로스트", "language": "ko", "type": "translation" },
+        { "alias": "臀肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "臀肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "carne de cadera", "language": "es", "type": "translation" },
+        { "alias": "rumsteck", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "roast", "grams": 1360 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef london broil",
+      "category": "protein",
+      "per_100g": {
+        "calories": 192,
+        "protein_g": 26.0,
+        "carbs_g": 0,
+        "fat_g": 9.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "london broil", "language": "en", "type": "synonym" },
+        { "alias": "top round steak", "language": "en", "type": "synonym" },
+        { "alias": "ロンドンブロイル", "language": "ja", "type": "translation" },
+        { "alias": "런던 브로일", "language": "ko", "type": "translation" },
+        { "alias": "伦敦烤肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "倫敦烤肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "bistec london broil", "language": "es", "type": "translation" },
+        { "alias": "london broil", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 340 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef coulotte steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 183,
+        "protein_g": 27.0,
+        "carbs_g": 0,
+        "fat_g": 7.6,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "coulotte", "language": "en", "type": "synonym" },
+        { "alias": "top sirloin cap", "language": "en", "type": "synonym" },
+        { "alias": "クロット", "language": "ja", "type": "translation" },
+        { "alias": "꾸로뜨", "language": "ko", "type": "translation" },
+        { "alias": "臀盖肉牛排", "language": "zh-cn", "type": "translation" },
+        { "alias": "臀蓋肉牛排", "language": "zh-tw", "type": "translation" },
+        { "alias": "bistec coulotte", "language": "es", "type": "translation" },
+        { "alias": "aiguillette baronne", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 225 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef denver steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 202,
+        "protein_g": 25.0,
+        "carbs_g": 0,
+        "fat_g": 11.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "denver steak", "language": "en", "type": "synonym" },
+        { "alias": "denver cut", "language": "en", "type": "synonym" },
+        { "alias": "デンバーステーキ", "language": "ja", "type": "translation" },
+        { "alias": "덴버 스테이크", "language": "ko", "type": "translation" },
+        { "alias": "丹佛牛排", "language": "zh-cn", "type": "translation" },
+        { "alias": "丹佛牛排", "language": "zh-tw", "type": "translation" },
+        { "alias": "bistec denver", "language": "es", "type": "translation" },
+        { "alias": "bifteck denver", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 200 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef chuck eye steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 211,
+        "protein_g": 23.0,
+        "carbs_g": 0,
+        "fat_g": 13.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "chuck eye", "language": "en", "type": "synonym" },
+        { "alias": "poor man's ribeye", "language": "en", "type": "synonym" },
+        { "alias": "チャックアイステーキ", "language": "ja", "type": "translation" },
+        { "alias": "척 아이 스테이크", "language": "ko", "type": "translation" },
+        { "alias": "肩眼牛排", "language": "zh-cn", "type": "translation" },
+        { "alias": "肩眼牛排", "language": "zh-tw", "type": "translation" },
+        { "alias": "bistec chuck eye", "language": "es", "type": "translation" },
+        { "alias": "bifteck d'épaule", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 225 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef petite tender",
+      "category": "protein",
+      "per_100g": {
+        "calories": 189,
+        "protein_g": 26.0,
+        "carbs_g": 0,
+        "fat_g": 9.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "teres major", "language": "en", "type": "synonym" },
+        { "alias": "shoulder tender", "language": "en", "type": "synonym" },
+        { "alias": "プチテンダー", "language": "ja", "type": "translation" },
+        { "alias": "쁘띠 텐더", "language": "ko", "type": "translation" },
+        { "alias": "小里脊", "language": "zh-cn", "type": "translation" },
+        { "alias": "小里脊", "language": "zh-tw", "type": "translation" },
+        { "alias": "pequeño filete", "language": "es", "type": "translation" },
+        { "alias": "petit filet", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "roast", "grams": 225 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef sirloin tip roast",
+      "category": "protein",
+      "per_100g": {
+        "calories": 175,
+        "protein_g": 28.0,
+        "carbs_g": 0,
+        "fat_g": 6.2,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "sirloin tip", "language": "en", "type": "synonym" },
+        { "alias": "knuckle", "language": "en", "type": "synonym" },
+        { "alias": "サーロインチップ", "language": "ja", "type": "translation" },
+        { "alias": "안심 팁", "language": "ko", "type": "translation" },
+        { "alias": "西冷尖肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "西冷尖肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "punta de solomillo", "language": "es", "type": "translation" },
+        { "alias": "pointe de surlonge", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "roast", "grams": 1360 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef ribeye cap",
+      "category": "protein",
+      "per_100g": {
+        "calories": 312,
+        "protein_g": 22.0,
+        "carbs_g": 0,
+        "fat_g": 25.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "spinalis dorsi", "language": "en", "type": "synonym" },
+        { "alias": "ribeye cap steak", "language": "en", "type": "synonym" },
+        { "alias": "リブアイキャップ", "language": "ja", "type": "translation" },
+        { "alias": "등심 캡", "language": "ko", "type": "translation" },
+        { "alias": "肋眼盖肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "肋眼蓋肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "tapa de costilla", "language": "es", "type": "translation" },
+        { "alias": "calotte de côte", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 170 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef merlot cut",
+      "category": "protein",
+      "per_100g": {
+        "calories": 194,
+        "protein_g": 25.0,
+        "carbs_g": 0,
+        "fat_g": 10.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "heel of round", "language": "en", "type": "synonym" },
+        { "alias": "メルローカット", "language": "ja", "type": "translation" },
+        { "alias": "메를로 컷", "language": "ko", "type": "translation" },
+        { "alias": "梅洛牛排", "language": "zh-cn", "type": "translation" },
+        { "alias": "梅洛牛排", "language": "zh-tw", "type": "translation" },
+        { "alias": "corte merlot", "language": "es", "type": "translation" },
+        { "alias": "coupe merlot", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 225 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef ranch steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 202,
+        "protein_g": 25.0,
+        "carbs_g": 0,
+        "fat_g": 11.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "ranch steak", "language": "en", "type": "synonym" },
+        { "alias": "shoulder center", "language": "en", "type": "synonym" },
+        { "alias": "ランチステーキ", "language": "ja", "type": "translation" },
+        { "alias": "랜치 스테이크", "language": "ko", "type": "translation" },
+        { "alias": "牧场牛排", "language": "zh-cn", "type": "translation" },
+        { "alias": "牧場牛排", "language": "zh-tw", "type": "translation" },
+        { "alias": "bistec ranch", "language": "es", "type": "translation" },
+        { "alias": "bifteck ranch", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 200 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "beef sierra steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 202,
+        "protein_g": 25.0,
+        "carbs_g": 0,
+        "fat_g": 11.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "sierra steak", "language": "en", "type": "synonym" },
+        { "alias": "シエラステーキ", "language": "ja", "type": "translation" },
+        { "alias": "시에라 스테이크", "language": "ko", "type": "translation" },
+        { "alias": "西拉牛排", "language": "zh-cn", "type": "translation" },
+        { "alias": "西拉牛排", "language": "zh-tw", "type": "translation" },
+        { "alias": "bistec sierra", "language": "es", "type": "translation" },
+        { "alias": "bifteck sierra", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 200 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb crown roast",
+      "category": "protein",
+      "per_100g": {
+        "calories": 254,
+        "protein_g": 21.0,
+        "carbs_g": 0,
+        "fat_g": 18.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "crown roast of lamb", "language": "en", "type": "synonym" },
+        { "alias": "ラムクラウンロースト", "language": "ja", "type": "translation" },
+        { "alias": "양 크라운 로스트", "language": "ko", "type": "translation" },
+        { "alias": "羊冠烤肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "羊冠烤肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "corona de cordero", "language": "es", "type": "translation" },
+        { "alias": "couronne d'agneau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "roast", "grams": 1360 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb leg steak",
+      "category": "protein",
+      "per_100g": {
+        "calories": 191,
+        "protein_g": 25.6,
+        "carbs_g": 0,
+        "fat_g": 9.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "lamb steaks", "language": "en", "type": "synonym" },
+        { "alias": "ラムレッグステーキ", "language": "ja", "type": "translation" },
+        { "alias": "양 다리 스테이크", "language": "ko", "type": "translation" },
+        { "alias": "羊腿排", "language": "zh-cn", "type": "translation" },
+        { "alias": "羊腿排", "language": "zh-tw", "type": "translation" },
+        { "alias": "bistec de pierna de cordero", "language": "es", "type": "translation" },
+        { "alias": "steak de gigot", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "steak", "grams": 170 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb bone-in leg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 191,
+        "protein_g": 25.6,
+        "carbs_g": 0,
+        "fat_g": 9.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "bone-in leg of lamb", "language": "en", "type": "synonym" },
+        { "alias": "骨付きラムレッグ", "language": "ja", "type": "translation" },
+        { "alias": "뼈있는 양 다리", "language": "ko", "type": "translation" },
+        { "alias": "带骨羊腿", "language": "zh-cn", "type": "translation" },
+        { "alias": "帶骨羊腿", "language": "zh-tw", "type": "translation" },
+        { "alias": "pierna de cordero con hueso", "language": "es", "type": "translation" },
+        { "alias": "gigot avec os", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "leg", "grams": 2270 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb boneless leg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 191,
+        "protein_g": 25.6,
+        "carbs_g": 0,
+        "fat_g": 9.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "boneless leg of lamb", "language": "en", "type": "synonym" },
+        { "alias": "骨なしラムレッグ", "language": "ja", "type": "translation" },
+        { "alias": "뼈없는 양 다리", "language": "ko", "type": "translation" },
+        { "alias": "去骨羊腿", "language": "zh-cn", "type": "translation" },
+        { "alias": "去骨羊腿", "language": "zh-tw", "type": "translation" },
+        { "alias": "pierna de cordero deshuesada", "language": "es", "type": "translation" },
+        { "alias": "gigot désossé", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "leg", "grams": 1814 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "lamb saddle",
+      "category": "protein",
+      "per_100g": {
+        "calories": 220,
+        "protein_g": 24.0,
+        "carbs_g": 0,
+        "fat_g": 13.0,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "saddle of lamb", "language": "en", "type": "synonym" },
+        { "alias": "ラムサドル", "language": "ja", "type": "translation" },
+        { "alias": "양 안장", "language": "ko", "type": "translation" },
+        { "alias": "羊鞍", "language": "zh-cn", "type": "translation" },
+        { "alias": "羊鞍", "language": "zh-tw", "type": "translation" },
+        { "alias": "silla de cordero", "language": "es", "type": "translation" },
+        { "alias": "selle d'agneau", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "saddle", "grams": 1360 },
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "venison leg",
+      "category": "protein",
+      "per_100g": {
+        "calories": 149,
+        "protein_g": 30.2,
+        "carbs_g": 0,
+        "fat_g": 2.4,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "deer leg", "language": "en", "type": "synonym" },
+        { "alias": "鹿腿", "language": "ja", "type": "translation" },
+        { "alias": "사슴 다리", "language": "ko", "type": "translation" },
+        { "alias": "鹿腿肉", "language": "zh-cn", "type": "translation" },
+        { "alias": "鹿腿肉", "language": "zh-tw", "type": "translation" },
+        { "alias": "pierna de venado", "language": "es", "type": "translation" },
+        { "alias": "cuisse de cerf", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    },
+    {
+      "canonical_name": "bison strip loin",
+      "category": "protein",
+      "per_100g": {
+        "calories": 146,
+        "protein_g": 28.4,
+        "carbs_g": 0,
+        "fat_g": 2.7,
+        "fiber_g": 0
+      },
+      "aliases": [
+        { "alias": "buffalo strip loin", "language": "en", "type": "synonym" },
+        { "alias": "バイソンストリップロイン", "language": "ja", "type": "translation" },
+        { "alias": "들소 스트립 로인", "language": "ko", "type": "translation" },
+        { "alias": "野牛西冷", "language": "zh-cn", "type": "translation" },
+        { "alias": "野牛西冷", "language": "zh-tw", "type": "translation" },
+        { "alias": "lomo de bisonte", "language": "es", "type": "translation" },
+        { "alias": "contre-filet de bison", "language": "fr", "type": "translation" }
+      ],
+      "common_units": [
+        { "unit": "lb", "grams": 454 },
+        { "unit": "oz", "grams": 28 }
+      ]
+    }
+  ]
+}

@@ -41,9 +41,28 @@ export interface RecipeIngredientGroup {
 }
 
 export interface RecipeStep {
-  id: number
+  id: number | string
   order: number
   instruction: string
+  section_heading?: string | null
+}
+
+export interface RecipeStepImage {
+  id: number
+  position: number
+  caption: string | null
+  ai_generated: boolean
+  url: string | null
+}
+
+export interface InstructionItem {
+  id?: number
+  item_type: 'heading' | 'text' | 'image'
+  position: number
+  content?: string
+  image_url?: string
+  image_file?: File
+  _destroy?: boolean
 }
 
 export interface Recipe {
@@ -61,8 +80,11 @@ export interface Recipe {
   aliases?: string[]
   dietary_tags?: string[]
   cuisines?: string[]
+  tags?: string[]
   ingredient_groups: RecipeIngredientGroup[]
   steps: RecipeStep[]
+  step_images?: RecipeStepImage[]
+  instruction_items?: InstructionItem[]
   equipment?: string[]
   translations?: { [language: string]: any }
   translations_completed?: boolean
@@ -71,6 +93,9 @@ export interface Recipe {
   favorite?: boolean
   notes?: Note[]
   image_url?: string
+  card_image_url?: string
+  detail_image_url?: string
+  image_ai_generated?: boolean
   created_at: string
   updated_at: string
 }
@@ -136,7 +161,8 @@ export interface LoginCredentials {
 }
 
 export interface SignupData extends LoginCredentials {
-  name: string
+  name?: string
+  password_confirmation: string
 }
 
 export interface User {
@@ -144,6 +170,7 @@ export interface User {
   email: string
   name?: string
   role: 'user' | 'admin'
+  preferred_language?: SupportedLanguage
   created_at: string
 }
 
@@ -175,6 +202,7 @@ export interface RecipeFilters {
    */
   dietary_tags?: string | string[]
   cuisines?: string | string[]
+  tags?: string | string[]
   difficulty_level?: 'easy' | 'medium' | 'hard' | string[]
   max_prep_time?: number
   max_cook_time?: number
@@ -233,4 +261,17 @@ export interface ParseUrlPayload {
 export interface CheckDuplicatesPayload {
   title: string
   ingredients?: string[]
+}
+
+export type UnitCategory = 'unit_volume' | 'unit_weight' | 'unit_quantity' | 'unit_length' | 'unit_other'
+
+export interface Unit {
+  id: number
+  canonical_name: string
+  category: UnitCategory
+  name: string
+  usage_count?: number
+  translations?: Record<SupportedLanguage, string>
+  created_at?: string
+  updated_at?: string
 }

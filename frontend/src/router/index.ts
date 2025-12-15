@@ -5,11 +5,22 @@ import { useUserStore } from '@/stores/userStore'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    }
+    return { top: 0 }
+  },
   routes: [
     {
       path: '/',
       name: 'home',
       component: HomeView,
+    },
+    {
+      path: '/recipes/:id',
+      name: 'recipe-detail',
+      component: () => import('../views/RecipeDetailView.vue'),
     },
     {
       path: '/about',
@@ -23,6 +34,23 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component: () => import('../views/LoginView.vue'),
+    },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: () => import('../views/SignupView.vue'),
+    },
+    {
+      path: '/favorites',
+      name: 'favorites',
+      component: () => import('../views/FavoritesView.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: () => import('../views/ProfileView.vue'),
+      meta: { requiresAuth: true },
     },
     {
       path: '/admin/login',
@@ -53,6 +81,11 @@ const router = createRouter({
           path: 'recipes/:id',
           name: 'admin-recipe-detail',
           component: () => import('@/views/admin/AdminRecipeDetail.vue'),
+        },
+        {
+          path: 'recipes/:id/edit',
+          name: 'admin-recipe-edit',
+          component: () => import('@/views/admin/AdminRecipeEdit.vue'),
         },
         {
           path: 'data-references',
@@ -102,6 +135,14 @@ router.beforeEach(async (to, from, next) => {
   if (to.name === 'admin-login' && userStore.isAuthenticated && userStore.isAdmin) {
     next({ name: 'admin-dashboard' })
     return
+  }
+
+  // Check if route requires authentication
+  if (to.meta.requiresAuth) {
+    if (!userStore.isAuthenticated) {
+      next({ name: 'login', query: { redirect: to.fullPath } })
+      return
+    }
   }
 
   // Check if route requires admin access

@@ -46,7 +46,7 @@ module Admin
       total_pages = (total_count.to_f / per_page).ceil
 
       # Eager load associations for serialization
-      recipes = recipes.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :cuisines, recipe_steps: :translations)
+      recipes = recipes.includes(:ingredient_groups, { recipe_ingredients: :unit }, :equipment, :recipe_nutrition, :dietary_tags, :cuisines, recipe_steps: :translations)
 
       paginated_recipes = recipes
         .offset((page - 1) * per_page)
@@ -68,7 +68,7 @@ module Admin
     # GET /admin/recipes/:id
     # Show a single recipe with full details
     def show
-      recipe = Recipe.includes(:ingredient_groups, :recipe_ingredients, :equipment, :recipe_nutrition, :dietary_tags, :cuisines, :recipe_aliases, recipe_steps: :translations).find(params[:id])
+      recipe = Recipe.includes(:ingredient_groups, { recipe_ingredients: :unit }, :equipment, :recipe_nutrition, :dietary_tags, :cuisines, :recipe_aliases, recipe_steps: :translations, instruction_items: :translations).find(params[:id])
 
       render_success(
         data: { recipe: admin_recipe_json_full(recipe) }
@@ -229,17 +229,19 @@ module Admin
         :source_url,
         :admin_notes,
         :translations_completed,
-        :image,
+        :card_image,
+        :detail_image,
         :servings_original,
         :servings_min,
         :servings_max,
         :prep_minutes,
         :cook_minutes,
         :total_minutes,
+        tags: [],
         ingredient_groups_attributes: [
           :id, :name, :position, :_destroy,
           recipe_ingredients_attributes: [
-            :id, :ingredient_id, :ingredient_name, :amount, :unit, :preparation_notes, :optional, :position, :_destroy
+            :id, :ingredient_id, :ingredient_name, :amount, :unit_canonical_name, :preparation_notes, :optional, :position, :_destroy
           ]
         ],
         recipe_steps_attributes: [
@@ -259,6 +261,9 @@ module Admin
         ],
         recipe_aliases_attributes: [
           :id, :alias_name, :language, :_destroy
+        ],
+        instruction_items_attributes: [
+          :id, :item_type, :position, :content, :image, :_destroy
         ]
       )
     end
@@ -269,7 +274,9 @@ module Admin
         name: recipe.name,
         description: recipe.description,
         language: recipe.source_language,
-        image_url: recipe.image.attached? ? rails_blob_url(recipe.image, only_path: false) : nil,
+        image_url: recipe.card_image.attached? ? rails_blob_url(recipe.card_image, only_path: false) : nil,
+        card_image_url: recipe.card_image.attached? ? rails_blob_url(recipe.card_image, only_path: false) : nil,
+        detail_image_url: recipe.detail_image.attached? ? rails_blob_url(recipe.detail_image, only_path: false) : nil,
         servings: {
           original: recipe.servings_original,
           min: recipe.servings_min,
@@ -282,6 +289,7 @@ module Admin
         },
         dietary_tags: recipe.dietary_tags.map(&:key),
         cuisines: recipe.cuisines.map(&:key),
+        tags: recipe.tags,
         aliases: recipe.recipe_aliases.map(&:alias_name),
         source_url: recipe.source_url,
         admin_notes: recipe.admin_notes,
@@ -297,8 +305,9 @@ module Admin
 
     def admin_recipe_json_full(recipe)
       admin_recipe_json(recipe).merge(
-        ingredient_groups: serialize_ingredient_groups(recipe),
+        ingredient_groups: serialize_ingredient_groups(recipe, include_canonical: true),
         steps: serialize_recipe_steps(recipe),
+        instruction_items: serialize_instruction_items(recipe),
         equipment: recipe.equipment.map(&:canonical_name),
         nutrition: recipe.recipe_nutrition ? serialize_nutrition(recipe.recipe_nutrition) : nil
       )

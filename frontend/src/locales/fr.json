@@ -36,7 +36,10 @@
       "actions": "Actions",
       "yes": "Oui",
       "no": "Non",
-      "servings": "Portions",
+      "serving": "portion",
+      "servings": "portions",
+      "Serving": "Portion",
+      "Servings": "Portions",
       "difficulty": "Difficulté"
     },
     "messages": {
@@ -55,6 +58,7 @@
     "home": "Accueil",
     "recipes": "Recettes",
     "favorites": "Favoris",
+    "menu": "Menu",
     "about": "À propos",
     "contact": "Contact",
     "login": "Se connecter",
@@ -186,7 +190,25 @@
     "subtitle": "Explorez notre collection de recettes",
     "searchPlaceholder": "Rechercher des recettes...",
     "noRecipes": "Aucune recette trouvée",
-    "noRecipesDescription": "Ajustez votre recherche ou explorez toutes les recettes"
+    "noRecipesDescription": "Ajustez votre recherche ou explorez toutes les recettes",
+    "featured": "À la une",
+    "results": "Résultats",
+    "recipesCount": "Recettes",
+    "favorites": "Favoris"
+  },
+  "favorites": {
+    "title": "Recettes Favorites",
+    "searchPlaceholder": "rechercher dans vos recettes favorites...",
+    "noSearchResults": "Aucune recette favorite trouvée",
+    "empty": {
+      "title": "Pas encore de recettes favorites",
+      "description": "Quand vous trouvez des recettes que vous aimez, cliquez sur l'icône du cœur pour les enregistrer ici.",
+      "browseRecipes": "Parcourir les Recettes"
+    }
+  },
+  "profile": {
+    "accountInfo": "Informations du Compte",
+    "comingSoon": "D'autres fonctionnalités de profil arrivent bientôt..."
   },
   "recipe": {
     "view": {
@@ -196,9 +218,34 @@
       "cook": "Cuisson",
       "total": "Total",
       "ingredients": "Ingrédients",
+      "steps": "Étapes",
       "equipment": "Équipement",
       "instructions": "Instructions",
-      "nutrition": "Informations nutritionnelles"
+      "nutrition": "Informations nutritionnelles",
+      "optional": "optionnel",
+      "perServing": "Par Portion",
+      "cals": "Cals",
+      "carbs": "Glucides",
+      "protein": "Protéines",
+      "fat": "Lipides",
+      "adjustRecipe": "Ajuster la Recette",
+      "adjusted": "Ajustée",
+      "aiImageCaption": "Image générée par IA, peut ne pas être 100% précise.",
+      "aiAdjustmentDisclaimer": "Ceci est un ajustement généré par IA. Le contenu peut ne pas être 100% précis.",
+      "restoreToOriginal": "Restaurer l'Original",
+      "images": "Images",
+      "favorite": "Ajouter aux favoris",
+      "unfavorite": "Retirer des favoris"
+    },
+    "adjust": {
+      "title": "Ajuster la Recette",
+      "description": "Qu'aimeriez-vous ajuster dans cette recette ?",
+      "submit": "Ajuster la Recette",
+      "adjusting": "Ajustement en cours...",
+      "adjustedFrom": "Ajusté de :",
+      "placeholder": "Exemples :\n• La rendre végétarienne avec des champignons\n• Doubler les épices pour plus de saveur\n• Remplacer le bœuf par du poulet\n• La rendre sans gluten\n• Réduire le sucre de moitié",
+      "error": "Échec de l'ajustement. Veuillez réessayer.",
+      "errorWithMessage": "Échec de l'ajustement : {message}"
     }
   },
   "admin": {

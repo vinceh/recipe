@@ -1,6 +1,7 @@
 module Api
   module V1
     class FavoritesController < BaseController
+      include RecipeSerializer
       before_action :authenticate_user!
 
       # POST /api/v1/recipes/:id/favorite
@@ -49,7 +50,7 @@ module Api
       # Get current user's favorite recipes
       def index
         favorites = current_user.user_favorites
-          .includes(:recipe)
+          .includes(recipe: [:dietary_tags, :cuisines, { card_image_attachment: :blob }, { detail_image_attachment: :blob }])
           .order(created_at: :desc)
 
         # Pagination
@@ -83,20 +84,35 @@ module Api
 
       private
 
-      # Reuse recipe_list_json from RecipesController
       def recipe_list_json(recipe)
         {
           id: recipe.id,
           name: recipe.name,
-          language: recipe.language,
-          servings: recipe.servings['original'],
-          timing: recipe.timing,
-          dietary_tags: recipe.dietary_tags,
-          cuisines: recipe.cuisines,
+          description: recipe.description,
+          language: recipe.source_language,
+          image_url: recipe.card_image.attached? ? rails_blob_url(recipe.card_image, only_path: false) : nil,
+          card_image_url: recipe.card_image.attached? ? rails_blob_url(recipe.card_image, only_path: false) : nil,
+          detail_image_url: recipe.detail_image.attached? ? rails_blob_url(recipe.detail_image, only_path: false) : nil,
+          servings: {
+            original: recipe.servings_original,
+            min: recipe.servings_min,
+            max: recipe.servings_max
+          },
+          timing: {
+            prep_minutes: recipe.prep_minutes,
+            cook_minutes: recipe.cook_minutes,
+            total_minutes: recipe.total_minutes
+          },
+          dietary_tags: recipe.dietary_tags.map(&:display_name).compact,
+          cuisines: recipe.cuisines.map(&:display_name).compact,
+          tags: recipe.tags,
           source_url: recipe.source_url,
           difficulty_level: recipe.difficulty_level,
+          translations_completed: recipe.translations_completed,
+          last_translated_at: recipe.last_translated_at,
           created_at: recipe.created_at,
-          updated_at: recipe.updated_at
+          updated_at: recipe.updated_at,
+          favorite: true
         }
       end
     end

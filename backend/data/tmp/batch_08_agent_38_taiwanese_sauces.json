@@ -1,0 +1,1015 @@
+[
+  {
+    "canonical_name": "sha cha sauce",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 520,
+      "protein": 4.2,
+      "carbohydrates": 18.5,
+      "fat": 48.0,
+      "fiber": 2.1,
+      "sodium": 1800
+    },
+    "aliases": [
+      "沙茶醬",
+      "sha cha jiang",
+      "shacha sauce",
+      "Chinese barbecue sauce",
+      "bull head sauce"
+    ],
+    "common_units": ["tbsp", "tsp", "g"]
+  },
+  {
+    "canonical_name": "soy paste",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 180,
+      "protein": 12.5,
+      "carbohydrates": 22.0,
+      "fat": 3.8,
+      "fiber": 4.2,
+      "sodium": 4200
+    },
+    "aliases": [
+      "豆瓣醬",
+      "dou ban jiang",
+      "doubanjiang",
+      "fermented bean paste",
+      "黃豆醬",
+      "huang dou jiang"
+    ],
+    "common_units": ["tbsp", "tsp", "g"]
+  },
+  {
+    "canonical_name": "black vinegar",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 22,
+      "protein": 0.8,
+      "carbohydrates": 4.5,
+      "fat": 0.0,
+      "fiber": 0.0,
+      "sodium": 680
+    },
+    "aliases": [
+      "黑醋",
+      "hei cu",
+      "Chinkiang vinegar",
+      "鎮江醋",
+      "zhen jiang cu",
+      "Chinese black vinegar"
+    ],
+    "common_units": ["tbsp", "tsp", "ml"]
+  },
+  {
+    "canonical_name": "rice vinegar",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 18,
+      "protein": 0.3,
+      "carbohydrates": 3.8,
+      "fat": 0.0,
+      "fiber": 0.0,
+      "sodium": 420
+    },
+    "aliases": [
+      "米醋",
+      "mi cu",
+      "white rice vinegar",
+      "白醋",
+      "bai cu"
+    ],
+    "common_units": ["tbsp", "tsp", "ml"]
+  },
+  {
+    "canonical_name": "toasted sesame oil",
+    "category": "oil",
+    "per_100g": {
+      "calories": 884,
+      "protein": 0.0,
+      "carbohydrates": 0.0,
+      "fat": 100.0,
+      "fiber": 0.0,
+      "sodium": 0
+    },
+    "aliases": [
+      "麻油",
+      "ma you",
+      "sesame oil",
+      "香油",
+      "xiang you",
+      "black sesame oil"
+    ],
+    "common_units": ["tbsp", "tsp", "ml"]
+  },
+  {
+    "canonical_name": "five spice powder",
+    "category": "spice",
+    "per_100g": {
+      "calories": 345,
+      "protein": 8.2,
+      "carbohydrates": 62.5,
+      "fat": 8.5,
+      "fiber": 18.4,
+      "sodium": 95
+    },
+    "aliases": [
+      "五香粉",
+      "wu xiang fen",
+      "Chinese five spice",
+      "five spice"
+    ],
+    "common_units": ["tsp", "tbsp", "g"]
+  },
+  {
+    "canonical_name": "wax apple",
+    "category": "fruit",
+    "per_100g": {
+      "calories": 34,
+      "protein": 0.6,
+      "carbohydrates": 8.2,
+      "fat": 0.2,
+      "fiber": 1.4,
+      "sodium": 2
+    },
+    "aliases": [
+      "蓮霧",
+      "lian wu",
+      "rose apple",
+      "bell fruit",
+      "water apple",
+      "jambu"
+    ],
+    "common_units": ["piece", "cup", "g"]
+  },
+  {
+    "canonical_name": "dragon fruit",
+    "category": "fruit",
+    "per_100g": {
+      "calories": 60,
+      "protein": 1.2,
+      "carbohydrates": 13.0,
+      "fat": 0.4,
+      "fiber": 3.0,
+      "sodium": 4
+    },
+    "aliases": [
+      "火龍果",
+      "huo long guo",
+      "pitaya",
+      "red dragon fruit",
+      "white dragon fruit"
+    ],
+    "common_units": ["piece", "cup", "g"]
+  },
+  {
+    "canonical_name": "oyster sauce",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 120,
+      "protein": 2.8,
+      "carbohydrates": 22.0,
+      "fat": 1.2,
+      "fiber": 0.5,
+      "sodium": 2800
+    },
+    "aliases": [
+      "蠔油",
+      "hao you",
+      "háo yóu",
+      "oyster flavored sauce"
+    ],
+    "common_units": ["tbsp", "tsp", "ml"]
+  },
+  {
+    "canonical_name": "chili oil",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 840,
+      "protein": 1.5,
+      "carbohydrates": 4.2,
+      "fat": 92.0,
+      "fiber": 2.8,
+      "sodium": 180
+    },
+    "aliases": [
+      "辣油",
+      "la you",
+      "辣椒油",
+      "la jiao you",
+      "hot chili oil"
+    ],
+    "common_units": ["tbsp", "tsp", "ml"]
+  },
+  {
+    "canonical_name": "white pepper powder",
+    "category": "spice",
+    "per_100g": {
+      "calories": 296,
+      "protein": 10.4,
+      "carbohydrates": 68.5,
+      "fat": 2.1,
+      "fiber": 26.2,
+      "sodium": 45
+    },
+    "aliases": [
+      "白胡椒粉",
+      "bai hu jiao fen",
+      "white pepper",
+      "ground white pepper"
+    ],
+    "common_units": ["tsp", "tbsp", "g"]
+  },
+  {
+    "canonical_name": "rice wine",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 130,
+      "protein": 1.2,
+      "carbohydrates": 5.0,
+      "fat": 0.0,
+      "fiber": 0.0,
+      "sodium": 250
+    },
+    "aliases": [
+      "米酒",
+      "mi jiu",
+      "Shaoxing wine",
+      "紹興酒",
+      "shao xing jiu",
+      "cooking wine"
+    ],
+    "common_units": ["tbsp", "ml", "cup"]
+  },
+  {
+    "canonical_name": "dried shrimp paste",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 240,
+      "protein": 35.0,
+      "carbohydrates": 8.5,
+      "fat": 6.8,
+      "fiber": 0.0,
+      "sodium": 5200
+    },
+    "aliases": [
+      "蝦醬",
+      "xia jiang",
+      "shrimp paste",
+      "belacan",
+      "蝦膏",
+      "xia gao"
+    ],
+    "common_units": ["tsp", "tbsp", "g"]
+  },
+  {
+    "canonical_name": "taiwanese basil",
+    "category": "herb",
+    "per_100g": {
+      "calories": 23,
+      "protein": 3.2,
+      "carbohydrates": 2.7,
+      "fat": 0.6,
+      "fiber": 1.6,
+      "sodium": 4
+    },
+    "aliases": [
+      "九層塔",
+      "jiu ceng ta",
+      "three cup basil",
+      "Thai basil",
+      "holy basil"
+    ],
+    "common_units": ["cup", "bunch", "g"]
+  },
+  {
+    "canonical_name": "guava",
+    "category": "fruit",
+    "per_100g": {
+      "calories": 68,
+      "protein": 2.6,
+      "carbohydrates": 14.3,
+      "fat": 1.0,
+      "fiber": 5.4,
+      "sodium": 2
+    },
+    "aliases": [
+      "芭樂",
+      "ba le",
+      "guava fruit",
+      "番石榴",
+      "fan shi liu"
+    ],
+    "common_units": ["piece", "cup", "g"]
+  },
+  {
+    "canonical_name": "taiwanese sausage seasoning",
+    "category": "spice",
+    "per_100g": {
+      "calories": 280,
+      "protein": 6.5,
+      "carbohydrates": 55.0,
+      "fat": 4.2,
+      "fiber": 8.5,
+      "sodium": 3200
+    },
+    "aliases": [
+      "香腸調料",
+      "xiang chang tiao liao",
+      "sausage spice mix"
+    ],
+    "common_units": ["tbsp", "tsp", "g"]
+  },
+  {
+    "canonical_name": "rock sugar",
+    "category": "sweetener",
+    "per_100g": {
+      "calories": 387,
+      "protein": 0.0,
+      "carbohydrates": 99.8,
+      "fat": 0.0,
+      "fiber": 0.0,
+      "sodium": 1
+    },
+    "aliases": [
+      "冰糖",
+      "bing tang",
+      "Chinese rock sugar",
+      "crystal sugar"
+    ],
+    "common_units": ["tbsp", "tsp", "g", "piece"]
+  },
+  {
+    "canonical_name": "sweet potato leaves",
+    "category": "vegetable",
+    "per_100g": {
+      "calories": 35,
+      "protein": 3.0,
+      "carbohydrates": 6.8,
+      "fat": 0.3,
+      "fiber": 2.3,
+      "sodium": 8
+    },
+    "aliases": [
+      "地瓜葉",
+      "di gua ye",
+      "sweet potato greens",
+      "番薯葉",
+      "fan shu ye"
+    ],
+    "common_units": ["cup", "bunch", "g"]
+  },
+  {
+    "canonical_name": "taiwanese pickled mustard greens",
+    "category": "vegetable",
+    "per_100g": {
+      "calories": 22,
+      "protein": 2.1,
+      "carbohydrates": 3.5,
+      "fat": 0.4,
+      "fiber": 2.8,
+      "sodium": 1800
+    },
+    "aliases": [
+      "酸菜",
+      "suan cai",
+      "pickled cabbage",
+      "sour mustard greens",
+      "梅干菜",
+      "mei gan cai"
+    ],
+    "common_units": ["cup", "g", "tbsp"]
+  },
+  {
+    "canonical_name": "taiwanese preserved radish",
+    "category": "vegetable",
+    "per_100g": {
+      "calories": 45,
+      "protein": 1.8,
+      "carbohydrates": 9.2,
+      "fat": 0.2,
+      "fiber": 3.5,
+      "sodium": 2400
+    },
+    "aliases": [
+      "菜脯",
+      "cai pu",
+      "dried radish",
+      "preserved daikon",
+      "蘿蔔乾",
+      "luo bo gan"
+    ],
+    "common_units": ["tbsp", "cup", "g"]
+  },
+  {
+    "canonical_name": "longan",
+    "category": "fruit",
+    "per_100g": {
+      "calories": 60,
+      "protein": 1.3,
+      "carbohydrates": 15.1,
+      "fat": 0.1,
+      "fiber": 1.1,
+      "sodium": 0
+    },
+    "aliases": [
+      "龍眼",
+      "long yan",
+      "dragon eye fruit",
+      "longan fruit",
+      "桂圓",
+      "gui yuan"
+    ],
+    "common_units": ["piece", "cup", "g"]
+  },
+  {
+    "canonical_name": "taiwanese fried shallots",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 560,
+      "protein": 5.2,
+      "carbohydrates": 35.0,
+      "fat": 45.0,
+      "fiber": 4.8,
+      "sodium": 320
+    },
+    "aliases": [
+      "油葱酥",
+      "you cong su",
+      "crispy shallots",
+      "fried shallot crisp",
+      "紅蔥酥",
+      "hong cong su"
+    ],
+    "common_units": ["tbsp", "tsp", "g"]
+  },
+  {
+    "canonical_name": "taiwanese soy sauce paste",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 140,
+      "protein": 8.5,
+      "carbohydrates": 28.0,
+      "fat": 0.5,
+      "fiber": 1.2,
+      "sodium": 4500
+    },
+    "aliases": [
+      "醬油膏",
+      "jiang you gao",
+      "thick soy sauce",
+      "sweet soy paste",
+      "甜醬油",
+      "tian jiang you"
+    ],
+    "common_units": ["tbsp", "tsp", "ml"]
+  },
+  {
+    "canonical_name": "sugar cane",
+    "category": "fruit",
+    "per_100g": {
+      "calories": 58,
+      "protein": 0.4,
+      "carbohydrates": 13.2,
+      "fat": 0.1,
+      "fiber": 0.6,
+      "sodium": 17
+    },
+    "aliases": [
+      "甘蔗",
+      "gan zhe",
+      "sugarcane",
+      "sugar cane juice"
+    ],
+    "common_units": ["cup", "ml", "piece"]
+  },
+  {
+    "canonical_name": "star fruit",
+    "category": "fruit",
+    "per_100g": {
+      "calories": 31,
+      "protein": 1.0,
+      "carbohydrates": 6.7,
+      "fat": 0.3,
+      "fiber": 2.8,
+      "sodium": 2
+    },
+    "aliases": [
+      "楊桃",
+      "yang tao",
+      "carambola",
+      "starfruit"
+    ],
+    "common_units": ["piece", "cup", "g"]
+  },
+  {
+    "canonical_name": "papaya",
+    "category": "fruit",
+    "per_100g": {
+      "calories": 43,
+      "protein": 0.5,
+      "carbohydrates": 10.8,
+      "fat": 0.3,
+      "fiber": 1.7,
+      "sodium": 8
+    },
+    "aliases": [
+      "木瓜",
+      "mu gua",
+      "pawpaw",
+      "papaya fruit"
+    ],
+    "common_units": ["cup", "piece", "g"]
+  },
+  {
+    "canonical_name": "taiwanese rice koji",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 320,
+      "protein": 8.0,
+      "carbohydrates": 68.0,
+      "fat": 1.5,
+      "fiber": 2.0,
+      "sodium": 15
+    },
+    "aliases": [
+      "米麴",
+      "mi qu",
+      "rice malt",
+      "koji",
+      "酒麴",
+      "jiu qu"
+    ],
+    "common_units": ["tbsp", "g", "tsp"]
+  },
+  {
+    "canonical_name": "taiwanese fermented tofu",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 120,
+      "protein": 12.0,
+      "carbohydrates": 4.5,
+      "fat": 6.0,
+      "fiber": 0.8,
+      "sodium": 3800
+    },
+    "aliases": [
+      "豆腐乳",
+      "dou fu ru",
+      "fermented bean curd",
+      "腐乳",
+      "fu ru",
+      "stinky tofu sauce"
+    ],
+    "common_units": ["piece", "tbsp", "g"]
+  },
+  {
+    "canonical_name": "oolong tea leaves",
+    "category": "herb",
+    "per_100g": {
+      "calories": 1,
+      "protein": 0.2,
+      "carbohydrates": 0.3,
+      "fat": 0.0,
+      "fiber": 0.0,
+      "sodium": 2
+    },
+    "aliases": [
+      "烏龍茶",
+      "wu long cha",
+      "oolong tea",
+      "wulong tea",
+      "青茶",
+      "qing cha"
+    ],
+    "common_units": ["tbsp", "tsp", "g"]
+  },
+  {
+    "canonical_name": "taiwanese garlic chili sauce",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 85,
+      "protein": 2.5,
+      "carbohydrates": 15.0,
+      "fat": 1.8,
+      "fiber": 3.2,
+      "sodium": 2200
+    },
+    "aliases": [
+      "蒜蓉辣椒醬",
+      "suan rong la jiao jiang",
+      "garlic chili paste",
+      "蒜辣醬",
+      "suan la jiang"
+    ],
+    "common_units": ["tbsp", "tsp", "g"]
+  },
+  {
+    "canonical_name": "taiwanese peanut powder",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 580,
+      "protein": 26.0,
+      "carbohydrates": 18.0,
+      "fat": 48.0,
+      "fiber": 8.5,
+      "sodium": 25
+    },
+    "aliases": [
+      "花生粉",
+      "hua sheng fen",
+      "ground peanuts",
+      "peanut flour",
+      "crushed peanuts"
+    ],
+    "common_units": ["tbsp", "cup", "g"]
+  },
+  {
+    "canonical_name": "lychee",
+    "category": "fruit",
+    "per_100g": {
+      "calories": 66,
+      "protein": 0.8,
+      "carbohydrates": 16.5,
+      "fat": 0.4,
+      "fiber": 1.3,
+      "sodium": 1
+    },
+    "aliases": [
+      "荔枝",
+      "li zhi",
+      "litchi",
+      "lychee fruit"
+    ],
+    "common_units": ["piece", "cup", "g"]
+  },
+  {
+    "canonical_name": "taiwanese garlic sauce",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 145,
+      "protein": 3.2,
+      "carbohydrates": 28.0,
+      "fat": 2.5,
+      "fiber": 1.8,
+      "sodium": 1600
+    },
+    "aliases": [
+      "蒜泥醬",
+      "suan ni jiang",
+      "garlic paste",
+      "minced garlic sauce",
+      "蒜醬",
+      "suan jiang"
+    ],
+    "common_units": ["tbsp", "tsp", "g"]
+  },
+  {
+    "canonical_name": "taiwanese sweet chili sauce",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 160,
+      "protein": 0.8,
+      "carbohydrates": 38.0,
+      "fat": 0.5,
+      "fiber": 1.2,
+      "sodium": 850
+    },
+    "aliases": [
+      "甜辣醬",
+      "tian la jiang",
+      "sweet and sour chili sauce",
+      "Thai sweet chili sauce"
+    ],
+    "common_units": ["tbsp", "tsp", "ml"]
+  },
+  {
+    "canonical_name": "taiwanese sesame paste",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 595,
+      "protein": 18.0,
+      "carbohydrates": 22.0,
+      "fat": 52.0,
+      "fiber": 12.0,
+      "sodium": 180
+    },
+    "aliases": [
+      "芝麻醬",
+      "zhi ma jiang",
+      "sesame butter",
+      "tahini",
+      "麻醬",
+      "ma jiang"
+    ],
+    "common_units": ["tbsp", "tsp", "g"]
+  },
+  {
+    "canonical_name": "pomelo",
+    "category": "fruit",
+    "per_100g": {
+      "calories": 38,
+      "protein": 0.8,
+      "carbohydrates": 9.6,
+      "fat": 0.0,
+      "fiber": 1.0,
+      "sodium": 1
+    },
+    "aliases": [
+      "柚子",
+      "you zi",
+      "Chinese grapefruit",
+      "pummelo",
+      "文旦",
+      "wen dan"
+    ],
+    "common_units": ["piece", "cup", "g"]
+  },
+  {
+    "canonical_name": "taiwanese hoisin sauce",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 220,
+      "protein": 3.5,
+      "carbohydrates": 45.0,
+      "fat": 4.0,
+      "fiber": 2.5,
+      "sodium": 2100
+    },
+    "aliases": [
+      "海鮮醬",
+      "hai xian jiang",
+      "hoisin sauce",
+      "Chinese barbecue sauce",
+      "甜麵醬",
+      "tian mian jiang"
+    ],
+    "common_units": ["tbsp", "tsp", "ml"]
+  },
+  {
+    "canonical_name": "taiwanese chili flakes",
+    "category": "spice",
+    "per_100g": {
+      "calories": 318,
+      "protein": 12.0,
+      "carbohydrates": 56.0,
+      "fat": 14.2,
+      "fiber": 28.0,
+      "sodium": 80
+    },
+    "aliases": [
+      "辣椒片",
+      "la jiao pian",
+      "crushed red pepper",
+      "chili pepper flakes",
+      "辣椒碎",
+      "la jiao sui"
+    ],
+    "common_units": ["tsp", "tbsp", "g"]
+  },
+  {
+    "canonical_name": "persimmon",
+    "category": "fruit",
+    "per_100g": {
+      "calories": 70,
+      "protein": 0.6,
+      "carbohydrates": 18.6,
+      "fat": 0.2,
+      "fiber": 3.6,
+      "sodium": 1
+    },
+    "aliases": [
+      "柿子",
+      "shi zi",
+      "kaki",
+      "persimmon fruit"
+    ],
+    "common_units": ["piece", "cup", "g"]
+  },
+  {
+    "canonical_name": "taiwanese plum sauce",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 180,
+      "protein": 1.2,
+      "carbohydrates": 42.0,
+      "fat": 0.5,
+      "fiber": 2.8,
+      "sodium": 1400
+    },
+    "aliases": [
+      "梅子醬",
+      "mei zi jiang",
+      "plum sauce",
+      "sour plum sauce",
+      "酸梅醬",
+      "suan mei jiang"
+    ],
+    "common_units": ["tbsp", "tsp", "ml"]
+  },
+  {
+    "canonical_name": "taiwanese scallion oil",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 820,
+      "protein": 0.8,
+      "carbohydrates": 4.5,
+      "fat": 90.0,
+      "fiber": 1.2,
+      "sodium": 45
+    },
+    "aliases": [
+      "葱油",
+      "cong you",
+      "scallion-infused oil",
+      "green onion oil",
+      "蔥油",
+      "cong you"
+    ],
+    "common_units": ["tbsp", "tsp", "ml"]
+  },
+  {
+    "canonical_name": "taiwanese star anise",
+    "category": "spice",
+    "per_100g": {
+      "calories": 337,
+      "protein": 17.6,
+      "carbohydrates": 50.0,
+      "fat": 15.9,
+      "fiber": 14.6,
+      "sodium": 16
+    },
+    "aliases": [
+      "八角",
+      "ba jiao",
+      "star anise",
+      "Chinese star anise",
+      "大茴香",
+      "da hui xiang"
+    ],
+    "common_units": ["piece", "tsp", "g"]
+  },
+  {
+    "canonical_name": "passion fruit",
+    "category": "fruit",
+    "per_100g": {
+      "calories": 97,
+      "protein": 2.2,
+      "carbohydrates": 23.4,
+      "fat": 0.7,
+      "fiber": 10.4,
+      "sodium": 28
+    },
+    "aliases": [
+      "百香果",
+      "bai xiang guo",
+      "passionfruit",
+      "maracuja"
+    ],
+    "common_units": ["piece", "cup", "g"]
+  },
+  {
+    "canonical_name": "taiwanese cilantro",
+    "category": "herb",
+    "per_100g": {
+      "calories": 23,
+      "protein": 2.1,
+      "carbohydrates": 3.7,
+      "fat": 0.5,
+      "fiber": 2.8,
+      "sodium": 46
+    },
+    "aliases": [
+      "香菜",
+      "xiang cai",
+      "coriander",
+      "cilantro leaves",
+      "芫荽",
+      "yan sui"
+    ],
+    "common_units": ["cup", "bunch", "g"]
+  },
+  {
+    "canonical_name": "taiwanese sichuan peppercorn",
+    "category": "spice",
+    "per_100g": {
+      "calories": 258,
+      "protein": 10.0,
+      "carbohydrates": 57.0,
+      "fat": 6.5,
+      "fiber": 21.0,
+      "sodium": 28
+    },
+    "aliases": [
+      "花椒",
+      "hua jiao",
+      "Sichuan pepper",
+      "prickly ash",
+      "szechuan pepper"
+    ],
+    "common_units": ["tsp", "tbsp", "g"]
+  },
+  {
+    "canonical_name": "taiwanese rice syrup",
+    "category": "sweetener",
+    "per_100g": {
+      "calories": 320,
+      "protein": 0.5,
+      "carbohydrates": 78.0,
+      "fat": 0.1,
+      "fiber": 0.0,
+      "sodium": 25
+    },
+    "aliases": [
+      "麥芽糖",
+      "mai ya tang",
+      "maltose syrup",
+      "malt syrup",
+      "rice malt"
+    ],
+    "common_units": ["tbsp", "tsp", "ml"]
+  },
+  {
+    "canonical_name": "taiwanese ginger paste",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 80,
+      "protein": 1.8,
+      "carbohydrates": 17.8,
+      "fat": 0.8,
+      "fiber": 2.0,
+      "sodium": 350
+    },
+    "aliases": [
+      "薑泥",
+      "jiang ni",
+      "ginger paste",
+      "minced ginger",
+      "薑蓉",
+      "jiang rong"
+    ],
+    "common_units": ["tbsp", "tsp", "g"]
+  },
+  {
+    "canonical_name": "taiwanese curry powder",
+    "category": "spice",
+    "per_100g": {
+      "calories": 325,
+      "protein": 14.3,
+      "carbohydrates": 55.8,
+      "fat": 14.0,
+      "fiber": 33.0,
+      "sodium": 52
+    },
+    "aliases": [
+      "咖哩粉",
+      "ka li fen",
+      "curry powder",
+      "curry spice mix",
+      "咖喱粉",
+      "ga li fen"
+    ],
+    "common_units": ["tbsp", "tsp", "g"]
+  },
+  {
+    "canonical_name": "taiwanese chili bean paste",
+    "category": "condiment",
+    "per_100g": {
+      "calories": 135,
+      "protein": 6.5,
+      "carbohydrates": 18.0,
+      "fat": 4.2,
+      "fiber": 5.5,
+      "sodium": 3600
+    },
+    "aliases": [
+      "辣豆瓣醬",
+      "la dou ban jiang",
+      "spicy bean paste",
+      "hot bean sauce",
+      "豆瓣辣醬",
+      "dou ban la jiang"
+    ],
+    "common_units": ["tbsp", "tsp", "g"]
+  },
+  {
+    "canonical_name": "taiwanese dried tangerine peel",
+    "category": "spice",
+    "per_100g": {
+      "calories": 250,
+      "protein": 5.2,
+      "carbohydrates": 60.0,
+      "fat": 1.5,
+      "fiber": 25.0,
+      "sodium": 35
+    },
+    "aliases": [
+      "陳皮",
+      "chen pi",
+      "dried citrus peel",
+      "orange peel",
+      "mandarin peel"
+    ],
+    "common_units": ["piece", "tsp", "g"]
+  }
+]

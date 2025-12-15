@@ -1,0 +1,758 @@
+{
+  "batch": 6,
+  "agent": 28,
+  "category": "korean_seasonings",
+  "generated_at": "2025-12-11T00:00:00Z",
+  "ingredients": [
+    {
+      "canonical_name": "gochugaru coarse",
+      "category": "spice",
+      "per_100g": {
+        "calories": 282,
+        "protein_g": 12.0,
+        "carbs_g": 57.0,
+        "fat_g": 5.0
+      },
+      "aliases": {
+        "ko": "굵은 고춧가루",
+        "romanization": "gulgeun gochutgaru"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "gochugaru fine",
+      "category": "spice",
+      "per_100g": {
+        "calories": 282,
+        "protein_g": 12.0,
+        "carbs_g": 57.0,
+        "fat_g": 5.0
+      },
+      "aliases": {
+        "ko": "고운 고춧가루",
+        "romanization": "goun gochutgaru"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "perilla oil",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0
+      },
+      "aliases": {
+        "ko": "들기름",
+        "romanization": "deulgireum"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "sesame oil",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0
+      },
+      "aliases": {
+        "ko": "참기름",
+        "romanization": "chamgireum"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "korean soup soy sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 53,
+        "protein_g": 5.6,
+        "carbs_g": 4.9,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "ko": "국간장",
+        "romanization": "guk-ganjang"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "korean dark soy sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 60,
+        "protein_g": 6.0,
+        "carbs_g": 5.6,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "ko": "진간장",
+        "romanization": "jin-ganjang"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "rice vinegar",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 0.0,
+        "carbs_g": 0.4,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "ko": "쌀식초",
+        "romanization": "ssal-sikcho"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "persimmon vinegar",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 0.1,
+        "carbs_g": 0.9,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "ko": "감식초",
+        "romanization": "gam-sikcho"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "corn syrup",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 286,
+        "protein_g": 0.0,
+        "carbs_g": 71.5,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "ko": "물엿",
+        "romanization": "mulyeot"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "rice syrup",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 0.5,
+        "carbs_g": 78.0,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "ko": "조청",
+        "romanization": "jocheong"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "plum extract",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 250,
+        "protein_g": 0.3,
+        "carbs_g": 62.0,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "ko": "매실청",
+        "romanization": "maesil-cheong"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "beef dashida",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 180,
+        "protein_g": 8.0,
+        "carbs_g": 35.0,
+        "fat_g": 2.0
+      },
+      "aliases": {
+        "ko": "쇠고기 다시다",
+        "romanization": "soegogi dashida"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "anchovy dashida",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 175,
+        "protein_g": 10.0,
+        "carbs_g": 32.0,
+        "fat_g": 1.5
+      },
+      "aliases": {
+        "ko": "멸치 다시다",
+        "romanization": "myeolchi dashida"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "perilla seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 537,
+        "protein_g": 19.0,
+        "carbs_g": 14.0,
+        "fat_g": 45.0
+      },
+      "aliases": {
+        "ko": "들깨",
+        "romanization": "deulkkae"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "roasted sesame seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 573,
+        "protein_g": 17.7,
+        "carbs_g": 23.5,
+        "fat_g": 49.7
+      },
+      "aliases": {
+        "ko": "볶은 참깨",
+        "romanization": "bokkeun chamkkae"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "korean mustard",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 60,
+        "protein_g": 4.0,
+        "carbs_g": 6.0,
+        "fat_g": 3.0
+      },
+      "aliases": {
+        "ko": "겨자",
+        "romanization": "gyeoja"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "doenjang",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 130,
+        "protein_g": 12.0,
+        "carbs_g": 12.0,
+        "fat_g": 4.0
+      },
+      "aliases": {
+        "ko": "된장",
+        "romanization": "doenjang"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "gochujang",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 240,
+        "protein_g": 5.8,
+        "carbs_g": 47.0,
+        "fat_g": 2.4
+      },
+      "aliases": {
+        "ko": "고추장",
+        "romanization": "gochujang"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "ssamjang",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 165,
+        "protein_g": 7.5,
+        "carbs_g": 23.0,
+        "fat_g": 4.5
+      },
+      "aliases": {
+        "ko": "쌈장",
+        "romanization": "ssamjang"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "chunjang",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 195,
+        "protein_g": 6.5,
+        "carbs_g": 35.0,
+        "fat_g": 3.5
+      },
+      "aliases": {
+        "ko": "춘장",
+        "romanization": "chunjang"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "korean fish sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 5.0,
+        "carbs_g": 2.5,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "ko": "액젓",
+        "romanization": "aekjeot"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "anchovy fish sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 37,
+        "protein_g": 5.5,
+        "carbs_g": 2.8,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "ko": "멸치액젓",
+        "romanization": "myeolchi-aekjeot"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "korean garlic powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 331,
+        "protein_g": 16.6,
+        "carbs_g": 72.7,
+        "fat_g": 0.7
+      },
+      "aliases": {
+        "ko": "마늘가루",
+        "romanization": "maneul-garu"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "korean ginger powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 335,
+        "protein_g": 9.1,
+        "carbs_g": 71.6,
+        "fat_g": 4.2
+      },
+      "aliases": {
+        "ko": "생강가루",
+        "romanization": "saengang-garu"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "korean black pepper",
+      "category": "spice",
+      "per_100g": {
+        "calories": 251,
+        "protein_g": 10.4,
+        "carbs_g": 64.8,
+        "fat_g": 3.3
+      },
+      "aliases": {
+        "ko": "후추",
+        "romanization": "huchu"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "mirin",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 226,
+        "protein_g": 0.3,
+        "carbs_g": 43.0,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "ko": "미림",
+        "romanization": "mirim"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "korean cooking wine",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 65,
+        "protein_g": 0.5,
+        "carbs_g": 3.5,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "ko": "요리술",
+        "romanization": "yori-sul"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "perilla seed powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 537,
+        "protein_g": 19.0,
+        "carbs_g": 14.0,
+        "fat_g": 45.0
+      },
+      "aliases": {
+        "ko": "들깨가루",
+        "romanization": "deulkkae-garu"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "korean sea salt",
+      "category": "spice",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "ko": "천일염",
+        "romanization": "cheonil-yeom"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "refined salt",
+      "category": "spice",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "ko": "정제염",
+        "romanization": "jeongje-yeom"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "korean curry powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 325,
+        "protein_g": 14.3,
+        "carbs_g": 55.8,
+        "fat_g": 13.8
+      },
+      "aliases": {
+        "ko": "카레가루",
+        "romanization": "kare-garu"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "white sesame seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 573,
+        "protein_g": 17.7,
+        "carbs_g": 23.5,
+        "fat_g": 49.7
+      },
+      "aliases": {
+        "ko": "흰깨",
+        "romanization": "huinkkae"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "black sesame seeds",
+      "category": "spice",
+      "per_100g": {
+        "calories": 573,
+        "protein_g": 17.7,
+        "carbs_g": 23.5,
+        "fat_g": 49.7
+      },
+      "aliases": {
+        "ko": "검은깨",
+        "romanization": "geomeunkkae"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "sesame salt",
+      "category": "spice",
+      "per_100g": {
+        "calories": 458,
+        "protein_g": 14.2,
+        "carbs_g": 18.8,
+        "fat_g": 39.8
+      },
+      "aliases": {
+        "ko": "깨소금",
+        "romanization": "kkaesogeum"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "korean red pepper powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 12.0,
+        "carbs_g": 56.0,
+        "fat_g": 17.3
+      },
+      "aliases": {
+        "ko": "고춧가루",
+        "romanization": "gochutgaru"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "korean chili threads",
+      "category": "spice",
+      "per_100g": {
+        "calories": 282,
+        "protein_g": 12.0,
+        "carbs_g": 57.0,
+        "fat_g": 5.0
+      },
+      "aliases": {
+        "ko": "실고추",
+        "romanization": "silgochu"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "dried kelp powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 1.7,
+        "carbs_g": 9.6,
+        "fat_g": 0.6
+      },
+      "aliases": {
+        "ko": "다시마가루",
+        "romanization": "dashima-garu"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "dried anchovy powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 278,
+        "protein_g": 60.0,
+        "carbs_g": 0.0,
+        "fat_g": 4.5
+      },
+      "aliases": {
+        "ko": "멸치가루",
+        "romanization": "myeolchi-garu"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "dried shrimp powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 295,
+        "protein_g": 63.0,
+        "carbs_g": 1.2,
+        "fat_g": 3.7
+      },
+      "aliases": {
+        "ko": "새우가루",
+        "romanization": "saeu-garu"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "korean chicken stock powder",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 185,
+        "protein_g": 9.0,
+        "carbs_g": 33.0,
+        "fat_g": 2.5
+      },
+      "aliases": {
+        "ko": "닭육수 가루",
+        "romanization": "dak-yuksu garu"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "sancho pepper",
+      "category": "spice",
+      "per_100g": {
+        "calories": 258,
+        "protein_g": 10.0,
+        "carbs_g": 65.0,
+        "fat_g": 3.5
+      },
+      "aliases": {
+        "ko": "산초",
+        "romanization": "sancho"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "korean wasabi",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 109,
+        "protein_g": 4.8,
+        "carbs_g": 23.5,
+        "fat_g": 0.6
+      },
+      "aliases": {
+        "ko": "고추냉이",
+        "romanization": "gochu-naengi"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "fermented shrimp paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 68,
+        "protein_g": 11.0,
+        "carbs_g": 3.5,
+        "fat_g": 1.2
+      },
+      "aliases": {
+        "ko": "새우젓",
+        "romanization": "saeu-jeot"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "fermented anchovy paste",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 65,
+        "protein_g": 10.5,
+        "carbs_g": 3.8,
+        "fat_g": 1.0
+      },
+      "aliases": {
+        "ko": "멸치젓",
+        "romanization": "myeolchi-jeot"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "oligodang",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 270,
+        "protein_g": 0.0,
+        "carbs_g": 67.5,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "ko": "올리고당",
+        "romanization": "oligodang"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "yeot",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 320,
+        "protein_g": 0.8,
+        "carbs_g": 78.5,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "ko": "엿",
+        "romanization": "yeot"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "korean oyster sauce",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 51,
+        "protein_g": 2.1,
+        "carbs_g": 11.0,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "ko": "굴소스",
+        "romanization": "gul-soseu"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "cheongyang chili powder",
+      "category": "spice",
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 12.0,
+        "carbs_g": 56.0,
+        "fat_g": 17.3
+      },
+      "aliases": {
+        "ko": "청양고춧가루",
+        "romanization": "cheongyang-gochutgaru"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "korean mayo",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 680,
+        "protein_g": 1.2,
+        "carbs_g": 4.8,
+        "fat_g": 72.0
+      },
+      "aliases": {
+        "ko": "마요네즈",
+        "romanization": "mayonejeu"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "korean ketchup",
+      "category": "condiment",
+      "per_100g": {
+        "calories": 112,
+        "protein_g": 1.2,
+        "carbs_g": 27.0,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "ko": "케첩",
+        "romanization": "kechap"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    }
+  ]
+}

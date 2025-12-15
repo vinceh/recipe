@@ -1,0 +1,527 @@
+{
+  "batch": 9,
+  "agent": 44,
+  "category": "filipino",
+  "ingredients": [
+    {
+      "canonical_name": "calamansi",
+      "category": "produce",
+      "aliases": ["calamondin", "Philippine lime", "kalamansi", "limonsito"],
+      "common_units": ["piece", "tablespoon", "cup"],
+      "per_100g": {
+        "calories": 30,
+        "protein": 0.5,
+        "carbs": 9.5,
+        "fat": 0.1,
+        "fiber": 0.8
+      }
+    },
+    {
+      "canonical_name": "banana ketchup",
+      "category": "condiments",
+      "aliases": ["banana sauce", "tomato ketchup substitute"],
+      "common_units": ["tablespoon", "cup"],
+      "per_100g": {
+        "calories": 104,
+        "protein": 0.3,
+        "carbs": 26.0,
+        "fat": 0.1,
+        "fiber": 0.5
+      }
+    },
+    {
+      "canonical_name": "sukang iloco",
+      "category": "condiments",
+      "aliases": ["Ilocano vinegar", "sugarcane vinegar", "sukang tubo"],
+      "common_units": ["tablespoon", "cup"],
+      "per_100g": {
+        "calories": 18,
+        "protein": 0.0,
+        "carbs": 0.9,
+        "fat": 0.0,
+        "fiber": 0.0
+      }
+    },
+    {
+      "canonical_name": "sukang tuba",
+      "category": "condiments",
+      "aliases": ["coconut palm vinegar", "palm vinegar", "tuba vinegar"],
+      "common_units": ["tablespoon", "cup"],
+      "per_100g": {
+        "calories": 20,
+        "protein": 0.1,
+        "carbs": 1.0,
+        "fat": 0.0,
+        "fiber": 0.0
+      }
+    },
+    {
+      "canonical_name": "coconut vinegar",
+      "category": "condiments",
+      "aliases": ["sukang niyog", "sukang puti"],
+      "common_units": ["tablespoon", "cup"],
+      "per_100g": {
+        "calories": 20,
+        "protein": 0.0,
+        "carbs": 1.0,
+        "fat": 0.0,
+        "fiber": 0.0
+      }
+    },
+    {
+      "canonical_name": "patis",
+      "category": "condiments",
+      "aliases": ["fish sauce", "Filipino fish sauce"],
+      "common_units": ["tablespoon", "teaspoon"],
+      "per_100g": {
+        "calories": 35,
+        "protein": 5.0,
+        "carbs": 3.5,
+        "fat": 0.0,
+        "fiber": 0.0
+      }
+    },
+    {
+      "canonical_name": "bagoong alamang",
+      "category": "condiments",
+      "aliases": ["shrimp paste", "bagoong", "ginisang bagoong"],
+      "common_units": ["tablespoon", "teaspoon"],
+      "per_100g": {
+        "calories": 73,
+        "protein": 11.0,
+        "carbs": 4.5,
+        "fat": 1.5,
+        "fiber": 0.0
+      }
+    },
+    {
+      "canonical_name": "bagoong isda",
+      "category": "condiments",
+      "aliases": ["fermented fish paste", "anchovy paste"],
+      "common_units": ["tablespoon", "teaspoon"],
+      "per_100g": {
+        "calories": 68,
+        "protein": 10.5,
+        "carbs": 3.8,
+        "fat": 1.2,
+        "fiber": 0.0
+      }
+    },
+    {
+      "canonical_name": "annatto seeds",
+      "category": "spices",
+      "aliases": ["achuete", "atchuete", "achiote", "atsuete"],
+      "common_units": ["tablespoon", "teaspoon"],
+      "per_100g": {
+        "calories": 300,
+        "protein": 13.0,
+        "carbs": 53.0,
+        "fat": 5.0,
+        "fiber": 20.0
+      }
+    },
+    {
+      "canonical_name": "ube",
+      "category": "produce",
+      "aliases": ["purple yam", "ubi", "greater yam"],
+      "common_units": ["cup", "gram", "piece"],
+      "per_100g": {
+        "calories": 140,
+        "protein": 1.5,
+        "carbs": 33.0,
+        "fat": 0.2,
+        "fiber": 3.5
+      }
+    },
+    {
+      "canonical_name": "soy sauce",
+      "category": "condiments",
+      "aliases": ["toyo", "Filipino soy sauce"],
+      "common_units": ["tablespoon", "teaspoon", "cup"],
+      "per_100g": {
+        "calories": 53,
+        "protein": 8.0,
+        "carbs": 4.9,
+        "fat": 0.0,
+        "fiber": 0.0
+      }
+    },
+    {
+      "canonical_name": "bay leaves",
+      "category": "herbs",
+      "aliases": ["laurel", "dahon ng laurel"],
+      "common_units": ["piece", "tablespoon"],
+      "per_100g": {
+        "calories": 313,
+        "protein": 7.6,
+        "carbs": 75.0,
+        "fat": 8.4,
+        "fiber": 26.3
+      }
+    },
+    {
+      "canonical_name": "coconut milk",
+      "category": "dairy",
+      "aliases": ["gata", "coconut cream"],
+      "common_units": ["cup", "milliliter", "can"],
+      "per_100g": {
+        "calories": 230,
+        "protein": 2.3,
+        "carbs": 6.0,
+        "fat": 24.0,
+        "fiber": 0.0
+      }
+    },
+    {
+      "canonical_name": "lemongrass",
+      "category": "herbs",
+      "aliases": ["tanglad", "citronella"],
+      "common_units": ["stalk", "tablespoon", "cup"],
+      "per_100g": {
+        "calories": 99,
+        "protein": 1.8,
+        "carbs": 25.3,
+        "fat": 0.5,
+        "fiber": 0.0
+      }
+    },
+    {
+      "canonical_name": "banana leaves",
+      "category": "produce",
+      "aliases": ["dahon ng saging", "banana leaf wrapper"],
+      "common_units": ["piece", "sheet"],
+      "per_100g": {
+        "calories": 0,
+        "protein": 0.0,
+        "carbs": 0.0,
+        "fat": 0.0,
+        "fiber": 0.0
+      }
+    },
+    {
+      "canonical_name": "pandan leaves",
+      "category": "herbs",
+      "aliases": ["screwpine", "bai toey"],
+      "common_units": ["piece", "leaf"],
+      "per_100g": {
+        "calories": 23,
+        "protein": 0.8,
+        "carbs": 5.1,
+        "fat": 0.1,
+        "fiber": 1.2
+      }
+    },
+    {
+      "canonical_name": "tamarind",
+      "category": "produce",
+      "aliases": ["sampalok", "sampaloc"],
+      "common_units": ["piece", "tablespoon", "cup"],
+      "per_100g": {
+        "calories": 239,
+        "protein": 2.8,
+        "carbs": 62.5,
+        "fat": 0.6,
+        "fiber": 5.1
+      }
+    },
+    {
+      "canonical_name": "green papaya",
+      "category": "produce",
+      "aliases": ["papaya", "unripe papaya"],
+      "common_units": ["cup", "piece", "gram"],
+      "per_100g": {
+        "calories": 43,
+        "protein": 0.5,
+        "carbs": 11.0,
+        "fat": 0.3,
+        "fiber": 1.7
+      }
+    },
+    {
+      "canonical_name": "malunggay",
+      "category": "produce",
+      "aliases": ["moringa", "drumstick leaves", "horseradish tree"],
+      "common_units": ["cup", "tablespoon", "gram"],
+      "per_100g": {
+        "calories": 64,
+        "protein": 9.4,
+        "carbs": 8.3,
+        "fat": 1.4,
+        "fiber": 2.0
+      }
+    },
+    {
+      "canonical_name": "kangkong",
+      "category": "produce",
+      "aliases": ["water spinach", "swamp cabbage", "ong choy"],
+      "common_units": ["cup", "bunch", "gram"],
+      "per_100g": {
+        "calories": 19,
+        "protein": 2.6,
+        "carbs": 3.1,
+        "fat": 0.2,
+        "fiber": 2.1
+      }
+    },
+    {
+      "canonical_name": "sitaw",
+      "category": "produce",
+      "aliases": ["long beans", "yard-long beans", "snake beans"],
+      "common_units": ["cup", "piece", "gram"],
+      "per_100g": {
+        "calories": 47,
+        "protein": 2.8,
+        "carbs": 8.3,
+        "fat": 0.4,
+        "fiber": 3.6
+      }
+    },
+    {
+      "canonical_name": "eggplant",
+      "category": "produce",
+      "aliases": ["talong", "aubergine"],
+      "common_units": ["piece", "cup", "gram"],
+      "per_100g": {
+        "calories": 25,
+        "protein": 1.0,
+        "carbs": 6.0,
+        "fat": 0.2,
+        "fiber": 3.0
+      }
+    },
+    {
+      "canonical_name": "bitter melon",
+      "category": "produce",
+      "aliases": ["ampalaya", "bitter gourd"],
+      "common_units": ["cup", "piece", "gram"],
+      "per_100g": {
+        "calories": 17,
+        "protein": 1.0,
+        "carbs": 3.7,
+        "fat": 0.2,
+        "fiber": 2.8
+      }
+    },
+    {
+      "canonical_name": "squash",
+      "category": "produce",
+      "aliases": ["kalabasa", "calabaza"],
+      "common_units": ["cup", "piece", "gram"],
+      "per_100g": {
+        "calories": 26,
+        "protein": 1.0,
+        "carbs": 6.5,
+        "fat": 0.1,
+        "fiber": 0.5
+      }
+    },
+    {
+      "canonical_name": "okra",
+      "category": "produce",
+      "aliases": ["lady's fingers"],
+      "common_units": ["cup", "piece", "gram"],
+      "per_100g": {
+        "calories": 33,
+        "protein": 1.9,
+        "carbs": 7.5,
+        "fat": 0.2,
+        "fiber": 3.2
+      }
+    },
+    {
+      "canonical_name": "taro",
+      "category": "produce",
+      "aliases": ["gabi", "taro root"],
+      "common_units": ["cup", "piece", "gram"],
+      "per_100g": {
+        "calories": 112,
+        "protein": 1.5,
+        "carbs": 26.5,
+        "fat": 0.2,
+        "fiber": 4.1
+      }
+    },
+    {
+      "canonical_name": "taro leaves",
+      "category": "produce",
+      "aliases": ["dahon ng gabi", "taro greens"],
+      "common_units": ["cup", "piece", "gram"],
+      "per_100g": {
+        "calories": 42,
+        "protein": 5.0,
+        "carbs": 6.7,
+        "fat": 0.7,
+        "fiber": 3.7
+      }
+    },
+    {
+      "canonical_name": "sweet potato",
+      "category": "produce",
+      "aliases": ["kamote", "kamoteng kahoy"],
+      "common_units": ["cup", "piece", "gram"],
+      "per_100g": {
+        "calories": 86,
+        "protein": 1.6,
+        "carbs": 20.1,
+        "fat": 0.1,
+        "fiber": 3.0
+      }
+    },
+    {
+      "canonical_name": "banana blossom",
+      "category": "produce",
+      "aliases": ["puso ng saging", "banana heart"],
+      "common_units": ["cup", "piece", "gram"],
+      "per_100g": {
+        "calories": 51,
+        "protein": 1.6,
+        "carbs": 9.9,
+        "fat": 0.6,
+        "fiber": 5.7
+      }
+    },
+    {
+      "canonical_name": "chayote",
+      "category": "produce",
+      "aliases": ["sayote", "mirliton"],
+      "common_units": ["cup", "piece", "gram"],
+      "per_100g": {
+        "calories": 19,
+        "protein": 0.8,
+        "carbs": 4.5,
+        "fat": 0.1,
+        "fiber": 1.7
+      }
+    },
+    {
+      "canonical_name": "mung beans",
+      "category": "legumes",
+      "aliases": ["monggo", "munggo", "green gram"],
+      "common_units": ["cup", "gram"],
+      "per_100g": {
+        "calories": 347,
+        "protein": 24.0,
+        "carbs": 63.0,
+        "fat": 1.2,
+        "fiber": 16.3
+      }
+    },
+    {
+      "canonical_name": "miso paste",
+      "category": "condiments",
+      "aliases": ["miso", "Japanese soybean paste"],
+      "common_units": ["tablespoon", "cup"],
+      "per_100g": {
+        "calories": 199,
+        "protein": 12.8,
+        "carbs": 25.7,
+        "fat": 6.0,
+        "fiber": 5.4
+      }
+    },
+    {
+      "canonical_name": "glutinous rice",
+      "category": "grains",
+      "aliases": ["malagkit", "sticky rice", "sweet rice"],
+      "common_units": ["cup", "gram"],
+      "per_100g": {
+        "calories": 370,
+        "protein": 6.8,
+        "carbs": 81.7,
+        "fat": 0.7,
+        "fiber": 2.8
+      }
+    },
+    {
+      "canonical_name": "rice noodles",
+      "category": "grains",
+      "aliases": ["bihon", "pancit bihon", "rice vermicelli"],
+      "common_units": ["cup", "gram", "package"],
+      "per_100g": {
+        "calories": 364,
+        "protein": 3.4,
+        "carbs": 82.3,
+        "fat": 0.6,
+        "fiber": 1.6
+      }
+    },
+    {
+      "canonical_name": "miki noodles",
+      "category": "grains",
+      "aliases": ["pancit miki", "thick egg noodles"],
+      "common_units": ["cup", "gram", "package"],
+      "per_100g": {
+        "calories": 138,
+        "protein": 4.5,
+        "carbs": 25.2,
+        "fat": 2.1,
+        "fiber": 1.2
+      }
+    },
+    {
+      "canonical_name": "lechon sauce",
+      "category": "condiments",
+      "aliases": ["liver sauce", "mang tomas"],
+      "common_units": ["tablespoon", "cup"],
+      "per_100g": {
+        "calories": 165,
+        "protein": 2.5,
+        "carbs": 18.0,
+        "fat": 9.5,
+        "fiber": 1.0
+      }
+    },
+    {
+      "canonical_name": "salted duck eggs",
+      "category": "protein",
+      "aliases": ["itlog na maalat", "itlog na pula"],
+      "common_units": ["piece", "egg"],
+      "per_100g": {
+        "calories": 195,
+        "protein": 13.6,
+        "carbs": 1.4,
+        "fat": 15.0,
+        "fiber": 0.0
+      }
+    },
+    {
+      "canonical_name": "quail eggs",
+      "category": "protein",
+      "aliases": ["itlog ng pugo"],
+      "common_units": ["piece", "egg"],
+      "per_100g": {
+        "calories": 158,
+        "protein": 13.1,
+        "carbs": 0.4,
+        "fat": 11.1,
+        "fiber": 0.0
+      }
+    },
+    {
+      "canonical_name": "liver spread",
+      "category": "protein",
+      "aliases": ["liver pate", "reno liver spread"],
+      "common_units": ["tablespoon", "cup"],
+      "per_100g": {
+        "calories": 221,
+        "protein": 11.0,
+        "carbs": 4.5,
+        "fat": 18.0,
+        "fiber": 0.0
+      }
+    },
+    {
+      "canonical_name": "macapuno",
+      "category": "produce",
+      "aliases": ["coconut sport", "mutant coconut"],
+      "common_units": ["cup", "jar", "gram"],
+      "per_100g": {
+        "calories": 174,
+        "protein": 1.1,
+        "carbs": 15.2,
+        "fat": 13.0,
+        "fiber": 4.5
+      }
+    }
+  ]
+}

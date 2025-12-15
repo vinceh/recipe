@@ -1,0 +1,893 @@
+{
+  "batch": 7,
+  "agent": 32,
+  "category": "sichuan",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "Sichuan Peppercorn",
+      "category": "spices",
+      "per_100g": {
+        "calories": 258,
+        "protein_g": 10.0,
+        "carbs_g": 64.0,
+        "fat_g": 3.3
+      },
+      "aliases": {
+        "zh-cn": "花椒",
+        "pinyin": "huā jiāo"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Green Sichuan Peppercorn",
+      "category": "spices",
+      "per_100g": {
+        "calories": 265,
+        "protein_g": 10.5,
+        "carbs_g": 65.0,
+        "fat_g": 3.5
+      },
+      "aliases": {
+        "zh-cn": "青花椒",
+        "pinyin": "qīng huā jiāo"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Doubanjiang",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 60,
+        "protein_g": 4.5,
+        "carbs_g": 8.0,
+        "fat_g": 1.5
+      },
+      "aliases": {
+        "zh-cn": "豆瓣酱",
+        "pinyin": "dòu bàn jiàng"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Pixian Doubanjiang",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 65,
+        "protein_g": 5.0,
+        "carbs_g": 9.0,
+        "fat_g": 1.8
+      },
+      "aliases": {
+        "zh-cn": "郫县豆瓣酱",
+        "pinyin": "pí xiàn dòu bàn jiàng"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Facing Heaven Chili",
+      "category": "spices",
+      "per_100g": {
+        "calories": 282,
+        "protein_g": 12.0,
+        "carbs_g": 50.0,
+        "fat_g": 14.0
+      },
+      "aliases": {
+        "zh-cn": "朝天椒",
+        "pinyin": "cháo tiān jiāo"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Chili Oil",
+      "category": "oils",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.5,
+        "carbs_g": 2.0,
+        "fat_g": 100.0
+      },
+      "aliases": {
+        "zh-cn": "四川辣椒油",
+        "pinyin": "sì chuān là jiāo yóu"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Lao Gan Ma Chili Crisp",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 520,
+        "protein_g": 4.0,
+        "carbs_g": 15.0,
+        "fat_g": 50.0
+      },
+      "aliases": {
+        "zh-cn": "老干妈",
+        "pinyin": "lǎo gàn mā"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Zhacai",
+      "category": "vegetables",
+      "per_100g": {
+        "calories": 29,
+        "protein_g": 2.0,
+        "carbs_g": 4.5,
+        "fat_g": 0.5
+      },
+      "aliases": {
+        "zh-cn": "榨菜",
+        "pinyin": "zhà cài"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Pickled Vegetables",
+      "category": "vegetables",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 1.5,
+        "carbs_g": 3.8,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "zh-cn": "四川泡菜",
+        "pinyin": "sì chuān pào cài"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Suancai",
+      "category": "vegetables",
+      "per_100g": {
+        "calories": 19,
+        "protein_g": 1.2,
+        "carbs_g": 3.5,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "zh-cn": "酸菜",
+        "pinyin": "suān cài"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Ya Cai",
+      "category": "vegetables",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 2.5,
+        "carbs_g": 5.0,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "zh-cn": "芽菜",
+        "pinyin": "yá cài"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Chinkiang Black Vinegar",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 19,
+        "protein_g": 0.4,
+        "carbs_g": 4.0,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "zh-cn": "镇江香醋",
+        "pinyin": "zhèn jiāng xiāng cù"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Black Vinegar",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 20,
+        "protein_g": 0.5,
+        "carbs_g": 4.2,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "zh-cn": "四川黑醋",
+        "pinyin": "sì chuān hēi cù"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Dried Red Sichuan Chili",
+      "category": "spices",
+      "per_100g": {
+        "calories": 324,
+        "protein_g": 12.0,
+        "carbs_g": 69.0,
+        "fat_g": 17.0
+      },
+      "aliases": {
+        "zh-cn": "干红辣椒",
+        "pinyin": "gān hóng là jiāo"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Fermented Black Beans",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 180,
+        "protein_g": 18.0,
+        "carbs_g": 20.0,
+        "fat_g": 1.5
+      },
+      "aliases": {
+        "zh-cn": "豆豉",
+        "pinyin": "dòu chǐ"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Preserved Vegetable",
+      "category": "vegetables",
+      "per_100g": {
+        "calories": 28,
+        "protein_g": 2.0,
+        "carbs_g": 4.0,
+        "fat_g": 0.5
+      },
+      "aliases": {
+        "zh-cn": "冬菜",
+        "pinyin": "dōng cài"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Chili Flakes",
+      "category": "spices",
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 12.0,
+        "carbs_g": 56.0,
+        "fat_g": 17.0
+      },
+      "aliases": {
+        "zh-cn": "辣椒面",
+        "pinyin": "là jiāo miàn"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Chili Bean Paste",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 58,
+        "protein_g": 4.0,
+        "carbs_g": 7.5,
+        "fat_g": 1.5
+      },
+      "aliases": {
+        "zh-cn": "辣豆瓣酱",
+        "pinyin": "là dòu bàn jiàng"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Rock Sugar",
+      "category": "sweeteners",
+      "per_100g": {
+        "calories": 387,
+        "protein_g": 0.0,
+        "carbs_g": 100.0,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "zh-cn": "冰糖",
+        "pinyin": "bīng táng"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Chili Paste",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 45,
+        "protein_g": 2.0,
+        "carbs_g": 6.0,
+        "fat_g": 1.2
+      },
+      "aliases": {
+        "zh-cn": "辣椒酱",
+        "pinyin": "là jiāo jiàng"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Shacha Sauce",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 185,
+        "protein_g": 5.0,
+        "carbs_g": 12.0,
+        "fat_g": 13.0
+      },
+      "aliases": {
+        "zh-cn": "沙茶酱",
+        "pinyin": "shā chá jiàng"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Erjingtiao Chili",
+      "category": "spices",
+      "per_100g": {
+        "calories": 280,
+        "protein_g": 11.5,
+        "carbs_g": 52.0,
+        "fat_g": 13.5
+      },
+      "aliases": {
+        "zh-cn": "二荆条辣椒",
+        "pinyin": "èr jīng tiáo là jiāo"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Sweet Bean Sauce",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 120,
+        "protein_g": 6.0,
+        "carbs_g": 20.0,
+        "fat_g": 1.0
+      },
+      "aliases": {
+        "zh-cn": "甜面酱",
+        "pinyin": "tián miàn jiàng"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Red Oil",
+      "category": "oils",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0
+      },
+      "aliases": {
+        "zh-cn": "红油",
+        "pinyin": "hóng yóu"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Pepper Oil",
+      "category": "oils",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0
+      },
+      "aliases": {
+        "zh-cn": "花椒油",
+        "pinyin": "huā jiāo yóu"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Sesame Paste",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 595,
+        "protein_g": 18.0,
+        "carbs_g": 23.0,
+        "fat_g": 50.0
+      },
+      "aliases": {
+        "zh-cn": "芝麻酱",
+        "pinyin": "zhī ma jiàng"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Garlic Chili Sauce",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 52,
+        "protein_g": 2.5,
+        "carbs_g": 7.0,
+        "fat_g": 1.5
+      },
+      "aliases": {
+        "zh-cn": "蒜蓉辣椒酱",
+        "pinyin": "suàn róng là jiāo jiàng"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Pickled Chili",
+      "category": "vegetables",
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 1.0,
+        "carbs_g": 3.5,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "zh-cn": "泡椒",
+        "pinyin": "pào jiāo"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Pickled Ginger",
+      "category": "vegetables",
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 0.8,
+        "carbs_g": 7.5,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "zh-cn": "泡姜",
+        "pinyin": "pào jiāng"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Dried Sichuan Chili Threads",
+      "category": "spices",
+      "per_100g": {
+        "calories": 315,
+        "protein_g": 11.8,
+        "carbs_g": 67.0,
+        "fat_g": 16.5
+      },
+      "aliases": {
+        "zh-cn": "辣椒丝",
+        "pinyin": "là jiāo sī"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Chili Powder",
+      "category": "spices",
+      "per_100g": {
+        "calories": 282,
+        "protein_g": 12.0,
+        "carbs_g": 50.0,
+        "fat_g": 14.0
+      },
+      "aliases": {
+        "zh-cn": "辣椒粉",
+        "pinyin": "là jiāo fěn"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Five Spice Powder",
+      "category": "spices",
+      "per_100g": {
+        "calories": 375,
+        "protein_g": 9.0,
+        "carbs_g": 65.0,
+        "fat_g": 8.0
+      },
+      "aliases": {
+        "zh-cn": "五香粉",
+        "pinyin": "wǔ xiāng fěn"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Cassia Bark",
+      "category": "spices",
+      "per_100g": {
+        "calories": 247,
+        "protein_g": 4.0,
+        "carbs_g": 81.0,
+        "fat_g": 1.2
+      },
+      "aliases": {
+        "zh-cn": "桂皮",
+        "pinyin": "guì pí"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Star Anise",
+      "category": "spices",
+      "per_100g": {
+        "calories": 337,
+        "protein_g": 18.0,
+        "carbs_g": 50.0,
+        "fat_g": 16.0
+      },
+      "aliases": {
+        "zh-cn": "八角",
+        "pinyin": "bā jiǎo"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Fennel Seeds",
+      "category": "spices",
+      "per_100g": {
+        "calories": 345,
+        "protein_g": 15.8,
+        "carbs_g": 52.0,
+        "fat_g": 14.9
+      },
+      "aliases": {
+        "zh-cn": "小茴香",
+        "pinyin": "xiǎo huí xiāng"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Bay Leaf",
+      "category": "spices",
+      "per_100g": {
+        "calories": 313,
+        "protein_g": 7.6,
+        "carbs_g": 75.0,
+        "fat_g": 8.4
+      },
+      "aliases": {
+        "zh-cn": "香叶",
+        "pinyin": "xiāng yè"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Aged Soy Sauce",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 60,
+        "protein_g": 10.5,
+        "carbs_g": 5.6,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "zh-cn": "老抽",
+        "pinyin": "lǎo chōu"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Light Soy Sauce",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 53,
+        "protein_g": 8.1,
+        "carbs_g": 4.9,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "zh-cn": "生抽",
+        "pinyin": "shēng chōu"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Cooking Wine",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 48,
+        "protein_g": 1.2,
+        "carbs_g": 3.5,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "zh-cn": "料酒",
+        "pinyin": "liào jiǔ"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Yibin Ya Cai",
+      "category": "vegetables",
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 2.8,
+        "carbs_g": 5.5,
+        "fat_g": 0.5
+      },
+      "aliases": {
+        "zh-cn": "宜宾芽菜",
+        "pinyin": "yí bīn yá cài"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Pepper Salt",
+      "category": "spices",
+      "per_100g": {
+        "calories": 135,
+        "protein_g": 5.0,
+        "carbs_g": 32.0,
+        "fat_g": 1.5
+      },
+      "aliases": {
+        "zh-cn": "花椒盐",
+        "pinyin": "huā jiāo yán"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "White Pepper",
+      "category": "spices",
+      "per_100g": {
+        "calories": 296,
+        "protein_g": 10.4,
+        "carbs_g": 68.0,
+        "fat_g": 2.1
+      },
+      "aliases": {
+        "zh-cn": "白胡椒",
+        "pinyin": "bái hú jiāo"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Black Pepper",
+      "category": "spices",
+      "per_100g": {
+        "calories": 251,
+        "protein_g": 10.4,
+        "carbs_g": 64.0,
+        "fat_g": 3.3
+      },
+      "aliases": {
+        "zh-cn": "黑胡椒",
+        "pinyin": "hēi hú jiāo"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Dried Tangerine Peel",
+      "category": "spices",
+      "per_100g": {
+        "calories": 250,
+        "protein_g": 8.0,
+        "carbs_g": 60.0,
+        "fat_g": 2.0
+      },
+      "aliases": {
+        "zh-cn": "陈皮",
+        "pinyin": "chén pí"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Broad Bean Paste",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 62,
+        "protein_g": 5.0,
+        "carbs_g": 8.5,
+        "fat_g": 1.6
+      },
+      "aliases": {
+        "zh-cn": "蚕豆酱",
+        "pinyin": "cán dòu jiàng"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Scallion Oil",
+      "category": "oils",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0
+      },
+      "aliases": {
+        "zh-cn": "葱油",
+        "pinyin": "cōng yóu"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Ginger Paste",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 80,
+        "protein_g": 1.8,
+        "carbs_g": 18.0,
+        "fat_g": 0.8
+      },
+      "aliases": {
+        "zh-cn": "姜蓉",
+        "pinyin": "jiāng róng"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Garlic Paste",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 149,
+        "protein_g": 6.4,
+        "carbs_g": 33.0,
+        "fat_g": 0.5
+      },
+      "aliases": {
+        "zh-cn": "蒜蓉",
+        "pinyin": "suàn róng"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Chicken Powder",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 300,
+        "protein_g": 15.0,
+        "carbs_g": 50.0,
+        "fat_g": 2.0
+      },
+      "aliases": {
+        "zh-cn": "鸡精",
+        "pinyin": "jī jīng"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "MSG",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "zh-cn": "味精",
+        "pinyin": "wèi jīng"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Potato Starch",
+      "category": "starches",
+      "per_100g": {
+        "calories": 357,
+        "protein_g": 0.1,
+        "carbs_g": 83.0,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "zh-cn": "土豆淀粉",
+        "pinyin": "tǔ dòu diàn fěn"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sweet Potato Starch",
+      "category": "starches",
+      "per_100g": {
+        "calories": 357,
+        "protein_g": 0.1,
+        "carbs_g": 86.0,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "zh-cn": "红薯淀粉",
+        "pinyin": "hóng shǔ diàn fěn"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Mung Bean Starch",
+      "category": "starches",
+      "per_100g": {
+        "calories": 351,
+        "protein_g": 0.2,
+        "carbs_g": 85.0,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "zh-cn": "绿豆淀粉",
+        "pinyin": "lǜ dòu diàn fěn"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Spicy Hot Pot Base",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 450,
+        "protein_g": 5.0,
+        "carbs_g": 25.0,
+        "fat_g": 38.0
+      },
+      "aliases": {
+        "zh-cn": "四川火锅底料",
+        "pinyin": "sì chuān huǒ guō dǐ liào"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Mala Sauce",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 380,
+        "protein_g": 4.5,
+        "carbs_g": 18.0,
+        "fat_g": 32.0
+      },
+      "aliases": {
+        "zh-cn": "麻辣酱",
+        "pinyin": "má là jiàng"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Vinegar",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 0.3,
+        "carbs_g": 4.0,
+        "fat_g": 0.0
+      },
+      "aliases": {
+        "zh-cn": "四川醋",
+        "pinyin": "sì chuān cù"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Chili Bean Sauce",
+      "category": "condiments",
+      "per_100g": {
+        "calories": 57,
+        "protein_g": 4.2,
+        "carbs_g": 7.8,
+        "fat_g": 1.4
+      },
+      "aliases": {
+        "zh-cn": "豆瓣辣酱",
+        "pinyin": "dòu bàn là jiàng"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Sichuan Preserved Radish",
+      "category": "vegetables",
+      "per_100g": {
+        "calories": 26,
+        "protein_g": 1.8,
+        "carbs_g": 4.2,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "zh-cn": "萝卜干",
+        "pinyin": "luó bo gān"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Dried Chili Pepper Whole",
+      "category": "spices",
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 12.0,
+        "carbs_g": 69.0,
+        "fat_g": 17.3
+      },
+      "aliases": {
+        "zh-cn": "干辣椒",
+        "pinyin": "gān là jiāo"
+      },
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    }
+  ]
+}

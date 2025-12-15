@@ -3,4 +3,4 @@
 
 # Playwright
 playwright-report/
-test-results/
+test-results/.env

@@ -9,12 +9,22 @@ import type {
   CheckDuplicatesPayload,
   ApiResponse,
   PaginationMeta,
-  SupportedLanguage
+  SupportedLanguage,
+  Unit,
+  UnitCategory
 } from './types'
+
+function getAdminBaseUrl(): string {
+  if (import.meta.env.VITE_API_BASE_URL) {
+    return import.meta.env.VITE_API_BASE_URL.replace('/api/v1', '')
+  }
+  const host = window.location.hostname
+  return `http://${host}:3000`
+}
 
 // Create a separate client for admin endpoints (not under /api/v1)
 const adminClient = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL?.replace('/api/v1', '') || 'http://localhost:3000',
+  baseURL: getAdminBaseUrl(),
   headers: {
     'Content-Type': 'application/json',
     'Accept': 'application/json'
@@ -103,9 +113,7 @@ export const adminApi = {
   },
 
   async parseImage(formData: FormData): Promise<ApiResponse<{ recipe: RecipeDetail }>> {
-    const { data } = await adminClient.post(getAdminUrl('/recipes/parse_image'), formData, {
-      headers: { 'Content-Type': 'multipart/form-data' }
-    })
+    const { data } = await adminClient.post(getAdminUrl('/recipes/parse_image'), formData)
     return data
   },
 
@@ -224,6 +232,37 @@ export const adminApi = {
 
   async refreshNutrition(id: number): Promise<ApiResponse<{ ingredient: Ingredient }>> {
     const { data } = await adminClient.post(getAdminUrl(`/ingredients/${id}/refresh_nutrition`))
+    return data
+  },
+
+  // Units management
+  async getUnits(params: { category?: UnitCategory; q?: string } = {}): Promise<ApiResponse<{ units: Unit[]; categories: UnitCategory[] }>> {
+    const { data } = await adminClient.get(getAdminUrl('/units'), { params })
+    return data
+  },
+
+  async getUnit(id: number): Promise<ApiResponse<{ unit: Unit }>> {
+    const { data } = await adminClient.get(getAdminUrl(`/units/${id}`))
+    return data
+  },
+
+  async createUnit(unit: { canonical_name: string; category: UnitCategory }, autoTranslate = true): Promise<ApiResponse<{ unit: Unit }>> {
+    const { data } = await adminClient.post(getAdminUrl('/units'), { unit, auto_translate: autoTranslate })
+    return data
+  },
+
+  async updateUnit(id: number, unit: Partial<Unit>): Promise<ApiResponse<{ unit: Unit }>> {
+    const { data } = await adminClient.put(getAdminUrl(`/units/${id}`), { unit })
+    return data
+  },
+
+  async deleteUnit(id: number): Promise<ApiResponse<{ deleted: boolean }>> {
+    const { data } = await adminClient.delete(getAdminUrl(`/units/${id}`))
+    return data
+  },
+
+  async translateUnit(id: number): Promise<ApiResponse<{ unit: Unit }>> {
+    const { data } = await adminClient.post(getAdminUrl(`/units/${id}/translate`))
     return data
   }
 }

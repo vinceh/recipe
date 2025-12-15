@@ -1,0 +1,716 @@
+{
+  "batch": 8,
+  "agent": 36,
+  "category": "chinese_dried",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "Dried Shiitake Mushroom",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 296,
+        "protein_g": 9.6,
+        "carbs_g": 75.4,
+        "fat_g": 1.0
+      },
+      "aliases": ["香菇", "xiang gu", "dried shiitake", "Chinese black mushroom"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Wood Ear Mushroom",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 265,
+        "protein_g": 10.6,
+        "carbs_g": 65.9,
+        "fat_g": 0.2
+      },
+      "aliases": ["木耳", "mu er", "black fungus", "cloud ear"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Snow Fungus",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 250,
+        "protein_g": 8.5,
+        "carbs_g": 65.0,
+        "fat_g": 0.5
+      },
+      "aliases": ["银耳", "yin er", "white fungus", "silver ear"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Porcini Mushroom",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 280,
+        "protein_g": 11.2,
+        "carbs_g": 70.0,
+        "fat_g": 0.8
+      },
+      "aliases": ["牛肝菌", "niu gan jun", "dried porcini"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried King Oyster Mushroom",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 275,
+        "protein_g": 10.0,
+        "carbs_g": 68.0,
+        "fat_g": 0.6
+      },
+      "aliases": ["杏鲍菇", "xing bao gu", "dried king trumpet"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Enoki Mushroom",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 270,
+        "protein_g": 9.8,
+        "carbs_g": 67.0,
+        "fat_g": 0.5
+      },
+      "aliases": ["金针菇", "jin zhen gu", "dried enoki"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Morel Mushroom",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 290,
+        "protein_g": 12.0,
+        "carbs_g": 72.0,
+        "fat_g": 1.2
+      },
+      "aliases": ["羊肚菌", "yang du jun", "dried morel"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Straw Mushroom",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 260,
+        "protein_g": 8.5,
+        "carbs_g": 64.0,
+        "fat_g": 0.4
+      },
+      "aliases": ["草菇", "cao gu", "dried paddy straw mushroom"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Tea Tree Mushroom",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 285,
+        "protein_g": 10.5,
+        "carbs_g": 69.0,
+        "fat_g": 0.7
+      },
+      "aliases": ["茶树菇", "cha shu gu", "agrocybe mushroom"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Maitake Mushroom",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 272,
+        "protein_g": 9.2,
+        "carbs_g": 66.0,
+        "fat_g": 0.6
+      },
+      "aliases": ["灰树花", "hui shu hua", "hen of the woods"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Lily Buds",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 14.2,
+        "carbs_g": 62.6,
+        "fat_g": 1.4
+      },
+      "aliases": ["金针菜", "jin zhen cai", "dried day lily", "golden needles"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Lotus Seeds",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 332,
+        "protein_g": 15.4,
+        "carbs_g": 64.5,
+        "fat_g": 1.9
+      },
+      "aliases": ["莲子", "lian zi", "lotus nuts"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Lotus Root",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 325,
+        "protein_g": 9.6,
+        "carbs_g": 73.8,
+        "fat_g": 0.8
+      },
+      "aliases": ["藕干", "ou gan", "dried renkon"],
+      "common_units": ["slice", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Goji Berries",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 349,
+        "protein_g": 14.3,
+        "carbs_g": 77.1,
+        "fat_g": 0.4
+      },
+      "aliases": ["枸杞", "gou qi", "wolfberry", "Chinese wolfberry"],
+      "common_units": ["tablespoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Red Dates",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 277,
+        "protein_g": 3.7,
+        "carbs_g": 73.5,
+        "fat_g": 0.4
+      },
+      "aliases": ["红枣", "hong zao", "jujube", "Chinese dates"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Longan",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 286,
+        "protein_g": 4.9,
+        "carbs_g": 74.0,
+        "fat_g": 0.4
+      },
+      "aliases": ["桂圆", "gui yuan", "dried dragon eye", "longan meat"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Tangerine Peel",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 250,
+        "protein_g": 8.5,
+        "carbs_g": 75.0,
+        "fat_g": 0.8
+      },
+      "aliases": ["陈皮", "chen pi", "aged tangerine peel"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Star Anise",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 337,
+        "protein_g": 17.6,
+        "carbs_g": 50.0,
+        "fat_g": 15.9
+      },
+      "aliases": ["八角", "ba jiao", "Chinese star anise", "badiane"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Sichuan Peppercorn",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 305,
+        "protein_g": 10.5,
+        "carbs_g": 65.0,
+        "fat_g": 3.5
+      },
+      "aliases": ["花椒", "hua jiao", "Sichuan pepper", "Chinese prickly ash"],
+      "common_units": ["tablespoon", "teaspoon", "gram"]
+    },
+    {
+      "canonical_name": "Dried Astragalus Root",
+      "category": "medicinal",
+      "per_100g": {
+        "calories": 245,
+        "protein_g": 7.5,
+        "carbs_g": 58.0,
+        "fat_g": 0.5
+      },
+      "aliases": ["黄芪", "huang qi", "astragalus", "milk vetch"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Codonopsis Root",
+      "category": "medicinal",
+      "per_100g": {
+        "calories": 240,
+        "protein_g": 8.2,
+        "carbs_g": 56.0,
+        "fat_g": 0.6
+      },
+      "aliases": ["党参", "dang shen", "poor man's ginseng"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Angelica Root",
+      "category": "medicinal",
+      "per_100g": {
+        "calories": 235,
+        "protein_g": 7.8,
+        "carbs_g": 54.0,
+        "fat_g": 0.8
+      },
+      "aliases": ["当归", "dang gui", "Chinese angelica", "dong quai"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Ginseng Root",
+      "category": "medicinal",
+      "per_100g": {
+        "calories": 260,
+        "protein_g": 9.5,
+        "carbs_g": 60.0,
+        "fat_g": 1.2
+      },
+      "aliases": ["人参", "ren shen", "Asian ginseng", "Korean ginseng"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried American Ginseng",
+      "category": "medicinal",
+      "per_100g": {
+        "calories": 255,
+        "protein_g": 9.0,
+        "carbs_g": 59.0,
+        "fat_g": 1.0
+      },
+      "aliases": ["西洋参", "xi yang shen", "American ginseng"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Goji Root Bark",
+      "category": "medicinal",
+      "per_100g": {
+        "calories": 230,
+        "protein_g": 6.5,
+        "carbs_g": 52.0,
+        "fat_g": 0.4
+      },
+      "aliases": ["地骨皮", "di gu pi", "lycium bark"],
+      "common_units": ["gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Rehmannia Root",
+      "category": "medicinal",
+      "per_100g": {
+        "calories": 248,
+        "protein_g": 8.0,
+        "carbs_g": 57.0,
+        "fat_g": 0.7
+      },
+      "aliases": ["熟地黄", "shu di huang", "prepared rehmannia"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Cordyceps",
+      "category": "medicinal",
+      "per_100g": {
+        "calories": 285,
+        "protein_g": 25.0,
+        "carbs_g": 45.0,
+        "fat_g": 8.0
+      },
+      "aliases": ["冬虫夏草", "dong chong xia cao", "caterpillar fungus"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Goji Leaf",
+      "category": "medicinal",
+      "per_100g": {
+        "calories": 220,
+        "protein_g": 12.0,
+        "carbs_g": 48.0,
+        "fat_g": 0.5
+      },
+      "aliases": ["枸杞叶", "gou qi ye", "wolfberry leaf"],
+      "common_units": ["gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Solomon's Seal",
+      "category": "medicinal",
+      "per_100g": {
+        "calories": 238,
+        "protein_g": 7.2,
+        "carbs_g": 55.0,
+        "fat_g": 0.6
+      },
+      "aliases": ["玉竹", "yu zhu", "polygonatum"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Peony Root",
+      "category": "medicinal",
+      "per_100g": {
+        "calories": 232,
+        "protein_g": 6.8,
+        "carbs_g": 53.0,
+        "fat_g": 0.5
+      },
+      "aliases": ["白芍", "bai shao", "white peony root"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Licorice Root",
+      "category": "medicinal",
+      "per_100g": {
+        "calories": 240,
+        "protein_g": 7.0,
+        "carbs_g": 56.0,
+        "fat_g": 0.7
+      },
+      "aliases": ["甘草", "gan cao", "Chinese licorice"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Bird's Nest",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 295,
+        "protein_g": 62.0,
+        "carbs_g": 27.0,
+        "fat_g": 0.3
+      },
+      "aliases": ["燕窝", "yan wo", "edible bird's nest", "swiftlet nest"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Scallop",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 336,
+        "protein_g": 61.5,
+        "carbs_g": 27.4,
+        "fat_g": 1.7
+      },
+      "aliases": ["干贝", "gan bei", "conpoy", "dried scallop meat"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Shrimp",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 295,
+        "protein_g": 63.5,
+        "carbs_g": 2.3,
+        "fat_g": 3.7
+      },
+      "aliases": ["虾米", "xia mi", "dried prawns", "hae bee"],
+      "common_units": ["tablespoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Sea Cucumber",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 282,
+        "protein_g": 55.0,
+        "carbs_g": 32.0,
+        "fat_g": 1.0
+      },
+      "aliases": ["海参", "hai shen", "dried trepang"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Abalone",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 325,
+        "protein_g": 59.0,
+        "carbs_g": 30.0,
+        "fat_g": 2.5
+      },
+      "aliases": ["鲍鱼", "bao yu", "dried pao yu"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Oyster",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 318,
+        "protein_g": 56.0,
+        "carbs_g": 28.5,
+        "fat_g": 2.8
+      },
+      "aliases": ["蚝干", "hao gan", "dried oyster meat"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Squid",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 332,
+        "protein_g": 65.0,
+        "carbs_g": 15.0,
+        "fat_g": 4.5
+      },
+      "aliases": ["鱿鱼干", "you yu gan", "dried cuttlefish"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Fish Maw",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 305,
+        "protein_g": 76.0,
+        "carbs_g": 2.0,
+        "fat_g": 0.6
+      },
+      "aliases": ["花胶", "hua jiao", "dried fish bladder", "swim bladder"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Cuttlefish",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 328,
+        "protein_g": 64.0,
+        "carbs_g": 16.0,
+        "fat_g": 4.2
+      },
+      "aliases": ["墨鱼干", "mo yu gan", "dried inkfish"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Fish Roe",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 380,
+        "protein_g": 68.0,
+        "carbs_g": 8.0,
+        "fat_g": 12.0
+      },
+      "aliases": ["鱼卵干", "yu luan gan", "dried caviar"],
+      "common_units": ["tablespoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Sea Jellyfish",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 180,
+        "protein_g": 38.0,
+        "carbs_g": 12.0,
+        "fat_g": 0.5
+      },
+      "aliases": ["海蜇皮", "hai zhe pi", "dried jellyfish skin"],
+      "common_units": ["gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Kelp",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 315,
+        "protein_g": 12.0,
+        "carbs_g": 62.0,
+        "fat_g": 1.5
+      },
+      "aliases": ["海带", "hai dai", "dried kombu", "dried seaweed"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Wakame",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 310,
+        "protein_g": 13.5,
+        "carbs_g": 60.0,
+        "fat_g": 2.0
+      },
+      "aliases": ["裙带菜", "qun dai cai", "dried seaweed"],
+      "common_units": ["gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Nori",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 295,
+        "protein_g": 41.0,
+        "carbs_g": 44.0,
+        "fat_g": 1.8
+      },
+      "aliases": ["紫菜", "zi cai", "dried laver"],
+      "common_units": ["sheet", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Beancurd Sticks",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 380,
+        "protein_g": 45.0,
+        "carbs_g": 21.0,
+        "fat_g": 17.0
+      },
+      "aliases": ["腐竹", "fu zhu", "dried tofu skin", "yuba"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Beancurd Sheets",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 42.0,
+        "carbs_g": 24.0,
+        "fat_g": 16.0
+      },
+      "aliases": ["豆腐皮", "dou fu pi", "dried soy sheets"],
+      "common_units": ["sheet", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Bamboo Shoots",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 315,
+        "protein_g": 18.0,
+        "carbs_g": 62.0,
+        "fat_g": 2.5
+      },
+      "aliases": ["笋干", "sun gan", "dried bamboo"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Chinese Yam",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 328,
+        "protein_g": 9.5,
+        "carbs_g": 74.0,
+        "fat_g": 1.2
+      },
+      "aliases": ["山药", "shan yao", "dried dioscorea"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Water Chestnut",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 335,
+        "protein_g": 8.0,
+        "carbs_g": 77.0,
+        "fat_g": 0.8
+      },
+      "aliases": ["马蹄干", "ma ti gan", "dried water caltrop"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Chrysanthemum",
+      "category": "medicinal",
+      "per_100g": {
+        "calories": 210,
+        "protein_g": 8.0,
+        "carbs_g": 50.0,
+        "fat_g": 0.5
+      },
+      "aliases": ["菊花", "ju hua", "dried chrysanthemum flower"],
+      "common_units": ["tablespoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Hawthorn Berry",
+      "category": "medicinal",
+      "per_100g": {
+        "calories": 242,
+        "protein_g": 5.5,
+        "carbs_g": 60.0,
+        "fat_g": 0.6
+      },
+      "aliases": ["山楂", "shan zha", "dried crataegus"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Schisandra Berry",
+      "category": "medicinal",
+      "per_100g": {
+        "calories": 252,
+        "protein_g": 6.0,
+        "carbs_g": 62.0,
+        "fat_g": 1.0
+      },
+      "aliases": ["五味子", "wu wei zi", "magnolia berry"],
+      "common_units": ["tablespoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Ginger",
+      "category": "medicinal",
+      "per_100g": {
+        "calories": 335,
+        "protein_g": 9.0,
+        "carbs_g": 71.6,
+        "fat_g": 4.2
+      },
+      "aliases": ["干姜", "gan jiang", "dried ginger root"],
+      "common_units": ["piece", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Fox Nut",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 347,
+        "protein_g": 9.7,
+        "carbs_g": 76.9,
+        "fat_g": 0.1
+      },
+      "aliases": ["芡实", "qian shi", "euryale seed", "gorgon nut"],
+      "common_units": ["tablespoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Barley",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 352,
+        "protein_g": 10.0,
+        "carbs_g": 77.7,
+        "fat_g": 1.2
+      },
+      "aliases": ["薏米", "yi mi", "Job's tears", "coix seed"],
+      "common_units": ["cup", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Rose Petals",
+      "category": "medicinal",
+      "per_100g": {
+        "calories": 195,
+        "protein_g": 6.5,
+        "carbs_g": 48.0,
+        "fat_g": 0.4
+      },
+      "aliases": ["玫瑰花", "mei gui hua", "dried rose buds"],
+      "common_units": ["tablespoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Dried Osmanthus Flower",
+      "category": "medicinal",
+      "per_100g": {
+        "calories": 185,
+        "protein_g": 5.5,
+        "carbs_g": 46.0,
+        "fat_g": 0.3
+      },
+      "aliases": ["桂花", "gui hua", "dried sweet olive"],
+      "common_units": ["tablespoon", "gram", "ounce"]
+    },
+    {
+      "canonical_name": "Cassia Bark",
+      "category": "dried goods",
+      "per_100g": {
+        "calories": 253,
+        "protein_g": 4.0,
+        "carbs_g": 81.0,
+        "fat_g": 1.5
+      },
+      "aliases": ["桂皮", "gui pi", "Chinese cinnamon", "cassia"],
+      "common_units": ["piece", "gram", "ounce"]
+    }
+  ]
+}

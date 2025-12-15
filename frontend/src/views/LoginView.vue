@@ -55,6 +55,12 @@
 
         <!-- Footer Links -->
         <div class="login-footer">
+          <p class="login-link-text">
+            {{ $t('auth.dontHaveAccount') }}
+            <router-link to="/signup" class="signup-link">
+              {{ $t('auth.signUp') }}
+            </router-link>
+          </p>
           <router-link to="/" class="login-link">
             <i class="pi pi-arrow-left"></i>
             {{ $t('auth.backToHome') }}
@@ -96,9 +102,9 @@ const handleLogin = async () => {
     if (redirect) {
       router.push(redirect)
     } else if (isAdmin.value) {
-      router.push('/admin')
+      router.push({ name: 'admin-dashboard' })
     } else {
-      router.push('/')
+      router.push({ name: 'home' })
     }
   } catch (e: any) {
     error.value = e.response?.data?.error || e.message || t('auth.loginError')
@@ -211,6 +217,27 @@ const handleLogin = async () => {
 .login-footer {
   margin-top: var(--spacing-xl);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.login-link-text {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.signup-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: color var(--transition-fast);
+}
+
+.signup-link:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
 }
 
 .login-link {

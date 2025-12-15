@@ -1,0 +1,758 @@
+{
+  "batch": 6,
+  "agent": 30,
+  "category": "korean_noodles",
+  "generated_at": "2025-12-11T00:00:00Z",
+  "ingredients": [
+    {
+      "canonical_name": "Tteokbokki Rice Cake",
+      "category": "grain",
+      "per_100g": {
+        "calories": 147,
+        "protein_g": 2.1,
+        "carbs_g": 33.5,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "ko": "떡볶이 떡",
+        "romanization": "tteokbokki tteok"
+      },
+      "common_units": ["serving", "cup", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Garae-tteok (Long Rice Cake)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 145,
+        "protein_g": 2.0,
+        "carbs_g": 33.2,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "ko": "가래떡",
+        "romanization": "garaetteok"
+      },
+      "common_units": ["serving", "cup", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Songpyeon (Half-Moon Rice Cake)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 165,
+        "protein_g": 2.5,
+        "carbs_g": 35.8,
+        "fat_g": 1.2
+      },
+      "aliases": {
+        "ko": "송편",
+        "romanization": "songpyeon"
+      },
+      "common_units": ["serving", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Injeolmi (Soybean Powder Rice Cake)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 210,
+        "protein_g": 5.5,
+        "carbs_g": 38.5,
+        "fat_g": 4.2
+      },
+      "aliases": {
+        "ko": "인절미",
+        "romanization": "injeolmi"
+      },
+      "common_units": ["serving", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Baekseolgi (White Rice Cake)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 152,
+        "protein_g": 2.3,
+        "carbs_g": 34.5,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "ko": "백설기",
+        "romanization": "baekseolgi"
+      },
+      "common_units": ["serving", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Sirutteok (Steamed Rice Cake)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 158,
+        "protein_g": 2.8,
+        "carbs_g": 35.2,
+        "fat_g": 0.6
+      },
+      "aliases": {
+        "ko": "시루떡",
+        "romanization": "sirutteok"
+      },
+      "common_units": ["serving", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Chapssaltteok (Sweet Rice Cake)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 172,
+        "protein_g": 2.6,
+        "carbs_g": 38.5,
+        "fat_g": 0.8
+      },
+      "aliases": {
+        "ko": "찹쌀떡",
+        "romanization": "chapssaltteok"
+      },
+      "common_units": ["serving", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Yaksik Rice Cake",
+      "category": "grain",
+      "per_100g": {
+        "calories": 235,
+        "protein_g": 3.5,
+        "carbs_g": 45.2,
+        "fat_g": 4.8
+      },
+      "aliases": {
+        "ko": "약식",
+        "romanization": "yaksik"
+      },
+      "common_units": ["serving", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Dangmyeon (Sweet Potato Glass Noodles)",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 331,
+        "protein_g": 0.2,
+        "carbs_g": 82.7,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "ko": "당면",
+        "romanization": "dangmyeon"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Naengmyeon Noodles (Buckwheat Cold Noodles)",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 343,
+        "protein_g": 12.5,
+        "carbs_g": 70.8,
+        "fat_g": 1.8
+      },
+      "aliases": {
+        "ko": "냉면",
+        "romanization": "naengmyeon"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Kalguksu Noodles (Wheat Knife-Cut Noodles)",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 352,
+        "protein_g": 11.2,
+        "carbs_g": 73.5,
+        "fat_g": 1.5
+      },
+      "aliases": {
+        "ko": "칼국수",
+        "romanization": "kalguksu"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Somyeon (Thin Wheat Noodles)",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 348,
+        "protein_g": 10.8,
+        "carbs_g": 72.8,
+        "fat_g": 1.4
+      },
+      "aliases": {
+        "ko": "소면",
+        "romanization": "somyeon"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Guksu (Korean Wheat Noodles)",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 350,
+        "protein_g": 11.0,
+        "carbs_g": 73.2,
+        "fat_g": 1.5
+      },
+      "aliases": {
+        "ko": "국수",
+        "romanization": "guksu"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Jjolmyeon Noodles (Chewy Wheat Noodles)",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 10.5,
+        "carbs_g": 75.8,
+        "fat_g": 1.2
+      },
+      "aliases": {
+        "ko": "쫄면",
+        "romanization": "jjolmyeon"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Memil Guksu (Buckwheat Noodles)",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 340,
+        "protein_g": 13.2,
+        "carbs_g": 68.5,
+        "fat_g": 2.1
+      },
+      "aliases": {
+        "ko": "메밀국수",
+        "romanization": "memil guksu"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Instant Ramyun Noodles",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 448,
+        "protein_g": 9.5,
+        "carbs_g": 62.8,
+        "fat_g": 17.2
+      },
+      "aliases": {
+        "ko": "라면",
+        "romanization": "ramyeon"
+      },
+      "common_units": ["serving", "cup", "gram", "package"]
+    },
+    {
+      "canonical_name": "Shin Ramyun Noodles",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 452,
+        "protein_g": 9.8,
+        "carbs_g": 63.5,
+        "fat_g": 17.5
+      },
+      "aliases": {
+        "ko": "신라면",
+        "romanization": "shin ramyeon"
+      },
+      "common_units": ["serving", "cup", "gram", "package"]
+    },
+    {
+      "canonical_name": "Chapagetti Noodles",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 455,
+        "protein_g": 10.2,
+        "carbs_g": 64.2,
+        "fat_g": 17.8
+      },
+      "aliases": {
+        "ko": "짜파게티",
+        "romanization": "chapagetti"
+      },
+      "common_units": ["serving", "cup", "gram", "package"]
+    },
+    {
+      "canonical_name": "Neoguri Ramyun Noodles",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 450,
+        "protein_g": 9.6,
+        "carbs_g": 63.8,
+        "fat_g": 17.4
+      },
+      "aliases": {
+        "ko": "너구리",
+        "romanization": "neoguri"
+      },
+      "common_units": ["serving", "cup", "gram", "package"]
+    },
+    {
+      "canonical_name": "Samyang Buldak Noodles",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 470,
+        "protein_g": 10.5,
+        "carbs_g": 66.5,
+        "fat_g": 18.5
+      },
+      "aliases": {
+        "ko": "삼양 불닭볶음면",
+        "romanization": "samyang buldak bokkeum myeon"
+      },
+      "common_units": ["serving", "cup", "gram", "package"]
+    },
+    {
+      "canonical_name": "Korean Short Grain White Rice (Raw)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 360,
+        "protein_g": 6.8,
+        "carbs_g": 79.2,
+        "fat_g": 0.6
+      },
+      "aliases": {
+        "ko": "쌀",
+        "romanization": "ssal"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Short Grain White Rice (Cooked)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 130,
+        "protein_g": 2.4,
+        "carbs_g": 28.7,
+        "fat_g": 0.2
+      },
+      "aliases": {
+        "ko": "밥",
+        "romanization": "bap"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Sweet Rice (Glutinous Rice, Raw)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 6.5,
+        "carbs_g": 79.8,
+        "fat_g": 0.5
+      },
+      "aliases": {
+        "ko": "찹쌀",
+        "romanization": "chapssal"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Sweet Rice (Glutinous Rice, Cooked)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 135,
+        "protein_g": 2.5,
+        "carbs_g": 30.2,
+        "fat_g": 0.3
+      },
+      "aliases": {
+        "ko": "찹쌀밥",
+        "romanization": "chapssal bap"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Brown Rice (Raw)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 362,
+        "protein_g": 7.5,
+        "carbs_g": 76.8,
+        "fat_g": 2.3
+      },
+      "aliases": {
+        "ko": "현미",
+        "romanization": "hyeonmi"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Brown Rice (Cooked)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 112,
+        "protein_g": 2.6,
+        "carbs_g": 23.5,
+        "fat_g": 0.9
+      },
+      "aliases": {
+        "ko": "현미밥",
+        "romanization": "hyeonmi bap"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Black Rice (Raw)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 356,
+        "protein_g": 8.2,
+        "carbs_g": 75.5,
+        "fat_g": 2.8
+      },
+      "aliases": {
+        "ko": "흑미",
+        "romanization": "heukmi"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Barley (Raw)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 354,
+        "protein_g": 12.5,
+        "carbs_g": 73.5,
+        "fat_g": 2.3
+      },
+      "aliases": {
+        "ko": "보리",
+        "romanization": "bori"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Barley (Cooked)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 123,
+        "protein_g": 4.2,
+        "carbs_g": 25.8,
+        "fat_g": 0.8
+      },
+      "aliases": {
+        "ko": "보리밥",
+        "romanization": "bori bap"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Ogokbap Mix (Five Grain Mix, Raw)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 358,
+        "protein_g": 10.5,
+        "carbs_g": 74.8,
+        "fat_g": 2.5
+      },
+      "aliases": {
+        "ko": "오곡밥",
+        "romanization": "ogokbap"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Millet (Raw)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 363,
+        "protein_g": 11.2,
+        "carbs_g": 72.8,
+        "fat_g": 4.2
+      },
+      "aliases": {
+        "ko": "조",
+        "romanization": "jo"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Sujebi Dough (Hand-Torn Noodle Dough)",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 265,
+        "protein_g": 8.5,
+        "carbs_g": 52.8,
+        "fat_g": 2.2
+      },
+      "aliases": {
+        "ko": "수제비",
+        "romanization": "sujebi"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Mandu Wrappers (Dumpling Wrappers)",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 288,
+        "protein_g": 9.2,
+        "carbs_g": 58.5,
+        "fat_g": 2.5
+      },
+      "aliases": {
+        "ko": "만두피",
+        "romanization": "mandu-pi"
+      },
+      "common_units": ["serving", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Buchimgae Mix (Korean Pancake Flour)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 355,
+        "protein_g": 10.5,
+        "carbs_g": 75.2,
+        "fat_g": 1.5
+      },
+      "aliases": {
+        "ko": "부침가루",
+        "romanization": "buchim garu"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Rice Flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 366,
+        "protein_g": 6.0,
+        "carbs_g": 80.2,
+        "fat_g": 1.4
+      },
+      "aliases": {
+        "ko": "쌀가루",
+        "romanization": "ssal garu"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Sweet Rice Flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 5.8,
+        "carbs_g": 80.8,
+        "fat_g": 1.2
+      },
+      "aliases": {
+        "ko": "찹쌀가루",
+        "romanization": "chapssal garu"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Wheat Flour",
+      "category": "grain",
+      "per_100g": {
+        "calories": 364,
+        "protein_g": 10.3,
+        "carbs_g": 76.3,
+        "fat_g": 1.0
+      },
+      "aliases": {
+        "ko": "밀가루",
+        "romanization": "mil garu"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Kongguksu Noodles (Soy Milk Noodles)",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 345,
+        "protein_g": 11.5,
+        "carbs_g": 71.2,
+        "fat_g": 1.8
+      },
+      "aliases": {
+        "ko": "콩국수",
+        "romanization": "kongguksu"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Janchi Guksu Noodles (Banquet Noodles)",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 348,
+        "protein_g": 10.8,
+        "carbs_g": 72.8,
+        "fat_g": 1.4
+      },
+      "aliases": {
+        "ko": "잔치국수",
+        "romanization": "janchi guksu"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Bibim Naengmyeon Noodles",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 340,
+        "protein_g": 12.2,
+        "carbs_g": 69.5,
+        "fat_g": 1.9
+      },
+      "aliases": {
+        "ko": "비빔냉면",
+        "romanization": "bibim naengmyeon"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Mul Naengmyeon Noodles",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 342,
+        "protein_g": 12.4,
+        "carbs_g": 70.2,
+        "fat_g": 1.8
+      },
+      "aliases": {
+        "ko": "물냉면",
+        "romanization": "mul naengmyeon"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Potato Starch Noodles",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 328,
+        "protein_g": 0.3,
+        "carbs_g": 82.0,
+        "fat_g": 0.1
+      },
+      "aliases": {
+        "ko": "감자전분면",
+        "romanization": "gamja jeonbun myeon"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Acorn Noodles",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 312,
+        "protein_g": 4.5,
+        "carbs_g": 68.5,
+        "fat_g": 2.8
+      },
+      "aliases": {
+        "ko": "도토리국수",
+        "romanization": "dotori guksu"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Kimchi Ramyun Noodles",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 453,
+        "protein_g": 9.7,
+        "carbs_g": 64.0,
+        "fat_g": 17.6
+      },
+      "aliases": {
+        "ko": "김치라면",
+        "romanization": "kimchi ramyeon"
+      },
+      "common_units": ["serving", "cup", "gram", "package"]
+    },
+    {
+      "canonical_name": "Ansong Tang Myeon (Ansong Instant Noodles)",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 449,
+        "protein_g": 9.4,
+        "carbs_g": 62.5,
+        "fat_g": 17.3
+      },
+      "aliases": {
+        "ko": "안성탕면",
+        "romanization": "ansong tang myeon"
+      },
+      "common_units": ["serving", "cup", "gram", "package"]
+    },
+    {
+      "canonical_name": "Jin Ramyun Noodles",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 454,
+        "protein_g": 10.0,
+        "carbs_g": 63.8,
+        "fat_g": 17.7
+      },
+      "aliases": {
+        "ko": "진라면",
+        "romanization": "jin ramyeon"
+      },
+      "common_units": ["serving", "cup", "gram", "package"]
+    },
+    {
+      "canonical_name": "Yeol Ramyun Noodles (Spicy Instant Noodles)",
+      "category": "noodle",
+      "per_100g": {
+        "calories": 456,
+        "protein_g": 9.9,
+        "carbs_g": 64.5,
+        "fat_g": 17.9
+      },
+      "aliases": {
+        "ko": "열라면",
+        "romanization": "yeol ramyeon"
+      },
+      "common_units": ["serving", "cup", "gram", "package"]
+    },
+    {
+      "canonical_name": "Tteok (General Rice Cake)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 150,
+        "protein_g": 2.2,
+        "carbs_g": 34.0,
+        "fat_g": 0.4
+      },
+      "aliases": {
+        "ko": "떡",
+        "romanization": "tteok"
+      },
+      "common_units": ["serving", "gram", "piece"]
+    },
+    {
+      "canonical_name": "Nurungji (Scorched Rice)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 385,
+        "protein_g": 7.2,
+        "carbs_g": 82.5,
+        "fat_g": 2.8
+      },
+      "aliases": {
+        "ko": "누룽지",
+        "romanization": "nurungji"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Job's Tears (Raw)",
+      "category": "grain",
+      "per_100g": {
+        "calories": 361,
+        "protein_g": 14.1,
+        "carbs_g": 71.2,
+        "fat_g": 3.3
+      },
+      "aliases": {
+        "ko": "율무",
+        "romanization": "yulmu"
+      },
+      "common_units": ["serving", "cup", "gram"]
+    }
+  ]
+}

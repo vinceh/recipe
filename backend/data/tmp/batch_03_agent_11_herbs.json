@@ -1,0 +1,1956 @@
+{
+  "batch": 3,
+  "agent": 11,
+  "category": "herbs",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "basil, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 3.15,
+        "carbs_g": 2.65,
+        "fat_g": 0.64,
+        "fiber_g": 1.6
+      },
+      "aliases": {
+        "en": ["fresh basil", "sweet basil", "basil leaves"],
+        "ja": ["バジル", "スイートバジル", "生バジル"],
+        "ko": ["바질", "신선한 바질", "스위트 바질"],
+        "zh": ["罗勒", "新鲜罗勒", "九层塔"],
+        "zh-tw": ["羅勒", "新鮮羅勒", "九層塔"],
+        "es": ["albahaca fresca", "albahaca", "albahaca dulce"],
+        "fr": ["basilic frais", "basilic", "basilic doux"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 24},
+        {"unit": "tbsp", "grams": 6},
+        {"unit": "tsp", "grams": 2},
+        {"unit": "leaf", "grams": 0.5}
+      ]
+    },
+    {
+      "canonical_name": "basil, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 233,
+        "protein_g": 14.4,
+        "carbs_g": 47.8,
+        "fat_g": 4.07,
+        "fiber_g": 37.7
+      },
+      "aliases": {
+        "en": ["dried basil", "dry basil"],
+        "ja": ["乾燥バジル", "ドライバジル"],
+        "ko": ["말린 바질", "건조 바질"],
+        "zh": ["干罗勒", "罗勒干"],
+        "zh-tw": ["乾羅勒", "羅勒乾"],
+        "es": ["albahaca seca", "albahaca deshidratada"],
+        "fr": ["basilic séché", "basilic sec"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 4},
+        {"unit": "tsp", "grams": 1.3}
+      ]
+    },
+    {
+      "canonical_name": "thai basil, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 3.15,
+        "carbs_g": 2.65,
+        "fat_g": 0.64,
+        "fiber_g": 1.6
+      },
+      "aliases": {
+        "en": ["thai basil", "thai sweet basil", "horapa"],
+        "ja": ["タイバジル", "ホーラパー"],
+        "ko": ["타이 바질", "호라파"],
+        "zh": ["泰国罗勒", "打抛叶"],
+        "zh-tw": ["泰國羅勒", "打拋葉"],
+        "es": ["albahaca tailandesa"],
+        "fr": ["basilic thaï"],
+        "th": ["โหระพา"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 24},
+        {"unit": "tbsp", "grams": 6},
+        {"unit": "leaf", "grams": 0.5}
+      ]
+    },
+    {
+      "canonical_name": "holy basil, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 3.15,
+        "carbs_g": 2.65,
+        "fat_g": 0.64,
+        "fiber_g": 1.6
+      },
+      "aliases": {
+        "en": ["holy basil", "tulsi", "krapao"],
+        "ja": ["ホーリーバジル", "トゥルシー", "ガパオ"],
+        "ko": ["홀리 바질", "툴시", "카파오"],
+        "zh": ["神圣罗勒", "圣罗勒", "打抛叶"],
+        "zh-tw": ["神聖羅勒", "聖羅勒", "打拋葉"],
+        "es": ["albahaca santa", "tulsi"],
+        "fr": ["basilic sacré", "tulsi"],
+        "th": ["กะเพรา"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 24},
+        {"unit": "tbsp", "grams": 6},
+        {"unit": "leaf", "grams": 0.5}
+      ]
+    },
+    {
+      "canonical_name": "cilantro, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 2.13,
+        "carbs_g": 3.67,
+        "fat_g": 0.52,
+        "fiber_g": 2.8
+      },
+      "aliases": {
+        "en": ["fresh cilantro", "coriander leaves", "chinese parsley"],
+        "ja": ["コリアンダー", "パクチー", "香菜"],
+        "ko": ["고수", "코리앤더", "실란트로"],
+        "zh": ["香菜", "芫荽"],
+        "zh-tw": ["香菜", "芫荽"],
+        "es": ["cilantro fresco", "culantro", "perejil chino"],
+        "fr": ["coriandre fraîche", "persil arabe"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 16},
+        {"unit": "tbsp", "grams": 4},
+        {"unit": "bunch", "grams": 60}
+      ]
+    },
+    {
+      "canonical_name": "cilantro, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 279,
+        "protein_g": 21.93,
+        "carbs_g": 52.1,
+        "fat_g": 4.78,
+        "fiber_g": 10.4
+      },
+      "aliases": {
+        "en": ["dried cilantro", "dried coriander leaves"],
+        "ja": ["乾燥コリアンダー", "ドライパクチー"],
+        "ko": ["말린 고수", "건조 고수"],
+        "zh": ["干香菜", "香菜干"],
+        "zh-tw": ["乾香菜", "香菜乾"],
+        "es": ["cilantro seco"],
+        "fr": ["coriandre séchée"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 3},
+        {"unit": "tsp", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "parsley, fresh, flat-leaf",
+      "category": "herb",
+      "per_100g": {
+        "calories": 36,
+        "protein_g": 2.97,
+        "carbs_g": 6.33,
+        "fat_g": 0.79,
+        "fiber_g": 3.3
+      },
+      "aliases": {
+        "en": ["flat-leaf parsley", "italian parsley", "fresh parsley"],
+        "ja": ["イタリアンパセリ", "平葉パセリ", "生パセリ"],
+        "ko": ["평잎 파슬리", "이탈리안 파슬리"],
+        "zh": ["平叶欧芹", "意大利欧芹", "新鲜欧芹"],
+        "zh-tw": ["平葉歐芹", "意大利歐芹", "新鮮歐芹"],
+        "es": ["perejil de hoja plana", "perejil italiano"],
+        "fr": ["persil plat", "persil italien"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 60},
+        {"unit": "tbsp", "grams": 4},
+        {"unit": "bunch", "grams": 60}
+      ]
+    },
+    {
+      "canonical_name": "parsley, fresh, curly",
+      "category": "herb",
+      "per_100g": {
+        "calories": 36,
+        "protein_g": 2.97,
+        "carbs_g": 6.33,
+        "fat_g": 0.79,
+        "fiber_g": 3.3
+      },
+      "aliases": {
+        "en": ["curly parsley", "curly-leaf parsley", "fresh parsley"],
+        "ja": ["カールパセリ", "縮れ葉パセリ"],
+        "ko": ["곱슬 파슬리"],
+        "zh": ["卷叶欧芹", "卷欧芹"],
+        "zh-tw": ["捲葉歐芹", "捲歐芹"],
+        "es": ["perejil rizado", "perejil de hoja rizada"],
+        "fr": ["persil frisé"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 60},
+        {"unit": "tbsp", "grams": 4},
+        {"unit": "bunch", "grams": 60}
+      ]
+    },
+    {
+      "canonical_name": "parsley, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 292,
+        "protein_g": 26.63,
+        "carbs_g": 50.64,
+        "fat_g": 5.48,
+        "fiber_g": 26.7
+      },
+      "aliases": {
+        "en": ["dried parsley", "dry parsley"],
+        "ja": ["乾燥パセリ", "ドライパセリ"],
+        "ko": ["말린 파슬리", "건조 파슬리"],
+        "zh": ["干欧芹", "欧芹干"],
+        "zh-tw": ["乾歐芹", "歐芹乾"],
+        "es": ["perejil seco"],
+        "fr": ["persil séché"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 3},
+        {"unit": "tsp", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "mint, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 70,
+        "protein_g": 3.75,
+        "carbs_g": 14.89,
+        "fat_g": 0.94,
+        "fiber_g": 8
+      },
+      "aliases": {
+        "en": ["fresh mint", "spearmint", "peppermint"],
+        "ja": ["ミント", "スペアミント", "生ミント"],
+        "ko": ["민트", "박하", "신선한 민트"],
+        "zh": ["薄荷", "新鲜薄荷"],
+        "zh-tw": ["薄荷", "新鮮薄荷"],
+        "es": ["menta fresca", "hierbabuena"],
+        "fr": ["menthe fraîche", "menthe verte"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 24},
+        {"unit": "tbsp", "grams": 6},
+        {"unit": "leaf", "grams": 0.5}
+      ]
+    },
+    {
+      "canonical_name": "mint, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 285,
+        "protein_g": 19.93,
+        "carbs_g": 52.04,
+        "fat_g": 6.03,
+        "fiber_g": 29.8
+      },
+      "aliases": {
+        "en": ["dried mint", "dry mint"],
+        "ja": ["乾燥ミント", "ドライミント"],
+        "ko": ["말린 민트", "건조 민트"],
+        "zh": ["干薄荷", "薄荷干"],
+        "zh-tw": ["乾薄荷", "薄荷乾"],
+        "es": ["menta seca"],
+        "fr": ["menthe séchée"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 3},
+        {"unit": "tsp", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "dill, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 3.46,
+        "carbs_g": 7.02,
+        "fat_g": 1.12,
+        "fiber_g": 2.1
+      },
+      "aliases": {
+        "en": ["fresh dill", "dill weed", "dill leaves"],
+        "ja": ["ディル", "生ディル", "イノンド"],
+        "ko": ["딜", "신선한 딜"],
+        "zh": ["莳萝", "新鲜莳萝"],
+        "zh-tw": ["蒔蘿", "新鮮蒔蘿"],
+        "es": ["eneldo fresco", "eneldo"],
+        "fr": ["aneth frais", "aneth"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 30},
+        {"unit": "tbsp", "grams": 8},
+        {"unit": "sprig", "grams": 3}
+      ]
+    },
+    {
+      "canonical_name": "dill, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 253,
+        "protein_g": 19.96,
+        "carbs_g": 42.22,
+        "fat_g": 4.36,
+        "fiber_g": 15.5
+      },
+      "aliases": {
+        "en": ["dried dill", "dried dill weed"],
+        "ja": ["乾燥ディル", "ドライディル"],
+        "ko": ["말린 딜", "건조 딜"],
+        "zh": ["干莳萝", "莳萝干"],
+        "zh-tw": ["乾蒔蘿", "蒔蘿乾"],
+        "es": ["eneldo seco"],
+        "fr": ["aneth séché"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 3},
+        {"unit": "tsp", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "rosemary, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 131,
+        "protein_g": 3.31,
+        "carbs_g": 20.7,
+        "fat_g": 5.86,
+        "fiber_g": 14.1
+      },
+      "aliases": {
+        "en": ["fresh rosemary", "rosemary sprigs"],
+        "ja": ["ローズマリー", "生ローズマリー"],
+        "ko": ["로즈마리", "신선한 로즈마리"],
+        "zh": ["迷迭香", "新鲜迷迭香"],
+        "zh-tw": ["迷迭香", "新鮮迷迭香"],
+        "es": ["romero fresco", "romero"],
+        "fr": ["romarin frais", "romarin"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 6},
+        {"unit": "tsp", "grams": 2},
+        {"unit": "sprig", "grams": 3}
+      ]
+    },
+    {
+      "canonical_name": "rosemary, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 331,
+        "protein_g": 4.88,
+        "carbs_g": 64.06,
+        "fat_g": 15.22,
+        "fiber_g": 42.6
+      },
+      "aliases": {
+        "en": ["dried rosemary", "dry rosemary"],
+        "ja": ["乾燥ローズマリー", "ドライローズマリー"],
+        "ko": ["말린 로즈마리", "건조 로즈마리"],
+        "zh": ["干迷迭香", "迷迭香干"],
+        "zh-tw": ["乾迷迭香", "迷迭香乾"],
+        "es": ["romero seco"],
+        "fr": ["romarin séché"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 4},
+        {"unit": "tsp", "grams": 1.3}
+      ]
+    },
+    {
+      "canonical_name": "thyme, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 101,
+        "protein_g": 5.56,
+        "carbs_g": 24.45,
+        "fat_g": 1.68,
+        "fiber_g": 14
+      },
+      "aliases": {
+        "en": ["fresh thyme", "thyme sprigs"],
+        "ja": ["タイム", "生タイム"],
+        "ko": ["타임", "신선한 타임"],
+        "zh": ["百里香", "新鲜百里香"],
+        "zh-tw": ["百里香", "新鮮百里香"],
+        "es": ["tomillo fresco", "tomillo"],
+        "fr": ["thym frais", "thym"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 6},
+        {"unit": "tsp", "grams": 2},
+        {"unit": "sprig", "grams": 3}
+      ]
+    },
+    {
+      "canonical_name": "thyme, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 276,
+        "protein_g": 9.11,
+        "carbs_g": 63.94,
+        "fat_g": 7.43,
+        "fiber_g": 37
+      },
+      "aliases": {
+        "en": ["dried thyme", "dry thyme"],
+        "ja": ["乾燥タイム", "ドライタイム"],
+        "ko": ["말린 타임", "건조 타임"],
+        "zh": ["干百里香", "百里香干"],
+        "zh-tw": ["乾百里香", "百里香乾"],
+        "es": ["tomillo seco"],
+        "fr": ["thym séché"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 4},
+        {"unit": "tsp", "grams": 1.4}
+      ]
+    },
+    {
+      "canonical_name": "sage, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 315,
+        "protein_g": 10.63,
+        "carbs_g": 60.73,
+        "fat_g": 12.75,
+        "fiber_g": 40.3
+      },
+      "aliases": {
+        "en": ["fresh sage", "sage leaves"],
+        "ja": ["セージ", "生セージ"],
+        "ko": ["세이지", "신선한 세이지"],
+        "zh": ["鼠尾草", "新鲜鼠尾草"],
+        "zh-tw": ["鼠尾草", "新鮮鼠尾草"],
+        "es": ["salvia fresca", "salvia"],
+        "fr": ["sauge fraîche", "sauge"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 6},
+        {"unit": "tsp", "grams": 2},
+        {"unit": "leaf", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "sage, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 315,
+        "protein_g": 10.63,
+        "carbs_g": 60.73,
+        "fat_g": 12.75,
+        "fiber_g": 40.3
+      },
+      "aliases": {
+        "en": ["dried sage", "dry sage", "rubbed sage"],
+        "ja": ["乾燥セージ", "ドライセージ"],
+        "ko": ["말린 세이지", "건조 세이지"],
+        "zh": ["干鼠尾草", "鼠尾草干"],
+        "zh-tw": ["乾鼠尾草", "鼠尾草乾"],
+        "es": ["salvia seca"],
+        "fr": ["sauge séchée"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 2},
+        {"unit": "tsp", "grams": 0.7}
+      ]
+    },
+    {
+      "canonical_name": "oregano, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 265,
+        "protein_g": 9,
+        "carbs_g": 68.92,
+        "fat_g": 4.28,
+        "fiber_g": 42.5
+      },
+      "aliases": {
+        "en": ["fresh oregano", "oregano leaves"],
+        "ja": ["オレガノ", "生オレガノ"],
+        "ko": ["오레가노", "신선한 오레가노"],
+        "zh": ["牛至", "新鲜牛至"],
+        "zh-tw": ["牛至", "新鮮牛至"],
+        "es": ["orégano fresco", "orégano"],
+        "fr": ["origan frais", "origan"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 6},
+        {"unit": "tsp", "grams": 2}
+      ]
+    },
+    {
+      "canonical_name": "oregano, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 265,
+        "protein_g": 9,
+        "carbs_g": 68.92,
+        "fat_g": 4.28,
+        "fiber_g": 42.5
+      },
+      "aliases": {
+        "en": ["dried oregano", "dry oregano"],
+        "ja": ["乾燥オレガノ", "ドライオレガノ"],
+        "ko": ["말린 오레가노", "건조 오레가노"],
+        "zh": ["干牛至", "牛至干"],
+        "zh-tw": ["乾牛至", "牛至乾"],
+        "es": ["orégano seco"],
+        "fr": ["origan séché"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 3},
+        {"unit": "tsp", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "tarragon, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 295,
+        "protein_g": 22.77,
+        "carbs_g": 50.22,
+        "fat_g": 7.24,
+        "fiber_g": 7.4
+      },
+      "aliases": {
+        "en": ["fresh tarragon", "french tarragon"],
+        "ja": ["タラゴン", "エストラゴン", "生タラゴン"],
+        "ko": ["타라곤", "에스트라곤"],
+        "zh": ["龙蒿", "新鲜龙蒿"],
+        "zh-tw": ["龍蒿", "新鮮龍蒿"],
+        "es": ["estragón fresco", "estragón"],
+        "fr": ["estragon frais", "estragon"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 6},
+        {"unit": "tsp", "grams": 2}
+      ]
+    },
+    {
+      "canonical_name": "tarragon, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 295,
+        "protein_g": 22.77,
+        "carbs_g": 50.22,
+        "fat_g": 7.24,
+        "fiber_g": 7.4
+      },
+      "aliases": {
+        "en": ["dried tarragon", "dry tarragon"],
+        "ja": ["乾燥タラゴン", "ドライタラゴン"],
+        "ko": ["말린 타라곤", "건조 타라곤"],
+        "zh": ["干龙蒿", "龙蒿干"],
+        "zh-tw": ["乾龍蒿", "龍蒿乾"],
+        "es": ["estragón seco"],
+        "fr": ["estragon séché"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 2},
+        {"unit": "tsp", "grams": 0.6}
+      ]
+    },
+    {
+      "canonical_name": "chervil, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 237,
+        "protein_g": 23.2,
+        "carbs_g": 49.1,
+        "fat_g": 3.9,
+        "fiber_g": 11.3
+      },
+      "aliases": {
+        "en": ["fresh chervil", "french parsley"],
+        "ja": ["チャービル", "セルフィーユ"],
+        "ko": ["처빌", "셀피유"],
+        "zh": ["细叶芹", "新鲜细叶芹"],
+        "zh-tw": ["細葉芹", "新鮮細葉芹"],
+        "es": ["perifollo fresco", "perifollo"],
+        "fr": ["cerfeuil frais", "cerfeuil"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 4},
+        {"unit": "tsp", "grams": 1.3}
+      ]
+    },
+    {
+      "canonical_name": "chervil, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 237,
+        "protein_g": 23.2,
+        "carbs_g": 49.1,
+        "fat_g": 3.9,
+        "fiber_g": 11.3
+      },
+      "aliases": {
+        "en": ["dried chervil", "dry chervil"],
+        "ja": ["乾燥チャービル", "ドライチャービル"],
+        "ko": ["말린 처빌", "건조 처빌"],
+        "zh": ["干细叶芹", "细叶芹干"],
+        "zh-tw": ["乾細葉芹", "細葉芹乾"],
+        "es": ["perifollo seco"],
+        "fr": ["cerfeuil séché"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 2},
+        {"unit": "tsp", "grams": 0.6}
+      ]
+    },
+    {
+      "canonical_name": "marjoram, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 271,
+        "protein_g": 12.66,
+        "carbs_g": 60.56,
+        "fat_g": 7.04,
+        "fiber_g": 40.3
+      },
+      "aliases": {
+        "en": ["fresh marjoram", "sweet marjoram"],
+        "ja": ["マジョラム", "スイートマジョラム"],
+        "ko": ["마조람", "스위트 마조람"],
+        "zh": ["马郁兰", "新鲜马郁兰"],
+        "zh-tw": ["馬鬱蘭", "新鮮馬鬱蘭"],
+        "es": ["mejorana fresca", "mejorana"],
+        "fr": ["marjolaine fraîche", "marjolaine"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 6},
+        {"unit": "tsp", "grams": 2}
+      ]
+    },
+    {
+      "canonical_name": "marjoram, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 271,
+        "protein_g": 12.66,
+        "carbs_g": 60.56,
+        "fat_g": 7.04,
+        "fiber_g": 40.3
+      },
+      "aliases": {
+        "en": ["dried marjoram", "dry marjoram"],
+        "ja": ["乾燥マジョラム", "ドライマジョラム"],
+        "ko": ["말린 마조람", "건조 마조람"],
+        "zh": ["干马郁兰", "马郁兰干"],
+        "zh-tw": ["乾馬鬱蘭", "馬鬱蘭乾"],
+        "es": ["mejorana seca"],
+        "fr": ["marjolaine séchée"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 2},
+        {"unit": "tsp", "grams": 0.6}
+      ]
+    },
+    {
+      "canonical_name": "bay leaf, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 313,
+        "protein_g": 7.61,
+        "carbs_g": 74.97,
+        "fat_g": 8.36,
+        "fiber_g": 26.3
+      },
+      "aliases": {
+        "en": ["bay leaves", "dried bay leaf", "laurel leaf"],
+        "ja": ["ローリエ", "ベイリーフ", "月桂樹の葉"],
+        "ko": ["월계수 잎", "베이 리프", "로리에"],
+        "zh": ["月桂叶", "香叶"],
+        "zh-tw": ["月桂葉", "香葉"],
+        "es": ["hoja de laurel", "laurel"],
+        "fr": ["feuille de laurier", "laurier"]
+      },
+      "common_units": [
+        {"unit": "leaf", "grams": 0.3}
+      ]
+    },
+    {
+      "canonical_name": "chives, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 30,
+        "protein_g": 3.27,
+        "carbs_g": 4.35,
+        "fat_g": 0.73,
+        "fiber_g": 2.5
+      },
+      "aliases": {
+        "en": ["fresh chives", "garlic chives"],
+        "ja": ["チャイブ", "アサツキ", "生チャイブ"],
+        "ko": ["차이브", "쪽파"],
+        "zh": ["细香葱", "新鲜细香葱"],
+        "zh-tw": ["細香蔥", "新鮮細香蔥"],
+        "es": ["cebollino fresco", "cebollín"],
+        "fr": ["ciboulette fraîche", "ciboulette"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 3},
+        {"unit": "tsp", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "chives, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 276,
+        "protein_g": 20.89,
+        "carbs_g": 58.89,
+        "fat_g": 2.81,
+        "fiber_g": 23.2
+      },
+      "aliases": {
+        "en": ["dried chives", "freeze-dried chives"],
+        "ja": ["乾燥チャイブ", "ドライチャイブ"],
+        "ko": ["말린 차이브", "건조 차이브"],
+        "zh": ["干细香葱", "细香葱干"],
+        "zh-tw": ["乾細香蔥", "細香蔥乾"],
+        "es": ["cebollino seco"],
+        "fr": ["ciboulette séchée"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 2},
+        {"unit": "tsp", "grams": 0.7}
+      ]
+    },
+    {
+      "canonical_name": "lemongrass, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 99,
+        "protein_g": 1.82,
+        "carbs_g": 25.31,
+        "fat_g": 0.49,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["fresh lemongrass", "lemon grass"],
+        "ja": ["レモングラス", "生レモングラス"],
+        "ko": ["레몬그라스", "레몬 그라스"],
+        "zh": ["香茅", "柠檬草"],
+        "zh-tw": ["香茅", "檸檬草"],
+        "es": ["hierba de limón", "limoncillo"],
+        "fr": ["citronnelle fraîche", "citronnelle"],
+        "th": ["ตะไคร้"]
+      },
+      "common_units": [
+        {"unit": "stalk", "grams": 15},
+        {"unit": "tbsp", "grams": 10}
+      ]
+    },
+    {
+      "canonical_name": "lemongrass, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 99,
+        "protein_g": 1.82,
+        "carbs_g": 25.31,
+        "fat_g": 0.49,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["dried lemongrass", "dry lemongrass"],
+        "ja": ["乾燥レモングラス", "ドライレモングラス"],
+        "ko": ["말린 레몬그라스", "건조 레몬그라스"],
+        "zh": ["干香茅", "香茅干"],
+        "zh-tw": ["乾香茅", "香茅乾"],
+        "es": ["hierba de limón seca"],
+        "fr": ["citronnelle séchée"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 3},
+        {"unit": "tsp", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "vietnamese coriander, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 2.13,
+        "carbs_g": 3.67,
+        "fat_g": 0.52,
+        "fiber_g": 2.8
+      },
+      "aliases": {
+        "en": ["vietnamese coriander", "rau ram", "laksa leaf"],
+        "ja": ["ベトナムコリアンダー", "ラウラム"],
+        "ko": ["베트남 고수", "라우람"],
+        "zh": ["越南香菜", "辣蓼"],
+        "zh-tw": ["越南香菜", "辣蓼"],
+        "es": ["cilantro vietnamita"],
+        "fr": ["coriandre vietnamienne"],
+        "th": ["ผักแพว"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 20},
+        {"unit": "tbsp", "grams": 5}
+      ]
+    },
+    {
+      "canonical_name": "culantro, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 2.13,
+        "carbs_g": 3.67,
+        "fat_g": 0.52,
+        "fiber_g": 2.8
+      },
+      "aliases": {
+        "en": ["culantro", "mexican coriander", "sawtooth coriander"],
+        "ja": ["クラントロ", "メキシカンコリアンダー"],
+        "ko": ["쿨란트로", "멕시칸 고수"],
+        "zh": ["刺芹", "墨西哥香菜"],
+        "zh-tw": ["刺芹", "墨西哥香菜"],
+        "es": ["culantro", "cilantro largo"],
+        "fr": ["culantro"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 20},
+        {"unit": "tbsp", "grams": 5},
+        {"unit": "leaf", "grams": 2}
+      ]
+    },
+    {
+      "canonical_name": "perilla, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 37,
+        "protein_g": 3.9,
+        "carbs_g": 7.3,
+        "fat_g": 0.1,
+        "fiber_g": 7
+      },
+      "aliases": {
+        "en": ["perilla leaves", "korean perilla", "sesame leaves"],
+        "ja": ["大葉", "紫蘇", "シソ"],
+        "ko": ["깻잎", "들깨잎"],
+        "zh": ["紫苏叶", "苏叶"],
+        "zh-tw": ["紫蘇葉", "蘇葉"],
+        "es": ["hojas de perilla"],
+        "fr": ["feuilles de périlla"]
+      },
+      "common_units": [
+        {"unit": "leaf", "grams": 3},
+        {"unit": "cup", "grams": 20}
+      ]
+    },
+    {
+      "canonical_name": "shiso, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 37,
+        "protein_g": 3.9,
+        "carbs_g": 7.3,
+        "fat_g": 0.1,
+        "fiber_g": 7
+      },
+      "aliases": {
+        "en": ["shiso", "japanese basil", "beefsteak plant"],
+        "ja": ["シソ", "青じそ", "赤じそ"],
+        "ko": ["시소", "차조기"],
+        "zh": ["紫苏", "日本紫苏"],
+        "zh-tw": ["紫蘇", "日本紫蘇"],
+        "es": ["shiso", "albahaca japonesa"],
+        "fr": ["shiso", "périlla japonais"]
+      },
+      "common_units": [
+        {"unit": "leaf", "grams": 3},
+        {"unit": "cup", "grams": 20}
+      ]
+    },
+    {
+      "canonical_name": "kaffir lime leaves, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 66,
+        "protein_g": 0.8,
+        "carbs_g": 16,
+        "fat_g": 0.2,
+        "fiber_g": 5.2
+      },
+      "aliases": {
+        "en": ["kaffir lime leaves", "makrut lime leaves", "thai lime leaves"],
+        "ja": ["カフィアライムリーフ", "コブミカンの葉"],
+        "ko": ["카피르 라임 잎", "태국 라임 잎"],
+        "zh": ["青柠叶", "箭叶橙叶"],
+        "zh-tw": ["青檸葉", "箭葉橙葉"],
+        "es": ["hojas de lima kaffir"],
+        "fr": ["feuilles de combava"],
+        "th": ["ใบมะกรูด"]
+      },
+      "common_units": [
+        {"unit": "leaf", "grams": 1},
+        {"unit": "tbsp", "grams": 3}
+      ]
+    },
+    {
+      "canonical_name": "kaffir lime leaves, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 66,
+        "protein_g": 0.8,
+        "carbs_g": 16,
+        "fat_g": 0.2,
+        "fiber_g": 5.2
+      },
+      "aliases": {
+        "en": ["dried kaffir lime leaves", "dried makrut lime leaves"],
+        "ja": ["乾燥カフィアライムリーフ"],
+        "ko": ["말린 카피르 라임 잎"],
+        "zh": ["干青柠叶"],
+        "zh-tw": ["乾青檸葉"],
+        "es": ["hojas de lima kaffir secas"],
+        "fr": ["feuilles de combava séchées"]
+      },
+      "common_units": [
+        {"unit": "leaf", "grams": 0.5},
+        {"unit": "tbsp", "grams": 2}
+      ]
+    },
+    {
+      "canonical_name": "epazote, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 0.33,
+        "carbs_g": 7.44,
+        "fat_g": 0.52,
+        "fiber_g": 3.8
+      },
+      "aliases": {
+        "en": ["epazote", "mexican tea", "wormseed"],
+        "ja": ["エパソテ", "メキシカンティー"],
+        "ko": ["에파소테", "멕시칸 티"],
+        "zh": ["土荆芥", "墨西哥茶"],
+        "zh-tw": ["土荊芥", "墨西哥茶"],
+        "es": ["epazote", "pazote"],
+        "fr": ["épazote", "thé du Mexique"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 20},
+        {"unit": "tbsp", "grams": 5},
+        {"unit": "sprig", "grams": 3}
+      ]
+    },
+    {
+      "canonical_name": "epazote, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 0.33,
+        "carbs_g": 7.44,
+        "fat_g": 0.52,
+        "fiber_g": 3.8
+      },
+      "aliases": {
+        "en": ["dried epazote"],
+        "ja": ["乾燥エパソテ"],
+        "ko": ["말린 에파소테"],
+        "zh": ["干土荆芥"],
+        "zh-tw": ["乾土荊芥"],
+        "es": ["epazote seco"],
+        "fr": ["épazote séché"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 2},
+        {"unit": "tsp", "grams": 0.7}
+      ]
+    },
+    {
+      "canonical_name": "hoja santa, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 44,
+        "protein_g": 2,
+        "carbs_g": 8.5,
+        "fat_g": 0.8,
+        "fiber_g": 3.5
+      },
+      "aliases": {
+        "en": ["hoja santa", "mexican pepper leaf", "root beer plant"],
+        "ja": ["オハ・サンタ", "メキシカンペッパーリーフ"],
+        "ko": ["오하 산타", "멕시칸 페퍼 리프"],
+        "zh": ["墨西哥胡椒叶", "圣叶"],
+        "zh-tw": ["墨西哥胡椒葉", "聖葉"],
+        "es": ["hoja santa", "acuyo"],
+        "fr": ["feuille sacrée"]
+      },
+      "common_units": [
+        {"unit": "leaf", "grams": 20},
+        {"unit": "cup", "grams": 30}
+      ]
+    },
+    {
+      "canonical_name": "curry leaves, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 108,
+        "protein_g": 6.1,
+        "carbs_g": 18.7,
+        "fat_g": 1,
+        "fiber_g": 6.4
+      },
+      "aliases": {
+        "en": ["curry leaves", "sweet neem leaves", "kadi patta"],
+        "ja": ["カレーリーフ", "カレーの葉"],
+        "ko": ["커리 잎", "카레 잎"],
+        "zh": ["咖喱叶", "九层塔"],
+        "zh-tw": ["咖喱葉", "九層塔"],
+        "es": ["hojas de curry"],
+        "fr": ["feuilles de curry"]
+      },
+      "common_units": [
+        {"unit": "leaf", "grams": 0.5},
+        {"unit": "sprig", "grams": 2}
+      ]
+    },
+    {
+      "canonical_name": "curry leaves, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 108,
+        "protein_g": 6.1,
+        "carbs_g": 18.7,
+        "fat_g": 1,
+        "fiber_g": 6.4
+      },
+      "aliases": {
+        "en": ["dried curry leaves"],
+        "ja": ["乾燥カレーリーフ"],
+        "ko": ["말린 커리 잎"],
+        "zh": ["干咖喱叶"],
+        "zh-tw": ["乾咖喱葉"],
+        "es": ["hojas de curry secas"],
+        "fr": ["feuilles de curry séchées"]
+      },
+      "common_units": [
+        {"unit": "leaf", "grams": 0.3},
+        {"unit": "tbsp", "grams": 2}
+      ]
+    },
+    {
+      "canonical_name": "pandan leaves, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 0.5,
+        "carbs_g": 8,
+        "fat_g": 0.2,
+        "fiber_g": 2.5
+      },
+      "aliases": {
+        "en": ["pandan leaves", "screwpine leaves", "pandanus"],
+        "ja": ["パンダンリーフ", "ニオイタコノキ"],
+        "ko": ["판단 잎", "판다누스"],
+        "zh": ["香兰叶", "班兰叶"],
+        "zh-tw": ["香蘭葉", "班蘭葉"],
+        "es": ["hojas de pandan"],
+        "fr": ["feuilles de pandanus"],
+        "th": ["ใบเตย"]
+      },
+      "common_units": [
+        {"unit": "leaf", "grams": 5},
+        {"unit": "piece", "grams": 10}
+      ]
+    },
+    {
+      "canonical_name": "herbes de provence",
+      "category": "herb",
+      "per_100g": {
+        "calories": 280,
+        "protein_g": 10,
+        "carbs_g": 60,
+        "fat_g": 6,
+        "fiber_g": 35
+      },
+      "aliases": {
+        "en": ["herbes de provence", "provence herbs"],
+        "ja": ["エルブ・ド・プロヴァンス", "プロヴァンスハーブ"],
+        "ko": ["에르브 드 프로방스", "프로방스 허브"],
+        "zh": ["普罗旺斯香草", "法式香草"],
+        "zh-tw": ["普羅旺斯香草", "法式香草"],
+        "es": ["hierbas de provenza"],
+        "fr": ["herbes de Provence"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 3},
+        {"unit": "tsp", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "italian seasoning",
+      "category": "herb",
+      "per_100g": {
+        "calories": 270,
+        "protein_g": 9.5,
+        "carbs_g": 62,
+        "fat_g": 5.5,
+        "fiber_g": 38
+      },
+      "aliases": {
+        "en": ["italian seasoning", "italian herbs"],
+        "ja": ["イタリアンシーズニング", "イタリアンハーブ"],
+        "ko": ["이탈리안 시즈닝", "이탈리안 허브"],
+        "zh": ["意大利调味料", "意式香草"],
+        "zh-tw": ["意大利調味料", "意式香草"],
+        "es": ["condimento italiano", "hierbas italianas"],
+        "fr": ["assaisonnement italien", "herbes italiennes"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 3},
+        {"unit": "tsp", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "fines herbes",
+      "category": "herb",
+      "per_100g": {
+        "calories": 250,
+        "protein_g": 18,
+        "carbs_g": 50,
+        "fat_g": 5,
+        "fiber_g": 20
+      },
+      "aliases": {
+        "en": ["fines herbes", "fine herbs"],
+        "ja": ["フィーヌゼルブ", "細かいハーブ"],
+        "ko": ["핀 에르브", "파인 허브"],
+        "zh": ["细香草", "法式香草"],
+        "zh-tw": ["細香草", "法式香草"],
+        "es": ["finas hierbas"],
+        "fr": ["fines herbes"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 3},
+        {"unit": "tsp", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "lavender, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 49,
+        "protein_g": 0,
+        "carbs_g": 11,
+        "fat_g": 1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["dried lavender", "lavender buds", "culinary lavender"],
+        "ja": ["ラベンダー", "乾燥ラベンダー"],
+        "ko": ["라벤더", "말린 라벤더"],
+        "zh": ["薰衣草", "干薰衣草"],
+        "zh-tw": ["薰衣草", "乾薰衣草"],
+        "es": ["lavanda seca", "lavanda"],
+        "fr": ["lavande séchée", "lavande"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 3},
+        {"unit": "tsp", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "savory, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 272,
+        "protein_g": 6.73,
+        "carbs_g": 68.73,
+        "fat_g": 5.91,
+        "fiber_g": 45.7
+      },
+      "aliases": {
+        "en": ["fresh savory", "summer savory", "winter savory"],
+        "ja": ["セボリー", "サマーセボリー"],
+        "ko": ["세이보리", "세이버리"],
+        "zh": ["香薄荷", "新鲜香薄荷"],
+        "zh-tw": ["香薄荷", "新鮮香薄荷"],
+        "es": ["ajedrea fresca", "ajedrea"],
+        "fr": ["sarriette fraîche", "sarriette"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 4},
+        {"unit": "tsp", "grams": 1.3}
+      ]
+    },
+    {
+      "canonical_name": "savory, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 272,
+        "protein_g": 6.73,
+        "carbs_g": 68.73,
+        "fat_g": 5.91,
+        "fiber_g": 45.7
+      },
+      "aliases": {
+        "en": ["dried savory"],
+        "ja": ["乾燥セボリー"],
+        "ko": ["말린 세이보리"],
+        "zh": ["干香薄荷"],
+        "zh-tw": ["乾香薄荷"],
+        "es": ["ajedrea seca"],
+        "fr": ["sarriette séchée"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 2},
+        {"unit": "tsp", "grams": 0.7}
+      ]
+    },
+    {
+      "canonical_name": "fennel fronds, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 31,
+        "protein_g": 1.24,
+        "carbs_g": 7.3,
+        "fat_g": 0.2,
+        "fiber_g": 3.1
+      },
+      "aliases": {
+        "en": ["fennel fronds", "fennel leaves", "fennel tops"],
+        "ja": ["フェンネルの葉", "ウイキョウの葉"],
+        "ko": ["회향 잎", "펜넬 잎"],
+        "zh": ["茴香叶", "小茴香叶"],
+        "zh-tw": ["茴香葉", "小茴香葉"],
+        "es": ["hojas de hinojo", "frondas de hinojo"],
+        "fr": ["feuilles de fenouil", "pluches de fenouil"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 20},
+        {"unit": "tbsp", "grams": 5}
+      ]
+    },
+    {
+      "canonical_name": "lovage, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 20,
+        "protein_g": 3.6,
+        "carbs_g": 0,
+        "fat_g": 0.6,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["lovage", "love parsley"],
+        "ja": ["ラベージ", "ラヴィジ"],
+        "ko": ["러비지"],
+        "zh": ["欧当归", "山芹"],
+        "zh-tw": ["歐當歸", "山芹"],
+        "es": ["levístico"],
+        "fr": ["livèche", "ache des montagnes"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 20},
+        {"unit": "tbsp", "grams": 5}
+      ]
+    },
+    {
+      "canonical_name": "lovage, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 20,
+        "protein_g": 3.6,
+        "carbs_g": 0,
+        "fat_g": 0.6,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["dried lovage"],
+        "ja": ["乾燥ラベージ"],
+        "ko": ["말린 러비지"],
+        "zh": ["干欧当归"],
+        "zh-tw": ["乾歐當歸"],
+        "es": ["levístico seco"],
+        "fr": ["livèche séchée"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 2},
+        {"unit": "tsp", "grams": 0.7}
+      ]
+    },
+    {
+      "canonical_name": "sorrel, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 2,
+        "carbs_g": 3.2,
+        "fat_g": 0.7,
+        "fiber_g": 2.9
+      },
+      "aliases": {
+        "en": ["fresh sorrel", "garden sorrel", "common sorrel"],
+        "ja": ["スイバ", "ソレル"],
+        "ko": ["소렐", "수영"],
+        "zh": ["酸模", "新鲜酸模"],
+        "zh-tw": ["酸模", "新鮮酸模"],
+        "es": ["acedera fresca", "acedera"],
+        "fr": ["oseille fraîche", "oseille"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 30},
+        {"unit": "tbsp", "grams": 8}
+      ]
+    },
+    {
+      "canonical_name": "borage, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 21,
+        "protein_g": 1.8,
+        "carbs_g": 3.06,
+        "fat_g": 0.7,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["borage", "starflower"],
+        "ja": ["ボリジ", "ルリジサ"],
+        "ko": ["보리지", "루리지사"],
+        "zh": ["琉璃苣"],
+        "zh-tw": ["琉璃苣"],
+        "es": ["borraja"],
+        "fr": ["bourrache"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 20},
+        {"unit": "tbsp", "grams": 5}
+      ]
+    },
+    {
+      "canonical_name": "lemon balm, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 49,
+        "protein_g": 3.7,
+        "carbs_g": 8,
+        "fat_g": 0.4,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["lemon balm", "melissa"],
+        "ja": ["レモンバーム", "メリッサ"],
+        "ko": ["레몬밤", "멜리사"],
+        "zh": ["柠檬香蜂草", "香蜂草"],
+        "zh-tw": ["檸檬香蜂草", "香蜂草"],
+        "es": ["melisa", "toronjil"],
+        "fr": ["mélisse", "citronnelle"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 20},
+        {"unit": "tbsp", "grams": 5}
+      ]
+    },
+    {
+      "canonical_name": "lemon balm, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 49,
+        "protein_g": 3.7,
+        "carbs_g": 8,
+        "fat_g": 0.4,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["dried lemon balm"],
+        "ja": ["乾燥レモンバーム"],
+        "ko": ["말린 레몬밤"],
+        "zh": ["干柠檬香蜂草"],
+        "zh-tw": ["乾檸檬香蜂草"],
+        "es": ["melisa seca"],
+        "fr": ["mélisse séchée"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 2},
+        {"unit": "tsp", "grams": 0.7}
+      ]
+    },
+    {
+      "canonical_name": "lemon verbena, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["lemon verbena", "verveine"],
+        "ja": ["レモンバーベナ", "レモンベルベーヌ"],
+        "ko": ["레몬 버베나"],
+        "zh": ["柠檬马鞭草"],
+        "zh-tw": ["檸檬馬鞭草"],
+        "es": ["verbena de limón", "hierba luisa"],
+        "fr": ["verveine citronnelle"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 15},
+        {"unit": "tbsp", "grams": 4}
+      ]
+    },
+    {
+      "canonical_name": "lemon verbena, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["dried lemon verbena"],
+        "ja": ["乾燥レモンバーベナ"],
+        "ko": ["말린 레몬 버베나"],
+        "zh": ["干柠檬马鞭草"],
+        "zh-tw": ["乾檸檬馬鞭草"],
+        "es": ["verbena de limón seca"],
+        "fr": ["verveine citronnelle séchée"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 2},
+        {"unit": "tsp", "grams": 0.7}
+      ]
+    },
+    {
+      "canonical_name": "chamomile, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 1,
+        "protein_g": 0,
+        "carbs_g": 0.2,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["chamomile", "camomile", "chamomile flowers"],
+        "ja": ["カモミール", "カミツレ"],
+        "ko": ["카모마일", "캐모마일"],
+        "zh": ["洋甘菊"],
+        "zh-tw": ["洋甘菊"],
+        "es": ["manzanilla"],
+        "fr": ["camomille"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 2},
+        {"unit": "tsp", "grams": 0.7}
+      ]
+    },
+    {
+      "canonical_name": "stevia, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 0,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["stevia", "stevia leaves", "sweet leaf"],
+        "ja": ["ステビア", "ステビアの葉"],
+        "ko": ["스테비아", "스테비아 잎"],
+        "zh": ["甜菊", "甜叶菊"],
+        "zh-tw": ["甜菊", "甜葉菊"],
+        "es": ["stevia", "hierba dulce"],
+        "fr": ["stévia", "feuilles de stévia"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 2},
+        {"unit": "tsp", "grams": 0.7}
+      ]
+    },
+    {
+      "canonical_name": "hyssop, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 3,
+        "carbs_g": 8,
+        "fat_g": 0.5,
+        "fiber_g": 4
+      },
+      "aliases": {
+        "en": ["hyssop"],
+        "ja": ["ヒソップ", "ヤナギハッカ"],
+        "ko": ["히솝"],
+        "zh": ["牛膝草", "海索草"],
+        "zh-tw": ["牛膝草", "海索草"],
+        "es": ["hisopo"],
+        "fr": ["hysope"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 4},
+        {"unit": "tsp", "grams": 1.3}
+      ]
+    },
+    {
+      "canonical_name": "hyssop, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 3,
+        "carbs_g": 8,
+        "fat_g": 0.5,
+        "fiber_g": 4
+      },
+      "aliases": {
+        "en": ["dried hyssop"],
+        "ja": ["乾燥ヒソップ"],
+        "ko": ["말린 히솝"],
+        "zh": ["干牛膝草"],
+        "zh-tw": ["乾牛膝草"],
+        "es": ["hisopo seco"],
+        "fr": ["hysope séchée"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 2},
+        {"unit": "tsp", "grams": 0.7}
+      ]
+    },
+    {
+      "canonical_name": "lemon thyme, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 101,
+        "protein_g": 5.56,
+        "carbs_g": 24.45,
+        "fat_g": 1.68,
+        "fiber_g": 14
+      },
+      "aliases": {
+        "en": ["lemon thyme", "citrus thyme"],
+        "ja": ["レモンタイム"],
+        "ko": ["레몬 타임"],
+        "zh": ["柠檬百里香"],
+        "zh-tw": ["檸檬百里香"],
+        "es": ["tomillo limonero"],
+        "fr": ["thym citron"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 6},
+        {"unit": "tsp", "grams": 2},
+        {"unit": "sprig", "grams": 3}
+      ]
+    },
+    {
+      "canonical_name": "lemon thyme, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 276,
+        "protein_g": 9.11,
+        "carbs_g": 63.94,
+        "fat_g": 7.43,
+        "fiber_g": 37
+      },
+      "aliases": {
+        "en": ["dried lemon thyme"],
+        "ja": ["乾燥レモンタイム"],
+        "ko": ["말린 레몬 타임"],
+        "zh": ["干柠檬百里香"],
+        "zh-tw": ["乾檸檬百里香"],
+        "es": ["tomillo limonero seco"],
+        "fr": ["thym citron séché"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 4},
+        {"unit": "tsp", "grams": 1.4}
+      ]
+    },
+    {
+      "canonical_name": "winter savory, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 272,
+        "protein_g": 6.73,
+        "carbs_g": 68.73,
+        "fat_g": 5.91,
+        "fiber_g": 45.7
+      },
+      "aliases": {
+        "en": ["winter savory"],
+        "ja": ["ウィンターセボリー"],
+        "ko": ["겨울 세이보리"],
+        "zh": ["冬香薄荷"],
+        "zh-tw": ["冬香薄荷"],
+        "es": ["ajedrea de invierno"],
+        "fr": ["sarriette d'hiver"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 2},
+        {"unit": "tsp", "grams": 0.7}
+      ]
+    },
+    {
+      "canonical_name": "summer savory, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 272,
+        "protein_g": 6.73,
+        "carbs_g": 68.73,
+        "fat_g": 5.91,
+        "fiber_g": 45.7
+      },
+      "aliases": {
+        "en": ["summer savory"],
+        "ja": ["サマーセボリー"],
+        "ko": ["여름 세이보리"],
+        "zh": ["夏香薄荷"],
+        "zh-tw": ["夏香薄荷"],
+        "es": ["ajedrea de verano"],
+        "fr": ["sarriette d'été"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 2},
+        {"unit": "tsp", "grams": 0.7}
+      ]
+    },
+    {
+      "canonical_name": "mexican oregano, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 265,
+        "protein_g": 9,
+        "carbs_g": 68.92,
+        "fat_g": 4.28,
+        "fiber_g": 42.5
+      },
+      "aliases": {
+        "en": ["mexican oregano"],
+        "ja": ["メキシカンオレガノ"],
+        "ko": ["멕시칸 오레가노"],
+        "zh": ["墨西哥牛至"],
+        "zh-tw": ["墨西哥牛至"],
+        "es": ["orégano mexicano"],
+        "fr": ["origan mexicain"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 3},
+        {"unit": "tsp", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "greek oregano, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 265,
+        "protein_g": 9,
+        "carbs_g": 68.92,
+        "fat_g": 4.28,
+        "fiber_g": 42.5
+      },
+      "aliases": {
+        "en": ["greek oregano"],
+        "ja": ["グリークオレガノ"],
+        "ko": ["그리스 오레가노"],
+        "zh": ["希腊牛至"],
+        "zh-tw": ["希臘牛至"],
+        "es": ["orégano griego"],
+        "fr": ["origan grec"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 3},
+        {"unit": "tsp", "grams": 1}
+      ]
+    },
+    {
+      "canonical_name": "zaatar, dried",
+      "category": "herb",
+      "per_100g": {
+        "calories": 276,
+        "protein_g": 9.11,
+        "carbs_g": 63.94,
+        "fat_g": 7.43,
+        "fiber_g": 37
+      },
+      "aliases": {
+        "en": ["zaatar", "za'atar herb", "syrian oregano"],
+        "ja": ["ザータル", "ザアタル"],
+        "ko": ["자타르"],
+        "zh": ["扎塔尔", "中东百里香"],
+        "zh-tw": ["扎塔爾", "中東百里香"],
+        "es": ["zaatar", "orégano sirio"],
+        "fr": ["zaatar", "thym du Levant"]
+      },
+      "common_units": [
+        {"unit": "tbsp", "grams": 4},
+        {"unit": "tsp", "grams": 1.4}
+      ]
+    },
+    {
+      "canonical_name": "sawtooth coriander, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 2.13,
+        "carbs_g": 3.67,
+        "fat_g": 0.52,
+        "fiber_g": 2.8
+      },
+      "aliases": {
+        "en": ["sawtooth coriander", "long coriander", "culantro"],
+        "ja": ["ノコギリコリアンダー"],
+        "ko": ["톱니 고수"],
+        "zh": ["锯齿芫荽", "刺芫荽"],
+        "zh-tw": ["鋸齒芫荽", "刺芫荽"],
+        "es": ["cilantro de monte"],
+        "fr": ["coriandre longue"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 20},
+        {"unit": "tbsp", "grams": 5},
+        {"unit": "leaf", "grams": 2}
+      ]
+    },
+    {
+      "canonical_name": "vietnamese mint, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 70,
+        "protein_g": 3.75,
+        "carbs_g": 14.89,
+        "fat_g": 0.94,
+        "fiber_g": 8
+      },
+      "aliases": {
+        "en": ["vietnamese mint", "hot mint", "laksa leaf"],
+        "ja": ["ベトナムミント", "ホットミント"],
+        "ko": ["베트남 민트"],
+        "zh": ["越南薄荷"],
+        "zh-tw": ["越南薄荷"],
+        "es": ["menta vietnamita"],
+        "fr": ["menthe vietnamienne"],
+        "th": ["ผักแพว"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 20},
+        {"unit": "tbsp", "grams": 5}
+      ]
+    },
+    {
+      "canonical_name": "lime basil, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 3.15,
+        "carbs_g": 2.65,
+        "fat_g": 0.64,
+        "fiber_g": 1.6
+      },
+      "aliases": {
+        "en": ["lime basil", "hoary basil"],
+        "ja": ["ライムバジル"],
+        "ko": ["라임 바질"],
+        "zh": ["柠檬罗勒", "青叶罗勒"],
+        "zh-tw": ["檸檬羅勒", "青葉羅勒"],
+        "es": ["albahaca de lima"],
+        "fr": ["basilic citron"],
+        "th": ["แมงลัก"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 24},
+        {"unit": "tbsp", "grams": 6},
+        {"unit": "leaf", "grams": 0.5}
+      ]
+    },
+    {
+      "canonical_name": "opal basil, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 3.15,
+        "carbs_g": 2.65,
+        "fat_g": 0.64,
+        "fiber_g": 1.6
+      },
+      "aliases": {
+        "en": ["opal basil", "purple basil", "dark opal basil"],
+        "ja": ["オパールバジル", "紫バジル"],
+        "ko": ["오팔 바질", "퍼플 바질"],
+        "zh": ["紫罗勒", "紫叶罗勒"],
+        "zh-tw": ["紫羅勒", "紫葉羅勒"],
+        "es": ["albahaca ópalo", "albahaca morada"],
+        "fr": ["basilic pourpre", "basilic opale"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 24},
+        {"unit": "tbsp", "grams": 6},
+        {"unit": "leaf", "grams": 0.5}
+      ]
+    },
+    {
+      "canonical_name": "lemon basil, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 3.15,
+        "carbs_g": 2.65,
+        "fat_g": 0.64,
+        "fiber_g": 1.6
+      },
+      "aliases": {
+        "en": ["lemon basil"],
+        "ja": ["レモンバジル"],
+        "ko": ["레몬 바질"],
+        "zh": ["柠檬罗勒"],
+        "zh-tw": ["檸檬羅勒"],
+        "es": ["albahaca limón"],
+        "fr": ["basilic citron"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 24},
+        {"unit": "tbsp", "grams": 6},
+        {"unit": "leaf", "grams": 0.5}
+      ]
+    },
+    {
+      "canonical_name": "cinnamon basil, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 3.15,
+        "carbs_g": 2.65,
+        "fat_g": 0.64,
+        "fiber_g": 1.6
+      },
+      "aliases": {
+        "en": ["cinnamon basil", "mexican spice basil"],
+        "ja": ["シナモンバジル"],
+        "ko": ["시나몬 바질"],
+        "zh": ["肉桂罗勒"],
+        "zh-tw": ["肉桂羅勒"],
+        "es": ["albahaca canela"],
+        "fr": ["basilic cannelle"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 24},
+        {"unit": "tbsp", "grams": 6},
+        {"unit": "leaf", "grams": 0.5}
+      ]
+    },
+    {
+      "canonical_name": "banana leaf, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 69,
+        "protein_g": 1.8,
+        "carbs_g": 16.5,
+        "fat_g": 0.4,
+        "fiber_g": 2.6
+      },
+      "aliases": {
+        "en": ["banana leaf", "banana leaves"],
+        "ja": ["バナナの葉", "バナナリーフ"],
+        "ko": ["바나나 잎"],
+        "zh": ["芭蕉叶", "香蕉叶"],
+        "zh-tw": ["芭蕉葉", "香蕉葉"],
+        "es": ["hoja de plátano"],
+        "fr": ["feuille de banane"],
+        "th": ["ใบตอง"]
+      },
+      "common_units": [
+        {"unit": "piece", "grams": 50},
+        {"unit": "sheet", "grams": 100}
+      ]
+    },
+    {
+      "canonical_name": "watercress, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 11,
+        "protein_g": 2.3,
+        "carbs_g": 1.29,
+        "fat_g": 0.1,
+        "fiber_g": 0.5
+      },
+      "aliases": {
+        "en": ["watercress"],
+        "ja": ["クレソン", "ウォータークレス"],
+        "ko": ["물냉이", "워터크레스"],
+        "zh": ["西洋菜", "豆瓣菜"],
+        "zh-tw": ["西洋菜", "豆瓣菜"],
+        "es": ["berro", "berros"],
+        "fr": ["cresson"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 34},
+        {"unit": "bunch", "grams": 100}
+      ]
+    },
+    {
+      "canonical_name": "arugula, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 2.58,
+        "carbs_g": 3.65,
+        "fat_g": 0.66,
+        "fiber_g": 1.6
+      },
+      "aliases": {
+        "en": ["arugula", "rocket", "garden rocket"],
+        "ja": ["ルッコラ", "ロケット"],
+        "ko": ["루꼴라", "로켓"],
+        "zh": ["芝麻菜", "箭生菜"],
+        "zh-tw": ["芝麻菜", "箭生菜"],
+        "es": ["rúcula", "arúgula"],
+        "fr": ["roquette"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 20},
+        {"unit": "bunch", "grams": 100}
+      ]
+    },
+    {
+      "canonical_name": "mustard greens, fresh",
+      "category": "herb",
+      "per_100g": {
+        "calories": 27,
+        "protein_g": 2.86,
+        "carbs_g": 4.67,
+        "fat_g": 0.42,
+        "fiber_g": 3.2
+      },
+      "aliases": {
+        "en": ["mustard greens", "mustard leaves"],
+        "ja": ["からし菜", "マスタードグリーン"],
+        "ko": ["겨자채", "갓"],
+        "zh": ["芥菜", "芥菜叶"],
+        "zh-tw": ["芥菜", "芥菜葉"],
+        "es": ["hojas de mostaza", "mostaza"],
+        "fr": ["feuilles de moutarde"]
+      },
+      "common_units": [
+        {"unit": "cup", "grams": 56},
+        {"unit": "bunch", "grams": 100}
+      ]
+    }
+  ]
+}

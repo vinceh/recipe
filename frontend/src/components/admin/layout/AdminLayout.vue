@@ -35,7 +35,7 @@ const closeSidebar = () => {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-provisions-bg);
 }
 
 .admin-layout__container {

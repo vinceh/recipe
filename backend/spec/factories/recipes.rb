@@ -17,12 +17,13 @@ FactoryBot.define do
 
       # Add required ingredient group with recipe ingredient
       ingredient = Ingredient.find_or_create_by!(canonical_name: "test ingredient") { |i| i.category = "vegetable" }
+      unit = Unit.find_or_create_by!(canonical_name: "cup") { |u| u.category = "unit_volume" }
       ig = recipe.ingredient_groups.build(name: "Ingredients", position: 1)
       ig.recipe_ingredients.build(
         ingredient_id: ingredient.id,
         ingredient_name: "test ingredient",
         amount: 1,
-        unit: "cup",
+        unit: unit,
         position: 1
       )
 
@@ -33,20 +34,31 @@ FactoryBot.define do
       cuisine = DataReference.find_or_create_by!(reference_type: 'cuisine', key: 'test') { |r| r.display_name = 'Test' }
       recipe.recipe_cuisines.build(data_reference: cuisine)
 
-      # Attach image
-      recipe.image.attach(
+      # Attach images (card and detail)
+      recipe.card_image.attach(
         io: File.open(Rails.root.join('spec/fixtures/files/test_image.png')),
-        filename: 'test_image.png',
+        filename: 'test_card_image.png',
+        content_type: 'image/png'
+      )
+      recipe.detail_image.attach(
+        io: File.open(Rails.root.join('spec/fixtures/files/test_image.png')),
+        filename: 'test_detail_image.png',
         content_type: 'image/png'
       )
     end
 
     after(:create) do |recipe|
-      # Reattach image after save since attached files don't persist across build/create
-      recipe.image.purge if recipe.image.attached?
-      recipe.image.attach(
+      # Reattach images after save since attached files don't persist across build/create
+      recipe.card_image.purge if recipe.card_image.attached?
+      recipe.card_image.attach(
         io: File.open(Rails.root.join('spec/fixtures/files/test_image.png')),
-        filename: 'test_image.png',
+        filename: 'test_card_image.png',
+        content_type: 'image/png'
+      )
+      recipe.detail_image.purge if recipe.detail_image.attached?
+      recipe.detail_image.attach(
+        io: File.open(Rails.root.join('spec/fixtures/files/test_image.png')),
+        filename: 'test_detail_image.png',
         content_type: 'image/png'
       )
     end

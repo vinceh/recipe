@@ -1,0 +1,1424 @@
+{
+  "batch": 4,
+  "agent": 17,
+  "category": "oils_fats",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "olive oil, extra virgin",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["extra virgin olive oil", "evoo", "extra virgin oil"],
+        "ja": ["エクストラバージンオリーブオイル", "エキストラバージンオリーブオイル"],
+        "ko": ["엑스트라 버진 올리브 오일", "엑스트라버진올리브유"],
+        "zh": ["特级初榨橄榄油", "初榨橄榄油"],
+        "es": ["aceite de oliva virgen extra", "aove"],
+        "fr": ["huile d'olive extra vierge", "huile d'olive vierge extra"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "olive oil, virgin",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["virgin olive oil", "regular olive oil"],
+        "ja": ["バージンオリーブオイル"],
+        "ko": ["버진 올리브 오일", "버진올리브유"],
+        "zh": ["初榨橄榄油", "纯橄榄油"],
+        "es": ["aceite de oliva virgen"],
+        "fr": ["huile d'olive vierge"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "olive oil, light",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["light olive oil", "refined olive oil", "pure olive oil"],
+        "ja": ["ライトオリーブオイル", "ピュアオリーブオイル"],
+        "ko": ["라이트 올리브 오일", "정제올리브유"],
+        "zh": ["淡味橄榄油", "精炼橄榄油"],
+        "es": ["aceite de oliva refinado", "aceite de oliva suave"],
+        "fr": ["huile d'olive légère", "huile d'olive raffinée"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "vegetable oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["cooking oil", "salad oil"],
+        "ja": ["植物油", "サラダ油"],
+        "ko": ["식용유", "식물성기름"],
+        "zh": ["植物油", "色拉油"],
+        "es": ["aceite vegetal"],
+        "fr": ["huile végétale"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "canola oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["rapeseed oil"],
+        "ja": ["キャノーラ油", "菜種油", "なたね油"],
+        "ko": ["카놀라유", "유채유"],
+        "zh": ["菜籽油", "芥花油"],
+        "es": ["aceite de canola", "aceite de colza"],
+        "fr": ["huile de canola", "huile de colza"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "avocado oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["avocado cooking oil"],
+        "ja": ["アボカドオイル", "アボカド油"],
+        "ko": ["아보카도 오일", "아보카도유"],
+        "zh": ["牛油果油", "鳄梨油"],
+        "es": ["aceite de aguacate", "aceite de palta"],
+        "fr": ["huile d'avocat"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "coconut oil, virgin",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 862,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["virgin coconut oil", "unrefined coconut oil"],
+        "ja": ["バージンココナッツオイル", "ヴァージンココナッツオイル"],
+        "ko": ["버진 코코넛 오일", "버진코코넛유"],
+        "zh": ["初榨椰子油", "virgin椰子油"],
+        "es": ["aceite de coco virgen"],
+        "fr": ["huile de coco vierge"]
+      },
+      "common_units": {
+        "tablespoon": 13.6,
+        "teaspoon": 4.5,
+        "cup": 218
+      }
+    },
+    {
+      "canonical_name": "coconut oil, refined",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 862,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["refined coconut oil", "coconut oil"],
+        "ja": ["精製ココナッツオイル", "ココナッツオイル"],
+        "ko": ["정제 코코넛 오일", "코코넛유"],
+        "zh": ["精炼椰子油", "椰子油"],
+        "es": ["aceite de coco refinado"],
+        "fr": ["huile de coco raffinée"]
+      },
+      "common_units": {
+        "tablespoon": 13.6,
+        "teaspoon": 4.5,
+        "cup": 218
+      }
+    },
+    {
+      "canonical_name": "peanut oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["groundnut oil"],
+        "ja": ["ピーナッツオイル", "落花生油"],
+        "ko": ["땅콩기름", "낙화생유"],
+        "zh": ["花生油"],
+        "es": ["aceite de cacahuete", "aceite de maní"],
+        "fr": ["huile d'arachide"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "sesame oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["light sesame oil", "regular sesame oil"],
+        "ja": ["ごま油", "胡麻油", "セサミオイル"],
+        "ko": ["참기름", "세서미오일"],
+        "zh": ["芝麻油", "香油"],
+        "es": ["aceite de sésamo", "aceite de ajonjolí"],
+        "fr": ["huile de sésame"]
+      },
+      "common_units": {
+        "tablespoon": 13.6,
+        "teaspoon": 4.5,
+        "cup": 218
+      }
+    },
+    {
+      "canonical_name": "sesame oil, toasted",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["toasted sesame oil", "dark sesame oil", "asian sesame oil"],
+        "ja": ["焙煎ごま油", "ごま油", "香りごま油"],
+        "ko": ["참기름", "들기름"],
+        "zh": ["香油", "麻油", "芝麻香油"],
+        "es": ["aceite de sésamo tostado"],
+        "fr": ["huile de sésame grillé"]
+      },
+      "common_units": {
+        "tablespoon": 13.6,
+        "teaspoon": 4.5,
+        "cup": 218
+      }
+    },
+    {
+      "canonical_name": "sunflower oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["sunflower seed oil"],
+        "ja": ["ひまわり油", "サンフラワーオイル"],
+        "ko": ["해바라기유", "해바라기씨유"],
+        "zh": ["葵花籽油", "向日葵油"],
+        "es": ["aceite de girasol"],
+        "fr": ["huile de tournesol"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "safflower oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["safflower seed oil"],
+        "ja": ["サフラワー油", "紅花油", "ベニバナ油"],
+        "ko": ["홍화유", "사플라워유"],
+        "zh": ["红花籽油", "红花油"],
+        "es": ["aceite de cártamo"],
+        "fr": ["huile de carthame"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "grapeseed oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["grape seed oil"],
+        "ja": ["グレープシードオイル", "ぶどう種子油"],
+        "ko": ["포도씨유", "그레이프시드오일"],
+        "zh": ["葡萄籽油"],
+        "es": ["aceite de semilla de uva"],
+        "fr": ["huile de pépins de raisin"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "corn oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["maize oil"],
+        "ja": ["コーン油", "とうもろこし油"],
+        "ko": ["옥수수기름", "콘유"],
+        "zh": ["玉米油"],
+        "es": ["aceite de maíz"],
+        "fr": ["huile de maïs"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "soybean oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["soy oil", "soya oil"],
+        "ja": ["大豆油", "ソイオイル"],
+        "ko": ["대두유", "콩기름"],
+        "zh": ["大豆油", "豆油"],
+        "es": ["aceite de soja"],
+        "fr": ["huile de soja"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "walnut oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["walnut seed oil"],
+        "ja": ["くるみ油", "ウォールナッツオイル"],
+        "ko": ["호두유", "호두기름"],
+        "zh": ["核桃油"],
+        "es": ["aceite de nuez"],
+        "fr": ["huile de noix"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "hazelnut oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["filbert oil"],
+        "ja": ["ヘーゼルナッツオイル", "ヘーゼルナッツ油"],
+        "ko": ["헤이즐넛 오일", "개암유"],
+        "zh": ["榛子油"],
+        "es": ["aceite de avellana"],
+        "fr": ["huile de noisette"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "flaxseed oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["flax oil", "linseed oil"],
+        "ja": ["亜麻仁油", "フラックスシードオイル"],
+        "ko": ["아마씨유", "아마인유"],
+        "zh": ["亚麻籽油", "亚麻仁油"],
+        "es": ["aceite de linaza"],
+        "fr": ["huile de lin"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "mct oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 855,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["medium chain triglyceride oil", "mct coconut oil"],
+        "ja": ["MCTオイル", "中鎖脂肪酸油"],
+        "ko": ["MCT 오일", "중쇄지방산오일"],
+        "zh": ["MCT油", "中链甘油三酯油"],
+        "es": ["aceite mct", "aceite de triglicéridos de cadena media"],
+        "fr": ["huile mct", "huile de triglycérides à chaîne moyenne"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "truffle oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["white truffle oil", "black truffle oil"],
+        "ja": ["トリュフオイル", "トリュフ油"],
+        "ko": ["트러플 오일", "송로버섯오일"],
+        "zh": ["松露油"],
+        "es": ["aceite de trufa"],
+        "fr": ["huile de truffe"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "chili oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["chile oil", "hot oil", "chilli oil"],
+        "ja": ["ラー油", "辣油", "チリオイル"],
+        "ko": ["고추기름", "칠리오일"],
+        "zh": ["辣椒油", "辣油"],
+        "es": ["aceite de chile", "aceite picante"],
+        "fr": ["huile de piment", "huile piquante"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "lard",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 902,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["pork fat", "rendered pork fat"],
+        "ja": ["ラード", "豚脂"],
+        "ko": ["라드", "돼지기름"],
+        "zh": ["猪油", "猪板油"],
+        "es": ["manteca de cerdo", "grasa de cerdo"],
+        "fr": ["saindoux", "graisse de porc"]
+      },
+      "common_units": {
+        "tablespoon": 12.8,
+        "teaspoon": 4.3,
+        "cup": 205
+      }
+    },
+    {
+      "canonical_name": "bacon fat",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 898,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["bacon grease", "bacon drippings"],
+        "ja": ["ベーコンの油", "ベーコン脂"],
+        "ko": ["베이컨 기름"],
+        "zh": ["培根油", "熏肉油"],
+        "es": ["grasa de tocino", "grasa de bacon"],
+        "fr": ["graisse de bacon", "graisse de lard"]
+      },
+      "common_units": {
+        "tablespoon": 12.8,
+        "teaspoon": 4.3,
+        "cup": 205
+      }
+    },
+    {
+      "canonical_name": "duck fat",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 900,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["rendered duck fat"],
+        "ja": ["鴨脂", "鴨の油", "ダックファット"],
+        "ko": ["오리기름", "덕팻"],
+        "zh": ["鸭油"],
+        "es": ["grasa de pato"],
+        "fr": ["graisse de canard"]
+      },
+      "common_units": {
+        "tablespoon": 12.8,
+        "teaspoon": 4.3,
+        "cup": 205
+      }
+    },
+    {
+      "canonical_name": "beef tallow",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 902,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["tallow", "rendered beef fat"],
+        "ja": ["牛脂", "ヘット"],
+        "ko": ["우지", "소기름"],
+        "zh": ["牛油", "牛脂"],
+        "es": ["sebo de res", "grasa de res"],
+        "fr": ["suif de boeuf", "graisse de boeuf"]
+      },
+      "common_units": {
+        "tablespoon": 12.8,
+        "teaspoon": 4.3,
+        "cup": 205
+      }
+    },
+    {
+      "canonical_name": "schmaltz",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 900,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["chicken fat", "rendered chicken fat"],
+        "ja": ["鶏脂", "チキンファット", "シュマルツ"],
+        "ko": ["닭기름", "치킨팻"],
+        "zh": ["鸡油"],
+        "es": ["grasa de pollo", "schmaltz"],
+        "fr": ["graisse de poulet", "schmaltz"]
+      },
+      "common_units": {
+        "tablespoon": 12.8,
+        "teaspoon": 4.3,
+        "cup": 205
+      }
+    },
+    {
+      "canonical_name": "vegetable shortening",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["shortening", "crisco"],
+        "ja": ["ショートニング", "植物性ショートニング"],
+        "ko": ["쇼트닝", "식물성쇼트닝"],
+        "zh": ["起酥油", "白油"],
+        "es": ["manteca vegetal", "grasa vegetal"],
+        "fr": ["graisse végétale", "shortening"]
+      },
+      "common_units": {
+        "tablespoon": 12.8,
+        "teaspoon": 4.3,
+        "cup": 191
+      }
+    },
+    {
+      "canonical_name": "margarine",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 717,
+        "protein_g": 0.9,
+        "carbs_g": 0.9,
+        "fat_g": 80.7,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["margarine spread"],
+        "ja": ["マーガリン"],
+        "ko": ["마가린"],
+        "zh": ["人造黄油", "玛琪琳"],
+        "es": ["margarina"],
+        "fr": ["margarine"]
+      },
+      "common_units": {
+        "tablespoon": 14.2,
+        "teaspoon": 4.7,
+        "cup": 227
+      }
+    },
+    {
+      "canonical_name": "butter, unsalted",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 717,
+        "protein_g": 0.9,
+        "carbs_g": 0.1,
+        "fat_g": 81.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["unsalted butter", "sweet butter", "sweet cream butter"],
+        "ja": ["無塩バター", "食塩不使用バター"],
+        "ko": ["무염버터", "무염 버터"],
+        "zh": ["无盐黄油", "淡黄油"],
+        "es": ["mantequilla sin sal", "mantequilla dulce"],
+        "fr": ["beurre doux", "beurre non salé"]
+      },
+      "common_units": {
+        "tablespoon": 14.2,
+        "teaspoon": 4.7,
+        "cup": 227
+      }
+    },
+    {
+      "canonical_name": "butter, salted",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 717,
+        "protein_g": 0.9,
+        "carbs_g": 0.1,
+        "fat_g": 81.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["salted butter", "butter"],
+        "ja": ["有塩バター", "バター"],
+        "ko": ["가염버터", "버터"],
+        "zh": ["含盐黄油", "黄油"],
+        "es": ["mantequilla con sal", "mantequilla"],
+        "fr": ["beurre salé", "beurre demi-sel"]
+      },
+      "common_units": {
+        "tablespoon": 14.2,
+        "teaspoon": 4.7,
+        "cup": 227
+      }
+    },
+    {
+      "canonical_name": "butter, clarified",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 876,
+        "protein_g": 0.3,
+        "carbs_g": 0,
+        "fat_g": 99.5,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["clarified butter", "drawn butter"],
+        "ja": ["澄ましバター", "クラリファイドバター"],
+        "ko": ["정제버터", "클라리파이드 버터"],
+        "zh": ["澄清黄油", "净化黄油"],
+        "es": ["mantequilla clarificada"],
+        "fr": ["beurre clarifié"]
+      },
+      "common_units": {
+        "tablespoon": 12.8,
+        "teaspoon": 4.3,
+        "cup": 205
+      }
+    },
+    {
+      "canonical_name": "perilla oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["perilla seed oil"],
+        "ja": ["えごま油", "エゴマ油", "しそ油"],
+        "ko": ["들기름", "들깨기름"],
+        "zh": ["紫苏油", "苏籽油"],
+        "es": ["aceite de perilla"],
+        "fr": ["huile de périlla"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "rice bran oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["rice oil"],
+        "ja": ["米油", "こめ油"],
+        "ko": ["쌀기름", "미강유"],
+        "zh": ["米糠油", "米油"],
+        "es": ["aceite de salvado de arroz"],
+        "fr": ["huile de son de riz"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "almond oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["sweet almond oil"],
+        "ja": ["アーモンドオイル", "アーモンド油"],
+        "ko": ["아몬드 오일", "아몬드유"],
+        "zh": ["杏仁油"],
+        "es": ["aceite de almendra"],
+        "fr": ["huile d'amande"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "macadamia oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["macadamia nut oil"],
+        "ja": ["マカダミアナッツオイル", "マカダミア油"],
+        "ko": ["마카다미아 오일", "마카다미아유"],
+        "zh": ["夏威夷果油", "澳洲坚果油"],
+        "es": ["aceite de macadamia"],
+        "fr": ["huile de macadamia"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "palm oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["palm kernel oil"],
+        "ja": ["パーム油", "ヤシ油"],
+        "ko": ["팜유", "야자유"],
+        "zh": ["棕榈油"],
+        "es": ["aceite de palma"],
+        "fr": ["huile de palme"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "cottonseed oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["cotton seed oil"],
+        "ja": ["綿実油", "コットンシードオイル"],
+        "ko": ["목화씨유", "면실유"],
+        "zh": ["棉籽油"],
+        "es": ["aceite de semilla de algodón"],
+        "fr": ["huile de coton"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "pistachio oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["pistachio nut oil"],
+        "ja": ["ピスタチオオイル", "ピスタチオ油"],
+        "ko": ["피스타치오 오일", "피스타치오유"],
+        "zh": ["开心果油"],
+        "es": ["aceite de pistacho"],
+        "fr": ["huile de pistache"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "pumpkin seed oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["pepita oil"],
+        "ja": ["パンプキンシードオイル", "かぼちゃ種子油"],
+        "ko": ["호박씨유", "펌킨씨드오일"],
+        "zh": ["南瓜籽油"],
+        "es": ["aceite de semilla de calabaza", "aceite de pepita"],
+        "fr": ["huile de pépins de courge"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "mustard oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["mustard seed oil"],
+        "ja": ["マスタードオイル", "からし油"],
+        "ko": ["겨자유", "머스타드오일"],
+        "zh": ["芥末油", "芥子油"],
+        "es": ["aceite de mostaza"],
+        "fr": ["huile de moutarde"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "hemp seed oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["hemp oil"],
+        "ja": ["ヘンプシードオイル", "麻の実油"],
+        "ko": ["햄프씨드 오일", "대마씨유"],
+        "zh": ["大麻籽油", "火麻油"],
+        "es": ["aceite de semilla de cáñamo"],
+        "fr": ["huile de chanvre"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "chia seed oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["chia oil"],
+        "ja": ["チアシードオイル", "チアオイル"],
+        "ko": ["치아씨드 오일", "치아씨유"],
+        "zh": ["奇亚籽油"],
+        "es": ["aceite de chía"],
+        "fr": ["huile de chia"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "argan oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["moroccan argan oil"],
+        "ja": ["アルガンオイル"],
+        "ko": ["아르간 오일"],
+        "zh": ["摩洛哥坚果油", "阿甘油"],
+        "es": ["aceite de argán"],
+        "fr": ["huile d'argan"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "black seed oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["nigella oil", "black cumin oil", "kalonji oil"],
+        "ja": ["ブラックシードオイル", "ニゲラオイル"],
+        "ko": ["블랙씨드 오일", "흑종유"],
+        "zh": ["黑种草油", "黑籽油"],
+        "es": ["aceite de comino negro"],
+        "fr": ["huile de nigelle"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "camellia oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["tea seed oil", "tea oil"],
+        "ja": ["椿油", "カメリアオイル"],
+        "ko": ["동백기름", "카멜리아오일"],
+        "zh": ["茶籽油", "山茶油"],
+        "es": ["aceite de camelia"],
+        "fr": ["huile de camélia"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "garlic oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["garlic infused oil"],
+        "ja": ["ガーリックオイル", "にんにく油"],
+        "ko": ["마늘 오일", "마늘기름"],
+        "zh": ["蒜油", "大蒜油"],
+        "es": ["aceite de ajo"],
+        "fr": ["huile d'ail"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "scallion oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["spring onion oil", "green onion oil"],
+        "ja": ["ねぎ油", "葱油"],
+        "ko": ["파기름", "총유"],
+        "zh": ["葱油"],
+        "es": ["aceite de cebolleta"],
+        "fr": ["huile de ciboulette"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "shallot oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["fried shallot oil"],
+        "ja": ["エシャロット油", "シャロットオイル"],
+        "ko": ["샬롯 오일", "샬롯기름"],
+        "zh": ["红葱油"],
+        "es": ["aceite de chalota"],
+        "fr": ["huile d'échalote"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "sichuan pepper oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["sichuan peppercorn oil", "szechuan pepper oil"],
+        "ja": ["花椒油", "山椒油"],
+        "ko": ["화교유", "산초기름"],
+        "zh": ["花椒油"],
+        "es": ["aceite de pimienta de sichuan"],
+        "fr": ["huile de poivre du sichuan"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "goose fat",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 900,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["rendered goose fat"],
+        "ja": ["ガチョウの脂", "ガース脂"],
+        "ko": ["거위기름"],
+        "zh": ["鹅油"],
+        "es": ["grasa de ganso"],
+        "fr": ["graisse d'oie"]
+      },
+      "common_units": {
+        "tablespoon": 12.8,
+        "teaspoon": 4.3,
+        "cup": 205
+      }
+    },
+    {
+      "canonical_name": "lamb fat",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 902,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["mutton fat", "rendered lamb fat"],
+        "ja": ["羊脂", "ラム脂"],
+        "ko": ["양기름"],
+        "zh": ["羊油"],
+        "es": ["grasa de cordero"],
+        "fr": ["graisse d'agneau"]
+      },
+      "common_units": {
+        "tablespoon": 12.8,
+        "teaspoon": 4.3,
+        "cup": 205
+      }
+    },
+    {
+      "canonical_name": "suet",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 854,
+        "protein_g": 1.5,
+        "carbs_g": 0,
+        "fat_g": 94,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["beef suet", "kidney suet"],
+        "ja": ["ケンネ脂", "牛脂"],
+        "ko": ["소내장지방"],
+        "zh": ["板油", "牛板油"],
+        "es": ["sebo crudo"],
+        "fr": ["graisse de rognon"]
+      },
+      "common_units": {
+        "tablespoon": 12.8,
+        "teaspoon": 4.3,
+        "cup": 205
+      }
+    },
+    {
+      "canonical_name": "spray oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["cooking spray", "oil spray", "pam"],
+        "ja": ["スプレーオイル", "クッキングスプレー"],
+        "ko": ["스프레이 오일", "쿠킹스프레이"],
+        "zh": ["喷雾油", "喷油"],
+        "es": ["aceite en aerosol", "aceite en spray"],
+        "fr": ["huile en spray", "huile en vaporisateur"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "evening primrose oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["primrose oil"],
+        "ja": ["月見草オイル", "イブニングプリムローズオイル"],
+        "ko": ["달맞이꽃 오일", "이브닝프림로즈오일"],
+        "zh": ["月见草油"],
+        "es": ["aceite de onagra"],
+        "fr": ["huile d'onagre"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "borage oil",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["starflower oil"],
+        "ja": ["ボラージオイル", "ルリジサ油"],
+        "ko": ["보리지 오일"],
+        "zh": ["琉璃苣油"],
+        "es": ["aceite de borraja"],
+        "fr": ["huile de bourrache"]
+      },
+      "common_units": {
+        "tablespoon": 13.5,
+        "teaspoon": 4.5,
+        "cup": 216
+      }
+    },
+    {
+      "canonical_name": "butter flavored shortening",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 884,
+        "protein_g": 0,
+        "carbs_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["butter flavored crisco", "butter shortening"],
+        "ja": ["バター風味ショートニング"],
+        "ko": ["버터맛 쇼트닝"],
+        "zh": ["黄油味起酥油"],
+        "es": ["manteca con sabor a mantequilla"],
+        "fr": ["shortening au beurre"]
+      },
+      "common_units": {
+        "tablespoon": 12.8,
+        "teaspoon": 4.3,
+        "cup": 191
+      }
+    },
+    {
+      "canonical_name": "compound butter",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 717,
+        "protein_g": 0.9,
+        "carbs_g": 0.1,
+        "fat_g": 81.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["flavored butter", "herb butter"],
+        "ja": ["コンパウンドバター", "風味バター"],
+        "ko": ["컴파운드 버터", "향미버터"],
+        "zh": ["复合黄油", "调味黄油"],
+        "es": ["mantequilla compuesta"],
+        "fr": ["beurre composé"]
+      },
+      "common_units": {
+        "tablespoon": 14.2,
+        "teaspoon": 4.7,
+        "cup": 227
+      }
+    },
+    {
+      "canonical_name": "brown butter",
+      "category": "oil_fat",
+      "per_100g": {
+        "calories": 717,
+        "protein_g": 0.9,
+        "carbs_g": 0.1,
+        "fat_g": 81.1,
+        "fiber_g": 0
+      },
+      "aliases": {
+        "en": ["browned butter", "beurre noisette"],
+        "ja": ["焦がしバター", "ブールノワゼット"],
+        "ko": ["브라운 버터", "갈색버터"],
+        "zh": ["褐化黄油", "焦化黄油"],
+        "es": ["mantequilla tostada", "mantequilla avellana"],
+        "fr": ["beurre noisette"]
+      },
+      "common_units": {
+        "tablespoon": 14.2,
+        "teaspoon": 4.7,
+        "cup": 227
+      }
+    }
+  ]
+}

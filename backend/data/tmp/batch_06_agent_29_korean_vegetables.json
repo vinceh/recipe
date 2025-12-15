@@ -1,0 +1,608 @@
+{
+  "batch": 6,
+  "agent": 29,
+  "category": "korean_vegetables",
+  "generated_at": "2025-12-11",
+  "ingredients": [
+    {
+      "canonical_name": "Korean Radish",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 0.6,
+        "carbs_g": 4.1,
+        "fat_g": 0.1
+      },
+      "aliases": ["무", "mu", "Korean white radish", "daikon"],
+      "common_units": ["cup", "piece", "gram"]
+    },
+    {
+      "canonical_name": "Korean Zucchini",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 17,
+        "protein_g": 1.2,
+        "carbs_g": 3.1,
+        "fat_g": 0.3
+      },
+      "aliases": ["애호박", "aehobak", "hobak", "Korean squash"],
+      "common_units": ["cup", "piece", "gram"]
+    },
+    {
+      "canonical_name": "Perilla Leaves",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 37,
+        "protein_g": 3.9,
+        "carbs_g": 5.2,
+        "fat_g": 1.1
+      },
+      "aliases": ["깻잎", "kkaennip", "sesame leaves", "shiso"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Crown Daisy",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 24,
+        "protein_g": 2.3,
+        "carbs_g": 4.3,
+        "fat_g": 0.4
+      },
+      "aliases": ["쑥갓", "ssukgat", "garland chrysanthemum", "tong ho"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "Fernbrake",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 34,
+        "protein_g": 4.6,
+        "carbs_g": 5.5,
+        "fat_g": 0.4
+      },
+      "aliases": ["고사리", "gosari", "bracken fern", "fiddlehead fern"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "Bellflower Root",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 46,
+        "protein_g": 1.4,
+        "carbs_g": 10.8,
+        "fat_g": 0.1
+      },
+      "aliases": ["도라지", "doraji", "balloon flower root", "platycodon"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "Soybean Sprouts",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 86,
+        "protein_g": 8.5,
+        "carbs_g": 9.6,
+        "fat_g": 3.9
+      },
+      "aliases": ["콩나물", "kongnamul", "soy sprouts"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "Mung Bean Sprouts",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 30,
+        "protein_g": 3.0,
+        "carbs_g": 5.9,
+        "fat_g": 0.2
+      },
+      "aliases": ["숙주나물", "sukjunamul", "sukju", "green bean sprouts"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Spinach",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 23,
+        "protein_g": 2.9,
+        "carbs_g": 3.6,
+        "fat_g": 0.4
+      },
+      "aliases": ["시금치", "sigeumchi", "spinach"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "Water Parsley",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 19,
+        "protein_g": 1.8,
+        "carbs_g": 3.5,
+        "fat_g": 0.2
+      },
+      "aliases": ["미나리", "minari", "water celery", "water dropwort"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Cucumber",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 15,
+        "protein_g": 0.7,
+        "carbs_g": 3.6,
+        "fat_g": 0.1
+      },
+      "aliases": ["오이", "oi", "Korean mini cucumber"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Napa Cabbage",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 16,
+        "protein_g": 1.2,
+        "carbs_g": 3.2,
+        "fat_g": 0.2
+      },
+      "aliases": ["배추", "baechu", "Chinese cabbage", "wombok"],
+      "common_units": ["cup", "piece", "gram"]
+    },
+    {
+      "canonical_name": "Korean Green Onion",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 32,
+        "protein_g": 1.8,
+        "carbs_g": 7.3,
+        "fat_g": 0.2
+      },
+      "aliases": ["대파", "daepa", "scallion", "spring onion"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Chives",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 27,
+        "protein_g": 2.6,
+        "carbs_g": 4.3,
+        "fat_g": 0.5
+      },
+      "aliases": ["부추", "buchu", "garlic chives", "Asian chives"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Watercress",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 11,
+        "protein_g": 2.3,
+        "carbs_g": 1.3,
+        "fat_g": 0.1
+      },
+      "aliases": ["냉이", "naengi", "shepherd's purse"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Leek",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 61,
+        "protein_g": 1.5,
+        "carbs_g": 14.2,
+        "fat_g": 0.3
+      },
+      "aliases": ["쪽파", "jjokpa", "thin green onion", "mini scallion"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Eggplant",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 1.0,
+        "carbs_g": 5.9,
+        "fat_g": 0.2
+      },
+      "aliases": ["가지", "gaji", "Korean purple eggplant"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Sweet Potato",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 86,
+        "protein_g": 1.6,
+        "carbs_g": 20.1,
+        "fat_g": 0.1
+      },
+      "aliases": ["고구마", "goguma", "sweet potato"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Potato",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 77,
+        "protein_g": 2.0,
+        "carbs_g": 17.5,
+        "fat_g": 0.1
+      },
+      "aliases": ["감자", "gamja", "potato"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Pumpkin",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 26,
+        "protein_g": 1.0,
+        "carbs_g": 6.5,
+        "fat_g": 0.1
+      },
+      "aliases": ["단호박", "danhobak", "kabocha", "Japanese pumpkin"],
+      "common_units": ["cup", "piece", "gram"]
+    },
+    {
+      "canonical_name": "Korean Lettuce",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 15,
+        "protein_g": 1.4,
+        "carbs_g": 2.9,
+        "fat_g": 0.2
+      },
+      "aliases": ["상추", "sangchu", "green leaf lettuce"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Carrot",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 41,
+        "protein_g": 0.9,
+        "carbs_g": 9.6,
+        "fat_g": 0.2
+      },
+      "aliases": ["당근", "danggeun", "carrot"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Bok Choy",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 13,
+        "protein_g": 1.5,
+        "carbs_g": 2.2,
+        "fat_g": 0.2
+      },
+      "aliases": ["청경채", "cheonggyeongchae", "pak choi"],
+      "common_units": ["cup", "piece", "gram"]
+    },
+    {
+      "canonical_name": "Korean Mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 22,
+        "protein_g": 3.1,
+        "carbs_g": 3.3,
+        "fat_g": 0.3
+      },
+      "aliases": ["버섯", "beoseot", "mushroom"],
+      "common_units": ["cup", "piece", "gram"]
+    },
+    {
+      "canonical_name": "Shiitake Mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 34,
+        "protein_g": 2.2,
+        "carbs_g": 6.8,
+        "fat_g": 0.5
+      },
+      "aliases": ["표고버섯", "pyogo beoseot", "shiitake"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Enoki Mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 37,
+        "protein_g": 2.7,
+        "carbs_g": 7.8,
+        "fat_g": 0.3
+      },
+      "aliases": ["팽이버섯", "paengi beoseot", "enokitake"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "King Oyster Mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 3.3,
+        "carbs_g": 7.0,
+        "fat_g": 0.4
+      },
+      "aliases": ["새송이버섯", "saesong-i beoseot", "king trumpet mushroom"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Wood Ear Mushroom",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 0.5,
+        "carbs_g": 6.7,
+        "fat_g": 0.2
+      },
+      "aliases": ["목이버섯", "mogi beoseot", "black fungus"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Garlic",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 149,
+        "protein_g": 6.4,
+        "carbs_g": 33.1,
+        "fat_g": 0.5
+      },
+      "aliases": ["마늘", "maneul", "garlic"],
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "Korean Ginger",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 80,
+        "protein_g": 1.8,
+        "carbs_g": 17.8,
+        "fat_g": 0.8
+      },
+      "aliases": ["생강", "saenggang", "ginger"],
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "Korean Onion",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 1.1,
+        "carbs_g": 9.3,
+        "fat_g": 0.1
+      },
+      "aliases": ["양파", "yangpa", "onion"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Lotus Root",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 74,
+        "protein_g": 2.6,
+        "carbs_g": 17.2,
+        "fat_g": 0.1
+      },
+      "aliases": ["연근", "yeongeun", "lotus root"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Burdock Root",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 72,
+        "protein_g": 1.5,
+        "carbs_g": 17.3,
+        "fat_g": 0.2
+      },
+      "aliases": ["우엉", "ueong", "burdock", "gobo"],
+      "common_units": ["cup", "piece", "gram"]
+    },
+    {
+      "canonical_name": "Korean Kelp",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 43,
+        "protein_g": 1.7,
+        "carbs_g": 9.6,
+        "fat_g": 0.6
+      },
+      "aliases": ["다시마", "dasima", "kombu", "sea kelp"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Seaweed",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 35,
+        "protein_g": 5.8,
+        "carbs_g": 5.1,
+        "fat_g": 0.3
+      },
+      "aliases": ["김", "gim", "nori", "laver"],
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "Wakame Seaweed",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 45,
+        "protein_g": 3.0,
+        "carbs_g": 9.1,
+        "fat_g": 0.6
+      },
+      "aliases": ["미역", "miyeok", "wakame"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Radish Greens",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein_g": 2.2,
+        "carbs_g": 4.6,
+        "fat_g": 0.3
+      },
+      "aliases": ["무청", "mucheong", "radish tops"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Taro",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 112,
+        "protein_g": 1.5,
+        "carbs_g": 26.5,
+        "fat_g": 0.2
+      },
+      "aliases": ["토란", "toran", "taro"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Taro Stem",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 18,
+        "protein_g": 0.8,
+        "carbs_g": 4.0,
+        "fat_g": 0.1
+      },
+      "aliases": ["토란대", "torandae", "taro stem"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "Dried Fernbrake",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 290,
+        "protein_g": 28.0,
+        "carbs_g": 42.0,
+        "fat_g": 2.5
+      },
+      "aliases": ["마른 고사리", "mareun gosari", "dried bracken"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "Dried Radish",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 278,
+        "protein_g": 9.7,
+        "carbs_g": 62.9,
+        "fat_g": 0.6
+      },
+      "aliases": ["무말랭이", "mumallaengi", "dried daikon"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "Dried Shiitake",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 296,
+        "protein_g": 9.6,
+        "carbs_g": 63.9,
+        "fat_g": 1.0
+      },
+      "aliases": ["마른 표고버섯", "mareun pyogo", "dried shiitake mushroom"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Chili Pepper",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 2.0,
+        "carbs_g": 8.8,
+        "fat_g": 0.4
+      },
+      "aliases": ["고추", "gochu", "Korean pepper"],
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "Korean Green Chili",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein_g": 1.9,
+        "carbs_g": 9.5,
+        "fat_g": 0.2
+      },
+      "aliases": ["청양고추", "cheongyang gochu", "green pepper"],
+      "common_units": ["piece", "gram"]
+    },
+    {
+      "canonical_name": "Korean Sweet Pepper",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 31,
+        "protein_g": 1.0,
+        "carbs_g": 7.2,
+        "fat_g": 0.3
+      },
+      "aliases": ["피망", "pimang", "bell pepper"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Cabbage Kimchi Base",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 16,
+        "protein_g": 1.2,
+        "carbs_g": 3.2,
+        "fat_g": 0.2
+      },
+      "aliases": ["절임배추", "jeorim baechu", "salted cabbage"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "Acorn Starch",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 367,
+        "protein_g": 4.4,
+        "carbs_g": 84.0,
+        "fat_g": 1.2
+      },
+      "aliases": ["도토리묵가루", "dotorimuk garu", "acorn powder"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "Mung Bean Starch",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 351,
+        "protein_g": 0.2,
+        "carbs_g": 87.5,
+        "fat_g": 0.2
+      },
+      "aliases": ["녹두전분", "nokdu jeonbun", "green bean starch"],
+      "common_units": ["cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Bean Curd",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 76,
+        "protein_g": 8.1,
+        "carbs_g": 1.9,
+        "fat_g": 4.8
+      },
+      "aliases": ["두부", "dubu", "tofu"],
+      "common_units": ["piece", "cup", "gram"]
+    },
+    {
+      "canonical_name": "Korean Glass Noodles Vegetable Base",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 351,
+        "protein_g": 0.2,
+        "carbs_g": 87.5,
+        "fat_g": 0.2
+      },
+      "aliases": ["당면", "dangmyeon", "sweet potato noodles"],
+      "common_units": ["cup", "gram"]
+    }
+  ]
+}
