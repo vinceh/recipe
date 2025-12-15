@@ -206,8 +206,8 @@ function moveIngredientUp(groupIndex: number, ingredientIndex: number) {
   const groups = formData.value.ingredient_groups
   if (groups && groups[groupIndex] && ingredientIndex > 0) {
     const items = groups[groupIndex].items
-    const temp = items[ingredientIndex]
-    items[ingredientIndex] = items[ingredientIndex - 1]
+    const temp = items[ingredientIndex]!
+    items[ingredientIndex] = items[ingredientIndex - 1]!
     items[ingredientIndex - 1] = temp
   }
 }
@@ -217,8 +217,8 @@ function moveIngredientDown(groupIndex: number, ingredientIndex: number) {
   if (groups && groups[groupIndex]) {
     const items = groups[groupIndex].items
     if (ingredientIndex < items.length - 1) {
-      const temp = items[ingredientIndex]
-      items[ingredientIndex] = items[ingredientIndex + 1]
+      const temp = items[ingredientIndex]!
+      items[ingredientIndex] = items[ingredientIndex + 1]!
       items[ingredientIndex + 1] = temp
     }
   }

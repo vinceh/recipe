@@ -82,7 +82,7 @@ export function useAuth(): Auth {
    * @param password - User password
    */
   const signup = async (email: string, password: string) => {
-    await userStore.signup({ email, password })
+    await userStore.signup({ email, password, password_confirmation: password })
   }
 
   /**

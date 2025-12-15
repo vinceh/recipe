@@ -1,6 +1,6 @@
-import type { RecipeDetail, IngredientGroup, Ingredient, Step } from '@/services/types'
+import type { RecipeDetail, RecipeIngredientGroup, RecipeIngredientItem, RecipeStep } from '@/services/types'
 
-interface IngredientWithDisplay extends Ingredient {
+interface IngredientWithDisplay extends RecipeIngredientItem {
   displayAmount: string
 }
 
@@ -61,13 +61,13 @@ function levenshteinDistance(str1: string, str2: string): number {
  * Uses exact name match first, then falls back to fuzzy matching
  */
 export function findMatchingIngredient(
-  currentItem: Ingredient,
-  originalGroups: IngredientGroup[] | undefined
+  currentItem: RecipeIngredientItem,
+  originalGroups: RecipeIngredientGroup[] | undefined
 ): IngredientWithDisplay | null {
   if (!originalGroups) return null
 
   const currentName = normalizeString(currentItem.name)
-  let bestMatch: Ingredient | null = null
+  let bestMatch: RecipeIngredientItem | null = null
   let bestSimilarity = 0
 
   // Search through all original groups and items
@@ -81,7 +81,7 @@ export function findMatchingIngredient(
       if (currentName === originalName) {
         return {
           ...originalItem,
-          displayAmount: formatIngredientAmount(originalItem.amount, originalItem.unit)
+          displayAmount: formatIngredientAmount(originalItem.amount?.toString(), originalItem.unit)
         }
       }
 
@@ -97,7 +97,7 @@ export function findMatchingIngredient(
   if (bestMatch) {
     return {
       ...bestMatch,
-      displayAmount: formatIngredientAmount(bestMatch.amount, bestMatch.unit)
+      displayAmount: formatIngredientAmount(bestMatch.amount?.toString(), bestMatch.unit)
     }
   }
 
@@ -109,13 +109,13 @@ export function findMatchingIngredient(
  * Uses fuzzy string matching since step instructions may be modified
  */
 export function findMatchingStep(
-  currentStep: Step,
-  originalSteps: Step[] | undefined
-): Step | null {
+  currentStep: RecipeStep,
+  originalSteps: RecipeStep[] | undefined
+): RecipeStep | null {
   if (!originalSteps || originalSteps.length === 0) return null
 
   const currentInstruction = currentStep.instruction
-  let bestMatch: Step | null = null
+  let bestMatch: RecipeStep | null = null
   let bestSimilarity = 0
 
   for (const originalStep of originalSteps) {
@@ -137,7 +137,7 @@ export function findMatchingStep(
  */
 export function createIngredientMatcher(previousRecipe: RecipeDetail | null) {
   return function getOriginalIngredient(
-    currentGroups: IngredientGroup[] | undefined,
+    currentGroups: RecipeIngredientGroup[] | undefined,
     groupIndex: number,
     itemIndex: number
   ): IngredientWithDisplay | null {
@@ -160,9 +160,9 @@ export function createIngredientMatcher(previousRecipe: RecipeDetail | null) {
  */
 export function createStepMatcher(previousRecipe: RecipeDetail | null) {
   return function getOriginalStep(
-    currentSteps: Step[] | undefined,
+    currentSteps: RecipeStep[] | undefined,
     stepIndex: number
-  ): Step | null {
+  ): RecipeStep | null {
     if (!previousRecipe?.steps) return null
     if (!currentSteps) return null
 
