@@ -7,12 +7,14 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins ENV.fetch('FRONTEND_URL', nil),
-            /\Ahttp:\/\/localhost:\d+\z/,
-            /\Ahttp:\/\/192\.168\.\d+\.\d+:\d+\z/,
-            /\Ahttp:\/\/10\.\d+\.\d+\.\d+:\d+\z/,
-            /\Ahttp:\/\/100\.\d+\.\d+\.\d+:\d+\z/,
-            /\Ahttps:\/\/[a-z0-9-]+\.pages\.dev\z/
+    origins *[
+      ENV['FRONTEND_URL'],
+      /\Ahttp:\/\/localhost:\d+\z/,
+      /\Ahttp:\/\/192\.168\.\d+\.\d+:\d+\z/,
+      /\Ahttp:\/\/10\.\d+\.\d+\.\d+:\d+\z/,
+      /\Ahttp:\/\/100\.\d+\.\d+\.\d+:\d+\z/,
+      /\Ahttps:\/\/[a-z0-9-]+\.pages\.dev\z/
+    ].compact
 
     resource "*",
       headers: :any,
