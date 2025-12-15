@@ -10,8 +10,8 @@ services:
     runtime: docker
     plan: starter
     healthCheckPath: /up
-    dockerfilePath: ./Dockerfile
-    dockerContext: .
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
     envVars:
       - key: RAILS_ENV
         value: production
@@ -42,8 +42,8 @@ services:
     name: recipe-worker
     runtime: docker
     plan: starter
-    dockerfilePath: ./Dockerfile
-    dockerContext: .
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
     dockerCommand: ./bin/rails solid_queue:start
     envVars:
       - key: RAILS_ENV
